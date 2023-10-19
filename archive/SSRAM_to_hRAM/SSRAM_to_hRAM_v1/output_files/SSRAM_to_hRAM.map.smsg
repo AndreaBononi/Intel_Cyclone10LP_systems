@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at s27kl0641.v(579): always construct contains both blocking and non-blocking assignments File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/SSRAM_to_hRAM_v1/tb/s27kl0641.v Line: 579

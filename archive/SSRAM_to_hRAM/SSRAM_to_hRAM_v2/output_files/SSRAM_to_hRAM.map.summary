@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 11 11:55:31 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : SSRAM_to_hRAM
+Top-level Entity Name : SSRAM_to_hRAM
+Family : Cyclone 10 LP
+Total logic elements : 384
+    Total combinational functions : 217
+    Dedicated logic registers : 286
+Total registers : 286
+Total pins : 9
+Total virtual pins : 90
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

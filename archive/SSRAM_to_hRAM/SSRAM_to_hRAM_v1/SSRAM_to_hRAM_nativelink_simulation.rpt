@@ -1,0 +1,22 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclone10lp
+Quartus root          :  /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/
+Quartus sim root      :  /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  SSRAM_to_hRAM.vho
+Sim SDF file          :  SSRAM_to_hRAM__vhdl.sdo
+Sim dir               :  simulation/modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script /home/andrea/intelFPGA_lite/22.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Info: Spawning ModelSim Simulation software 
+Info: NativeLink simulation flow was successful

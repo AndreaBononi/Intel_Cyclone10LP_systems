@@ -1,0 +1,12 @@
+WORKING FREQUENCY: la conversione in ddr non mi fa salire oltre 60 MHz
+
+WORKING FREQUENCY: il valore massimo dipende anche dai vincoli che impongo con set_output_delay, cosa devo imporre?
+
+GATE LEVEL SIMULATION: perhcè non funziona? Può essere che sia legato agli ovvi "problemi" di timing del sincronizzatore?
+
+SINCHRONIZER TIMING ANALYSIS: quartus segnala problemi di timing per din_strobe, ma è ovvio che ci siano
+
+CLOCK GATER: l'implementazione è corretta? Bisogna segnalare qualcosa al sintetizzatore?
+
+SINCHRONIZER: il driver del testbench fa casino per ritardi elevati
+

@@ -1,0 +1,16 @@
+IMPLEMENTARE CIRCUITO DI SFASAMENTO DI RWDS forzando il ritardo (sfasamento) tramite file sdc
+
+TIMING ANALYSIS di tutto (cercare di lavorare a 100 MHz)
+
+FORZARE I VINCOLI TEMPORALI DEI SEGNALI DI INTERFACCIA (sezione 8.3 del datasheet della memoria) ampliando i file sdc utilizzati per la timing analysis.
+
+GATE-LEVEL SIMULATION (?)
+
+VERIFICARE COMPATIBILITÀ TRA LE INTERFACCE DEI DUE CONVERTITORI (devono avere gli stessi segnali dal lato in cui sono connesse)
+
+IMPLEMENTARE OPERAZIONI A BURST NEL CONVERTITORE AVALON-SSRAM
+L'interfaccia avalon permette di interrompere il burst di scrittura per poi riprenderlo, ma la hRAM non lo permette (non si può interrompre il burst).
+Di conseguenza, è necessario implementare un meccanismo che, nel caso in cui cui la scrittura del burst venga interrotta, termini l'operazione e la comandi di nuovo quando la si riprende.
+Per questo motivo, quando si riprende la scrittura del burst il segnale waitrequest rimarra attivo per parecchi cicli, forzado l'utente ad aspettare (l'operazione deve di nuovo essere comandata).
+È quindi necessario tenere traccia dell'indirizzo alla quale l'operazione è stata interrotta.
+

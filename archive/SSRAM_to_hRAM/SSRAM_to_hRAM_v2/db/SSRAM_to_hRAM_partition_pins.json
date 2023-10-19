@@ -1,0 +1,365 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SSRAM_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_validout",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_busy",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_haltdata",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_CS_n",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_RESET_n",
+					"strict" : false
+				},
+				{
+					"name" : "hCK_edgeal",
+					"strict" : false
+				},
+				{
+					"name" : "drive_RWDS_low",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hbus_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_OE",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address_spacing",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_WE",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_CS",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "RWDS",
+					"strict" : false
+				},
+				{
+					"name" : "RWDS_360",
+					"strict" : false
+				},
+				{
+					"name" : "RWDS_90",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_burstcount[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[20]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[21]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SSRAM_address[10]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

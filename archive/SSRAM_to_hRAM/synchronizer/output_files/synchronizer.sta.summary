@@ -1,0 +1,125 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'din_strobe'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'din_strobe'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'din_strobe'
+Slack : 1.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : 8.470
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 0.977
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'din_strobe'
+Slack : 7.728
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'din_strobe'
+Slack : 4.691
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 4.715
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'din_strobe'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : 1.262
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'din_strobe'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'din_strobe'
+Slack : 1.330
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : 8.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 0.995
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'din_strobe'
+Slack : 7.796
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'din_strobe'
+Slack : 4.664
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 4.709
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'din_strobe'
+Slack : 0.812
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 4.570
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'din_strobe'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'din_strobe'
+Slack : 1.137
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : 8.475
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : 1.010
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'din_strobe'
+Slack : 8.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'din_strobe'
+Slack : 4.388
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 4.418
+TNS   : 0.000
+
+------------------------------------------------------------

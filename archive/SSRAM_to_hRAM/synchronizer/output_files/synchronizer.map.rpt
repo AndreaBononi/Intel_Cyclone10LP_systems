@@ -1,0 +1,769 @@
+Analysis & Synthesis report for synchronizer
+Wed Oct 11 12:00:15 2023
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |synchronizer|synchronizer_CU:CU|present_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: synchronizer_EU:EU|counter_Nbit:code_counter
+ 13. Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:readdata11
+ 14. Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:readdata10
+ 15. Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:readdata01
+ 16. Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:readdata00
+ 17. Parameter Settings for User Entity Instance: synchronizer_EU:EU|mux_4to1:datamux
+ 18. Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:dataout
+ 19. Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:burstlen
+ 20. Parameter Settings for User Entity Instance: synchronizer_EU:EU|counter_Nbit:burstlen_counter
+ 21. Parameter Settings for User Entity Instance: synchronizer_EU:EU|comparator_Nbit:burstlen_cmp
+ 22. Parameter Settings for User Entity Instance: synchronizer_EU:EU|counter_Nbit:data_counter
+ 23. Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:dataout_pipe
+ 24. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:data_counter"
+ 25. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:10:chain_tff"
+ 26. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:9:chain_tff"
+ 27. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:8:chain_tff"
+ 28. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:7:chain_tff"
+ 29. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:6:chain_tff"
+ 30. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:5:chain_tff"
+ 31. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:4:chain_tff"
+ 32. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:3:chain_tff"
+ 33. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:2:chain_tff"
+ 34. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:1:chain_tff"
+ 35. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:entry_tff"
+ 36. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter"
+ 37. Port Connectivity Checks: "synchronizer_EU:EU|reg:burstlen"
+ 38. Port Connectivity Checks: "synchronizer_EU:EU|reg:dataout"
+ 39. Port Connectivity Checks: "synchronizer_EU:EU|reg:readdata00"
+ 40. Port Connectivity Checks: "synchronizer_EU:EU|reg:readdata01"
+ 41. Port Connectivity Checks: "synchronizer_EU:EU|reg:readdata10"
+ 42. Port Connectivity Checks: "synchronizer_EU:EU|reg:readdata11"
+ 43. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:code_counter|t_flip_flop:\g1:1:chain_tff"
+ 44. Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:code_counter|t_flip_flop:entry_tff"
+ 45. Post-Synthesis Netlist Statistics for Top Partition
+ 46. Elapsed Time Per Partition
+ 47. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Oct 11 12:00:15 2023          ;
+; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                      ; synchronizer                                   ;
+; Top-level Entity Name              ; synchronizer                                   ;
+; Family                             ; Cyclone 10 LP                                  ;
+; Total logic elements               ; 170                                            ;
+;     Total combinational functions  ; 93                                             ;
+;     Dedicated logic registers      ; 131                                            ;
+; Total registers                    ; 131                                            ;
+; Total pins                         ; 50                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10CL025YE144C8G    ;                    ;
+; Top-level entity name                                            ; synchronizer       ; synchronizer       ;
+; Family name                                                      ; Cyclone 10 LP      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; src/t_flip_flop.vhd              ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/t_flip_flop.vhd     ;         ;
+; src/synchronizer_EU.vhd          ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd ;         ;
+; src/synchronizer_CU.vhd          ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_CU.vhd ;         ;
+; src/synchronizer.vhd             ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer.vhd    ;         ;
+; src/sr_flipflop.vhd              ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/sr_flipflop.vhd     ;         ;
+; src/reg.vhd                      ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/reg.vhd             ;         ;
+; src/mux_4to1.vhd                 ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/mux_4to1.vhd        ;         ;
+; src/decoder_2bit.vhd             ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/decoder_2bit.vhd    ;         ;
+; src/d_flipflop.vhd               ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/d_flipflop.vhd      ;         ;
+; src/counter_Nbit.vhd             ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/counter_Nbit.vhd    ;         ;
+; src/comparator_Nbit.vhd          ; yes             ; User VHDL File  ; /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/comparator_Nbit.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 170              ;
+;                                             ;                  ;
+; Total combinational functions               ; 93               ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 57               ;
+;     -- 3 input functions                    ; 11               ;
+;     -- <=2 input functions                  ; 25               ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 93               ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 131              ;
+;     -- Dedicated logic registers            ; 131              ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 50               ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; din_strobe~input ;
+; Maximum fan-out                             ; 78               ;
+; Total fan-out                               ; 762              ;
+; Average fan-out                             ; 2.35             ;
++---------------------------------------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Entity Name     ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+-----------------+--------------+
+; |synchronizer                           ; 93 (0)              ; 131 (0)                   ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |synchronizer                                                                               ; synchronizer    ; work         ;
+;    |synchronizer_CU:CU|                 ; 13 (13)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_CU:CU                                                            ; synchronizer_CU ; work         ;
+;    |synchronizer_EU:EU|                 ; 80 (2)              ; 123 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU                                                            ; synchronizer_EU ; work         ;
+;       |comparator_Nbit:burstlen_cmp|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|comparator_Nbit:burstlen_cmp                               ; comparator_Nbit ; work         ;
+;       |counter_Nbit:burstlen_counter|   ; 14 (3)              ; 9 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter                              ; counter_Nbit    ; work         ;
+;          |t_flip_flop:\g1:10:chain_tff| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:10:chain_tff ; t_flip_flop     ; work         ;
+;          |t_flip_flop:\g1:2:chain_tff|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:2:chain_tff  ; t_flip_flop     ; work         ;
+;          |t_flip_flop:\g1:3:chain_tff|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:3:chain_tff  ; t_flip_flop     ; work         ;
+;          |t_flip_flop:\g1:4:chain_tff|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:4:chain_tff  ; t_flip_flop     ; work         ;
+;          |t_flip_flop:\g1:5:chain_tff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:5:chain_tff  ; t_flip_flop     ; work         ;
+;          |t_flip_flop:\g1:6:chain_tff|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:6:chain_tff  ; t_flip_flop     ; work         ;
+;          |t_flip_flop:\g1:7:chain_tff|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:7:chain_tff  ; t_flip_flop     ; work         ;
+;          |t_flip_flop:\g1:8:chain_tff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:8:chain_tff  ; t_flip_flop     ; work         ;
+;          |t_flip_flop:\g1:9:chain_tff|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:9:chain_tff  ; t_flip_flop     ; work         ;
+;       |counter_Nbit:code_counter|       ; 2 (0)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:code_counter                                  ; counter_Nbit    ; work         ;
+;          |t_flip_flop:\g1:1:chain_tff|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:code_counter|t_flip_flop:\g1:1:chain_tff      ; t_flip_flop     ; work         ;
+;          |t_flip_flop:entry_tff|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:code_counter|t_flip_flop:entry_tff            ; t_flip_flop     ; work         ;
+;       |counter_Nbit:data_counter|       ; 3 (1)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:data_counter                                  ; counter_Nbit    ; work         ;
+;          |t_flip_flop:\g1:1:chain_tff|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:data_counter|t_flip_flop:\g1:1:chain_tff      ; t_flip_flop     ; work         ;
+;          |t_flip_flop:entry_tff|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|counter_Nbit:data_counter|t_flip_flop:entry_tff            ; t_flip_flop     ; work         ;
+;       |d_flipflop:busy_pipe|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|d_flipflop:busy_pipe                                       ; d_flipflop      ; work         ;
+;       |d_flipflop:valid_pipe|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|d_flipflop:valid_pipe                                      ; d_flipflop      ; work         ;
+;       |decoder_2bit:dec|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|decoder_2bit:dec                                           ; decoder_2bit    ; work         ;
+;       |mux_4to1:datamux|                ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|mux_4to1:datamux                                           ; mux_4to1        ; work         ;
+;       |reg:burstlen|                    ; 0 (0)               ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|reg:burstlen                                               ; reg             ; work         ;
+;       |reg:dataout_pipe|                ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|reg:dataout_pipe                                           ; reg             ; work         ;
+;       |reg:dataout|                     ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|reg:dataout                                                ; reg             ; work         ;
+;       |reg:readdata00|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|reg:readdata00                                             ; reg             ; work         ;
+;       |reg:readdata01|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|reg:readdata01                                             ; reg             ; work         ;
+;       |reg:readdata10|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|reg:readdata10                                             ; reg             ; work         ;
+;       |reg:readdata11|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|reg:readdata11                                             ; reg             ; work         ;
+;       |sr_flipflop:synchronizer|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |synchronizer|synchronizer_EU:EU|sr_flipflop:synchronizer                                   ; sr_flipflop     ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |synchronizer|synchronizer_CU:CU|present_state                                                                                                                                                                                             ;
++-------------------------------+--------------------------+-------------------------------+-------------------------------+-------------------------+------------------------------+-----------------------------+--------------------+---------------------+
+; Name                          ; present_state.idle_clear ; present_state.reception_end_2 ; present_state.reception_end_1 ; present_state.reception ; present_state.reception_init ; present_state.idle_disabled ; present_state.idle ; present_state.reset ;
++-------------------------------+--------------------------+-------------------------------+-------------------------------+-------------------------+------------------------------+-----------------------------+--------------------+---------------------+
+; present_state.reset           ; 0                        ; 0                             ; 0                             ; 0                       ; 0                            ; 0                           ; 0                  ; 0                   ;
+; present_state.idle            ; 0                        ; 0                             ; 0                             ; 0                       ; 0                            ; 0                           ; 1                  ; 1                   ;
+; present_state.idle_disabled   ; 0                        ; 0                             ; 0                             ; 0                       ; 0                            ; 1                           ; 0                  ; 1                   ;
+; present_state.reception_init  ; 0                        ; 0                             ; 0                             ; 0                       ; 1                            ; 0                           ; 0                  ; 1                   ;
+; present_state.reception       ; 0                        ; 0                             ; 0                             ; 1                       ; 0                            ; 0                           ; 0                  ; 1                   ;
+; present_state.reception_end_1 ; 0                        ; 0                             ; 1                             ; 0                       ; 0                            ; 0                           ; 0                  ; 1                   ;
+; present_state.reception_end_2 ; 0                        ; 1                             ; 0                             ; 0                       ; 0                            ; 0                           ; 0                  ; 1                   ;
+; present_state.idle_clear      ; 1                        ; 0                             ; 0                             ; 0                       ; 0                            ; 0                           ; 0                  ; 1                   ;
++-------------------------------+--------------------------+-------------------------------+-------------------------------+-------------------------+------------------------------+-----------------------------+--------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                      ;
++----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+; Register name                                                                          ; Reason for Removal                                                                             ;
++----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+; synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:entry_tff|dummy_out       ; Merged with synchronizer_EU:EU|counter_Nbit:data_counter|t_flip_flop:entry_tff|dummy_out       ;
+; synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:1:chain_tff|dummy_out ; Merged with synchronizer_EU:EU|counter_Nbit:data_counter|t_flip_flop:\g1:1:chain_tff|dummy_out ;
+; Total Number of Removed Registers = 2                                                  ;                                                                                                ;
++----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 131   ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 11    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 109   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |synchronizer|synchronizer_EU:EU|reg:dataout|reg_out[8]        ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |synchronizer|synchronizer_EU:EU|d_flipflop:valid_pipe|dff_out ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|counter_Nbit:code_counter ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; n              ; 2     ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:readdata11 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:readdata10 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:readdata01 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:readdata00 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|mux_4to1:datamux ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:dataout ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:burstlen ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 11    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|counter_Nbit:burstlen_counter ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; n              ; 11    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|comparator_Nbit:burstlen_cmp ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; n              ; 11    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|counter_Nbit:data_counter ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; n              ; 2     ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: synchronizer_EU:EU|reg:dataout_pipe ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:data_counter" ;
++-------+-------+----------+-----------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                       ;
++-------+-------+----------+-----------------------------------------------+
+; rst_n ; Input ; Info     ; Stuck at VCC                                  ;
++-------+-------+----------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:10:chain_tff" ;
++--------+-------+----------+-------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                       ;
++--------+-------+----------+-------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                  ;
++--------+-------+----------+-------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:9:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:8:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:7:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:6:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:5:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:4:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:3:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:2:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:\g1:1:chain_tff" ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                      ;
++--------+-------+----------+------------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                                 ;
++--------+-------+----------+------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter|t_flip_flop:entry_tff" ;
++--------+-------+----------+------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                ;
++--------+-------+----------+------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                           ;
++--------+-------+----------+------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:burstlen_counter" ;
++-------+-------+----------+---------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                           ;
++-------+-------+----------+---------------------------------------------------+
+; rst_n ; Input ; Info     ; Stuck at VCC                                      ;
++-------+-------+----------+---------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|reg:burstlen" ;
++---------+-------+----------+--------------------------------+
+; Port    ; Type  ; Severity ; Details                        ;
++---------+-------+----------+--------------------------------+
+; clear_n ; Input ; Info     ; Stuck at VCC                   ;
++---------+-------+----------+--------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|reg:dataout" ;
++---------+-------+----------+-------------------------------+
+; Port    ; Type  ; Severity ; Details                       ;
++---------+-------+----------+-------------------------------+
+; clear_n ; Input ; Info     ; Stuck at VCC                  ;
++---------+-------+----------+-------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|reg:readdata00" ;
++---------+-------+----------+----------------------------------+
+; Port    ; Type  ; Severity ; Details                          ;
++---------+-------+----------+----------------------------------+
+; clear_n ; Input ; Info     ; Stuck at VCC                     ;
++---------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|reg:readdata01" ;
++---------+-------+----------+----------------------------------+
+; Port    ; Type  ; Severity ; Details                          ;
++---------+-------+----------+----------------------------------+
+; clear_n ; Input ; Info     ; Stuck at VCC                     ;
++---------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|reg:readdata10" ;
++---------+-------+----------+----------------------------------+
+; Port    ; Type  ; Severity ; Details                          ;
++---------+-------+----------+----------------------------------+
+; clear_n ; Input ; Info     ; Stuck at VCC                     ;
++---------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|reg:readdata11" ;
++---------+-------+----------+----------------------------------+
+; Port    ; Type  ; Severity ; Details                          ;
++---------+-------+----------+----------------------------------+
+; clear_n ; Input ; Info     ; Stuck at VCC                     ;
++---------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:code_counter|t_flip_flop:\g1:1:chain_tff" ;
++--------+-------+----------+--------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                  ;
++--------+-------+----------+--------------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                             ;
++--------+-------+----------+--------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "synchronizer_EU:EU|counter_Nbit:code_counter|t_flip_flop:entry_tff" ;
++--------+-------+----------+--------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                            ;
++--------+-------+----------+--------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                       ;
++--------+-------+----------+--------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 50                          ;
+; cycloneiii_ff         ; 131                         ;
+;     CLR               ; 11                          ;
+;     ENA               ; 108                         ;
+;     ENA SCLR          ; 1                           ;
+;     plain             ; 11                          ;
+; cycloneiii_lcell_comb ; 93                          ;
+;     normal            ; 93                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 57                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 1.70                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+    Info: Processing started: Wed Oct 11 12:00:04 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synchronizer -c synchronizer
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file tb/synchronizer_testbench.vhd
+    Info (12022): Found design unit 1: synchronizer_testbench-tb File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/tb/synchronizer_testbench.vhd Line: 26
+    Info (12023): Found entity 1: synchronizer_testbench File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/tb/synchronizer_testbench.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file tb/synchronizer_monitor.vhd
+    Info (12022): Found design unit 1: synchronizer_monitor-tb File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/tb/synchronizer_monitor.vhd Line: 33
+    Info (12023): Found entity 1: synchronizer_monitor File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/tb/synchronizer_monitor.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file tb/synchronizer_driver.vhd
+    Info (12022): Found design unit 1: synchronizer_driver-tb File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/tb/synchronizer_driver.vhd Line: 42
+    Info (12023): Found entity 1: synchronizer_driver File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/tb/synchronizer_driver.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file tb/clk_rst_generator.vhd
+    Info (12022): Found design unit 1: clk_rst_generator-behavior File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/tb/clk_rst_generator.vhd Line: 32
+    Info (12023): Found entity 1: clk_rst_generator File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/tb/clk_rst_generator.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file src/t_flip_flop.vhd
+    Info (12022): Found design unit 1: t_flip_flop-behavior File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/t_flip_flop.vhd Line: 25
+    Info (12023): Found entity 1: t_flip_flop File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/t_flip_flop.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file src/synchronizer_EU.vhd
+    Info (12022): Found design unit 1: synchronizer_EU-rtl File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 47
+    Info (12023): Found entity 1: synchronizer_EU File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file src/synchronizer_CU.vhd
+    Info (12022): Found design unit 1: synchronizer_CU-fsm File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_CU.vhd Line: 36
+    Info (12023): Found entity 1: synchronizer_CU File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_CU.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file src/synchronizer.vhd
+    Info (12022): Found design unit 1: synchronizer-rtl File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer.vhd Line: 40
+    Info (12023): Found entity 1: synchronizer File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file src/sr_flipflop.vhd
+    Info (12022): Found design unit 1: sr_flipflop-behavior File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/sr_flipflop.vhd Line: 24
+    Info (12023): Found entity 1: sr_flipflop File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/sr_flipflop.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file src/reg.vhd
+    Info (12022): Found design unit 1: reg-behavior File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/reg.vhd Line: 28
+    Info (12023): Found entity 1: reg File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/reg.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file src/mux_4to1.vhd
+    Info (12022): Found design unit 1: mux_4to1-behavior File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/mux_4to1.vhd Line: 33
+    Info (12023): Found entity 1: mux_4to1 File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/mux_4to1.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file src/decoder_2bit.vhd
+    Info (12022): Found design unit 1: decoder_2bit-behavior File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/decoder_2bit.vhd Line: 24
+    Info (12023): Found entity 1: decoder_2bit File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/decoder_2bit.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file src/d_flipflop.vhd
+    Info (12022): Found design unit 1: d_flipflop-behavior File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/d_flipflop.vhd Line: 24
+    Info (12023): Found entity 1: d_flipflop File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/d_flipflop.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file src/counter_Nbit.vhd
+    Info (12022): Found design unit 1: counter_Nbit-rtl File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/counter_Nbit.vhd Line: 30
+    Info (12023): Found entity 1: counter_Nbit File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/counter_Nbit.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file src/comparator_Nbit.vhd
+    Info (12022): Found design unit 1: comparator_Nbit-behavior File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/comparator_Nbit.vhd Line: 26
+    Info (12023): Found entity 1: comparator_Nbit File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/comparator_Nbit.vhd Line: 11
+Info (12127): Elaborating entity "synchronizer" for the top level hierarchy
+Info (12128): Elaborating entity "synchronizer_EU" for hierarchy "synchronizer_EU:EU" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer.vhd Line: 121
+Info (12128): Elaborating entity "counter_Nbit" for hierarchy "synchronizer_EU:EU|counter_Nbit:code_counter" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 167
+Info (12128): Elaborating entity "t_flip_flop" for hierarchy "synchronizer_EU:EU|counter_Nbit:code_counter|t_flip_flop:entry_tff" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/counter_Nbit.vhd Line: 51
+Info (12128): Elaborating entity "sr_flipflop" for hierarchy "synchronizer_EU:EU|sr_flipflop:synchronizer" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 168
+Warning (10492): VHDL Process Statement warning at sr_flipflop.vhd(30): signal "rst_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/sr_flipflop.vhd Line: 30
+Info (12128): Elaborating entity "decoder_2bit" for hierarchy "synchronizer_EU:EU|decoder_2bit:dec" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 169
+Info (12128): Elaborating entity "reg" for hierarchy "synchronizer_EU:EU|reg:readdata11" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 170
+Info (12128): Elaborating entity "mux_4to1" for hierarchy "synchronizer_EU:EU|mux_4to1:datamux" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 174
+Info (12128): Elaborating entity "reg" for hierarchy "synchronizer_EU:EU|reg:burstlen" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 176
+Info (12128): Elaborating entity "counter_Nbit" for hierarchy "synchronizer_EU:EU|counter_Nbit:burstlen_counter" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 177
+Info (12128): Elaborating entity "comparator_Nbit" for hierarchy "synchronizer_EU:EU|comparator_Nbit:burstlen_cmp" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 178
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "synchronizer_EU:EU|d_flipflop:valid_pipe" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer_EU.vhd Line: 180
+Info (12128): Elaborating entity "synchronizer_CU" for hierarchy "synchronizer_CU:CU" File: /home/andrea/Documents/Tesi_287628/IP_cores/AvalonMM_to_hRAM/SSRAM_to_hRAM/synchronizer/src/synchronizer.vhd Line: 150
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 220 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 170 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 421 megabytes
+    Info: Processing ended: Wed Oct 11 12:00:16 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:25
+
+
