@@ -19,7 +19,7 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/basic_system/basic_system.qsys --synthesis=VERILOG --output-directory=/home/andrea/Documents/Tesi_287628/287628/basic_system/basic_system/synthesis --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/basic_system/basic_system.qsys --synthesis=VHDL --output-directory=/home/andrea/Documents/Tesi_287628/287628/basic_system/basic_system/synthesis --family="Cyclone 10 LP" --part=10CL025YE144C8G
 Progress: Loading basic_system/basic_system.qsys
 Progress: Reading input file
 Progress: Adding clk_50MHz [clock_source 22.1]
@@ -37,12 +37,12 @@ Progress: Done reading input file
 Info: basic_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: basic_system: Generating basic_system "basic_system" for QUARTUS_SYNTH
 Info: jtag_uart: Starting RTL generation for module 'basic_system_jtag_uart'
-Info: jtag_uart:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=basic_system_jtag_uart --dir=/tmp/alt9649_8957730097035607683.dir/0002_jtag_uart_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9649_8957730097035607683.dir/0002_jtag_uart_gen//basic_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=basic_system_jtag_uart --dir=/tmp/alt9649_2064486214322510802.dir/0002_jtag_uart_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9649_2064486214322510802.dir/0002_jtag_uart_gen//basic_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'basic_system_jtag_uart'
 Info: jtag_uart: "basic_system" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: nios2: "basic_system" instantiated altera_nios2_gen2 "nios2"
 Info: onchip_RAM: Starting RTL generation for module 'basic_system_onchip_RAM'
-Info: onchip_RAM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=basic_system_onchip_RAM --dir=/tmp/alt9649_8957730097035607683.dir/0003_onchip_RAM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9649_8957730097035607683.dir/0003_onchip_RAM_gen//basic_system_onchip_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_RAM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=basic_system_onchip_RAM --dir=/tmp/alt9649_2064486214322510802.dir/0003_onchip_RAM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9649_2064486214322510802.dir/0003_onchip_RAM_gen//basic_system_onchip_RAM_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_RAM: Done RTL generation for module 'basic_system_onchip_RAM'
 Info: onchip_RAM: "basic_system" instantiated altera_avalon_onchip_memory2 "onchip_RAM"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -52,13 +52,13 @@ Info: mm_interconnect_0: "basic_system" instantiated altera_mm_interconnect "mm_
 Info: irq_mapper: "basic_system" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "basic_system" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'basic_system_nios2_cpu'
-Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=basic_system_nios2_cpu --dir=/tmp/alt9649_8957730097035607683.dir/0006_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9649_8957730097035607683.dir/0006_cpu_gen//basic_system_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2023.10.19 11:11:51 (*) Starting Nios II generation
-Info: cpu: # 2023.10.19 11:11:51 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2023.10.19 11:11:51 (*)   Creating all objects for CPU
-Info: cpu: # 2023.10.19 11:11:51 (*)   Generating RTL from CPU objects
-Info: cpu: # 2023.10.19 11:11:51 (*)   Creating plain-text RTL
-Info: cpu: # 2023.10.19 11:11:52 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=basic_system_nios2_cpu --dir=/tmp/alt9649_2064486214322510802.dir/0006_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9649_2064486214322510802.dir/0006_cpu_gen//basic_system_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.10.19 11:19:52 (*) Starting Nios II generation
+Info: cpu: # 2023.10.19 11:19:52 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.10.19 11:19:52 (*)   Creating all objects for CPU
+Info: cpu: # 2023.10.19 11:19:52 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.10.19 11:19:52 (*)   Creating plain-text RTL
+Info: cpu: # 2023.10.19 11:19:53 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'basic_system_nios2_cpu'
 Info: cpu: "nios2" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_data_master_translator"

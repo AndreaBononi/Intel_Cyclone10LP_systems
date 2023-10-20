@@ -7,8 +7,7 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Project,Library/Interface Protocols,Library,Library/Interface Protocols/Serial,Library/Basic Functions" />
+ <library expandedCategories="Library,Project" />
  <window width="1848" height="1053" x="72" y="27" />
  <generation synthesis="VHDL" />
 </preferences>

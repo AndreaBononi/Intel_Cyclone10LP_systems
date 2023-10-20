@@ -78,7 +78,7 @@ architecture rtl of basic_system is
 
 	component basic_system_mm_interconnect_0 is
 		port (
-			clk_50MHz_clk_clk                       : in  std_logic                     := 'X';             -- clk
+			clk_100MHz_clk_clk                      : in  std_logic                     := 'X';             -- clk
 			nios2_reset_reset_bridge_in_reset_reset : in  std_logic                     := 'X';             -- reset
 			nios2_data_master_address               : in  std_logic_vector(13 downto 0) := (others => 'X'); -- address
 			nios2_data_master_waitrequest           : out std_logic;                                        -- waitrequest
@@ -299,7 +299,7 @@ begin
 
 	mm_interconnect_0 : component basic_system_mm_interconnect_0
 		port map (
-			clk_50MHz_clk_clk                       => clk_clk,                                                   --                     clk_50MHz_clk.clk
+			clk_100MHz_clk_clk                      => clk_clk,                                                   --                    clk_100MHz_clk.clk
 			nios2_reset_reset_bridge_in_reset_reset => rst_controller_reset_out_reset,                            -- nios2_reset_reset_bridge_in_reset.reset
 			nios2_data_master_address               => nios2_data_master_address,                                 --                 nios2_data_master.address
 			nios2_data_master_waitrequest           => nios2_data_master_waitrequest,                             --                                  .waitrequest

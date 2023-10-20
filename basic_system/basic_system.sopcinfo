@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="basic_system" kind="basic_system" version="1.0" fabric="QSYS">
  <!-- Format version 22.1 917 (Future versions may contain additional information.) -->
- <!-- 2023.10.19.11:19:46 -->
+ <!-- 2023.10.20.10:32:12 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1697707186</value>
+  <value>1697790732</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -95,12 +95,16 @@
   <visible>true</visible>
   <valid>true</valid>
  </parameter>
- <module name="clk_50MHz" kind="clock_source" version="22.1" path="clk_50MHz">
+ <module
+   name="clk_100MHz"
+   kind="clock_source"
+   version="22.1"
+   path="clk_100MHz">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="clockFrequency">
    <type>long</type>
-   <value>50000000</value>
+   <value>100000000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -198,7 +202,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>50000000</value>
+    <value>100000000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -276,7 +280,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>long</type>
-    <value>50000000</value>
+    <value>100000000</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -540,7 +544,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="clkFreq">
    <type>long</type>
-   <value>50000000</value>
+   <value>100000000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -643,7 +647,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>50000000</value>
+    <value>100000000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -1179,7 +1183,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.CPU_FREQ</name>
-   <value>50000000u</value>
+   <value>100000000u</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.CPU_ID_SIZE</name>
@@ -1339,7 +1343,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.clock-frequency</name>
-   <value>50000000u</value>
+   <value>100000000u</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.dcache-line-size</name>
@@ -2879,7 +2883,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="clockFrequency">
    <type>long</type>
-   <value>50000000</value>
+   <value>100000000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -3055,7 +3059,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>50000000</value>
+    <value>100000000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -5488,10 +5492,10 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50MHz.clk/nios2.clk"
+   name="clk_100MHz.clk/nios2.clk"
    kind="clock"
    version="22.1"
-   start="clk_50MHz.clk"
+   start="clk_100MHz.clk"
    end="nios2.clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -5509,16 +5513,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clk_50MHz</startModule>
+  <startModule>clk_100MHz</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>nios2</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50MHz.clk/jtag_uart.clk"
+   name="clk_100MHz.clk/jtag_uart.clk"
    kind="clock"
    version="22.1"
-   start="clk_50MHz.clk"
+   start="clk_100MHz.clk"
    end="jtag_uart.clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -5536,16 +5540,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clk_50MHz</startModule>
+  <startModule>clk_100MHz</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>jtag_uart</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50MHz.clk/onchip_RAM.clk1"
+   name="clk_100MHz.clk/onchip_RAM.clk1"
    kind="clock"
    version="22.1"
-   start="clk_50MHz.clk"
+   start="clk_100MHz.clk"
    end="onchip_RAM.clk1">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -5563,7 +5567,7 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clk_50MHz</startModule>
+  <startModule>clk_100MHz</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>onchip_RAM</endModule>
   <endConnectionPoint>clk1</endConnectionPoint>
@@ -5604,10 +5608,10 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50MHz.clk_reset/nios2.reset"
+   name="clk_100MHz.clk_reset/nios2.reset"
    kind="reset"
    version="22.1"
-   start="clk_50MHz.clk_reset"
+   start="clk_100MHz.clk_reset"
    end="nios2.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -5625,16 +5629,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clk_50MHz</startModule>
+  <startModule>clk_100MHz</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>nios2</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50MHz.clk_reset/jtag_uart.reset"
+   name="clk_100MHz.clk_reset/jtag_uart.reset"
    kind="reset"
    version="22.1"
-   start="clk_50MHz.clk_reset"
+   start="clk_100MHz.clk_reset"
    end="jtag_uart.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -5652,16 +5656,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clk_50MHz</startModule>
+  <startModule>clk_100MHz</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>jtag_uart</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50MHz.clk_reset/onchip_RAM.reset1"
+   name="clk_100MHz.clk_reset/onchip_RAM.reset1"
    kind="reset"
    version="22.1"
-   start="clk_50MHz.clk_reset"
+   start="clk_100MHz.clk_reset"
    end="onchip_RAM.reset1">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -5679,7 +5683,7 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clk_50MHz</startModule>
+  <startModule>clk_100MHz</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>onchip_RAM</endModule>
   <endConnectionPoint>reset1</endConnectionPoint>
