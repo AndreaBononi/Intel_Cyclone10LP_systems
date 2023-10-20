@@ -57,11 +57,13 @@ architecture behavior of top_level_entity is
 	component basic_system
 		port 
 		(
-			clk_clk       	: in std_logic := '0';
-			reset_reset_n 	: in std_logic := '0'
+			clk_clk         : in  std_logic := '0';
+			leds_export     : out std_logic_vector(3 downto 0);
+			reset_reset_n   : in  std_logic := '0';
+			switches_export : in  std_logic_vector(3 downto 0) := (others => '0')
 		);
 	end component;
-	
+		
 	begin
 
 		-- Main clock PLL (from 10MHz to 100MHz) ------------------------------------------------------
@@ -74,16 +76,14 @@ architecture behavior of top_level_entity is
 			locked	=> pllLock
 		);
 		
-		-- Nios II based system -----------------------------------------------------------------------
+		-- Nios II system -----------------------------------------------------------------------------
 		basic_system_inst : basic_system
 		port map
 		(
-			clk_clk					=> clk,
-			reset_reset_n		=> reset
+			clk_clk						=> clk,
+			leds_export     	=> leds,
+			reset_reset_n   	=> reset,
+			switches_export 	=> switches(3 downto 0)
 		);
-
-		-- LEDs ---------------------------------------------------------------------------------------
-		leds <= switches(3 downto 0);
-		-- leds <= "1111";
 	
 end behavior;

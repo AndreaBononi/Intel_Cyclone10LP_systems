@@ -8,12 +8,27 @@ use IEEE.numeric_std.all;
 
 entity basic_system is
 	port (
-		clk_clk       : in std_logic := '0'; --   clk.clk
-		reset_reset_n : in std_logic := '0'  -- reset.reset_n
+		clk_clk         : in  std_logic                    := '0';             --      clk.clk
+		leds_export     : out std_logic_vector(3 downto 0);                    --     leds.export
+		reset_reset_n   : in  std_logic                    := '0';             --    reset.reset_n
+		switches_export : in  std_logic_vector(3 downto 0) := (others => '0')  -- switches.export
 	);
 end entity basic_system;
 
 architecture rtl of basic_system is
+	component basic_system_LEDs is
+		port (
+			clk        : in  std_logic                     := 'X';             -- clk
+			reset_n    : in  std_logic                     := 'X';             -- reset_n
+			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			write_n    : in  std_logic                     := 'X';             -- write_n
+			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			chipselect : in  std_logic                     := 'X';             -- chipselect
+			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
+			out_port   : out std_logic_vector(3 downto 0)                      -- export
+		);
+	end component basic_system_LEDs;
+
 	component basic_system_jtag_uart is
 		port (
 			clk            : in  std_logic                     := 'X';             -- clk
@@ -76,6 +91,16 @@ architecture rtl of basic_system is
 		);
 	end component basic_system_onchip_RAM;
 
+	component basic_system_switches is
+		port (
+			clk      : in  std_logic                     := 'X';             -- clk
+			reset_n  : in  std_logic                     := 'X';             -- reset_n
+			address  : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			readdata : out std_logic_vector(31 downto 0);                    -- readdata
+			in_port  : in  std_logic_vector(3 downto 0)  := (others => 'X')  -- export
+		);
+	end component basic_system_switches;
+
 	component basic_system_mm_interconnect_0 is
 		port (
 			clk_100MHz_clk_clk                      : in  std_logic                     := 'X';             -- clk
@@ -99,6 +124,11 @@ architecture rtl of basic_system is
 			jtag_uart_avalon_jtag_slave_writedata   : out std_logic_vector(31 downto 0);                    -- writedata
 			jtag_uart_avalon_jtag_slave_waitrequest : in  std_logic                     := 'X';             -- waitrequest
 			jtag_uart_avalon_jtag_slave_chipselect  : out std_logic;                                        -- chipselect
+			LEDs_s1_address                         : out std_logic_vector(1 downto 0);                     -- address
+			LEDs_s1_write                           : out std_logic;                                        -- write
+			LEDs_s1_readdata                        : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			LEDs_s1_writedata                       : out std_logic_vector(31 downto 0);                    -- writedata
+			LEDs_s1_chipselect                      : out std_logic;                                        -- chipselect
 			nios2_debug_mem_slave_address           : out std_logic_vector(8 downto 0);                     -- address
 			nios2_debug_mem_slave_write             : out std_logic;                                        -- write
 			nios2_debug_mem_slave_read              : out std_logic;                                        -- read
@@ -113,7 +143,9 @@ architecture rtl of basic_system is
 			onchip_RAM_s1_writedata                 : out std_logic_vector(31 downto 0);                    -- writedata
 			onchip_RAM_s1_byteenable                : out std_logic_vector(3 downto 0);                     -- byteenable
 			onchip_RAM_s1_chipselect                : out std_logic;                                        -- chipselect
-			onchip_RAM_s1_clken                     : out std_logic                                         -- clken
+			onchip_RAM_s1_clken                     : out std_logic;                                        -- clken
+			switches_s1_address                     : out std_logic_vector(1 downto 0);                     -- address
+			switches_s1_readdata                    : in  std_logic_vector(31 downto 0) := (others => 'X')  -- readdata
 		);
 	end component basic_system_mm_interconnect_0;
 
@@ -226,6 +258,13 @@ architecture rtl of basic_system is
 	signal mm_interconnect_0_onchip_ram_s1_write                         : std_logic;                     -- mm_interconnect_0:onchip_RAM_s1_write -> onchip_RAM:write
 	signal mm_interconnect_0_onchip_ram_s1_writedata                     : std_logic_vector(31 downto 0); -- mm_interconnect_0:onchip_RAM_s1_writedata -> onchip_RAM:writedata
 	signal mm_interconnect_0_onchip_ram_s1_clken                         : std_logic;                     -- mm_interconnect_0:onchip_RAM_s1_clken -> onchip_RAM:clken
+	signal mm_interconnect_0_switches_s1_readdata                        : std_logic_vector(31 downto 0); -- switches:readdata -> mm_interconnect_0:switches_s1_readdata
+	signal mm_interconnect_0_switches_s1_address                         : std_logic_vector(1 downto 0);  -- mm_interconnect_0:switches_s1_address -> switches:address
+	signal mm_interconnect_0_leds_s1_chipselect                          : std_logic;                     -- mm_interconnect_0:LEDs_s1_chipselect -> LEDs:chipselect
+	signal mm_interconnect_0_leds_s1_readdata                            : std_logic_vector(31 downto 0); -- LEDs:readdata -> mm_interconnect_0:LEDs_s1_readdata
+	signal mm_interconnect_0_leds_s1_address                             : std_logic_vector(1 downto 0);  -- mm_interconnect_0:LEDs_s1_address -> LEDs:address
+	signal mm_interconnect_0_leds_s1_write                               : std_logic;                     -- mm_interconnect_0:LEDs_s1_write -> mm_interconnect_0_leds_s1_write:in
+	signal mm_interconnect_0_leds_s1_writedata                           : std_logic_vector(31 downto 0); -- mm_interconnect_0:LEDs_s1_writedata -> LEDs:writedata
 	signal irq_mapper_receiver0_irq                                      : std_logic;                     -- jtag_uart:av_irq -> irq_mapper:receiver0_irq
 	signal nios2_irq_irq                                                 : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2:irq
 	signal rst_controller_reset_out_reset                                : std_logic;                     -- rst_controller:reset_out -> [irq_mapper:reset, mm_interconnect_0:nios2_reset_reset_bridge_in_reset_reset, onchip_RAM:reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
@@ -234,9 +273,22 @@ architecture rtl of basic_system is
 	signal reset_reset_n_ports_inv                                       : std_logic;                     -- reset_reset_n:inv -> rst_controller:reset_in0
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv  : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:inv -> jtag_uart:av_read_n
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:inv -> jtag_uart:av_write_n
-	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [jtag_uart:rst_n, nios2:reset_n]
+	signal mm_interconnect_0_leds_s1_write_ports_inv                     : std_logic;                     -- mm_interconnect_0_leds_s1_write:inv -> LEDs:write_n
+	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [LEDs:reset_n, jtag_uart:rst_n, nios2:reset_n, switches:reset_n]
 
 begin
+
+	leds : component basic_system_LEDs
+		port map (
+			clk        => clk_clk,                                   --                 clk.clk
+			reset_n    => rst_controller_reset_out_reset_ports_inv,  --               reset.reset_n
+			address    => mm_interconnect_0_leds_s1_address,         --                  s1.address
+			write_n    => mm_interconnect_0_leds_s1_write_ports_inv, --                    .write_n
+			writedata  => mm_interconnect_0_leds_s1_writedata,       --                    .writedata
+			chipselect => mm_interconnect_0_leds_s1_chipselect,      --                    .chipselect
+			readdata   => mm_interconnect_0_leds_s1_readdata,        --                    .readdata
+			out_port   => leds_export                                -- external_connection.export
+		);
 
 	jtag_uart : component basic_system_jtag_uart
 		port map (
@@ -297,6 +349,15 @@ begin
 			freeze     => '0'                                         -- (terminated)
 		);
 
+	switches : component basic_system_switches
+		port map (
+			clk      => clk_clk,                                  --                 clk.clk
+			reset_n  => rst_controller_reset_out_reset_ports_inv, --               reset.reset_n
+			address  => mm_interconnect_0_switches_s1_address,    --                  s1.address
+			readdata => mm_interconnect_0_switches_s1_readdata,   --                    .readdata
+			in_port  => switches_export                           -- external_connection.export
+		);
+
 	mm_interconnect_0 : component basic_system_mm_interconnect_0
 		port map (
 			clk_100MHz_clk_clk                      => clk_clk,                                                   --                    clk_100MHz_clk.clk
@@ -320,6 +381,11 @@ begin
 			jtag_uart_avalon_jtag_slave_writedata   => mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata,   --                                  .writedata
 			jtag_uart_avalon_jtag_slave_waitrequest => mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest, --                                  .waitrequest
 			jtag_uart_avalon_jtag_slave_chipselect  => mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect,  --                                  .chipselect
+			LEDs_s1_address                         => mm_interconnect_0_leds_s1_address,                         --                           LEDs_s1.address
+			LEDs_s1_write                           => mm_interconnect_0_leds_s1_write,                           --                                  .write
+			LEDs_s1_readdata                        => mm_interconnect_0_leds_s1_readdata,                        --                                  .readdata
+			LEDs_s1_writedata                       => mm_interconnect_0_leds_s1_writedata,                       --                                  .writedata
+			LEDs_s1_chipselect                      => mm_interconnect_0_leds_s1_chipselect,                      --                                  .chipselect
 			nios2_debug_mem_slave_address           => mm_interconnect_0_nios2_debug_mem_slave_address,           --             nios2_debug_mem_slave.address
 			nios2_debug_mem_slave_write             => mm_interconnect_0_nios2_debug_mem_slave_write,             --                                  .write
 			nios2_debug_mem_slave_read              => mm_interconnect_0_nios2_debug_mem_slave_read,              --                                  .read
@@ -334,7 +400,9 @@ begin
 			onchip_RAM_s1_writedata                 => mm_interconnect_0_onchip_ram_s1_writedata,                 --                                  .writedata
 			onchip_RAM_s1_byteenable                => mm_interconnect_0_onchip_ram_s1_byteenable,                --                                  .byteenable
 			onchip_RAM_s1_chipselect                => mm_interconnect_0_onchip_ram_s1_chipselect,                --                                  .chipselect
-			onchip_RAM_s1_clken                     => mm_interconnect_0_onchip_ram_s1_clken                      --                                  .clken
+			onchip_RAM_s1_clken                     => mm_interconnect_0_onchip_ram_s1_clken,                     --                                  .clken
+			switches_s1_address                     => mm_interconnect_0_switches_s1_address,                     --                       switches_s1.address
+			switches_s1_readdata                    => mm_interconnect_0_switches_s1_readdata                     --                                  .readdata
 		);
 
 	irq_mapper : component basic_system_irq_mapper
@@ -415,6 +483,8 @@ begin
 	mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv <= not mm_interconnect_0_jtag_uart_avalon_jtag_slave_read;
 
 	mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv <= not mm_interconnect_0_jtag_uart_avalon_jtag_slave_write;
+
+	mm_interconnect_0_leds_s1_write_ports_inv <= not mm_interconnect_0_leds_s1_write;
 
 	rst_controller_reset_out_reset_ports_inv <= not rst_controller_reset_out_reset;
 

@@ -1,0 +1,9 @@
+17:21:59 **** Build of configuration Nios II for project basic_system ****
+make all 
+Info: Building ../basic_system_bsp/
+make --no-print-directory -C ../basic_system_bsp/
+[BSP build complete]
+[basic_system build complete]
+
+17:22:00 Build Finished (took 975ms)
+

@@ -20,6 +20,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "switches[0]",
 					"strict" : false
 				},
@@ -33,10 +37,6 @@
 				},
 				{
 					"name" : "switches[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
 					"strict" : false
 				},
 				{
