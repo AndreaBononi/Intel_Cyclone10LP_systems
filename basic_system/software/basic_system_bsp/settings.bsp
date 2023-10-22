@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 20, 2023 4:48:26 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1697813306325</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 22, 2023 6:34:35 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1697992475434</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/andrea/Documents/Tesi_287628/287628/basic_system/software/basic_system_bsp</BspGeneratedLocation>
-        <BspSettingsFile>settings.bsp</BspSettingsFile>
+        <BspSettingsFile>./settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../basic_system.sopcinfo</SopcDesignFile>
         <SystemFileHash>9310a8cbbeef1fce9c82a869cb67fe34bb6431164703da4fc4e798754eec</SystemFileHash>
         <JdiFile>default</JdiFile>

@@ -90,7 +90,7 @@ ACDS_VERSION := 22.1
 ELF := basic_system.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := hello_world_small.c
+C_SRCS := basic_system_main.c
 CXX_SRCS :=
 ASM_SRCS :=
 
