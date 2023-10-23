@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------------------------------------------------------------- 
+Nios 2 OCRAM booting
+--------------------------------------------------------------------------------------------------------------------------------------
+
+0)	In the Platform Designer System, check "Initialize Memory Content" option of the OCRAM IP core.
+
+1) 	Using Software Build Tool (SBT), build the project so that the .elf file is generated.
+
+2) 	Right click on the compiled project --> "make targets" --> "build" --> select "mem_init_generate" and click on "build".
+
+3) 	A meminit.qip file is generated. Add it to the Quartus project and compile it.
+
+--------------------------------------------------------------------------------------------------------------------------------------

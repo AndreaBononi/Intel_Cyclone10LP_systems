@@ -19,13 +19,13 @@ Memory Configuration
 
 Name             Origin             Length             Attributes
 reset            0x0000000000000000 0x0000000000000020
-onchip_RAM       0x0000000000000020 0x0000000000000fe0
+OCRAM            0x0000000000000020 0x0000000000003fe0
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
 
 LOAD ../basic_system_bsp//obj/HAL/src/crt0.o
-LOAD obj/default/hello_world_small.o
+LOAD obj/default/basic_system_main.o
 LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libstdc++.a
 LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libm.a
 LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul/libgcc.a
@@ -36,7 +36,7 @@ LOAD ../basic_system_bsp//libhal_bsp.a
 LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libm.a
 END GROUP
 LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul/libgcc.a
-                0x0000000000000000                __alt_mem_onchip_RAM = 0x0
+                0x0000000000000000                __alt_mem_OCRAM = 0x0
 
 .entry          0x0000000000000000       0x20
  *(.entry)
@@ -119,8 +119,8 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000000000020       0x3c ../basic_system_bsp//obj/HAL/src/crt0.o
                 0x0000000000000020                _start
- .text          0x000000000000005c        0x0 obj/default/hello_world_small.o
- .text.startup  0x000000000000005c       0x10 obj/default/hello_world_small.o
+ .text          0x000000000000005c        0x0 obj/default/basic_system_main.o
+ .text.startup  0x000000000000005c       0x10 obj/default/basic_system_main.o
                 0x000000000000005c                main
  .text          0x000000000000006c       0x84 ../basic_system_bsp//libhal_bsp.a(alt_load.o)
                 0x000000000000006c                alt_load
@@ -185,7 +185,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
  .data          0x0000000000000178        0x0 ../basic_system_bsp//obj/HAL/src/crt0.o
- .data          0x0000000000000178        0x0 obj/default/hello_world_small.o
+ .data          0x0000000000000178        0x0 obj/default/basic_system_main.o
  .data          0x0000000000000178        0x0 ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .data          0x0000000000000178        0x0 ../basic_system_bsp//libhal_bsp.a(alt_main.o)
  .data          0x0000000000000178        0x0 ../basic_system_bsp//libhal_bsp.a(alt_sys_init.o)
@@ -223,7 +223,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
  .bss           0x000000000000018c        0x0 ../basic_system_bsp//obj/HAL/src/crt0.o
- .bss           0x000000000000018c        0x0 obj/default/hello_world_small.o
+ .bss           0x000000000000018c        0x0 obj/default/basic_system_main.o
  .bss           0x000000000000018c        0x0 ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .bss           0x000000000000018c        0x0 ../basic_system_bsp//libhal_bsp.a(alt_main.o)
  .bss           0x000000000000018c        0x0 ../basic_system_bsp//libhal_bsp.a(alt_sys_init.o)
@@ -235,15 +235,15 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
                 0x000000000000018c                . = ALIGN (0x4)
                 0x000000000000018c                __bss_end = ABSOLUTE (.)
 
-.onchip_RAM     0x000000000000018c        0x0
-                [!provide]                        PROVIDE (_alt_partition_onchip_RAM_start = ABSOLUTE (.))
- *(.onchip_RAM .onchip_RAM. onchip_RAM.*)
+.OCRAM          0x000000000000018c        0x0
+                [!provide]                        PROVIDE (_alt_partition_OCRAM_start = ABSOLUTE (.))
+ *(.OCRAM .OCRAM. OCRAM.*)
                 0x000000000000018c                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_alt_partition_onchip_RAM_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_alt_partition_OCRAM_end = ABSOLUTE (.))
                 0x000000000000018c                _end = ABSOLUTE (.)
                 0x000000000000018c                end = ABSOLUTE (.)
                 0x000000000000018c                __alt_stack_base = ABSOLUTE (.)
-                [!provide]                        PROVIDE (_alt_partition_onchip_RAM_load_addr = LOADADDR (.onchip_RAM))
+                [!provide]                        PROVIDE (_alt_partition_OCRAM_load_addr = LOADADDR (.OCRAM))
 
 .stab
  *(.stab)
@@ -265,7 +265,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
 
 .comment        0x0000000000000000       0x2d
  *(.comment)
- .comment       0x0000000000000000       0x2d obj/default/hello_world_small.o
+ .comment       0x0000000000000000       0x2d obj/default/basic_system_main.o
                                          0x2e (size before relaxing)
  .comment       0x000000000000002d       0x2e ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .comment       0x000000000000002d       0x2e ../basic_system_bsp//libhal_bsp.a(alt_main.o)
@@ -292,7 +292,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
  .debug_aranges
                 0x0000000000000000       0x28 ../basic_system_bsp//obj/HAL/src/crt0.o
  .debug_aranges
-                0x0000000000000028       0x20 obj/default/hello_world_small.o
+                0x0000000000000028       0x20 obj/default/basic_system_main.o
  .debug_aranges
                 0x0000000000000048       0x20 ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .debug_aranges
@@ -314,7 +314,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
 .debug_info     0x0000000000000000      0x829
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x22 ../basic_system_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000000000000022       0xa1 obj/default/hello_world_small.o
+ .debug_info    0x0000000000000022       0xa1 obj/default/basic_system_main.o
  .debug_info    0x00000000000000c3      0x239 ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .debug_info    0x00000000000002fc      0x13e ../basic_system_bsp//libhal_bsp.a(alt_main.o)
  .debug_info    0x000000000000043a      0x127 ../basic_system_bsp//libhal_bsp.a(alt_sys_init.o)
@@ -326,7 +326,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
 .debug_abbrev   0x0000000000000000      0x522
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 ../basic_system_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012       0x68 obj/default/hello_world_small.o
+ .debug_abbrev  0x0000000000000012       0x68 obj/default/basic_system_main.o
  .debug_abbrev  0x000000000000007a      0x12c ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .debug_abbrev  0x00000000000001a6       0xeb ../basic_system_bsp//libhal_bsp.a(alt_main.o)
  .debug_abbrev  0x0000000000000291      0x107 ../basic_system_bsp//libhal_bsp.a(alt_sys_init.o)
@@ -338,7 +338,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
 .debug_line     0x0000000000000000      0x461
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../basic_system_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066       0x7f obj/default/hello_world_small.o
+ .debug_line    0x0000000000000066       0x7f obj/default/basic_system_main.o
  .debug_line    0x00000000000000e5       0xd2 ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .debug_line    0x00000000000001b7       0xa2 ../basic_system_bsp//libhal_bsp.a(alt_main.o)
  .debug_line    0x0000000000000259       0x8e ../basic_system_bsp//libhal_bsp.a(alt_sys_init.o)
@@ -349,7 +349,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
 
 .debug_frame    0x0000000000000000      0x134
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x20 obj/default/hello_world_small.o
+ .debug_frame   0x0000000000000000       0x20 obj/default/basic_system_main.o
  .debug_frame   0x0000000000000020       0x2c ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .debug_frame   0x000000000000004c       0x2c ../basic_system_bsp//libhal_bsp.a(alt_main.o)
  .debug_frame   0x0000000000000078       0x3c ../basic_system_bsp//libhal_bsp.a(alt_sys_init.o)
@@ -361,7 +361,7 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
 .debug_str      0x0000000000000000      0x38d
  *(.debug_str)
  .debug_str     0x0000000000000000       0x6f ../basic_system_bsp//obj/HAL/src/crt0.o
- .debug_str     0x000000000000006f       0xaf obj/default/hello_world_small.o
+ .debug_str     0x000000000000006f       0xaf obj/default/basic_system_main.o
                                          0xdb (size before relaxing)
  .debug_str     0x000000000000011e      0x125 ../basic_system_bsp//libhal_bsp.a(alt_load.o)
                                         0x208 (size before relaxing)
@@ -398,11 +398,11 @@ LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/
  *(.debug_alt_sim_info)
  .debug_alt_sim_info
                 0x0000000000000000       0x10 ../basic_system_bsp//obj/HAL/src/crt0.o
-                0x0000000000001000                __alt_data_end = 0x1000
-                0x0000000000001000                PROVIDE (__alt_stack_pointer = __alt_data_end)
+                0x0000000000004000                __alt_data_end = 0x4000
+                0x0000000000004000                PROVIDE (__alt_stack_pointer = __alt_data_end)
                 [!provide]                        PROVIDE (__alt_stack_limit = __alt_stack_base)
                 [!provide]                        PROVIDE (__alt_heap_start = end)
-                [!provide]                        PROVIDE (__alt_heap_limit = 0x1000)
+                [!provide]                        PROVIDE (__alt_heap_limit = 0x4000)
 OUTPUT(basic_system.elf elf32-littlenios2)
 LOAD linker stubs
 
@@ -412,7 +412,7 @@ LOAD linker stubs
 .debug_loclists
                 0x0000000000000000      0x101
  .debug_loclists
-                0x0000000000000000       0x17 obj/default/hello_world_small.o
+                0x0000000000000000       0x17 obj/default/basic_system_main.o
  .debug_loclists
                 0x0000000000000017       0x1e ../basic_system_bsp//libhal_bsp.a(alt_sys_init.o)
  .debug_loclists
@@ -421,7 +421,7 @@ LOAD linker stubs
 .debug_rnglists
                 0x0000000000000000       0x49
  .debug_rnglists
-                0x0000000000000000       0x13 obj/default/hello_world_small.o
+                0x0000000000000000       0x13 obj/default/basic_system_main.o
  .debug_rnglists
                 0x0000000000000013       0x23 ../basic_system_bsp//libhal_bsp.a(alt_load.o)
  .debug_rnglists
@@ -430,7 +430,7 @@ LOAD linker stubs
 .debug_line_str
                 0x0000000000000000      0x405
  .debug_line_str
-                0x0000000000000000       0x8a obj/default/hello_world_small.o
+                0x0000000000000000       0x8a obj/default/basic_system_main.o
                                          0xff (size before relaxing)
  .debug_line_str
                 0x000000000000008a       0xa6 ../basic_system_bsp//libhal_bsp.a(alt_load.o)

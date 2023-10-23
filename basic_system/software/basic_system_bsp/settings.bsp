@@ -2,12 +2,12 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 22, 2023 6:34:35 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1697992475434</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 23, 2023 9:40:24 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1698046824076</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/andrea/Documents/Tesi_287628/287628/basic_system/software/basic_system_bsp</BspGeneratedLocation>
         <BspSettingsFile>./settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../basic_system.sopcinfo</SopcDesignFile>
-        <SystemFileHash>9310a8cbbeef1fce9c82a869cb67fe34bb6431164703da4fc4e798754eec</SystemFileHash>
+        <SystemFileHash>f83f99c8ff9021fed65159b43ec963b4512de9477834af441c2309c8451566</SystemFileHash>
         <JdiFile>default</JdiFile>
         <Cpu>nios2</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -147,7 +147,7 @@
                 <SettingName>hal.linker.exception_stack_memory_region_name</SettingName>
                 <Identifier>none</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>onchip_RAM</Value>
+                <Value>OCRAM</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Name of the existing memory region that will be divided up to create the 'exception_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'exception_stack' memory region.</Description>
@@ -183,7 +183,7 @@
                 <SettingName>hal.linker.interrupt_stack_memory_region_name</SettingName>
                 <Identifier>none</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>onchip_RAM</Value>
+                <Value>OCRAM</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Name of the existing memory region that will be divided up to create the 'interrupt_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'interrupt_stack' memory region.</Description>
@@ -900,57 +900,57 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>onchip_RAM</slaveDescriptor>
-                <addressRange>0x00000000 - 0x00000FFF</addressRange>
-                <addressSpan>4096</addressSpan>
+                <slaveDescriptor>OCRAM</slaveDescriptor>
+                <addressRange>0x00000000 - 0x00003FFF</addressRange>
+                <addressSpan>16384</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>LEDs</slaveDescriptor>
-                <addressRange>0x00002000 - 0x0000200F</addressRange>
+                <addressRange>0x00005000 - 0x0000500F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>switches</slaveDescriptor>
-                <addressRange>0x00002010 - 0x0000201F</addressRange>
+                <addressRange>0x00005010 - 0x0000501F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x00002020 - 0x00002027</addressRange>
+                <addressRange>0x00005020 - 0x00005027</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>onchip_RAM</regionName>
+                <regionName>OCRAM</regionName>
                 <noLoad>false</noLoad>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>
-                <regionName>onchip_RAM</regionName>
+                <regionName>OCRAM</regionName>
                 <noLoad>false</noLoad>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rwdata</sectionName>
-                <regionName>onchip_RAM</regionName>
+                <regionName>OCRAM</regionName>
                 <noLoad>false</noLoad>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.bss</sectionName>
-                <regionName>onchip_RAM</regionName>
+                <regionName>OCRAM</regionName>
                 <noLoad>false</noLoad>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.heap</sectionName>
-                <regionName>onchip_RAM</regionName>
+                <regionName>OCRAM</regionName>
                 <noLoad>false</noLoad>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.stack</sectionName>
-                <regionName>onchip_RAM</regionName>
+                <regionName>OCRAM</regionName>
                 <noLoad>false</noLoad>
         </LinkerSection>
 </sch:Settings>

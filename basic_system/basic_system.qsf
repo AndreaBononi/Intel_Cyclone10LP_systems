@@ -175,6 +175,7 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -
 set_global_assignment -name GENERATE_RBF_FILE ON
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name QIP_FILE software/basic_system/mem_init/meminit.qip
 set_global_assignment -name QIP_FILE basic_system/synthesis/basic_system.qip
 set_global_assignment -name VHDL_FILE src/top_level_entity.vhd
 set_global_assignment -name VHDL_FILE myAltPll.vhd

@@ -4,7 +4,7 @@ IP CORES
 DIRECTORIES DESCRIPTION:
 	#
 	# ./basic_system/
-		-- Nios II based system containing an on-chip RAM
+		-- simple Nios II based system containing an on-chip RAM
 		-- the RAM is created using an IP core available in the IP catalog, which can be directly connected to the Avalon bus
 	#
 	# ./blockRAM_system/

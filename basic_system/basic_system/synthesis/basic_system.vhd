@@ -29,6 +29,22 @@ architecture rtl of basic_system is
 		);
 	end component basic_system_LEDs;
 
+	component basic_system_OCRAM is
+		port (
+			clk        : in  std_logic                     := 'X';             -- clk
+			address    : in  std_logic_vector(12 downto 0) := (others => 'X'); -- address
+			clken      : in  std_logic                     := 'X';             -- clken
+			chipselect : in  std_logic                     := 'X';             -- chipselect
+			write      : in  std_logic                     := 'X';             -- write
+			readdata   : out std_logic_vector(15 downto 0);                    -- readdata
+			writedata  : in  std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
+			byteenable : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- byteenable
+			reset      : in  std_logic                     := 'X';             -- reset
+			reset_req  : in  std_logic                     := 'X';             -- reset_req
+			freeze     : in  std_logic                     := 'X'              -- freeze
+		);
+	end component basic_system_OCRAM;
+
 	component basic_system_jtag_uart is
 		port (
 			clk            : in  std_logic                     := 'X';             -- clk
@@ -49,7 +65,7 @@ architecture rtl of basic_system is
 			clk                                 : in  std_logic                     := 'X';             -- clk
 			reset_n                             : in  std_logic                     := 'X';             -- reset_n
 			reset_req                           : in  std_logic                     := 'X';             -- reset_req
-			d_address                           : out std_logic_vector(13 downto 0);                    -- address
+			d_address                           : out std_logic_vector(14 downto 0);                    -- address
 			d_byteenable                        : out std_logic_vector(3 downto 0);                     -- byteenable
 			d_read                              : out std_logic;                                        -- read
 			d_readdata                          : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
@@ -57,7 +73,7 @@ architecture rtl of basic_system is
 			d_write                             : out std_logic;                                        -- write
 			d_writedata                         : out std_logic_vector(31 downto 0);                    -- writedata
 			debug_mem_slave_debugaccess_to_roms : out std_logic;                                        -- debugaccess
-			i_address                           : out std_logic_vector(12 downto 0);                    -- address
+			i_address                           : out std_logic_vector(14 downto 0);                    -- address
 			i_read                              : out std_logic;                                        -- read
 			i_readdata                          : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			i_waitrequest                       : in  std_logic                     := 'X';             -- waitrequest
@@ -75,22 +91,6 @@ architecture rtl of basic_system is
 		);
 	end component basic_system_nios2;
 
-	component basic_system_onchip_RAM is
-		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			address    : in  std_logic_vector(9 downto 0)  := (others => 'X'); -- address
-			clken      : in  std_logic                     := 'X';             -- clken
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			write      : in  std_logic                     := 'X';             -- write
-			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
-			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			byteenable : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
-			reset      : in  std_logic                     := 'X';             -- reset
-			reset_req  : in  std_logic                     := 'X';             -- reset_req
-			freeze     : in  std_logic                     := 'X'              -- freeze
-		);
-	end component basic_system_onchip_RAM;
-
 	component basic_system_switches is
 		port (
 			clk      : in  std_logic                     := 'X';             -- clk
@@ -105,7 +105,7 @@ architecture rtl of basic_system is
 		port (
 			clk_100MHz_clk_clk                      : in  std_logic                     := 'X';             -- clk
 			nios2_reset_reset_bridge_in_reset_reset : in  std_logic                     := 'X';             -- reset
-			nios2_data_master_address               : in  std_logic_vector(13 downto 0) := (others => 'X'); -- address
+			nios2_data_master_address               : in  std_logic_vector(14 downto 0) := (others => 'X'); -- address
 			nios2_data_master_waitrequest           : out std_logic;                                        -- waitrequest
 			nios2_data_master_byteenable            : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
 			nios2_data_master_read                  : in  std_logic                     := 'X';             -- read
@@ -113,7 +113,7 @@ architecture rtl of basic_system is
 			nios2_data_master_write                 : in  std_logic                     := 'X';             -- write
 			nios2_data_master_writedata             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
 			nios2_data_master_debugaccess           : in  std_logic                     := 'X';             -- debugaccess
-			nios2_instruction_master_address        : in  std_logic_vector(12 downto 0) := (others => 'X'); -- address
+			nios2_instruction_master_address        : in  std_logic_vector(14 downto 0) := (others => 'X'); -- address
 			nios2_instruction_master_waitrequest    : out std_logic;                                        -- waitrequest
 			nios2_instruction_master_read           : in  std_logic                     := 'X';             -- read
 			nios2_instruction_master_readdata       : out std_logic_vector(31 downto 0);                    -- readdata
@@ -137,13 +137,13 @@ architecture rtl of basic_system is
 			nios2_debug_mem_slave_byteenable        : out std_logic_vector(3 downto 0);                     -- byteenable
 			nios2_debug_mem_slave_waitrequest       : in  std_logic                     := 'X';             -- waitrequest
 			nios2_debug_mem_slave_debugaccess       : out std_logic;                                        -- debugaccess
-			onchip_RAM_s1_address                   : out std_logic_vector(9 downto 0);                     -- address
-			onchip_RAM_s1_write                     : out std_logic;                                        -- write
-			onchip_RAM_s1_readdata                  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			onchip_RAM_s1_writedata                 : out std_logic_vector(31 downto 0);                    -- writedata
-			onchip_RAM_s1_byteenable                : out std_logic_vector(3 downto 0);                     -- byteenable
-			onchip_RAM_s1_chipselect                : out std_logic;                                        -- chipselect
-			onchip_RAM_s1_clken                     : out std_logic;                                        -- clken
+			OCRAM_s1_address                        : out std_logic_vector(12 downto 0);                    -- address
+			OCRAM_s1_write                          : out std_logic;                                        -- write
+			OCRAM_s1_readdata                       : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
+			OCRAM_s1_writedata                      : out std_logic_vector(15 downto 0);                    -- writedata
+			OCRAM_s1_byteenable                     : out std_logic_vector(1 downto 0);                     -- byteenable
+			OCRAM_s1_chipselect                     : out std_logic;                                        -- chipselect
+			OCRAM_s1_clken                          : out std_logic;                                        -- clken
 			switches_s1_address                     : out std_logic_vector(1 downto 0);                     -- address
 			switches_s1_readdata                    : in  std_logic_vector(31 downto 0) := (others => 'X')  -- readdata
 		);
@@ -227,14 +227,14 @@ architecture rtl of basic_system is
 	signal nios2_data_master_readdata                                    : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2_data_master_readdata -> nios2:d_readdata
 	signal nios2_data_master_waitrequest                                 : std_logic;                     -- mm_interconnect_0:nios2_data_master_waitrequest -> nios2:d_waitrequest
 	signal nios2_data_master_debugaccess                                 : std_logic;                     -- nios2:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2_data_master_debugaccess
-	signal nios2_data_master_address                                     : std_logic_vector(13 downto 0); -- nios2:d_address -> mm_interconnect_0:nios2_data_master_address
+	signal nios2_data_master_address                                     : std_logic_vector(14 downto 0); -- nios2:d_address -> mm_interconnect_0:nios2_data_master_address
 	signal nios2_data_master_byteenable                                  : std_logic_vector(3 downto 0);  -- nios2:d_byteenable -> mm_interconnect_0:nios2_data_master_byteenable
 	signal nios2_data_master_read                                        : std_logic;                     -- nios2:d_read -> mm_interconnect_0:nios2_data_master_read
 	signal nios2_data_master_write                                       : std_logic;                     -- nios2:d_write -> mm_interconnect_0:nios2_data_master_write
 	signal nios2_data_master_writedata                                   : std_logic_vector(31 downto 0); -- nios2:d_writedata -> mm_interconnect_0:nios2_data_master_writedata
 	signal nios2_instruction_master_readdata                             : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2_instruction_master_readdata -> nios2:i_readdata
 	signal nios2_instruction_master_waitrequest                          : std_logic;                     -- mm_interconnect_0:nios2_instruction_master_waitrequest -> nios2:i_waitrequest
-	signal nios2_instruction_master_address                              : std_logic_vector(12 downto 0); -- nios2:i_address -> mm_interconnect_0:nios2_instruction_master_address
+	signal nios2_instruction_master_address                              : std_logic_vector(14 downto 0); -- nios2:i_address -> mm_interconnect_0:nios2_instruction_master_address
 	signal nios2_instruction_master_read                                 : std_logic;                     -- nios2:i_read -> mm_interconnect_0:nios2_instruction_master_read
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect      : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_chipselect -> jtag_uart:av_chipselect
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_readdata        : std_logic_vector(31 downto 0); -- jtag_uart:av_readdata -> mm_interconnect_0:jtag_uart_avalon_jtag_slave_readdata
@@ -251,13 +251,13 @@ architecture rtl of basic_system is
 	signal mm_interconnect_0_nios2_debug_mem_slave_byteenable            : std_logic_vector(3 downto 0);  -- mm_interconnect_0:nios2_debug_mem_slave_byteenable -> nios2:debug_mem_slave_byteenable
 	signal mm_interconnect_0_nios2_debug_mem_slave_write                 : std_logic;                     -- mm_interconnect_0:nios2_debug_mem_slave_write -> nios2:debug_mem_slave_write
 	signal mm_interconnect_0_nios2_debug_mem_slave_writedata             : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2_debug_mem_slave_writedata -> nios2:debug_mem_slave_writedata
-	signal mm_interconnect_0_onchip_ram_s1_chipselect                    : std_logic;                     -- mm_interconnect_0:onchip_RAM_s1_chipselect -> onchip_RAM:chipselect
-	signal mm_interconnect_0_onchip_ram_s1_readdata                      : std_logic_vector(31 downto 0); -- onchip_RAM:readdata -> mm_interconnect_0:onchip_RAM_s1_readdata
-	signal mm_interconnect_0_onchip_ram_s1_address                       : std_logic_vector(9 downto 0);  -- mm_interconnect_0:onchip_RAM_s1_address -> onchip_RAM:address
-	signal mm_interconnect_0_onchip_ram_s1_byteenable                    : std_logic_vector(3 downto 0);  -- mm_interconnect_0:onchip_RAM_s1_byteenable -> onchip_RAM:byteenable
-	signal mm_interconnect_0_onchip_ram_s1_write                         : std_logic;                     -- mm_interconnect_0:onchip_RAM_s1_write -> onchip_RAM:write
-	signal mm_interconnect_0_onchip_ram_s1_writedata                     : std_logic_vector(31 downto 0); -- mm_interconnect_0:onchip_RAM_s1_writedata -> onchip_RAM:writedata
-	signal mm_interconnect_0_onchip_ram_s1_clken                         : std_logic;                     -- mm_interconnect_0:onchip_RAM_s1_clken -> onchip_RAM:clken
+	signal mm_interconnect_0_ocram_s1_chipselect                         : std_logic;                     -- mm_interconnect_0:OCRAM_s1_chipselect -> OCRAM:chipselect
+	signal mm_interconnect_0_ocram_s1_readdata                           : std_logic_vector(15 downto 0); -- OCRAM:readdata -> mm_interconnect_0:OCRAM_s1_readdata
+	signal mm_interconnect_0_ocram_s1_address                            : std_logic_vector(12 downto 0); -- mm_interconnect_0:OCRAM_s1_address -> OCRAM:address
+	signal mm_interconnect_0_ocram_s1_byteenable                         : std_logic_vector(1 downto 0);  -- mm_interconnect_0:OCRAM_s1_byteenable -> OCRAM:byteenable
+	signal mm_interconnect_0_ocram_s1_write                              : std_logic;                     -- mm_interconnect_0:OCRAM_s1_write -> OCRAM:write
+	signal mm_interconnect_0_ocram_s1_writedata                          : std_logic_vector(15 downto 0); -- mm_interconnect_0:OCRAM_s1_writedata -> OCRAM:writedata
+	signal mm_interconnect_0_ocram_s1_clken                              : std_logic;                     -- mm_interconnect_0:OCRAM_s1_clken -> OCRAM:clken
 	signal mm_interconnect_0_switches_s1_readdata                        : std_logic_vector(31 downto 0); -- switches:readdata -> mm_interconnect_0:switches_s1_readdata
 	signal mm_interconnect_0_switches_s1_address                         : std_logic_vector(1 downto 0);  -- mm_interconnect_0:switches_s1_address -> switches:address
 	signal mm_interconnect_0_leds_s1_chipselect                          : std_logic;                     -- mm_interconnect_0:LEDs_s1_chipselect -> LEDs:chipselect
@@ -267,8 +267,8 @@ architecture rtl of basic_system is
 	signal mm_interconnect_0_leds_s1_writedata                           : std_logic_vector(31 downto 0); -- mm_interconnect_0:LEDs_s1_writedata -> LEDs:writedata
 	signal irq_mapper_receiver0_irq                                      : std_logic;                     -- jtag_uart:av_irq -> irq_mapper:receiver0_irq
 	signal nios2_irq_irq                                                 : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2:irq
-	signal rst_controller_reset_out_reset                                : std_logic;                     -- rst_controller:reset_out -> [irq_mapper:reset, mm_interconnect_0:nios2_reset_reset_bridge_in_reset_reset, onchip_RAM:reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
-	signal rst_controller_reset_out_reset_req                            : std_logic;                     -- rst_controller:reset_req -> [nios2:reset_req, onchip_RAM:reset_req, rst_translator:reset_req_in]
+	signal rst_controller_reset_out_reset                                : std_logic;                     -- rst_controller:reset_out -> [OCRAM:reset, irq_mapper:reset, mm_interconnect_0:nios2_reset_reset_bridge_in_reset_reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
+	signal rst_controller_reset_out_reset_req                            : std_logic;                     -- rst_controller:reset_req -> [OCRAM:reset_req, nios2:reset_req, rst_translator:reset_req_in]
 	signal nios2_debug_reset_request_reset                               : std_logic;                     -- nios2:debug_reset_request -> rst_controller:reset_in1
 	signal reset_reset_n_ports_inv                                       : std_logic;                     -- reset_reset_n:inv -> rst_controller:reset_in0
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv  : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:inv -> jtag_uart:av_read_n
@@ -288,6 +288,21 @@ begin
 			chipselect => mm_interconnect_0_leds_s1_chipselect,      --                    .chipselect
 			readdata   => mm_interconnect_0_leds_s1_readdata,        --                    .readdata
 			out_port   => leds_export                                -- external_connection.export
+		);
+
+	ocram : component basic_system_OCRAM
+		port map (
+			clk        => clk_clk,                               --   clk1.clk
+			address    => mm_interconnect_0_ocram_s1_address,    --     s1.address
+			clken      => mm_interconnect_0_ocram_s1_clken,      --       .clken
+			chipselect => mm_interconnect_0_ocram_s1_chipselect, --       .chipselect
+			write      => mm_interconnect_0_ocram_s1_write,      --       .write
+			readdata   => mm_interconnect_0_ocram_s1_readdata,   --       .readdata
+			writedata  => mm_interconnect_0_ocram_s1_writedata,  --       .writedata
+			byteenable => mm_interconnect_0_ocram_s1_byteenable, --       .byteenable
+			reset      => rst_controller_reset_out_reset,        -- reset1.reset
+			reset_req  => rst_controller_reset_out_reset_req,    --       .reset_req
+			freeze     => '0'                                    -- (terminated)
 		);
 
 	jtag_uart : component basic_system_jtag_uart
@@ -332,21 +347,6 @@ begin
 			debug_mem_slave_write               => mm_interconnect_0_nios2_debug_mem_slave_write,       --                          .write
 			debug_mem_slave_writedata           => mm_interconnect_0_nios2_debug_mem_slave_writedata,   --                          .writedata
 			dummy_ci_port                       => open                                                 -- custom_instruction_master.readra
-		);
-
-	onchip_ram : component basic_system_onchip_RAM
-		port map (
-			clk        => clk_clk,                                    --   clk1.clk
-			address    => mm_interconnect_0_onchip_ram_s1_address,    --     s1.address
-			clken      => mm_interconnect_0_onchip_ram_s1_clken,      --       .clken
-			chipselect => mm_interconnect_0_onchip_ram_s1_chipselect, --       .chipselect
-			write      => mm_interconnect_0_onchip_ram_s1_write,      --       .write
-			readdata   => mm_interconnect_0_onchip_ram_s1_readdata,   --       .readdata
-			writedata  => mm_interconnect_0_onchip_ram_s1_writedata,  --       .writedata
-			byteenable => mm_interconnect_0_onchip_ram_s1_byteenable, --       .byteenable
-			reset      => rst_controller_reset_out_reset,             -- reset1.reset
-			reset_req  => rst_controller_reset_out_reset_req,         --       .reset_req
-			freeze     => '0'                                         -- (terminated)
 		);
 
 	switches : component basic_system_switches
@@ -394,13 +394,13 @@ begin
 			nios2_debug_mem_slave_byteenable        => mm_interconnect_0_nios2_debug_mem_slave_byteenable,        --                                  .byteenable
 			nios2_debug_mem_slave_waitrequest       => mm_interconnect_0_nios2_debug_mem_slave_waitrequest,       --                                  .waitrequest
 			nios2_debug_mem_slave_debugaccess       => mm_interconnect_0_nios2_debug_mem_slave_debugaccess,       --                                  .debugaccess
-			onchip_RAM_s1_address                   => mm_interconnect_0_onchip_ram_s1_address,                   --                     onchip_RAM_s1.address
-			onchip_RAM_s1_write                     => mm_interconnect_0_onchip_ram_s1_write,                     --                                  .write
-			onchip_RAM_s1_readdata                  => mm_interconnect_0_onchip_ram_s1_readdata,                  --                                  .readdata
-			onchip_RAM_s1_writedata                 => mm_interconnect_0_onchip_ram_s1_writedata,                 --                                  .writedata
-			onchip_RAM_s1_byteenable                => mm_interconnect_0_onchip_ram_s1_byteenable,                --                                  .byteenable
-			onchip_RAM_s1_chipselect                => mm_interconnect_0_onchip_ram_s1_chipselect,                --                                  .chipselect
-			onchip_RAM_s1_clken                     => mm_interconnect_0_onchip_ram_s1_clken,                     --                                  .clken
+			OCRAM_s1_address                        => mm_interconnect_0_ocram_s1_address,                        --                          OCRAM_s1.address
+			OCRAM_s1_write                          => mm_interconnect_0_ocram_s1_write,                          --                                  .write
+			OCRAM_s1_readdata                       => mm_interconnect_0_ocram_s1_readdata,                       --                                  .readdata
+			OCRAM_s1_writedata                      => mm_interconnect_0_ocram_s1_writedata,                      --                                  .writedata
+			OCRAM_s1_byteenable                     => mm_interconnect_0_ocram_s1_byteenable,                     --                                  .byteenable
+			OCRAM_s1_chipselect                     => mm_interconnect_0_ocram_s1_chipselect,                     --                                  .chipselect
+			OCRAM_s1_clken                          => mm_interconnect_0_ocram_s1_clken,                          --                                  .clken
 			switches_s1_address                     => mm_interconnect_0_switches_s1_address,                     --                       switches_s1.address
 			switches_s1_readdata                    => mm_interconnect_0_switches_s1_readdata                     --                                  .readdata
 		);
