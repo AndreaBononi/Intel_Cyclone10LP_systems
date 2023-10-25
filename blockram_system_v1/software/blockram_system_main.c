@@ -5,22 +5,23 @@
 #include "alt_types.h"
 
 #define OCRAM_OFFSET 0x0000
-#define OCRAM_WRITEDATA 0xFFFF
 
 int main ()
 {
 
 	alt_u16 readdata = 0;
+	alt_u16 switches_state = 0;
 
 	while( 1 )
 	{
-		// read switches state and consequently set LEDs state
-		IOWR_ALTERA_AVALON_PIO_DATA( LEDS_BASE, IORD_ALTERA_AVALON_PIO_DATA( SWITCHES_BASE ) );
-    // write OCRAM
-		IOWR( OCRAM_BASE, OCRAM_OFFSET, OCRAM_WRITEDATA );
+		// read switches state
+		switches_state = IORD_ALTERA_AVALON_PIO_DATA( SWITCHES_BASE );
+		// write OCRAM
+		IOWR( OCRAM_BASE, OCRAM_OFFSET, switches_state );
     // read OCRAM (read previously written value)
 		readdata = IORD( OCRAM_BASE, OCRAM_OFFSET );
-		// TODO: PILOTARE LED SFRUTTANDO IL VALORE LETO
+		// set LEDs state
+		IOWR_ALTERA_AVALON_PIO_DATA( LEDS_BASE, readdata );
 	}
 
 	return 0;
