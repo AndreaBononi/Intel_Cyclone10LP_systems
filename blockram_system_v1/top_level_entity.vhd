@@ -9,34 +9,37 @@ use altera_mf.altera_mf_components.all;
 entity top_level_entity is
 	port
 	(
-		-- main clock inputs -----------------------------------
-		mainClk			: in		std_logic;
+		-- main clock inputs ----------------------------------------------------------------
+		mainClk			: in		std_logic;		-- 10MHz
 		slowClk			: in		std_logic;
-		-- main reset input ------------------------------------
+		-- main reset input -----------------------------------------------------------------
 		reset				: in 		std_logic;
-		-- MCU interface (UART, I2C) ---------------------------
+		-- MCU interface (UART, I2C) --------------------------------------------------------
 		mcuUartTx		: in 		std_logic;
 		mcuUartRx		: out 	std_logic;
 		mcuI2cScl		: in 		std_logic;
 		mcuI2cSda		: inout std_logic;
-		-- logic state analyzer/stimulator ---------------------
+		-- logic state analyzer/stimulator --------------------------------------------------
 		lsasBus			: inout std_logic_vector(31 downto 0);
-		-- dip switches ----------------------------------------
+		-- dip switches ---------------------------------------------------------------------
 		switches		: in 		std_logic_vector(7 downto 0);
-		-- LEDs ------------------------------------------------
+		-- LEDs -----------------------------------------------------------------------------
 		leds				: out 	std_logic_vector(3 downto 0)
 	);
 end top_level_entity;
 
 architecture behavior of top_level_entity is
 
+	-- clock signals ----------------------------------------------------------------------
 	signal clk					: std_logic;
 	signal pllLock			: std_logic;
 
+	-- logic state analyzer/simulator signals (unused in this project) --------------------
 	signal lsasBusIn		: std_logic_vector(31 downto 0);
 	signal lsasBusOut		: std_logic_vector(31 downto 0);
 	signal lsasBusEn		: std_logic_vector(31 downto 0) := (others => '0');
 
+	-- MCU interface signals (unused in this project) -------------------------------------
 	signal mcuI2cDIn		: std_logic;
 	signal mcuI2CDOut		: std_logic;
 	signal mcuI2cEn			: std_logic := '0';	
@@ -51,41 +54,20 @@ architecture behavior of top_level_entity is
 		);
 	end component;
 	
-	component basic_system
-		port 
-		(
-			clk_clk       	: in std_logic := '0';
-			reset_reset_n 	: in std_logic := '0'
-		);
-	end component;
-	
+		
 	begin
 
-		-- Main clock PLL ----------------------------------------------------------------------------
+		-- Main clock PLL (from 10MHz to 100MHz) ------------------------------------------------------
 		myAltPll_inst : myAltPll 
 		port map 
 		(
 			areset	=> reset,
-			inclk0	=> mainClk,
-			c0	 		=> clk,
+			inclk0	=> mainClk,			-- 10MHz input clock
+			c0	 		=> clk,					-- 100MHz output clock
 			locked	=> pllLock
 		);
-
-		-- LEDs ---------------------------------------------------------------------------------------
-		leds <= switches(3 downto 0);
-		-- leds <= "1111";
 		
-		-- logic state analyzer/stimulator dummy process (just a simple up counter) -------------------
-		lsasBusIn <= lsasBus;
-		lsasBus_tristate: process(lsasBusEn, lsasBusOut)
-		begin
-			for index in 0 to 31 loop
-				if lsasBusEn(index) = '1'  then
-					lsasBus(index) <= lsasBusOut(index);
-				else
-					lsasBus(index) <= 'Z';
-				end if;
-			end loop;
-		end process;
+		-- Nios II system -----------------------------------------------------------------------------
+		
 	
 end behavior;

@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-entity avm_to_blockram_converter is
+entity avs_to_blockram_converter is
   generic
   (
     N_address                 : integer := 16;
@@ -18,13 +18,13 @@ entity avm_to_blockram_converter is
     clk                       : in    std_logic;
     rst_n											: in    std_logic;
     -- amv signals:
-    avm_read                  : in    std_logic;
-    avm_write                 : in    std_logic;
-    avm_waitrequest           : out   std_logic;
-    avm_readdatavalid         : out   std_logic;
-    avm_address               : in    std_logic_vector(N_address-1 downto 0);
-    avm_writedata             : in    std_logic_vector(N_data-1 downto 0);
-    avm_readdata              : out   std_logic_vector(N_data-1 downto 0);
+    avs_read                  : in    std_logic;
+    avs_write                 : in    std_logic;
+    avs_waitrequest           : out   std_logic;
+    avs_readdatavalid         : out   std_logic;
+    avs_address               : in    std_logic_vector(N_address-1 downto 0);
+    avs_writedata             : in    std_logic_vector(N_data-1 downto 0);
+    avs_readdata              : out   std_logic_vector(N_data-1 downto 0);
     -- blockram signals:
     blockram_rden             : out   std_logic;
     blockram_wren             : out   std_logic;
@@ -32,25 +32,25 @@ entity avm_to_blockram_converter is
     blockram_data             : out   std_logic_vector(N_data-1 downto 0);
     blockram_q                : in    std_logic_vector(N_data-1 downto 0)
 	);
-end avm_to_blockram_converter;
+end avs_to_blockram_converter;
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-architecture rtl of avm_to_blockram_converter is
+architecture rtl of avs_to_blockram_converter is
 
   -- control unit ------------------------------------------------------------------------------------------------------------------
-  component avm_to_blockram_converter_CU is
+  component avs_to_blockram_converter_CU is
   	port
   	(
       -- clock and reset:
       clk                       : in    std_logic;
   		rst_n											: in    std_logic;
   		-- status signals:
-      avm_read                  : in    std_logic;
-      avm_write                 : in    std_logic;
+      avs_read                  : in    std_logic;
+      avs_write                 : in    std_logic;
   		-- control signals:
-      avm_waitrequest           : out   std_logic;
-      avm_readdatavalid         : out   std_logic;
+      avs_waitrequest           : out   std_logic;
+      avs_readdatavalid         : out   std_logic;
       blockram_rden             : out   std_logic;
       blockram_wren             : out   std_logic;
       address_enable            : out   std_logic;
@@ -82,15 +82,15 @@ architecture rtl of avm_to_blockram_converter is
 
 	begin
 
-		CU: avm_to_blockram_converter_CU
+		CU: avs_to_blockram_converter_CU
     port map
     (
       clk,
       rst_n,
-      avm_read,
-      avm_write,
-      avm_waitrequest,
-      avm_readdatavalid,
+      avs_read,
+      avs_write,
+      avs_waitrequest,
+      avs_readdatavalid,
       blockram_rden,
       blockram_wren,
       address_enable,
@@ -98,9 +98,9 @@ architecture rtl of avm_to_blockram_converter is
       readdata_enable
     );
 
-    address_reg     : reg generic map(N_address) port map(clk, address_enable, '1', avm_address, blockram_address);
-    readdata_reg    : reg generic map(N_data) port map(clk, readdata_enable, '1', blockram_q, avm_readdata);
-    writedata_reg   : reg generic map(N_data) port map(clk, writedata_enable, '1', avm_writedata, blockram_data);
+    address_reg     : reg generic map(N_address) port map(clk, address_enable, '1', avs_address, blockram_address);
+    readdata_reg    : reg generic map(N_data) port map(clk, readdata_enable, '1', blockram_q, avs_readdata);
+    writedata_reg   : reg generic map(N_data) port map(clk, writedata_enable, '1', avs_writedata, blockram_data);
 
 
 end rtl;

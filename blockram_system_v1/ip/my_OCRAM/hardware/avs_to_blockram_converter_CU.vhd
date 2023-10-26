@@ -4,29 +4,29 @@ use IEEE.numeric_std.all;
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-entity avm_to_blockram_converter_CU is
+entity avs_to_blockram_converter_CU is
 	port
 	(
     -- clock and reset:
     clk                       : in    std_logic;
 		rst_n											: in    std_logic;
 		-- status signals:
-    avm_read                  : in    std_logic;
-    avm_write                 : in    std_logic;
+    avs_read                  : in    std_logic;
+    avs_write                 : in    std_logic;
 		-- control signals:
-    avm_waitrequest           : out   std_logic;
-    avm_readdatavalid         : out   std_logic;
+    avs_waitrequest           : out   std_logic;
+    avs_readdatavalid         : out   std_logic;
     blockram_rden             : out   std_logic;
     blockram_wren             : out   std_logic;
     address_enable            : out   std_logic;
     writedata_enable          : out   std_logic;
     readdata_enable           : out   std_logic
 	);
-end avm_to_blockram_converter_CU;
+end avs_to_blockram_converter_CU;
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-architecture fsm of avm_to_blockram_converter_CU is
+architecture fsm of avs_to_blockram_converter_CU is
 
 	-- states definition ------------------------------------------------------------------------------------------------------------
 	type state is
@@ -51,8 +51,8 @@ architecture fsm of avm_to_blockram_converter_CU is
 		(
 			-- sensitivity list
       present_state,
-      avm_read,
-      avm_write
+      avs_read,
+      avs_write
 		)
 		begin
 			case present_state is
@@ -61,9 +61,9 @@ architecture fsm of avm_to_blockram_converter_CU is
           next_state <= idle;
 				---------------------------------------------------------------------------------------------------------------------
         when idle | read_valid =>
-          if (avm_read = '1') then
+          if (avs_read = '1') then
             next_state <= read_cmd;
-          elsif (avm_write = '1') then
+          elsif (avs_write = '1') then
             next_state <= write_cmd;
           else
             next_state <= idle;
@@ -98,8 +98,8 @@ architecture fsm of avm_to_blockram_converter_CU is
 		control_signals_definition: process (present_state)
 		begin
 			-- default values ---------------------------------------------------------------------------------------------------------
-      avm_waitrequest      := '0';
-      avm_readdatavalid    := '0';
+      avs_waitrequest      := '0';
+      avs_readdatavalid    := '0';
       blockram_rden        := '0';
       blockram_wren        := '0';
       address_enable       := '0';
@@ -115,22 +115,22 @@ architecture fsm of avm_to_blockram_converter_CU is
           address_enable := '1';
         ---------------------------------------------------------------------------------------------------------------------
         when write_cmd =>
-          avm_waitrequest := '1';
+          avs_waitrequest := '1';
           blockram_wren := '1';
         ---------------------------------------------------------------------------------------------------------------------
         when read_cmd =>
-          avm_waitrequest := '1';
+          avs_waitrequest := '1';
           blockram_rden := '1';
         ---------------------------------------------------------------------------------------------------------------------
         when read_wait =>
-          avm_waitrequest := '1';
+          avs_waitrequest := '1';
         ---------------------------------------------------------------------------------------------------------------------
         when read_wait_2 =>
-          avm_waitrequest := '1';
+          avs_waitrequest := '1';
           readdata_enable := '1';
         ---------------------------------------------------------------------------------------------------------------------
         when read_valid =>
-          avm_readdatavalid := '1';
+          avs_readdatavalid := '1';
           writedata_enable := '1';
           address_enable := '1';
         ---------------------------------------------------------------------------------------------------------------------
