@@ -8,7 +8,11 @@
    <export preferredWidth="154" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
+ <library expandedCategories="Library,Project" />
  <window width="1848" height="1053" x="72" y="27" />
- <generation synthesis="VHDL" />
+ <generation
+   synthesis="VHDL"
+   path="platform_designer"
+   testbench_system="SIMPLE"
+   testbench_simulation="VHDL" />
 </preferences>

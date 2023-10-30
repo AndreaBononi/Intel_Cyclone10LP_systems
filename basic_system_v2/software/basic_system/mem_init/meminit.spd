@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<simPackage>
-<file path="hdl_sim/basic_system_data_OCRAM.dat" type="DAT" initParamName="INIT_FILE" memoryPath="data_OCRAM" />
-<file path="hdl_sim/basic_system_instr_OCROM.dat" type="DAT" initParamName="INIT_FILE" memoryPath="instr_OCROM" />
-<file path="basic_system_data_OCRAM.hex" type="HEX" initParamName="INIT_FILE" memoryPath="data_OCRAM" />
-<file path="basic_system_instr_OCROM.hex" type="HEX" initParamName="INIT_FILE" memoryPath="instr_OCROM" />
-</simPackage>

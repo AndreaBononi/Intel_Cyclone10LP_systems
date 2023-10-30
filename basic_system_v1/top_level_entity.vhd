@@ -57,10 +57,11 @@ architecture behavior of top_level_entity is
 	component basic_system
 		port 
 		(
-			clk_clk         : in  std_logic := '0';
-			leds_export     : out std_logic_vector(3 downto 0);
-			reset_reset_n   : in  std_logic := '0';
-			switches_export : in  std_logic_vector(3 downto 0) := (others => '0')
+			clk_clk           : in  std_logic := '0';
+			leds_export       : out std_logic_vector(3 downto 0);
+			reset_reset_n     : in  std_logic := '0';
+			rst_switch_export : in  std_logic := '0';
+			switches_export   : in  std_logic_vector(3 downto 0) := (others => '0')
 		);
 	end component;
 		
@@ -80,10 +81,11 @@ architecture behavior of top_level_entity is
 		basic_system_inst : basic_system
 		port map
 		(
-			clk_clk						=> clk,
-			leds_export     	=> leds,
-			reset_reset_n   	=> reset,
-			switches_export 	=> switches(3 downto 0)
+			clk_clk							=> clk,
+			leds_export     		=> leds,
+			reset_reset_n   		=> reset,
+			rst_switch_export 	=> switches(7),
+			switches_export 		=> switches(3 downto 0)
 		);
 	
 end behavior;

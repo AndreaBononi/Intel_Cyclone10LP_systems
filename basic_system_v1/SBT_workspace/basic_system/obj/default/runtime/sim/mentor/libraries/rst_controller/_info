@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/SBT_workspace/basic_system/obj/default/runtime/sim/mentor
+valtera_reset_controller
+Z1 !s110 1698681240
+!i10b 1
+!s100 AbYPDDXoUZYQzY_kQ2LCk2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iac74fDJXKY2[e3V?B<?``3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1698667344
+8/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/testbench/basic_system_tb/simulation/submodules/altera_reset_controller.v
+F/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/testbench/basic_system_tb/simulation/submodules/altera_reset_controller.v
+!i122 0
+L0 42 278
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1698681239.000000
+!s107 /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/testbench/basic_system_tb/simulation/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/testbench/basic_system_tb/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
+!i113 1
+Z6 o-work rst_controller
+Z7 tCvgOpt 0
+valtera_reset_synchronizer
+R1
+!i10b 1
+!s100 BQ8==cV75_ke3L4GKGWGO3
+R2
+I82JgKO_DACfEDJ^4OV9U23
+R3
+R0
+R4
+8/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/testbench/basic_system_tb/simulation/submodules/altera_reset_synchronizer.v
+F/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/testbench/basic_system_tb/simulation/submodules/altera_reset_synchronizer.v
+!i122 1
+L0 24 63
+R5
+r1
+!s85 0
+31
+!s108 1698681240.000000
+!s107 /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/testbench/basic_system_tb/simulation/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/testbench/basic_system_tb/simulation/submodules/altera_reset_synchronizer.v|-work|rst_controller|
+!i113 1
+R6
+R7

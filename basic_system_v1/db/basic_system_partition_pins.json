@@ -28,6 +28,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "switches[7]",
+					"strict" : false
+				},
+				{
 					"name" : "switches[1]",
 					"strict" : false
 				},
