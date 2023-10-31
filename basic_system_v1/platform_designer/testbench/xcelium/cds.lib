@@ -36,7 +36,6 @@ DEFINE rst_controller                       ./libraries/rst_controller/
 DEFINE irq_mapper                           ./libraries/irq_mapper/                          
 DEFINE mm_interconnect_0                    ./libraries/mm_interconnect_0/                   
 DEFINE switches                             ./libraries/switches/                            
-DEFINE rst_switch                           ./libraries/rst_switch/                          
 DEFINE nios2                                ./libraries/nios2/                               
 DEFINE OCRAM                                ./libraries/OCRAM/                               
 DEFINE LEDs                                 ./libraries/LEDs/                                

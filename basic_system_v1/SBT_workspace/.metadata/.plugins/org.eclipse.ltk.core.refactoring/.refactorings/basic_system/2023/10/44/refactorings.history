@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <session version="1.0">
-<refactoring comment="Rename resource &apos;basic_system/hello_world_small.c&apos; to &apos;basic_system_main.c&apos;" description="Rename resource &apos;hello_world_small.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="hello_world_small.c" name="basic_system_main.c" stamp="1698661592957" updateReferences="true"/>
+<refactoring comment="Rename resource &apos;basic_system/hello_world_small.c&apos; to &apos;basic_system_main.c&apos;" description="Rename resource &apos;hello_world_small.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="hello_world_small.c" name="basic_system_main.c" stamp="1698769027196" updateReferences="true"/>
 </session>

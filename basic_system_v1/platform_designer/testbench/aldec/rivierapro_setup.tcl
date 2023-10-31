@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 22.1 917 linux 2023.10.30.13:02:27
+# ACDS 22.1 917 linux 2023.10.31.16:50:43
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -247,8 +247,6 @@ ensure_lib                                      ./libraries/mm_interconnect_0
 vmap       mm_interconnect_0                    ./libraries/mm_interconnect_0                   
 ensure_lib                                      ./libraries/switches                            
 vmap       switches                             ./libraries/switches                            
-ensure_lib                                      ./libraries/rst_switch                          
-vmap       rst_switch                           ./libraries/rst_switch                          
 ensure_lib                                      ./libraries/nios2                               
 vmap       nios2                                ./libraries/nios2                               
 ensure_lib                                      ./libraries/OCRAM                               
@@ -343,7 +341,6 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_irq_mapper.sv"                                              -work irq_mapper                          
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_mm_interconnect_0.v"                                        -work mm_interconnect_0                   
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_switches.vhd"                                               -work switches                            
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_rst_switch.vhd"                                             -work rst_switch                          
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_nios2.v"                                                    -work nios2                               
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_OCRAM.vhd"                                                  -work OCRAM                               
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_LEDs.vhd"                                                   -work LEDs                                
@@ -357,14 +354,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L avalon_st_adapter_001 -L avalon_st_adapter -L OCRAM_s1_rsp_width_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_002 -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L OCRAM_s1_burst_adapter -L router_004 -L router_003 -L router_002 -L router_001 -L router -L nios2_debug_mem_slave_agent_rsp_fifo -L nios2_debug_mem_slave_agent -L nios2_data_master_agent -L nios2_debug_mem_slave_translator -L nios2_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L switches -L rst_switch -L nios2 -L OCRAM -L LEDs -L basic_system_inst_reset_bfm -L basic_system_inst_clk_bfm -L basic_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp $TOP_LEVEL_NAME
+  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L avalon_st_adapter_001 -L avalon_st_adapter -L OCRAM_s1_rsp_width_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_002 -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L OCRAM_s1_burst_adapter -L router_004 -L router_003 -L router_002 -L router_001 -L router -L nios2_debug_mem_slave_agent_rsp_fifo -L nios2_debug_mem_slave_agent -L nios2_data_master_agent -L nios2_debug_mem_slave_translator -L nios2_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L switches -L nios2 -L OCRAM -L LEDs -L basic_system_inst_reset_bfm -L basic_system_inst_clk_bfm -L basic_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L avalon_st_adapter_001 -L avalon_st_adapter -L OCRAM_s1_rsp_width_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_002 -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L OCRAM_s1_burst_adapter -L router_004 -L router_003 -L router_002 -L router_001 -L router -L nios2_debug_mem_slave_agent_rsp_fifo -L nios2_debug_mem_slave_agent -L nios2_data_master_agent -L nios2_debug_mem_slave_translator -L nios2_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L switches -L rst_switch -L nios2 -L OCRAM -L LEDs -L basic_system_inst_reset_bfm -L basic_system_inst_clk_bfm -L basic_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp $TOP_LEVEL_NAME
+  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L avalon_st_adapter_001 -L avalon_st_adapter -L OCRAM_s1_rsp_width_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_002 -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L OCRAM_s1_burst_adapter -L router_004 -L router_003 -L router_002 -L router_001 -L router -L nios2_debug_mem_slave_agent_rsp_fifo -L nios2_debug_mem_slave_agent -L nios2_data_master_agent -L nios2_debug_mem_slave_translator -L nios2_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L switches -L nios2 -L OCRAM -L LEDs -L basic_system_inst_reset_bfm -L basic_system_inst_clk_bfm -L basic_system_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

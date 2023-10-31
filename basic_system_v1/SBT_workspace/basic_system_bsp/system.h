@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'basic_system'
  * SOPC Builder design path: ../../basic_system.sopcinfo
  *
- * Generated: Mon Oct 30 16:52:23 CET 2023
+ * Generated: Tue Oct 31 17:16:35 CET 2023
  */
 
 /*
@@ -144,7 +144,7 @@
  */
 
 #define ALT_MODULE_CLASS_LEDs altera_avalon_pio
-#define LEDS_BASE 0x5010
+#define LEDS_BASE 0x5000
 #define LEDS_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDS_CAPTURE 0
@@ -237,39 +237,12 @@
 
 
 /*
- * rst_switch configuration
- *
- */
-
-#define ALT_MODULE_CLASS_rst_switch altera_avalon_pio
-#define RST_SWITCH_BASE 0x5000
-#define RST_SWITCH_BIT_CLEARING_EDGE_REGISTER 0
-#define RST_SWITCH_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define RST_SWITCH_CAPTURE 0
-#define RST_SWITCH_DATA_WIDTH 1
-#define RST_SWITCH_DO_TEST_BENCH_WIRING 0
-#define RST_SWITCH_DRIVEN_SIM_VALUE 0
-#define RST_SWITCH_EDGE_TYPE "NONE"
-#define RST_SWITCH_FREQ 100000000
-#define RST_SWITCH_HAS_IN 1
-#define RST_SWITCH_HAS_OUT 0
-#define RST_SWITCH_HAS_TRI 0
-#define RST_SWITCH_IRQ -1
-#define RST_SWITCH_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define RST_SWITCH_IRQ_TYPE "NONE"
-#define RST_SWITCH_NAME "/dev/rst_switch"
-#define RST_SWITCH_RESET_VALUE 0
-#define RST_SWITCH_SPAN 16
-#define RST_SWITCH_TYPE "altera_avalon_pio"
-
-
-/*
  * switches configuration
  *
  */
 
 #define ALT_MODULE_CLASS_switches altera_avalon_pio
-#define SWITCHES_BASE 0x5020
+#define SWITCHES_BASE 0x5010
 #define SWITCHES_BIT_CLEARING_EDGE_REGISTER 0
 #define SWITCHES_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SWITCHES_CAPTURE 0

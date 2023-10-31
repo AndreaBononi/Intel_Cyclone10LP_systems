@@ -309,7 +309,7 @@ $(filter-out $(FLASH_DAT_FILES),$(DAT_FILES)): %.dat: $(call adjust-path,$(ELF))
 $(foreach i,0 1 2 3 4 5 6 7,%_lane$(i).dat): %.dat
 	@true
 
-ELF_TO_HEX_CMD_NO_BOOTLOADER = $(ELF2HEX) $(call adjust-path-mixed,$<) $(mem_start_address) $(mem_end_address) --width=$(mem_hex_width) \
+ELF_TO_HEX_CMD_NO_BOOTLOADER = $(ELF2HEX) --record=2 $(call adjust-path-mixed,$<) $(mem_start_address) $(mem_end_address) --width=$(mem_hex_width) \
 			$(mem_endianness) --create-lanes=$(mem_create_lanes) $(elf2hex_extra_args) $@
 			
 ELF_TO_HEX_CMD_WITH_BOOTLOADER = $(ALT_FILE_CONVERT) -I $(NIOS_ELF_FORMAT) -O hex --input=$(call adjust-path-mixed,$<) --output=$@ \

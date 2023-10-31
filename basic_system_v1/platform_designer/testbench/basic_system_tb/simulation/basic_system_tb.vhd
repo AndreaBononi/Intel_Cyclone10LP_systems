@@ -12,11 +12,10 @@ end entity basic_system_tb;
 architecture rtl of basic_system_tb is
 	component basic_system is
 		port (
-			clk_clk           : in  std_logic                    := 'X';             -- clk
-			leds_export       : out std_logic_vector(3 downto 0);                    -- export
-			reset_reset_n     : in  std_logic                    := 'X';             -- reset_n
-			rst_switch_export : in  std_logic                    := 'X';             -- export
-			switches_export   : in  std_logic_vector(3 downto 0) := (others => 'X')  -- export
+			clk_clk         : in  std_logic                    := 'X';             -- clk
+			leds_export     : out std_logic_vector(3 downto 0);                    -- export
+			reset_reset_n   : in  std_logic                    := 'X';             -- reset_n
+			switches_export : in  std_logic_vector(3 downto 0) := (others => 'X')  -- export
 		);
 	end component basic_system;
 
@@ -48,11 +47,10 @@ begin
 
 	basic_system_inst : component basic_system
 		port map (
-			clk_clk           => basic_system_inst_clk_bfm_clk_clk,       --        clk.clk
-			leds_export       => open,                                    --       leds.export
-			reset_reset_n     => basic_system_inst_reset_bfm_reset_reset, --      reset.reset_n
-			rst_switch_export => open,                                    -- rst_switch.export
-			switches_export   => open                                     --   switches.export
+			clk_clk         => basic_system_inst_clk_bfm_clk_clk,       --      clk.clk
+			leds_export     => open,                                    --     leds.export
+			reset_reset_n   => basic_system_inst_reset_bfm_reset_reset, --    reset.reset_n
+			switches_export => open                                     -- switches.export
 		);
 
 	basic_system_inst_clk_bfm : component altera_avalon_clock_source

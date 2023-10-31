@@ -2,12 +2,12 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 30, 2023 4:52:22 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1698681142679</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 31, 2023 5:16:34 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1698768994218</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/SBT_workspace/basic_system_bsp</BspGeneratedLocation>
-        <BspSettingsFile>settings.bsp</BspSettingsFile>
+        <BspSettingsFile>./settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../basic_system.sopcinfo</SopcDesignFile>
-        <SystemFileHash>d631c8bbcefb78b16489ca4608d7c5e79b051b5646ce6ae1527551df864b</SystemFileHash>
+        <SystemFileHash>974a5c3e87e31c7390f347aa781acb27698b16121f32ba2c1b5c642fa10b06e</SystemFileHash>
         <JdiFile>default</JdiFile>
         <Cpu>nios2</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -882,20 +882,14 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>rst_switch</slaveDescriptor>
+                <slaveDescriptor>LEDs</slaveDescriptor>
                 <addressRange>0x00005000 - 0x0000500F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>LEDs</slaveDescriptor>
-                <addressRange>0x00005010 - 0x0000501F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>switches</slaveDescriptor>
-                <addressRange>0x00005020 - 0x0000502F</addressRange>
+                <addressRange>0x00005010 - 0x0000501F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

@@ -2,7 +2,8 @@
 -- BRIEF DESCRIPTION: top level entity
 -- COMMENTS:
 -- this file instantiates a NiosII-based Platform Designer System (PDS)
--- the PDS reads the status of the switches and drives the LEDs consequently
+-- the PDS reads the status of the switches 3, 2, 1 and 0 and drives the LEDs consequently
+-- switches 7 is employed to reset the nios processor
 -- a PLL is intantiated to provide the clock to the PDS
 
 library 	ieee;
@@ -69,7 +70,6 @@ architecture behavior of top_level_entity is
 			clk_clk           : in  std_logic := '0';
 			leds_export       : out std_logic_vector(3 downto 0);
 			reset_reset_n     : in  std_logic := '0';
-			rst_switch_export : in  std_logic := '0';
 			switches_export   : in  std_logic_vector(3 downto 0) := (others => '0')
 		);
 	end component; -----------------------------------------------------------------------------------
@@ -92,8 +92,7 @@ architecture behavior of top_level_entity is
 		(
 			clk_clk							=> clk,
 			leds_export     		=> leds,
-			reset_reset_n   		=> reset,
-			rst_switch_export 	=> switches(7),
+			reset_reset_n   		=> switches(7),
 			switches_export 		=> switches(3 downto 0)
 		); --------------------------------------------------------------------------------------------
 	

@@ -245,10 +245,6 @@
    type="VHDL"
    library="switches" />
  <file
-   path="platform_designer/testbench/basic_system_tb/simulation/submodules/basic_system_rst_switch.vhd"
-   type="VHDL"
-   library="rst_switch" />
- <file
    path="platform_designer/testbench/basic_system_tb/simulation/submodules/basic_system_nios2.v"
    type="VERILOG"
    library="nios2" />

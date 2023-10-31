@@ -7,10 +7,10 @@ library   ieee;
 use       ieee.std_logic_1164.all;
 use       ieee.numeric_std.all;
 
-entity AvalonMM_to_SSRAM_testbench is
-end AvalonMM_to_SSRAM_testbench;
+entity basic_system_testbench is
+end basic_system_testbench;
 
-architecture testbench of AvalonMM_to_SSRAM_testbench is
+architecture testbench of basic_system_testbench is
 
   -- CONSTANTS -------------------------------------------------------------------------------------------------------
 	constant pllClk_period      : time := 10 ns;
@@ -59,7 +59,23 @@ architecture testbench of AvalonMM_to_SSRAM_testbench is
 
   begin
 
-    -- clock generation -----------------------------------------------------------------------------------------------
+    -- DUT ------------------------------------------------------------------------------------------------------------
+    DUT: top_level_entity 
+    port map
+    (
+      mainClk     => mainClk,
+      slowClk     => slowClk,
+      reset       => reset,
+      mcuUartTx   => mcuUartTx,
+      mcuUartRx	  => mcuUartRx,
+      mcuI2cScl	  => mcuI2cScl,
+      mcuI2cSda	  => mcuI2cSda,
+      lsasBus     => lsasBus,
+      switches    => switches,
+      leds        => leds
+    ); ----------------------------------------------------------------------------------------------------------------
+    
+    -- main clock generation ------------------------------------------------------------------------------------------
 		mainClk_gen: process
 		begin
 			mainClk <= not mainClk;
@@ -78,19 +94,19 @@ architecture testbench of AvalonMM_to_SSRAM_testbench is
     -- Nios reset generation ------------------------------------------------------------------------------------------
     niosReset_gen: process
     begin
-      switch(7) <= '0';
+      switches(7) <= '0';
       wait for niosReset_window;
-			switch(7) <= '1';
+			switches(7) <= '1';
 			wait;
     end process niosReset_gen; ----------------------------------------------------------------------------------------
 
     -- input generation -----------------------------------------------------------------------------------------------
     input_gen: process
     begin
-      switch(3 downto 0) <= "0000";
+      switches(3 downto 0) <= "0000";
       wait for niosReset_window;
       wait for 10*pllClk_period;
-			switch(3 downto 0) <= "1111";
+			switches(3 downto 0) <= "1111";
 			wait;
     end process input_gen; --------------------------------------------------------------------------------------------
 

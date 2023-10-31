@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 22.1 917 linux 2023.10.30.13:02:27
+# ACDS 22.1 917 linux 2023.10.31.16:50:43
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 22.1 917 linux 2023.10.30.13:02:27
+# ACDS 22.1 917 linux 2023.10.31.16:50:43
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="basic_system_tb"
@@ -174,7 +174,6 @@ mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
 mkdir -p ./libraries/switches/
-mkdir -p ./libraries/rst_switch/
 mkdir -p ./libraries/nios2/
 mkdir -p ./libraries/OCRAM/
 mkdir -p ./libraries/LEDs/
@@ -287,7 +286,6 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_irq_mapper.sv"                                              -work irq_mapper                          
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_mm_interconnect_0.v"                                        -work mm_interconnect_0                   
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_switches.vhd"                                               -work switches                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_rst_switch.vhd"                                             -work rst_switch                          
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_nios2.v"                                                    -work nios2                               
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_OCRAM.vhd"                                                  -work OCRAM                               
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_LEDs.vhd"                                                   -work LEDs                                

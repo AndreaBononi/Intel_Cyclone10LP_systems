@@ -1,0 +1,36 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/simulation
+valtera_merlin_master_agent
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1698769369
+!i10b 1
+!s100 0Oa@3`81E13?iQ<2;9MB33
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IzeNP?_mgIFiGc[0GA:dQ[1
+VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1698767442
+8../platform_designer/testbench/basic_system_tb/simulation/submodules/altera_merlin_master_agent.sv
+F../platform_designer/testbench/basic_system_tb/simulation/submodules/altera_merlin_master_agent.sv
+!i122 9
+L0 28 276
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1698769369.000000
+!s107 ../platform_designer/testbench/basic_system_tb/simulation/submodules/altera_merlin_master_agent.sv|
+!s90 -reportprogress|300|-sv|../platform_designer/testbench/basic_system_tb/simulation/submodules/altera_merlin_master_agent.sv|-work|nios2_data_master_agent|
+!i113 1
+o-sv -work nios2_data_master_agent
+tCvgOpt 0

@@ -27,10 +27,25 @@ vcom ../testbench/basic_system_testbench.vhd
 set TOP_LEVEL_NAME basic_system_testbench
 
 # call command to elaborate your design and testbench
-elab
+elab -voptargs=+acc
+
+# create wave 
+add wave -position insertpoint              \
+sim:/basic_system_testbench/DUT/clk         \
+sim:/basic_system_testbench/mainClk         \
+sim:/basic_system_testbench/reset           \
+sim:/basic_system_testbench/switches(7)     \
+sim:/basic_system_testbench/switches(3)     \
+sim:/basic_system_testbench/switches(2)     \
+sim:/basic_system_testbench/switches(1)     \
+sim:/basic_system_testbench/switches(0)     \
+sim:/basic_system_testbench/leds(3)         \
+sim:/basic_system_testbench/leds(2)         \
+sim:/basic_system_testbench/leds(1)         \
+sim:/basic_system_testbench/leds(0)
 
 # run the simulation
-run -a
+run 5000ns
 
 # exit simulator and report success to the shell
 # exit -code 0

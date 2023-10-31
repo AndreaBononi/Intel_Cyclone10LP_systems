@@ -8,11 +8,10 @@ use IEEE.numeric_std.all;
 
 entity basic_system is
 	port (
-		clk_clk           : in  std_logic                    := '0';             --        clk.clk
-		leds_export       : out std_logic_vector(3 downto 0);                    --       leds.export
-		reset_reset_n     : in  std_logic                    := '0';             --      reset.reset_n
-		rst_switch_export : in  std_logic                    := '0';             -- rst_switch.export
-		switches_export   : in  std_logic_vector(3 downto 0) := (others => '0')  --   switches.export
+		clk_clk         : in  std_logic                    := '0';             --      clk.clk
+		leds_export     : out std_logic_vector(3 downto 0);                    --     leds.export
+		reset_reset_n   : in  std_logic                    := '0';             --    reset.reset_n
+		switches_export : in  std_logic_vector(3 downto 0) := (others => '0')  -- switches.export
 	);
 end entity basic_system;
 
@@ -77,16 +76,6 @@ architecture rtl of basic_system is
 		);
 	end component basic_system_nios2;
 
-	component basic_system_rst_switch is
-		port (
-			clk      : in  std_logic                     := 'X';             -- clk
-			reset_n  : in  std_logic                     := 'X';             -- reset_n
-			address  : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
-			readdata : out std_logic_vector(31 downto 0);                    -- readdata
-			in_port  : in  std_logic                     := 'X'              -- export
-		);
-	end component basic_system_rst_switch;
-
 	component basic_system_switches is
 		port (
 			clk      : in  std_logic                     := 'X';             -- clk
@@ -133,8 +122,6 @@ architecture rtl of basic_system is
 			OCRAM_s1_byteenable                     : out std_logic_vector(1 downto 0);                     -- byteenable
 			OCRAM_s1_chipselect                     : out std_logic;                                        -- chipselect
 			OCRAM_s1_clken                          : out std_logic;                                        -- clken
-			rst_switch_s1_address                   : out std_logic_vector(1 downto 0);                     -- address
-			rst_switch_s1_readdata                  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			switches_s1_address                     : out std_logic_vector(1 downto 0);                     -- address
 			switches_s1_readdata                    : in  std_logic_vector(31 downto 0) := (others => 'X')  -- readdata
 		);
@@ -248,15 +235,13 @@ architecture rtl of basic_system is
 	signal mm_interconnect_0_leds_s1_address                   : std_logic_vector(1 downto 0);  -- mm_interconnect_0:LEDs_s1_address -> LEDs:address
 	signal mm_interconnect_0_leds_s1_write                     : std_logic;                     -- mm_interconnect_0:LEDs_s1_write -> mm_interconnect_0_leds_s1_write:in
 	signal mm_interconnect_0_leds_s1_writedata                 : std_logic_vector(31 downto 0); -- mm_interconnect_0:LEDs_s1_writedata -> LEDs:writedata
-	signal mm_interconnect_0_rst_switch_s1_readdata            : std_logic_vector(31 downto 0); -- rst_switch:readdata -> mm_interconnect_0:rst_switch_s1_readdata
-	signal mm_interconnect_0_rst_switch_s1_address             : std_logic_vector(1 downto 0);  -- mm_interconnect_0:rst_switch_s1_address -> rst_switch:address
 	signal nios2_irq_irq                                       : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2:irq
 	signal rst_controller_reset_out_reset                      : std_logic;                     -- rst_controller:reset_out -> [OCRAM:reset, irq_mapper:reset, mm_interconnect_0:nios2_reset_reset_bridge_in_reset_reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
 	signal rst_controller_reset_out_reset_req                  : std_logic;                     -- rst_controller:reset_req -> [OCRAM:reset_req, nios2:reset_req, rst_translator:reset_req_in]
 	signal nios2_debug_reset_request_reset                     : std_logic;                     -- nios2:debug_reset_request -> rst_controller:reset_in1
 	signal reset_reset_n_ports_inv                             : std_logic;                     -- reset_reset_n:inv -> rst_controller:reset_in0
 	signal mm_interconnect_0_leds_s1_write_ports_inv           : std_logic;                     -- mm_interconnect_0_leds_s1_write:inv -> LEDs:write_n
-	signal rst_controller_reset_out_reset_ports_inv            : std_logic;                     -- rst_controller_reset_out_reset:inv -> [LEDs:reset_n, nios2:reset_n, rst_switch:reset_n, switches:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv            : std_logic;                     -- rst_controller_reset_out_reset:inv -> [LEDs:reset_n, nios2:reset_n, switches:reset_n]
 
 begin
 
@@ -317,15 +302,6 @@ begin
 			dummy_ci_port                       => open                                                 -- custom_instruction_master.readra
 		);
 
-	rst_switch : component basic_system_rst_switch
-		port map (
-			clk      => clk_clk,                                  --                 clk.clk
-			reset_n  => rst_controller_reset_out_reset_ports_inv, --               reset.reset_n
-			address  => mm_interconnect_0_rst_switch_s1_address,  --                  s1.address
-			readdata => mm_interconnect_0_rst_switch_s1_readdata, --                    .readdata
-			in_port  => rst_switch_export                         -- external_connection.export
-		);
-
 	switches : component basic_system_switches
 		port map (
 			clk      => clk_clk,                                  --                 clk.clk
@@ -371,8 +347,6 @@ begin
 			OCRAM_s1_byteenable                     => mm_interconnect_0_ocram_s1_byteenable,               --                                  .byteenable
 			OCRAM_s1_chipselect                     => mm_interconnect_0_ocram_s1_chipselect,               --                                  .chipselect
 			OCRAM_s1_clken                          => mm_interconnect_0_ocram_s1_clken,                    --                                  .clken
-			rst_switch_s1_address                   => mm_interconnect_0_rst_switch_s1_address,             --                     rst_switch_s1.address
-			rst_switch_s1_readdata                  => mm_interconnect_0_rst_switch_s1_readdata,            --                                  .readdata
 			switches_s1_address                     => mm_interconnect_0_switches_s1_address,               --                       switches_s1.address
 			switches_s1_readdata                    => mm_interconnect_0_switches_s1_readdata               --                                  .readdata
 		);

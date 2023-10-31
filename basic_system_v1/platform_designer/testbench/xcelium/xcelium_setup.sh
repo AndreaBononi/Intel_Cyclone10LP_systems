@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 22.1 917 linux 2023.10.30.13:02:27
+# ACDS 22.1 917 linux 2023.10.31.16:50:43
 
 # ----------------------------------------
 # xcelium - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 22.1 917 linux 2023.10.30.13:02:27
+# ACDS 22.1 917 linux 2023.10.31.16:50:43
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="basic_system_tb"
@@ -174,7 +174,6 @@ mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
 mkdir -p ./libraries/switches/
-mkdir -p ./libraries/rst_switch/
 mkdir -p ./libraries/nios2/
 mkdir -p ./libraries/OCRAM/
 mkdir -p ./libraries/LEDs/
@@ -285,7 +284,6 @@ if [ $SKIP_COM -eq 0 ]; then
   xmvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_irq_mapper.sv"                                              -work irq_mapper                           -cdslib ./cds_libs/irq_mapper.cds.lib                          
   xmvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_mm_interconnect_0.v"                                        -work mm_interconnect_0                    -cdslib ./cds_libs/mm_interconnect_0.cds.lib                   
   xmvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_switches.vhd"                                               -work switches                             -cdslib ./cds_libs/switches.cds.lib                            
-  xmvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_rst_switch.vhd"                                             -work rst_switch                           -cdslib ./cds_libs/rst_switch.cds.lib                          
   xmvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_nios2.v"                                                    -work nios2                                -cdslib ./cds_libs/nios2.cds.lib                               
   xmvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_OCRAM.vhd"                                                  -work OCRAM                                -cdslib ./cds_libs/OCRAM.cds.lib                               
   xmvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/basic_system_tb/simulation/submodules/basic_system_LEDs.vhd"                                                   -work LEDs                                 -cdslib ./cds_libs/LEDs.cds.lib                                

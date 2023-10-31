@@ -71,7 +71,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  28 .jdi          00003b63  00000000  00000000  00003b61  2**0
                   CONTENTS, READONLY
- 29 .sopcinfo     0003853b  00000000  00000000  000076c4  2**0
+ 29 .sopcinfo     00032474  00000000  00000000  000076c4  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -228,11 +228,11 @@ alt_after_alt_main:
 	{
 		// read switches state
 		flag = IORD_ALTERA_AVALON_PIO_DATA( SWITCHES_BASE );
-  5c:	00940837 	ldwio	r2,20512(zero)
+  5c:	00940437 	ldwio	r2,20496(zero)
 		// set LEDs state
 		IOWR_ALTERA_AVALON_PIO_DATA( LEDS_BASE, flag & 0xff );
   60:	10803fcc 	andi	r2,r2,255
-  64:	00940435 	stwio	r2,20496(zero)
+  64:	00940035 	stwio	r2,20480(zero)
 	while( 1 )
   68:	003ffc06 	br	5c <main>
 

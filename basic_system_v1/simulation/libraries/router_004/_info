@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/simulation
+vbasic_system_mm_interconnect_0_router_004
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1698769369
+!i10b 1
+!s100 cA[RN?344ATj1X78j68le1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@=6Bh6IoKMF1S8ZQPmPWb3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1698767442
+Z6 8../platform_designer/testbench/basic_system_tb/simulation/submodules/basic_system_mm_interconnect_0_router_004.sv
+Z7 F../platform_designer/testbench/basic_system_tb/simulation/submodules/basic_system_mm_interconnect_0_router_004.sv
+!i122 9
+L0 84 130
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1698769369.000000
+!s107 ../platform_designer/testbench/basic_system_tb/simulation/submodules/basic_system_mm_interconnect_0_router_004.sv|
+Z10 !s90 -reportprogress|300|-sv|../platform_designer/testbench/basic_system_tb/simulation/submodules/basic_system_mm_interconnect_0_router_004.sv|-work|router_004|
+!i113 1
+Z11 o-sv -work router_004
+Z12 tCvgOpt 0
+vbasic_system_mm_interconnect_0_router_004_default_decode
+R1
+R2
+!i10b 1
+!s100 WV=H21U^c=X66hVjW[6l32
+R3
+IM`oA`gECC`YNo5DlmHfD_0
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 9
+L0 45 37
+R8
+r1
+!s85 0
+31
+R9
+Z13 !s107 ../platform_designer/testbench/basic_system_tb/simulation/submodules/basic_system_mm_interconnect_0_router_004.sv|
+R10
+!i113 1
+R11
+R12
