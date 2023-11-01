@@ -21,7 +21,7 @@ entity top_level_entity is
 		mainClk			: in		std_logic;		-- 10MHz
 		slowClk			: in		std_logic;
 		-- main reset input
-		reset				: in 		std_logic;
+		reset				: in 		std_logic;		-- active high
 		-- MCU interface (UART, I2C)
 		mcuUartTx		: in 		std_logic;
 		mcuUartRx		: out 	std_logic;
@@ -53,7 +53,7 @@ architecture behavior of top_level_entity is
 	--------------------------------------------------------------------------------------------------
 
 	-- COMPONENT: PLL (from 10MHz to 100MHz) ---------------------------------------------------------
-	component myAltPll
+	component pll
 		port
 		(
 			areset		: in 	std_logic := '0';
@@ -77,10 +77,10 @@ architecture behavior of top_level_entity is
 	begin
 
 		-- Main clock PLL -----------------------------------------------------------------------------
-		myAltPll_inst : myAltPll 
+		pll_inst : pll 
 		port map 
 		(
-			areset	=> reset,
+			areset	=> reset,  			-- active high
 			inclk0	=> mainClk,			-- 10MHz input clock
 			c0	 		=> clk,					-- 100MHz output clock
 			locked	=> pllLock

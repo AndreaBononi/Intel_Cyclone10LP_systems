@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/simulation
 valtera_avalon_sc_fifo
-!s110 1698769369
+!s110 1698864684
 !i10b 1
 !s100 o<4[h9[aF_<eG3j;6n1=<2
 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ R0
 w1698767442
 8../platform_designer/testbench/basic_system_tb/simulation/submodules/altera_avalon_sc_fifo.v
 F../platform_designer/testbench/basic_system_tb/simulation/submodules/altera_avalon_sc_fifo.v
-!i122 9
+!i122 16
 L0 21 895
 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1698769369.000000
+!s108 1698864684.000000
 !s107 ../platform_designer/testbench/basic_system_tb/simulation/submodules/altera_avalon_sc_fifo.v|
 !s90 -reportprogress|300|../platform_designer/testbench/basic_system_tb/simulation/submodules/altera_avalon_sc_fifo.v|-work|nios2_debug_mem_slave_agent_rsp_fifo|
 !i113 1

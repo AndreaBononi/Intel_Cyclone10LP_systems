@@ -16,13 +16,13 @@ architecture testbench of basic_system_testbench is
 	constant pllClk_period      : time := 10 ns;
   constant mainClk_period     : time := 100 ns;
 	constant reset_window				: time := 1000 ns;
-  constant niosReset_window   : time := 1100 ns;
+  constant niosReset_window   : time := 2000 ns;
   --------------------------------------------------------------------------------------------------------------------
 
   -- SIGNALS ---------------------------------------------------------------------------------------------------------
   signal mainClk      : std_logic := '0';
   signal slowClk			: std_logic := '0';
-  signal reset				: std_logic := '0';
+  signal reset				: std_logic := '1';
   signal mcuUartTx		: std_logic;
   signal mcuUartRx		: std_logic;
   signal mcuI2cScl		: std_logic;
@@ -85,9 +85,9 @@ architecture testbench of basic_system_testbench is
     -- reset generation -----------------------------------------------------------------------------------------------
 		reset_gen: process
 		begin
-			reset <= '0';
-			wait for reset_window;
 			reset <= '1';
+			wait for reset_window;
+			reset <= '0';
 			wait;
 		end process reset_gen; --------------------------------------------------------------------------------------------
 
@@ -105,7 +105,7 @@ architecture testbench of basic_system_testbench is
     begin
       switches(3 downto 0) <= "0000";
       wait for niosReset_window;
-      wait for 10*pllClk_period;
+      wait for 20*pllClk_period;
 			switches(3 downto 0) <= "1111";
 			wait;
     end process input_gen; --------------------------------------------------------------------------------------------

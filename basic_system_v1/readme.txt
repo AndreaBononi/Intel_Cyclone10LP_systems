@@ -13,8 +13,8 @@ MOST IMPORTANT FILES:
 -- design constraints files -------------------- ./basic_system.sdc
 -- raw binary file of the whole project -------- ./output_file/basic_system.rbf
 -- top level entity of the system -------------- ./top_level_entity.vhd
--- PLL IP file --------------------------------- ./myAltPll/myAltPll.qip
--- PLL HDL description file -------------------- ./myAltPll/myAltPll.vhd
+-- PLL IP file --------------------------------- ./pll/pll.qip
+-- PLL HDL description file -------------------- ./pll/pll.vhd
 -- platform designer system -------------------- ./basic_system.qsys
 -- platform designer system hw information ----- ./basic_system.sopcinfo
 -- platform designer system IP file ------------ ./platform_designer/synthesis/basic_system.qip

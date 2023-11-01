@@ -5,7 +5,7 @@ set_time_format -unit ns -decimal_places 3
 create_clock -name {mainClk} -period 100.000 -waveform { 0.000 50.000 } [get_ports {mainClk}]
 
 # create generated clock ------------------------------------------------------------------------
-create_generated_clock -name {myAltPll_inst|altpll_component|auto_generated|pll1|clk[0]} -source [get_pins {myAltPll_inst|altpll_component|auto_generated|pll1|inclk[0]}] -duty_cycle 50/1 -multiply_by 1 -master_clock {mainClk} [get_pins {myAltPll_inst|altpll_component|auto_generated|pll1|clk[0]}] 
+create_generated_clock -name clk -source [get_pins {pll_inst|altpll_component|auto_generated|pll1|inclk[0]}] -multiply_by 10 -duty_cycle 50 [get_pins {pll_inst|altpll_component|auto_generated|pll1|clk[0]}]
 
 # clock uncertainty -----------------------------------------------------------------------------
 derive_clock_uncertainty
