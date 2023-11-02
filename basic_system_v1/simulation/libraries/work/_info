@@ -55,7 +55,7 @@ Z14 w1698767436
 R2
 R3
 R4
-!i122 61
+!i122 72
 R0
 Z15 8../platform_designer/testbench/basic_system_tb/simulation/basic_system_tb.vhd
 Z16 F../platform_designer/testbench/basic_system_tb/simulation/basic_system_tb.vhd
@@ -65,9 +65,9 @@ V<m<Oe[bM`8AbU:Zl^<g5f3
 !s100 Iz1hQ8jF]N;o34an<gcfU3
 R8
 32
-Z17 !s110 1698864686
+Z17 !s110 1698914391
 !i10b 1
-Z18 !s108 1698864686.000000
+Z18 !s108 1698914391.000000
 Z19 !s90 -reportprogress|300|../platform_designer/testbench/basic_system_tb/simulation/basic_system_tb.vhd|
 Z20 !s107 ../platform_designer/testbench/basic_system_tb/simulation/basic_system_tb.vhd|
 !i113 1
@@ -77,7 +77,7 @@ R2
 R3
 R4
 DEx4 work 15 basic_system_tb 0 22 <m<Oe[bM`8AbU:Zl^<g5f3
-!i122 61
+!i122 72
 l46
 L12 64
 VJ396jGPZ0<gkc]zhokX1<2
@@ -92,11 +92,11 @@ R20
 !i113 1
 R13
 Ebasic_system_testbench
-Z21 w1698861200
+Z21 w1698913773
 R2
 R3
 R4
-!i122 64
+!i122 75
 R0
 R5
 R6
@@ -118,11 +118,11 @@ R2
 R3
 R4
 Z22 DEx4 work 22 basic_system_testbench 0 22 kRhfZloNWGgbU@CfbWC;O3
-!i122 64
+!i122 75
 l60
 Z23 L13 101
-VL0iFSXIQhgH7na6PmHNi[1
-!s100 b6lc49N_[2hUcUZOQAOLl3
+VO``oV^5:0?:[gDWDCZHZ;1
+!s100 :jKBi0]4WATmzd5>[Gf9e1
 R8
 32
 R17
@@ -175,7 +175,7 @@ Epll
 Z33 w1698857763
 R3
 R4
-!i122 62
+!i122 73
 R0
 Z34 8../pll/pll.vhd
 Z35 F../pll/pll.vhd
@@ -196,7 +196,7 @@ Asyn
 R3
 R4
 DEx4 work 3 pll 0 22 BW4hmfKzW_O4kgLQ<@eKC2
-!i122 62
+!i122 73
 l132
 R32
 VWTCRgndA<2dTl`;cKjP@W3
@@ -211,13 +211,13 @@ R37
 !i113 1
 R13
 Etop_level_entity
-Z38 w1698861027
+Z38 w1698914372
 Z39 DPx9 altera_mf 20 altera_mf_components 0 22 ^:alB2MJEEXl;OOBQIDHY2
 Z40 DPx3 lpm 14 lpm_components 0 22 MQaJVKl6c9@C2XO9DaM[F2
 R2
 R3
 R4
-!i122 63
+!i122 74
 R0
 Z41 8../top_level_entity.vhd
 Z42 F../top_level_entity.vhd
@@ -241,11 +241,11 @@ R2
 R3
 R4
 DEx4 work 16 top_level_entity 0 22 I^T`PD0eKgTbl=FAifaAc3
-!i122 63
-l77
-L39 61
-VEZMo0@h7aV]j3<POWbfQH2
-!s100 5227A:]UOi7IR0l3jH36T0
+!i122 74
+l80
+L39 67
+VSQ_]=4embAJ7DYnzcGLH>1
+!s100 m4IAV8BzK:BgYo97]XK^F2
 R8
 32
 R17

@@ -33,12 +33,11 @@ elab -voptargs=+acc
 add wave -position insertpoint \
 sim:/basic_system_testbench/DUT/clk \
 sim:/basic_system_testbench/mainClk \
-sim:/basic_system_testbench/reset \
-sim:/basic_system_testbench/switches(7) \
-sim:/basic_system_testbench/switches(3) \
-sim:/basic_system_testbench/switches(2) \
-sim:/basic_system_testbench/switches(1) \
 sim:/basic_system_testbench/switches(0) \
+sim:/basic_system_testbench/switches(7) \
+sim:/basic_system_testbench/switches(6) \
+sim:/basic_system_testbench/switches(5) \
+sim:/basic_system_testbench/switches(4) \
 sim:/basic_system_testbench/leds(3) \
 sim:/basic_system_testbench/leds(2) \
 sim:/basic_system_testbench/leds(1) \

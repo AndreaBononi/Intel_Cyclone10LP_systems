@@ -94,19 +94,19 @@ architecture testbench of basic_system_testbench is
     -- Nios reset generation ------------------------------------------------------------------------------------------
     niosReset_gen: process
     begin
-      switches(7) <= '0';
+      switches(0) <= '0';
       wait for niosReset_window;
-			switches(7) <= '1';
+			switches(0) <= '1';
 			wait;
     end process niosReset_gen; ----------------------------------------------------------------------------------------
 
     -- input generation -----------------------------------------------------------------------------------------------
     input_gen: process
     begin
-      switches(3 downto 0) <= "0000";
+      switches(7 downto 4) <= "0000";
       wait for niosReset_window;
       wait for 20*pllClk_period;
-			switches(3 downto 0) <= "1111";
+			switches(7 downto 4) <= "1111";
 			wait;
     end process input_gen; --------------------------------------------------------------------------------------------
 

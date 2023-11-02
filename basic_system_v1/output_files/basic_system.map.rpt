@@ -1,5 +1,5 @@
 Analysis & Synthesis report for basic_system
-Wed Nov  1 18:40:18 2023
+Thu Nov  2 09:44:02 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -185,7 +185,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov  1 18:40:18 2023          ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov  2 09:44:01 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; basic_system                                   ;
 ; Top-level Entity Name              ; top_level_entity                               ;
@@ -4839,7 +4839,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Nov  1 18:39:43 2023
+    Info: Processing started: Thu Nov  2 09:43:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off basic_system -c basic_system
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -4979,7 +4979,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file top_lev
 Info (12127): Elaborating entity "top_level_entity" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at top_level_entity.vhd(27): used implicit default value for signal "mcuUartRx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 27
 Warning (10036): Verilog HDL or VHDL warning at top_level_entity.vhd(44): object "pllLock" assigned a value but never read File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 44
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 80
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 86
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/pll/pll.vhd Line: 141
 Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/pll/pll.vhd Line: 141
 Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/pll/pll.vhd Line: 141
@@ -5041,7 +5041,7 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/db/pll_altpll.v Line: 31
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "basic_system" for hierarchy "basic_system:basic_system_inst" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 90
+Info (12128): Elaborating entity "basic_system" for hierarchy "basic_system:basic_system_inst" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 96
 Info (12128): Elaborating entity "basic_system_LEDs" for hierarchy "basic_system:basic_system_inst|basic_system_LEDs:leds" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/basic_system.vhd Line: 248
 Info (12128): Elaborating entity "basic_system_OCRAM" for hierarchy "basic_system:basic_system_inst|basic_system_OCRAM:ocram" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/basic_system.vhd Line: 260
 Info (12128): Elaborating entity "altsyncram" for hierarchy "basic_system:basic_system_inst|basic_system_OCRAM:ocram|altsyncram:the_altsyncram" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/submodules/basic_system_OCRAM.v Line: 69
@@ -5197,7 +5197,7 @@ Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "basic_
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "basic_system:basic_system_inst|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "basic_system:basic_system_inst|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/submodules/altera_reset_controller.v Line: 220
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.11.01.18:40:02 Progress: Loading sld630c7cc1/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.11.02.09:43:46 Progress: Loading sld630c7cc1/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -5264,13 +5264,14 @@ Info (17049): 80 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/output_files/basic_system.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "slowClk" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 22
+    Warning (15610): No output dependent on input pin "reset" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 24
     Warning (15610): No output dependent on input pin "mcuUartTx" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 26
     Warning (15610): No output dependent on input pin "mcuI2cScl" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 28
-    Warning (15610): No output dependent on input pin "switches[4]" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 33
-    Warning (15610): No output dependent on input pin "switches[5]" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 33
-    Warning (15610): No output dependent on input pin "switches[6]" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 33
+    Warning (15610): No output dependent on input pin "switches[1]" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 33
+    Warning (15610): No output dependent on input pin "switches[2]" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 33
+    Warning (15610): No output dependent on input pin "switches[3]" File: /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/top_level_entity.vhd Line: 33
 Info (21057): Implemented 1773 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 6 output pins
@@ -5278,11 +5279,11 @@ Info (21057): Implemented 1773 device resources after synthesis - the final reso
     Info (21061): Implemented 1604 logic cells
     Info (21064): Implemented 112 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 501 megabytes
-    Info: Processing ended: Wed Nov  1 18:40:18 2023
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:01:02
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 509 megabytes
+    Info: Processing ended: Thu Nov  2 09:44:02 2023
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:01:00
 
 
 +------------------------------------------+

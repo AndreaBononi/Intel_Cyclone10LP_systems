@@ -5,8 +5,8 @@ DESCRIPTION:
 -- Four LEDs are turned on/off depending on the status of four switches
 -- A Nios II processor reads the status of the switches and drives the LEDs according to it
 -- On-chip RAM used as data and instruction memory
--- A dedicated switch is employed to reset the processor
 -- An external clock of 10 MHz is provided, but the system works at 100 MHz due to an internal PLL
+-- A dedicated switch is employed to reset the processor and the PLL
 --------------------------------------------------------------------------------------------------------------
 MOST IMPORTANT FILES:
 -- FPGA pin assignment ------------------------- ./pinout.csv
