@@ -1,3 +1,10 @@
+/basic_system/*.bak
+/basic_system/pll/*.bak
+/basic_system/sim/libraries/
+/basic_system/sim/basic_system_nios2*
+/basic_system/sim/modelsim.ini
+/basic_system/sim/transcript
+/basic_system/sim/vsim.wlf
 /archive/AvalonMM_to_hRAM/AvalonMM_to_SSRAM/AvalonMM_to_SSRAM_v1/db/
 /archive/AvalonMM_to_hRAM/AvalonMM_to_SSRAM/AvalonMM_to_SSRAM_v1/incremental_db/
 /archive/AvalonMM_to_hRAM/AvalonMM_to_SSRAM/AvalonMM_to_SSRAM_v1/output_files/
