@@ -1,4 +1,4 @@
-# PROJECT: basic_system_v2
+# PROJECT: basic_system
 # BRIEF DESCRIPTION: simulation file to be launched in vsim
 # COMMENTS:
 # this file execute the auto-generated simulation script of the Platform Designer System contained in the project

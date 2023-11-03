@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Nov  3 12:17:32 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : custom_OCRAM
+Top-level Entity Name : custom_OCRAM
+Family : Cyclone 10 LP
+Device : 10CL025YE144C8G
+Timing Models : Final
+Total logic elements : 82 / 24,624 ( < 1 % )
+    Total combinational functions : 7 / 24,624 ( < 1 % )
+    Dedicated logic registers : 79 / 24,624 ( < 1 % )
+Total registers : 79
+Total pins : 1 / 77 ( 1 % )
+Total virtual pins : 77
+Total memory bits : 8,192 / 608,256 ( 1 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

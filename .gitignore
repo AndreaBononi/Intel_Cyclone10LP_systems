@@ -5,6 +5,8 @@
 /basic_system/sim/modelsim.ini
 /basic_system/sim/transcript
 /basic_system/sim/vsim.wlf
+/blockram_system_v1/ip/custom_OCRAM/hardware/*.bak
+/blockram_system_v1/ip/custom_OCRAM/hardware/blockram/*.bak
 /archive/AvalonMM_to_hRAM/AvalonMM_to_SSRAM/AvalonMM_to_SSRAM_v1/db/
 /archive/AvalonMM_to_hRAM/AvalonMM_to_SSRAM/AvalonMM_to_SSRAM_v1/incremental_db/
 /archive/AvalonMM_to_hRAM/AvalonMM_to_SSRAM/AvalonMM_to_SSRAM_v1/output_files/

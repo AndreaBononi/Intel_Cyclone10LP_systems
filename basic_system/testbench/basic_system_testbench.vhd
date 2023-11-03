@@ -1,4 +1,4 @@
--- PROJECT: basic_system_v1
+-- PROJECT: basic_system
 -- BRIEF DESCRIPTION: top-level testbench file 
 -- COMMENTS:
 -- this file instantiates the DUT, provides the clock and the input signals and inspects the output signals

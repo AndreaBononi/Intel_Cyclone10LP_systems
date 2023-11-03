@@ -1,4 +1,4 @@
--- PROJECT: basic_system_v1
+-- PROJECT: basic_system
 -- BRIEF DESCRIPTION: top level entity
 -- COMMENTS:
 -- this file instantiates a NiosII-based Platform Designer System (PDS)
@@ -15,25 +15,25 @@ library 	altera_mf;
 use 			altera_mf.altera_mf_components.all;
 
 entity top_level_entity is
-	port
-	(
-		-- main clock inputs
-		mainClk			: in		std_logic;		-- 10MHz
-		slowClk			: in		std_logic;
-		-- main reset input
-		reset				: in 		std_logic;
-		-- MCU interface (UART, I2C)
-		mcuUartTx		: in 		std_logic;
-		mcuUartRx		: out 	std_logic;
-		mcuI2cScl		: in 		std_logic;
-		mcuI2cSda		: inout std_logic;
-		-- logic state analyzer/stimulator
-		lsasBus			: inout std_logic_vector(31 downto 0);
-		-- dip switches
-		switches		: in 		std_logic_vector(7 downto 0);
-		-- LEDs
-		leds				: out 	std_logic_vector(3 downto 0)
-	);
+port
+(
+	-- main clock inputs
+	mainClk			: in		std_logic;		-- 10MHz
+	slowClk			: in		std_logic;
+	-- main reset input
+	reset				: in 		std_logic;
+	-- MCU interface (UART, I2C)
+	mcuUartTx		: in 		std_logic;
+	mcuUartRx		: out 	std_logic;
+	mcuI2cScl		: in 		std_logic;
+	mcuI2cSda		: inout std_logic;
+	-- logic state analyzer/stimulator
+	lsasBus			: inout std_logic_vector(31 downto 0);
+	-- dip switches
+	switches		: in 		std_logic_vector(7 downto 0);
+	-- LEDs
+	leds				: out 	std_logic_vector(3 downto 0)
+);
 end top_level_entity;
 
 architecture behavior of top_level_entity is
@@ -57,24 +57,24 @@ architecture behavior of top_level_entity is
 
 	-- COMPONENT: PLL (from 10MHz to 100MHz) ---------------------------------------------------------
 	component pll
-		port
-		(
-			areset		: in 	std_logic := '0';		-- active high
-			inclk0		: in 	std_logic := '0';		-- 10MHz input clock
-			c0				: out std_logic;					-- 100MHz output clock
-			locked		: out std_logic 
-		);
+	port
+	(
+		areset		: in 	std_logic := '0';		-- active high
+		inclk0		: in 	std_logic := '0';		-- 10MHz input clock
+		c0				: out std_logic;					-- 100MHz output clock
+		locked		: out std_logic 
+	);
 	end component; -----------------------------------------------------------------------------------
 
 	-- COMPONENT: Platform Designer System -----------------------------------------------------------
 	component basic_system
-		port 
-		(
-			clk_clk           : in  std_logic := '0';
-			leds_export       : out std_logic_vector(3 downto 0);
-			reset_reset_n     : in  std_logic := '0';
-			switches_export   : in  std_logic_vector(3 downto 0) := (others => '0')
-		);
+	port 
+	(
+		clk_clk           : in  std_logic := '0';
+		leds_export       : out std_logic_vector(3 downto 0);
+		reset_reset_n     : in  std_logic := '0';
+		switches_export   : in  std_logic_vector(3 downto 0) := (others => '0')
+	);
 	end component; -----------------------------------------------------------------------------------
 		
 	begin

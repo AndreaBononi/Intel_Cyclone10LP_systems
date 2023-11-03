@@ -9,6 +9,7 @@ DESCRIPTION:
 -- A dedicated switch is employed to reset the processor and the PLL
 --------------------------------------------------------------------------------------------------------------
 MOST IMPORTANT FILES:
+-- Quartus project ----------------------------- ./basic_system.qpf
 -- FPGA pin assignment ------------------------- ./pinout.csv
 -- design constraints files -------------------- ./basic_system.sdc
 -- raw binary file of the whole project -------- ./output_file/basic_system.rbf
