@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------------------------------------
-BASIC SYSTEM v1
+BASIC SYSTEM
 --------------------------------------------------------------------------------------------------------------
 DESCRIPTION:
 -- Four LEDs are turned on/off depending on the status of four switches
 -- A Nios II processor reads the status of the switches and drives the LEDs according to it
--- On-chip RAM used as data and instruction memory
+-- On-chip RAM used as both data and instruction memory
 -- An external clock of 10 MHz is provided, but the system works at 100 MHz due to an internal PLL
 -- A dedicated switch is employed to reset the processor and the PLL
 --------------------------------------------------------------------------------------------------------------

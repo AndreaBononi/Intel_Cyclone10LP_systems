@@ -1,5 +1,5 @@
 Flow report for blockram_system_v1
-Fri Nov  3 12:49:39 2023
+Sun Nov  5 17:45:42 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov  3 12:49:39 2023          ;
+; Flow Status                        ; Successful - Sun Nov  5 17:45:42 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; blockram_system_v1                             ;
 ; Top-level Entity Name              ; top_level_entity                               ;
 ; Family                             ; Cyclone 10 LP                                  ;
 ; Device                             ; 10CL025YE144C8G                                ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 1,422 / 24,624 ( 6 % )                         ;
-;     Total combinational functions  ; 1,330 / 24,624 ( 5 % )                         ;
-;     Dedicated logic registers      ; 839 / 24,624 ( 3 % )                           ;
-; Total registers                    ; 839                                            ;
+; Total logic elements               ; 1,420 / 24,624 ( 6 % )                         ;
+;     Total combinational functions  ; 1,278 / 24,624 ( 5 % )                         ;
+;     Dedicated logic registers      ; 833 / 24,624 ( 3 % )                           ;
+; Total registers                    ; 833                                            ;
 ; Total pins                         ; 51 / 77 ( 66 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 18,432 / 608,256 ( 3 % )                       ;
+; Total memory bits                  ; 51,200 / 608,256 ( 8 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                 ;
 +------------------------------------+------------------------------------------------+
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/03/2023 12:48:36 ;
+; Start date & time ; 11/05/2023 17:44:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; blockram_system_v1  ;
 +-------------------+---------------------+
@@ -76,18 +76,19 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------------------------------------+--------------------+------------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                                ; Default Value      ; Entity Name      ; Section Id                        ;
 +-------------------------------------+----------------------------------------------------------------------+--------------------+------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 106024607881685.169901211624565                                      ; --                 ; --               ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 106024607881685.169920268111183                                      ; --                 ; --               ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                  ; --                 ; --               ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                  ; --                 ; --               ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                  ; --                 ; --               ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                  ; --                 ; --               ; eda_board_design_symbol           ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; netlist/                                                             ; --                 ; --               ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                                 ; --                 ; --               ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (VHDL)                                                      ; <None>             ; --               ; --                                ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                                 ; --                 ; --               ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                   ; --                 ; --               ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                    ; --                 ; --               ; --                                ;
-; MISC_FILE                           ; blockram_system_v1/synthesis/../blockram_system_v1.cmp               ; --                 ; --               ; --                                ;
-; MISC_FILE                           ; blockram_system_v1/synthesis/../../blockram_system_v1.qsys           ; --                 ; --               ; --                                ;
+; MISC_FILE                           ; platform_designer/synthesis/../blockram_system_v1.cmp                ; --                 ; --               ; --                                ;
+; MISC_FILE                           ; platform_designer/synthesis/../../blockram_system_v1.qsys            ; --                 ; --               ; --                                ;
 ; MISC_FILE                           ; pll/pll_inst.vhd                                                     ; --                 ; --               ; --                                ;
 ; MISC_FILE                           ; pll/pll.cmp                                                          ; --                 ; --               ; --                                ;
 ; MISC_FILE                           ; pll/pll.ppf                                                          ; --                 ; --               ; --                                ;
@@ -102,10 +103,11 @@ https://fpgasoftware.intel.com/eula.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                  ; --                 ; --               ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                ; --                 ; --               ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                         ; --                 ; --               ; --                                ;
-; SLD_FILE                            ; blockram_system_v1/synthesis/blockram_system_v1.regmap               ; --                 ; --               ; --                                ;
-; SLD_FILE                            ; blockram_system_v1/synthesis/blockram_system_v1.debuginfo            ; --                 ; --               ; --                                ;
-; SLD_INFO                            ; QSYS_NAME blockram_system_v1 HAS_SOPCINFO 1 GENERATION_ID 1699010717 ; --                 ; --               ; --                                ;
-; SOPCINFO_FILE                       ; blockram_system_v1/synthesis/../../blockram_system_v1.sopcinfo       ; --                 ; --               ; --                                ;
+; SEARCH_PATH                         ; SBT_workspace/blockram_system_v1/mem_init/                           ; --                 ; --               ; --                                ;
+; SLD_FILE                            ; platform_designer/synthesis/blockram_system_v1.regmap                ; --                 ; --               ; --                                ;
+; SLD_FILE                            ; platform_designer/synthesis/blockram_system_v1.debuginfo             ; --                 ; --               ; --                                ;
+; SLD_INFO                            ; QSYS_NAME blockram_system_v1 HAS_SOPCINFO 1 GENERATION_ID 1699199785 ; --                 ; --               ; --                                ;
+; SOPCINFO_FILE                       ; platform_designer/synthesis/../../blockram_system_v1.sopcinfo        ; --                 ; --               ; --                                ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                   ; --                 ; --               ; --                                ;
 ; TOP_LEVEL_ENTITY                    ; top_level_entity                                                     ; blockram_system_v1 ; --               ; --                                ;
 +-------------------------------------+----------------------------------------------------------------------+--------------------+------------------+-----------------------------------+
@@ -116,12 +118,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:31     ; 1.0                     ; 496 MB              ; 00:00:59                           ;
-; Fitter               ; 00:00:15     ; 1.1                     ; 735 MB              ; 00:00:19                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 374 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 464 MB              ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 619 MB              ; 00:00:03                           ;
-; Total                ; 00:00:54     ; --                      ; --                  ; 00:01:27                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 505 MB              ; 00:00:58                           ;
+; Fitter               ; 00:00:14     ; 1.1                     ; 737 MB              ; 00:00:19                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 380 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 475 MB              ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 611 MB              ; 00:00:03                           ;
+; Total                ; 00:00:50     ; --                      ; --                  ; 00:01:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

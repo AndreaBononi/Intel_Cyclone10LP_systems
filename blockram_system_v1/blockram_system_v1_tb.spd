@@ -25,17 +25,17 @@
    type="SYSTEM_VERILOG"
    library="rsp_mux" />
  <file
-   path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_rsp_demux_002.sv"
+   path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_rsp_demux.sv"
    type="SYSTEM_VERILOG"
-   library="rsp_demux_002" />
+   library="rsp_demux" />
  <file
-   path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_cmd_mux_002.sv"
+   path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_cmd_mux_001.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_002" />
+   library="cmd_mux_001" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/altera_merlin_arbitrator.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_002" />
+   library="cmd_mux_001" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_cmd_mux.sv"
    type="SYSTEM_VERILOG"
@@ -53,9 +53,13 @@
    type="SYSTEM_VERILOG"
    library="cmd_demux" />
  <file
-   path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_router_004.sv"
+   path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_router_006.sv"
    type="SYSTEM_VERILOG"
-   library="router_004" />
+   library="router_006" />
+ <file
+   path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_router_003.sv"
+   type="SYSTEM_VERILOG"
+   library="router_003" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_mm_interconnect_0_router_002.sv"
    type="SYSTEM_VERILOG"
@@ -71,15 +75,15 @@
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/altera_avalon_sc_fifo.v"
    type="VERILOG"
-   library="OCRAM_avalon_slave_0_agent_rsp_fifo" />
+   library="data_OCRAM_avalon_slave_0_agent_rsp_fifo" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/altera_merlin_slave_agent.sv"
    type="SYSTEM_VERILOG"
-   library="OCRAM_avalon_slave_0_agent" />
+   library="data_OCRAM_avalon_slave_0_agent" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv"
    type="SYSTEM_VERILOG"
-   library="OCRAM_avalon_slave_0_agent" />
+   library="data_OCRAM_avalon_slave_0_agent" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/altera_merlin_master_agent.sv"
    type="SYSTEM_VERILOG"
@@ -87,7 +91,7 @@
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/altera_merlin_slave_translator.sv"
    type="SYSTEM_VERILOG"
-   library="OCRAM_avalon_slave_0_translator" />
+   library="data_OCRAM_avalon_slave_0_translator" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/altera_merlin_master_translator.sv"
    type="SYSTEM_VERILOG"
@@ -185,25 +189,29 @@
    type="VERILOG"
    library="nios2" />
  <file
+   path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_instruction_OCRAM.vhd"
+   type="VHDL"
+   library="instruction_OCRAM" />
+ <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/reg.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/avs_to_blockram_converter_CU.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/avs_to_blockram_converter.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_1port.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/custom_OCRAM.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="blockram_system_v1/testbench/blockram_system_v1_tb/simulation/submodules/blockram_system_v1_LEDs.vhd"
    type="VHDL"
@@ -225,4 +233,7 @@
    type="VHDL" />
  <topLevel name="blockram_system_v1_tb" />
  <deviceFamily name="cyclone10lp" />
+ <modelMap
+   controllerPath="blockram_system_v1_tb.blockram_system_v1_inst.instruction_OCRAM"
+   modelPath="blockram_system_v1_tb.blockram_system_v1_inst.instruction_OCRAM" />
 </simPackage>

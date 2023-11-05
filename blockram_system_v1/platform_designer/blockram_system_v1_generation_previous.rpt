@@ -1,0 +1,103 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/blockram_system_v1.qsys --block-symbol-file --output-directory=/home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/blockram_system_v1 --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Progress: Loading blockram_system_v1/blockram_system_v1.qsys
+Progress: Reading input file
+Progress: Adding LEDs [altera_avalon_pio 22.1]
+Progress: Parameterizing module LEDs
+Progress: Adding clk_100MHz [clock_source 22.1]
+Progress: Parameterizing module clk_100MHz
+Progress: Adding data_OCRAM [custom_OCRAM 1.0]
+Progress: Parameterizing module data_OCRAM
+Progress: Adding instruction_OCRAM [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module instruction_OCRAM
+Progress: Adding nios2 [altera_nios2_gen2 22.1]
+Progress: Parameterizing module nios2
+Progress: Adding switches [altera_avalon_pio 22.1]
+Progress: Parameterizing module switches
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: blockram_system_v1.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/blockram_system_v1.qsys --synthesis=VHDL --output-directory=/home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/blockram_system_v1/synthesis --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Progress: Loading blockram_system_v1/blockram_system_v1.qsys
+Progress: Reading input file
+Progress: Adding LEDs [altera_avalon_pio 22.1]
+Progress: Parameterizing module LEDs
+Progress: Adding clk_100MHz [clock_source 22.1]
+Progress: Parameterizing module clk_100MHz
+Progress: Adding data_OCRAM [custom_OCRAM 1.0]
+Progress: Parameterizing module data_OCRAM
+Progress: Adding instruction_OCRAM [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module instruction_OCRAM
+Progress: Adding nios2 [altera_nios2_gen2 22.1]
+Progress: Parameterizing module nios2
+Progress: Adding switches [altera_avalon_pio 22.1]
+Progress: Parameterizing module switches
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: blockram_system_v1.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: blockram_system_v1: Generating blockram_system_v1 "blockram_system_v1" for QUARTUS_SYNTH
+Info: LEDs: Starting RTL generation for module 'blockram_system_v1_LEDs'
+Info: LEDs:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=blockram_system_v1_LEDs --dir=/tmp/alt9665_6671623349087343007.dir/0055_LEDs_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9665_6671623349087343007.dir/0055_LEDs_gen//blockram_system_v1_LEDs_component_configuration.pl  --do_build_sim=0  ]
+Info: LEDs: Done RTL generation for module 'blockram_system_v1_LEDs'
+Info: LEDs: "blockram_system_v1" instantiated altera_avalon_pio "LEDs"
+Info: data_OCRAM: "blockram_system_v1" instantiated custom_OCRAM "data_OCRAM"
+Info: instruction_OCRAM: Starting RTL generation for module 'blockram_system_v1_instruction_OCRAM'
+Info: instruction_OCRAM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=blockram_system_v1_instruction_OCRAM --dir=/tmp/alt9665_6671623349087343007.dir/0057_instruction_OCRAM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9665_6671623349087343007.dir/0057_instruction_OCRAM_gen//blockram_system_v1_instruction_OCRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: instruction_OCRAM: Done RTL generation for module 'blockram_system_v1_instruction_OCRAM'
+Info: instruction_OCRAM: "blockram_system_v1" instantiated altera_avalon_onchip_memory2 "instruction_OCRAM"
+Info: nios2: "blockram_system_v1" instantiated altera_nios2_gen2 "nios2"
+Info: switches: Starting RTL generation for module 'blockram_system_v1_switches'
+Info: switches:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=blockram_system_v1_switches --dir=/tmp/alt9665_6671623349087343007.dir/0058_switches_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9665_6671623349087343007.dir/0058_switches_gen//blockram_system_v1_switches_component_configuration.pl  --do_build_sim=0  ]
+Info: switches: Done RTL generation for module 'blockram_system_v1_switches'
+Info: switches: "blockram_system_v1" instantiated altera_avalon_pio "switches"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "blockram_system_v1" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "blockram_system_v1" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "blockram_system_v1" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'blockram_system_v1_nios2_cpu'
+Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=blockram_system_v1_nios2_cpu --dir=/tmp/alt9665_6671623349087343007.dir/0061_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9665_6671623349087343007.dir/0061_cpu_gen//blockram_system_v1_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.11.04 17:54:57 (*) Starting Nios II generation
+Info: cpu: # 2023.11.04 17:54:57 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.11.04 17:54:57 (*)   Creating all objects for CPU
+Info: cpu: # 2023.11.04 17:54:57 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.11.04 17:54:57 (*)   Creating plain-text RTL
+Info: cpu: # 2023.11.04 17:54:58 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'blockram_system_v1_nios2_cpu'
+Info: cpu: "nios2" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_data_master_translator"
+Info: data_OCRAM_avalon_slave_0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "data_OCRAM_avalon_slave_0_translator"
+Info: nios2_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_data_master_agent"
+Info: data_OCRAM_avalon_slave_0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "data_OCRAM_avalon_slave_0_agent"
+Info: data_OCRAM_avalon_slave_0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "data_OCRAM_avalon_slave_0_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/blockram_system_v1/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/blockram_system_v1/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/blockram_system_v1/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: blockram_system_v1: Done "blockram_system_v1" with 29 modules, 46 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

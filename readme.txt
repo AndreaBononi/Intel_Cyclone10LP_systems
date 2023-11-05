@@ -11,13 +11,14 @@ DIRECTORIES DESCRIPTION:
 	-- test on VirtLab board: succesfully completed
 #
 # ./blockram_system_v1/
-	-- simple Nios II based system containing an OCRAM (used for both data and instructions)
-	-- the OCRAM is implemented creating a custom IP core
-	-- the custom OCRAM contains a single-port blockRAM and a component interfacing it with the Avalon bus
+	-- simple Nios II based system containing two OCRAM (data memory and instruction memory)
+	-- the instruction OCRAM is implemented using an IP core available in the IP catalog
+	-- the data OCRAM is implemented creating a custom IP core
+	-- the data OCRAM is made up by a 1-port blockRAM and a component interfacing it with the Avalon bus
 	-- currently under development
 #
 # ./blockram_system_v2/
-	-- the same as blockRAM_system_v1, but it also supports burst operations
+	-- the same as blockRAM_system_v1, but the custom data OCRAM supports also burst operations
 	-- currently under development	
 #
 # ./hyperram_system/
