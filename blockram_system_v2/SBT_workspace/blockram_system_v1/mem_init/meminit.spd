@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<simPackage>
-<file path="hdl_sim/blockram_system_v1_instruction_OCRAM.dat" type="DAT" initParamName="INIT_FILE" memoryPath="instruction_OCRAM" />
-<file path="blockram_system_v1_instruction_OCRAM.hex" type="HEX" initParamName="INIT_FILE" memoryPath="instruction_OCRAM" />
-</simPackage>
