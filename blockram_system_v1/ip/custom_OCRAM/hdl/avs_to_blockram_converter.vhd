@@ -15,7 +15,7 @@ port
   -- clock and reset:
   clk                       : in    std_logic;
   rst_n											: in    std_logic;
-  -- amv signals:
+  -- avs signals:
   avs_read                  : in    std_logic;
   avs_write                 : in    std_logic;
   avs_waitrequest           : out   std_logic;

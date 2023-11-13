@@ -1,0 +1,17 @@
+
+State Machine - |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state
+Name present_state.idle_afterburst present_state.wait_afterburst present_state.burst_lastwrite present_state.burst_lastread present_state.burst_write_pause present_state.burst_read_pause present_state.burst_write present_state.burst_read present_state.write_cmd present_state.read_cmd present_state.idle present_state.init2 present_state.init1 present_state.reset 
+present_state.reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+present_state.init1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+present_state.init2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+present_state.idle 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+present_state.read_cmd 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+present_state.write_cmd 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+present_state.burst_read 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+present_state.burst_write 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+present_state.burst_read_pause 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+present_state.burst_write_pause 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+present_state.burst_lastread 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+present_state.burst_lastwrite 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+present_state.wait_afterburst 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+present_state.idle_afterburst 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

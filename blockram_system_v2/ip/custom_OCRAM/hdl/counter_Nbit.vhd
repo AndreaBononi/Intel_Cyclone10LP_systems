@@ -2,22 +2,22 @@
 -- it can count up to (2^N)-1
 -- it is implemented as a chain of T flip flop
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+library 	ieee;
+use 			ieee.std_logic_1164.all;
+use 			ieee.numeric_std.all;
 
 entity counter_Nbit is
-	generic
-	(
-		N	: integer := 4
-	);
-	port
-	(
-		clk				: in 		std_logic;
-		enable		: in 		std_logic;
-		clear_n		: in 		std_logic;
-		cnt_out		: out 	std_logic_vector(N-1 downto 0)
-	);
+generic
+(
+	N	: integer := 4
+);
+port
+(
+	clk				: in 		std_logic;
+	enable		: in 		std_logic;
+	clear_n		: in 		std_logic;
+	cnt_out		: out 	std_logic_vector(N-1 downto 0)
+);
 end counter_Nbit;
 
 architecture rtl of counter_Nbit is

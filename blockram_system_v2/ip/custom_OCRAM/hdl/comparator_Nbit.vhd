@@ -1,21 +1,21 @@
 -- BRIEF DESCRIPTION: comparation between two inputs (N bit)
 -- "equal" is set if the two inputs are the same
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+library 	ieee;
+use 			ieee.std_logic_1164.all;
+use 			ieee.numeric_std.all;
 
 entity comparator_Nbit is
-	generic
-	(
-		N : integer := 1
-	);
-	port
-	(
-		cmp_in_0		: in		std_logic_vector((N-1) downto 0);
-		cmp_in_1		: in		std_logic_vector((N-1) downto 0);
-		equal 			: out 	std_logic
-	);
+generic
+(
+	N : integer := 1
+);
+port
+(
+	cmp_in_0		: in		std_logic_vector((N-1) downto 0);
+	cmp_in_1		: in		std_logic_vector((N-1) downto 0);
+	cmp_equal 	: out 	std_logic
+);
 end comparator_Nbit;
 
 architecture behavior of comparator_Nbit is
@@ -37,6 +37,6 @@ architecture behavior of comparator_Nbit is
 			 intra_and(j) <= intra_and(j-1) and bitwise_xnor(j-1);
 		end generate;
 
-    equal <= intra_and(N);
+    cmp_equal <= intra_and(N);
 
 end behavior;

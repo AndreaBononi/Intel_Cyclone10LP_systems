@@ -1,22 +1,21 @@
 -- BRIEF DESCRIPTION: multiplexer 2-inputs 1-output N bit
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
+library 	ieee;
+use 			ieee.std_logic_1164.all;
+use 			ieee.numeric_std.all;
 
 entity mux_2to1 is
-	generic
-	(
-		N : integer := 1
-	);
-	port
-	(
-		mux_in_0		: in		std_logic_vector((N-1) downto 0);
-		mux_in_1		: in		std_logic_vector((N-1) downto 0);
-		sel					: in 		std_logic;
-		out_mux			: out 	std_logic_vector((N-1) downto 0)
-	);
+generic
+(
+	N : integer := 1
+);
+port
+(
+	mux_in_0		: in		std_logic_vector((N-1) downto 0);
+	mux_in_1		: in		std_logic_vector((N-1) downto 0);
+	sel					: in 		std_logic;
+	out_mux			: out 	std_logic_vector((N-1) downto 0)
+);
 end mux_2to1;
 
 architecture behavior of mux_2to1 is
