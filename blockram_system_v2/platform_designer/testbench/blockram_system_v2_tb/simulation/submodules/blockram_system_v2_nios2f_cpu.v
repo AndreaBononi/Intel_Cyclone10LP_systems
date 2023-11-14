@@ -372,17 +372,17 @@ module blockram_system_v2_nios2f_cpu_dc_tag_module (
   parameter lpm_file = "UNUSED";
 
 
-  output  [  3: 0] q;
+  output  [  4: 0] q;
   input            clock;
-  input   [  3: 0] data;
+  input   [  4: 0] data;
   input   [  5: 0] rdaddress;
   input   [  5: 0] wraddress;
   input            wren;
 
 
-wire    [  3: 0] q;
-wire    [  3: 0] ram_data;
-wire    [  3: 0] ram_q;
+wire    [  4: 0] q;
+wire    [  4: 0] ram_data;
+wire    [  4: 0] ram_q;
   assign q = ram_q;
   assign ram_data = data;
   altsyncram the_altsyncram
@@ -405,8 +405,8 @@ wire    [  3: 0] ram_q;
            the_altsyncram.ram_block_type = "AUTO",
            the_altsyncram.rdcontrol_reg_b = "CLOCK0",
            the_altsyncram.read_during_write_mode_mixed_ports = "OLD_DATA",
-           the_altsyncram.width_a = 4,
-           the_altsyncram.width_b = 4,
+           the_altsyncram.width_a = 5,
+           the_altsyncram.width_b = 5,
            the_altsyncram.widthad_a = 6,
            the_altsyncram.widthad_b = 6;
 
@@ -1302,7 +1302,7 @@ module blockram_system_v2_nios2f_cpu_nios2_oci_dbrk (
                                                     )
 ;
 
-  output  [ 12: 0] cpu_d_address;
+  output  [ 13: 0] cpu_d_address;
   output           cpu_d_read;
   output  [ 31: 0] cpu_d_readdata;
   output           cpu_d_wait;
@@ -1319,7 +1319,7 @@ module blockram_system_v2_nios2f_cpu_nios2_oci_dbrk (
   input            A_ctrl_st;
   input            A_en;
   input   [ 31: 0] A_ld_data;
-  input   [ 12: 0] A_mem_baddr;
+  input   [ 13: 0] A_mem_baddr;
   input   [ 31: 0] A_st_data;
   input            A_valid;
   input            clk;
@@ -1327,7 +1327,7 @@ module blockram_system_v2_nios2f_cpu_nios2_oci_dbrk (
   input            reset_n;
 
 
-wire    [ 12: 0] cpu_d_address;
+wire    [ 13: 0] cpu_d_address;
 wire             cpu_d_read;
 wire    [ 31: 0] cpu_d_readdata;
 wire             cpu_d_wait;
@@ -1741,7 +1741,7 @@ module blockram_system_v2_nios2f_cpu_nios2_oci_dtrace (
   output  [ 35: 0] atm;
   output  [ 35: 0] dtm;
   input            clk;
-  input   [ 12: 0] cpu_d_address;
+  input   [ 13: 0] cpu_d_address;
   input            cpu_d_read;
   input   [ 31: 0] cpu_d_readdata;
   input            cpu_d_wait;
@@ -2879,7 +2879,7 @@ defparam blockram_system_v2_nios2f_cpu_ociram_sp_ram.lpm_file = "blockram_system
 `endif
 //synthesis translate_on
   assign cfgrom_readdata = (MonAReg[4 : 2] == 3'd0)? 32'h00000020 :
-    (MonAReg[4 : 2] == 3'd1)? 32'h00000d0d :
+    (MonAReg[4 : 2] == 3'd1)? 32'h00000e0d :
     (MonAReg[4 : 2] == 3'd2)? 32'h00440000 :
     (MonAReg[4 : 2] == 3'd3)? 32'h00000100 :
     (MonAReg[4 : 2] == 3'd4)? 32'h20000b0c :
@@ -2972,7 +2972,7 @@ module blockram_system_v2_nios2f_cpu_nios2_oci (
   input            A_exc_active_no_crst;
   input   [ 31: 0] A_exc_addr;
   input   [ 31: 0] A_ld_data;
-  input   [ 12: 0] A_mem_baddr;
+  input   [ 13: 0] A_mem_baddr;
   input            A_op_beq;
   input            A_op_bge;
   input            A_op_bgeu;
@@ -3014,7 +3014,7 @@ reg     [  8: 0] address;
 wire    [ 35: 0] atm;
 wire    [ 31: 0] break_readreg;
 reg     [  3: 0] byteenable;
-wire    [ 12: 0] cpu_d_address;
+wire    [ 13: 0] cpu_d_address;
 wire             cpu_d_read;
 wire    [ 31: 0] cpu_d_readdata;
 wire             cpu_d_wait;
@@ -3465,6 +3465,7 @@ module blockram_system_v2_nios2f_cpu (
 
                                        // outputs:
                                         d_address,
+                                        d_burstcount,
                                         d_byteenable,
                                         d_read,
                                         d_write,
@@ -3475,11 +3476,13 @@ module blockram_system_v2_nios2f_cpu (
                                         debug_reset_request,
                                         dummy_ci_port,
                                         i_address,
+                                        i_burstcount,
                                         i_read
                                      )
 ;
 
-  output  [ 12: 0] d_address;
+  output  [ 13: 0] d_address;
+  output  [  3: 0] d_burstcount;
   output  [  3: 0] d_byteenable;
   output           d_read;
   output           d_write;
@@ -3490,6 +3493,7 @@ module blockram_system_v2_nios2f_cpu (
   output           debug_reset_request;
   output           dummy_ci_port;
   output  [ 12: 0] i_address;
+  output  [  3: 0] i_burstcount;
   output           i_read;
   input            clk;
   input   [ 31: 0] d_readdata;
@@ -3715,14 +3719,14 @@ wire    [  7: 0] A_data_ram_ld_byte0_data;
 wire    [  7: 0] A_data_ram_ld_byte1_data;
 wire    [  7: 0] A_data_ram_ld_byte2_data;
 wire    [  7: 0] A_data_ram_ld_byte3_data;
-reg     [  1: 0] A_dc_actual_tag;
+reg     [  2: 0] A_dc_actual_tag;
 wire             A_dc_data_dcache_management_wr_en;
 wire             A_dc_data_st_wr_en;
 wire             A_dc_dc_addr_wb_inv_done_nxt;
 wire             A_dc_dc_addr_wb_inv_want_xfer;
 reg              A_dc_dcache_management_done;
 wire             A_dc_dcache_management_done_nxt;
-wire    [  1: 0] A_dc_desired_tag;
+wire    [  2: 0] A_dc_desired_tag;
 reg              A_dc_dirty;
 reg              A_dc_fill_active;
 wire             A_dc_fill_active_nxt;
@@ -3744,11 +3748,8 @@ wire    [ 31: 0] A_dc_fill_wr_data;
 reg              A_dc_hit;
 wire             A_dc_index_wb_inv_done_nxt;
 wire             A_dc_index_wb_inv_want_xfer;
-reg     [  3: 0] A_dc_rd_addr_cnt;
-wire    [  3: 0] A_dc_rd_addr_cnt_nxt;
 reg     [  3: 0] A_dc_rd_data_cnt;
 wire    [  3: 0] A_dc_rd_data_cnt_nxt;
-wire             A_dc_rd_last_driven;
 wire             A_dc_rd_last_transfer;
 reg              A_dc_rd_last_transfer_d1;
 reg     [ 31: 0] A_dc_st_data;
@@ -3768,7 +3769,7 @@ reg              A_dc_wb_rd_data_first;
 wire             A_dc_wb_rd_data_first_nxt;
 reg              A_dc_wb_rd_data_starting;
 wire             A_dc_wb_rd_en;
-reg     [  1: 0] A_dc_wb_tag;
+reg     [  2: 0] A_dc_wb_tag;
 wire             A_dc_wb_update_av_writedata;
 reg              A_dc_wb_wr_active;
 wire             A_dc_wb_wr_active_nxt;
@@ -3820,7 +3821,7 @@ reg              A_exc_ext_intr;
 wire             A_exc_ext_intr_active;
 reg              A_exc_hbreak_pri1;
 wire             A_exc_hbreak_pri1_nxt;
-wire    [ 12: 0] A_exc_highest_pri_baddr;
+wire    [ 13: 0] A_exc_highest_pri_baddr;
 wire    [  4: 0] A_exc_highest_pri_cause_code;
 wire    [ 31: 0] A_exc_highest_pri_exc_id;
 reg              A_exc_illegal_inst_pri15;
@@ -3869,20 +3870,20 @@ wire    [ 31: 0] A_ld_data;
 wire             A_mem16;
 wire             A_mem32;
 wire             A_mem8;
-reg     [ 12: 0] A_mem_baddr;
+reg     [ 13: 0] A_mem_baddr;
 wire    [  1: 0] A_mem_baddr_byte_field;
 wire    [  5: 0] A_mem_baddr_line_field;
 wire    [  8: 0] A_mem_baddr_line_offset_field;
 wire    [  2: 0] A_mem_baddr_offset_field;
-wire    [  1: 0] A_mem_baddr_tag_field;
+wire    [  2: 0] A_mem_baddr_tag_field;
 wire             A_mem_bypass_pending;
 reg     [  3: 0] A_mem_byte_en;
 reg              A_mem_stall;
 wire             A_mem_stall_nxt;
 wire             A_mem_stall_start_nxt;
 wire             A_mem_stall_stop_nxt;
-wire    [ 10: 0] A_mem_waddr;
-wire    [ 10: 0] A_mem_waddr_phy;
+wire    [ 11: 0] A_mem_waddr;
+wire    [ 11: 0] A_mem_waddr_phy;
 reg     [ 15: 0] A_mul_cell_p1;
 reg     [ 31: 0] A_mul_cell_p3;
 wire    [ 31: 0] A_mul_result;
@@ -4558,13 +4559,13 @@ wire             E_lt;
 wire             E_mem16;
 wire             E_mem32;
 wire             E_mem8;
-wire    [ 12: 0] E_mem_baddr;
+wire    [ 13: 0] E_mem_baddr;
 wire    [  1: 0] E_mem_baddr_byte_field;
 wire             E_mem_baddr_corrupt;
 wire    [  5: 0] E_mem_baddr_line_field;
 wire    [  8: 0] E_mem_baddr_line_offset_field;
 wire    [  2: 0] E_mem_baddr_offset_field;
-wire    [  1: 0] E_mem_baddr_tag_field;
+wire    [  2: 0] E_mem_baddr_tag_field;
 wire             E_mem_bypass_non_io;
 wire    [  3: 0] E_mem_byte_en;
 wire             E_oci_sync_hbreak_req;
@@ -5147,16 +5148,16 @@ wire             M_ctrl_wrctl_inst_nxt;
 wire             M_data_ram_ld_align_sign_bit;
 wire    [  1: 0] M_data_ram_ld_align_sign_bit_16;
 reg              M_data_ram_ld_align_sign_bit_16_hi;
-wire    [  1: 0] M_dc_actual_tag;
+wire    [  2: 0] M_dc_actual_tag;
 wire             M_dc_bypass_or_dcache_management;
-wire    [  1: 0] M_dc_desired_tag;
+wire    [  2: 0] M_dc_desired_tag;
 wire             M_dc_dirty;
 wire             M_dc_dirty_raw;
 wire             M_dc_hit;
 wire             M_dc_raw_hazard;
 wire    [ 31: 0] M_dc_rd_data;
 wire    [ 31: 0] M_dc_st_data;
-wire    [  3: 0] M_dc_tag_entry;
+wire    [  4: 0] M_dc_tag_entry;
 wire             M_dc_tag_match;
 wire             M_dc_valid;
 wire             M_dc_want_fill;
@@ -5211,16 +5212,16 @@ wire             M_ld_align_sh8;
 wire             M_mem16;
 wire             M_mem32;
 wire             M_mem8;
-reg     [ 12: 0] M_mem_baddr;
+reg     [ 13: 0] M_mem_baddr;
 wire    [  1: 0] M_mem_baddr_byte_field;
 reg              M_mem_baddr_corrupt;
 wire    [  5: 0] M_mem_baddr_line_field;
 wire    [  8: 0] M_mem_baddr_line_offset_field;
 wire    [  2: 0] M_mem_baddr_offset_field;
-wire    [  1: 0] M_mem_baddr_tag_field;
+wire    [  2: 0] M_mem_baddr_tag_field;
 reg     [  3: 0] M_mem_byte_en;
-wire    [ 10: 0] M_mem_waddr;
-wire    [ 10: 0] M_mem_waddr_phy;
+wire    [ 11: 0] M_mem_waddr;
+wire    [ 11: 0] M_mem_waddr_phy;
 wire    [ 31: 0] M_mul_cell_p1;
 wire    [ 31: 0] M_mul_cell_p2;
 wire    [ 31: 0] M_mul_cell_p3;
@@ -5406,8 +5407,8 @@ wire    [ 71: 0] M_vinst;
 wire             M_wr_dst_reg;
 reg              M_wr_dst_reg_from_E;
 wire    [ 31: 0] W_badaddr_reg;
-reg     [ 12: 0] W_badaddr_reg_baddr;
-wire    [ 12: 0] W_badaddr_reg_baddr_nxt;
+reg     [ 13: 0] W_badaddr_reg_baddr;
+wire    [ 13: 0] W_badaddr_reg_baddr_nxt;
 wire             W_badaddr_reg_baddr_wr_en;
 reg     [ 12: 0] W_br_taken_baddr;
 wire    [ 31: 0] W_bstatus_reg;
@@ -5637,14 +5638,14 @@ wire    [  5: 0] W_iw_opx;
 wire             W_mem16;
 wire             W_mem32;
 wire             W_mem8;
-reg     [ 12: 0] W_mem_baddr;
+reg     [ 13: 0] W_mem_baddr;
 wire    [  1: 0] W_mem_baddr_byte_field;
 wire    [  5: 0] W_mem_baddr_line_field;
 wire    [  8: 0] W_mem_baddr_line_offset_field;
 wire    [  2: 0] W_mem_baddr_offset_field;
-wire    [  1: 0] W_mem_baddr_tag_field;
+wire    [  2: 0] W_mem_baddr_tag_field;
 reg     [  3: 0] W_mem_byte_en;
-wire    [ 10: 0] W_mem_waddr_phy;
+wire    [ 11: 0] W_mem_waddr_phy;
 wire             W_op_add;
 wire             W_op_addi;
 wire             W_op_and;
@@ -5786,19 +5787,19 @@ reg              W_valid_from_M;
 wire    [ 71: 0] W_vinst;
 reg     [ 31: 0] W_wr_data;
 reg              W_wr_dst_reg;
-wire             av_addr_accepted;
-wire             av_rd_addr_accepted;
 wire             av_wr_data_transfer;
 reg              clr_break_line;
-wire    [ 12: 0] d_address;
+wire    [ 13: 0] d_address;
 reg     [  1: 0] d_address_byte_field;
 wire    [  1: 0] d_address_byte_field_nxt;
 reg     [  5: 0] d_address_line_field;
 wire    [  5: 0] d_address_line_field_nxt;
 reg     [  2: 0] d_address_offset_field;
 wire    [  2: 0] d_address_offset_field_nxt;
-reg     [  1: 0] d_address_tag_field;
-wire    [  1: 0] d_address_tag_field_nxt;
+reg     [  2: 0] d_address_tag_field;
+wire    [  2: 0] d_address_tag_field_nxt;
+reg     [  3: 0] d_burstcount;
+wire    [  3: 0] d_burstcount_nxt;
 reg     [  3: 0] d_byteenable;
 wire    [  3: 0] d_byteenable_nxt;
 reg              d_read;
@@ -5822,9 +5823,9 @@ wire             dc_line_dirty_on;
 wire             dc_line_valid_off;
 wire             dc_line_valid_on;
 wire    [  5: 0] dc_tag_rd_port_addr;
-wire    [  3: 0] dc_tag_rd_port_data;
+wire    [  4: 0] dc_tag_rd_port_data;
 wire    [  5: 0] dc_tag_wr_port_addr;
-wire    [  3: 0] dc_tag_wr_port_data;
+wire    [  4: 0] dc_tag_wr_port_data;
 wire             dc_tag_wr_port_en;
 wire    [ 31: 0] dc_wb_rd_data;
 wire    [  2: 0] dc_wb_rd_port_addr;
@@ -5842,6 +5843,7 @@ wire             dummy_ci_port;
 wire             hbreak_enabled;
 wire             hbreak_req;
 wire    [ 12: 0] i_address;
+wire    [  3: 0] i_burstcount;
 reg              i_read;
 wire             i_read_nxt;
 reg     [ 31: 0] i_readdata_d1;
@@ -5850,11 +5852,6 @@ wire             ic_data_rden;
 wire             ic_data_wren;
 reg              ic_fill_active;
 wire             ic_fill_active_nxt;
-reg     [  3: 0] ic_fill_ap_cnt;
-wire    [  3: 0] ic_fill_ap_cnt_nxt;
-wire             ic_fill_ap_last_word;
-reg     [  2: 0] ic_fill_ap_offset;
-wire    [  2: 0] ic_fill_ap_offset_nxt;
 wire             ic_fill_done;
 wire             ic_fill_dp_last_word;
 reg     [  2: 0] ic_fill_dp_offset;
@@ -5864,7 +5861,6 @@ reg     [  2: 0] ic_fill_initial_offset;
 reg     [  6: 0] ic_fill_line;
 reg              ic_fill_prevent_refill;
 wire             ic_fill_prevent_refill_nxt;
-wire             ic_fill_req_accepted;
 reg              ic_fill_tag;
 wire    [  7: 0] ic_fill_valid_bit_new;
 reg     [  7: 0] ic_fill_valid_bits;
@@ -6969,7 +6965,7 @@ blockram_system_v2_nios2f_cpu_ic_data_module blockram_system_v2_nios2f_cpu_ic_da
     end
 
 
-  assign ic_tag_wraddress_nxt = (clr_break_line)? 1 :
+  assign ic_tag_wraddress_nxt = (clr_break_line)? 65 :
     (A_exc_crst_active)? 0 :
     ((((A_ctrl_invalidate_i & A_valid) | A_exc_crst_active)))? (A_inst_result[11 : 5]) :
     (D_ic_fill_starting)? D_pc_line_field :
@@ -7055,41 +7051,13 @@ defparam blockram_system_v2_nios2f_cpu_ic_tag.lpm_file = "blockram_system_v2_nio
     ic_fill_initial_offset : 
     (ic_fill_dp_offset + 1);
 
-  assign ic_fill_ap_offset_nxt = ic_fill_req_accepted ? (ic_fill_ap_offset + 1) :
-    D_ic_fill_starting ?  D_pc_offset_field : ic_fill_ap_offset;
-
-  assign ic_fill_ap_cnt_nxt = ic_fill_req_accepted ? (ic_fill_ap_cnt + 1) :
-    D_ic_fill_starting   ? 1 :
-    ic_fill_ap_cnt;
-
-  assign ic_fill_ap_last_word = ic_fill_ap_cnt[3];
-  assign ic_fill_req_accepted = i_read & ~i_waitrequest;
-  assign i_read_nxt = D_ic_fill_starting | 
-    (i_read & (i_waitrequest | (~ic_fill_ap_last_word & ic_fill_active)));
-
+  assign i_read_nxt = D_ic_fill_starting | (i_read & i_waitrequest);
   assign i_address = {ic_fill_tag, 
     ic_fill_line[6 : 0],
-    ic_fill_ap_offset, 
+    ic_fill_initial_offset, 
     2'b00};
 
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          ic_fill_ap_offset <= 0;
-      else 
-        ic_fill_ap_offset <= ic_fill_ap_offset_nxt;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          ic_fill_ap_cnt <= 0;
-      else 
-        ic_fill_ap_cnt <= ic_fill_ap_cnt_nxt;
-    end
-
-
+  assign i_burstcount = 8;
   assign ic_fill_valid_bit_new = (ic_fill_dp_offset_nxt == 3'd0)? 8'b00000001 :
     (ic_fill_dp_offset_nxt == 3'd1)? 8'b00000010 :
     (ic_fill_dp_offset_nxt == 3'd2)? 8'b00000100 :
@@ -7674,8 +7642,8 @@ defparam blockram_system_v2_nios2f_cpu_bht.lpm_file = "blockram_system_v2_nios2f
     end
 
 
-  assign M_mem_waddr = M_mem_baddr[12 : 2];
-  assign M_mem_waddr_phy = M_mem_baddr[12 : 2];
+  assign M_mem_waddr = M_mem_baddr[13 : 2];
+  assign M_mem_waddr_phy = M_mem_baddr[13 : 2];
   assign M_ram_rd_data = M_dc_rd_data;
   assign M_fwd_reg_data = M_alu_result;
   assign M_rdctl_data_latest = M_rdctl_data;
@@ -7729,7 +7697,7 @@ defparam blockram_system_v2_nios2f_cpu_bht.lpm_file = "blockram_system_v2_nios2f
     M_valid_from_E & ~A_pipe_flush) | A_refetch_required;
 
   assign A_pipe_flush_waddr_nxt = (A_refetch_required)? A_pc :
-    (M_exc_break)? 1032 :
+    (M_exc_break)? 1544 :
     (M_exc_any)? 8 :
     (M_refetch)? M_pc :
     (M_ctrl_jmp_indirect)? M_target_pcb[12 : 2] :
@@ -7873,8 +7841,8 @@ defparam blockram_system_v2_nios2f_cpu_bht.lpm_file = "blockram_system_v2_nios2f
     end
 
 
-  assign A_mem_waddr = A_mem_baddr[12 : 2];
-  assign A_mem_waddr_phy = A_mem_baddr[12 : 2];
+  assign A_mem_waddr = A_mem_baddr[13 : 2];
+  assign A_mem_waddr_phy = A_mem_baddr[13 : 2];
   assign A_br_jmp_target_pcb_nxt = M_ctrl_br ? 
     ({M_pc_plus_one, 2'b00} + {{16 {M_iw_imm16[15]}}, M_iw_imm16}) :
     M_target_pcb;
@@ -8113,7 +8081,7 @@ defparam blockram_system_v2_nios2f_cpu_bht.lpm_file = "blockram_system_v2_nios2f
 
 
   assign W_exc_handler_mode = 0;
-  assign W_mem_waddr_phy = W_mem_baddr[12 : 2];
+  assign W_mem_waddr_phy = W_mem_baddr[13 : 2];
   assign F_iw_a_rf = D_en ? F_iw_a : D_iw_a;
   assign F_iw_b_rf = D_en ? F_iw_b : D_iw_b;
   assign F_rf_rd_addr_a = F_iw_a_rf;
@@ -8192,7 +8160,7 @@ defparam blockram_system_v2_nios2f_cpu_register_bank_b.lpm_file = "blockram_syst
     E_arith_src1 + E_arith_src2;
 
   assign E_mem_baddr_corrupt = E_src1_corrupt;
-  assign E_mem_baddr = E_arith_result[12 : 0];
+  assign E_mem_baddr = E_arith_result[13 : 0];
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
@@ -9005,22 +8973,22 @@ defparam blockram_system_v2_nios2f_cpu_register_bank_b.lpm_file = "blockram_syst
     end
 
 
-  assign E_mem_baddr_tag_field = E_mem_baddr[12 : 11];
+  assign E_mem_baddr_tag_field = E_mem_baddr[13 : 11];
   assign E_mem_baddr_line_field = E_mem_baddr[10 : 5];
   assign E_mem_baddr_offset_field = E_mem_baddr[4 : 2];
   assign E_mem_baddr_line_offset_field = E_mem_baddr[10 : 2];
   assign E_mem_baddr_byte_field = E_mem_baddr[1 : 0];
-  assign M_mem_baddr_tag_field = M_mem_baddr[12 : 11];
+  assign M_mem_baddr_tag_field = M_mem_baddr[13 : 11];
   assign M_mem_baddr_line_field = M_mem_baddr[10 : 5];
   assign M_mem_baddr_offset_field = M_mem_baddr[4 : 2];
   assign M_mem_baddr_line_offset_field = M_mem_baddr[10 : 2];
   assign M_mem_baddr_byte_field = M_mem_baddr[1 : 0];
-  assign A_mem_baddr_tag_field = A_mem_baddr[12 : 11];
+  assign A_mem_baddr_tag_field = A_mem_baddr[13 : 11];
   assign A_mem_baddr_line_field = A_mem_baddr[10 : 5];
   assign A_mem_baddr_offset_field = A_mem_baddr[4 : 2];
   assign A_mem_baddr_line_offset_field = A_mem_baddr[10 : 2];
   assign A_mem_baddr_byte_field = A_mem_baddr[1 : 0];
-  assign W_mem_baddr_tag_field = W_mem_baddr[12 : 11];
+  assign W_mem_baddr_tag_field = W_mem_baddr[13 : 11];
   assign W_mem_baddr_line_field = W_mem_baddr[10 : 5];
   assign W_mem_baddr_offset_field = W_mem_baddr[4 : 2];
   assign W_mem_baddr_line_offset_field = W_mem_baddr[10 : 2];
@@ -9038,9 +9006,9 @@ defparam blockram_system_v2_nios2f_cpu_register_bank_b.lpm_file = "blockram_syst
   assign dc_line_valid_on = 1'b1;
   assign dc_line_valid_off = 1'b0;
   assign M_dc_tag_entry = dc_tag_rd_port_data;
-  assign M_dc_dirty_raw = M_dc_tag_entry[3];
-  assign M_dc_valid = M_dc_tag_entry[2];
-  assign M_dc_actual_tag = M_dc_tag_entry[1 : 0];
+  assign M_dc_dirty_raw = M_dc_tag_entry[4];
+  assign M_dc_valid = M_dc_tag_entry[3];
+  assign M_dc_actual_tag = M_dc_tag_entry[2 : 0];
   assign dc_tag_rd_port_addr = M_en ? E_mem_baddr_line_field : M_mem_baddr_line_field;
 //blockram_system_v2_nios2f_cpu_dc_tag, which is an nios_sdp_ram
 blockram_system_v2_nios2f_cpu_dc_tag_module blockram_system_v2_nios2f_cpu_dc_tag
@@ -9060,9 +9028,9 @@ defparam blockram_system_v2_nios2f_cpu_dc_tag.lpm_file = "blockram_system_v2_nio
 defparam blockram_system_v2_nios2f_cpu_dc_tag.lpm_file = "blockram_system_v2_nios2f_cpu_dc_tag_ram.hex";
 `endif
 //synthesis translate_on
-  assign M_dc_desired_tag = M_mem_baddr[12 : 11];
+  assign M_dc_desired_tag = M_mem_baddr[13 : 11];
   assign M_dc_tag_match = M_dc_desired_tag == M_dc_actual_tag;
-  assign A_dc_desired_tag = A_mem_baddr[12 : 11];
+  assign A_dc_desired_tag = A_mem_baddr[13 : 11];
   assign M_dc_hit = M_dc_tag_match & M_dc_valid;
   always @(posedge clk or negedge reset_n)
     begin
@@ -9525,32 +9493,25 @@ blockram_system_v2_nios2f_cpu_dc_victim_module blockram_system_v2_nios2f_cpu_dc_
 
   assign A_dc_wr_last_driven = A_dc_wr_data_cnt[3];
   assign A_dc_wr_last_transfer = A_dc_wr_last_driven & d_write & ~d_waitrequest;
-  assign av_addr_accepted = (d_read | d_write) & ~d_waitrequest;
-  assign d_address_offset_field_nxt = av_addr_accepted ? (d_address_offset_field + 1) :
-    (A_dc_wb_wr_starting | A_dc_fill_starting) ? 0 :
-    (A_dc_wb_wr_active | A_dc_fill_active) ? d_address_offset_field :
-    A_mem_bypass_pending                ? A_mem_baddr_offset_field :
+  assign d_burstcount_nxt = (A_dc_wb_wr_want_dmaster | A_dc_fill_want_dmaster) ? 
+    8 :
+    1;
+
+  assign d_address_offset_field_nxt = (A_dc_wb_wr_want_dmaster | A_dc_fill_want_dmaster) ? 0 : 
+    A_mem_bypass_pending                  ? A_mem_baddr_offset_field :
     M_mem_baddr_offset_field;
 
-  assign d_read_nxt = A_dc_fill_starting |
-    (M_ctrl_ld_bypass & M_valid & A_en & ~A_dc_wb_active) | 
-    (A_ld_bypass_delayed & ~A_ld_bypass_delayed_started & 
-    ~A_dc_wb_active) |
-    (d_read & (d_waitrequest | ~A_dc_rd_last_driven));
+  assign d_read_nxt = A_dc_fill_starting | 
+    (M_ctrl_ld_bypass & M_valid & A_en & ~A_dc_wb_active) |
+    (A_ld_bypass_delayed & ~A_ld_bypass_delayed_started & ~A_dc_wb_active & ~A_refetch_required) |
+    (d_read & d_waitrequest);
 
-  assign av_rd_addr_accepted = d_read & ~d_waitrequest;
-  assign A_dc_rd_addr_cnt_nxt = av_rd_addr_accepted ? (A_dc_rd_addr_cnt + 1) :
-    A_dc_fill_starting  ? 1 :
-    A_dc_fill_active    ? A_dc_rd_addr_cnt :
-    8;
-
-  assign A_dc_rd_last_driven = A_dc_rd_addr_cnt[3];
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          A_dc_rd_addr_cnt <= 0;
+          d_burstcount <= 0;
       else 
-        A_dc_rd_addr_cnt <= A_dc_rd_addr_cnt_nxt;
+        d_burstcount <= d_burstcount_nxt;
     end
 
 
@@ -9928,7 +9889,7 @@ blockram_system_v2_nios2f_cpu_dc_victim_module blockram_system_v2_nios2f_cpu_dc_
   assign W_ipending_reg = { 32'd0 };
   assign W_cpuid_reg = { 31'd0, 1'd0 };
   assign W_exception_reg = { 25'd0, W_exception_reg_cause, 2'd0 };
-  assign W_badaddr_reg = { 19'd0, W_badaddr_reg_baddr };
+  assign W_badaddr_reg = { 18'd0, W_badaddr_reg_baddr };
   assign W_cdsr_reg = { W_cdsr_reg_status };
   assign D_control_reg_rddata_muxed = (D_iw_control_regnum == 5'd0)? W_status_reg :
     (D_iw_control_regnum == 5'd1)? W_estatus_reg :

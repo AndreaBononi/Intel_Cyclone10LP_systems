@@ -155,7 +155,7 @@
   <parameter name="enPRInitMode" value="false" />
   <parameter name="enableDiffWidth" value="false" />
   <parameter name="initMemContent" value="true" />
-  <parameter name="initializationFileName">/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex</parameter>
+  <parameter name="initializationFileName">/home/andrea/Documents/Tesi_287628/287628/basic_system/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex</parameter>
   <parameter name="instanceID" value="NONE" />
   <parameter name="memorySize" value="16384" />
   <parameter name="readDuringWriteMode" value="DONT_CARE" />

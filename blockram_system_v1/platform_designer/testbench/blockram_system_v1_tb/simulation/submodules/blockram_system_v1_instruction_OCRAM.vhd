@@ -70,8 +70,8 @@ GENERIC (
     signal q_a : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
         signal wren_a : IN STD_LOGIC;
         signal address_a : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-        signal data_a : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
         signal clock0 : IN STD_LOGIC;
+        signal data_a : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
         signal clocken0 : IN STD_LOGIC;
         signal byteena_a : IN STD_LOGIC_VECTOR (3 DOWNTO 0)
       );

@@ -67,7 +67,7 @@ architecture behavior of top_level_entity is
 	end component; -----------------------------------------------------------------------------------
 
 	-- COMPONENT: Platform Designer System -----------------------------------------------------------
-	component blockram_system_v1
+	component blockram_system_v2
 	port 
 	(
 		clk_clk           : in  std_logic := '0';

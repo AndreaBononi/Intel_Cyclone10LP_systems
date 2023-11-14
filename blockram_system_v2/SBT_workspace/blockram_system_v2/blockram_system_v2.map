@@ -1,0 +1,488 @@
+Archive member included to satisfy reference by file (symbol)
+
+../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+                              ../blockram_system_v2_bsp//obj/HAL/src/crt0.o (alt_load)
+../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+                              ../blockram_system_v2_bsp//obj/HAL/src/crt0.o (alt_main)
+../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+                              ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o) (alt_irq_init)
+../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                              ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+                              ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o) (alt_icache_flush)
+/home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+                              ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o) (memcpy)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x0000000000000000 0x0000000000000020
+instruction_OCROM 0x0000000000000020 0x0000000000000fe0
+data_OCRAM       0x0000000000002000 0x0000000000000400
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/blockram_system_v2_main.o
+LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libstdc++.a
+LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libm.a
+LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/libgcc.a
+START GROUP
+LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a
+LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/libgcc.a
+LOAD ../blockram_system_v2_bsp//libhal_bsp.a
+LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libm.a
+END GROUP
+LOAD /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/libgcc.a
+                0x0000000000000000                __alt_mem_instruction_OCROM = 0x0
+                0x0000000000002000                __alt_mem_data_OCRAM = 0x2000
+
+.entry          0x0000000000000000       0x20
+ *(.entry)
+ .entry         0x0000000000000000       0x20 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+                0x0000000000000000                __reset
+                0x000000000000001c                _exit
+
+.exceptions     0x0000000000000020        0x0
+                0x0000000000000020                PROVIDE (__ram_exceptions_start = ABSOLUTE (.))
+                0x0000000000000020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ *(.exceptions.notirq.label)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ *(.exceptions.exit.label)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ *(.exceptions)
+                0x0000000000000020                PROVIDE (__ram_exceptions_end = ABSOLUTE (.))
+                0x0000000000000020                PROVIDE (__flash_exceptions_start = LOADADDR (.exceptions))
+
+.text           0x0000000000000020      0x1dc
+                [!provide]                        PROVIDE (stext = ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000000020       0x4c ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+                0x0000000000000020                _start
+ .text          0x000000000000006c        0x0 obj/default/blockram_system_v2_main.o
+ .text.startup  0x000000000000006c        0xc obj/default/blockram_system_v2_main.o
+                0x000000000000006c                main
+ .text          0x0000000000000078       0x84 ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+                0x0000000000000078                alt_load
+ .text          0x00000000000000fc       0x2c ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+                0x00000000000000fc                alt_main
+ .text          0x0000000000000128       0x24 ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000128                alt_irq_init
+                0x0000000000000148                alt_sys_init
+ .text          0x000000000000014c       0x18 ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000000000000014c                alt_dcache_flush_all
+ .text          0x0000000000000164        0xc ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000000164                alt_icache_flush_all
+ .text          0x0000000000000170        0x8 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000000170                altera_nios2_gen2_irq_init
+ .text          0x0000000000000178       0x5c ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+                0x0000000000000178                alt_icache_flush
+ .text          0x00000000000001d4        0x0 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+ .text.memcpy   0x00000000000001d4       0x28 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+                0x00000000000001d4                memcpy
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext = ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x00000000000001fc                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start = ABSOLUTE (.))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start = ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                [!provide]                        PROVIDE (__CTOR_LIST__ = ABSOLUTE (.))
+ *(.ctors)
+ *(SORT_BY_NAME(.ctors.*))
+                [!provide]                        PROVIDE (__CTOR_END__ = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__DTOR_LIST__ = ABSOLUTE (.))
+ *(.dtors)
+ *(SORT_BY_NAME(.dtors.*))
+                [!provide]                        PROVIDE (__DTOR_END__ = ABSOLUTE (.))
+ *(.jcr)
+                0x00000000000001fc                . = ALIGN (0x4)
+
+.rodata         0x0000000000002000        0x0 load address 0x00000000000001fc
+                0x0000000000002000                PROVIDE (__ram_rodata_start = ABSOLUTE (.))
+                0x0000000000002000                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x0000000000002000                . = ALIGN (0x4)
+                0x0000000000002000                PROVIDE (__ram_rodata_end = ABSOLUTE (.))
+                0x00000000000001fc                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
+
+.rwdata         0x0000000000002000        0x0 load address 0x00000000000001fc
+                0x0000000000002000                PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
+                0x0000000000002000                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000002000        0x0 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000000002000        0x0 obj/default/blockram_system_v2_main.o
+ .data          0x0000000000002000        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x0000000000002000        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x0000000000002000        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000002000        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000002000        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000002000        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x0000000000002000        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .data          0x0000000000002000        0x0 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+                0x000000000000a000                _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp = _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x0000000000002000                . = ALIGN (0x4)
+                0x0000000000002000                _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata = ABSOLUTE (.))
+                0x0000000000002000                PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
+                0x00000000000001fc                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
+
+.bss            0x0000000000002000        0xc load address 0x00000000000001fc
+                0x0000000000002000                __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start = ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0000000000002000        0xc ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000002000                alt_envp
+                0x0000000000002004                alt_argv
+                0x0000000000002008                alt_argc
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end = ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000000200c        0x0 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+ .bss           0x000000000000200c        0x0 obj/default/blockram_system_v2_main.o
+ .bss           0x000000000000200c        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x000000000000200c        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x000000000000200c        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x000000000000200c        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x000000000000200c        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x000000000000200c        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x000000000000200c        0x0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .bss           0x000000000000200c        0x0 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+ *(COMMON)
+                0x000000000000200c                . = ALIGN (0x4)
+                0x000000000000200c                __bss_end = ABSOLUTE (.)
+
+.instruction_OCROM
+                0x00000000000001fc        0x0
+                [!provide]                        PROVIDE (_alt_partition_instruction_OCROM_start = ABSOLUTE (.))
+ *(.instruction_OCROM .instruction_OCROM. instruction_OCROM.*)
+                0x00000000000001fc                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_instruction_OCROM_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_alt_partition_instruction_OCROM_load_addr = LOADADDR (.instruction_OCROM))
+
+.data_OCRAM     0x000000000000200c        0x0 load address 0x00000000000001fc
+                [!provide]                        PROVIDE (_alt_partition_data_OCRAM_start = ABSOLUTE (.))
+ *(.data_OCRAM .data_OCRAM. data_OCRAM.*)
+                0x000000000000200c                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_data_OCRAM_end = ABSOLUTE (.))
+                0x000000000000200c                _end = ABSOLUTE (.)
+                0x000000000000200c                end = ABSOLUTE (.)
+                0x000000000000200c                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_data_OCRAM_load_addr = LOADADDR (.data_OCRAM))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x2d
+ *(.comment)
+ .comment       0x0000000000000000       0x2d obj/default/blockram_system_v2_main.o
+                                         0x2e (size before relaxing)
+ .comment       0x000000000000002d       0x2e ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .comment       0x000000000000002d       0x2e ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+ .comment       0x000000000000002d       0x2e ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .comment       0x000000000000002d       0x2e ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x000000000000002d       0x2e ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x000000000000002d       0x2e ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x000000000000002d       0x2e ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .comment       0x000000000000002d       0x2e /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x148
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x20 obj/default/blockram_system_v2_main.o
+ .debug_aranges
+                0x0000000000000048       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x0000000000000068       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x0000000000000088       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000000000000a8       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x00000000000000c8       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x00000000000000e8       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_aranges
+                0x0000000000000108       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_aranges
+                0x0000000000000128       0x20 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x93b
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x22 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000000000000022       0xab obj/default/blockram_system_v2_main.o
+ .debug_info    0x00000000000000cd      0x239 ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000306      0x13e ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000000444       0xee ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000000532       0xa6 ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000000000005d8       0xc9 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00000000000006a1       0x8d ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x000000000000072e       0xec ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_info    0x000000000000081a      0x121 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+
+.debug_abbrev   0x0000000000000000      0x5e3
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012       0x69 obj/default/blockram_system_v2_main.o
+ .debug_abbrev  0x000000000000007b      0x12c ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000001a7       0xeb ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x0000000000000292       0xc3 ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000000000000355       0x60 ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x00000000000003b5       0x8a ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x000000000000043f       0x43 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000000482       0xa0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_abbrev  0x0000000000000522       0xc1 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+
+.debug_line     0x0000000000000000      0x53e
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x72 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000072       0x78 obj/default/blockram_system_v2_main.o
+ .debug_line    0x00000000000000ea       0xd2 ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000000000001bc       0xa2 ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x000000000000025e       0x7f ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000002dd       0x70 ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x000000000000034d       0x67 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00000000000003b4       0x54 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000408       0xaa ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_line    0x00000000000004b2       0x8c /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+
+.debug_frame    0x0000000000000000      0x154
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x20 obj/default/blockram_system_v2_main.o
+ .debug_frame   0x0000000000000020       0x2c ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x000000000000004c       0x2c ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x0000000000000078       0x3c ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000000000000b4       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x00000000000000d4       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000000000000f4       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000114       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_frame   0x0000000000000134       0x20 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+
+.debug_str      0x0000000000000000      0x355
+ *(.debug_str)
+ .debug_str     0x0000000000000000       0x79 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+ .debug_str     0x0000000000000079       0xb8 obj/default/blockram_system_v2_main.o
+                                         0xe4 (size before relaxing)
+ .debug_str     0x0000000000000131      0x11d ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+                                        0x205 (size before relaxing)
+ .debug_str     0x000000000000024e       0x4b ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+                                        0x135 (size before relaxing)
+ .debug_str     0x0000000000000299       0x3e ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+                                        0x13d (size before relaxing)
+ .debug_str     0x00000000000002d7       0xfa ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x00000000000002d7       0x11 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x113 (size before relaxing)
+ .debug_str     0x00000000000002e8      0x100 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x00000000000002e8       0x11 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+                                        0x104 (size before relaxing)
+ .debug_str     0x00000000000002e8       0x6d /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+                                        0x109 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x30
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x30 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+                0x0000000000002400                __alt_data_end = 0x2400
+                0x0000000000002400                PROVIDE (__alt_stack_pointer = __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit = __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start = end)
+                [!provide]                        PROVIDE (__alt_heap_limit = 0x2400)
+OUTPUT(blockram_system_v2.elf elf32-littlenios2)
+LOAD linker stubs
+
+.debug_ranges   0x0000000000000000       0x20
+ .debug_ranges  0x0000000000000000       0x20 ../blockram_system_v2_bsp//obj/HAL/src/crt0.o
+
+.debug_loclists
+                0x0000000000000000      0x1c7
+ .debug_loclists
+                0x0000000000000000       0x17 obj/default/blockram_system_v2_main.o
+ .debug_loclists
+                0x0000000000000017       0x1e ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_loclists
+                0x0000000000000035       0x1c ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_loclists
+                0x0000000000000051       0xaa ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_loclists
+                0x00000000000000fb       0xcc /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+
+.debug_rnglists
+                0x0000000000000000       0x5c
+ .debug_rnglists
+                0x0000000000000000       0x13 obj/default/blockram_system_v2_main.o
+ .debug_rnglists
+                0x0000000000000013       0x23 ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+ .debug_rnglists
+                0x0000000000000036       0x13 ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_rnglists
+                0x0000000000000049       0x13 /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+
+.debug_line_str
+                0x0000000000000000      0x407
+ .debug_line_str
+                0x0000000000000000       0xa0 obj/default/blockram_system_v2_main.o
+                                        0x12b (size before relaxing)
+ .debug_line_str
+                0x00000000000000a0       0xb0 ../blockram_system_v2_bsp//libhal_bsp.a(alt_load.o)
+                                        0x135 (size before relaxing)
+ .debug_line_str
+                0x0000000000000150       0x4a ../blockram_system_v2_bsp//libhal_bsp.a(alt_main.o)
+                                        0x134 (size before relaxing)
+ .debug_line_str
+                0x000000000000019a       0x27 ../blockram_system_v2_bsp//libhal_bsp.a(alt_sys_init.o)
+                                        0x11d (size before relaxing)
+ .debug_line_str
+                0x00000000000001c1       0x1f ../blockram_system_v2_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x113 (size before relaxing)
+ .debug_line_str
+                0x00000000000001e0       0x1f ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x143 (size before relaxing)
+ .debug_line_str
+                0x00000000000001ff       0x20 ../blockram_system_v2_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                        0x116 (size before relaxing)
+ .debug_line_str
+                0x000000000000021f       0x1b ../blockram_system_v2_bsp//libhal_bsp.a(alt_icache_flush.o)
+                                        0x11d (size before relaxing)
+ .debug_line_str
+                0x000000000000023a      0x1cd /home/andrea/intelFPGA_lite/22.1std/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libsmallc.a(lib_a-memcpy.o)
+                                        0x296 (size before relaxing)

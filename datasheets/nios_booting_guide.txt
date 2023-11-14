@@ -2,7 +2,7 @@
 Nios 2 OCRAM booting
 --------------------------------------------------------------------------------------------------------------------------------------
 
-	1)	Open SBT and create the project
+	1)	Open SBT and create the project.
 
 	2)	Modify the "mem_init.mk" file in the BSP directory so that the record length of the hex files matches the memory data port width:
 
@@ -10,15 +10,11 @@ Nios 2 OCRAM booting
 			2b) Add " --record=<myrecord> " in which <myrecord> = memory_data_port_width / 8
 			2c)	Clean the project
 
-	3) 	Build the project so that the .elf file is generated
+	3) 	Build the project so that the .elf file is generated.
 
-	4) 	Right click on the project --> make targets --> build --> select mem_init_generate and click on build to generate the hex file
+	4) 	Right click on the project --> make targets --> build --> select mem_init_generate and click on build to generate the hex file.
 
-	5) 	In order to assign the initialization file to the memory we can proceed in two ways:
+	5) 	In Platform Designer, edit the memory IP adding the hex file as the memory initialization file and re-generate the HDL code.
+			Then, add the meminit.qip file (which is generated alongside the hex file) to the Quartus project and compile it.
 
-			-- A meminit.qip file is generated alongside the hex file, add it to the Quartus project and compile it
-			-- In design complier, edit the memory IP adding the hex file as the memory initialization file
-
---------------------------------------------------------------------------------------------------------------------------------------
-NOTE: in Platform Designer, the "Initialize Memory Content" option of the OCRAM must always be checked
 --------------------------------------------------------------------------------------------------------------------------------------

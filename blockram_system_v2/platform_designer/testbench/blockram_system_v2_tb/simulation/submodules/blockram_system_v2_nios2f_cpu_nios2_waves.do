@@ -4,6 +4,7 @@ add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_waitre
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_address
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_read
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_readdatavalid
+add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_burstcount
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/clk
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/reset_n
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_readdata
@@ -14,6 +15,7 @@ add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_read
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_write
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_writedata
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_readdatavalid
+add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_burstcount
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/irq
 add wave -noupdate -divider {blockram_system_v2_nios2f_cpu: base pipeline}
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/clk
@@ -124,14 +126,12 @@ add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/ic_fill_
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/ic_fill_dp_offset_nxt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/ic_fill_dp_offset_en
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/ic_fill_dp_last_word
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/ic_fill_req_accepted
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/ic_fill_ap_offset
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/ic_fill_ap_last_word
 add wave -noupdate -divider {blockram_system_v2_nios2f_cpu: instruction_master}
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_read
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_address
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_waitrequest
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_readdata_d1
+add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_burstcount
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/i_readdatavalid_d1
 add wave -noupdate -divider {blockram_system_v2_nios2f_cpu: dynamic_brpred_(frontend)}
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/F_bht_ptr_nxt
@@ -473,6 +473,7 @@ add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_addres
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_address_offset_field_nxt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_address_byte_field_nxt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_byteenable_nxt
+add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_burstcount_nxt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_writedata_nxt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_write_nxt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_write
@@ -503,13 +504,10 @@ add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_addres
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_address_offset_field
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_address_byte_field
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_byteenable
+add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_burstcount
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_writedata
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_dc_rd_data_cnt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_dc_wr_data_cnt
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/av_rd_addr_accepted
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_dc_rd_addr_cnt_nxt
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_dc_rd_last_driven
-add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_dc_rd_addr_cnt
 add wave -noupdate -divider {blockram_system_v2_nios2f_cpu: data_master}
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_address
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_read_nxt
@@ -521,6 +519,7 @@ add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_write
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_writedata
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_waitrequest
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_byteenable
+add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/d_burstcount
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_mem_stall_start_nxt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_mem_stall_stop_nxt
 add wave -noupdate -format Logic -radix hexadecimal /NIOS2_INSTANCE_TOP/A_mem_stall_nxt

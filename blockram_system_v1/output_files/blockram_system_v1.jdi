@@ -85,7 +85,7 @@
   <sld_infos>
     <sld_info hpath="blockram_system_v1:blockram_system_v1_inst" name="blockram_system_v1_inst">
       <assignment_values>
-        <assignment_value text="QSYS_NAME blockram_system_v1 HAS_SOPCINFO 1 GENERATION_ID 1699199785"/>
+        <assignment_value text="QSYS_NAME blockram_system_v1 HAS_SOPCINFO 1 GENERATION_ID 1699959935"/>
       </assignment_values>
       <parameters/>
     </sld_info>

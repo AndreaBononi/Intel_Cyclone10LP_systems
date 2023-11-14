@@ -1,5 +1,5 @@
 Fitter report for blockram_system_v1
-Sun Nov  5 17:45:30 2023
+Tue Nov 14 12:08:00 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -73,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Nov  5 17:45:29 2023          ;
+; Fitter Status                      ; Successful - Tue Nov 14 12:08:00 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; blockram_system_v1                             ;
 ; Top-level Entity Name              ; top_level_entity                               ;
@@ -160,12 +160,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.11        ;
+; Average used               ; 1.10        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  11.0%      ;
+;     Processor 2            ;  10.1%      ;
 +----------------------------+-------------+
 
 
@@ -209,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/output_files/blockram_system_v1.pin.
+The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/output_files/blockram_system_v1.pin.
 
 
 +-------------------------------------------------------------------------+
@@ -1030,16 +1030,16 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
 ;0;(00000000010000000000000000110100) (20000064) (4194356) (400034)    ;(00001000010000000000100000010100) (1020004024) (138414100) (8400814)   ;(00001000000000000110100000111010) (1000064072) (134244410) (800683A)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;8;(00000110110000000000000000110100) (660000064) (113246260) (6C00034)    ;(11011110110010010000000000010100) (179389542) (-557252588) (-2-1-3-6-15-15-14-12)   ;(00000110100000000000000000110100) (640000064) (109051956) (6800034)   ;(11010110101010000000000000010100) (-830810458) (-693633004) (-2-9-5-7-15-15-14-12)   ;(00000000100000000000000000110100) (40000064) (8388660) (800034)   ;(00010000100010000000000000010100) (2042000024) (277348372) (10880014)   ;(00000000110000000000000000110100) (60000064) (12582964) (C00034)   ;(00011000110010000000001100010100) (-1232965872) (415761172) (18C80314)   ;
-;16;(00010000110000000000001100100110) (2060001446) (281019174) (10C00326)    ;(00010000000000000000000000010101) (2000000025) (268435477) (10000015)   ;(00010000100000000000000100000100) (2040000404) (276824324) (10800104)   ;(00010000111111111111110100110110) (2077776466) (285211958) (10FFFD36)   ;(00000000000000000000011011000000) (3300) (1728) (6C0)   ;(00000000000000000000111100000000) (7400) (3840) (F00)   ;(00000000001111111111111100000110) (17777406) (4194054) (3FFF06)   ;(00000000100010010000000000110111) (42200067) (8978487) (890037)   ;
-;24;(00010000100000000011111111001100) (2040037714) (276840396) (10803FCC)    ;(00000000100010010000010000110101) (42202065) (8979509) (890435)   ;(00000000001111111111110000000110) (17776006) (4193286) (3FFC06)   ;(11011110111111111111111100000100) (194966922) (-553648380) (-2-10000-15-12)   ;(00000001000000000000000000110100) (100000064) (16777268) (1000034)   ;(00000001010000000000000000110100) (120000064) (20971572) (1400034)   ;(11011111110000000000000000010101) (277189543) (-541065195) (-20-3-15-15-15-14-11)   ;(00100001000010000000000000000100) (-192967292) (554172420) (21080004)   ;
-;32;(00101001010000000101111000000100) (825089708) (692084228) (29405E04)    ;(00100001010000000000010000100110) (-174965250) (557843494) (21400426)   ;(00000001100000000000000000110100) (140000064) (25165876) (1800034)   ;(00110001100010000000000000000100) (1847032708) (830996484) (31880004)   ;(00110001000011011100100000111010) (1808376776) (822986810) (310DC83A)   ;(00000000000000000001010100000000) (12400) (5376) (1500)   ;(00000001000000000000000000110100) (100000064) (16777268) (1000034)   ;(00000001010000000000000000110100) (120000064) (20971572) (1400034)   ;
-;40;(00100001000000000000100000000100) (-194963292) (553650180) (21000804)    ;(00101001010000000000100000000100) (825036708) (692062212) (29400804)   ;(00100001010000000000010000100110) (-174965250) (557843494) (21400426)   ;(00000001100000000000000000110100) (140000064) (25165876) (1800034)   ;(00110001100000000000100000000100) (1845036708) (830474244) (31800804)   ;(00110001000011011100100000111010) (1808376776) (822986810) (310DC83A)   ;(00000000000000000001010100000000) (12400) (5376) (1500)   ;(00000001000000000000000000110100) (100000064) (16777268) (1000034)   ;
-;48;(00000001010000000000000000110100) (120000064) (20971572) (1400034)    ;(00100001000010000000000000000100) (-192967292) (554172420) (21080004)   ;(00101001010000000101111000000100) (825089708) (692084228) (29405E04)   ;(00100001010000000000010000100110) (-174965250) (557843494) (21400426)   ;(00000001100000000000000000110100) (140000064) (25165876) (1800034)   ;(00110001100010000000000000000100) (1847032708) (830996484) (31880004)   ;(00110001000011011100100000111010) (1808376776) (822986810) (310DC83A)   ;(00000000000000000001010100000000) (12400) (5376) (1500)   ;
-;56;(00000000000000000001010000000000) (12000) (5120) (1400)    ;(11011111110000000000000000010111) (277189545) (-541065193) (-20-3-15-15-15-14-9)   ;(11011110110000000000000100000100) (177189922) (-557842172) (-2-1-3-15-15-14-15-12)   ;(00000000000000000001010001000001) (12101) (5185) (1441)   ;(11011110111111111111111100000100) (194966922) (-553648380) (-2-10000-15-12)   ;(00000000000010011000100000111010) (2304072) (624698) (9883A)   ;(11011111110000000000000000010101) (277189543) (-541065195) (-20-3-15-15-15-14-11)   ;(00000000000000000001000111000000) (10700) (4544) (11C0)   ;
-;64;(00000000000000000001001111000000) (11700) (5056) (13C0)    ;(11010001101000000000000000010111) (-1332810455) (-778043369) (-2-14-5-15-15-15-14-9)   ;(11010001011000000000000100010111) (-1352810055) (-782237417) (-2-14-9-15-15-14-14-9)   ;(11010001001000000000001000010111) (-1372809455) (-786431465) (-2-14-13-15-15-13-14-9)   ;(11011111110000000000000000010111) (277189545) (-541065193) (-20-3-15-15-15-14-9)   ;(11011110110000000000000100000100) (177189922) (-557842172) (-2-1-3-15-15-14-15-12)   ;(00000000000000000000010111000001) (2701) (1473) (5C1)   ;(11011110111111111111111100000100) (194966922) (-553648380) (-2-10000-15-12)   ;
-;72;(11011111110000000000000000010101) (277189543) (-541065195) (-20-3-15-15-15-14-11)    ;(00000000000000000001010010000000) (12200) (5248) (1480)   ;(00000000100000000000000001000100) (40000104) (8388676) (800044)   ;(00010000000000010111000000111010) (2000270072) (268529722) (1001703A)   ;(11011111110000000000000000010111) (277189545) (-541065193) (-20-3-15-15-15-14-9)   ;(11011110110000000000000100000100) (177189922) (-557842172) (-2-1-3-15-15-14-15-12)   ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;
-;80;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)    ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;(00000000000000010111000011111010) (270372) (94458) (170FA)   ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;(00100000000001011000100000111010) (-293663224) (537233466) (2005883A)   ;(00000000000001111000100000111010) (1704072) (493626) (7883A)   ;(00110000110000000000000100011110) (1765033140) (817889566) (30C0011E)   ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;
-;88;(00101000110011111000100000111010) (768736776) (684689466) (28CF883A)    ;(00111001110000000000000000000011) (-1429934589) (968884227) (39C00003)   ;(00010000110010011000100000111010) (2062304072) (281643066) (10C9883A)   ;(00011000110000000000000001000100) (-1234967192) (415236164) (18C00044)   ;(00100001110000000000000000000101) (-134967291) (566231045) (21C00005)   ;(00000000001111111111100000000110) (17774006) (4192262) (3FF806)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;16;(00010000110000000000001100100110) (2060001446) (281019174) (10C00326)    ;(00010000000000000000000000010101) (2000000025) (268435477) (10000015)   ;(00010000100000000000000100000100) (2040000404) (276824324) (10800104)   ;(00010000111111111111110100110110) (2077776466) (285211958) (10FFFD36)   ;(00000000000000000000011100000000) (3400) (1792) (700)   ;(00000000000000000000111101000000) (7500) (3904) (F40)   ;(00000000001111111111111100000110) (17777406) (4194054) (3FFF06)   ;(00000000100010010000000000110111) (42200067) (8978487) (890037)   ;
+;24;(00000000100010000000000000110101) (42000065) (8912949) (880035)    ;(00000000100010000000000000110111) (42000067) (8912951) (880037)   ;(00000000100010010000010000110101) (42202065) (8979509) (890435)   ;(00000000001111111111101100000110) (17775406) (4193030) (3FFB06)   ;(11011110111111111111111100000100) (194966922) (-553648380) (-2-10000-15-12)   ;(00000001000000000000000000110100) (100000064) (16777268) (1000034)   ;(00000001010000000000000000110100) (120000064) (20971572) (1400034)   ;(11011111110000000000000000010101) (277189543) (-541065195) (-20-3-15-15-15-14-11)   ;
+;32;(00100001000010000000000000000100) (-192967292) (554172420) (21080004)    ;(00101001010000000101111100000100) (825090108) (692084484) (29405F04)   ;(00100001010000000000010000100110) (-174965250) (557843494) (21400426)   ;(00000001100000000000000000110100) (140000064) (25165876) (1800034)   ;(00110001100010000000000000000100) (1847032708) (830996484) (31880004)   ;(00110001000011011100100000111010) (1808376776) (822986810) (310DC83A)   ;(00000000000000000001010101000000) (12500) (5440) (1540)   ;(00000001000000000000000000110100) (100000064) (16777268) (1000034)   ;
+;40;(00000001010000000000000000110100) (120000064) (20971572) (1400034)    ;(00100001000000000000100000000100) (-194963292) (553650180) (21000804)   ;(00101001010000000000100000000100) (825036708) (692062212) (29400804)   ;(00100001010000000000010000100110) (-174965250) (557843494) (21400426)   ;(00000001100000000000000000110100) (140000064) (25165876) (1800034)   ;(00110001100000000000100000000100) (1845036708) (830474244) (31800804)   ;(00110001000011011100100000111010) (1808376776) (822986810) (310DC83A)   ;(00000000000000000001010101000000) (12500) (5440) (1540)   ;
+;48;(00000001000000000000000000110100) (100000064) (16777268) (1000034)    ;(00000001010000000000000000110100) (120000064) (20971572) (1400034)   ;(00100001000010000000000000000100) (-192967292) (554172420) (21080004)   ;(00101001010000000101111100000100) (825090108) (692084484) (29405F04)   ;(00100001010000000000010000100110) (-174965250) (557843494) (21400426)   ;(00000001100000000000000000110100) (140000064) (25165876) (1800034)   ;(00110001100010000000000000000100) (1847032708) (830996484) (31880004)   ;(00110001000011011100100000111010) (1808376776) (822986810) (310DC83A)   ;
+;56;(00000000000000000001010101000000) (12500) (5440) (1540)    ;(00000000000000000001010001000000) (12100) (5184) (1440)   ;(11011111110000000000000000010111) (277189545) (-541065193) (-20-3-15-15-15-14-9)   ;(11011110110000000000000100000100) (177189922) (-557842172) (-2-1-3-15-15-14-15-12)   ;(00000000000000000001010010000001) (12201) (5249) (1481)   ;(11011110111111111111111100000100) (194966922) (-553648380) (-2-10000-15-12)   ;(00000000000010011000100000111010) (2304072) (624698) (9883A)   ;(11011111110000000000000000010101) (277189543) (-541065195) (-20-3-15-15-15-14-11)   ;
+;64;(00000000000000000001001000000000) (11000) (4608) (1200)    ;(00000000000000000001010000000000) (12000) (5120) (1400)   ;(11010001101000000000000000010111) (-1332810455) (-778043369) (-2-14-5-15-15-15-14-9)   ;(11010001011000000000000100010111) (-1352810055) (-782237417) (-2-14-9-15-15-14-14-9)   ;(11010001001000000000001000010111) (-1372809455) (-786431465) (-2-14-13-15-15-13-14-9)   ;(11011111110000000000000000010111) (277189545) (-541065193) (-20-3-15-15-15-14-9)   ;(11011110110000000000000100000100) (177189922) (-557842172) (-2-1-3-15-15-14-15-12)   ;(00000000000000000000010111000001) (2701) (1473) (5C1)   ;
+;72;(11011110111111111111111100000100) (194966922) (-553648380) (-2-10000-15-12)    ;(11011111110000000000000000010101) (277189543) (-541065195) (-20-3-15-15-15-14-11)   ;(00000000000000000001010011000000) (12300) (5312) (14C0)   ;(00000000100000000000000001000100) (40000104) (8388676) (800044)   ;(00010000000000010111000000111010) (2000270072) (268529722) (1001703A)   ;(11011111110000000000000000010111) (277189545) (-541065193) (-20-3-15-15-15-14-9)   ;(11011110110000000000000100000100) (177189922) (-557842172) (-2-1-3-15-15-14-15-12)   ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;
+;80;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)    ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;(00000000000000010111000011111010) (270372) (94458) (170FA)   ;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)   ;(00100000000001011000100000111010) (-293663224) (537233466) (2005883A)   ;(00000000000001111000100000111010) (1704072) (493626) (7883A)   ;(00110000110000000000000100011110) (1765033140) (817889566) (30C0011E)   ;
+;88;(11111000000000000010100000111010) (-777753706) (-134207430) (-7-15-15-13-7-12-6)    ;(00101000110011111000100000111010) (768736776) (684689466) (28CF883A)   ;(00111001110000000000000000000011) (-1429934589) (968884227) (39C00003)   ;(00010000110010011000100000111010) (2062304072) (281643066) (10C9883A)   ;(00011000110000000000000001000100) (-1234967192) (415236164) (18C00044)   ;(00100001110000000000000000000101) (-134967291) (566231045) (21C00005)   ;(00000000001111111111100000000110) (17774006) (4192262) (3FF806)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;96;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;104;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;112;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
@@ -1537,8 +1537,8 @@ Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors
 Info (119006): Selected device 10CL025YE144C8G for design "blockram_system_v1"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (15535): Implemented PLL "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|pll1" as Cyclone 10 LP PLL type File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/db/pll_altpll.v Line: 51
-    Info (15099): Implementing clock multiplication of 10, clock division of 1, and phase shift of 0 degrees (0 ps) for pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] port File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/db/pll_altpll.v Line: 51
+Info (15535): Implemented PLL "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|pll1" as Cyclone 10 LP PLL type File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/db/pll_altpll.v Line: 51
+    Info (15099): Implementing clock multiplication of 10, clock division of 1, and phase shift of 0 degrees (0 ps) for pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] port File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/db/pll_altpll.v Line: 51
 Warning (18550): Found RAM instances implemented as ROM because the write logic is disabled. One instance is listed below as an example.
     Info (119043): Atom "blockram_system_v1:blockram_system_v1_inst|blockram_system_v1_instruction_OCRAM:instruction_ocram|altsyncram:the_altsyncram|altsyncram_itr1:auto_generated|ram_block1a22" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
@@ -1572,22 +1572,22 @@ Info (332111): Found 3 clocks
     Info (332111):  100.000 altera_reserved_tck
     Info (332111):   10.000          clk
     Info (332111):  100.000      mainClk
-Info (176353): Automatically promoted node pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/db/pll_altpll.v Line: 93
+Info (176353): Automatically promoted node pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/db/pll_altpll.v Line: 93
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node blockram_system_v1:blockram_system_v1_inst|altera_reset_controller:rst_controller|r_sync_rst  File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/platform_designer/synthesis/submodules/altera_reset_controller.v Line: 288
+Info (176353): Automatically promoted node blockram_system_v1:blockram_system_v1_inst|altera_reset_controller:rst_controller|r_sync_rst  File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/platform_designer/synthesis/submodules/altera_reset_controller.v Line: 288
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node blockram_system_v1:blockram_system_v1_inst|altera_reset_controller:rst_controller|WideOr0~0 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/platform_designer/synthesis/submodules/altera_reset_controller.v Line: 290
-        Info (176357): Destination node blockram_system_v1:blockram_system_v1_inst|blockram_system_v1_nios2:nios2|blockram_system_v1_nios2_cpu:cpu|W_rf_wren File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/platform_designer/synthesis/submodules/blockram_system_v1_nios2_cpu.v Line: 3472
+        Info (176357): Destination node blockram_system_v1:blockram_system_v1_inst|altera_reset_controller:rst_controller|WideOr0~0 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/platform_designer/synthesis/submodules/altera_reset_controller.v Line: 290
+        Info (176357): Destination node blockram_system_v1:blockram_system_v1_inst|blockram_system_v1_nios2:nios2|blockram_system_v1_nios2_cpu:cpu|W_rf_wren File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/platform_designer/synthesis/submodules/blockram_system_v1_nios2_cpu.v Line: 3472
         Info (176357): Destination node blockram_system_v1:blockram_system_v1_inst|blockram_system_v1_nios2:nios2|blockram_system_v1_nios2_cpu:cpu|blockram_system_v1_nios2_cpu_nios2_oci:the_blockram_system_v1_nios2_cpu_nios2_oci|blockram_system_v1_nios2_cpu_nios2_oci_debug:the_blockram_system_v1_nios2_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer|din_s1 File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altera_std_synchronizer.v Line: 45
-Info (176353): Automatically promoted node blockram_system_v1:blockram_system_v1_inst|altera_reset_controller:rst_controller|merged_reset~0  File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/platform_designer/synthesis/submodules/altera_reset_controller.v Line: 134
+Info (176353): Automatically promoted node blockram_system_v1:blockram_system_v1_inst|altera_reset_controller:rst_controller|merged_reset~0  File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/platform_designer/synthesis/submodules/altera_reset_controller.v Line: 134
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -1601,107 +1601,107 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 1.59 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.61 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (169180): Following 1 pins must use external clamping diodes.
-    Info (169178): Pin mcuI2cScl uses I/O standard 3.3-V LVCMOS at 6 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 28
+    Info (169178): Pin mcuI2cScl uses I/O standard 3.3-V LVCMOS at 6 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 28
 Warning (169177): 45 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone 10 LP Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin slowClk uses I/O standard 3.3-V LVCMOS at 23 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 22
-    Info (169178): Pin reset uses I/O standard 3.3-V LVCMOS at 24 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 24
-    Info (169178): Pin mcuUartTx uses I/O standard 3.3-V LVCMOS at 10 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 26
-    Info (169178): Pin switches[1] uses I/O standard 3.3-V LVCMOS at 49 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 33
-    Info (169178): Pin switches[2] uses I/O standard 3.3-V LVCMOS at 50 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 33
-    Info (169178): Pin switches[3] uses I/O standard 3.3-V LVCMOS at 51 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 33
-    Info (169178): Pin mcuI2cSda uses I/O standard 3.3-V LVCMOS at 7 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 29
-    Info (169178): Pin lsasBus[0] uses I/O standard 3.3-V LVCMOS at 76 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[1] uses I/O standard 3.3-V LVCMOS at 77 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[2] uses I/O standard 3.3-V LVCMOS at 80 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[3] uses I/O standard 3.3-V LVCMOS at 83 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[4] uses I/O standard 3.3-V LVCMOS at 85 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[5] uses I/O standard 3.3-V LVCMOS at 86 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[6] uses I/O standard 3.3-V LVCMOS at 87 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[7] uses I/O standard 3.3-V LVCMOS at 98 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[8] uses I/O standard 3.3-V LVCMOS at 99 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[9] uses I/O standard 3.3-V LVCMOS at 100 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[10] uses I/O standard 3.3-V LVCMOS at 101 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[11] uses I/O standard 3.3-V LVCMOS at 103 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[12] uses I/O standard 3.3-V LVCMOS at 105 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[13] uses I/O standard 3.3-V LVCMOS at 106 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[14] uses I/O standard 3.3-V LVCMOS at 111 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[15] uses I/O standard 3.3-V LVCMOS at 112 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[16] uses I/O standard 3.3-V LVCMOS at 113 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[17] uses I/O standard 3.3-V LVCMOS at 114 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[18] uses I/O standard 3.3-V LVCMOS at 115 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[19] uses I/O standard 3.3-V LVCMOS at 119 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[20] uses I/O standard 3.3-V LVCMOS at 120 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[21] uses I/O standard 3.3-V LVCMOS at 121 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[22] uses I/O standard 3.3-V LVCMOS at 125 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[23] uses I/O standard 3.3-V LVCMOS at 132 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[24] uses I/O standard 3.3-V LVCMOS at 133 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[25] uses I/O standard 3.3-V LVCMOS at 135 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[26] uses I/O standard 3.3-V LVCMOS at 136 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[27] uses I/O standard 3.3-V LVCMOS at 137 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[28] uses I/O standard 3.3-V LVCMOS at 141 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[29] uses I/O standard 3.3-V LVCMOS at 142 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[30] uses I/O standard 3.3-V LVCMOS at 143 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin lsasBus[31] uses I/O standard 3.3-V LVCMOS at 144 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169178): Pin switches[0] uses I/O standard 3.3-V LVCMOS at 46 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 33
-    Info (169178): Pin mainClk uses I/O standard 3.3-V LVCMOS at 22 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 21
-    Info (169178): Pin switches[4] uses I/O standard 3.3-V LVCMOS at 59 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 33
-    Info (169178): Pin switches[5] uses I/O standard 3.3-V LVCMOS at 60 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 33
-    Info (169178): Pin switches[6] uses I/O standard 3.3-V LVCMOS at 65 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 33
-    Info (169178): Pin switches[7] uses I/O standard 3.3-V LVCMOS at 66 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 33
+    Info (169178): Pin slowClk uses I/O standard 3.3-V LVCMOS at 23 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 22
+    Info (169178): Pin reset uses I/O standard 3.3-V LVCMOS at 24 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 24
+    Info (169178): Pin mcuUartTx uses I/O standard 3.3-V LVCMOS at 10 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 26
+    Info (169178): Pin switches[1] uses I/O standard 3.3-V LVCMOS at 49 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 33
+    Info (169178): Pin switches[2] uses I/O standard 3.3-V LVCMOS at 50 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 33
+    Info (169178): Pin switches[3] uses I/O standard 3.3-V LVCMOS at 51 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 33
+    Info (169178): Pin mcuI2cSda uses I/O standard 3.3-V LVCMOS at 7 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 29
+    Info (169178): Pin lsasBus[0] uses I/O standard 3.3-V LVCMOS at 76 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[1] uses I/O standard 3.3-V LVCMOS at 77 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[2] uses I/O standard 3.3-V LVCMOS at 80 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[3] uses I/O standard 3.3-V LVCMOS at 83 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[4] uses I/O standard 3.3-V LVCMOS at 85 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[5] uses I/O standard 3.3-V LVCMOS at 86 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[6] uses I/O standard 3.3-V LVCMOS at 87 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[7] uses I/O standard 3.3-V LVCMOS at 98 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[8] uses I/O standard 3.3-V LVCMOS at 99 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[9] uses I/O standard 3.3-V LVCMOS at 100 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[10] uses I/O standard 3.3-V LVCMOS at 101 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[11] uses I/O standard 3.3-V LVCMOS at 103 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[12] uses I/O standard 3.3-V LVCMOS at 105 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[13] uses I/O standard 3.3-V LVCMOS at 106 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[14] uses I/O standard 3.3-V LVCMOS at 111 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[15] uses I/O standard 3.3-V LVCMOS at 112 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[16] uses I/O standard 3.3-V LVCMOS at 113 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[17] uses I/O standard 3.3-V LVCMOS at 114 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[18] uses I/O standard 3.3-V LVCMOS at 115 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[19] uses I/O standard 3.3-V LVCMOS at 119 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[20] uses I/O standard 3.3-V LVCMOS at 120 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[21] uses I/O standard 3.3-V LVCMOS at 121 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[22] uses I/O standard 3.3-V LVCMOS at 125 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[23] uses I/O standard 3.3-V LVCMOS at 132 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[24] uses I/O standard 3.3-V LVCMOS at 133 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[25] uses I/O standard 3.3-V LVCMOS at 135 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[26] uses I/O standard 3.3-V LVCMOS at 136 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[27] uses I/O standard 3.3-V LVCMOS at 137 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[28] uses I/O standard 3.3-V LVCMOS at 141 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[29] uses I/O standard 3.3-V LVCMOS at 142 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[30] uses I/O standard 3.3-V LVCMOS at 143 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin lsasBus[31] uses I/O standard 3.3-V LVCMOS at 144 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169178): Pin switches[0] uses I/O standard 3.3-V LVCMOS at 46 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 33
+    Info (169178): Pin mainClk uses I/O standard 3.3-V LVCMOS at 22 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 21
+    Info (169178): Pin switches[4] uses I/O standard 3.3-V LVCMOS at 59 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 33
+    Info (169178): Pin switches[5] uses I/O standard 3.3-V LVCMOS at 60 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 33
+    Info (169178): Pin switches[6] uses I/O standard 3.3-V LVCMOS at 65 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 33
+    Info (169178): Pin switches[7] uses I/O standard 3.3-V LVCMOS at 66 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 33
 Warning (169203): PCI-clamp diode is not supported in this mode. The following 1 pins must meet the Intel FPGA requirements for 3.3V, 3.0V, and 2.5V interfaces if they are connected to devices other than the supported configuration devices. In these cases, Intel recommends termination method as specified in the Application Note 447.
-    Info (169178): Pin mcuI2cScl uses I/O standard 3.3-V LVCMOS at 6 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 28
+    Info (169178): Pin mcuI2cScl uses I/O standard 3.3-V LVCMOS at 6 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 28
 Warning (169064): Following 33 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin mcuI2cSda has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 29
-    Info (169065): Pin lsasBus[0] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[1] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[2] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[3] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[4] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[5] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[6] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[7] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[8] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[9] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[10] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[11] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[12] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[13] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[14] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[15] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[16] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[17] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[18] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[19] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[20] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[21] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[22] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[23] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[24] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[25] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[26] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[27] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[28] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[29] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[30] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-    Info (169065): Pin lsasBus[31] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/top_level_entity.vhd Line: 31
-Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/output_files/blockram_system_v1.fit.smsg
+    Info (169065): Pin mcuI2cSda has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 29
+    Info (169065): Pin lsasBus[0] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[1] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[2] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[3] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[4] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[5] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[6] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[7] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[8] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[9] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[10] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[11] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[12] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[13] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[14] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[15] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[16] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[17] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[18] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[19] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[20] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[21] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[22] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[23] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[24] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[25] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[26] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[27] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[28] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[29] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[30] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+    Info (169065): Pin lsasBus[31] has a permanently disabled output enable File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/top_level_entity.vhd Line: 31
+Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/output_files/blockram_system_v1.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 737 megabytes
-    Info: Processing ended: Sun Nov  5 17:45:30 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 742 megabytes
+    Info: Processing ended: Tue Nov 14 12:08:01 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1.2/output_files/blockram_system_v1.fit.smsg.
+The suppressed messages can be found in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/output_files/blockram_system_v1.fit.smsg.
 
 

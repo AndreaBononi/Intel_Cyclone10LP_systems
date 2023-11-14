@@ -1,6 +1,6 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/basic_system.qsys --block-symbol-file --output-directory=/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer --family="Cyclone 10 LP" --part=10CL025YE144C8G
-Progress: Loading basic_system_v1/basic_system.qsys
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/basic_system/basic_system.qsys --block-symbol-file --output-directory=/home/andrea/Documents/Tesi_287628/287628/basic_system/platform_designer --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Progress: Loading basic_system/basic_system.qsys
 Progress: Reading input file
 Progress: Adding LEDs [altera_avalon_pio 22.1]
 Progress: Parameterizing module LEDs
@@ -21,8 +21,8 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/basic_system.qsys --synthesis=VHDL --output-directory=/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis --family="Cyclone 10 LP" --part=10CL025YE144C8G
-Progress: Loading basic_system_v1/basic_system.qsys
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/basic_system/basic_system.qsys --synthesis=VHDL --output-directory=/home/andrea/Documents/Tesi_287628/287628/basic_system/platform_designer/synthesis --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Progress: Loading basic_system/basic_system.qsys
 Progress: Reading input file
 Progress: Adding LEDs [altera_avalon_pio 22.1]
 Progress: Parameterizing module LEDs
@@ -41,16 +41,16 @@ Progress: Done reading input file
 Info: basic_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: basic_system: Generating basic_system "basic_system" for QUARTUS_SYNTH
 Info: LEDs: Starting RTL generation for module 'basic_system_LEDs'
-Info: LEDs:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=basic_system_LEDs --dir=/tmp/alt9661_5847963055886059184.dir/0029_LEDs_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9661_5847963055886059184.dir/0029_LEDs_gen//basic_system_LEDs_component_configuration.pl  --do_build_sim=0  ]
+Info: LEDs:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=basic_system_LEDs --dir=/tmp/alt9675_4036814013758964157.dir/0002_LEDs_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9675_4036814013758964157.dir/0002_LEDs_gen//basic_system_LEDs_component_configuration.pl  --do_build_sim=0  ]
 Info: LEDs: Done RTL generation for module 'basic_system_LEDs'
 Info: LEDs: "basic_system" instantiated altera_avalon_pio "LEDs"
 Info: OCRAM: Starting RTL generation for module 'basic_system_OCRAM'
-Info: OCRAM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=basic_system_OCRAM --dir=/tmp/alt9661_5847963055886059184.dir/0030_OCRAM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9661_5847963055886059184.dir/0030_OCRAM_gen//basic_system_OCRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: OCRAM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=basic_system_OCRAM --dir=/tmp/alt9675_4036814013758964157.dir/0003_OCRAM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9675_4036814013758964157.dir/0003_OCRAM_gen//basic_system_OCRAM_component_configuration.pl  --do_build_sim=0  ]
 Info: OCRAM: Done RTL generation for module 'basic_system_OCRAM'
 Info: OCRAM: "basic_system" instantiated altera_avalon_onchip_memory2 "OCRAM"
 Info: nios2: "basic_system" instantiated altera_nios2_gen2 "nios2"
 Info: switches: Starting RTL generation for module 'basic_system_switches'
-Info: switches:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=basic_system_switches --dir=/tmp/alt9661_5847963055886059184.dir/0031_switches_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9661_5847963055886059184.dir/0031_switches_gen//basic_system_switches_component_configuration.pl  --do_build_sim=0  ]
+Info: switches:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=basic_system_switches --dir=/tmp/alt9675_4036814013758964157.dir/0004_switches_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9675_4036814013758964157.dir/0004_switches_gen//basic_system_switches_component_configuration.pl  --do_build_sim=0  ]
 Info: switches: Done RTL generation for module 'basic_system_switches'
 Info: switches: "basic_system" instantiated altera_avalon_pio "switches"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -61,13 +61,13 @@ Info: mm_interconnect_0: "basic_system" instantiated altera_mm_interconnect "mm_
 Info: irq_mapper: "basic_system" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "basic_system" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'basic_system_nios2_cpu'
-Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=basic_system_nios2_cpu --dir=/tmp/alt9661_5847963055886059184.dir/0034_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9661_5847963055886059184.dir/0034_cpu_gen//basic_system_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2023.10.31 16:50:22 (*) Starting Nios II generation
-Info: cpu: # 2023.10.31 16:50:22 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2023.10.31 16:50:22 (*)   Creating all objects for CPU
-Info: cpu: # 2023.10.31 16:50:23 (*)   Generating RTL from CPU objects
-Info: cpu: # 2023.10.31 16:50:23 (*)   Creating plain-text RTL
-Info: cpu: # 2023.10.31 16:50:24 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=basic_system_nios2_cpu --dir=/tmp/alt9675_4036814013758964157.dir/0007_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9675_4036814013758964157.dir/0007_cpu_gen//basic_system_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.11.14 12:27:19 (*) Starting Nios II generation
+Info: cpu: # 2023.11.14 12:27:19 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.11.14 12:27:19 (*)   Creating all objects for CPU
+Info: cpu: # 2023.11.14 12:27:19 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.11.14 12:27:19 (*)   Creating plain-text RTL
+Info: cpu: # 2023.11.14 12:27:20 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'basic_system_nios2_cpu'
 Info: cpu: "nios2" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_data_master_translator"
@@ -85,15 +85,15 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
-Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system/platform_designer/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system/platform_designer/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system/platform_designer/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: OCRAM_s1_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "OCRAM_s1_rsp_width_adapter"
-Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system_v1/platform_designer/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system/platform_designer/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/basic_system/platform_designer/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"

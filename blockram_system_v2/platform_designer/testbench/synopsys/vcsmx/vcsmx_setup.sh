@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 22.1 917 linux 2023.11.13.17:09:42
+# ACDS 22.1 917 linux 2023.11.14.12:31:55
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 22.1 917 linux 2023.11.13.17:09:42
+# ACDS 22.1 917 linux 2023.11.14.12:31:55
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="blockram_system_v2_tb"
@@ -151,21 +151,23 @@ mkdir -p ./libraries/error_adapter_0/
 mkdir -p ./libraries/avalon_st_adapter/
 mkdir -p ./libraries/rsp_mux_001/
 mkdir -p ./libraries/rsp_mux/
-mkdir -p ./libraries/rsp_demux_002/
+mkdir -p ./libraries/rsp_demux_001/
 mkdir -p ./libraries/rsp_demux/
-mkdir -p ./libraries/cmd_mux_002/
+mkdir -p ./libraries/cmd_mux_001/
 mkdir -p ./libraries/cmd_mux/
 mkdir -p ./libraries/cmd_demux_001/
 mkdir -p ./libraries/cmd_demux/
+mkdir -p ./libraries/nios2f_debug_mem_slave_burst_adapter/
 mkdir -p ./libraries/nios2f_data_master_limiter/
-mkdir -p ./libraries/router_004/
+mkdir -p ./libraries/router_006/
+mkdir -p ./libraries/router_003/
 mkdir -p ./libraries/router_002/
 mkdir -p ./libraries/router_001/
 mkdir -p ./libraries/router/
-mkdir -p ./libraries/OCRAM_avalon_slave_agent_rsp_fifo/
-mkdir -p ./libraries/OCRAM_avalon_slave_agent/
+mkdir -p ./libraries/data_OCRAM_avalon_slave_agent_rsp_fifo/
+mkdir -p ./libraries/data_OCRAM_avalon_slave_agent/
 mkdir -p ./libraries/nios2f_data_master_agent/
-mkdir -p ./libraries/OCRAM_avalon_slave_translator/
+mkdir -p ./libraries/data_OCRAM_avalon_slave_translator/
 mkdir -p ./libraries/nios2f_data_master_translator/
 mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/rst_controller/
@@ -174,7 +176,8 @@ mkdir -p ./libraries/mm_interconnect_0/
 mkdir -p ./libraries/switches/
 mkdir -p ./libraries/nios2f/
 mkdir -p ./libraries/leds/
-mkdir -p ./libraries/OCRAM/
+mkdir -p ./libraries/instruction_OCROM/
+mkdir -p ./libraries/data_OCRAM/
 mkdir -p ./libraries/blockram_system_v2_inst_reset_bfm/
 mkdir -p ./libraries/blockram_system_v2_inst_clk_bfm/
 mkdir -p ./libraries/blockram_system_v2_inst/
@@ -244,64 +247,76 @@ fi
 # ----------------------------------------
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv" -work error_adapter_0                  
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_avalon_st_adapter.vhd"                -work avalon_st_adapter                
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_mux_001.sv"                       -work rsp_mux_001                      
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                               -work rsp_mux_001                      
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_mux.sv"                           -work rsp_mux                          
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                               -work rsp_mux                          
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_demux_002.sv"                     -work rsp_demux_002                    
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_demux.sv"                         -work rsp_demux                        
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_mux_002.sv"                       -work cmd_mux_002                      
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                               -work cmd_mux_002                      
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_mux.sv"                           -work cmd_mux                          
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                               -work cmd_mux                          
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_demux_001.sv"                     -work cmd_demux_001                    
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_demux.sv"                         -work cmd_demux                        
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_traffic_limiter.sv"                                          -work nios2f_data_master_limiter       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_reorder_memory.sv"                                           -work nios2f_data_master_limiter       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_sc_fifo.v"                                                   -work nios2f_data_master_limiter       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_st_pipeline_base.v"                                          -work nios2f_data_master_limiter       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_004.sv"                        -work router_004                       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_002.sv"                        -work router_002                       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_001.sv"                        -work router_001                       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router.sv"                            -work router                           
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_sc_fifo.v"                                                   -work OCRAM_avalon_slave_agent_rsp_fifo
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_slave_agent.sv"                                              -work OCRAM_avalon_slave_agent         
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv"                                       -work OCRAM_avalon_slave_agent         
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_master_agent.sv"                                             -work nios2f_data_master_agent         
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_slave_translator.sv"                                         -work OCRAM_avalon_slave_translator    
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_master_translator.sv"                                        -work nios2f_data_master_translator    
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_debug_slave_wrapper.v"                       -work cpu                              
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_debug_slave_tck.v"                           -work cpu                              
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_mult_cell.v"                                 -work cpu                              
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_test_bench.v"                                -work cpu                              
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu.v"                                           -work cpu                              
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_debug_slave_sysclk.v"                        -work cpu                              
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/synopsys/altera_nios2_gen2_rtl_module.sv"                                  -work cpu                              
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_reset_controller.v"                                                 -work rst_controller                   
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_reset_synchronizer.v"                                               -work rst_controller                   
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_irq_mapper.sv"                                          -work irq_mapper                       
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0.v"                                    -work mm_interconnect_0                
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_switches.vhd"                                           -work switches                         
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f.v"                                               -work nios2f                           
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_leds.vhd"                                               -work leds                             
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/d_flipflop.vhd"                                                            -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/t_flip_flop.vhd"                                                           -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/reg.vhd"                                                                   -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/mux_2to1.vhd"                                                              -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/counter_Nbit.vhd"                                                          -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/comparator_Nbit.vhd"                                                       -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/incrementer_8bit_nopipe.vhd"                                               -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter_CU.vhd"                                          -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter_EU.vhd"                                          -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter.vhd"                                             -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_1port_8a_32d.vhd"                                                 -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/custom_OCRAM.vhd"                                                          -work OCRAM                            
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                            -work blockram_system_v2_inst_reset_bfm
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                            -work blockram_system_v2_inst_clk_bfm  
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2.vhd"                                                    -work blockram_system_v2_inst          
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/blockram_system_v2_tb.vhd"                                                                                                   
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv" -work error_adapter_0                       
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_avalon_st_adapter.vhd"                -work avalon_st_adapter                     
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_mux_001.sv"                       -work rsp_mux_001                           
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                               -work rsp_mux_001                           
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_mux.sv"                           -work rsp_mux                               
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                               -work rsp_mux                               
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_demux_001.sv"                     -work rsp_demux_001                         
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_demux.sv"                         -work rsp_demux                             
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_mux_001.sv"                       -work cmd_mux_001                           
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                               -work cmd_mux_001                           
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_mux.sv"                           -work cmd_mux                               
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                               -work cmd_mux                               
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_demux_001.sv"                     -work cmd_demux_001                         
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_demux.sv"                         -work cmd_demux                             
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_adapter.sv"                                            -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_adapter_uncmpr.sv"                                     -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_adapter_13_1.sv"                                       -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_adapter_new.sv"                                        -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_incr_burst_converter.sv"                                            -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_wrap_burst_converter.sv"                                            -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_default_burst_converter.sv"                                         -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_address_alignment.sv"                                        -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_st_pipeline_stage.sv"                                        -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_st_pipeline_base.v"                                          -work nios2f_debug_mem_slave_burst_adapter  
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_traffic_limiter.sv"                                          -work nios2f_data_master_limiter            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_reorder_memory.sv"                                           -work nios2f_data_master_limiter            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_sc_fifo.v"                                                   -work nios2f_data_master_limiter            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_st_pipeline_base.v"                                          -work nios2f_data_master_limiter            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_006.sv"                        -work router_006                            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_003.sv"                        -work router_003                            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_002.sv"                        -work router_002                            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_001.sv"                        -work router_001                            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router.sv"                            -work router                                
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_sc_fifo.v"                                                   -work data_OCRAM_avalon_slave_agent_rsp_fifo
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_slave_agent.sv"                                              -work data_OCRAM_avalon_slave_agent         
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv"                                       -work data_OCRAM_avalon_slave_agent         
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_master_agent.sv"                                             -work nios2f_data_master_agent              
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_slave_translator.sv"                                         -work data_OCRAM_avalon_slave_translator    
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_merlin_master_translator.sv"                                        -work nios2f_data_master_translator         
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_debug_slave_wrapper.v"                       -work cpu                                   
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_debug_slave_tck.v"                           -work cpu                                   
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_mult_cell.v"                                 -work cpu                                   
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_test_bench.v"                                -work cpu                                   
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu.v"                                           -work cpu                                   
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f_cpu_debug_slave_sysclk.v"                        -work cpu                                   
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/synopsys/altera_nios2_gen2_rtl_module.sv"                                  -work cpu                                   
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_reset_controller.v"                                                 -work rst_controller                        
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_reset_synchronizer.v"                                               -work rst_controller                        
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_irq_mapper.sv"                                          -work irq_mapper                            
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0.v"                                    -work mm_interconnect_0                     
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_switches.vhd"                                           -work switches                              
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_nios2f.v"                                               -work nios2f                                
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_leds.vhd"                                               -work leds                                  
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_instruction_OCROM.vhd"                                  -work instruction_OCROM                     
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/d_flipflop.vhd"                                                            -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/t_flip_flop.vhd"                                                           -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/reg.vhd"                                                                   -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/mux_2to1.vhd"                                                              -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/counter_Nbit.vhd"                                                          -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/comparator_Nbit.vhd"                                                       -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/incrementer_8bit_nopipe.vhd"                                               -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter_CU.vhd"                                          -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter_EU.vhd"                                          -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter.vhd"                                             -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_1port_8a_32d.vhd"                                                 -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/custom_OCRAM.vhd"                                                          -work data_OCRAM                            
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                            -work blockram_system_v2_inst_reset_bfm     
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                            -work blockram_system_v2_inst_clk_bfm       
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/submodules/blockram_system_v2.vhd"                                                    -work blockram_system_v2_inst               
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/blockram_system_v2_tb/simulation/blockram_system_v2_tb.vhd"                                                                                                        
 fi
 
 # ----------------------------------------

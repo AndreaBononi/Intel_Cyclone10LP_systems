@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=/home/andrea/Documents/Tesi/287628/blockram_system_v2/SBT_workspace
+newSoftwareExampleWizardPage.defaultLocation=/home/andrea/Documents/Tesi/287628/blockram_system_v2/SBT_workspace/blockram_system_v2
 newSoftwareExampleWizardPage.sopcinfoFile=/home/andrea/Documents/Tesi/287628/blockram_system_v2/blockram_system_v2.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=/home/andrea/Documents/Tesi/287628/blockram_system_v2/blockram_system_v2_bsp
+newSoftwareExampleWizardPage2.newBspLocation=/home/andrea/Documents/Tesi/287628/blockram_system_v2/SBT_workspace/blockram_system_v2_bsp

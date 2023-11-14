@@ -174,8 +174,8 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR netlist/ -section_id eda_simulation
 set_global_assignment -name GENERATE_RBF_FILE ON
-set_global_assignment -name QIP_FILE SBT_workspace/blockram_system_v1/mem_init/meminit.qip
 set_global_assignment -name QIP_FILE platform_designer/synthesis/blockram_system_v1.qip
+set_global_assignment -name QIP_FILE SBT_workspace/blockram_system_v1/mem_init/meminit.qip
 set_global_assignment -name QIP_FILE pll/pll.qip
 set_global_assignment -name SDC_FILE blockram_system_v1.sdc
 set_global_assignment -name VHDL_FILE top_level_entity.vhd

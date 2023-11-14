@@ -2,7 +2,7 @@ set_global_assignment -entity "basic_system" -library "basic_system" -name IP_TO
 set_global_assignment -entity "basic_system" -library "basic_system" -name IP_TOOL_VERSION "22.1"
 set_global_assignment -entity "basic_system" -library "basic_system" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "basic_system" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../basic_system.sopcinfo"]
-set_global_assignment -entity "basic_system" -library "basic_system" -name SLD_INFO "QSYS_NAME basic_system HAS_SOPCINFO 1 GENERATION_ID 1698767418"
+set_global_assignment -entity "basic_system" -library "basic_system" -name SLD_INFO "QSYS_NAME basic_system HAS_SOPCINFO 1 GENERATION_ID 1699961233"
 set_global_assignment -library "basic_system" -name MISC_FILE [file join $::quartus(qip_path) "../basic_system.cmp"]
 set_global_assignment -library "basic_system" -name SLD_FILE [file join $::quartus(qip_path) "basic_system.regmap"]
 set_global_assignment -library "basic_system" -name SLD_FILE [file join $::quartus(qip_path) "basic_system.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "basic_system" -library "basic_system" -name IP_CO
 set_global_assignment -entity "basic_system" -library "basic_system" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "basic_system" -library "basic_system" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "basic_system" -library "basic_system" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "basic_system" -library "basic_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY5ODc2NzQxOA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "basic_system" -library "basic_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY5OTk2MTIzMw==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "basic_system" -library "basic_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSAxMCBMUA==::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "basic_system" -library "basic_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBDTDAyNVlFMTQ0QzhH::QXV0byBERVZJQ0U="
 set_global_assignment -entity "basic_system" -library "basic_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -1135,7 +1135,7 @@ set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "ZHVhbFBvcnQ=::ZmFsc2U=::RHVhbC1wb3J0IGFjY2Vzcw=="
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9lbmFibGVEaWZmV2lkdGg=::ZmFsc2U=::ZGVyaXZlZF9lbmFibGVEaWZmV2lkdGg="
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "aW5pdE1lbUNvbnRlbnQ=::dHJ1ZQ==::SW5pdGlhbGl6ZSBtZW1vcnkgY29udGVudA=="
-set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "aW5pdGlhbGl6YXRpb25GaWxlTmFtZQ==::L2hvbWUvYW5kcmVhL0RvY3VtZW50cy9UZXNpXzI4NzYyOC8yODc2MjgvYmFzaWNfc3lzdGVtX3YxL1NCVF93b3Jrc3BhY2UvYmFzaWNfc3lzdGVtL21lbV9pbml0L2Jhc2ljX3N5c3RlbV9PQ1JBTS5oZXg=::VXNlciBjcmVhdGVkIGluaXRpYWxpemF0aW9uIGZpbGU="
+set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "aW5pdGlhbGl6YXRpb25GaWxlTmFtZQ==::L2hvbWUvYW5kcmVhL0RvY3VtZW50cy9UZXNpXzI4NzYyOC8yODc2MjgvYmFzaWNfc3lzdGVtL1NCVF93b3Jrc3BhY2UvYmFzaWNfc3lzdGVtL21lbV9pbml0L2Jhc2ljX3N5c3RlbV9PQ1JBTS5oZXg=::VXNlciBjcmVhdGVkIGluaXRpYWxpemF0aW9uIGZpbGU="
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "ZW5QUkluaXRNb2Rl::ZmFsc2U=::RW5hYmxlIFBhcnRpYWwgUmVjb25maWd1cmF0aW9uIEluaXRpYWxpemF0aW9uIE1vZGU="
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "bWVtb3J5U2l6ZQ==::MTYzODQ=::VG90YWwgbWVtb3J5IHNpemU="
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "c2ltQWxsb3dNUkFNQ29udGVudHNGaWxl::ZmFsc2U=::QWxsb3cgTVJBTSBjb250ZW50cyBmaWxlIGZvciBzaW11bGF0aW9u"
@@ -1156,7 +1156,7 @@ set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9zZXRfZGF0YV93aWR0aDI=::MTY=::U2xhdmUgMiBkYXRhIHdpZHRo"
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9ndWlfcmFtX2Jsb2NrX3R5cGU=::QXV0b21hdGlj::ZGVyaXZlZF9ndWlfcmFtX2Jsb2NrX3R5cGU="
 set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pc19oYXJkY29weQ==::ZmFsc2U=::ZGVyaXZlZF9pc19oYXJkY29weQ=="
-set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ==::L2hvbWUvYW5kcmVhL0RvY3VtZW50cy9UZXNpXzI4NzYyOC8yODc2MjgvYmFzaWNfc3lzdGVtX3YxL1NCVF93b3Jrc3BhY2UvYmFzaWNfc3lzdGVtL21lbV9pbml0L2Jhc2ljX3N5c3RlbV9PQ1JBTS5oZXg=::ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ=="
+set_global_assignment -entity "basic_system_OCRAM" -library "basic_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ==::L2hvbWUvYW5kcmVhL0RvY3VtZW50cy9UZXNpXzI4NzYyOC8yODc2MjgvYmFzaWNfc3lzdGVtL1NCVF93b3Jrc3BhY2UvYmFzaWNfc3lzdGVtL21lbV9pbml0L2Jhc2ljX3N5c3RlbV9PQ1JBTS5oZXg=::ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ=="
 set_global_assignment -entity "basic_system_LEDs" -library "basic_system" -name IP_COMPONENT_NAME "YmFzaWNfc3lzdGVtX0xFRHM="
 set_global_assignment -entity "basic_system_LEDs" -library "basic_system" -name IP_COMPONENT_DISPLAY_NAME "UElPIChQYXJhbGxlbCBJL08pIEludGVsIEZQR0EgSVA="
 set_global_assignment -entity "basic_system_LEDs" -library "basic_system" -name IP_COMPONENT_REPORT_HIERARCHY "Off"

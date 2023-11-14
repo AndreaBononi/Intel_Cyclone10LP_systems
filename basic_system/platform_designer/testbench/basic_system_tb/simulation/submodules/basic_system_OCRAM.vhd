@@ -28,7 +28,7 @@ use ieee.std_logic_unsigned.all;
 
 entity basic_system_OCRAM is 
         generic (
-                 INIT_FILE : STRING := "/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex"
+                 INIT_FILE : STRING := "/home/andrea/Documents/Tesi_287628/287628/basic_system/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex"
                  );
         port (
               -- inputs:
@@ -69,11 +69,11 @@ GENERIC (
     PORT (
     signal q_a : OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
         signal clocken0 : IN STD_LOGIC;
-        signal data_a : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-        signal wren_a : IN STD_LOGIC;
-        signal clock0 : IN STD_LOGIC;
+        signal byteena_a : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
         signal address_a : IN STD_LOGIC_VECTOR (12 DOWNTO 0);
-        signal byteena_a : IN STD_LOGIC_VECTOR (1 DOWNTO 0)
+        signal data_a : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+        signal clock0 : IN STD_LOGIC;
+        signal wren_a : IN STD_LOGIC
       );
   end component altsyncram;
                 signal clocken0 :  STD_LOGIC;

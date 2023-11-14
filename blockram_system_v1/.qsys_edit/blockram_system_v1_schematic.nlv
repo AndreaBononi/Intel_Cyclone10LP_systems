@@ -7,15 +7,15 @@ preplace inst blockram_system_v1.instruction_OCRAM -pg 1 -lvl 2 -y 110
 preplace inst blockram_system_v1.data_OCRAM -pg 1 -lvl 2 -y 30
 preplace inst blockram_system_v1.nios2.clock_bridge -pg 1
 preplace inst blockram_system_v1.LEDs -pg 1 -lvl 1 -y 300
-preplace inst blockram_system_v1.clk_100MHz -pg 1 -lvl 1 -y 220
+preplace inst blockram_system_v1.clk_100MHz -pg 1 -lvl 1 -y 200
 preplace inst blockram_system_v1 -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst blockram_system_v1.nios2.reset_bridge -pg 1
-preplace netloc EXPORT<net_container>blockram_system_v1</net_container>(SLAVE)switches.external_connection,(SLAVE)blockram_system_v1.switches) 1 0 1 NJ
-preplace netloc EXPORT<net_container>blockram_system_v1</net_container>(SLAVE)blockram_system_v1.leds,(SLAVE)LEDs.external_connection) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>blockram_system_v1</net_container>(MASTER)nios2.instruction_master,(SLAVE)switches.s1,(SLAVE)nios2.debug_mem_slave,(MASTER)nios2.data_master,(SLAVE)LEDs.s1,(SLAVE)instruction_OCRAM.s1,(SLAVE)data_OCRAM.avalon_slave_0) 1 0 2 90 190 490
-preplace netloc EXPORT<net_container>blockram_system_v1</net_container>(SLAVE)clk_100MHz.clk_in_reset,(SLAVE)blockram_system_v1.reset) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>blockram_system_v1</net_container>(SLAVE)LEDs.reset,(SLAVE)data_OCRAM.reset,(MASTER)clk_100MHz.clk_reset,(SLAVE)nios2.reset,(SLAVE)switches.reset,(MASTER)nios2.debug_reset_request,(SLAVE)instruction_OCRAM.reset1) 1 0 2 130 290 530
+preplace netloc EXPORT<net_container>blockram_system_v1</net_container>(SLAVE)blockram_system_v1.reset,(SLAVE)clk_100MHz.clk_in_reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>blockram_system_v1</net_container>(SLAVE)data_OCRAM.avalon_slave_0,(SLAVE)nios2.debug_mem_slave,(SLAVE)switches.s1,(SLAVE)instruction_OCRAM.s1,(MASTER)nios2.data_master,(MASTER)nios2.instruction_master,(SLAVE)LEDs.s1) 1 0 2 90 190 490
+preplace netloc INTERCONNECT<net_container>blockram_system_v1</net_container>(SLAVE)LEDs.reset,(SLAVE)instruction_OCRAM.reset1,(MASTER)clk_100MHz.clk_reset,(MASTER)nios2.debug_reset_request,(SLAVE)data_OCRAM.reset,(SLAVE)nios2.reset,(SLAVE)switches.reset) 1 0 2 130 290 530
+preplace netloc EXPORT<net_container>blockram_system_v1</net_container>(SLAVE)LEDs.external_connection,(SLAVE)blockram_system_v1.leds) 1 0 1 NJ
+preplace netloc EXPORT<net_container>blockram_system_v1</net_container>(SLAVE)blockram_system_v1.switches,(SLAVE)switches.external_connection) 1 0 1 NJ
 preplace netloc EXPORT<net_container>blockram_system_v1</net_container>(SLAVE)blockram_system_v1.clk,(SLAVE)clk_100MHz.clk_in) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>blockram_system_v1</net_container>(SLAVE)data_OCRAM.clock,(SLAVE)LEDs.clk,(SLAVE)switches.clk,(SLAVE)instruction_OCRAM.clk1,(SLAVE)nios2.clk,(MASTER)clk_100MHz.clk) 1 0 2 110 210 510
+preplace netloc FAN_OUT<net_container>blockram_system_v1</net_container>(SLAVE)nios2.clk,(SLAVE)switches.clk,(SLAVE)data_OCRAM.clock,(SLAVE)LEDs.clk,(MASTER)clk_100MHz.clk,(SLAVE)instruction_OCRAM.clk1) 1 0 2 110 270 510
 levelinfo -pg 1 0 60 720
 levelinfo -hier blockram_system_v1 70 250 590 710

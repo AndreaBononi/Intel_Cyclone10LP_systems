@@ -32,6 +32,23 @@ architecture rtl of blockram_system_v2 is
 		);
 	end component custom_OCRAM;
 
+	component blockram_system_v2_instruction_OCROM is
+		port (
+			clk         : in  std_logic                     := 'X';             -- clk
+			address     : in  std_logic_vector(9 downto 0)  := (others => 'X'); -- address
+			debugaccess : in  std_logic                     := 'X';             -- debugaccess
+			clken       : in  std_logic                     := 'X';             -- clken
+			chipselect  : in  std_logic                     := 'X';             -- chipselect
+			write       : in  std_logic                     := 'X';             -- write
+			readdata    : out std_logic_vector(31 downto 0);                    -- readdata
+			writedata   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			byteenable  : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
+			reset       : in  std_logic                     := 'X';             -- reset
+			reset_req   : in  std_logic                     := 'X';             -- reset_req
+			freeze      : in  std_logic                     := 'X'              -- freeze
+		);
+	end component blockram_system_v2_instruction_OCROM;
+
 	component blockram_system_v2_leds is
 		port (
 			clk        : in  std_logic                     := 'X';             -- clk
@@ -50,19 +67,21 @@ architecture rtl of blockram_system_v2 is
 			clk                                 : in  std_logic                     := 'X';             -- clk
 			reset_n                             : in  std_logic                     := 'X';             -- reset_n
 			reset_req                           : in  std_logic                     := 'X';             -- reset_req
-			d_address                           : out std_logic_vector(12 downto 0);                    -- address
+			d_address                           : out std_logic_vector(13 downto 0);                    -- address
 			d_byteenable                        : out std_logic_vector(3 downto 0);                     -- byteenable
 			d_read                              : out std_logic;                                        -- read
 			d_readdata                          : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			d_waitrequest                       : in  std_logic                     := 'X';             -- waitrequest
 			d_write                             : out std_logic;                                        -- write
 			d_writedata                         : out std_logic_vector(31 downto 0);                    -- writedata
+			d_burstcount                        : out std_logic_vector(3 downto 0);                     -- burstcount
 			d_readdatavalid                     : in  std_logic                     := 'X';             -- readdatavalid
 			debug_mem_slave_debugaccess_to_roms : out std_logic;                                        -- debugaccess
 			i_address                           : out std_logic_vector(12 downto 0);                    -- address
 			i_read                              : out std_logic;                                        -- read
 			i_readdata                          : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			i_waitrequest                       : in  std_logic                     := 'X';             -- waitrequest
+			i_burstcount                        : out std_logic_vector(3 downto 0);                     -- burstcount
 			i_readdatavalid                     : in  std_logic                     := 'X';             -- readdatavalid
 			irq                                 : in  std_logic_vector(31 downto 0) := (others => 'X'); -- irq
 			debug_reset_request                 : out std_logic;                                        -- reset
@@ -90,46 +109,56 @@ architecture rtl of blockram_system_v2 is
 
 	component blockram_system_v2_mm_interconnect_0 is
 		port (
-			clk_100MHz_clk_clk                       : in  std_logic                     := 'X';             -- clk
-			nios2f_reset_reset_bridge_in_reset_reset : in  std_logic                     := 'X';             -- reset
-			nios2f_data_master_address               : in  std_logic_vector(12 downto 0) := (others => 'X'); -- address
-			nios2f_data_master_waitrequest           : out std_logic;                                        -- waitrequest
-			nios2f_data_master_byteenable            : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
-			nios2f_data_master_read                  : in  std_logic                     := 'X';             -- read
-			nios2f_data_master_readdata              : out std_logic_vector(31 downto 0);                    -- readdata
-			nios2f_data_master_readdatavalid         : out std_logic;                                        -- readdatavalid
-			nios2f_data_master_write                 : in  std_logic                     := 'X';             -- write
-			nios2f_data_master_writedata             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			nios2f_data_master_debugaccess           : in  std_logic                     := 'X';             -- debugaccess
-			nios2f_instruction_master_address        : in  std_logic_vector(12 downto 0) := (others => 'X'); -- address
-			nios2f_instruction_master_waitrequest    : out std_logic;                                        -- waitrequest
-			nios2f_instruction_master_read           : in  std_logic                     := 'X';             -- read
-			nios2f_instruction_master_readdata       : out std_logic_vector(31 downto 0);                    -- readdata
-			nios2f_instruction_master_readdatavalid  : out std_logic;                                        -- readdatavalid
-			leds_s1_address                          : out std_logic_vector(1 downto 0);                     -- address
-			leds_s1_write                            : out std_logic;                                        -- write
-			leds_s1_readdata                         : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			leds_s1_writedata                        : out std_logic_vector(31 downto 0);                    -- writedata
-			leds_s1_chipselect                       : out std_logic;                                        -- chipselect
-			nios2f_debug_mem_slave_address           : out std_logic_vector(8 downto 0);                     -- address
-			nios2f_debug_mem_slave_write             : out std_logic;                                        -- write
-			nios2f_debug_mem_slave_read              : out std_logic;                                        -- read
-			nios2f_debug_mem_slave_readdata          : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			nios2f_debug_mem_slave_writedata         : out std_logic_vector(31 downto 0);                    -- writedata
-			nios2f_debug_mem_slave_byteenable        : out std_logic_vector(3 downto 0);                     -- byteenable
-			nios2f_debug_mem_slave_waitrequest       : in  std_logic                     := 'X';             -- waitrequest
-			nios2f_debug_mem_slave_debugaccess       : out std_logic;                                        -- debugaccess
-			OCRAM_avalon_slave_address               : out std_logic_vector(7 downto 0);                     -- address
-			OCRAM_avalon_slave_write                 : out std_logic;                                        -- write
-			OCRAM_avalon_slave_read                  : out std_logic;                                        -- read
-			OCRAM_avalon_slave_readdata              : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			OCRAM_avalon_slave_writedata             : out std_logic_vector(31 downto 0);                    -- writedata
-			OCRAM_avalon_slave_beginbursttransfer    : out std_logic;                                        -- beginbursttransfer
-			OCRAM_avalon_slave_burstcount            : out std_logic_vector(10 downto 0);                    -- burstcount
-			OCRAM_avalon_slave_readdatavalid         : in  std_logic                     := 'X';             -- readdatavalid
-			OCRAM_avalon_slave_waitrequest           : in  std_logic                     := 'X';             -- waitrequest
-			switches_s1_address                      : out std_logic_vector(1 downto 0);                     -- address
-			switches_s1_readdata                     : in  std_logic_vector(31 downto 0) := (others => 'X')  -- readdata
+			clk_100MHz_clk_clk                         : in  std_logic                     := 'X';             -- clk
+			nios2f_reset_reset_bridge_in_reset_reset   : in  std_logic                     := 'X';             -- reset
+			nios2f_data_master_address                 : in  std_logic_vector(13 downto 0) := (others => 'X'); -- address
+			nios2f_data_master_waitrequest             : out std_logic;                                        -- waitrequest
+			nios2f_data_master_burstcount              : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- burstcount
+			nios2f_data_master_byteenable              : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
+			nios2f_data_master_read                    : in  std_logic                     := 'X';             -- read
+			nios2f_data_master_readdata                : out std_logic_vector(31 downto 0);                    -- readdata
+			nios2f_data_master_readdatavalid           : out std_logic;                                        -- readdatavalid
+			nios2f_data_master_write                   : in  std_logic                     := 'X';             -- write
+			nios2f_data_master_writedata               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			nios2f_data_master_debugaccess             : in  std_logic                     := 'X';             -- debugaccess
+			nios2f_instruction_master_address          : in  std_logic_vector(12 downto 0) := (others => 'X'); -- address
+			nios2f_instruction_master_waitrequest      : out std_logic;                                        -- waitrequest
+			nios2f_instruction_master_burstcount       : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- burstcount
+			nios2f_instruction_master_read             : in  std_logic                     := 'X';             -- read
+			nios2f_instruction_master_readdata         : out std_logic_vector(31 downto 0);                    -- readdata
+			nios2f_instruction_master_readdatavalid    : out std_logic;                                        -- readdatavalid
+			data_OCRAM_avalon_slave_address            : out std_logic_vector(7 downto 0);                     -- address
+			data_OCRAM_avalon_slave_write              : out std_logic;                                        -- write
+			data_OCRAM_avalon_slave_read               : out std_logic;                                        -- read
+			data_OCRAM_avalon_slave_readdata           : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			data_OCRAM_avalon_slave_writedata          : out std_logic_vector(31 downto 0);                    -- writedata
+			data_OCRAM_avalon_slave_beginbursttransfer : out std_logic;                                        -- beginbursttransfer
+			data_OCRAM_avalon_slave_burstcount         : out std_logic_vector(10 downto 0);                    -- burstcount
+			data_OCRAM_avalon_slave_readdatavalid      : in  std_logic                     := 'X';             -- readdatavalid
+			data_OCRAM_avalon_slave_waitrequest        : in  std_logic                     := 'X';             -- waitrequest
+			instruction_OCROM_s1_address               : out std_logic_vector(9 downto 0);                     -- address
+			instruction_OCROM_s1_write                 : out std_logic;                                        -- write
+			instruction_OCROM_s1_readdata              : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			instruction_OCROM_s1_writedata             : out std_logic_vector(31 downto 0);                    -- writedata
+			instruction_OCROM_s1_byteenable            : out std_logic_vector(3 downto 0);                     -- byteenable
+			instruction_OCROM_s1_chipselect            : out std_logic;                                        -- chipselect
+			instruction_OCROM_s1_clken                 : out std_logic;                                        -- clken
+			instruction_OCROM_s1_debugaccess           : out std_logic;                                        -- debugaccess
+			leds_s1_address                            : out std_logic_vector(1 downto 0);                     -- address
+			leds_s1_write                              : out std_logic;                                        -- write
+			leds_s1_readdata                           : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			leds_s1_writedata                          : out std_logic_vector(31 downto 0);                    -- writedata
+			leds_s1_chipselect                         : out std_logic;                                        -- chipselect
+			nios2f_debug_mem_slave_address             : out std_logic_vector(8 downto 0);                     -- address
+			nios2f_debug_mem_slave_write               : out std_logic;                                        -- write
+			nios2f_debug_mem_slave_read                : out std_logic;                                        -- read
+			nios2f_debug_mem_slave_readdata            : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			nios2f_debug_mem_slave_writedata           : out std_logic_vector(31 downto 0);                    -- writedata
+			nios2f_debug_mem_slave_byteenable          : out std_logic_vector(3 downto 0);                     -- byteenable
+			nios2f_debug_mem_slave_waitrequest         : in  std_logic                     := 'X';             -- waitrequest
+			nios2f_debug_mem_slave_debugaccess         : out std_logic;                                        -- debugaccess
+			switches_s1_address                        : out std_logic_vector(1 downto 0);                     -- address
+			switches_s1_readdata                       : in  std_logic_vector(31 downto 0) := (others => 'X')  -- readdata
 		);
 	end component blockram_system_v2_mm_interconnect_0;
 
@@ -207,67 +236,93 @@ architecture rtl of blockram_system_v2 is
 		);
 	end component altera_reset_controller;
 
-	signal nios2f_data_master_readdata                             : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2f_data_master_readdata -> nios2f:d_readdata
-	signal nios2f_data_master_waitrequest                          : std_logic;                     -- mm_interconnect_0:nios2f_data_master_waitrequest -> nios2f:d_waitrequest
-	signal nios2f_data_master_debugaccess                          : std_logic;                     -- nios2f:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2f_data_master_debugaccess
-	signal nios2f_data_master_address                              : std_logic_vector(12 downto 0); -- nios2f:d_address -> mm_interconnect_0:nios2f_data_master_address
-	signal nios2f_data_master_byteenable                           : std_logic_vector(3 downto 0);  -- nios2f:d_byteenable -> mm_interconnect_0:nios2f_data_master_byteenable
-	signal nios2f_data_master_read                                 : std_logic;                     -- nios2f:d_read -> mm_interconnect_0:nios2f_data_master_read
-	signal nios2f_data_master_readdatavalid                        : std_logic;                     -- mm_interconnect_0:nios2f_data_master_readdatavalid -> nios2f:d_readdatavalid
-	signal nios2f_data_master_write                                : std_logic;                     -- nios2f:d_write -> mm_interconnect_0:nios2f_data_master_write
-	signal nios2f_data_master_writedata                            : std_logic_vector(31 downto 0); -- nios2f:d_writedata -> mm_interconnect_0:nios2f_data_master_writedata
-	signal nios2f_instruction_master_readdata                      : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2f_instruction_master_readdata -> nios2f:i_readdata
-	signal nios2f_instruction_master_waitrequest                   : std_logic;                     -- mm_interconnect_0:nios2f_instruction_master_waitrequest -> nios2f:i_waitrequest
-	signal nios2f_instruction_master_address                       : std_logic_vector(12 downto 0); -- nios2f:i_address -> mm_interconnect_0:nios2f_instruction_master_address
-	signal nios2f_instruction_master_read                          : std_logic;                     -- nios2f:i_read -> mm_interconnect_0:nios2f_instruction_master_read
-	signal nios2f_instruction_master_readdatavalid                 : std_logic;                     -- mm_interconnect_0:nios2f_instruction_master_readdatavalid -> nios2f:i_readdatavalid
-	signal mm_interconnect_0_ocram_avalon_slave_beginbursttransfer : std_logic;                     -- mm_interconnect_0:OCRAM_avalon_slave_beginbursttransfer -> OCRAM:avs_beginbursttransfer
-	signal mm_interconnect_0_ocram_avalon_slave_readdata           : std_logic_vector(31 downto 0); -- OCRAM:avs_readdata -> mm_interconnect_0:OCRAM_avalon_slave_readdata
-	signal mm_interconnect_0_ocram_avalon_slave_waitrequest        : std_logic;                     -- OCRAM:avs_waitrequest -> mm_interconnect_0:OCRAM_avalon_slave_waitrequest
-	signal mm_interconnect_0_ocram_avalon_slave_address            : std_logic_vector(7 downto 0);  -- mm_interconnect_0:OCRAM_avalon_slave_address -> OCRAM:avs_address
-	signal mm_interconnect_0_ocram_avalon_slave_read               : std_logic;                     -- mm_interconnect_0:OCRAM_avalon_slave_read -> OCRAM:avs_read
-	signal mm_interconnect_0_ocram_avalon_slave_readdatavalid      : std_logic;                     -- OCRAM:avs_readdatavalid -> mm_interconnect_0:OCRAM_avalon_slave_readdatavalid
-	signal mm_interconnect_0_ocram_avalon_slave_write              : std_logic;                     -- mm_interconnect_0:OCRAM_avalon_slave_write -> OCRAM:avs_write
-	signal mm_interconnect_0_ocram_avalon_slave_writedata          : std_logic_vector(31 downto 0); -- mm_interconnect_0:OCRAM_avalon_slave_writedata -> OCRAM:avs_writedata
-	signal mm_interconnect_0_ocram_avalon_slave_burstcount         : std_logic_vector(10 downto 0); -- mm_interconnect_0:OCRAM_avalon_slave_burstcount -> OCRAM:avs_burstcount
-	signal mm_interconnect_0_nios2f_debug_mem_slave_readdata       : std_logic_vector(31 downto 0); -- nios2f:debug_mem_slave_readdata -> mm_interconnect_0:nios2f_debug_mem_slave_readdata
-	signal mm_interconnect_0_nios2f_debug_mem_slave_waitrequest    : std_logic;                     -- nios2f:debug_mem_slave_waitrequest -> mm_interconnect_0:nios2f_debug_mem_slave_waitrequest
-	signal mm_interconnect_0_nios2f_debug_mem_slave_debugaccess    : std_logic;                     -- mm_interconnect_0:nios2f_debug_mem_slave_debugaccess -> nios2f:debug_mem_slave_debugaccess
-	signal mm_interconnect_0_nios2f_debug_mem_slave_address        : std_logic_vector(8 downto 0);  -- mm_interconnect_0:nios2f_debug_mem_slave_address -> nios2f:debug_mem_slave_address
-	signal mm_interconnect_0_nios2f_debug_mem_slave_read           : std_logic;                     -- mm_interconnect_0:nios2f_debug_mem_slave_read -> nios2f:debug_mem_slave_read
-	signal mm_interconnect_0_nios2f_debug_mem_slave_byteenable     : std_logic_vector(3 downto 0);  -- mm_interconnect_0:nios2f_debug_mem_slave_byteenable -> nios2f:debug_mem_slave_byteenable
-	signal mm_interconnect_0_nios2f_debug_mem_slave_write          : std_logic;                     -- mm_interconnect_0:nios2f_debug_mem_slave_write -> nios2f:debug_mem_slave_write
-	signal mm_interconnect_0_nios2f_debug_mem_slave_writedata      : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2f_debug_mem_slave_writedata -> nios2f:debug_mem_slave_writedata
-	signal mm_interconnect_0_switches_s1_readdata                  : std_logic_vector(31 downto 0); -- switches:readdata -> mm_interconnect_0:switches_s1_readdata
-	signal mm_interconnect_0_switches_s1_address                   : std_logic_vector(1 downto 0);  -- mm_interconnect_0:switches_s1_address -> switches:address
-	signal mm_interconnect_0_leds_s1_chipselect                    : std_logic;                     -- mm_interconnect_0:leds_s1_chipselect -> leds:chipselect
-	signal mm_interconnect_0_leds_s1_readdata                      : std_logic_vector(31 downto 0); -- leds:readdata -> mm_interconnect_0:leds_s1_readdata
-	signal mm_interconnect_0_leds_s1_address                       : std_logic_vector(1 downto 0);  -- mm_interconnect_0:leds_s1_address -> leds:address
-	signal mm_interconnect_0_leds_s1_write                         : std_logic;                     -- mm_interconnect_0:leds_s1_write -> mm_interconnect_0_leds_s1_write:in
-	signal mm_interconnect_0_leds_s1_writedata                     : std_logic_vector(31 downto 0); -- mm_interconnect_0:leds_s1_writedata -> leds:writedata
-	signal nios2f_irq_irq                                          : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2f:irq
-	signal rst_controller_reset_out_reset                          : std_logic;                     -- rst_controller:reset_out -> [irq_mapper:reset, mm_interconnect_0:nios2f_reset_reset_bridge_in_reset_reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
-	signal rst_controller_reset_out_reset_req                      : std_logic;                     -- rst_controller:reset_req -> [nios2f:reset_req, rst_translator:reset_req_in]
-	signal nios2f_debug_reset_request_reset                        : std_logic;                     -- nios2f:debug_reset_request -> rst_controller:reset_in1
-	signal reset_reset_n_ports_inv                                 : std_logic;                     -- reset_reset_n:inv -> rst_controller:reset_in0
-	signal mm_interconnect_0_leds_s1_write_ports_inv               : std_logic;                     -- mm_interconnect_0_leds_s1_write:inv -> leds:write_n
-	signal rst_controller_reset_out_reset_ports_inv                : std_logic;                     -- rst_controller_reset_out_reset:inv -> [OCRAM:reset_n, leds:reset_n, nios2f:reset_n, switches:reset_n]
+	signal nios2f_data_master_readdata                                  : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2f_data_master_readdata -> nios2f:d_readdata
+	signal nios2f_data_master_waitrequest                               : std_logic;                     -- mm_interconnect_0:nios2f_data_master_waitrequest -> nios2f:d_waitrequest
+	signal nios2f_data_master_debugaccess                               : std_logic;                     -- nios2f:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2f_data_master_debugaccess
+	signal nios2f_data_master_address                                   : std_logic_vector(13 downto 0); -- nios2f:d_address -> mm_interconnect_0:nios2f_data_master_address
+	signal nios2f_data_master_byteenable                                : std_logic_vector(3 downto 0);  -- nios2f:d_byteenable -> mm_interconnect_0:nios2f_data_master_byteenable
+	signal nios2f_data_master_read                                      : std_logic;                     -- nios2f:d_read -> mm_interconnect_0:nios2f_data_master_read
+	signal nios2f_data_master_readdatavalid                             : std_logic;                     -- mm_interconnect_0:nios2f_data_master_readdatavalid -> nios2f:d_readdatavalid
+	signal nios2f_data_master_write                                     : std_logic;                     -- nios2f:d_write -> mm_interconnect_0:nios2f_data_master_write
+	signal nios2f_data_master_writedata                                 : std_logic_vector(31 downto 0); -- nios2f:d_writedata -> mm_interconnect_0:nios2f_data_master_writedata
+	signal nios2f_data_master_burstcount                                : std_logic_vector(3 downto 0);  -- nios2f:d_burstcount -> mm_interconnect_0:nios2f_data_master_burstcount
+	signal nios2f_instruction_master_readdata                           : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2f_instruction_master_readdata -> nios2f:i_readdata
+	signal nios2f_instruction_master_waitrequest                        : std_logic;                     -- mm_interconnect_0:nios2f_instruction_master_waitrequest -> nios2f:i_waitrequest
+	signal nios2f_instruction_master_address                            : std_logic_vector(12 downto 0); -- nios2f:i_address -> mm_interconnect_0:nios2f_instruction_master_address
+	signal nios2f_instruction_master_read                               : std_logic;                     -- nios2f:i_read -> mm_interconnect_0:nios2f_instruction_master_read
+	signal nios2f_instruction_master_readdatavalid                      : std_logic;                     -- mm_interconnect_0:nios2f_instruction_master_readdatavalid -> nios2f:i_readdatavalid
+	signal nios2f_instruction_master_burstcount                         : std_logic_vector(3 downto 0);  -- nios2f:i_burstcount -> mm_interconnect_0:nios2f_instruction_master_burstcount
+	signal mm_interconnect_0_data_ocram_avalon_slave_beginbursttransfer : std_logic;                     -- mm_interconnect_0:data_OCRAM_avalon_slave_beginbursttransfer -> data_OCRAM:avs_beginbursttransfer
+	signal mm_interconnect_0_data_ocram_avalon_slave_readdata           : std_logic_vector(31 downto 0); -- data_OCRAM:avs_readdata -> mm_interconnect_0:data_OCRAM_avalon_slave_readdata
+	signal mm_interconnect_0_data_ocram_avalon_slave_waitrequest        : std_logic;                     -- data_OCRAM:avs_waitrequest -> mm_interconnect_0:data_OCRAM_avalon_slave_waitrequest
+	signal mm_interconnect_0_data_ocram_avalon_slave_address            : std_logic_vector(7 downto 0);  -- mm_interconnect_0:data_OCRAM_avalon_slave_address -> data_OCRAM:avs_address
+	signal mm_interconnect_0_data_ocram_avalon_slave_read               : std_logic;                     -- mm_interconnect_0:data_OCRAM_avalon_slave_read -> data_OCRAM:avs_read
+	signal mm_interconnect_0_data_ocram_avalon_slave_readdatavalid      : std_logic;                     -- data_OCRAM:avs_readdatavalid -> mm_interconnect_0:data_OCRAM_avalon_slave_readdatavalid
+	signal mm_interconnect_0_data_ocram_avalon_slave_write              : std_logic;                     -- mm_interconnect_0:data_OCRAM_avalon_slave_write -> data_OCRAM:avs_write
+	signal mm_interconnect_0_data_ocram_avalon_slave_writedata          : std_logic_vector(31 downto 0); -- mm_interconnect_0:data_OCRAM_avalon_slave_writedata -> data_OCRAM:avs_writedata
+	signal mm_interconnect_0_data_ocram_avalon_slave_burstcount         : std_logic_vector(10 downto 0); -- mm_interconnect_0:data_OCRAM_avalon_slave_burstcount -> data_OCRAM:avs_burstcount
+	signal mm_interconnect_0_nios2f_debug_mem_slave_readdata            : std_logic_vector(31 downto 0); -- nios2f:debug_mem_slave_readdata -> mm_interconnect_0:nios2f_debug_mem_slave_readdata
+	signal mm_interconnect_0_nios2f_debug_mem_slave_waitrequest         : std_logic;                     -- nios2f:debug_mem_slave_waitrequest -> mm_interconnect_0:nios2f_debug_mem_slave_waitrequest
+	signal mm_interconnect_0_nios2f_debug_mem_slave_debugaccess         : std_logic;                     -- mm_interconnect_0:nios2f_debug_mem_slave_debugaccess -> nios2f:debug_mem_slave_debugaccess
+	signal mm_interconnect_0_nios2f_debug_mem_slave_address             : std_logic_vector(8 downto 0);  -- mm_interconnect_0:nios2f_debug_mem_slave_address -> nios2f:debug_mem_slave_address
+	signal mm_interconnect_0_nios2f_debug_mem_slave_read                : std_logic;                     -- mm_interconnect_0:nios2f_debug_mem_slave_read -> nios2f:debug_mem_slave_read
+	signal mm_interconnect_0_nios2f_debug_mem_slave_byteenable          : std_logic_vector(3 downto 0);  -- mm_interconnect_0:nios2f_debug_mem_slave_byteenable -> nios2f:debug_mem_slave_byteenable
+	signal mm_interconnect_0_nios2f_debug_mem_slave_write               : std_logic;                     -- mm_interconnect_0:nios2f_debug_mem_slave_write -> nios2f:debug_mem_slave_write
+	signal mm_interconnect_0_nios2f_debug_mem_slave_writedata           : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2f_debug_mem_slave_writedata -> nios2f:debug_mem_slave_writedata
+	signal mm_interconnect_0_switches_s1_readdata                       : std_logic_vector(31 downto 0); -- switches:readdata -> mm_interconnect_0:switches_s1_readdata
+	signal mm_interconnect_0_switches_s1_address                        : std_logic_vector(1 downto 0);  -- mm_interconnect_0:switches_s1_address -> switches:address
+	signal mm_interconnect_0_leds_s1_chipselect                         : std_logic;                     -- mm_interconnect_0:leds_s1_chipselect -> leds:chipselect
+	signal mm_interconnect_0_leds_s1_readdata                           : std_logic_vector(31 downto 0); -- leds:readdata -> mm_interconnect_0:leds_s1_readdata
+	signal mm_interconnect_0_leds_s1_address                            : std_logic_vector(1 downto 0);  -- mm_interconnect_0:leds_s1_address -> leds:address
+	signal mm_interconnect_0_leds_s1_write                              : std_logic;                     -- mm_interconnect_0:leds_s1_write -> mm_interconnect_0_leds_s1_write:in
+	signal mm_interconnect_0_leds_s1_writedata                          : std_logic_vector(31 downto 0); -- mm_interconnect_0:leds_s1_writedata -> leds:writedata
+	signal mm_interconnect_0_instruction_ocrom_s1_chipselect            : std_logic;                     -- mm_interconnect_0:instruction_OCROM_s1_chipselect -> instruction_OCROM:chipselect
+	signal mm_interconnect_0_instruction_ocrom_s1_readdata              : std_logic_vector(31 downto 0); -- instruction_OCROM:readdata -> mm_interconnect_0:instruction_OCROM_s1_readdata
+	signal mm_interconnect_0_instruction_ocrom_s1_debugaccess           : std_logic;                     -- mm_interconnect_0:instruction_OCROM_s1_debugaccess -> instruction_OCROM:debugaccess
+	signal mm_interconnect_0_instruction_ocrom_s1_address               : std_logic_vector(9 downto 0);  -- mm_interconnect_0:instruction_OCROM_s1_address -> instruction_OCROM:address
+	signal mm_interconnect_0_instruction_ocrom_s1_byteenable            : std_logic_vector(3 downto 0);  -- mm_interconnect_0:instruction_OCROM_s1_byteenable -> instruction_OCROM:byteenable
+	signal mm_interconnect_0_instruction_ocrom_s1_write                 : std_logic;                     -- mm_interconnect_0:instruction_OCROM_s1_write -> instruction_OCROM:write
+	signal mm_interconnect_0_instruction_ocrom_s1_writedata             : std_logic_vector(31 downto 0); -- mm_interconnect_0:instruction_OCROM_s1_writedata -> instruction_OCROM:writedata
+	signal mm_interconnect_0_instruction_ocrom_s1_clken                 : std_logic;                     -- mm_interconnect_0:instruction_OCROM_s1_clken -> instruction_OCROM:clken
+	signal nios2f_irq_irq                                               : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2f:irq
+	signal rst_controller_reset_out_reset                               : std_logic;                     -- rst_controller:reset_out -> [instruction_OCROM:reset, irq_mapper:reset, mm_interconnect_0:nios2f_reset_reset_bridge_in_reset_reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
+	signal rst_controller_reset_out_reset_req                           : std_logic;                     -- rst_controller:reset_req -> [instruction_OCROM:reset_req, nios2f:reset_req, rst_translator:reset_req_in]
+	signal nios2f_debug_reset_request_reset                             : std_logic;                     -- nios2f:debug_reset_request -> rst_controller:reset_in1
+	signal reset_reset_n_ports_inv                                      : std_logic;                     -- reset_reset_n:inv -> rst_controller:reset_in0
+	signal mm_interconnect_0_leds_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_leds_s1_write:inv -> leds:write_n
+	signal rst_controller_reset_out_reset_ports_inv                     : std_logic;                     -- rst_controller_reset_out_reset:inv -> [data_OCRAM:reset_n, leds:reset_n, nios2f:reset_n, switches:reset_n]
 
 begin
 
-	ocram : component custom_OCRAM
+	data_ocram : component custom_OCRAM
 		port map (
-			clk                    => clk_clk,                                                 --        clock.clk
-			reset_n                => rst_controller_reset_out_reset_ports_inv,                --        reset.reset_n
-			avs_address            => mm_interconnect_0_ocram_avalon_slave_address,            -- avalon_slave.address
-			avs_read               => mm_interconnect_0_ocram_avalon_slave_read,               --             .read
-			avs_readdata           => mm_interconnect_0_ocram_avalon_slave_readdata,           --             .readdata
-			avs_write              => mm_interconnect_0_ocram_avalon_slave_write,              --             .write
-			avs_writedata          => mm_interconnect_0_ocram_avalon_slave_writedata,          --             .writedata
-			avs_waitrequest        => mm_interconnect_0_ocram_avalon_slave_waitrequest,        --             .waitrequest
-			avs_readdatavalid      => mm_interconnect_0_ocram_avalon_slave_readdatavalid,      --             .readdatavalid
-			avs_beginbursttransfer => mm_interconnect_0_ocram_avalon_slave_beginbursttransfer, --             .beginbursttransfer
-			avs_burstcount         => mm_interconnect_0_ocram_avalon_slave_burstcount          --             .burstcount
+			clk                    => clk_clk,                                                      --        clock.clk
+			reset_n                => rst_controller_reset_out_reset_ports_inv,                     --        reset.reset_n
+			avs_address            => mm_interconnect_0_data_ocram_avalon_slave_address,            -- avalon_slave.address
+			avs_read               => mm_interconnect_0_data_ocram_avalon_slave_read,               --             .read
+			avs_readdata           => mm_interconnect_0_data_ocram_avalon_slave_readdata,           --             .readdata
+			avs_write              => mm_interconnect_0_data_ocram_avalon_slave_write,              --             .write
+			avs_writedata          => mm_interconnect_0_data_ocram_avalon_slave_writedata,          --             .writedata
+			avs_waitrequest        => mm_interconnect_0_data_ocram_avalon_slave_waitrequest,        --             .waitrequest
+			avs_readdatavalid      => mm_interconnect_0_data_ocram_avalon_slave_readdatavalid,      --             .readdatavalid
+			avs_beginbursttransfer => mm_interconnect_0_data_ocram_avalon_slave_beginbursttransfer, --             .beginbursttransfer
+			avs_burstcount         => mm_interconnect_0_data_ocram_avalon_slave_burstcount          --             .burstcount
+		);
+
+	instruction_ocrom : component blockram_system_v2_instruction_OCROM
+		port map (
+			clk         => clk_clk,                                            --   clk1.clk
+			address     => mm_interconnect_0_instruction_ocrom_s1_address,     --     s1.address
+			debugaccess => mm_interconnect_0_instruction_ocrom_s1_debugaccess, --       .debugaccess
+			clken       => mm_interconnect_0_instruction_ocrom_s1_clken,       --       .clken
+			chipselect  => mm_interconnect_0_instruction_ocrom_s1_chipselect,  --       .chipselect
+			write       => mm_interconnect_0_instruction_ocrom_s1_write,       --       .write
+			readdata    => mm_interconnect_0_instruction_ocrom_s1_readdata,    --       .readdata
+			writedata   => mm_interconnect_0_instruction_ocrom_s1_writedata,   --       .writedata
+			byteenable  => mm_interconnect_0_instruction_ocrom_s1_byteenable,  --       .byteenable
+			reset       => rst_controller_reset_out_reset,                     -- reset1.reset
+			reset_req   => rst_controller_reset_out_reset_req,                 --       .reset_req
+			freeze      => '0'                                                 -- (terminated)
 		);
 
 	leds : component blockram_system_v2_leds
@@ -294,12 +349,14 @@ begin
 			d_waitrequest                       => nios2f_data_master_waitrequest,                       --                          .waitrequest
 			d_write                             => nios2f_data_master_write,                             --                          .write
 			d_writedata                         => nios2f_data_master_writedata,                         --                          .writedata
+			d_burstcount                        => nios2f_data_master_burstcount,                        --                          .burstcount
 			d_readdatavalid                     => nios2f_data_master_readdatavalid,                     --                          .readdatavalid
 			debug_mem_slave_debugaccess_to_roms => nios2f_data_master_debugaccess,                       --                          .debugaccess
 			i_address                           => nios2f_instruction_master_address,                    --        instruction_master.address
 			i_read                              => nios2f_instruction_master_read,                       --                          .read
 			i_readdata                          => nios2f_instruction_master_readdata,                   --                          .readdata
 			i_waitrequest                       => nios2f_instruction_master_waitrequest,                --                          .waitrequest
+			i_burstcount                        => nios2f_instruction_master_burstcount,                 --                          .burstcount
 			i_readdatavalid                     => nios2f_instruction_master_readdatavalid,              --                          .readdatavalid
 			irq                                 => nios2f_irq_irq,                                       --                       irq.irq
 			debug_reset_request                 => nios2f_debug_reset_request_reset,                     --       debug_reset_request.reset
@@ -325,46 +382,56 @@ begin
 
 	mm_interconnect_0 : component blockram_system_v2_mm_interconnect_0
 		port map (
-			clk_100MHz_clk_clk                       => clk_clk,                                                 --                     clk_100MHz_clk.clk
-			nios2f_reset_reset_bridge_in_reset_reset => rst_controller_reset_out_reset,                          -- nios2f_reset_reset_bridge_in_reset.reset
-			nios2f_data_master_address               => nios2f_data_master_address,                              --                 nios2f_data_master.address
-			nios2f_data_master_waitrequest           => nios2f_data_master_waitrequest,                          --                                   .waitrequest
-			nios2f_data_master_byteenable            => nios2f_data_master_byteenable,                           --                                   .byteenable
-			nios2f_data_master_read                  => nios2f_data_master_read,                                 --                                   .read
-			nios2f_data_master_readdata              => nios2f_data_master_readdata,                             --                                   .readdata
-			nios2f_data_master_readdatavalid         => nios2f_data_master_readdatavalid,                        --                                   .readdatavalid
-			nios2f_data_master_write                 => nios2f_data_master_write,                                --                                   .write
-			nios2f_data_master_writedata             => nios2f_data_master_writedata,                            --                                   .writedata
-			nios2f_data_master_debugaccess           => nios2f_data_master_debugaccess,                          --                                   .debugaccess
-			nios2f_instruction_master_address        => nios2f_instruction_master_address,                       --          nios2f_instruction_master.address
-			nios2f_instruction_master_waitrequest    => nios2f_instruction_master_waitrequest,                   --                                   .waitrequest
-			nios2f_instruction_master_read           => nios2f_instruction_master_read,                          --                                   .read
-			nios2f_instruction_master_readdata       => nios2f_instruction_master_readdata,                      --                                   .readdata
-			nios2f_instruction_master_readdatavalid  => nios2f_instruction_master_readdatavalid,                 --                                   .readdatavalid
-			leds_s1_address                          => mm_interconnect_0_leds_s1_address,                       --                            leds_s1.address
-			leds_s1_write                            => mm_interconnect_0_leds_s1_write,                         --                                   .write
-			leds_s1_readdata                         => mm_interconnect_0_leds_s1_readdata,                      --                                   .readdata
-			leds_s1_writedata                        => mm_interconnect_0_leds_s1_writedata,                     --                                   .writedata
-			leds_s1_chipselect                       => mm_interconnect_0_leds_s1_chipselect,                    --                                   .chipselect
-			nios2f_debug_mem_slave_address           => mm_interconnect_0_nios2f_debug_mem_slave_address,        --             nios2f_debug_mem_slave.address
-			nios2f_debug_mem_slave_write             => mm_interconnect_0_nios2f_debug_mem_slave_write,          --                                   .write
-			nios2f_debug_mem_slave_read              => mm_interconnect_0_nios2f_debug_mem_slave_read,           --                                   .read
-			nios2f_debug_mem_slave_readdata          => mm_interconnect_0_nios2f_debug_mem_slave_readdata,       --                                   .readdata
-			nios2f_debug_mem_slave_writedata         => mm_interconnect_0_nios2f_debug_mem_slave_writedata,      --                                   .writedata
-			nios2f_debug_mem_slave_byteenable        => mm_interconnect_0_nios2f_debug_mem_slave_byteenable,     --                                   .byteenable
-			nios2f_debug_mem_slave_waitrequest       => mm_interconnect_0_nios2f_debug_mem_slave_waitrequest,    --                                   .waitrequest
-			nios2f_debug_mem_slave_debugaccess       => mm_interconnect_0_nios2f_debug_mem_slave_debugaccess,    --                                   .debugaccess
-			OCRAM_avalon_slave_address               => mm_interconnect_0_ocram_avalon_slave_address,            --                 OCRAM_avalon_slave.address
-			OCRAM_avalon_slave_write                 => mm_interconnect_0_ocram_avalon_slave_write,              --                                   .write
-			OCRAM_avalon_slave_read                  => mm_interconnect_0_ocram_avalon_slave_read,               --                                   .read
-			OCRAM_avalon_slave_readdata              => mm_interconnect_0_ocram_avalon_slave_readdata,           --                                   .readdata
-			OCRAM_avalon_slave_writedata             => mm_interconnect_0_ocram_avalon_slave_writedata,          --                                   .writedata
-			OCRAM_avalon_slave_beginbursttransfer    => mm_interconnect_0_ocram_avalon_slave_beginbursttransfer, --                                   .beginbursttransfer
-			OCRAM_avalon_slave_burstcount            => mm_interconnect_0_ocram_avalon_slave_burstcount,         --                                   .burstcount
-			OCRAM_avalon_slave_readdatavalid         => mm_interconnect_0_ocram_avalon_slave_readdatavalid,      --                                   .readdatavalid
-			OCRAM_avalon_slave_waitrequest           => mm_interconnect_0_ocram_avalon_slave_waitrequest,        --                                   .waitrequest
-			switches_s1_address                      => mm_interconnect_0_switches_s1_address,                   --                        switches_s1.address
-			switches_s1_readdata                     => mm_interconnect_0_switches_s1_readdata                   --                                   .readdata
+			clk_100MHz_clk_clk                         => clk_clk,                                                      --                     clk_100MHz_clk.clk
+			nios2f_reset_reset_bridge_in_reset_reset   => rst_controller_reset_out_reset,                               -- nios2f_reset_reset_bridge_in_reset.reset
+			nios2f_data_master_address                 => nios2f_data_master_address,                                   --                 nios2f_data_master.address
+			nios2f_data_master_waitrequest             => nios2f_data_master_waitrequest,                               --                                   .waitrequest
+			nios2f_data_master_burstcount              => nios2f_data_master_burstcount,                                --                                   .burstcount
+			nios2f_data_master_byteenable              => nios2f_data_master_byteenable,                                --                                   .byteenable
+			nios2f_data_master_read                    => nios2f_data_master_read,                                      --                                   .read
+			nios2f_data_master_readdata                => nios2f_data_master_readdata,                                  --                                   .readdata
+			nios2f_data_master_readdatavalid           => nios2f_data_master_readdatavalid,                             --                                   .readdatavalid
+			nios2f_data_master_write                   => nios2f_data_master_write,                                     --                                   .write
+			nios2f_data_master_writedata               => nios2f_data_master_writedata,                                 --                                   .writedata
+			nios2f_data_master_debugaccess             => nios2f_data_master_debugaccess,                               --                                   .debugaccess
+			nios2f_instruction_master_address          => nios2f_instruction_master_address,                            --          nios2f_instruction_master.address
+			nios2f_instruction_master_waitrequest      => nios2f_instruction_master_waitrequest,                        --                                   .waitrequest
+			nios2f_instruction_master_burstcount       => nios2f_instruction_master_burstcount,                         --                                   .burstcount
+			nios2f_instruction_master_read             => nios2f_instruction_master_read,                               --                                   .read
+			nios2f_instruction_master_readdata         => nios2f_instruction_master_readdata,                           --                                   .readdata
+			nios2f_instruction_master_readdatavalid    => nios2f_instruction_master_readdatavalid,                      --                                   .readdatavalid
+			data_OCRAM_avalon_slave_address            => mm_interconnect_0_data_ocram_avalon_slave_address,            --            data_OCRAM_avalon_slave.address
+			data_OCRAM_avalon_slave_write              => mm_interconnect_0_data_ocram_avalon_slave_write,              --                                   .write
+			data_OCRAM_avalon_slave_read               => mm_interconnect_0_data_ocram_avalon_slave_read,               --                                   .read
+			data_OCRAM_avalon_slave_readdata           => mm_interconnect_0_data_ocram_avalon_slave_readdata,           --                                   .readdata
+			data_OCRAM_avalon_slave_writedata          => mm_interconnect_0_data_ocram_avalon_slave_writedata,          --                                   .writedata
+			data_OCRAM_avalon_slave_beginbursttransfer => mm_interconnect_0_data_ocram_avalon_slave_beginbursttransfer, --                                   .beginbursttransfer
+			data_OCRAM_avalon_slave_burstcount         => mm_interconnect_0_data_ocram_avalon_slave_burstcount,         --                                   .burstcount
+			data_OCRAM_avalon_slave_readdatavalid      => mm_interconnect_0_data_ocram_avalon_slave_readdatavalid,      --                                   .readdatavalid
+			data_OCRAM_avalon_slave_waitrequest        => mm_interconnect_0_data_ocram_avalon_slave_waitrequest,        --                                   .waitrequest
+			instruction_OCROM_s1_address               => mm_interconnect_0_instruction_ocrom_s1_address,               --               instruction_OCROM_s1.address
+			instruction_OCROM_s1_write                 => mm_interconnect_0_instruction_ocrom_s1_write,                 --                                   .write
+			instruction_OCROM_s1_readdata              => mm_interconnect_0_instruction_ocrom_s1_readdata,              --                                   .readdata
+			instruction_OCROM_s1_writedata             => mm_interconnect_0_instruction_ocrom_s1_writedata,             --                                   .writedata
+			instruction_OCROM_s1_byteenable            => mm_interconnect_0_instruction_ocrom_s1_byteenable,            --                                   .byteenable
+			instruction_OCROM_s1_chipselect            => mm_interconnect_0_instruction_ocrom_s1_chipselect,            --                                   .chipselect
+			instruction_OCROM_s1_clken                 => mm_interconnect_0_instruction_ocrom_s1_clken,                 --                                   .clken
+			instruction_OCROM_s1_debugaccess           => mm_interconnect_0_instruction_ocrom_s1_debugaccess,           --                                   .debugaccess
+			leds_s1_address                            => mm_interconnect_0_leds_s1_address,                            --                            leds_s1.address
+			leds_s1_write                              => mm_interconnect_0_leds_s1_write,                              --                                   .write
+			leds_s1_readdata                           => mm_interconnect_0_leds_s1_readdata,                           --                                   .readdata
+			leds_s1_writedata                          => mm_interconnect_0_leds_s1_writedata,                          --                                   .writedata
+			leds_s1_chipselect                         => mm_interconnect_0_leds_s1_chipselect,                         --                                   .chipselect
+			nios2f_debug_mem_slave_address             => mm_interconnect_0_nios2f_debug_mem_slave_address,             --             nios2f_debug_mem_slave.address
+			nios2f_debug_mem_slave_write               => mm_interconnect_0_nios2f_debug_mem_slave_write,               --                                   .write
+			nios2f_debug_mem_slave_read                => mm_interconnect_0_nios2f_debug_mem_slave_read,                --                                   .read
+			nios2f_debug_mem_slave_readdata            => mm_interconnect_0_nios2f_debug_mem_slave_readdata,            --                                   .readdata
+			nios2f_debug_mem_slave_writedata           => mm_interconnect_0_nios2f_debug_mem_slave_writedata,           --                                   .writedata
+			nios2f_debug_mem_slave_byteenable          => mm_interconnect_0_nios2f_debug_mem_slave_byteenable,          --                                   .byteenable
+			nios2f_debug_mem_slave_waitrequest         => mm_interconnect_0_nios2f_debug_mem_slave_waitrequest,         --                                   .waitrequest
+			nios2f_debug_mem_slave_debugaccess         => mm_interconnect_0_nios2f_debug_mem_slave_debugaccess,         --                                   .debugaccess
+			switches_s1_address                        => mm_interconnect_0_switches_s1_address,                        --                        switches_s1.address
+			switches_s1_readdata                       => mm_interconnect_0_switches_s1_readdata                        --                                   .readdata
 		);
 
 	irq_mapper : component blockram_system_v2_irq_mapper

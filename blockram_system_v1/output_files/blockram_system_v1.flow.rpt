@@ -1,5 +1,5 @@
 Flow report for blockram_system_v1
-Sun Nov  5 17:45:42 2023
+Tue Nov 14 12:08:13 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Nov  5 17:45:42 2023          ;
+; Flow Status                        ; Successful - Tue Nov 14 12:08:13 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; blockram_system_v1                             ;
 ; Top-level Entity Name              ; top_level_entity                               ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/05/2023 17:44:42 ;
+; Start date & time ; 11/14/2023 12:07:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; blockram_system_v1  ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------------------------------------+--------------------+------------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                                ; Default Value      ; Entity Name      ; Section Id                        ;
 +-------------------------------------+----------------------------------------------------------------------+--------------------+------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 106024607881685.169920268111183                                      ; --                 ; --               ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 106024607881685.169996002105591                                      ; --                 ; --               ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                  ; --                 ; --               ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                  ; --                 ; --               ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                  ; --                 ; --               ; eda_board_design_signal_integrity ;
@@ -106,7 +106,7 @@ https://fpgasoftware.intel.com/eula.
 ; SEARCH_PATH                         ; SBT_workspace/blockram_system_v1/mem_init/                           ; --                 ; --               ; --                                ;
 ; SLD_FILE                            ; platform_designer/synthesis/blockram_system_v1.regmap                ; --                 ; --               ; --                                ;
 ; SLD_FILE                            ; platform_designer/synthesis/blockram_system_v1.debuginfo             ; --                 ; --               ; --                                ;
-; SLD_INFO                            ; QSYS_NAME blockram_system_v1 HAS_SOPCINFO 1 GENERATION_ID 1699199785 ; --                 ; --               ; --                                ;
+; SLD_INFO                            ; QSYS_NAME blockram_system_v1 HAS_SOPCINFO 1 GENERATION_ID 1699959935 ; --                 ; --               ; --                                ;
 ; SOPCINFO_FILE                       ; platform_designer/synthesis/../../blockram_system_v1.sopcinfo        ; --                 ; --               ; --                                ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                   ; --                 ; --               ; --                                ;
 ; TOP_LEVEL_ENTITY                    ; top_level_entity                                                     ; blockram_system_v1 ; --               ; --                                ;
@@ -118,12 +118,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 505 MB              ; 00:00:58                           ;
-; Fitter               ; 00:00:14     ; 1.1                     ; 737 MB              ; 00:00:19                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 380 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 475 MB              ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 510 MB              ; 00:01:09                           ;
+; Fitter               ; 00:00:16     ; 1.1                     ; 742 MB              ; 00:00:21                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 380 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 467 MB              ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 611 MB              ; 00:00:03                           ;
-; Total                ; 00:00:50     ; --                      ; --                  ; 00:01:26                           ;
+; Total                ; 00:01:02     ; --                      ; --                  ; 00:01:39                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

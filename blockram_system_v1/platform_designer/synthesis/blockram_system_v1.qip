@@ -2,7 +2,7 @@ set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1"
 set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_TOOL_VERSION "22.1"
 set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "blockram_system_v1" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../blockram_system_v1.sopcinfo"]
-set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name SLD_INFO "QSYS_NAME blockram_system_v1 HAS_SOPCINFO 1 GENERATION_ID 1699199785"
+set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name SLD_INFO "QSYS_NAME blockram_system_v1 HAS_SOPCINFO 1 GENERATION_ID 1699961010"
 set_global_assignment -library "blockram_system_v1" -name MISC_FILE [file join $::quartus(qip_path) "../blockram_system_v1.cmp"]
 set_global_assignment -library "blockram_system_v1" -name SLD_FILE [file join $::quartus(qip_path) "blockram_system_v1.regmap"]
 set_global_assignment -library "blockram_system_v1" -name SLD_FILE [file join $::quartus(qip_path) "blockram_system_v1.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1"
 set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY5OTE5OTc4NQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY5OTk2MTAxMA==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSAxMCBMUA==::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBDTDAyNVlFMTQ0QzhH::QXV0byBERVZJQ0U="
 set_global_assignment -entity "blockram_system_v1" -library "blockram_system_v1" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="

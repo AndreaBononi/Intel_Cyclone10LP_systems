@@ -6,10 +6,10 @@
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
    <inputclock preferredWidth="108" />
+   <name preferredWidth="177" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library,Library/Processors and Peripherals,Library/Processors and Peripherals/Peripherals,Project,Library/Processors and Peripherals/Embedded Processors" />
+ <library expandedCategories="Library,Project" />
  <window width="1848" height="1053" x="72" y="27" />
  <generation
    synthesis="VHDL"

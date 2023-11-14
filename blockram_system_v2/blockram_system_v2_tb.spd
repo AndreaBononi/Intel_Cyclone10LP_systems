@@ -25,21 +25,21 @@
    type="SYSTEM_VERILOG"
    library="rsp_mux" />
  <file
-   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_demux_002.sv"
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_demux_001.sv"
    type="SYSTEM_VERILOG"
-   library="rsp_demux_002" />
+   library="rsp_demux_001" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_rsp_demux.sv"
    type="SYSTEM_VERILOG"
    library="rsp_demux" />
  <file
-   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_mux_002.sv"
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_mux_001.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_002" />
+   library="cmd_mux_001" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_002" />
+   library="cmd_mux_001" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_cmd_mux.sv"
    type="SYSTEM_VERILOG"
@@ -57,6 +57,46 @@
    type="SYSTEM_VERILOG"
    library="cmd_demux" />
  <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_adapter.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_adapter_uncmpr.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_adapter_13_1.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_adapter_new.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_incr_burst_converter.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_wrap_burst_converter.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_default_burst_converter.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_avalon_st_pipeline_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_avalon_st_pipeline_base.v"
+   type="SYSTEM_VERILOG"
+   library="nios2f_debug_mem_slave_burst_adapter" />
+ <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_traffic_limiter.sv"
    type="SYSTEM_VERILOG"
    library="nios2f_data_master_limiter" />
@@ -73,9 +113,13 @@
    type="SYSTEM_VERILOG"
    library="nios2f_data_master_limiter" />
  <file
-   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_004.sv"
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_006.sv"
    type="SYSTEM_VERILOG"
-   library="router_004" />
+   library="router_006" />
+ <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_003.sv"
+   type="SYSTEM_VERILOG"
+   library="router_003" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_mm_interconnect_0_router_002.sv"
    type="SYSTEM_VERILOG"
@@ -91,15 +135,15 @@
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_avalon_sc_fifo.v"
    type="VERILOG"
-   library="OCRAM_avalon_slave_agent_rsp_fifo" />
+   library="data_OCRAM_avalon_slave_agent_rsp_fifo" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_slave_agent.sv"
    type="SYSTEM_VERILOG"
-   library="OCRAM_avalon_slave_agent" />
+   library="data_OCRAM_avalon_slave_agent" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv"
    type="SYSTEM_VERILOG"
-   library="OCRAM_avalon_slave_agent" />
+   library="data_OCRAM_avalon_slave_agent" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_master_agent.sv"
    type="SYSTEM_VERILOG"
@@ -107,7 +151,7 @@
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_slave_translator.sv"
    type="SYSTEM_VERILOG"
-   library="OCRAM_avalon_slave_translator" />
+   library="data_OCRAM_avalon_slave_translator" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_master_translator.sv"
    type="SYSTEM_VERILOG"
@@ -269,53 +313,57 @@
    type="VHDL"
    library="leds" />
  <file
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_system_v2_instruction_OCROM.vhd"
+   type="VHDL"
+   library="instruction_OCROM" />
+ <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/d_flipflop.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/t_flip_flop.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/reg.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/mux_2to1.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/counter_Nbit.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/comparator_Nbit.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/incrementer_8bit_nopipe.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter_CU.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter_EU.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/avs_to_blockram_converter.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/blockram_1port_8a_32d.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/custom_OCRAM.vhd"
    type="VHDL"
-   library="OCRAM" />
+   library="data_OCRAM" />
  <file
    path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_avalon_reset_source.vhd"
    type="VHDL"
@@ -333,4 +381,7 @@
    type="VHDL" />
  <topLevel name="blockram_system_v2_tb" />
  <deviceFamily name="cyclone10lp" />
+ <modelMap
+   controllerPath="blockram_system_v2_tb.blockram_system_v2_inst.instruction_OCROM"
+   modelPath="blockram_system_v2_tb.blockram_system_v2_inst.instruction_OCROM" />
 </simPackage>

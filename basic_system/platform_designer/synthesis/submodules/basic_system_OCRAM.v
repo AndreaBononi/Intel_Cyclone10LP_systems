@@ -36,7 +36,7 @@ module basic_system_OCRAM (
                           )
 ;
 
-  parameter INIT_FILE = "/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex";
+  parameter INIT_FILE = "/home/andrea/Documents/Tesi_287628/287628/basic_system/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex";
 
 
   output  [ 15: 0] readdata;

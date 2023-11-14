@@ -8,11 +8,11 @@
    <name preferredWidth="214" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Processors and Peripherals,Library/Processors and Peripherals/Embedded Processors,Project,Library" />
+ <library expandedCategories="Project,Library" />
  <window width="1848" height="1053" x="72" y="27" />
  <generation
    synthesis="VHDL"
    testbench_system="SIMPLE"
-   testbench_simulation="VHDL" />
+   testbench_simulation="VHDL"
+   path="platform_designer/" />
 </preferences>

@@ -1,0 +1,18 @@
+10:42:48 **** Build of configuration Nios II for project blockram_system_v2 ****
+make mem_init_generate 
+Info: Building ../blockram_system_v2_bsp/
+make --no-print-directory -C ../blockram_system_v2_bsp/
+[BSP build complete]
+Post-processing to create mem_init/blockram_system_v2_instruction_OCROM.hex...
+elf2hex --record=4 blockram_system_v2.elf 0x00000000 0x00000fff --width=32 --little-endian-mem --create-lanes=0 mem_init/blockram_system_v2_instruction_OCROM.hex
+Post-processing to create mem_init/hdl_sim/blockram_system_v2_instruction_OCROM.dat...
+elf2dat --infile=blockram_system_v2.elf --outfile=mem_init/hdl_sim/blockram_system_v2_instruction_OCROM.dat \
+	--base=0x00000000 --end=0x00000fff --width=32 \
+	--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/blockram_system_v2_instruction_OCROM.sym...
+nios2-elf-nm -n blockram_system_v2.elf > mem_init/hdl_sim/blockram_system_v2_instruction_OCROM.sym
+Post-processing to create mem_init/meminit.spd...
+Post-processing to create mem_init/meminit.qip...
+
+10:42:49 Build Finished (took 1s.31ms)
+

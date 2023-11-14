@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="basic_system" kind="basic_system" version="1.0" fabric="QSYS">
  <!-- Format version 22.1 917 (Future versions may contain additional information.) -->
- <!-- 2023.10.31.16:50:32 -->
+ <!-- 2023.11.14.12:27:43 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1698767432</value>
+  <value>1699961263</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -1038,7 +1038,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="initializationFileName">
    <type>java.lang.String</type>
-   <value>/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex</value>
+   <value>/home/andrea/Documents/Tesi_287628/287628/basic_system/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1249,7 +1249,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_init_file_name">
    <type>java.lang.String</type>
-   <value>/home/andrea/Documents/Tesi_287628/287628/basic_system_v1/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex</value>
+   <value>/home/andrea/Documents/Tesi_287628/287628/basic_system/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
