@@ -21,6 +21,7 @@ port
   inc_disable               : out   std_logic;
   address_reg_enable        : out   std_logic;
   writedata_reg_enable      : out   std_logic;
+  burstcount_reg_enable     : out   std_logic;
   pipe_clear_n              : out   std_logic;
   -- status signals:
   read                      : in    std_logic;
@@ -44,7 +45,6 @@ architecture fsm of avs_to_blockram_converter_CU is
     write_cmd,
     burst_read,
     burst_write,
-    burst_read_pause,
     burst_write_pause,
     burst_lastread,
     burst_lastwrite,
@@ -106,11 +106,7 @@ architecture fsm of avs_to_blockram_converter_CU is
           if (burstend = '1') then
             next_state <= burst_lastread;
           else
-            if (read = '1') then
-              next_state <= burst_read;
-            else
-              next_state <= burst_read_pause;
-            end if;
+            next_state <= burst_read;
           end if;
         -------------------------------------------------------
         when burst_write =>
@@ -122,13 +118,6 @@ architecture fsm of avs_to_blockram_converter_CU is
             else
               next_state <= burst_write_pause;
             end if;
-          end if;
-        -------------------------------------------------------
-        when burst_read_pause =>
-          if (read = '1') then
-            next_state <= burst_read;
-          else
-            next_state <= burst_read_pause;
           end if;
         -------------------------------------------------------
         when burst_write_pause =>
@@ -171,6 +160,7 @@ architecture fsm of avs_to_blockram_converter_CU is
       inc_disable             <= '0';
       address_reg_enable      <= '0';
       writedata_reg_enable    <= '0';
+      burstcount_reg_enable   <= '0';
       pipe_clear_n            <= '1';
 			---------------------------------------------------------
 			case present_state is
@@ -191,11 +181,13 @@ architecture fsm of avs_to_blockram_converter_CU is
         when idle =>
           writedata_reg_enable <= '1';
           address_reg_enable <= '1';
+          burstcount_reg_enable <= '1';
         -------------------------------------------------------
         when idle_afterburst =>
           cnt_enable <= '1';
           writedata_reg_enable <= '1';
           address_reg_enable <= '1';
+          burstcount_reg_enable <= '1';
         -------------------------------------------------------
         when read_cmd =>
           rden <= '1';
@@ -221,9 +213,6 @@ architecture fsm of avs_to_blockram_converter_CU is
           address_sel <= '1';
           address_reg_enable <= '1';
           writedata_reg_enable <= '1';
-        -------------------------------------------------------
-        when burst_read_pause =>
-          inc_disable <= '1';
         -------------------------------------------------------
         when burst_write_pause =>
           inc_disable <= '1';

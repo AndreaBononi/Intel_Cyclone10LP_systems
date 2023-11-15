@@ -148,50 +148,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "avs_burstcount[0]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[1]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[2]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[3]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[4]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[5]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[6]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[7]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[8]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[9]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_burstcount[10]",
-					"strict" : false
-				},
-				{
 					"name" : "avs_beginbursttransfer",
 					"strict" : false
 				},
@@ -361,6 +317,50 @@
 				},
 				{
 					"name" : "avs_writedata[31]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[0]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[1]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[2]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[3]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[4]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[5]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[6]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[7]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[8]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[9]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[10]",
 					"strict" : false
 				}
 			]

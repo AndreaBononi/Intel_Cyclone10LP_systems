@@ -55,10 +55,11 @@ sim:/blockram_system_v2_testbench/DUT/blockram_system_v2_inst/data_ocram/blockra
 sim:/blockram_system_v2_testbench/DUT/blockram_system_v2_inst/data_ocram/blockram_wren \
 sim:/blockram_system_v2_testbench/DUT/blockram_system_v2_inst/data_ocram/blockram_address \
 sim:/blockram_system_v2_testbench/DUT/blockram_system_v2_inst/data_ocram/blockram_data \
-sim:/blockram_system_v2_testbench/DUT/blockram_system_v2_inst/data_ocram/blockram_q
+sim:/blockram_system_v2_testbench/DUT/blockram_system_v2_inst/data_ocram/blockram_q \
+sim:/blockram_system_v2_testbench/DUT/blockram_system_v2_inst/data_ocram/avs_to_blockram_converter_inst/CU/present_state
 
 # run the simulation
-run 10000ns
+run 40000ns
 
 # exit simulator and report success to the shell
 # exit -code 0

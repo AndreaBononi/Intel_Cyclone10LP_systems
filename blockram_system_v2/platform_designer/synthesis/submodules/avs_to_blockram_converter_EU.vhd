@@ -41,6 +41,7 @@ port
   inc_disable               : in    std_logic;
   address_reg_enable        : in    std_logic;
   writedata_reg_enable      : in    std_logic;
+  burstcount_reg_enable     : in    std_logic;
   pipe_clear_n              : in    std_logic;
   -- status signals:
   read                      : out   std_logic;
@@ -141,12 +142,13 @@ architecture rtl of avs_to_blockram_converter_EU is
   end component; ----------------------------------------------------------------------------------------------
 
 	-- SIGNALS --------------------------------------------------------------------------------------------------
-	signal pipe1_out        : std_logic;
-  signal cnt_out          : std_logic_vector(burst_width-1 downto 0);
-  signal cmp1_out         : std_logic;
-  signal incrementer_out  : std_logic_vector(address_width-1 downto 0);
-  signal address_mux_out  : std_logic_vector(address_width-1 downto 0);
-  signal address_reg_out  : std_logic_vector(address_width-1 downto 0);
+	signal pipe1_out            : std_logic;
+  signal cnt_out              : std_logic_vector(burst_width-1 downto 0);
+  signal burstcount_reg_out   : std_logic_vector(burst_width-1 downto 0);
+  signal cmp1_out             : std_logic;
+  signal incrementer_out      : std_logic_vector(address_width-1 downto 0);
+  signal address_mux_out      : std_logic_vector(address_width-1 downto 0);
+  signal address_reg_out      : std_logic_vector(address_width-1 downto 0);
 	-------------------------------------------------------------------------------------------------------------
 	
 	begin
@@ -173,6 +175,21 @@ architecture rtl of avs_to_blockram_converter_EU is
       dff_out		=> avs_readdatavalid
     ); --------------------------------------------------------------------------------------------------------
 
+    -- burstcount register ------------------------------------------------------------------------------------
+    burstcount_reg: reg
+    generic map
+    (
+      N => burst_width
+    )
+    port map
+    (
+      clk				=> clk,
+      enable		=> burstcount_reg_enable,
+      clear_n		=> '1',
+      reg_in		=> avs_burstcount, 
+      reg_out		=> burstcount_reg_out
+    ); --------------------------------------------------------------------------------------------------------
+
     -- burst counter ------------------------------------------------------------------------------------------
     burst_cnt: counter_Nbit
     generic map
@@ -196,7 +213,7 @@ architecture rtl of avs_to_blockram_converter_EU is
     port map
     (
       cmp_in_0		=> cnt_out,
-      cmp_in_1		=> avs_burstcount,
+      cmp_in_1		=> burstcount_reg_out,
       cmp_equal		=> burstend
     ); --------------------------------------------------------------------------------------------------------
 
@@ -208,7 +225,7 @@ architecture rtl of avs_to_blockram_converter_EU is
     )
     port map
     (
-      cmp_in_0		=> avs_burstcount,
+      cmp_in_0		=> burstcount_reg_out,
       cmp_in_1		=> "00000000001",
       cmp_equal		=> cmp1_out
     ); --------------------------------------------------------------------------------------------------------

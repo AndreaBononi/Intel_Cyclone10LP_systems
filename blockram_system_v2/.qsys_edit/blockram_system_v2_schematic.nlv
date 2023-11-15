@@ -13,9 +13,9 @@ preplace inst blockram_system_v2 -pg 1 -lvl 1 -y 40 -regy -20
 preplace netloc EXPORT<net_container>blockram_system_v2</net_container>(SLAVE)blockram_system_v2.switches,(SLAVE)switches.external_connection) 1 0 3 NJ 410 NJ 410 NJ
 preplace netloc EXPORT<net_container>blockram_system_v2</net_container>(SLAVE)blockram_system_v2.reset,(SLAVE)clk_100MHz.clk_in_reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>blockram_system_v2</net_container>(SLAVE)blockram_system_v2.clk,(SLAVE)clk_100MHz.clk_in) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>blockram_system_v2</net_container>(SLAVE)data_OCRAM.reset,(SLAVE)nios2f.reset,(SLAVE)switches.reset,(SLAVE)leds.reset,(MASTER)nios2f.debug_reset_request,(MASTER)clk_100MHz.clk_reset,(SLAVE)instruction_OCROM.reset1) 1 1 2 270 430 730
+preplace netloc INTERCONNECT<net_container>blockram_system_v2</net_container>(SLAVE)nios2f.reset,(SLAVE)switches.reset,(SLAVE)data_OCRAM.reset,(MASTER)nios2f.debug_reset_request,(MASTER)clk_100MHz.clk_reset,(SLAVE)leds.reset,(SLAVE)instruction_OCROM.reset1) 1 1 2 270 430 730
+preplace netloc INTERCONNECT<net_container>blockram_system_v2</net_container>(MASTER)nios2f.data_master,(SLAVE)switches.s1,(MASTER)nios2f.instruction_master,(SLAVE)data_OCRAM.avalon_slave,(SLAVE)instruction_OCROM.s1,(SLAVE)nios2f.debug_mem_slave,(SLAVE)leds.s1) 1 1 2 310 450 690
 preplace netloc EXPORT<net_container>blockram_system_v2</net_container>(SLAVE)blockram_system_v2.leds,(SLAVE)leds.external_connection) 1 0 3 NJ 40 NJ 40 NJ
-preplace netloc FAN_OUT<net_container>blockram_system_v2</net_container>(SLAVE)instruction_OCROM.clk1,(SLAVE)nios2f.clk,(SLAVE)switches.clk,(SLAVE)leds.clk,(SLAVE)data_OCRAM.clock,(MASTER)clk_100MHz.clk) 1 1 2 290 280 710
-preplace netloc INTERCONNECT<net_container>blockram_system_v2</net_container>(SLAVE)switches.s1,(SLAVE)data_OCRAM.avalon_slave,(MASTER)nios2f.data_master,(MASTER)nios2f.instruction_master,(SLAVE)nios2f.debug_mem_slave,(SLAVE)leds.s1,(SLAVE)instruction_OCROM.s1) 1 1 2 310 450 690
+preplace netloc FAN_OUT<net_container>blockram_system_v2</net_container>(SLAVE)leds.clk,(SLAVE)switches.clk,(MASTER)clk_100MHz.clk,(SLAVE)instruction_OCROM.clk1,(SLAVE)nios2f.clk,(SLAVE)data_OCRAM.clock) 1 1 2 290 280 710
 levelinfo -pg 1 0 60 970
 levelinfo -hier blockram_system_v2 70 100 450 810 960

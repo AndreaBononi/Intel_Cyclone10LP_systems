@@ -1,5 +1,5 @@
 Fitter report for custom_OCRAM
-Mon Nov 13 12:38:14 2023
+Wed Nov 15 09:53:07 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -68,17 +68,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Nov 13 12:38:14 2023          ;
+; Fitter Status                      ; Successful - Wed Nov 15 09:53:07 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; custom_OCRAM                                   ;
 ; Top-level Entity Name              ; custom_OCRAM                                   ;
 ; Family                             ; Cyclone 10 LP                                  ;
 ; Device                             ; 10CL025YE144C8G                                ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 94 / 24,624 ( < 1 % )                          ;
-;     Total combinational functions  ; 62 / 24,624 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 67 / 24,624 ( < 1 % )                          ;
-; Total registers                    ; 67                                             ;
+; Total logic elements               ; 95 / 24,624 ( < 1 % )                          ;
+;     Total combinational functions  ; 60 / 24,624 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 77 / 24,624 ( < 1 % )                          ;
+; Total registers                    ; 77                                             ;
 ; Total pins                         ; 1 / 77 ( 1 % )                                 ;
 ; Total virtual pins                 ; 89                                             ;
 ; Total memory bits                  ; 8,192 / 608,256 ( 1 % )                        ;
@@ -160,7 +160,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.9%      ;
+;     Processor 2            ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -170,8 +170,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 263 ) ; 0.00 % ( 0 / 263 )         ; 0.00 % ( 0 / 263 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 263 ) ; 0.00 % ( 0 / 263 )         ; 0.00 % ( 0 / 263 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 271 ) ; 0.00 % ( 0 / 271 )         ; 0.00 % ( 0 / 271 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 271 ) ; 0.00 % ( 0 / 271 )         ; 0.00 % ( 0 / 271 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -194,7 +194,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 253 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 261 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -202,7 +202,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/output_files/custom_OCRAM.pin.
+The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/output_files/custom_OCRAM.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -210,26 +210,26 @@ The pin-out file can be found in /home/andrea/Documents/Tesi/287628/blockram_sys
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 94 / 24,624 ( < 1 % )   ;
-;     -- Combinational with no register       ; 27                      ;
-;     -- Register only                        ; 32                      ;
-;     -- Combinational with a register        ; 35                      ;
+; Total logic elements                        ; 95 / 24,624 ( < 1 % )   ;
+;     -- Combinational with no register       ; 18                      ;
+;     -- Register only                        ; 35                      ;
+;     -- Combinational with a register        ; 42                      ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 32                      ;
-;     -- 3 input functions                    ; 13                      ;
+;     -- 4 input functions                    ; 31                      ;
+;     -- 3 input functions                    ; 12                      ;
 ;     -- <=2 input functions                  ; 17                      ;
-;     -- Register only                        ; 32                      ;
+;     -- Register only                        ; 35                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 55                      ;
+;     -- normal mode                          ; 53                      ;
 ;     -- arithmetic mode                      ; 7                       ;
 ;                                             ;                         ;
-; Total registers*                            ; 67 / 24,934 ( < 1 % )   ;
-;     -- Dedicated logic registers            ; 67 / 24,624 ( < 1 % )   ;
+; Total registers*                            ; 77 / 24,934 ( < 1 % )   ;
+;     -- Dedicated logic registers            ; 77 / 24,624 ( < 1 % )   ;
 ;     -- I/O registers                        ; 0 / 310 ( 0 % )         ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 20 / 1,539 ( 1 % )      ;
+; Total LABs:  partially or completely used   ; 25 / 1,539 ( 2 % )      ;
 ; Virtual pins                                ; 89                      ;
 ; I/O pins                                    ; 1 / 77 ( 1 % )          ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )          ;
@@ -247,12 +247,12 @@ The pin-out file can be found in /home/andrea/Documents/Tesi/287628/blockram_sys
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.2% / 0.4%      ;
-; Peak interconnect usage (total/H/V)         ; 3.4% / 2.7% / 4.6%      ;
-; Maximum fan-out                             ; 69                      ;
+; Average interconnect usage (total/H/V)      ; 0.4% / 0.3% / 0.5%      ;
+; Peak interconnect usage (total/H/V)         ; 4.0% / 3.0% / 5.4%      ;
+; Maximum fan-out                             ; 79                      ;
 ; Highest non-global fan-out                  ; 32                      ;
-; Total fan-out                               ; 526                     ;
-; Average fan-out                             ; 2.00                    ;
+; Total fan-out                               ; 552                     ;
+; Average fan-out                             ; 2.01                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -265,23 +265,23 @@ The pin-out file can be found in /home/andrea/Documents/Tesi/287628/blockram_sys
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 94 / 24624 ( < 1 % ) ; 0 / 24624 ( 0 % )              ;
-;     -- Combinational with no register       ; 27                   ; 0                              ;
-;     -- Register only                        ; 32                   ; 0                              ;
-;     -- Combinational with a register        ; 35                   ; 0                              ;
+; Total logic elements                        ; 95 / 24624 ( < 1 % ) ; 0 / 24624 ( 0 % )              ;
+;     -- Combinational with no register       ; 18                   ; 0                              ;
+;     -- Register only                        ; 35                   ; 0                              ;
+;     -- Combinational with a register        ; 42                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 32                   ; 0                              ;
-;     -- 3 input functions                    ; 13                   ; 0                              ;
+;     -- 4 input functions                    ; 31                   ; 0                              ;
+;     -- 3 input functions                    ; 12                   ; 0                              ;
 ;     -- <=2 input functions                  ; 17                   ; 0                              ;
-;     -- Register only                        ; 32                   ; 0                              ;
+;     -- Register only                        ; 35                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 55                   ; 0                              ;
+;     -- normal mode                          ; 53                   ; 0                              ;
 ;     -- arithmetic mode                      ; 7                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 67                   ; 0                              ;
-;     -- Dedicated logic registers            ; 67 / 24624 ( < 1 % ) ; 0 / 24624 ( 0 % )              ;
+; Total registers                             ; 77                   ; 0                              ;
+;     -- Dedicated logic registers            ; 77 / 24624 ( < 1 % ) ; 0 / 24624 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total LABs:  partially or completely used   ; 6 / 1539 ( < 1 % )   ; 0 / 1539 ( 0 % )               ;
@@ -301,8 +301,8 @@ The pin-out file can be found in /home/andrea/Documents/Tesi/287628/blockram_sys
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 521                  ; 5                              ;
-;     -- Registered Connections               ; 182                  ; 0                              ;
+;     -- Total Connections                    ; 547                  ; 5                              ;
+;     -- Registered Connections               ; 200                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -334,7 +334,7 @@ The pin-out file can be found in /home/andrea/Documents/Tesi/287628/blockram_sys
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk  ; 22    ; 1        ; 0            ; 16           ; 0            ; 69                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; clk  ; 22    ; 1        ; 0            ; 16           ; 0            ; 79                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -545,17 +545,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                                    ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                        ; Entity Name                  ; Library Name ;
 +---------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |custom_OCRAM                                                 ; 94 (0)      ; 67 (0)                    ; 0 (0)         ; 8192        ; 1    ; 0            ; 0       ; 0         ; 1    ; 89           ; 27 (0)       ; 32 (0)            ; 35 (0)           ; |custom_OCRAM                                                                                                                                              ; custom_OCRAM                 ; work         ;
-;    |avs_to_blockram_converter:avs_to_blockram_converter_inst| ; 94 (0)      ; 67 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 32 (0)            ; 35 (0)           ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst                                                                                     ; avs_to_blockram_converter    ; work         ;
-;       |avs_to_blockram_converter_CU:CU|                       ; 26 (26)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 15 (15)          ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU                                                     ; avs_to_blockram_converter_CU ; work         ;
-;       |avs_to_blockram_converter_EU:EU|                       ; 70 (0)      ; 53 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 32 (0)            ; 22 (0)           ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU                                                     ; avs_to_blockram_converter_EU ; work         ;
-;          |comparator_Nbit:CMP1|                               ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMP1                                ; comparator_Nbit              ; work         ;
-;          |comparator_Nbit:CMPB|                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMPB                                ; comparator_Nbit              ; work         ;
-;          |counter_Nbit:burst_cnt|                             ; 18 (5)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (4)        ; 0 (0)             ; 12 (1)           ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt                              ; counter_Nbit                 ; work         ;
+; |custom_OCRAM                                                 ; 95 (0)      ; 77 (0)                    ; 0 (0)         ; 8192        ; 1    ; 0            ; 0       ; 0         ; 1    ; 89           ; 18 (0)       ; 35 (0)            ; 42 (0)           ; |custom_OCRAM                                                                                                                                              ; custom_OCRAM                 ; work         ;
+;    |avs_to_blockram_converter:avs_to_blockram_converter_inst| ; 95 (0)      ; 77 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (0)       ; 35 (0)            ; 42 (0)           ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst                                                                                     ; avs_to_blockram_converter    ; work         ;
+;       |avs_to_blockram_converter_CU:CU|                       ; 24 (24)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 14 (14)          ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU                                                     ; avs_to_blockram_converter_CU ; work         ;
+;       |avs_to_blockram_converter_EU:EU|                       ; 72 (0)      ; 64 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (0)        ; 35 (0)            ; 29 (0)           ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU                                                     ; avs_to_blockram_converter_EU ; work         ;
+;          |comparator_Nbit:CMP1|                               ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMP1                                ; comparator_Nbit              ; work         ;
+;          |comparator_Nbit:CMPB|                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMPB                                ; comparator_Nbit              ; work         ;
+;          |counter_Nbit:burst_cnt|                             ; 17 (5)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (5)        ; 0 (0)             ; 11 (0)           ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt                              ; counter_Nbit                 ; work         ;
 ;             |t_flip_flop:\g1:10:chain_tff|                    ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:10:chain_tff ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:1:chain_tff|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:1:chain_tff  ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:2:chain_tff|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:2:chain_tff  ; t_flip_flop                  ; work         ;
-;             |t_flip_flop:\g1:3:chain_tff|                     ; 2 (2)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:3:chain_tff  ; t_flip_flop                  ; work         ;
+;             |t_flip_flop:\g1:3:chain_tff|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:3:chain_tff  ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:4:chain_tff|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:4:chain_tff  ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:5:chain_tff|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:5:chain_tff  ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:6:chain_tff|                     ; 2 (2)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:6:chain_tff  ; t_flip_flop                  ; work         ;
@@ -566,6 +566,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;          |d_flipflop:pipe1|                                   ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe1                                    ; d_flipflop                   ; work         ;
 ;          |d_flipflop:pipe2|                                   ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe2                                    ; d_flipflop                   ; work         ;
 ;          |reg:address_reg|                                    ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg                                     ; reg                          ; work         ;
+;          |reg:burstcount_reg|                                 ; 11 (11)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 8 (8)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg                                  ; reg                          ; work         ;
 ;          |reg:writedata_reg|                                  ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 32 (32)           ; 0 (0)            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg                                   ; reg                          ; work         ;
 ;    |blockram_1port_8a_32d:blockram_1port_inst|                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |custom_OCRAM|blockram_1port_8a_32d:blockram_1port_inst                                                                                                    ; blockram_1port_8a_32d        ; work         ;
 ;       |altsyncram:altsyncram_component|                       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |custom_OCRAM|blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component                                                                    ; altsyncram                   ; work         ;
@@ -592,19 +593,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                  ;
-+-----------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                                                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr10   ; LCCOMB_X37_Y15_N6  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr11~0 ; LCCOMB_X38_Y15_N12 ; 3       ; Read enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr13~0 ; LCCOMB_X37_Y15_N14 ; 2       ; Write enable ; no     ; --                   ; --               ; --                        ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr8~0  ; LCCOMB_X36_Y14_N2  ; 9       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr9    ; LCCOMB_X38_Y15_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk                                                                                                 ; PIN_22             ; 69      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; reset_n                                                                                             ; LCCOMB_X38_Y16_N16 ; 14      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-+-----------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                               ;
++------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                             ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr10~0              ; LCCOMB_X37_Y20_N12 ; 3       ; Read enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr12~0              ; LCCOMB_X37_Y20_N6  ; 2       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr7~0               ; LCCOMB_X34_Y20_N24 ; 11      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr8                 ; LCCOMB_X37_Y20_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|WideOr9                 ; LCCOMB_X34_Y20_N26 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|burstcount_reg_enable~0 ; LCCOMB_X38_Y21_N24 ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                                                                                                              ; PIN_22             ; 79      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; reset_n                                                                                                          ; LCCOMB_X38_Y20_N10 ; 13      ; Async. clear ; no     ; --                   ; --               ; --                        ;
++------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -612,7 +614,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk  ; PIN_22   ; 69      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; clk  ; PIN_22   ; 79      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -621,7 +623,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                                                ; Type ; Mode        ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF  ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Single Clock ; 256          ; 32           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 8192 ; 256                         ; 32                          ; --                          ; --                          ; 8192                ; 1    ; None ; M9K_X33_Y14_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Single Clock ; 256          ; 32           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 8192 ; 256                         ; 32                          ; --                          ; --                          ; 8192                ; 1    ; None ; M9K_X33_Y18_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -631,45 +633,45 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 186 / 71,559 ( < 1 % ) ;
-; C16 interconnects     ; 5 / 2,597 ( < 1 % )    ;
-; C4 interconnects      ; 199 / 46,848 ( < 1 % ) ;
-; Direct links          ; 22 / 71,559 ( < 1 % )  ;
+; Block interconnects   ; 187 / 71,559 ( < 1 % ) ;
+; C16 interconnects     ; 6 / 2,597 ( < 1 % )    ;
+; C4 interconnects      ; 253 / 46,848 ( < 1 % ) ;
+; Direct links          ; 7 / 71,559 ( < 1 % )   ;
 ; Global clocks         ; 1 / 20 ( 5 % )         ;
-; Local interconnects   ; 39 / 24,624 ( < 1 % )  ;
-; R24 interconnects     ; 2 / 2,496 ( < 1 % )    ;
-; R4 interconnects      ; 162 / 62,424 ( < 1 % ) ;
+; Local interconnects   ; 48 / 24,624 ( < 1 % )  ;
+; R24 interconnects     ; 10 / 2,496 ( < 1 % )   ;
+; R4 interconnects      ; 164 / 62,424 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 9.15) ; Number of LABs  (Total = 20) ;
+; Number of Logic Elements  (Average = 7.36) ; Number of LABs  (Total = 25) ;
 +--------------------------------------------+------------------------------+
 ; 1                                          ; 6                            ;
-; 2                                          ; 0                            ;
-; 3                                          ; 1                            ;
-; 4                                          ; 1                            ;
+; 2                                          ; 2                            ;
+; 3                                          ; 4                            ;
+; 4                                          ; 2                            ;
 ; 5                                          ; 0                            ;
 ; 6                                          ; 1                            ;
 ; 7                                          ; 0                            ;
-; 8                                          ; 1                            ;
-; 9                                          ; 0                            ;
+; 8                                          ; 0                            ;
+; 9                                          ; 1                            ;
 ; 10                                         ; 0                            ;
 ; 11                                         ; 0                            ;
 ; 12                                         ; 0                            ;
-; 13                                         ; 0                            ;
-; 14                                         ; 1                            ;
+; 13                                         ; 1                            ;
+; 14                                         ; 0                            ;
 ; 15                                         ; 2                            ;
-; 16                                         ; 7                            ;
+; 16                                         ; 6                            ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.55) ; Number of LABs  (Total = 20) ;
+; LAB-wide Signals  (Average = 0.44) ; Number of LABs  (Total = 25) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 2                            ;
 ; 1 Clock                            ; 6                            ;
@@ -677,96 +679,103 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +------------------------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 10.70) ; Number of LABs  (Total = 20) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 3                            ;
-; 1                                            ; 5                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                        ;
-+-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.25) ; Number of LABs  (Total = 20) ;
-+-------------------------------------------------+------------------------------+
-; 0                                               ; 3                            ;
-; 1                                               ; 5                            ;
-; 2                                               ; 0                            ;
-; 3                                               ; 1                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 0                            ;
-; 8                                               ; 2                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 0                            ;
-; 11                                              ; 0                            ;
-; 12                                              ; 1                            ;
-; 13                                              ; 2                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 0                            ;
-; 16                                              ; 3                            ;
-+-------------------------------------------------+------------------------------+
-
-
 +----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
+; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 6.50) ; Number of LABs  (Total = 20) ;
+; Number of Signals Sourced  (Average = 9.00) ; Number of LABs  (Total = 25) ;
 +---------------------------------------------+------------------------------+
-; 0                                           ; 0                            ;
-; 1                                           ; 2                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
+; 0                                           ; 2                            ;
+; 1                                           ; 8                            ;
+; 2                                           ; 2                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 1                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
 ; 9                                           ; 1                            ;
 ; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
 ; 12                                          ; 0                            ;
-; 13                                          ; 0                            ;
+; 13                                          ; 1                            ;
 ; 14                                          ; 0                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 3                            ;
-; 17                                          ; 1                            ;
+; 16                                          ; 0                            ;
+; 17                                          ; 0                            ;
+; 18                                          ; 0                            ;
+; 19                                          ; 0                            ;
+; 20                                          ; 0                            ;
+; 21                                          ; 0                            ;
+; 22                                          ; 0                            ;
+; 23                                          ; 0                            ;
+; 24                                          ; 0                            ;
+; 25                                          ; 0                            ;
+; 26                                          ; 0                            ;
+; 27                                          ; 4                            ;
+; 28                                          ; 0                            ;
+; 29                                          ; 0                            ;
+; 30                                          ; 0                            ;
+; 31                                          ; 2                            ;
++---------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 5.04) ; Number of LABs  (Total = 25) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 2                            ;
+; 1                                               ; 8                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 2                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 0                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 0                            ;
+; 13                                              ; 3                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 2                            ;
++-------------------------------------------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 5.44) ; Number of LABs  (Total = 25) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 1                            ;
+; 17                                          ; 0                            ;
 ; 18                                          ; 3                            ;
+; 19                                          ; 0                            ;
+; 20                                          ; 0                            ;
+; 21                                          ; 0                            ;
+; 22                                          ; 0                            ;
+; 23                                          ; 0                            ;
+; 24                                          ; 0                            ;
+; 25                                          ; 0                            ;
+; 26                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -875,105 +884,107 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; clk                  ; 108.9             ;
-; clk,I/O         ; clk                  ; 5.0               ;
+; I/O             ; clk                  ; 118.2             ;
+; clk             ; clk                  ; 5.6               ;
+; clk,I/O         ; clk                  ; 3.2               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                                                                                                                                                                                         ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register                                                                                                                                        ; Destination Register                                                                                                                     ; Delay Added in ns ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; avs_writedata[29]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[29]                   ; 2.341             ;
-; avs_writedata[22]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[22]                   ; 2.341             ;
-; avs_writedata[21]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[21]                   ; 2.341             ;
-; avs_writedata[14]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[14]                   ; 2.304             ;
-; avs_writedata[10]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[10]                   ; 2.304             ;
-; avs_writedata[6]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[6]                    ; 2.304             ;
-; avs_writedata[20]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[20]                   ; 2.299             ;
-; avs_writedata[12]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[12]                   ; 2.299             ;
-; avs_writedata[8]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[8]                    ; 2.299             ;
-; avs_writedata[9]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[9]                    ; 2.297             ;
-; avs_writedata[11]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[11]                   ; 2.296             ;
-; avs_writedata[7]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[7]                    ; 2.296             ;
-; avs_read                                                                                                                                               ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 2.145             ;
-; avs_write                                                                                                                                              ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write                       ; 2.121             ;
-; avs_burstcount[10]                                                                                                                                     ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 2.115             ;
-; avs_writedata[19]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[19]                   ; 1.997             ;
-; avs_writedata[18]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[18]                   ; 1.997             ;
-; avs_writedata[15]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[15]                   ; 1.997             ;
-; avs_writedata[27]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[27]                   ; 1.992             ;
-; avs_writedata[17]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[17]                   ; 1.992             ;
-; avs_writedata[16]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[16]                   ; 1.992             ;
-; avs_writedata[13]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[13]                   ; 1.992             ;
-; avs_writedata[28]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[28]                   ; 1.954             ;
-; avs_writedata[4]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[4]                    ; 1.914             ;
-; avs_writedata[5]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[5]                    ; 1.907             ;
-; avs_writedata[25]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[25]                   ; 1.902             ;
-; avs_writedata[26]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[26]                   ; 1.896             ;
-; avs_writedata[31]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[31]                   ; 1.895             ;
-; avs_writedata[3]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[3]                    ; 1.895             ;
-; avs_writedata[2]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[2]                    ; 1.895             ;
-; avs_writedata[1]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[1]                    ; 1.895             ;
-; avs_writedata[0]                                                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[0]                    ; 1.895             ;
-; avs_writedata[30]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[30]                   ; 1.892             ;
-; avs_writedata[24]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[24]                   ; 1.892             ;
-; avs_writedata[23]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[23]                   ; 1.892             ;
-; avs_address[3]                                                                                                                                         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[3]                      ; 1.803             ;
-; avs_address[5]                                                                                                                                         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[5]                      ; 1.790             ;
-; avs_address[4]                                                                                                                                         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[4]                      ; 1.790             ;
-; avs_address[1]                                                                                                                                         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[1]                      ; 1.790             ;
-; avs_address[0]                                                                                                                                         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[0]                      ; 1.788             ;
-; avs_address[7]                                                                                                                                         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[7]                      ; 1.788             ;
-; avs_address[6]                                                                                                                                         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[6]                      ; 1.707             ;
-; avs_address[2]                                                                                                                                         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[2]                      ; 1.680             ;
-; avs_burstcount[9]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.592             ;
-; avs_burstcount[8]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.554             ;
-; avs_beginbursttransfer                                                                                                                                 ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 1.282             ;
-; reset_n                                                                                                                                                ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.reset                             ; 1.280             ;
-; avs_burstcount[6]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.196             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:9:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.119             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:8:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.119             ;
-; avs_burstcount[3]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.097             ;
-; avs_burstcount[0]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 1.068             ;
-; avs_burstcount[1]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 1.068             ;
-; avs_burstcount[2]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 1.068             ;
-; avs_burstcount[4]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 1.068             ;
-; avs_burstcount[5]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 1.068             ;
-; avs_burstcount[7]                                                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 1.068             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:7:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.047             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:5:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.047             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:6:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.047             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:4:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.047             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:1:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.047             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:2:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.047             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:entry_tff|dummy_out        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.047             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:3:chain_tff|dummy_out  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.047             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:10:chain_tff|dummy_out ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_lastread                    ; 1.009             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.write_cmd                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write                       ; 0.915             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write                       ; 0.915             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.idle                                            ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write                       ; 0.915             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.idle_afterburst                                 ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write                       ; 0.915             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write_pause                               ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write                       ; 0.348             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write                                     ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_write                       ; 0.348             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read_pause                                ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 0.348             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.burst_read                        ; 0.348             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[24]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a24~porta_datain_reg0 ; 0.011             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[23]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a23~porta_datain_reg0 ; 0.011             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[17]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a17~porta_datain_reg0 ; 0.011             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[30]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a30~porta_datain_reg0 ; 0.010             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[29]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a29~porta_datain_reg0 ; 0.010             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[26]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a26~porta_datain_reg0 ; 0.010             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[25]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a25~porta_datain_reg0 ; 0.010             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[22]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a22~porta_datain_reg0 ; 0.010             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[19]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a19~porta_datain_reg0 ; 0.010             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[16]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a16~porta_datain_reg0 ; 0.010             ;
-; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[15]                                 ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a15~porta_datain_reg0 ; 0.010             ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 85 path(s) that have the largest delay added for hold.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                                                                                                          ;
++-------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                                                                                         ; Destination Register                                                                                                                     ; Delay Added in ns ;
++-------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; avs_write                                                                                                               ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.write_cmd                         ; 2.438             ;
+; avs_writedata[29]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[29]                   ; 2.350             ;
+; avs_writedata[22]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[22]                   ; 2.350             ;
+; avs_writedata[17]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[17]                   ; 2.350             ;
+; avs_writedata[12]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[12]                   ; 2.346             ;
+; avs_writedata[6]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[6]                    ; 2.346             ;
+; avs_writedata[3]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[3]                    ; 2.346             ;
+; avs_burstcount[3]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[3]                   ; 2.316             ;
+; avs_burstcount[7]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[7]                   ; 2.302             ;
+; avs_writedata[31]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[31]                   ; 2.301             ;
+; avs_writedata[27]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[27]                   ; 2.301             ;
+; avs_writedata[26]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[26]                   ; 2.301             ;
+; avs_writedata[25]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[25]                   ; 2.301             ;
+; avs_writedata[20]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[20]                   ; 2.301             ;
+; avs_writedata[19]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[19]                   ; 2.301             ;
+; avs_writedata[18]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[18]                   ; 2.301             ;
+; avs_writedata[16]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[16]                   ; 2.301             ;
+; avs_writedata[5]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[5]                    ; 2.301             ;
+; avs_writedata[1]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[1]                    ; 2.301             ;
+; avs_burstcount[10]                                                                                                      ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[10]                  ; 2.194             ;
+; avs_read                                                                                                                ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 2.170             ;
+; avs_burstcount[0]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[0]                   ; 2.124             ;
+; avs_burstcount[6]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[6]                   ; 2.124             ;
+; avs_address[2]                                                                                                          ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[2]                      ; 2.096             ;
+; avs_burstcount[2]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[2]                   ; 2.063             ;
+; avs_writedata[28]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[28]                   ; 1.964             ;
+; avs_writedata[24]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[24]                   ; 1.964             ;
+; avs_writedata[30]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[30]                   ; 1.962             ;
+; avs_writedata[23]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[23]                   ; 1.962             ;
+; avs_writedata[21]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[21]                   ; 1.962             ;
+; avs_writedata[10]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[10]                   ; 1.947             ;
+; avs_writedata[7]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[7]                    ; 1.947             ;
+; avs_burstcount[4]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[4]                   ; 1.914             ;
+; avs_writedata[14]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[14]                   ; 1.907             ;
+; avs_writedata[13]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[13]                   ; 1.907             ;
+; avs_writedata[8]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[8]                    ; 1.907             ;
+; avs_writedata[4]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[4]                    ; 1.907             ;
+; avs_writedata[0]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[0]                    ; 1.907             ;
+; avs_writedata[9]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[9]                    ; 1.899             ;
+; avs_writedata[2]                                                                                                        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[2]                    ; 1.899             ;
+; avs_writedata[15]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[15]                   ; 1.861             ;
+; avs_address[6]                                                                                                          ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[6]                      ; 1.811             ;
+; avs_address[1]                                                                                                          ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[1]                      ; 1.811             ;
+; avs_address[0]                                                                                                          ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[0]                      ; 1.811             ;
+; avs_address[7]                                                                                                          ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[7]                      ; 1.811             ;
+; avs_address[3]                                                                                                          ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[3]                      ; 1.801             ;
+; avs_burstcount[8]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[8]                   ; 1.755             ;
+; avs_address[4]                                                                                                          ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[4]                      ; 1.753             ;
+; avs_address[5]                                                                                                          ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg|reg_out[5]                      ; 1.699             ;
+; reset_n                                                                                                                 ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.reset                             ; 1.693             ;
+; avs_burstcount[9]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[9]                   ; 1.650             ;
+; avs_writedata[11]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[11]                   ; 1.561             ;
+; avs_burstcount[1]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[1]                   ; 1.513             ;
+; avs_burstcount[5]                                                                                                       ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[5]                   ; 1.138             ;
+; avs_beginbursttransfer                                                                                                  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 1.037             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.idle             ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.987             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.write_cmd        ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.987             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd         ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.987             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.idle_afterburst  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.987             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[30]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a30~porta_datain_reg0 ; 0.363             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[28]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a28~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[24]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a24~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[23]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a23~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[21]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a21~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[15]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a15~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[14]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a14~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[13]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a13~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[12]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a12~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[11]  ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a11~porta_datain_reg0 ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[9]   ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a9~porta_datain_reg0  ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[8]   ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a8~porta_datain_reg0  ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[4]   ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a4~porta_datain_reg0  ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[3]   ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a3~porta_datain_reg0  ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[2]   ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a2~porta_datain_reg0  ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg|reg_out[0]   ; blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated|ram_block1a0~porta_datain_reg0  ; 0.346             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[0]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[1]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[2]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[3]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[4]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[5]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[6]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[7]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[8]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[10] ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
+; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg|reg_out[9]  ; avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state.read_cmd                          ; 0.321             ;
++-------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 86 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1007,12 +1018,12 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):   10.000          clk
-Info (176353): Automatically promoted node clk~input (placed in PIN 22 (CLK0, DIFFCLK_0p)) File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 17
+Info (176353): Automatically promoted node clk~input (placed in PIN 22 (CLK0, DIFFCLK_0p)) File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 17
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1026,23 +1037,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/output_files/custom_OCRAM.fit.smsg
+Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/output_files/custom_OCRAM.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 671 megabytes
-    Info: Processing ended: Mon Nov 13 12:38:14 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 672 megabytes
+    Info: Processing ended: Wed Nov 15 09:53:07 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/output_files/custom_OCRAM.fit.smsg.
+The suppressed messages can be found in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/output_files/custom_OCRAM.fit.smsg.
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for custom_OCRAM
-Mon Nov 13 12:38:07 2023
+Wed Nov 15 09:52:59 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -19,34 +19,36 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Source assignments for blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated
- 14. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt
- 15. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMPB
- 16. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMP1
- 17. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg
- 18. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|mux_2to1:address_mux
- 19. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg
- 20. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component
- 21. Parameter Settings for User Entity Instance: blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg"
- 24. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg"
- 25. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMP1"
- 26. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:10:chain_tff"
- 27. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:9:chain_tff"
- 28. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:8:chain_tff"
- 29. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:7:chain_tff"
- 30. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:6:chain_tff"
- 31. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:5:chain_tff"
- 32. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:4:chain_tff"
- 33. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:3:chain_tff"
- 34. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:2:chain_tff"
- 35. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:1:chain_tff"
- 36. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:entry_tff"
- 37. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe2"
- 38. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe1"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg
+ 15. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt
+ 16. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMPB
+ 17. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMP1
+ 18. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg
+ 19. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|mux_2to1:address_mux
+ 20. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg
+ 21. Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component
+ 22. Parameter Settings for User Entity Instance: blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg"
+ 25. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg"
+ 26. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMP1"
+ 27. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:10:chain_tff"
+ 28. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:9:chain_tff"
+ 29. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:8:chain_tff"
+ 30. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:7:chain_tff"
+ 31. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:6:chain_tff"
+ 32. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:5:chain_tff"
+ 33. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:4:chain_tff"
+ 34. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:3:chain_tff"
+ 35. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:2:chain_tff"
+ 36. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:1:chain_tff"
+ 37. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:entry_tff"
+ 38. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg"
+ 39. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe2"
+ 40. Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe1"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
 
 
 
@@ -73,15 +75,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 13 12:38:07 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 15 09:52:59 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; custom_OCRAM                                   ;
 ; Top-level Entity Name              ; custom_OCRAM                                   ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 96                                             ;
-;     Total combinational functions  ; 61                                             ;
-;     Dedicated logic registers      ; 67                                             ;
-; Total registers                    ; 67                                             ;
+; Total logic elements               ; 105                                            ;
+;     Total combinational functions  ; 59                                             ;
+;     Dedicated logic registers      ; 77                                             ;
+; Total registers                    ; 77                                             ;
 ; Total pins                         ; 1                                              ;
 ; Total virtual pins                 ; 89                                             ;
 ; Total memory bits                  ; 8,192                                          ;
@@ -193,41 +195,41 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                     ;
-+---------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path            ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                      ; Library ;
-+---------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
-; hdl/incrementer/incrementer_8bit_nopipe.vhd ; yes             ; User Wizard-Generated File   ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd ;         ;
-; hdl/blockram/blockram_1port_8a_32d.vhd      ; yes             ; User Wizard-Generated File   ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd      ;         ;
-; hdl/t_flip_flop.vhd                         ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/t_flip_flop.vhd                         ;         ;
-; hdl/reg.vhd                                 ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/reg.vhd                                 ;         ;
-; hdl/mux_2to1.vhd                            ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/mux_2to1.vhd                            ;         ;
-; hdl/d_flipflop.vhd                          ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/d_flipflop.vhd                          ;         ;
-; hdl/custom_OCRAM.vhd                        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd                        ;         ;
-; hdl/counter_Nbit.vhd                        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/counter_Nbit.vhd                        ;         ;
-; hdl/comparator_Nbit.vhd                     ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/comparator_Nbit.vhd                     ;         ;
-; hdl/avs_to_blockram_converter_EU.vhd        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd        ;         ;
-; hdl/avs_to_blockram_converter_CU.vhd        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_CU.vhd        ;         ;
-; hdl/avs_to_blockram_converter.vhd           ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd           ;         ;
-; lpm_add_sub.tdf                             ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf                               ;         ;
-; addcore.inc                                 ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/addcore.inc                                   ;         ;
-; look_add.inc                                ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/look_add.inc                                  ;         ;
-; bypassff.inc                                ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/bypassff.inc                                  ;         ;
-; altshift.inc                                ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altshift.inc                                  ;         ;
-; alt_stratix_add_sub.inc                     ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                       ;         ;
-; aglobal221.inc                              ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                ;         ;
-; db/add_sub_bsh.tdf                          ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/db/add_sub_bsh.tdf                          ;         ;
-; altsyncram.tdf                              ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                ;         ;
-; stratix_ram_block.inc                       ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                         ;         ;
-; lpm_mux.inc                                 ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                   ;         ;
-; lpm_decode.inc                              ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                ;         ;
-; a_rdenreg.inc                               ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                 ;         ;
-; altrom.inc                                  ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                    ;         ;
-; altram.inc                                  ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                    ;         ;
-; altdpram.inc                                ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                  ;         ;
-; db/altsyncram_qtp3.tdf                      ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/db/altsyncram_qtp3.tdf                      ;         ;
-+---------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                            ;
++---------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path            ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                             ; Library ;
++---------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; hdl/incrementer/incrementer_8bit_nopipe.vhd ; yes             ; User Wizard-Generated File   ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd ;         ;
+; hdl/blockram/blockram_1port_8a_32d.vhd      ; yes             ; User Wizard-Generated File   ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd      ;         ;
+; hdl/t_flip_flop.vhd                         ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/t_flip_flop.vhd                         ;         ;
+; hdl/reg.vhd                                 ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/reg.vhd                                 ;         ;
+; hdl/mux_2to1.vhd                            ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/mux_2to1.vhd                            ;         ;
+; hdl/d_flipflop.vhd                          ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/d_flipflop.vhd                          ;         ;
+; hdl/custom_OCRAM.vhd                        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd                        ;         ;
+; hdl/counter_Nbit.vhd                        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/counter_Nbit.vhd                        ;         ;
+; hdl/comparator_Nbit.vhd                     ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/comparator_Nbit.vhd                     ;         ;
+; hdl/avs_to_blockram_converter_EU.vhd        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd        ;         ;
+; hdl/avs_to_blockram_converter_CU.vhd        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_CU.vhd        ;         ;
+; hdl/avs_to_blockram_converter.vhd           ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd           ;         ;
+; lpm_add_sub.tdf                             ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf                                      ;         ;
+; addcore.inc                                 ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/addcore.inc                                          ;         ;
+; look_add.inc                                ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/look_add.inc                                         ;         ;
+; bypassff.inc                                ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/bypassff.inc                                         ;         ;
+; altshift.inc                                ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altshift.inc                                         ;         ;
+; alt_stratix_add_sub.inc                     ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                              ;         ;
+; aglobal221.inc                              ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                       ;         ;
+; db/add_sub_bsh.tdf                          ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/db/add_sub_bsh.tdf                          ;         ;
+; altsyncram.tdf                              ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
+; stratix_ram_block.inc                       ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
+; lpm_mux.inc                                 ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                          ;         ;
+; lpm_decode.inc                              ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                       ;         ;
+; a_rdenreg.inc                               ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                        ;         ;
+; altrom.inc                                  ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                           ;         ;
+; altram.inc                                  ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                           ;         ;
+; altdpram.inc                                ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
+; db/altsyncram_qtp3.tdf                      ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/db/altsyncram_qtp3.tdf                      ;         ;
++---------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -235,20 +237,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 96        ;
+; Estimated Total logic elements              ; 105       ;
 ;                                             ;           ;
-; Total combinational functions               ; 61        ;
+; Total combinational functions               ; 59        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 32        ;
-;     -- 3 input functions                    ; 13        ;
+;     -- 4 input functions                    ; 31        ;
+;     -- 3 input functions                    ; 12        ;
 ;     -- <=2 input functions                  ; 16        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 54        ;
+;     -- normal mode                          ; 52        ;
 ;     -- arithmetic mode                      ; 7         ;
 ;                                             ;           ;
-; Total registers                             ; 67        ;
-;     -- Dedicated logic registers            ; 67        ;
+; Total registers                             ; 77        ;
+;     -- Dedicated logic registers            ; 77        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; Virtual pins                                ; 89        ;
@@ -258,9 +260,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 99        ;
-; Total fan-out                               ; 819       ;
-; Average fan-out                             ; 3.26      ;
+; Maximum fan-out                             ; 109       ;
+; Total fan-out                               ; 842       ;
+; Average fan-out                             ; 3.25      ;
 +---------------------------------------------+-----------+
 
 
@@ -269,17 +271,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Entity Name                  ; Library Name ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |custom_OCRAM                                                 ; 61 (0)              ; 67 (0)                    ; 8192        ; 0            ; 0       ; 0         ; 1    ; 89           ; |custom_OCRAM                                                                                                                                              ; custom_OCRAM                 ; work         ;
-;    |avs_to_blockram_converter:avs_to_blockram_converter_inst| ; 61 (0)              ; 67 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst                                                                                     ; avs_to_blockram_converter    ; work         ;
-;       |avs_to_blockram_converter_CU:CU|                       ; 24 (24)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU                                                     ; avs_to_blockram_converter_CU ; work         ;
-;       |avs_to_blockram_converter_EU:EU|                       ; 37 (0)              ; 53 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU                                                     ; avs_to_blockram_converter_EU ; work         ;
+; |custom_OCRAM                                                 ; 59 (0)              ; 77 (0)                    ; 8192        ; 0            ; 0       ; 0         ; 1    ; 89           ; |custom_OCRAM                                                                                                                                              ; custom_OCRAM                 ; work         ;
+;    |avs_to_blockram_converter:avs_to_blockram_converter_inst| ; 59 (0)              ; 77 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst                                                                                     ; avs_to_blockram_converter    ; work         ;
+;       |avs_to_blockram_converter_CU:CU|                       ; 23 (23)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU                                                     ; avs_to_blockram_converter_CU ; work         ;
+;       |avs_to_blockram_converter_EU:EU|                       ; 36 (0)              ; 64 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU                                                     ; avs_to_blockram_converter_EU ; work         ;
 ;          |comparator_Nbit:CMP1|                               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMP1                                ; comparator_Nbit              ; work         ;
 ;          |comparator_Nbit:CMPB|                               ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMPB                                ; comparator_Nbit              ; work         ;
-;          |counter_Nbit:burst_cnt|                             ; 18 (5)              ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt                              ; counter_Nbit                 ; work         ;
+;          |counter_Nbit:burst_cnt|                             ; 17 (5)              ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt                              ; counter_Nbit                 ; work         ;
 ;             |t_flip_flop:\g1:10:chain_tff|                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:10:chain_tff ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:1:chain_tff|                     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:1:chain_tff  ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:2:chain_tff|                     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:2:chain_tff  ; t_flip_flop                  ; work         ;
-;             |t_flip_flop:\g1:3:chain_tff|                     ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:3:chain_tff  ; t_flip_flop                  ; work         ;
+;             |t_flip_flop:\g1:3:chain_tff|                     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:3:chain_tff  ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:4:chain_tff|                     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:4:chain_tff  ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:5:chain_tff|                     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:5:chain_tff  ; t_flip_flop                  ; work         ;
 ;             |t_flip_flop:\g1:6:chain_tff|                     ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:\g1:6:chain_tff  ; t_flip_flop                  ; work         ;
@@ -290,6 +292,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |d_flipflop:pipe1|                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe1                                    ; d_flipflop                   ; work         ;
 ;          |d_flipflop:pipe2|                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe2                                    ; d_flipflop                   ; work         ;
 ;          |reg:address_reg|                                    ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg                                     ; reg                          ; work         ;
+;          |reg:burstcount_reg|                                 ; 0 (0)               ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg                                  ; reg                          ; work         ;
 ;          |reg:writedata_reg|                                  ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg                                   ; reg                          ; work         ;
 ;    |blockram_1port_8a_32d:blockram_1port_inst|                ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|blockram_1port_8a_32d:blockram_1port_inst                                                                                                    ; blockram_1port_8a_32d        ; work         ;
 ;       |altsyncram:altsyncram_component|                       ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |custom_OCRAM|blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component                                                                    ; altsyncram                   ; work         ;
@@ -318,26 +321,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state                                                                                                                                                                                                                                                                                               ;
-+---------------------------------+-------------------------------+-------------------------------+-------------------------------+------------------------------+---------------------------------+--------------------------------+---------------------------+--------------------------+-------------------------+------------------------+--------------------+---------------------+---------------------+---------------------+
-; Name                            ; present_state.idle_afterburst ; present_state.wait_afterburst ; present_state.burst_lastwrite ; present_state.burst_lastread ; present_state.burst_write_pause ; present_state.burst_read_pause ; present_state.burst_write ; present_state.burst_read ; present_state.write_cmd ; present_state.read_cmd ; present_state.idle ; present_state.init2 ; present_state.init1 ; present_state.reset ;
-+---------------------------------+-------------------------------+-------------------------------+-------------------------------+------------------------------+---------------------------------+--------------------------------+---------------------------+--------------------------+-------------------------+------------------------+--------------------+---------------------+---------------------+---------------------+
-; present_state.reset             ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 0                   ;
-; present_state.init1             ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 1                   ; 1                   ;
-; present_state.init2             ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 1                   ; 0                   ; 1                   ;
-; present_state.idle              ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 1                  ; 0                   ; 0                   ; 1                   ;
-; present_state.read_cmd          ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 1                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.write_cmd         ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 1                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.burst_read        ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 1                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.burst_write       ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 1                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.burst_read_pause  ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 1                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.burst_write_pause ; 0                             ; 0                             ; 0                             ; 0                            ; 1                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.burst_lastread    ; 0                             ; 0                             ; 0                             ; 1                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.burst_lastwrite   ; 0                             ; 0                             ; 1                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.wait_afterburst   ; 0                             ; 1                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-; present_state.idle_afterburst   ; 1                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                              ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
-+---------------------------------+-------------------------------+-------------------------------+-------------------------------+------------------------------+---------------------------------+--------------------------------+---------------------------+--------------------------+-------------------------+------------------------+--------------------+---------------------+---------------------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |custom_OCRAM|avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU|present_state                                                                                                                                                                                                                                                              ;
++---------------------------------+-------------------------------+-------------------------------+-------------------------------+------------------------------+---------------------------------+---------------------------+--------------------------+-------------------------+------------------------+--------------------+---------------------+---------------------+---------------------+
+; Name                            ; present_state.idle_afterburst ; present_state.wait_afterburst ; present_state.burst_lastwrite ; present_state.burst_lastread ; present_state.burst_write_pause ; present_state.burst_write ; present_state.burst_read ; present_state.write_cmd ; present_state.read_cmd ; present_state.idle ; present_state.init2 ; present_state.init1 ; present_state.reset ;
++---------------------------------+-------------------------------+-------------------------------+-------------------------------+------------------------------+---------------------------------+---------------------------+--------------------------+-------------------------+------------------------+--------------------+---------------------+---------------------+---------------------+
+; present_state.reset             ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 0                   ;
+; present_state.init1             ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 1                   ; 1                   ;
+; present_state.init2             ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 1                   ; 0                   ; 1                   ;
+; present_state.idle              ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                         ; 0                        ; 0                       ; 0                      ; 1                  ; 0                   ; 0                   ; 1                   ;
+; present_state.read_cmd          ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                         ; 0                        ; 0                       ; 1                      ; 0                  ; 0                   ; 0                   ; 1                   ;
+; present_state.write_cmd         ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                         ; 0                        ; 1                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
+; present_state.burst_read        ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                         ; 1                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
+; present_state.burst_write       ; 0                             ; 0                             ; 0                             ; 0                            ; 0                               ; 1                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
+; present_state.burst_write_pause ; 0                             ; 0                             ; 0                             ; 0                            ; 1                               ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
+; present_state.burst_lastread    ; 0                             ; 0                             ; 0                             ; 1                            ; 0                               ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
+; present_state.burst_lastwrite   ; 0                             ; 0                             ; 1                             ; 0                            ; 0                               ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
+; present_state.wait_afterburst   ; 0                             ; 1                             ; 0                             ; 0                            ; 0                               ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
+; present_state.idle_afterburst   ; 1                             ; 0                             ; 0                             ; 0                            ; 0                               ; 0                         ; 0                        ; 0                       ; 0                      ; 0                  ; 0                   ; 0                   ; 1                   ;
++---------------------------------+-------------------------------+-------------------------------+-------------------------------+------------------------------+---------------------------------+---------------------------+--------------------------+-------------------------+------------------------+--------------------+---------------------+---------------------+---------------------+
 
 
 +------------------------------------------------------+
@@ -345,12 +347,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 67    ;
+; Total registers                              ; 77    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 14    ;
+; Number of registers using Asynchronous Clear ; 13    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 40    ;
+; Number of registers using Clock Enable       ; 51    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -371,6 +373,16 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+-------------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
 +---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------+
+; n              ; 11    ; Signed Integer                                                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -669,6 +681,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg" ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                    ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------+
+; clear_n ; Input ; Info     ; Stuck at VCC                                                                                               ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe2" ;
 +--------+-------+----------+-----------------------------------------------------------------------------------------------------------+
@@ -693,23 +714,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 90                          ;
-; cycloneiii_ff         ; 67                          ;
-;     CLR               ; 14                          ;
-;     ENA               ; 32                          ;
+; cycloneiii_ff         ; 77                          ;
+;     CLR               ; 13                          ;
+;     ENA               ; 43                          ;
 ;     ENA SLD           ; 8                           ;
 ;     plain             ; 13                          ;
-; cycloneiii_lcell_comb ; 61                          ;
+; cycloneiii_lcell_comb ; 59                          ;
 ;     arith             ; 7                           ;
 ;         2 data inputs ; 7                           ;
-;     normal            ; 54                          ;
+;     normal            ; 52                          ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 7                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 32                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 31                          ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 1.71                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 1.65                        ;
 +-----------------------+-----------------------------+
 
 
@@ -728,73 +749,74 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Nov 13 12:37:55 2023
+    Info: Processing started: Wed Nov 15 09:52:41 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off custom_OCRAM -c custom_OCRAM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/incrementer/incrementer_8bit_nopipe.vhd
-    Info (12022): Found design unit 1: incrementer_8bit_nopipe-SYN File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 52
-    Info (12023): Found entity 1: incrementer_8bit_nopipe File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 43
+    Info (12022): Found design unit 1: incrementer_8bit_nopipe-SYN File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 52
+    Info (12023): Found entity 1: incrementer_8bit_nopipe File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/blockram/blockram_1port_8a_32d.vhd
-    Info (12022): Found design unit 1: blockram_1port_8a_32d-SYN File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 56
-    Info (12023): Found entity 1: blockram_1port_8a_32d File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 43
+    Info (12022): Found design unit 1: blockram_1port_8a_32d-SYN File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 56
+    Info (12023): Found entity 1: blockram_1port_8a_32d File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/t_flip_flop.vhd
-    Info (12022): Found design unit 1: t_flip_flop-behavior File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/t_flip_flop.vhd Line: 20
-    Info (12023): Found entity 1: t_flip_flop File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/t_flip_flop.vhd Line: 8
+    Info (12022): Found design unit 1: t_flip_flop-behavior File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/t_flip_flop.vhd Line: 20
+    Info (12023): Found entity 1: t_flip_flop File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/t_flip_flop.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/reg.vhd
-    Info (12022): Found design unit 1: reg-behavior File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/reg.vhd Line: 22
-    Info (12023): Found entity 1: reg File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/reg.vhd Line: 7
+    Info (12022): Found design unit 1: reg-behavior File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/reg.vhd Line: 22
+    Info (12023): Found entity 1: reg File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/reg.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/mux_2to1.vhd
-    Info (12022): Found design unit 1: mux_2to1-behavior File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/mux_2to1.vhd Line: 21
-    Info (12023): Found entity 1: mux_2to1 File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/mux_2to1.vhd Line: 7
+    Info (12022): Found design unit 1: mux_2to1-behavior File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/mux_2to1.vhd Line: 21
+    Info (12023): Found entity 1: mux_2to1 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/mux_2to1.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/d_flipflop.vhd
-    Info (12022): Found design unit 1: d_flipflop-behavior File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/d_flipflop.vhd Line: 18
-    Info (12023): Found entity 1: d_flipflop File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/d_flipflop.vhd Line: 7
+    Info (12022): Found design unit 1: d_flipflop-behavior File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/d_flipflop.vhd Line: 18
+    Info (12023): Found entity 1: d_flipflop File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/d_flipflop.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/custom_OCRAM.vhd
-    Info (12022): Found design unit 1: custom_OCRAM-rtl File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 31
-    Info (12023): Found entity 1: custom_OCRAM File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 14
+    Info (12022): Found design unit 1: custom_OCRAM-rtl File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 31
+    Info (12023): Found entity 1: custom_OCRAM File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/counter_Nbit.vhd
-    Info (12022): Found design unit 1: counter_Nbit-rtl File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/counter_Nbit.vhd Line: 23
-    Info (12023): Found entity 1: counter_Nbit File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/counter_Nbit.vhd Line: 9
+    Info (12022): Found design unit 1: counter_Nbit-rtl File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/counter_Nbit.vhd Line: 23
+    Info (12023): Found entity 1: counter_Nbit File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/counter_Nbit.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/comparator_Nbit.vhd
-    Info (12022): Found design unit 1: comparator_Nbit-behavior File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/comparator_Nbit.vhd Line: 21
-    Info (12023): Found entity 1: comparator_Nbit File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/comparator_Nbit.vhd Line: 8
+    Info (12022): Found design unit 1: comparator_Nbit-behavior File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/comparator_Nbit.vhd Line: 21
+    Info (12023): Found entity 1: comparator_Nbit File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/comparator_Nbit.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/avs_to_blockram_converter_EU.vhd
-    Info (12022): Found design unit 1: avs_to_blockram_converter_EU-rtl File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 54
-    Info (12023): Found entity 1: avs_to_blockram_converter_EU File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 11
+    Info (12022): Found design unit 1: avs_to_blockram_converter_EU-rtl File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 55
+    Info (12023): Found entity 1: avs_to_blockram_converter_EU File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/avs_to_blockram_converter_CU.vhd
-    Info (12022): Found design unit 1: avs_to_blockram_converter_CU-fsm File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_CU.vhd Line: 34
-    Info (12023): Found entity 1: avs_to_blockram_converter_CU File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_CU.vhd Line: 7
+    Info (12022): Found design unit 1: avs_to_blockram_converter_CU-fsm File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_CU.vhd Line: 35
+    Info (12023): Found entity 1: avs_to_blockram_converter_CU File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_CU.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/avs_to_blockram_converter.vhd
-    Info (12022): Found design unit 1: avs_to_blockram_converter-rtl File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd Line: 37
-    Info (12023): Found entity 1: avs_to_blockram_converter File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd Line: 12
+    Info (12022): Found design unit 1: avs_to_blockram_converter-rtl File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd Line: 37
+    Info (12023): Found entity 1: avs_to_blockram_converter File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd Line: 12
 Info (12127): Elaborating entity "custom_OCRAM" for the top level hierarchy
-Info (12128): Elaborating entity "avs_to_blockram_converter" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 83
-Info (12128): Elaborating entity "avs_to_blockram_converter_EU" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd Line: 135
-Info (12128): Elaborating entity "d_flipflop" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe1" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 155
-Info (12128): Elaborating entity "counter_Nbit" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 177
-Info (12128): Elaborating entity "t_flip_flop" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:entry_tff" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/counter_Nbit.vhd Line: 47
-Info (12128): Elaborating entity "comparator_Nbit" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMPB" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 191
-Info (12128): Elaborating entity "reg" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 217
-Info (12128): Elaborating entity "mux_2to1" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|mux_2to1:address_mux" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 232
-Info (12128): Elaborating entity "reg" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 246
-Info (12128): Elaborating entity "incrementer_8bit_nopipe" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 261
-Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 80
-Info (12130): Elaborated megafunction instantiation "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 80
-Info (12133): Instantiated megafunction "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 80
+Info (12128): Elaborating entity "avs_to_blockram_converter" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 83
+Info (12128): Elaborating entity "avs_to_blockram_converter_EU" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd Line: 138
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|d_flipflop:pipe1" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 157
+Info (12128): Elaborating entity "reg" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:burstcount_reg" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 179
+Info (12128): Elaborating entity "counter_Nbit" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 194
+Info (12128): Elaborating entity "t_flip_flop" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|counter_Nbit:burst_cnt|t_flip_flop:entry_tff" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/counter_Nbit.vhd Line: 47
+Info (12128): Elaborating entity "comparator_Nbit" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|comparator_Nbit:CMPB" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 208
+Info (12128): Elaborating entity "reg" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:writedata_reg" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 234
+Info (12128): Elaborating entity "mux_2to1" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|mux_2to1:address_mux" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 249
+Info (12128): Elaborating entity "reg" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|reg:address_reg" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 263
+Info (12128): Elaborating entity "incrementer_8bit_nopipe" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter_EU.vhd Line: 278
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 80
+Info (12130): Elaborated megafunction instantiation "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 80
+Info (12133): Instantiated megafunction "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/incrementer/incrementer_8bit_nopipe.vhd Line: 80
     Info (12134): Parameter "lpm_direction" = "ADD"
     Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES,CIN_USED=NO"
     Info (12134): Parameter "lpm_representation" = "UNSIGNED"
     Info (12134): Parameter "lpm_type" = "LPM_ADD_SUB"
     Info (12134): Parameter "lpm_width" = "8"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_bsh.tdf
-    Info (12023): Found entity 1: add_sub_bsh File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/db/add_sub_bsh.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_bsh File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/db/add_sub_bsh.tdf Line: 23
 Info (12128): Elaborating entity "add_sub_bsh" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_EU:EU|incrementer_8bit_nopipe:address_inc|lpm_add_sub:LPM_ADD_SUB_component|add_sub_bsh:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
-Info (12128): Elaborating entity "avs_to_blockram_converter_CU" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd Line: 173
-Info (12128): Elaborating entity "blockram_1port_8a_32d" for hierarchy "blockram_1port_8a_32d:blockram_1port_inst" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 105
-Info (12128): Elaborating entity "altsyncram" for hierarchy "blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 63
-Info (12130): Elaborated megafunction instantiation "blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component" File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 63
-Info (12133): Instantiated megafunction "blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component" with the following parameter: File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 63
+Info (12128): Elaborating entity "avs_to_blockram_converter_CU" for hierarchy "avs_to_blockram_converter:avs_to_blockram_converter_inst|avs_to_blockram_converter_CU:CU" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/avs_to_blockram_converter.vhd Line: 177
+Info (12128): Elaborating entity "blockram_1port_8a_32d" for hierarchy "blockram_1port_8a_32d:blockram_1port_inst" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 105
+Info (12128): Elaborating entity "altsyncram" for hierarchy "blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 63
+Info (12130): Elaborated megafunction instantiation "blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component" File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 63
+Info (12133): Instantiated megafunction "blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component" with the following parameter: File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/blockram/blockram_1port_8a_32d.vhd Line: 63
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -846,110 +868,110 @@ Info (12133): Instantiated megafunction "blockram_1port_8a_32d:blockram_1port_in
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qtp3.tdf
-    Info (12023): Found entity 1: altsyncram_qtp3 File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/db/altsyncram_qtp3.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_qtp3 File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/db/altsyncram_qtp3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_qtp3" for hierarchy "blockram_1port_8a_32d:blockram_1port_inst|altsyncram:altsyncram_component|altsyncram_qtp3:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (15717): Design contains 89 virtual pins; timing numbers associated with paths containing virtual pins are estimates
-    Info (15719): Pin "avs_readdata[0]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[1]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[2]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[3]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[4]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[5]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[6]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[7]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[8]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[9]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[10]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[11]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[12]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[13]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[14]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[15]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[16]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[17]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[18]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[19]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[20]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[21]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[22]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[23]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[24]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[25]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[26]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[27]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[28]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[29]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[30]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_readdata[31]" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
-    Info (15719): Pin "avs_waitrequest" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 24
-    Info (15719): Pin "avs_readdatavalid" is virtual output pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 25
-    Info (15718): Pin "reset_n" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 18
-    Info (15718): Pin "avs_burstcount[0]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[1]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[2]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[3]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[4]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[5]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[6]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[7]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[8]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[9]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_burstcount[10]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
-    Info (15718): Pin "avs_beginbursttransfer" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 26
-    Info (15718): Pin "avs_write" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 22
-    Info (15718): Pin "avs_read" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 20
-    Info (15718): Pin "avs_writedata[0]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_address[0]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
-    Info (15718): Pin "avs_address[1]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
-    Info (15718): Pin "avs_address[2]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
-    Info (15718): Pin "avs_address[3]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
-    Info (15718): Pin "avs_address[4]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
-    Info (15718): Pin "avs_address[5]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
-    Info (15718): Pin "avs_address[6]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
-    Info (15718): Pin "avs_address[7]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
-    Info (15718): Pin "avs_writedata[1]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[2]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[3]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[4]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[5]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[6]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[7]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[8]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[9]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[10]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[11]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[12]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[13]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[14]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[15]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[16]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[17]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[18]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[19]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[20]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[21]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[22]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[23]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[24]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[25]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[26]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[27]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[28]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[29]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[30]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-    Info (15718): Pin "avs_writedata[31]" is virtual input pin File: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
-Info (21057): Implemented 187 device resources after synthesis - the final resource count might be different
+    Info (15719): Pin "avs_readdata[0]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[1]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[2]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[3]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[4]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[5]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[6]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[7]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[8]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[9]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[10]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[11]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[12]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[13]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[14]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[15]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[16]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[17]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[18]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[19]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[20]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[21]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[22]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[23]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[24]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[25]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[26]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[27]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[28]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[29]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[30]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_readdata[31]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 21
+    Info (15719): Pin "avs_waitrequest" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 24
+    Info (15719): Pin "avs_readdatavalid" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 25
+    Info (15718): Pin "reset_n" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 18
+    Info (15718): Pin "avs_beginbursttransfer" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 26
+    Info (15718): Pin "avs_write" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 22
+    Info (15718): Pin "avs_read" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 20
+    Info (15718): Pin "avs_writedata[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_address[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
+    Info (15718): Pin "avs_address[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
+    Info (15718): Pin "avs_address[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
+    Info (15718): Pin "avs_address[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
+    Info (15718): Pin "avs_address[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
+    Info (15718): Pin "avs_address[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
+    Info (15718): Pin "avs_address[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
+    Info (15718): Pin "avs_address[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 19
+    Info (15718): Pin "avs_writedata[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[8]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[9]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[10]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[11]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[12]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[13]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[14]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[15]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[16]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[17]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[18]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[19]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[20]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[21]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[22]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[23]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[24]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[25]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[26]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[27]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[28]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[29]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[30]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_writedata[31]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 23
+    Info (15718): Pin "avs_burstcount[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[8]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[9]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+    Info (15718): Pin "avs_burstcount[10]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/custom_OCRAM/hdl/custom_OCRAM.vhd Line: 27
+Info (21057): Implemented 185 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
-    Info (21061): Implemented 154 logic cells
+    Info (21061): Implemented 152 logic cells
     Info (21064): Implemented 32 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 431 megabytes
-    Info: Processing ended: Mon Nov 13 12:38:07 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 447 megabytes
+    Info: Processing ended: Wed Nov 15 09:52:59 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:31
 
 

@@ -1,6 +1,6 @@
 Info: Starting: Create testbench Platform Designer system
-Info: /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2.ipx
-Info: qsys-generate /home/andrea/Documents/Tesi/287628/blockram_system_v2/blockram_system_v2.qsys --testbench=SIMPLE --output-directory=/home/andrea/Documents/Tesi/287628/blockram_system_v2 --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Info: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2.ipx
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/blockram_system_v2.qsys --testbench=SIMPLE --output-directory=/home/andrea/Documents/Tesi_287628/287628/blockram_system_v2 --family="Cyclone 10 LP" --part=10CL025YE144C8G
 Progress: Loading blockram_system_v2/blockram_system_v2.qsys
 Progress: Reading input file
 Progress: Adding clk_100MHz [clock_source 22.1]
@@ -29,24 +29,24 @@ Progress: (2) searching /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder
 Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
 Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
-Info: /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/ip/**/* matched 0 files in 0.00 seconds
 Progress: Loading testbench/blockram_system_v2_tb.qsys
-Info: Reading index /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2.ipx
+Info: Reading index /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2.ipx
 Progress: Loading blockram_system_v2/blockram_system_v2.qsys
-Info: /home/andrea/Documents/Tesi/287628/blockram_system_v2/* matched 20 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/* matched 22 files in 0.00 seconds
 Progress: Loading custom_OCRAM/custom_OCRAM_hw.tcl
-Info: /home/andrea/Documents/Tesi/287628/blockram_system_v2/ip/**/* matched 15 files in 0.02 seconds
-Info: /home/andrea/Documents/Tesi/287628/blockram_system_v2/*/* matched 467 files in 0.01 seconds
-Info: /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2.ipx described 0 plugins, 3 paths, in 0.03 seconds
-Info: /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/* matched 12 files in 0.04 seconds
-Info: /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/*/* matched 8 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/ip/**/* matched 16 files in 0.02 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/*/* matched 504 files in 0.01 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2.ipx described 0 plugins, 3 paths, in 0.03 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/* matched 12 files in 0.03 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/*/* matched 8 files in 0.00 seconds
 Info: Reading index /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/**/* matched 1958 files in 0.04 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/**/* matched 1958 files in 0.05 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/storage/**/* matched 26 files in 0.00 seconds
-Info: /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx described 0 plugins, 2 paths, in 0.04 seconds
-Info: /home/andrea/.altera.quartus/ip/22.1/**/* matched 2 files in 0.04 seconds
+Info: /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx described 0 plugins, 2 paths, in 0.05 seconds
+Info: /home/andrea/.altera.quartus/ip/22.1/**/* matched 2 files in 0.05 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
@@ -59,8 +59,8 @@ Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/builtin.ipx descr
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/**/* matched 9 files in 0.01 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/common/librarian/factories/**/* matched 0 files in 0.00 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.28 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.28 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.29 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.29 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -140,9 +140,9 @@ Info: TB_Gen: Saving testbench system: blockram_system_v2_tb.qsys
 Info: save_system blockram_system_v2_tb.qsys
 Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
 Info: TB_Gen: TBGEN SUCCESSFUL
-Info: Testbench system: /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb.qsys
+Info: Testbench system: /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb.qsys
 Info: Done
-Info: qsys-generate /home/andrea/Documents/Tesi/287628/blockram_system_v2/blockram_system_v2.qsys --simulation=VHDL --allow-mixed-language-simulation --testbench=SIMPLE --testbench-simulation=VHDL --allow-mixed-language-testbench-simulation --output-directory=/home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/blockram_system_v2.qsys --simulation=VHDL --allow-mixed-language-simulation --testbench=SIMPLE --testbench-simulation=VHDL --allow-mixed-language-testbench-simulation --output-directory=/home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation --family="Cyclone 10 LP" --part=10CL025YE144C8G
 Progress: Loading testbench/blockram_system_v2_tb.qsys
 Progress: Reading input file
 Progress: Adding blockram_system_v2_inst [blockram_system_v2 1.0]
@@ -171,16 +171,16 @@ Info: blockram_system_v2_inst_clk_bfm: "blockram_system_v2_tb" instantiated alte
 Info: blockram_system_v2_inst_reset_bfm: "blockram_system_v2_tb" instantiated altera_avalon_reset_source "blockram_system_v2_inst_reset_bfm"
 Info: data_OCRAM: "blockram_system_v2_inst" instantiated custom_OCRAM "data_OCRAM"
 Info: instruction_OCROM: Starting RTL generation for module 'blockram_system_v2_instruction_OCROM'
-Info: instruction_OCROM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=blockram_system_v2_instruction_OCROM --dir=/tmp/alt9675_6206233243440701160.dir/0033_instruction_OCROM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --vhdl --config=/tmp/alt9675_6206233243440701160.dir/0033_instruction_OCROM_gen//blockram_system_v2_instruction_OCROM_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9675_6206233243440701160.dir/0033_instruction_OCROM_gen/  ]
+Info: instruction_OCROM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=blockram_system_v2_instruction_OCROM --dir=/tmp/alt9676_3458268542982676870.dir/0033_instruction_OCROM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --vhdl --config=/tmp/alt9676_3458268542982676870.dir/0033_instruction_OCROM_gen//blockram_system_v2_instruction_OCROM_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9676_3458268542982676870.dir/0033_instruction_OCROM_gen/  ]
 Info: instruction_OCROM: Done RTL generation for module 'blockram_system_v2_instruction_OCROM'
 Info: instruction_OCROM: "blockram_system_v2_inst" instantiated altera_avalon_onchip_memory2 "instruction_OCROM"
 Info: leds: Starting RTL generation for module 'blockram_system_v2_leds'
-Info: leds:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=blockram_system_v2_leds --dir=/tmp/alt9675_6206233243440701160.dir/0034_leds_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --vhdl --config=/tmp/alt9675_6206233243440701160.dir/0034_leds_gen//blockram_system_v2_leds_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9675_6206233243440701160.dir/0034_leds_gen/  ]
+Info: leds:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=blockram_system_v2_leds --dir=/tmp/alt9676_3458268542982676870.dir/0034_leds_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --vhdl --config=/tmp/alt9676_3458268542982676870.dir/0034_leds_gen//blockram_system_v2_leds_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9676_3458268542982676870.dir/0034_leds_gen/  ]
 Info: leds: Done RTL generation for module 'blockram_system_v2_leds'
 Info: leds: "blockram_system_v2_inst" instantiated altera_avalon_pio "leds"
 Info: nios2f: "blockram_system_v2_inst" instantiated altera_nios2_gen2 "nios2f"
 Info: switches: Starting RTL generation for module 'blockram_system_v2_switches'
-Info: switches:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=blockram_system_v2_switches --dir=/tmp/alt9675_6206233243440701160.dir/0035_switches_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --vhdl --config=/tmp/alt9675_6206233243440701160.dir/0035_switches_gen//blockram_system_v2_switches_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9675_6206233243440701160.dir/0035_switches_gen/  ]
+Info: switches:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=blockram_system_v2_switches --dir=/tmp/alt9676_3458268542982676870.dir/0035_switches_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --vhdl --config=/tmp/alt9676_3458268542982676870.dir/0035_switches_gen//blockram_system_v2_switches_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9676_3458268542982676870.dir/0035_switches_gen/  ]
 Info: switches: Done RTL generation for module 'blockram_system_v2_switches'
 Info: switches: "blockram_system_v2_inst" instantiated altera_avalon_pio "switches"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -192,22 +192,22 @@ Info: mm_interconnect_0: "blockram_system_v2_inst" instantiated altera_mm_interc
 Info: irq_mapper: "blockram_system_v2_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "blockram_system_v2_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'blockram_system_v2_nios2f_cpu'
-Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=blockram_system_v2_nios2f_cpu --dir=/tmp/alt9675_6206233243440701160.dir/0038_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9675_6206233243440701160.dir/0038_cpu_gen//blockram_system_v2_nios2f_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9675_6206233243440701160.dir/0038_cpu_gen/  ]
-Info: cpu: # 2023.11.14 10:37:05 (*) Starting Nios II generation
-Info: cpu: # 2023.11.14 10:37:05 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2023.11.14 10:37:05 (*)   Creating all objects for CPU
-Info: cpu: # 2023.11.14 10:37:05 (*)     Testbench
-Info: cpu: # 2023.11.14 10:37:05 (*)     Instruction decoding
-Info: cpu: # 2023.11.14 10:37:05 (*)       Instruction fields
-Info: cpu: # 2023.11.14 10:37:05 (*)       Instruction decodes
-Info: cpu: # 2023.11.14 10:37:05 (*)       Signals for RTL simulation waveforms
-Info: cpu: # 2023.11.14 10:37:05 (*)       Instruction controls
-Info: cpu: # 2023.11.14 10:37:05 (*)     Pipeline frontend
-Info: cpu: # 2023.11.14 10:37:06 (*)     Pipeline backend
-Info: cpu: # 2023.11.14 10:37:07 (*)   Creating '/tmp/alt9675_6206233243440701160.dir/0038_cpu_gen//blockram_system_v2_nios2f_cpu_nios2_waves.do'
-Info: cpu: # 2023.11.14 10:37:07 (*)   Generating RTL from CPU objects
-Info: cpu: # 2023.11.14 10:37:07 (*)   Creating plain-text RTL
-Info: cpu: # 2023.11.14 10:37:08 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=blockram_system_v2_nios2f_cpu --dir=/tmp/alt9676_3458268542982676870.dir/0038_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9676_3458268542982676870.dir/0038_cpu_gen//blockram_system_v2_nios2f_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9676_3458268542982676870.dir/0038_cpu_gen/  ]
+Info: cpu: # 2023.11.15 09:25:04 (*) Starting Nios II generation
+Info: cpu: # 2023.11.15 09:25:04 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.11.15 09:25:04 (*)   Creating all objects for CPU
+Info: cpu: # 2023.11.15 09:25:04 (*)     Testbench
+Info: cpu: # 2023.11.15 09:25:04 (*)     Instruction decoding
+Info: cpu: # 2023.11.15 09:25:04 (*)       Instruction fields
+Info: cpu: # 2023.11.15 09:25:04 (*)       Instruction decodes
+Info: cpu: # 2023.11.15 09:25:05 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2023.11.15 09:25:05 (*)       Instruction controls
+Info: cpu: # 2023.11.15 09:25:05 (*)     Pipeline frontend
+Info: cpu: # 2023.11.15 09:25:05 (*)     Pipeline backend
+Info: cpu: # 2023.11.15 09:25:06 (*)   Creating '/tmp/alt9676_3458268542982676870.dir/0038_cpu_gen//blockram_system_v2_nios2f_cpu_nios2_waves.do'
+Info: cpu: # 2023.11.15 09:25:06 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.11.15 09:25:06 (*)   Creating plain-text RTL
+Info: cpu: # 2023.11.15 09:25:07 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'blockram_system_v2_nios2f_cpu'
 Info: cpu: "nios2f" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2f_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2f_data_master_translator"
@@ -221,39 +221,39 @@ Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
 Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
 Info: nios2f_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2f_data_master_limiter"
-Info: Reusing file /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_avalon_sc_fifo.v
 Info: nios2f_debug_mem_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "nios2f_debug_mem_slave_burst_adapter"
-Info: Reusing file /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
-Info: Reusing file /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: blockram_system_v2_tb: Done "blockram_system_v2_tb" with 35 modules, 90 files
+Info: blockram_system_v2_tb: Done "blockram_system_v2_tb" with 35 modules, 89 files
 Info: qsys-generate succeeded.
-Info: sim-script-gen --spd=/home/andrea/Documents/Tesi/287628/blockram_system_v2/blockram_system_v2_tb.spd --output-directory=/home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=/home/andrea/Documents/Tesi/287628/blockram_system_v2/blockram_system_v2_tb.spd --output-directory=/home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/ --use-relative-paths=true
-Info: Generating the following file(s) for VCSMX simulator in /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/ directory:
+Info: sim-script-gen --spd=/home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/blockram_system_v2_tb.spd --output-directory=/home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/blockram_system_v2_tb.spd --output-directory=/home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for VCSMX simulator in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/ directory:
 Info: 	synopsys/vcsmx/synopsys_sim.setup
 Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for RIVIERA simulator in /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/ directory:
+Info: Generating the following file(s) for RIVIERA simulator in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: Generating the following file(s) for MODELSIM simulator in /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/ directory:
-Info: 	mentor/msim_setup.tcl
-Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
-Info: Generating the following file(s) for XCELIUM simulator in /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/ directory:
+Info: Generating the following file(s) for XCELIUM simulator in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/ directory:
 Info: 	xcelium/cds.lib
 Info: 	xcelium/hdl.var
 Info: 	xcelium/xcelium_setup.sh
 Info: 	34 .cds.lib files in xcelium/cds_libs/ directory
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/andrea/Documents/Tesi/287628/blockram_system_v2/platform_designer/testbench/.
+Info: Generating the following file(s) for MODELSIM simulator in /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/platform_designer/testbench/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create testbench Platform Designer system

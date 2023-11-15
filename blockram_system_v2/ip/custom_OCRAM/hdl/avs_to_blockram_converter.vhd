@@ -54,6 +54,7 @@ architecture rtl of avs_to_blockram_converter is
     inc_disable               : out   std_logic;
     address_reg_enable        : out   std_logic;
     writedata_reg_enable      : out   std_logic;
+    burstcount_reg_enable     : out   std_logic;
     pipe_clear_n              : out   std_logic;
     -- status signals:
     read                      : in    std_logic;
@@ -98,6 +99,7 @@ architecture rtl of avs_to_blockram_converter is
     inc_disable               : in    std_logic;
     address_reg_enable        : in    std_logic;
     writedata_reg_enable      : in    std_logic;
+    burstcount_reg_enable     : in    std_logic;
     pipe_clear_n              : in    std_logic;
     -- status signals:
     read                      : out   std_logic;
@@ -120,6 +122,7 @@ architecture rtl of avs_to_blockram_converter is
   signal inc_disable               : std_logic;
   signal address_reg_enable        : std_logic;
   signal writedata_reg_enable      : std_logic;
+  signal burstcount_reg_enable     : std_logic;
   signal pipe_clear_n              : std_logic;
   -- status signals:
   signal read                      : std_logic;
@@ -161,6 +164,7 @@ architecture rtl of avs_to_blockram_converter is
       inc_disable               => inc_disable,
       address_reg_enable        => address_reg_enable,
       writedata_reg_enable      => writedata_reg_enable,
+      burstcount_reg_enable     => burstcount_reg_enable,
       pipe_clear_n              => pipe_clear_n,
       read                      => read,
       write                     => write,
@@ -185,6 +189,7 @@ architecture rtl of avs_to_blockram_converter is
       inc_disable               => inc_disable,
       address_reg_enable        => address_reg_enable,
       writedata_reg_enable      => writedata_reg_enable,
+      burstcount_reg_enable     => burstcount_reg_enable,
       pipe_clear_n              => pipe_clear_n,
       read                      => read,
       write                     => write,
