@@ -24,7 +24,9 @@ DIRECTORIES DESCRIPTION:
 	-- the instruction OCROM is implemented using an IP core available in the IP catalog
 	-- the data OCRAM is implemented creating a custom IP core which supports burst operations
 	-- the data OCRAM is made up by a 1-port blockRAM and a component interfacing it with the Avalon bus
-	-- currently under development
+	-- functional simulation: succesfully completed
+	-- timing analysis: succesfully completed
+	-- test on VirtLab board: not performed yet
 #
 # ./hyperram_system/
 	-- the same system as blockRAM_system_v2, but the blockRAM is substituted with an off-chip hyperRAM

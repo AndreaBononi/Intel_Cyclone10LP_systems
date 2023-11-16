@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Nov 14 10:46:09 2023
+Fitter Status : Successful - Wed Nov 15 10:07:42 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : blockram_system_v2
 Top-level Entity Name : top_level_entity
 Family : Cyclone 10 LP
 Device : 10CL025YE144C8G
 Timing Models : Final
-Total logic elements : 3,842 / 24,624 ( 16 % )
-    Total combinational functions : 3,401 / 24,624 ( 14 % )
-    Dedicated logic registers : 2,221 / 24,624 ( 9 % )
-Total registers : 2221
+Total logic elements : 3,869 / 24,624 ( 16 % )
+    Total combinational functions : 3,415 / 24,624 ( 14 % )
+    Dedicated logic registers : 2,224 / 24,624 ( 9 % )
+Total registers : 2224
 Total pins : 51 / 77 ( 66 % )
 Total virtual pins : 0
 Total memory bits : 102,592 / 608,256 ( 17 % )
