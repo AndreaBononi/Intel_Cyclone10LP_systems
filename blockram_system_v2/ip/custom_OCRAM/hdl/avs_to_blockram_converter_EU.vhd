@@ -66,9 +66,10 @@ architecture rtl of avs_to_blockram_converter_EU is
   (
     clk				: in 	std_logic;
     enable		: in 	std_logic;
-    clear_n		: in 	std_logic;
-    dff_in		: in 	std_logic;
-    dff_out		: out std_logic := '0'
+    clear_n		: in 	std_logic;	-- synchronous clear, active low
+    reset_n		: in	std_logic;	-- asynchronous reset, active low
+    din				: in 	std_logic;
+    dout			: out std_logic
   );
   end component; ----------------------------------------------------------------------------------------------
 
@@ -82,9 +83,10 @@ architecture rtl of avs_to_blockram_converter_EU is
   (
     clk				: in 	std_logic;
     enable		: in 	std_logic;
-    clear_n		: in 	std_logic;
-    reg_in		: in 	std_logic_vector(N-1 downto 0);
-    reg_out		: out std_logic_vector(N-1 downto 0) := (others => '0')
+    clear_n		: in 	std_logic;	-- synchronous clear, active low
+    reset_n		:	in	std_logic;	-- asynchronous clear, active low
+    din				: in 	std_logic_vector(N-1 downto 0);
+    dout			: out std_logic_vector(N-1 downto 0) := (others => '0')
   );
   end component; ----------------------------------------------------------------------------------------------
 
@@ -96,10 +98,10 @@ architecture rtl of avs_to_blockram_converter_EU is
 	);
 	port
 	(
-		mux_in_0		: in		std_logic_vector((N-1) downto 0);
-		mux_in_1		: in		std_logic_vector((N-1) downto 0);
-		sel					: in 		std_logic;
-		out_mux			: out 	std_logic_vector((N-1) downto 0)
+		din_0		: in	std_logic_vector((N-1) downto 0);
+    din_1		: in	std_logic_vector((N-1) downto 0);
+    sel			: in 	std_logic;
+    dout		: out std_logic_vector((N-1) downto 0)
 	);
   end component; ----------------------------------------------------------------------------------------------
 
@@ -111,10 +113,11 @@ architecture rtl of avs_to_blockram_converter_EU is
   );
   port
   (
-    clk				: in 		std_logic;
-    enable		: in 		std_logic;
-    clear_n		: in 		std_logic;
-    cnt_out		: out 	std_logic_vector(N-1 downto 0)
+    clk				: in 	std_logic;
+    enable		: in 	std_logic;
+    clear_n		: in 	std_logic;
+    reset_n		: in	std_logic;
+    dout			: out std_logic_vector(N-1 downto 0)
   );
   end component; ----------------------------------------------------------------------------------------------
 
@@ -126,9 +129,9 @@ architecture rtl of avs_to_blockram_converter_EU is
   );
   port
   (
-    cmp_in_0		: in		std_logic_vector((N-1) downto 0);
-    cmp_in_1		: in		std_logic_vector((N-1) downto 0);
-    cmp_equal 	: out 	std_logic
+    din_0		: in		std_logic_vector((N-1) downto 0);
+    din_1		: in		std_logic_vector((N-1) downto 0);
+    equal 	: out 	std_logic
   );
   end component; ----------------------------------------------------------------------------------------------
 
@@ -159,9 +162,10 @@ architecture rtl of avs_to_blockram_converter_EU is
     (
       clk				=> clk,
       enable		=> '1', 
-      clear_n		=> pipe_clear_n, 
-      dff_in		=> readdatavalid, 
-      dff_out		=> pipe1_out
+      clear_n		=> pipe_clear_n,
+      reset_n   => '1',
+      din		    => readdatavalid, 
+      dout		  => pipe1_out
     ); --------------------------------------------------------------------------------------------------------
     
     -- readdatavalid pipe 2 -----------------------------------------------------------------------------------
@@ -170,9 +174,10 @@ architecture rtl of avs_to_blockram_converter_EU is
     (
       clk				=> clk,
       enable		=> '1', 
-      clear_n		=> pipe_clear_n, 
-      dff_in		=> pipe1_out, 
-      dff_out		=> avs_readdatavalid
+      clear_n		=> pipe_clear_n,
+      reset_n   => '1',
+      din		    => pipe1_out, 
+      dout		  => avs_readdatavalid
     ); --------------------------------------------------------------------------------------------------------
 
     -- burstcount register ------------------------------------------------------------------------------------
@@ -186,8 +191,9 @@ architecture rtl of avs_to_blockram_converter_EU is
       clk				=> clk,
       enable		=> burstcount_reg_enable,
       clear_n		=> '1',
-      reg_in		=> avs_burstcount, 
-      reg_out		=> burstcount_reg_out
+      reset_n   => '1',
+      din		    => avs_burstcount, 
+      dout		  => burstcount_reg_out
     ); --------------------------------------------------------------------------------------------------------
 
     -- burst counter ------------------------------------------------------------------------------------------
@@ -201,7 +207,8 @@ architecture rtl of avs_to_blockram_converter_EU is
       clk				=> clk,
       enable		=> cnt_enable,
       clear_n		=> cnt_clear_n,
-      cnt_out		=> cnt_out
+      reset_n   => '1',
+      dout		  => cnt_out
     ); --------------------------------------------------------------------------------------------------------
 
     -- burst comparator ---------------------------------------------------------------------------------------
@@ -212,9 +219,9 @@ architecture rtl of avs_to_blockram_converter_EU is
     )
     port map
     (
-      cmp_in_0		=> cnt_out,
-      cmp_in_1		=> burstcount_reg_out,
-      cmp_equal		=> burstend
+      din_0		=> cnt_out,
+      din_1		=> burstcount_reg_out,
+      equal		=> burstend
     ); --------------------------------------------------------------------------------------------------------
 
     -- burst operation comparator -----------------------------------------------------------------------------
@@ -225,9 +232,9 @@ architecture rtl of avs_to_blockram_converter_EU is
     )
     port map
     (
-      cmp_in_0		=> burstcount_reg_out,
-      cmp_in_1		=> "00000000001",
-      cmp_equal		=> cmp1_out
+      din_0		=> burstcount_reg_out,
+      din_1		=> "00000000001",
+      equal		=> cmp1_out
     ); --------------------------------------------------------------------------------------------------------
 
     -- writedata register -------------------------------------------------------------------------------------
@@ -241,8 +248,9 @@ architecture rtl of avs_to_blockram_converter_EU is
       clk				=> clk,
       enable		=> writedata_reg_enable,
       clear_n		=> '1',
-      reg_in		=> avs_writedata, 
-      reg_out		=> blockram_data
+      reset_n   => '1',
+      din		    => avs_writedata, 
+      dout		  => blockram_data
     ); --------------------------------------------------------------------------------------------------------
 
     -- address multiplexer ------------------------------------------------------------------------------------
@@ -253,10 +261,10 @@ architecture rtl of avs_to_blockram_converter_EU is
     )
     port map
     (
-      mux_in_0		=> avs_address,
-      mux_in_1		=> incrementer_out,
-      sel					=> address_sel,
-      out_mux			=> address_mux_out
+      din_0		=> avs_address,
+      din_1		=> incrementer_out,
+      sel			=> address_sel,
+      dout		=> address_mux_out
     ); --------------------------------------------------------------------------------------------------------
 
     -- address register ---------------------------------------------------------------------------------------
@@ -270,8 +278,9 @@ architecture rtl of avs_to_blockram_converter_EU is
       clk				=> clk,
       enable		=> address_reg_enable,
       clear_n		=> '1',
-      reg_in		=> address_mux_out, 
-      reg_out		=> address_reg_out
+      reset_n   => '1',
+      din		    => address_mux_out, 
+      dout		  => address_reg_out
     ); --------------------------------------------------------------------------------------------------------
 
     -- address incrementer ------------------------------------------------------------------------------------

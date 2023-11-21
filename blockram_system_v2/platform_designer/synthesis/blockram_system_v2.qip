@@ -2,7 +2,7 @@ set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2"
 set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_TOOL_VERSION "22.1"
 set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "blockram_system_v2" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../blockram_system_v2.sopcinfo"]
-set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name SLD_INFO "QSYS_NAME blockram_system_v2 HAS_SOPCINFO 1 GENERATION_ID 1700038509"
+set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name SLD_INFO "QSYS_NAME blockram_system_v2 HAS_SOPCINFO 1 GENERATION_ID 1700558658"
 set_global_assignment -library "blockram_system_v2" -name MISC_FILE [file join $::quartus(qip_path) "../blockram_system_v2.cmp"]
 set_global_assignment -library "blockram_system_v2" -name SLD_FILE [file join $::quartus(qip_path) "blockram_system_v2.regmap"]
 set_global_assignment -library "blockram_system_v2" -name SLD_FILE [file join $::quartus(qip_path) "blockram_system_v2.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2"
 set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTcwMDAzODUwOQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTcwMDU1ODY1OA==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSAxMCBMUA==::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBDTDAyNVlFMTQ0QzhH::QXV0byBERVZJQ0U="
 set_global_assignment -entity "blockram_system_v2" -library "blockram_system_v2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -1209,12 +1209,12 @@ set_global_assignment -library "blockram_system_v2" -name SYSTEMVERILOG_FILE [fi
 set_global_assignment -library "blockram_system_v2" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/altera_nios2_gen2_rtl_module.ocp"]
 set_global_assignment -library "blockram_system_v2" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/blockram_system_v2_leds.v"]
 set_global_assignment -library "blockram_system_v2" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/blockram_system_v2_instruction_OCROM.v"]
+set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/t_flipflop.vhd"]
 set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/d_flipflop.vhd"]
-set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/t_flip_flop.vhd"]
 set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/reg.vhd"]
 set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/mux_2to1.vhd"]
-set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/counter_Nbit.vhd"]
 set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/comparator_Nbit.vhd"]
+set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/counter_Nbit.vhd"]
 set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/incrementer_8bit_nopipe.vhd"]
 set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/avs_to_blockram_converter_CU.vhd"]
 set_global_assignment -library "blockram_system_v2" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/avs_to_blockram_converter_EU.vhd"]

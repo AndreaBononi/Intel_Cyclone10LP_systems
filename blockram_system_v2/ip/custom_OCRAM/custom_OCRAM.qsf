@@ -70,10 +70,10 @@ set_instance_assignment -name VIRTUAL_PIN ON -to avs_readdata
 set_instance_assignment -name VIRTUAL_PIN ON -to avs_writedata
 set_instance_assignment -name VIRTUAL_PIN ON -to reset_n
 set_instance_assignment -name VIRTUAL_PIN ON -to avs_beginbursttransfer
+set_global_assignment -name VHDL_FILE hdl/t_flipflop.vhd
 set_global_assignment -name QIP_FILE hdl/incrementer/incrementer_8bit_nopipe.qip
 set_global_assignment -name QIP_FILE hdl/blockram/blockram_1port_8a_32d.qip
 set_global_assignment -name SDC_FILE sdc/custom_OCRAM.sdc
-set_global_assignment -name VHDL_FILE hdl/t_flip_flop.vhd
 set_global_assignment -name VHDL_FILE hdl/reg.vhd
 set_global_assignment -name VHDL_FILE hdl/mux_2to1.vhd
 set_global_assignment -name VHDL_FILE hdl/d_flipflop.vhd

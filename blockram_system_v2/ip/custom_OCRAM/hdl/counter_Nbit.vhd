@@ -1,6 +1,6 @@
 -- BRIEF DESCRIPTION: synchronous counter N bit
 -- it can count up to (2^N)-1
--- it is implemented as a chain of T flip flop
+-- it is implemented as a chain of T flipflops
 
 library 	ieee;
 use 			ieee.std_logic_1164.all;
@@ -13,61 +13,65 @@ generic
 );
 port
 (
-	clk				: in 		std_logic;
-	enable		: in 		std_logic;
-	clear_n		: in 		std_logic;
-	cnt_out		: out 	std_logic_vector(N-1 downto 0)
+	clk				: in 	std_logic;
+	enable		: in 	std_logic;
+	clear_n		: in 	std_logic;
+	reset_n		: in	std_logic;
+	dout			: out std_logic_vector(N-1 downto 0)
 );
 end counter_Nbit;
 
 architecture rtl of counter_Nbit is
 
 	-- COMPONENT: flip flop type T ----------------------------------------------------------------------
-	component t_flip_flop is
+	component t_flipflop is
 		port
 		(
 			clk				: in 	std_logic;
 			enable		: in 	std_logic;
-			clear_n		: in 	std_logic;
-			tff_in		: in 	std_logic;
-			tff_out		: out std_logic
+			clear_n		: in 	std_logic;	-- synchronous clear, active low
+			reset_n		: in	std_logic;	-- asynchronous reset, active low
+			din				: in 	std_logic;
+			dout			: out std_logic := '0'
 		);
 	end component; -------------------------------------------------------------------------------------
 
 	-- SIGNALS -----------------------------------------------------------------------------------------
-	signal tgl_in 	: std_logic_vector(N-1 downto 0);
-	signal tgl_out	: std_logic_vector(N-1 downto 0);
+	signal tff_in 	: std_logic_vector(N-1 downto 0);
+	signal tff_out	: std_logic_vector(N-1 downto 0);
 	----------------------------------------------------------------------------------------------------
 
 	begin
 
-		tgl_in(0) <= enable;
+		tff_in(0) <= enable;
 
 		-- first flip flop of the chain ------------------------------------------------------------------
-		entry_tff: t_flip_flop 
+		entry_tff: t_flipflop 
 		port map 
 		(
 			clk 			=> clk, 
 			enable 		=> '1', 
-			clear_n 	=> clear_n, 
-			tff_in		=> tgl_in(0), 
-			tff_out		=> tgl_out(0)
+			clear_n 	=> clear_n,
+			reset_n		=> reset_n,
+			din				=> tff_in(0), 
+			dout			=> tff_out(0)
 		); -----------------------------------------------------------------------------------------------
 		
 		-- chain generation ------------------------------------------------------------------------------
 		g1: for i in 1 to N-1 generate
-			 tgl_in(i) <= tgl_in(i-1) and tgl_out(i-1);
-			 chain_tff: t_flip_flop 
+			 tff_in(i) <= tff_in(i-1) and tff_out(i-1);
+			 chain_tff: t_flipflop 
 			 port map 
 			 (
 				clk 			=> clk, 
 				enable 		=> '1', 
-				clear_n 	=> clear_n, 
-				tff_in		=> tgl_in(i), 
-				tff_out		=> tgl_out(i)
+				clear_n 	=> clear_n,
+				reset_n		=> reset_n, 
+				din				=> tff_in(i), 
+				dout			=> tff_out(i)
 			 );
 		end generate; -------------------------------------------------------------------------------------
 
-		cnt_out <= tgl_out;
+		dout <= tff_out;
 
 end rtl;

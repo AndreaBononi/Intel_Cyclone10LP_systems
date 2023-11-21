@@ -9,9 +9,10 @@ port
 (
 	clk				: in 	std_logic;
 	enable		: in 	std_logic;
-	clear_n		: in 	std_logic;
-	dff_in		: in 	std_logic;
-	dff_out		: out std_logic
+	clear_n		: in 	std_logic;	-- synchronous clear, active low
+	reset_n		: in	std_logic;	-- asynchronous reset, active low
+	din				: in 	std_logic;
+	dout			: out std_logic
 );
 end d_flipflop;
 
@@ -20,14 +21,18 @@ architecture behavior of d_flipflop is
 	begin
 
 		-- main process --------------------------------------------------
-		dff_process: process (clk, clear_n, enable)
+		dff_process: process (clk, clear_n, reset_n, enable)
 		begin
-			if (rising_edge(clk)) then
-				if (clear_n = '0') then
-					dff_out <= '0';
-				elsif (enable = '1') then
-					dff_out <= dff_in;
-            end if;
+			if (reset_n = '0') then
+				dout <= '0';
+			else
+				if (rising_edge(clk)) then
+					if (clear_n = '0') then
+						dout <= '0';
+					elsif (enable = '1') then
+						dout <= din;
+					end if;
+				end if;
 			end if;
 		end process dff_process; -----------------------------------------
 

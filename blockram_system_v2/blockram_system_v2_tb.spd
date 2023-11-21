@@ -317,11 +317,11 @@
    type="VHDL"
    library="instruction_OCROM" />
  <file
-   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/d_flipflop.vhd"
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/t_flipflop.vhd"
    type="VHDL"
    library="data_OCRAM" />
  <file
-   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/t_flip_flop.vhd"
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/d_flipflop.vhd"
    type="VHDL"
    library="data_OCRAM" />
  <file
@@ -333,11 +333,11 @@
    type="VHDL"
    library="data_OCRAM" />
  <file
-   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/counter_Nbit.vhd"
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/comparator_Nbit.vhd"
    type="VHDL"
    library="data_OCRAM" />
  <file
-   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/comparator_Nbit.vhd"
+   path="platform_designer/testbench/blockram_system_v2_tb/simulation/submodules/counter_Nbit.vhd"
    type="VHDL"
    library="data_OCRAM" />
  <file

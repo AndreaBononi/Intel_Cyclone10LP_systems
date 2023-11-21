@@ -165,7 +165,7 @@
    version="22.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName">$${FILENAME}_instruction_OCROM</parameter>
+  <parameter name="autoInitializationFileName">blockram_system_v2_instruction_OCROM</parameter>
   <parameter name="blockType" value="AUTO" />
   <parameter name="copyInitFile" value="false" />
   <parameter name="dataWidth" value="32" />

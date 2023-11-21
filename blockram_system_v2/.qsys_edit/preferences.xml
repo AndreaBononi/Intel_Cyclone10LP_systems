@@ -7,6 +7,7 @@
    <irq preferredWidth="34" />
    <inputclock preferredWidth="108" />
    <name preferredWidth="177" />
+   <description preferredWidth="287" />
   </columns>
  </systemtable>
  <library expandedCategories="Library,Project" />

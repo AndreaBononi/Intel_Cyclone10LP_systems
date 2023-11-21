@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition"
 
--- DATE "11/15/2023 09:53:15"
+-- DATE "11/21/2023 10:14:13"
 
 -- 
 -- Device: Altera 10CL025YE144C8G Package TQFP144
@@ -95,95 +95,95 @@ END custom_OCRAM;
 
 -- Design Ports Information
 -- clk	=>  Location: PIN_22,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- avs_readdata[0]	=>  Location: LCCOMB_X34_Y18_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[1]	=>  Location: LCCOMB_X32_Y17_N6,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[2]	=>  Location: LCCOMB_X34_Y17_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[3]	=>  Location: LCCOMB_X34_Y18_N2,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[4]	=>  Location: LCCOMB_X34_Y18_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[5]	=>  Location: LCCOMB_X34_Y18_N6,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[6]	=>  Location: LCCOMB_X34_Y18_N8,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[7]	=>  Location: LCCOMB_X32_Y17_N8,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[8]	=>  Location: LCCOMB_X34_Y18_N10,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[9]	=>  Location: LCCOMB_X32_Y19_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[10]	=>  Location: LCCOMB_X34_Y18_N12,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[11]	=>  Location: LCCOMB_X34_Y18_N14,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[12]	=>  Location: LCCOMB_X34_Y18_N16,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[13]	=>  Location: LCCOMB_X34_Y18_N18,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[14]	=>  Location: LCCOMB_X34_Y18_N20,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[15]	=>  Location: LCCOMB_X35_Y18_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[16]	=>  Location: LCCOMB_X32_Y17_N10,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[17]	=>  Location: LCCOMB_X32_Y17_N16,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[18]	=>  Location: LCCOMB_X35_Y18_N2,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[19]	=>  Location: LCCOMB_X32_Y17_N18,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[20]	=>  Location: LCCOMB_X32_Y19_N2,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[21]	=>  Location: LCCOMB_X34_Y17_N2,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[22]	=>  Location: LCCOMB_X34_Y18_N22,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[23]	=>  Location: LCCOMB_X35_Y18_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[24]	=>  Location: LCCOMB_X34_Y18_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[25]	=>  Location: LCCOMB_X34_Y18_N26,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[26]	=>  Location: LCCOMB_X32_Y19_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[27]	=>  Location: LCCOMB_X32_Y19_N6,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[28]	=>  Location: LCCOMB_X32_Y17_N28,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[29]	=>  Location: LCCOMB_X35_Y18_N6,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[30]	=>  Location: LCCOMB_X34_Y18_N28,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdata[31]	=>  Location: LCCOMB_X34_Y18_N30,	 I/O Standard: None,	 Current Strength: Default
--- avs_waitrequest	=>  Location: LCCOMB_X38_Y20_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_readdatavalid	=>  Location: LCCOMB_X36_Y20_N0,	 I/O Standard: None,	 Current Strength: Default
--- reset_n	=>  Location: LCCOMB_X38_Y20_N10,	 I/O Standard: None,	 Current Strength: Default
--- avs_beginbursttransfer	=>  Location: LCCOMB_X35_Y20_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_write	=>  Location: LCCOMB_X38_Y20_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_read	=>  Location: LCCOMB_X36_Y20_N26,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[0]	=>  Location: LCCOMB_X32_Y17_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_address[0]	=>  Location: LCCOMB_X34_Y19_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_address[1]	=>  Location: LCCOMB_X34_Y19_N26,	 I/O Standard: None,	 Current Strength: Default
--- avs_address[2]	=>  Location: LCCOMB_X35_Y20_N10,	 I/O Standard: None,	 Current Strength: Default
--- avs_address[3]	=>  Location: LCCOMB_X34_Y17_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_address[4]	=>  Location: LCCOMB_X34_Y19_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_address[5]	=>  Location: LCCOMB_X34_Y19_N22,	 I/O Standard: None,	 Current Strength: Default
--- avs_address[6]	=>  Location: LCCOMB_X34_Y19_N8,	 I/O Standard: None,	 Current Strength: Default
--- avs_address[7]	=>  Location: LCCOMB_X34_Y19_N10,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[1]	=>  Location: LCCOMB_X36_Y18_N16,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[2]	=>  Location: LCCOMB_X32_Y17_N14,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[3]	=>  Location: LCCOMB_X32_Y17_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[4]	=>  Location: LCCOMB_X32_Y17_N26,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[5]	=>  Location: LCCOMB_X36_Y18_N10,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[6]	=>  Location: LCCOMB_X37_Y17_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[7]	=>  Location: LCCOMB_X37_Y17_N10,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[8]	=>  Location: LCCOMB_X32_Y17_N20,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[9]	=>  Location: LCCOMB_X32_Y17_N22,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[10]	=>  Location: LCCOMB_X37_Y17_N12,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[11]	=>  Location: LCCOMB_X34_Y15_N8,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[12]	=>  Location: LCCOMB_X32_Y17_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[13]	=>  Location: LCCOMB_X32_Y17_N2,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[14]	=>  Location: LCCOMB_X32_Y17_N12,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[15]	=>  Location: LCCOMB_X32_Y15_N8,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[16]	=>  Location: LCCOMB_X36_Y18_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[17]	=>  Location: LCCOMB_X36_Y18_N22,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[18]	=>  Location: LCCOMB_X36_Y18_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[19]	=>  Location: LCCOMB_X36_Y18_N18,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[20]	=>  Location: LCCOMB_X36_Y18_N28,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[21]	=>  Location: LCCOMB_X35_Y18_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[22]	=>  Location: LCCOMB_X36_Y18_N30,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[23]	=>  Location: LCCOMB_X35_Y18_N26,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[24]	=>  Location: LCCOMB_X35_Y18_N12,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[25]	=>  Location: LCCOMB_X36_Y18_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[26]	=>  Location: LCCOMB_X36_Y18_N26,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[27]	=>  Location: LCCOMB_X36_Y18_N12,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[28]	=>  Location: LCCOMB_X35_Y18_N30,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[29]	=>  Location: LCCOMB_X36_Y18_N14,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[30]	=>  Location: LCCOMB_X35_Y18_N8,	 I/O Standard: None,	 Current Strength: Default
--- avs_writedata[31]	=>  Location: LCCOMB_X36_Y18_N8,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[0]	=>  Location: LCCOMB_X37_Y21_N16,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[1]	=>  Location: LCCOMB_X35_Y20_N4,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[2]	=>  Location: LCCOMB_X37_Y21_N26,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[3]	=>  Location: LCCOMB_X37_Y21_N20,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[4]	=>  Location: LCCOMB_X36_Y19_N8,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[5]	=>  Location: LCCOMB_X32_Y20_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[6]	=>  Location: LCCOMB_X37_Y19_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[7]	=>  Location: LCCOMB_X38_Y18_N0,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[8]	=>  Location: LCCOMB_X38_Y18_N26,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[9]	=>  Location: LCCOMB_X32_Y21_N24,	 I/O Standard: None,	 Current Strength: Default
--- avs_burstcount[10]	=>  Location: LCCOMB_X37_Y21_N6,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[0]	=>  Location: LCCOMB_X32_Y27_N0,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[1]	=>  Location: LCCOMB_X32_Y27_N2,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[2]	=>  Location: LCCOMB_X32_Y27_N4,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[3]	=>  Location: LCCOMB_X32_Y27_N6,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[4]	=>  Location: LCCOMB_X32_Y27_N8,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[5]	=>  Location: LCCOMB_X32_Y26_N4,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[6]	=>  Location: LCCOMB_X32_Y27_N10,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[7]	=>  Location: LCCOMB_X32_Y27_N12,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[8]	=>  Location: LCCOMB_X32_Y27_N14,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[9]	=>  Location: LCCOMB_X32_Y27_N16,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[10]	=>  Location: LCCOMB_X34_Y25_N0,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[11]	=>  Location: LCCOMB_X34_Y26_N4,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[12]	=>  Location: LCCOMB_X32_Y27_N18,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[13]	=>  Location: LCCOMB_X32_Y26_N6,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[14]	=>  Location: LCCOMB_X32_Y27_N20,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[15]	=>  Location: LCCOMB_X32_Y27_N22,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[16]	=>  Location: LCCOMB_X36_Y27_N0,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[17]	=>  Location: LCCOMB_X36_Y27_N2,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[18]	=>  Location: LCCOMB_X32_Y27_N24,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[19]	=>  Location: LCCOMB_X34_Y25_N4,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[20]	=>  Location: LCCOMB_X36_Y27_N4,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[21]	=>  Location: LCCOMB_X32_Y27_N26,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[22]	=>  Location: LCCOMB_X32_Y27_N28,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[23]	=>  Location: LCCOMB_X36_Y27_N6,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[24]	=>  Location: LCCOMB_X36_Y27_N8,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[25]	=>  Location: LCCOMB_X36_Y27_N10,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[26]	=>  Location: LCCOMB_X36_Y27_N12,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[27]	=>  Location: LCCOMB_X32_Y26_N8,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[28]	=>  Location: LCCOMB_X36_Y27_N14,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[29]	=>  Location: LCCOMB_X36_Y27_N16,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[30]	=>  Location: LCCOMB_X36_Y27_N18,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdata[31]	=>  Location: LCCOMB_X32_Y27_N30,	 I/O Standard: None,	 Current Strength: Default
+-- avs_waitrequest	=>  Location: LCCOMB_X34_Y26_N16,	 I/O Standard: None,	 Current Strength: Default
+-- avs_readdatavalid	=>  Location: LCCOMB_X34_Y26_N18,	 I/O Standard: None,	 Current Strength: Default
+-- reset_n	=>  Location: LCCOMB_X34_Y28_N8,	 I/O Standard: None,	 Current Strength: Default
+-- avs_beginbursttransfer	=>  Location: LCCOMB_X31_Y26_N24,	 I/O Standard: None,	 Current Strength: Default
+-- avs_write	=>  Location: LCCOMB_X34_Y26_N30,	 I/O Standard: None,	 Current Strength: Default
+-- avs_read	=>  Location: LCCOMB_X32_Y28_N0,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[0]	=>  Location: LCCOMB_X32_Y26_N30,	 I/O Standard: None,	 Current Strength: Default
+-- avs_address[0]	=>  Location: LCCOMB_X31_Y29_N24,	 I/O Standard: None,	 Current Strength: Default
+-- avs_address[1]	=>  Location: LCCOMB_X32_Y28_N26,	 I/O Standard: None,	 Current Strength: Default
+-- avs_address[2]	=>  Location: LCCOMB_X32_Y26_N0,	 I/O Standard: None,	 Current Strength: Default
+-- avs_address[3]	=>  Location: LCCOMB_X31_Y30_N16,	 I/O Standard: None,	 Current Strength: Default
+-- avs_address[4]	=>  Location: LCCOMB_X32_Y28_N12,	 I/O Standard: None,	 Current Strength: Default
+-- avs_address[5]	=>  Location: LCCOMB_X32_Y28_N22,	 I/O Standard: None,	 Current Strength: Default
+-- avs_address[6]	=>  Location: LCCOMB_X32_Y28_N24,	 I/O Standard: None,	 Current Strength: Default
+-- avs_address[7]	=>  Location: LCCOMB_X32_Y28_N18,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[1]	=>  Location: LCCOMB_X32_Y26_N2,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[2]	=>  Location: LCCOMB_X35_Y25_N24,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[3]	=>  Location: LCCOMB_X34_Y26_N0,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[4]	=>  Location: LCCOMB_X34_Y25_N28,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[5]	=>  Location: LCCOMB_X34_Y26_N2,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[6]	=>  Location: LCCOMB_X34_Y25_N30,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[7]	=>  Location: LCCOMB_X34_Y26_N20,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[8]	=>  Location: LCCOMB_X35_Y25_N26,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[9]	=>  Location: LCCOMB_X34_Y26_N14,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[10]	=>  Location: LCCOMB_X34_Y25_N16,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[11]	=>  Location: LCCOMB_X35_Y25_N4,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[12]	=>  Location: LCCOMB_X34_Y26_N24,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[13]	=>  Location: LCCOMB_X35_Y25_N14,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[14]	=>  Location: LCCOMB_X34_Y25_N2,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[15]	=>  Location: LCCOMB_X34_Y28_N26,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[16]	=>  Location: LCCOMB_X34_Y25_N20,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[17]	=>  Location: LCCOMB_X34_Y25_N6,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[18]	=>  Location: LCCOMB_X34_Y26_N26,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[19]	=>  Location: LCCOMB_X34_Y26_N28,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[20]	=>  Location: LCCOMB_X35_Y25_N8,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[21]	=>  Location: LCCOMB_X35_Y25_N10,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[22]	=>  Location: LCCOMB_X35_Y25_N20,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[23]	=>  Location: LCCOMB_X34_Y25_N24,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[24]	=>  Location: LCCOMB_X35_Y25_N30,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[25]	=>  Location: LCCOMB_X34_Y26_N22,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[26]	=>  Location: LCCOMB_X34_Y25_N18,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[27]	=>  Location: LCCOMB_X34_Y26_N8,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[28]	=>  Location: LCCOMB_X34_Y26_N10,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[29]	=>  Location: LCCOMB_X35_Y25_N16,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[30]	=>  Location: LCCOMB_X35_Y25_N18,	 I/O Standard: None,	 Current Strength: Default
+-- avs_writedata[31]	=>  Location: LCCOMB_X34_Y26_N12,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[0]	=>  Location: LCCOMB_X35_Y28_N0,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[1]	=>  Location: LCCOMB_X34_Y28_N20,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[2]	=>  Location: LCCOMB_X35_Y28_N26,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[3]	=>  Location: LCCOMB_X35_Y28_N28,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[4]	=>  Location: LCCOMB_X34_Y28_N30,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[5]	=>  Location: LCCOMB_X35_Y28_N30,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[6]	=>  Location: LCCOMB_X35_Y28_N8,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[7]	=>  Location: LCCOMB_X35_Y25_N28,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[8]	=>  Location: LCCOMB_X35_Y25_N22,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[9]	=>  Location: LCCOMB_X34_Y28_N0,	 I/O Standard: None,	 Current Strength: Default
+-- avs_burstcount[10]	=>  Location: LCCOMB_X34_Y26_N6,	 I/O Standard: None,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF custom_OCRAM IS
@@ -250,38 +250,16 @@ SIGNAL \avs_waitrequest~output_o\ : std_logic;
 SIGNAL \avs_readdatavalid~output_o\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
 SIGNAL \clk~inputclkctrl_outclk\ : std_logic;
+SIGNAL \avs_write~input0\ : std_logic;
 SIGNAL \avs_read~input0\ : std_logic;
-SIGNAL \avs_burstcount[10]~input0\ : std_logic;
 SIGNAL \avs_beginbursttransfer~input0\ : std_logic;
-SIGNAL \avs_burstcount[4]~input0\ : std_logic;
-SIGNAL \avs_burstcount[7]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[7]~feeder_combout\ : std_logic;
-SIGNAL \avs_burstcount[5]~input0\ : std_logic;
-SIGNAL \avs_burstcount[6]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~1_combout\ : std_logic;
 SIGNAL \avs_burstcount[8]~input0\ : std_logic;
-SIGNAL \avs_burstcount[9]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[9]~feeder_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~2_combout\ : std_logic;
-SIGNAL \avs_burstcount[2]~input0\ : std_logic;
 SIGNAL \avs_burstcount[3]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[3]~feeder_combout\ : std_logic;
-SIGNAL \avs_burstcount[1]~input0\ : std_logic;
-SIGNAL \avs_burstcount[0]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|next_state.read_cmd~0_combout\ : std_logic;
-SIGNAL \reset_n~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|Selector1~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|Selector1~1_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|present_state.reset~feeder_combout\ : std_logic;
+SIGNAL \reset_n~input0\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|present_state.reset~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|present_state.init1~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|present_state.init1~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|present_state.init2~q\ : std_logic;
@@ -290,33 +268,63 @@ SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~0_combou
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\ : std_logic;
+SIGNAL \avs_burstcount[2]~input0\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|equal~1_combout\ : std_logic;
+SIGNAL \avs_burstcount[5]~input0\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|burstcount_reg|dout[5]~feeder_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~2_combout\ : std_logic;
+SIGNAL \avs_burstcount[4]~input0\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|equal~2_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~3_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ : std_logic;
+SIGNAL \avs_burstcount[7]~input0\ : std_logic;
+SIGNAL \avs_burstcount[6]~input0\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~3_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~1_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~4_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|equal~3_combout\ : std_logic;
+SIGNAL \avs_burstcount[0]~input0\ : std_logic;
+SIGNAL \avs_burstcount[1]~input0\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|equal~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|equal~4_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~5_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\ : std_logic;
-SIGNAL \avs_write~input0\ : std_logic;
+SIGNAL \avs_burstcount[10]~input0\ : std_logic;
+SIGNAL \avs_burstcount[9]~input0\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|burstcount_reg|dout[9]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|equal~5_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|next_state.read_cmd~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|Selector1~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|Selector1~1_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|next_state.wait_afterburst~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|Selector0~1_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|present_state.idle~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMP1|equal~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMP1|equal~1_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|CMP1|equal~2_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|next_state.write_cmd~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|CU|Selector0~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|Selector3~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|Selector2~0_combout\ : std_logic;
@@ -324,113 +332,106 @@ SIGNAL \avs_to_blockram_converter_inst|CU|Selector2~1_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|next_state.wait_afterburst~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|Selector0~1_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|present_state.idle~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|Selector0~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|next_state.write_cmd~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|WideOr12~0_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|WideOr10~0_combout\ : std_logic;
 SIGNAL \avs_writedata[0]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[0]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[0]~feeder_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|WideOr8~combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~8_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[0]~8_combout\ : std_logic;
 SIGNAL \avs_address[0]~input0\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|WideOr9~combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~9\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~10_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[0]~9\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[1]~10_combout\ : std_logic;
 SIGNAL \avs_address[1]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~11\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~12_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[1]~11\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[2]~12_combout\ : std_logic;
 SIGNAL \avs_address[2]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~13\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~14_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[2]~13\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[3]~14_combout\ : std_logic;
 SIGNAL \avs_address[3]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~15\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~16_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[3]~15\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[4]~16_combout\ : std_logic;
 SIGNAL \avs_address[4]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~17\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~18_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[4]~17\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[5]~18_combout\ : std_logic;
 SIGNAL \avs_address[5]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~19\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~20_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[5]~19\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[6]~20_combout\ : std_logic;
 SIGNAL \avs_address[6]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~21\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out[7]~22_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[6]~21\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout[7]~22_combout\ : std_logic;
 SIGNAL \avs_address[7]~input0\ : std_logic;
 SIGNAL \avs_writedata[1]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[1]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[1]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[2]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[2]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[2]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[3]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[3]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[3]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[4]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[4]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[4]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[5]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[5]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[5]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[6]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[6]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[6]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[7]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[7]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[7]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[8]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[8]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[8]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[9]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[9]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[9]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[10]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[10]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[10]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[11]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[11]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[11]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[12]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[12]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[12]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[13]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[13]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[13]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[14]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[14]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[14]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[15]~input0\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[15]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[16]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[16]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[16]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[17]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[17]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[17]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[18]~input0\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[18]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[19]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[19]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[19]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[20]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[20]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[20]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[21]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[21]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[21]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[22]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[22]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[22]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[23]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[23]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[23]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[24]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[24]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[24]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[25]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[25]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[25]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[26]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[26]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[26]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[27]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[27]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[28]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[28]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[28]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[29]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[29]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[29]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[30]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[30]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[30]~feeder_combout\ : std_logic;
 SIGNAL \avs_writedata[31]~input0\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[31]~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout[31]~feeder_combout\ : std_logic;
 SIGNAL \avs_to_blockram_converter_inst|CU|WideOr6~combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|pipe1|dff_out~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|pipe2|dff_out~0_combout\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|pipe2|dff_out~q\ : std_logic;
-SIGNAL \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\ : std_logic_vector(10 DOWNTO 0);
-SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\ : std_logic_vector(10 DOWNTO 0);
-SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \avs_to_blockram_converter_inst|EU|pipe1|dout~feeder_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|pipe1|dout~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|pipe2|dout~0_combout\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|pipe2|dout~q\ : std_logic;
+SIGNAL \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \avs_to_blockram_converter_inst|EU|writedata_reg|dout\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \blockram_1port_inst|altsyncram_component|auto_generated|q_a\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|reg_out\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \avs_to_blockram_converter_inst|EU|address_reg|dout\ : std_logic_vector(7 DOWNTO 0);
 
 COMPONENT hard_block
     PORT (
@@ -456,15 +457,14 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
-\blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAIN_bus\ <= (gnd & gnd & gnd & gnd & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(13) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(12) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(11) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(10) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(9) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(8) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(7) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(6) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(5) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(4) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(3) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(2) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(1) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(0));
+\blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAIN_bus\ <= (gnd & gnd & gnd & gnd & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(13) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(12) & 
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout\(11) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(10) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(9) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(8) & 
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout\(7) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(6) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(5) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(4) & 
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout\(3) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(2) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(1) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(0));
 
-\blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTAADDR_bus\ <= (\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(7) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(6) & 
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(5) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(4) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(3) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(2) & 
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(1) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(0));
+\blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTAADDR_bus\ <= (\avs_to_blockram_converter_inst|EU|address_reg|dout\(7) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(6) & 
+\avs_to_blockram_converter_inst|EU|address_reg|dout\(5) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(4) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(3) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(2) & 
+\avs_to_blockram_converter_inst|EU|address_reg|dout\(1) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(0));
 
 \blockram_1port_inst|altsyncram_component|auto_generated|q_a\(0) <= \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\(0);
 \blockram_1port_inst|altsyncram_component|auto_generated|q_a\(1) <= \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\(1);
@@ -481,17 +481,15 @@ ww_devpor <= devpor;
 \blockram_1port_inst|altsyncram_component|auto_generated|q_a\(12) <= \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\(12);
 \blockram_1port_inst|altsyncram_component|auto_generated|q_a\(13) <= \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\(13);
 
-\blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a14_PORTADATAIN_bus\ <= (\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(31) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(30) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(29) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(28) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(27) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(26) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(25) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(24) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(23) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(22) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(21) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(20) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(19) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(18) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(17) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(16) & \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(15) & 
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(14));
+\blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a14_PORTADATAIN_bus\ <= (\avs_to_blockram_converter_inst|EU|writedata_reg|dout\(31) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(30) & 
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout\(29) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(28) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(27) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(26) & 
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout\(25) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(24) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(23) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(22) & 
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout\(21) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(20) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(19) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(18) & 
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout\(17) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(16) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(15) & \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(14));
 
-\blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a14_PORTAADDR_bus\ <= (\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(7) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(6) & 
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(5) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(4) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(3) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(2) & 
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(1) & \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(0));
+\blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a14_PORTAADDR_bus\ <= (\avs_to_blockram_converter_inst|EU|address_reg|dout\(7) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(6) & 
+\avs_to_blockram_converter_inst|EU|address_reg|dout\(5) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(4) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(3) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(2) & 
+\avs_to_blockram_converter_inst|EU|address_reg|dout\(1) & \avs_to_blockram_converter_inst|EU|address_reg|dout\(0));
 
 \blockram_1port_inst|altsyncram_component|auto_generated|q_a\(14) <= \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a14_PORTADATAOUT_bus\(0);
 \blockram_1port_inst|altsyncram_component|auto_generated|q_a\(15) <= \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a14_PORTADATAOUT_bus\(1);
@@ -519,7 +517,7 @@ PORT MAP (
 	devclrn => ww_devclrn,
 	devpor => ww_devpor);
 
--- Location: LCCOMB_X34_Y18_N0
+-- Location: LCCOMB_X32_Y27_N0
 \avs_readdata[0]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -531,7 +529,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[0]~output_o\);
 
--- Location: LCCOMB_X32_Y17_N6
+-- Location: LCCOMB_X32_Y27_N2
 \avs_readdata[1]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -543,7 +541,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[1]~output_o\);
 
--- Location: LCCOMB_X34_Y17_N0
+-- Location: LCCOMB_X32_Y27_N4
 \avs_readdata[2]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -555,7 +553,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[2]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N2
+-- Location: LCCOMB_X32_Y27_N6
 \avs_readdata[3]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -567,7 +565,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[3]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N4
+-- Location: LCCOMB_X32_Y27_N8
 \avs_readdata[4]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -579,7 +577,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[4]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N6
+-- Location: LCCOMB_X32_Y26_N4
 \avs_readdata[5]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -591,7 +589,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[5]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N8
+-- Location: LCCOMB_X32_Y27_N10
 \avs_readdata[6]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -603,7 +601,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[6]~output_o\);
 
--- Location: LCCOMB_X32_Y17_N8
+-- Location: LCCOMB_X32_Y27_N12
 \avs_readdata[7]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -615,7 +613,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[7]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N10
+-- Location: LCCOMB_X32_Y27_N14
 \avs_readdata[8]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -627,7 +625,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[8]~output_o\);
 
--- Location: LCCOMB_X32_Y19_N0
+-- Location: LCCOMB_X32_Y27_N16
 \avs_readdata[9]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -639,7 +637,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[9]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N12
+-- Location: LCCOMB_X34_Y25_N0
 \avs_readdata[10]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -651,7 +649,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[10]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N14
+-- Location: LCCOMB_X34_Y26_N4
 \avs_readdata[11]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -663,7 +661,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[11]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N16
+-- Location: LCCOMB_X32_Y27_N18
 \avs_readdata[12]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -675,7 +673,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[12]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N18
+-- Location: LCCOMB_X32_Y26_N6
 \avs_readdata[13]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -687,7 +685,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[13]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N20
+-- Location: LCCOMB_X32_Y27_N20
 \avs_readdata[14]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -699,7 +697,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[14]~output_o\);
 
--- Location: LCCOMB_X35_Y18_N0
+-- Location: LCCOMB_X32_Y27_N22
 \avs_readdata[15]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -711,7 +709,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[15]~output_o\);
 
--- Location: LCCOMB_X32_Y17_N10
+-- Location: LCCOMB_X36_Y27_N0
 \avs_readdata[16]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -723,7 +721,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[16]~output_o\);
 
--- Location: LCCOMB_X32_Y17_N16
+-- Location: LCCOMB_X36_Y27_N2
 \avs_readdata[17]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -735,7 +733,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[17]~output_o\);
 
--- Location: LCCOMB_X35_Y18_N2
+-- Location: LCCOMB_X32_Y27_N24
 \avs_readdata[18]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -747,7 +745,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[18]~output_o\);
 
--- Location: LCCOMB_X32_Y17_N18
+-- Location: LCCOMB_X34_Y25_N4
 \avs_readdata[19]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -759,7 +757,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[19]~output_o\);
 
--- Location: LCCOMB_X32_Y19_N2
+-- Location: LCCOMB_X36_Y27_N4
 \avs_readdata[20]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -771,7 +769,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[20]~output_o\);
 
--- Location: LCCOMB_X34_Y17_N2
+-- Location: LCCOMB_X32_Y27_N26
 \avs_readdata[21]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -783,7 +781,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[21]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N22
+-- Location: LCCOMB_X32_Y27_N28
 \avs_readdata[22]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -795,7 +793,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[22]~output_o\);
 
--- Location: LCCOMB_X35_Y18_N4
+-- Location: LCCOMB_X36_Y27_N6
 \avs_readdata[23]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -807,7 +805,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[23]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N24
+-- Location: LCCOMB_X36_Y27_N8
 \avs_readdata[24]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -819,7 +817,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[24]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N26
+-- Location: LCCOMB_X36_Y27_N10
 \avs_readdata[25]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -831,7 +829,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[25]~output_o\);
 
--- Location: LCCOMB_X32_Y19_N4
+-- Location: LCCOMB_X36_Y27_N12
 \avs_readdata[26]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -843,7 +841,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[26]~output_o\);
 
--- Location: LCCOMB_X32_Y19_N6
+-- Location: LCCOMB_X32_Y26_N8
 \avs_readdata[27]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -855,7 +853,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[27]~output_o\);
 
--- Location: LCCOMB_X32_Y17_N28
+-- Location: LCCOMB_X36_Y27_N14
 \avs_readdata[28]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -867,7 +865,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[28]~output_o\);
 
--- Location: LCCOMB_X35_Y18_N6
+-- Location: LCCOMB_X36_Y27_N16
 \avs_readdata[29]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -879,7 +877,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[29]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N28
+-- Location: LCCOMB_X36_Y27_N18
 \avs_readdata[30]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -891,7 +889,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[30]~output_o\);
 
--- Location: LCCOMB_X34_Y18_N30
+-- Location: LCCOMB_X32_Y27_N30
 \avs_readdata[31]~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -903,7 +901,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_readdata[31]~output_o\);
 
--- Location: LCCOMB_X38_Y20_N0
+-- Location: LCCOMB_X34_Y26_N16
 \avs_waitrequest~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -915,7 +913,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \avs_waitrequest~output_o\);
 
--- Location: LCCOMB_X36_Y20_N0
+-- Location: LCCOMB_X34_Y26_N18
 \avs_readdatavalid~output\ : cyclone10lp_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -923,7 +921,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \avs_to_blockram_converter_inst|EU|pipe2|dff_out~q\,
+	i => \avs_to_blockram_converter_inst|EU|pipe2|dout~q\,
 	devoe => ww_devoe,
 	o => \avs_readdatavalid~output_o\);
 
@@ -951,7 +949,18 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \clk~inputclkctrl_outclk\);
 
--- Location: LCCOMB_X36_Y20_N26
+-- Location: LCCOMB_X34_Y26_N30
+\avs_write~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_write,
+	o => \avs_write~input0\);
+
+-- Location: LCCOMB_X32_Y28_N0
 \avs_read~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -962,34 +971,7 @@ PORT MAP (
 	i => ww_avs_read,
 	o => \avs_read~input0\);
 
--- Location: LCCOMB_X37_Y21_N6
-\avs_burstcount[10]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(10),
-	o => \avs_burstcount[10]~input0\);
-
--- Location: FF_X38_Y21_N27
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[10]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_burstcount[10]~input0\,
-	sload => VCC,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(10));
-
--- Location: LCCOMB_X35_Y20_N0
+-- Location: LCCOMB_X31_Y26_N24
 \avs_beginbursttransfer~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -1000,146 +982,7 @@ PORT MAP (
 	i => ww_avs_beginbursttransfer,
 	o => \avs_beginbursttransfer~input0\);
 
--- Location: LCCOMB_X36_Y19_N8
-\avs_burstcount[4]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(4),
-	o => \avs_burstcount[4]~input0\);
-
--- Location: FF_X38_Y19_N25
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_burstcount[4]~input0\,
-	sload => VCC,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(4));
-
--- Location: LCCOMB_X38_Y18_N0
-\avs_burstcount[7]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(7),
-	o => \avs_burstcount[7]~input0\);
-
--- Location: LCCOMB_X38_Y19_N2
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[7]~feeder\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[7]~feeder_combout\ = \avs_burstcount[7]~input0\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_burstcount[7]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[7]~feeder_combout\);
-
--- Location: FF_X38_Y19_N3
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[7]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[7]~feeder_combout\,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(7));
-
--- Location: LCCOMB_X32_Y20_N24
-\avs_burstcount[5]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(5),
-	o => \avs_burstcount[5]~input0\);
-
--- Location: FF_X38_Y19_N11
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_burstcount[5]~input0\,
-	sload => VCC,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(5));
-
--- Location: LCCOMB_X37_Y19_N24
-\avs_burstcount[6]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(6),
-	o => \avs_burstcount[6]~input0\);
-
--- Location: FF_X38_Y19_N17
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_burstcount[6]~input0\,
-	sload => VCC,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(6));
-
--- Location: LCCOMB_X38_Y19_N10
-\avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~1\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~1_combout\ = (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(4) & (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(7) & 
--- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(5) & !\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(4),
-	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(7),
-	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(5),
-	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(6),
-	combout => \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~1_combout\);
-
--- Location: LCCOMB_X38_Y18_N26
+-- Location: LCCOMB_X35_Y25_N22
 \avs_burstcount[8]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -1150,107 +993,7 @@ PORT MAP (
 	i => ww_avs_burstcount(8),
 	o => \avs_burstcount[8]~input0\);
 
--- Location: FF_X38_Y19_N9
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_burstcount[8]~input0\,
-	sload => VCC,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(8));
-
--- Location: LCCOMB_X32_Y21_N24
-\avs_burstcount[9]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(9),
-	o => \avs_burstcount[9]~input0\);
-
--- Location: LCCOMB_X38_Y21_N10
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[9]~feeder\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[9]~feeder_combout\ = \avs_burstcount[9]~input0\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_burstcount[9]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[9]~feeder_combout\);
-
--- Location: FF_X38_Y21_N11
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[9]~feeder_combout\,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(9));
-
--- Location: LCCOMB_X38_Y21_N26
-\avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~2\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~2_combout\ = (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(8) & (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(10) & 
--- !\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(8),
-	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(10),
-	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(9),
-	combout => \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~2_combout\);
-
--- Location: LCCOMB_X37_Y21_N26
-\avs_burstcount[2]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(2),
-	o => \avs_burstcount[2]~input0\);
-
--- Location: FF_X38_Y21_N7
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_burstcount[2]~input0\,
-	sload => VCC,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(2));
-
--- Location: LCCOMB_X37_Y21_N20
+-- Location: LCCOMB_X35_Y28_N28
 \avs_burstcount[3]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -1261,22 +1004,8 @@ PORT MAP (
 	i => ww_avs_burstcount(3),
 	o => \avs_burstcount[3]~input0\);
 
--- Location: LCCOMB_X38_Y21_N16
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[3]~feeder\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[3]~feeder_combout\ = \avs_burstcount[3]~input0\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_burstcount[3]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[3]~feeder_combout\);
-
--- Location: FF_X38_Y21_N17
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[3]\ : dffeas
+-- Location: FF_X35_Y27_N23
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1284,226 +1013,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[3]~feeder_combout\,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(3));
-
--- Location: LCCOMB_X35_Y20_N4
-\avs_burstcount[1]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(1),
-	o => \avs_burstcount[1]~input0\);
-
--- Location: FF_X38_Y21_N9
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_burstcount[1]~input0\,
+	asdata => \avs_burstcount[3]~input0\,
 	sload => VCC,
 	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(1));
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(3));
 
--- Location: LCCOMB_X37_Y21_N16
-\avs_burstcount[0]~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_avs_burstcount(0),
-	o => \avs_burstcount[0]~input0\);
-
--- Location: FF_X38_Y21_N3
-\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_burstcount[0]~input0\,
-	sload => VCC,
-	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(0));
-
--- Location: LCCOMB_X38_Y21_N8
-\avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~0\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y29_N20
+\avs_to_blockram_converter_inst|CU|WideOr7~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~0_combout\ = (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(2) & (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(3) & 
--- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(1) & \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(0))))
+-- \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\ = (!\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\ & !\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(2),
-	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(3),
-	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(1),
-	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(0),
-	combout => \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~0_combout\);
-
--- Location: LCCOMB_X38_Y21_N12
-\avs_to_blockram_converter_inst|CU|next_state_evaluation~0\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ = ((\avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~1_combout\ & (\avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~2_combout\ & 
--- \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~0_combout\))) # (!\avs_beginbursttransfer~input0\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101010101010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_beginbursttransfer~input0\,
-	datab => \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~1_combout\,
-	datac => \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~2_combout\,
-	datad => \avs_to_blockram_converter_inst|EU|CMP1|cmp_equal~0_combout\,
-	combout => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\);
-
--- Location: LCCOMB_X37_Y20_N8
-\avs_to_blockram_converter_inst|CU|next_state.read_cmd~0\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|next_state.read_cmd~0_combout\ = (\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ & \avs_to_blockram_converter_inst|CU|Selector1~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000010100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\,
-	datac => \avs_to_blockram_converter_inst|CU|Selector1~0_combout\,
-	combout => \avs_to_blockram_converter_inst|CU|next_state.read_cmd~0_combout\);
-
--- Location: LCCOMB_X38_Y20_N10
-\reset_n~input\ : cyclone10lp_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_reset_n,
-	o => \reset_n~input0\);
-
--- Location: FF_X37_Y20_N9
-\avs_to_blockram_converter_inst|CU|present_state.read_cmd\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|CU|next_state.read_cmd~0_combout\,
-	clrn => \reset_n~input0\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\);
-
--- Location: LCCOMB_X37_Y20_N20
-\avs_to_blockram_converter_inst|CU|Selector1~0\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|Selector1~0_combout\ = (\avs_read~input0\ & ((\avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\) # ((\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # 
--- (\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010101000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_read~input0\,
-	datab => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	datac => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
-	combout => \avs_to_blockram_converter_inst|CU|Selector1~0_combout\);
-
--- Location: LCCOMB_X37_Y20_N26
-\avs_to_blockram_converter_inst|CU|Selector1~1\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|Selector1~1_combout\ = (\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ & (((\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\ & 
--- !\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\)))) # (!\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ & ((\avs_to_blockram_converter_inst|CU|Selector1~0_combout\) # 
--- ((\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\ & !\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100010011110100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\,
-	datab => \avs_to_blockram_converter_inst|CU|Selector1~0_combout\,
-	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
-	datad => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\,
-	combout => \avs_to_blockram_converter_inst|CU|Selector1~1_combout\);
-
--- Location: FF_X37_Y20_N27
-\avs_to_blockram_converter_inst|CU|present_state.burst_read\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|CU|Selector1~1_combout\,
-	clrn => \reset_n~input0\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\);
-
--- Location: LCCOMB_X37_Y20_N2
-\avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\ & \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000010100000",
+	lut_mask => "0000010100000101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
-	datac => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\,
-	combout => \avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0_combout\);
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
+	combout => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\);
 
--- Location: FF_X37_Y20_N3
-\avs_to_blockram_converter_inst|CU|present_state.burst_lastread\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0_combout\,
-	clrn => \reset_n~input0\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\);
-
--- Location: LCCOMB_X37_Y20_N16
+-- Location: LCCOMB_X35_Y26_N14
 \avs_to_blockram_converter_inst|CU|present_state.reset~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|CU|present_state.reset~feeder_combout\ = VCC
@@ -1516,7 +1048,18 @@ GENERIC MAP (
 PORT MAP (
 	combout => \avs_to_blockram_converter_inst|CU|present_state.reset~feeder_combout\);
 
--- Location: FF_X37_Y20_N17
+-- Location: LCCOMB_X34_Y28_N8
+\reset_n~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_reset_n,
+	o => \reset_n~input0\);
+
+-- Location: FF_X35_Y26_N15
 \avs_to_blockram_converter_inst|CU|present_state.reset\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1531,7 +1074,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|CU|present_state.reset~q\);
 
--- Location: LCCOMB_X37_Y20_N30
+-- Location: LCCOMB_X35_Y26_N26
 \avs_to_blockram_converter_inst|CU|WideOr5~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ = (!\avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\ & (!\avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\ & 
@@ -1539,45 +1082,30 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000001100000000",
+	lut_mask => "0001000100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\,
-	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\,
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\,
 	datad => \avs_to_blockram_converter_inst|CU|present_state.reset~q\,
 	combout => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\);
 
--- Location: LCCOMB_X34_Y20_N24
-\avs_to_blockram_converter_inst|CU|WideOr7~0\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\ = (!\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\ & !\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
-	combout => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\);
-
--- Location: LCCOMB_X38_Y21_N22
+-- Location: LCCOMB_X35_Y26_N22
 \avs_to_blockram_converter_inst|CU|present_state.init1~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|CU|present_state.init1~0_combout\ = !\avs_to_blockram_converter_inst|CU|present_state.reset~q\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011111111",
+	lut_mask => "0000111100001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \avs_to_blockram_converter_inst|CU|present_state.reset~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.reset~q\,
 	combout => \avs_to_blockram_converter_inst|CU|present_state.init1~0_combout\);
 
--- Location: FF_X38_Y21_N23
+-- Location: FF_X35_Y26_N23
 \avs_to_blockram_converter_inst|CU|present_state.init1\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1592,7 +1120,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|CU|present_state.init1~q\);
 
--- Location: FF_X38_Y21_N25
+-- Location: FF_X35_Y26_N9
 \avs_to_blockram_converter_inst|CU|present_state.init2\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1608,11 +1136,11 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|CU|present_state.init2~q\);
 
--- Location: LCCOMB_X38_Y21_N30
+-- Location: LCCOMB_X35_Y26_N2
 \avs_to_blockram_converter_inst|CU|WideOr7~1\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.init1~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\) # 
--- ((\avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\) # (\avs_to_blockram_converter_inst|CU|present_state.init2~q\)))
+-- \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.init2~q\) # 
+-- ((\avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\) # (\avs_to_blockram_converter_inst|CU|present_state.init1~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1620,13 +1148,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.init1~q\,
-	datab => \avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\,
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.init2~q\,
 	datac => \avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.init2~q\,
+	datad => \avs_to_blockram_converter_inst|CU|present_state.init1~q\,
 	combout => \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\);
 
--- Location: LCCOMB_X34_Y20_N0
+-- Location: LCCOMB_X32_Y30_N2
 \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\ $ 
@@ -1634,17 +1162,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010110100000000",
+	lut_mask => "0000110010000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
-	datab => \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\,
+	datab => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
+	datad => \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~0_combout\);
 
--- Location: FF_X34_Y20_N1
+-- Location: FF_X32_Y30_N3
 \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1658,42 +1186,42 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\);
 
--- Location: LCCOMB_X34_Y20_N28
-\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in[1]\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N24
+\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in[1]\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(1) = (\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\ & ((\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\) # ((\avs_to_blockram_converter_inst|CU|WideOr7~1_combout\) # 
--- (\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\))))
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(1) = (\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\ & ((\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\) # 
+-- ((\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\) # (\avs_to_blockram_converter_inst|CU|WideOr7~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101000",
+	lut_mask => "1100110011001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
-	datac => \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
-	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(1));
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
+	datad => \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\,
+	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(1));
 
--- Location: LCCOMB_X37_Y20_N22
+-- Location: LCCOMB_X32_Y30_N0
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(1) $ 
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(1) $ 
 -- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010100000101000",
+	lut_mask => "0011110000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(1),
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(1),
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
+	datad => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X37_Y20_N23
+-- Location: FF_X32_Y30_N1
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1707,48 +1235,11 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y21_N2
-\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~0\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~0_combout\ = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(1) & 
--- (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(0) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\)))) # (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ & 
--- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(1) & (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(0) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1001000000001001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(1),
-	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(0),
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\,
-	combout => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~0_combout\);
-
--- Location: LCCOMB_X34_Y20_N30
-\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in[2]\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(2) = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\ & 
--- ((\avs_to_blockram_converter_inst|CU|WideOr7~1_combout\) # (!\avs_to_blockram_converter_inst|CU|WideOr7~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010001000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
-	datac => \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\,
-	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(2));
-
--- Location: LCCOMB_X34_Y20_N20
+-- Location: LCCOMB_X32_Y30_N22
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\ $ 
--- (((\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(1))))))
+-- (((\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(1) & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1756,13 +1247,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(1),
+	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(1),
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\,
 	datad => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X34_Y20_N21
+-- Location: FF_X32_Y30_N23
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1776,11 +1267,29 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X34_Y20_N2
+-- Location: LCCOMB_X32_Y30_N26
+\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in[2]\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(2) = (\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ & 
+-- ((\avs_to_blockram_converter_inst|CU|WideOr7~1_combout\) # (!\avs_to_blockram_converter_inst|CU|WideOr7~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000100000001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\,
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
+	datac => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
+	datad => \avs_to_blockram_converter_inst|CU|WideOr7~1_combout\,
+	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(2));
+
+-- Location: LCCOMB_X32_Y30_N28
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\ $ 
--- (((\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(2) & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\)))))
+-- (((\avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(2))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1788,13 +1297,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(2),
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\,
+	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\,
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(2),
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\,
 	datad => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X34_Y20_N3
+-- Location: FF_X32_Y30_N29
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1808,11 +1317,97 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y21_N28
-\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in[4]\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X35_Y28_N26
+\avs_burstcount[2]~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_burstcount(2),
+	o => \avs_burstcount[2]~input0\);
+
+-- Location: FF_X35_Y27_N21
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \avs_burstcount[2]~input0\,
+	sload => VCC,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(2));
+
+-- Location: LCCOMB_X35_Y27_N20
+\avs_to_blockram_converter_inst|EU|CMPB|equal~1\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4) = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\ & 
--- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(1))))
+-- \avs_to_blockram_converter_inst|EU|CMPB|equal~1_combout\ = (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(3) & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\ & 
+-- (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(2) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\)))) # (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(3) & 
+-- (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(2) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001000000001001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(3),
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\,
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(2),
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\,
+	combout => \avs_to_blockram_converter_inst|EU|CMPB|equal~1_combout\);
+
+-- Location: LCCOMB_X35_Y28_N30
+\avs_burstcount[5]~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_burstcount(5),
+	o => \avs_burstcount[5]~input0\);
+
+-- Location: LCCOMB_X35_Y27_N26
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[5]~feeder\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|burstcount_reg|dout[5]~feeder_combout\ = \avs_burstcount[5]~input0\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \avs_burstcount[5]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout[5]~feeder_combout\);
+
+-- Location: FF_X35_Y27_N27
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout[5]~feeder_combout\,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(5));
+
+-- Location: LCCOMB_X32_Y30_N20
+\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in[4]\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4) = (\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(1) & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\ & 
+-- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1820,30 +1415,30 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\,
-	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(1),
-	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4));
+	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(1),
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\,
+	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\,
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
+	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4));
 
--- Location: LCCOMB_X38_Y19_N6
+-- Location: LCCOMB_X35_Y27_N6
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\ $ 
--- (\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4))))
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4) $ 
+-- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101010100000",
+	lut_mask => "0011110000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4),
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4),
+	datad => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X38_Y19_N7
+-- Location: FF_X35_Y27_N7
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1857,11 +1452,11 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y19_N4
+-- Location: LCCOMB_X35_Y27_N4
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ $ 
--- (((\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4) & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\)))))
+-- (((\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4) & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1870,12 +1465,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4),
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4),
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\,
 	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X38_Y19_N5
+-- Location: FF_X35_Y27_N5
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1889,12 +1484,39 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y19_N24
-\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~2\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y28_N30
+\avs_burstcount[4]~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_burstcount(4),
+	o => \avs_burstcount[4]~input0\);
+
+-- Location: FF_X35_Y27_N1
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \avs_burstcount[4]~input0\,
+	sload => VCC,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(4));
+
+-- Location: LCCOMB_X35_Y27_N0
+\avs_to_blockram_converter_inst|EU|CMPB|equal~2\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~2_combout\ = (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(5) & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ & 
--- (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(4) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\)))) # (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(5) & 
--- (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(4) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\))))
+-- \avs_to_blockram_converter_inst|EU|CMPB|equal~2_combout\ = (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(5) & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ & 
+-- (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(4) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\)))) # (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(5) & 
+-- (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(4) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1902,49 +1524,49 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(5),
+	dataa => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(5),
 	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\,
-	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(4),
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(4),
 	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\,
-	combout => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~2_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|CMPB|equal~2_combout\);
 
--- Location: LCCOMB_X38_Y19_N18
+-- Location: LCCOMB_X35_Y27_N28
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2_combout\ = \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ $ (((\avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\ & 
--- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4)))))
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2_combout\ = \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ $ (((\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ & 
+-- (\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4) & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111100011110000",
+	lut_mask => "0110101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\,
+	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\,
 	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\,
-	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4),
+	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4),
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2_combout\);
 
--- Location: LCCOMB_X38_Y19_N30
+-- Location: LCCOMB_X35_Y27_N12
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~3\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~3_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.reset~q\ & (!\avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\ & 
--- (!\avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2_combout\)))
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~3_combout\ = (!\avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2_combout\ & 
+-- (!\avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\ & \avs_to_blockram_converter_inst|CU|present_state.reset~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000001000000000",
+	lut_mask => "0000010000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.reset~q\,
-	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\,
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\,
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2_combout\,
 	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~2_combout\,
+	datad => \avs_to_blockram_converter_inst|CU|present_state.reset~q\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~3_combout\);
 
--- Location: FF_X38_Y19_N31
+-- Location: FF_X35_Y27_N13
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1958,11 +1580,65 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y19_N0
-\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in[7]\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X35_Y25_N28
+\avs_burstcount[7]~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_burstcount(7),
+	o => \avs_burstcount[7]~input0\);
+
+-- Location: FF_X35_Y26_N1
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[7]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \avs_burstcount[7]~input0\,
+	sload => VCC,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(7));
+
+-- Location: LCCOMB_X35_Y28_N8
+\avs_burstcount[6]~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_burstcount(6),
+	o => \avs_burstcount[6]~input0\);
+
+-- Location: FF_X35_Y27_N9
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \avs_burstcount[6]~input0\,
+	sload => VCC,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(6));
+
+-- Location: LCCOMB_X35_Y27_N2
+\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in[7]\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(7) = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ & 
--- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4))))
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(7) = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\ & 
+-- (\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4) & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1970,17 +1646,17 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\,
+	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\,
 	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:5:chain_tff|dummy_out~q\,
-	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(4),
-	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(7));
+	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(4),
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:4:chain_tff|dummy_out~q\,
+	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(7));
 
--- Location: LCCOMB_X38_Y19_N12
+-- Location: LCCOMB_X35_Y27_N18
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\ $ 
--- (\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(7))))
+-- (\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1990,10 +1666,10 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(7),
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(7),
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X38_Y19_N13
+-- Location: FF_X35_Y27_N19
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2007,12 +1683,12 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y19_N16
-\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~3\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X35_Y27_N8
+\avs_to_blockram_converter_inst|EU|CMPB|equal~3\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~3_combout\ = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(6) & 
--- (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(7) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\)))) # (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ & 
--- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(6) & (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(7) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\))))
+-- \avs_to_blockram_converter_inst|EU|CMPB|equal~3_combout\ = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(6) & 
+-- (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(7) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\)))) # (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\ & 
+-- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(6) & (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(7) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2021,35 +1697,89 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:6:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(7),
-	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(6),
+	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(7),
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(6),
 	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\,
-	combout => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~3_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|CMPB|equal~3_combout\);
 
--- Location: LCCOMB_X38_Y21_N6
-\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~1\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X35_Y28_N0
+\avs_burstcount[0]~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_burstcount(0),
+	o => \avs_burstcount[0]~input0\);
+
+-- Location: FF_X35_Y27_N25
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \avs_burstcount[0]~input0\,
+	sload => VCC,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(0));
+
+-- Location: LCCOMB_X34_Y28_N20
+\avs_burstcount[1]~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_burstcount(1),
+	o => \avs_burstcount[1]~input0\);
+
+-- Location: FF_X35_Y27_N11
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \avs_burstcount[1]~input0\,
+	sload => VCC,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(1));
+
+-- Location: LCCOMB_X35_Y27_N24
+\avs_to_blockram_converter_inst|EU|CMPB|equal~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~1_combout\ = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(3) & 
--- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\ $ (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(2))))) # (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\ & 
--- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(3) & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\ $ (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(2)))))
+-- \avs_to_blockram_converter_inst|EU|CMPB|equal~0_combout\ = (\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(0) & 
+-- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ $ (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(1))))) # (!\avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\ & 
+-- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(0) & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\ $ (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000001001000001",
+	lut_mask => "1000010000100001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:3:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:2:chain_tff|dummy_out~q\,
-	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(2),
-	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(3),
-	combout => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~1_combout\);
+	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|entry_tff|dummy_out~q\,
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:1:chain_tff|dummy_out~q\,
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(0),
+	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(1),
+	combout => \avs_to_blockram_converter_inst|EU|CMPB|equal~0_combout\);
 
--- Location: LCCOMB_X38_Y21_N20
-\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~4\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X35_Y27_N30
+\avs_to_blockram_converter_inst|EU|CMPB|equal~4\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~4_combout\ = (\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~0_combout\ & (\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~2_combout\ & (\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~3_combout\ & 
--- \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~1_combout\)))
+-- \avs_to_blockram_converter_inst|EU|CMPB|equal~4_combout\ = (\avs_to_blockram_converter_inst|EU|CMPB|equal~1_combout\ & (\avs_to_blockram_converter_inst|EU|CMPB|equal~2_combout\ & (\avs_to_blockram_converter_inst|EU|CMPB|equal~3_combout\ & 
+-- \avs_to_blockram_converter_inst|EU|CMPB|equal~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2057,17 +1787,17 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~0_combout\,
-	datab => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~2_combout\,
-	datac => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~3_combout\,
-	datad => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~1_combout\,
-	combout => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~4_combout\);
+	dataa => \avs_to_blockram_converter_inst|EU|CMPB|equal~1_combout\,
+	datab => \avs_to_blockram_converter_inst|EU|CMPB|equal~2_combout\,
+	datac => \avs_to_blockram_converter_inst|EU|CMPB|equal~3_combout\,
+	datad => \avs_to_blockram_converter_inst|EU|CMPB|equal~0_combout\,
+	combout => \avs_to_blockram_converter_inst|EU|CMPB|equal~4_combout\);
 
--- Location: LCCOMB_X38_Y19_N20
+-- Location: LCCOMB_X35_Y27_N16
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\ $ 
--- (((\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(7) & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\)))))
+-- (((\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(7) & \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2076,12 +1806,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(7),
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(7),
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\,
 	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\,
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X38_Y19_N21
+-- Location: FF_X35_Y27_N17
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2095,41 +1825,41 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y19_N28
-\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in[9]\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X35_Y27_N14
+\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in[9]\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(9) = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\ & 
--- \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(7)))
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(9) = (\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(7) & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\ & 
+-- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100000000000",
+	lut_mask => "1100000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(7),
-	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(9));
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(7),
+	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\,
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:7:chain_tff|dummy_out~q\,
+	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(9));
 
--- Location: LCCOMB_X38_Y19_N26
+-- Location: LCCOMB_X35_Y26_N10
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\ $ 
--- (\avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(9))))
+-- (\avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(9))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101010100000",
+	lut_mask => "0000110011000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
+	datab => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(9),
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(9),
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X38_Y19_N27
+-- Location: FF_X35_Y26_N11
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2143,25 +1873,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y19_N22
+-- Location: LCCOMB_X35_Y26_N20
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~0_combout\ = (\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~q\ $ 
--- (((\avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(9))))))
+-- (((\avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\ & \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(9))))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111100000000000",
+	lut_mask => "0100100011000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|tgl_in\(9),
+	datab => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|tff_in\(9),
 	combout => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~0_combout\);
 
--- Location: FF_X38_Y19_N23
+-- Location: FF_X35_Y26_N21
 \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2175,74 +1905,19 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~q\);
 
--- Location: LCCOMB_X38_Y19_N8
-\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~5\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~5_combout\ = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(9) & 
--- (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\ $ (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(8))))) # (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\ & 
--- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(9) & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\ $ (!\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(8)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000001001000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\,
-	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\,
-	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(8),
-	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(9),
-	combout => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~5_combout\);
-
--- Location: LCCOMB_X38_Y21_N18
-\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\ = (\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~4_combout\ & (\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~5_combout\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(10) $ 
--- (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000010000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|burstcount_reg|reg_out\(10),
-	datab => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~4_combout\,
-	datac => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~q\,
-	datad => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~5_combout\,
-	combout => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\);
-
--- Location: LCCOMB_X38_Y20_N4
-\avs_write~input\ : cyclone10lp_io_ibuf
+-- Location: LCCOMB_X34_Y26_N6
+\avs_burstcount[10]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_avs_write,
-	o => \avs_write~input0\);
+	i => ww_avs_burstcount(10),
+	o => \avs_burstcount[10]~input0\);
 
--- Location: LCCOMB_X37_Y20_N0
-\avs_to_blockram_converter_inst|CU|Selector3~0\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|Selector3~0_combout\ = (!\avs_write~input0\ & ((\avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\ & 
--- !\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011110010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
-	datab => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\,
-	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\,
-	datad => \avs_write~input0\,
-	combout => \avs_to_blockram_converter_inst|CU|Selector3~0_combout\);
-
--- Location: FF_X37_Y20_N1
-\avs_to_blockram_converter_inst|CU|present_state.burst_write_pause\ : dffeas
+-- Location: FF_X35_Y26_N5
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2250,49 +1925,40 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|CU|Selector3~0_combout\,
-	clrn => \reset_n~input0\,
+	asdata => \avs_burstcount[10]~input0\,
+	sload => VCC,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\);
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(10));
 
--- Location: LCCOMB_X37_Y20_N18
-\avs_to_blockram_converter_inst|CU|Selector2~0\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y28_N0
+\avs_burstcount[9]~input\ : cyclone10lp_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_avs_burstcount(9),
+	o => \avs_burstcount[9]~input0\);
+
+-- Location: LCCOMB_X35_Y26_N12
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[9]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|Selector2~0_combout\ = (!\avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\ & ((\avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\) # 
--- (!\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\)))
+-- \avs_to_blockram_converter_inst|EU|burstcount_reg|dout[9]~feeder_combout\ = \avs_burstcount[9]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011000000110011",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\,
-	datac => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
-	combout => \avs_to_blockram_converter_inst|CU|Selector2~0_combout\);
+	dataa => \avs_burstcount[9]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout[9]~feeder_combout\);
 
--- Location: LCCOMB_X37_Y20_N28
-\avs_to_blockram_converter_inst|CU|Selector2~1\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|Selector2~1_combout\ = (\avs_write~input0\ & (((\avs_to_blockram_converter_inst|CU|Selector0~0_combout\ & !\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\)) # 
--- (!\avs_to_blockram_converter_inst|CU|Selector2~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011101100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|Selector0~0_combout\,
-	datab => \avs_to_blockram_converter_inst|CU|Selector2~0_combout\,
-	datac => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\,
-	datad => \avs_write~input0\,
-	combout => \avs_to_blockram_converter_inst|CU|Selector2~1_combout\);
-
--- Location: FF_X37_Y20_N29
-\avs_to_blockram_converter_inst|CU|present_state.burst_write\ : dffeas
+-- Location: FF_X35_Y26_N13
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2300,16 +1966,53 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|CU|Selector2~1_combout\,
-	clrn => \reset_n~input0\,
+	d => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout[9]~feeder_combout\,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\);
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(9));
 
--- Location: LCCOMB_X37_Y20_N4
-\avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X35_Y26_N16
+\avs_to_blockram_converter_inst|EU|CMPB|equal~5\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\ & \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\)
+-- \avs_to_blockram_converter_inst|EU|CMPB|equal~5_combout\ = (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\ & (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(9) & 
+-- (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(8) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\)))) # (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\ & 
+-- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(9) & (\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(8) $ (!\avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001000000001001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:9:chain_tff|dummy_out~q\,
+	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(9),
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(8),
+	datad => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:8:chain_tff|dummy_out~q\,
+	combout => \avs_to_blockram_converter_inst|EU|CMPB|equal~5_combout\);
+
+-- Location: LCCOMB_X35_Y26_N4
+\avs_to_blockram_converter_inst|EU|CMPB|equal\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\ = (\avs_to_blockram_converter_inst|EU|CMPB|equal~4_combout\ & (\avs_to_blockram_converter_inst|EU|CMPB|equal~5_combout\ & (\avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~q\ $ 
+-- (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(10)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000001000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|EU|CMPB|equal~4_combout\,
+	datab => \avs_to_blockram_converter_inst|EU|burst_cnt|g1:10:chain_tff|dummy_out~q\,
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(10),
+	datad => \avs_to_blockram_converter_inst|EU|CMPB|equal~5_combout\,
+	combout => \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\);
+
+-- Location: LCCOMB_X32_Y29_N26
+\avs_to_blockram_converter_inst|CU|next_state.read_cmd~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|next_state.read_cmd~0_combout\ = (\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ & \avs_to_blockram_converter_inst|CU|Selector1~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2317,12 +2020,12 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
-	datac => \avs_to_blockram_converter_inst|EU|CMPB|cmp_equal~combout\,
-	combout => \avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0_combout\);
+	datab => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\,
+	datac => \avs_to_blockram_converter_inst|CU|Selector1~0_combout\,
+	combout => \avs_to_blockram_converter_inst|CU|next_state.read_cmd~0_combout\);
 
--- Location: FF_X37_Y20_N5
-\avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite\ : dffeas
+-- Location: FF_X32_Y29_N27
+\avs_to_blockram_converter_inst|CU|present_state.read_cmd\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2330,28 +2033,110 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0_combout\,
+	d => \avs_to_blockram_converter_inst|CU|next_state.read_cmd~0_combout\,
 	clrn => \reset_n~input0\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\);
+	q => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\);
 
--- Location: LCCOMB_X38_Y21_N14
+-- Location: LCCOMB_X32_Y29_N24
+\avs_to_blockram_converter_inst|CU|Selector1~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|Selector1~0_combout\ = (\avs_read~input0\ & ((\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\) # 
+-- (\avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101010101000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_read~input0\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
+	datad => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	combout => \avs_to_blockram_converter_inst|CU|Selector1~0_combout\);
+
+-- Location: LCCOMB_X32_Y29_N12
+\avs_to_blockram_converter_inst|CU|Selector1~1\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|Selector1~1_combout\ = (\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ & (!\avs_to_blockram_converter_inst|EU|CMPB|equal~combout\ & (\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\))) 
+-- # (!\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ & ((\avs_to_blockram_converter_inst|CU|Selector1~0_combout\) # ((!\avs_to_blockram_converter_inst|EU|CMPB|equal~combout\ & 
+-- \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010100110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\,
+	datab => \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
+	datad => \avs_to_blockram_converter_inst|CU|Selector1~0_combout\,
+	combout => \avs_to_blockram_converter_inst|CU|Selector1~1_combout\);
+
+-- Location: FF_X32_Y29_N13
+\avs_to_blockram_converter_inst|CU|present_state.burst_read\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \avs_to_blockram_converter_inst|CU|Selector1~1_combout\,
+	clrn => \reset_n~input0\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\);
+
+-- Location: LCCOMB_X32_Y29_N16
+\avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\ & \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
+	datad => \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\,
+	combout => \avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0_combout\);
+
+-- Location: FF_X32_Y29_N17
+\avs_to_blockram_converter_inst|CU|present_state.burst_lastread\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \avs_to_blockram_converter_inst|CU|next_state.burst_lastread~0_combout\,
+	clrn => \reset_n~input0\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\);
+
+-- Location: LCCOMB_X35_Y26_N30
 \avs_to_blockram_converter_inst|CU|next_state.wait_afterburst~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|CU|next_state.wait_afterburst~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\) # (\avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111110101010",
+	lut_mask => "1111110011111100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\,
 	combout => \avs_to_blockram_converter_inst|CU|next_state.wait_afterburst~0_combout\);
 
--- Location: FF_X38_Y21_N15
+-- Location: FF_X35_Y26_N31
 \avs_to_blockram_converter_inst|CU|present_state.wait_afterburst\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2366,7 +2151,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\);
 
--- Location: FF_X38_Y21_N5
+-- Location: FF_X35_Y26_N27
 \avs_to_blockram_converter_inst|CU|present_state.idle_afterburst\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2382,23 +2167,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\);
 
--- Location: LCCOMB_X38_Y21_N0
+-- Location: LCCOMB_X35_Y26_N28
 \avs_to_blockram_converter_inst|CU|Selector0~1\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|Selector0~1_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.init2~q\) # ((\avs_to_blockram_converter_inst|CU|Selector0~0_combout\ & !\avs_write~input0\))
+-- \avs_to_blockram_converter_inst|CU|Selector0~1_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.init2~q\) # ((!\avs_write~input0\ & \avs_to_blockram_converter_inst|CU|Selector0~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100001100",
+	lut_mask => "1101110011011100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|CU|Selector0~0_combout\,
-	datac => \avs_write~input0\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.init2~q\,
+	dataa => \avs_write~input0\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.init2~q\,
+	datac => \avs_to_blockram_converter_inst|CU|Selector0~0_combout\,
 	combout => \avs_to_blockram_converter_inst|CU|Selector0~1_combout\);
 
--- Location: FF_X38_Y21_N1
+-- Location: FF_X35_Y26_N29
 \avs_to_blockram_converter_inst|CU|present_state.idle\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2413,56 +2198,124 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|CU|present_state.idle~q\);
 
--- Location: LCCOMB_X38_Y21_N24
+-- Location: LCCOMB_X35_Y26_N8
 \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
 -- \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\) # (\avs_to_blockram_converter_inst|CU|present_state.idle~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111001100",
+	lut_mask => "1111111110101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\,
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.idle_afterburst~q\,
 	datad => \avs_to_blockram_converter_inst|CU|present_state.idle~q\,
 	combout => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\);
 
--- Location: LCCOMB_X34_Y20_N22
-\avs_to_blockram_converter_inst|CU|Selector0~0\ : cyclone10lp_lcell_comb
+-- Location: FF_X35_Y26_N17
+\avs_to_blockram_converter_inst|EU|burstcount_reg|dout[8]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	asdata => \avs_burstcount[8]~input0\,
+	sload => VCC,
+	ena => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(8));
+
+-- Location: LCCOMB_X35_Y26_N0
+\avs_to_blockram_converter_inst|EU|CMP1|equal~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|Selector0~0_combout\ = (!\avs_read~input0\ & ((\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # ((\avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\) # 
--- (\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\))))
+-- \avs_to_blockram_converter_inst|EU|CMP1|equal~0_combout\ = (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(8) & (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(10) & (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(7) & 
+-- !\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(9))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001100110010",
+	lut_mask => "0000000000000001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
-	datab => \avs_read~input0\,
-	datac => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
-	combout => \avs_to_blockram_converter_inst|CU|Selector0~0_combout\);
+	dataa => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(8),
+	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(10),
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(7),
+	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(9),
+	combout => \avs_to_blockram_converter_inst|EU|CMP1|equal~0_combout\);
 
--- Location: LCCOMB_X37_Y20_N10
+-- Location: LCCOMB_X35_Y27_N22
+\avs_to_blockram_converter_inst|EU|CMP1|equal~1\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|CMP1|equal~1_combout\ = (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(5) & (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(6) & (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(3) & 
+-- !\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(5),
+	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(6),
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(3),
+	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(4),
+	combout => \avs_to_blockram_converter_inst|EU|CMP1|equal~1_combout\);
+
+-- Location: LCCOMB_X35_Y27_N10
+\avs_to_blockram_converter_inst|EU|CMP1|equal~2\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|CMP1|equal~2_combout\ = (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(2) & (!\avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(1) & \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(0)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(2),
+	datac => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(1),
+	datad => \avs_to_blockram_converter_inst|EU|burstcount_reg|dout\(0),
+	combout => \avs_to_blockram_converter_inst|EU|CMP1|equal~2_combout\);
+
+-- Location: LCCOMB_X35_Y26_N18
+\avs_to_blockram_converter_inst|CU|next_state_evaluation~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ = ((\avs_to_blockram_converter_inst|EU|CMP1|equal~0_combout\ & (\avs_to_blockram_converter_inst|EU|CMP1|equal~1_combout\ & \avs_to_blockram_converter_inst|EU|CMP1|equal~2_combout\))) # 
+-- (!\avs_beginbursttransfer~input0\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101010101010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_beginbursttransfer~input0\,
+	datab => \avs_to_blockram_converter_inst|EU|CMP1|equal~0_combout\,
+	datac => \avs_to_blockram_converter_inst|EU|CMP1|equal~1_combout\,
+	datad => \avs_to_blockram_converter_inst|EU|CMP1|equal~2_combout\,
+	combout => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\);
+
+-- Location: LCCOMB_X32_Y29_N4
 \avs_to_blockram_converter_inst|CU|next_state.write_cmd~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|next_state.write_cmd~0_combout\ = (\avs_to_blockram_converter_inst|CU|Selector0~0_combout\ & (\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\ & \avs_write~input0\))
+-- \avs_to_blockram_converter_inst|CU|next_state.write_cmd~0_combout\ = (\avs_write~input0\ & (\avs_to_blockram_converter_inst|CU|Selector0~0_combout\ & \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100000000000000",
+	lut_mask => "1000000010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \avs_write~input0\,
 	datab => \avs_to_blockram_converter_inst|CU|Selector0~0_combout\,
 	datac => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\,
-	datad => \avs_write~input0\,
 	combout => \avs_to_blockram_converter_inst|CU|next_state.write_cmd~0_combout\);
 
--- Location: FF_X37_Y20_N11
+-- Location: FF_X32_Y29_N5
 \avs_to_blockram_converter_inst|CU|present_state.write_cmd\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2477,11 +2330,159 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\);
 
--- Location: LCCOMB_X37_Y20_N6
+-- Location: LCCOMB_X32_Y29_N2
+\avs_to_blockram_converter_inst|CU|Selector0~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|Selector0~0_combout\ = (!\avs_read~input0\ & ((\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\) # 
+-- (\avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010101010100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_read~input0\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
+	datad => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	combout => \avs_to_blockram_converter_inst|CU|Selector0~0_combout\);
+
+-- Location: LCCOMB_X32_Y29_N28
+\avs_to_blockram_converter_inst|CU|Selector3~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|Selector3~0_combout\ = (!\avs_write~input0\ & ((\avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\ & 
+-- !\avs_to_blockram_converter_inst|EU|CMPB|equal~combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000001010100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_write~input0\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\,
+	datad => \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\,
+	combout => \avs_to_blockram_converter_inst|CU|Selector3~0_combout\);
+
+-- Location: FF_X32_Y29_N29
+\avs_to_blockram_converter_inst|CU|present_state.burst_write_pause\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \avs_to_blockram_converter_inst|CU|Selector3~0_combout\,
+	clrn => \reset_n~input0\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\);
+
+-- Location: LCCOMB_X32_Y29_N30
+\avs_to_blockram_converter_inst|CU|Selector2~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|Selector2~0_combout\ = (!\avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\ & ((\avs_to_blockram_converter_inst|EU|CMPB|equal~combout\) # 
+-- (!\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100000011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_write_pause~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
+	datad => \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\,
+	combout => \avs_to_blockram_converter_inst|CU|Selector2~0_combout\);
+
+-- Location: LCCOMB_X32_Y29_N14
+\avs_to_blockram_converter_inst|CU|Selector2~1\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|Selector2~1_combout\ = (\avs_write~input0\ & (((\avs_to_blockram_converter_inst|CU|Selector0~0_combout\ & !\avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\)) # 
+-- (!\avs_to_blockram_converter_inst|CU|Selector2~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_write~input0\,
+	datab => \avs_to_blockram_converter_inst|CU|Selector0~0_combout\,
+	datac => \avs_to_blockram_converter_inst|CU|next_state_evaluation~0_combout\,
+	datad => \avs_to_blockram_converter_inst|CU|Selector2~0_combout\,
+	combout => \avs_to_blockram_converter_inst|CU|Selector2~1_combout\);
+
+-- Location: FF_X32_Y29_N15
+\avs_to_blockram_converter_inst|CU|present_state.burst_write\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \avs_to_blockram_converter_inst|CU|Selector2~1_combout\,
+	clrn => \reset_n~input0\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\);
+
+-- Location: LCCOMB_X32_Y29_N10
+\avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\ & \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
+	datad => \avs_to_blockram_converter_inst|EU|CMPB|equal~combout\,
+	combout => \avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0_combout\);
+
+-- Location: FF_X32_Y29_N11
+\avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \avs_to_blockram_converter_inst|CU|next_state.burst_lastwrite~0_combout\,
+	clrn => \reset_n~input0\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\);
+
+-- Location: LCCOMB_X32_Y29_N8
 \avs_to_blockram_converter_inst|CU|WideOr12~0\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|WideOr12~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\) # 
--- (\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\))
+-- \avs_to_blockram_converter_inst|CU|WideOr12~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\) # 
+-- (\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111011111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
+	combout => \avs_to_blockram_converter_inst|CU|WideOr12~0_combout\);
+
+-- Location: LCCOMB_X32_Y29_N6
+\avs_to_blockram_converter_inst|CU|WideOr10~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|CU|WideOr10~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\) # 
+-- (\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2489,29 +2490,12 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
-	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_lastwrite~q\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
-	combout => \avs_to_blockram_converter_inst|CU|WideOr12~0_combout\);
-
--- Location: LCCOMB_X37_Y20_N12
-\avs_to_blockram_converter_inst|CU|WideOr10~0\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|CU|WideOr10~0_combout\ = (\avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.burst_read~q\) # 
--- (\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\,
-	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_lastread~q\,
+	datad => \avs_to_blockram_converter_inst|CU|present_state.burst_read~q\,
 	combout => \avs_to_blockram_converter_inst|CU|WideOr10~0_combout\);
 
--- Location: LCCOMB_X32_Y17_N4
+-- Location: LCCOMB_X32_Y26_N30
 \avs_writedata[0]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2522,24 +2506,24 @@ PORT MAP (
 	i => ww_avs_writedata(0),
 	o => \avs_writedata[0]~input0\);
 
--- Location: LCCOMB_X32_Y18_N24
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[0]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N8
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[0]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[0]~feeder_combout\ = \avs_writedata[0]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[0]~feeder_combout\ = \avs_writedata[0]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011001100",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_writedata[0]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[0]~feeder_combout\);
+	dataa => \avs_writedata[0]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[0]~feeder_combout\);
 
--- Location: LCCOMB_X37_Y20_N14
+-- Location: LCCOMB_X32_Y29_N18
 \avs_to_blockram_converter_inst|CU|WideOr8\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|WideOr8~combout\ = (\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\) # 
+-- \avs_to_blockram_converter_inst|CU|WideOr8~combout\ = (\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.burst_write~q\) # 
 -- (\avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\)))
 
 -- pragma translate_off
@@ -2548,14 +2532,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
-	datab => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
-	datac => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.burst_write~q\,
 	datad => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
 	combout => \avs_to_blockram_converter_inst|CU|WideOr8~combout\);
 
--- Location: FF_X32_Y18_N25
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[0]\ : dffeas
+-- Location: FF_X32_Y25_N9
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2563,17 +2547,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[0]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[0]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(0));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(0));
 
--- Location: LCCOMB_X34_Y20_N4
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~8\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N4
+\avs_to_blockram_converter_inst|EU|address_reg|dout[0]~8\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~8_combout\ = \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(0) $ (VCC)
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~9\ = CARRY(\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(0))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[0]~8_combout\ = \avs_to_blockram_converter_inst|EU|address_reg|dout\(0) $ (VCC)
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[0]~9\ = CARRY(\avs_to_blockram_converter_inst|EU|address_reg|dout\(0))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2581,12 +2565,12 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(0),
+	datab => \avs_to_blockram_converter_inst|EU|address_reg|dout\(0),
 	datad => VCC,
-	combout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~8_combout\,
-	cout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~9\);
+	combout => \avs_to_blockram_converter_inst|EU|address_reg|dout[0]~8_combout\,
+	cout => \avs_to_blockram_converter_inst|EU|address_reg|dout[0]~9\);
 
--- Location: LCCOMB_X34_Y19_N24
+-- Location: LCCOMB_X31_Y29_N24
 \avs_address[0]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2597,26 +2581,26 @@ PORT MAP (
 	i => ww_avs_address(0),
 	o => \avs_address[0]~input0\);
 
--- Location: LCCOMB_X34_Y20_N26
+-- Location: LCCOMB_X32_Y29_N22
 \avs_to_blockram_converter_inst|CU|WideOr9\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|WideOr9~combout\ = (\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # (((\avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\) # 
--- (\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\)) # (!\avs_to_blockram_converter_inst|CU|WideOr7~0_combout\))
+-- \avs_to_blockram_converter_inst|CU|WideOr9~combout\ = (\avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\) # ((\avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\) # 
+-- ((\avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\) # (!\avs_to_blockram_converter_inst|CU|WideOr7~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111111011",
+	lut_mask => "1111111011111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
-	datab => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
-	datac => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
-	datad => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
+	dataa => \avs_to_blockram_converter_inst|CU|burstcount_reg_enable~0_combout\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.write_cmd~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.read_cmd~q\,
+	datad => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	combout => \avs_to_blockram_converter_inst|CU|WideOr9~combout\);
 
--- Location: FF_X34_Y20_N5
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]\ : dffeas
+-- Location: FF_X32_Y30_N5
+\avs_to_blockram_converter_inst|EU|address_reg|dout[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2624,20 +2608,20 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~8_combout\,
+	d => \avs_to_blockram_converter_inst|EU|address_reg|dout[0]~8_combout\,
 	asdata => \avs_address[0]~input0\,
 	sload => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr9~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(0));
+	q => \avs_to_blockram_converter_inst|EU|address_reg|dout\(0));
 
--- Location: LCCOMB_X34_Y20_N6
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~10\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N6
+\avs_to_blockram_converter_inst|EU|address_reg|dout[1]~10\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~10_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(1) & (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~9\)) # 
--- (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(1) & ((\avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~9\) # (GND)))
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~11\ = CARRY((!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~9\) # (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(1)))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[1]~10_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|dout\(1) & (!\avs_to_blockram_converter_inst|EU|address_reg|dout[0]~9\)) # (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(1) & 
+-- ((\avs_to_blockram_converter_inst|EU|address_reg|dout[0]~9\) # (GND)))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[1]~11\ = CARRY((!\avs_to_blockram_converter_inst|EU|address_reg|dout[0]~9\) # (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2645,13 +2629,13 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(1),
+	dataa => \avs_to_blockram_converter_inst|EU|address_reg|dout\(1),
 	datad => VCC,
-	cin => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[0]~9\,
-	combout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~10_combout\,
-	cout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~11\);
+	cin => \avs_to_blockram_converter_inst|EU|address_reg|dout[0]~9\,
+	combout => \avs_to_blockram_converter_inst|EU|address_reg|dout[1]~10_combout\,
+	cout => \avs_to_blockram_converter_inst|EU|address_reg|dout[1]~11\);
 
--- Location: LCCOMB_X34_Y19_N26
+-- Location: LCCOMB_X32_Y28_N26
 \avs_address[1]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2662,8 +2646,8 @@ PORT MAP (
 	i => ww_avs_address(1),
 	o => \avs_address[1]~input0\);
 
--- Location: FF_X34_Y20_N7
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]\ : dffeas
+-- Location: FF_X32_Y30_N7
+\avs_to_blockram_converter_inst|EU|address_reg|dout[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2671,20 +2655,20 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~10_combout\,
+	d => \avs_to_blockram_converter_inst|EU|address_reg|dout[1]~10_combout\,
 	asdata => \avs_address[1]~input0\,
 	sload => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr9~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(1));
+	q => \avs_to_blockram_converter_inst|EU|address_reg|dout\(1));
 
--- Location: LCCOMB_X34_Y20_N8
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~12\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N8
+\avs_to_blockram_converter_inst|EU|address_reg|dout[2]~12\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~12_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(2) & (\avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~11\ $ (GND))) # 
--- (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(2) & (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~11\ & VCC))
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~13\ = CARRY((\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(2) & !\avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~11\))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[2]~12_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|dout\(2) & (\avs_to_blockram_converter_inst|EU|address_reg|dout[1]~11\ $ (GND))) # 
+-- (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(2) & (!\avs_to_blockram_converter_inst|EU|address_reg|dout[1]~11\ & VCC))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[2]~13\ = CARRY((\avs_to_blockram_converter_inst|EU|address_reg|dout\(2) & !\avs_to_blockram_converter_inst|EU|address_reg|dout[1]~11\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2692,13 +2676,13 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(2),
+	datab => \avs_to_blockram_converter_inst|EU|address_reg|dout\(2),
 	datad => VCC,
-	cin => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[1]~11\,
-	combout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~12_combout\,
-	cout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~13\);
+	cin => \avs_to_blockram_converter_inst|EU|address_reg|dout[1]~11\,
+	combout => \avs_to_blockram_converter_inst|EU|address_reg|dout[2]~12_combout\,
+	cout => \avs_to_blockram_converter_inst|EU|address_reg|dout[2]~13\);
 
--- Location: LCCOMB_X35_Y20_N10
+-- Location: LCCOMB_X32_Y26_N0
 \avs_address[2]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2709,8 +2693,8 @@ PORT MAP (
 	i => ww_avs_address(2),
 	o => \avs_address[2]~input0\);
 
--- Location: FF_X34_Y20_N9
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]\ : dffeas
+-- Location: FF_X32_Y30_N9
+\avs_to_blockram_converter_inst|EU|address_reg|dout[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2718,20 +2702,20 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~12_combout\,
+	d => \avs_to_blockram_converter_inst|EU|address_reg|dout[2]~12_combout\,
 	asdata => \avs_address[2]~input0\,
 	sload => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr9~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(2));
+	q => \avs_to_blockram_converter_inst|EU|address_reg|dout\(2));
 
--- Location: LCCOMB_X34_Y20_N10
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~14\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N10
+\avs_to_blockram_converter_inst|EU|address_reg|dout[3]~14\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~14_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(3) & (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~13\)) # 
--- (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(3) & ((\avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~13\) # (GND)))
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~15\ = CARRY((!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~13\) # (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(3)))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[3]~14_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|dout\(3) & (!\avs_to_blockram_converter_inst|EU|address_reg|dout[2]~13\)) # (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(3) & 
+-- ((\avs_to_blockram_converter_inst|EU|address_reg|dout[2]~13\) # (GND)))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[3]~15\ = CARRY((!\avs_to_blockram_converter_inst|EU|address_reg|dout[2]~13\) # (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(3)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2739,13 +2723,13 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(3),
+	dataa => \avs_to_blockram_converter_inst|EU|address_reg|dout\(3),
 	datad => VCC,
-	cin => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[2]~13\,
-	combout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~14_combout\,
-	cout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~15\);
+	cin => \avs_to_blockram_converter_inst|EU|address_reg|dout[2]~13\,
+	combout => \avs_to_blockram_converter_inst|EU|address_reg|dout[3]~14_combout\,
+	cout => \avs_to_blockram_converter_inst|EU|address_reg|dout[3]~15\);
 
--- Location: LCCOMB_X34_Y17_N4
+-- Location: LCCOMB_X31_Y30_N16
 \avs_address[3]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2756,8 +2740,8 @@ PORT MAP (
 	i => ww_avs_address(3),
 	o => \avs_address[3]~input0\);
 
--- Location: FF_X34_Y20_N11
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]\ : dffeas
+-- Location: FF_X32_Y30_N11
+\avs_to_blockram_converter_inst|EU|address_reg|dout[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2765,20 +2749,20 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~14_combout\,
+	d => \avs_to_blockram_converter_inst|EU|address_reg|dout[3]~14_combout\,
 	asdata => \avs_address[3]~input0\,
 	sload => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr9~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(3));
+	q => \avs_to_blockram_converter_inst|EU|address_reg|dout\(3));
 
--- Location: LCCOMB_X34_Y20_N12
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~16\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N12
+\avs_to_blockram_converter_inst|EU|address_reg|dout[4]~16\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~16_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(4) & (\avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~15\ $ (GND))) # 
--- (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(4) & (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~15\ & VCC))
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~17\ = CARRY((\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(4) & !\avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~15\))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[4]~16_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|dout\(4) & (\avs_to_blockram_converter_inst|EU|address_reg|dout[3]~15\ $ (GND))) # 
+-- (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(4) & (!\avs_to_blockram_converter_inst|EU|address_reg|dout[3]~15\ & VCC))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[4]~17\ = CARRY((\avs_to_blockram_converter_inst|EU|address_reg|dout\(4) & !\avs_to_blockram_converter_inst|EU|address_reg|dout[3]~15\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2786,13 +2770,13 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(4),
+	dataa => \avs_to_blockram_converter_inst|EU|address_reg|dout\(4),
 	datad => VCC,
-	cin => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[3]~15\,
-	combout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~16_combout\,
-	cout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~17\);
+	cin => \avs_to_blockram_converter_inst|EU|address_reg|dout[3]~15\,
+	combout => \avs_to_blockram_converter_inst|EU|address_reg|dout[4]~16_combout\,
+	cout => \avs_to_blockram_converter_inst|EU|address_reg|dout[4]~17\);
 
--- Location: LCCOMB_X34_Y19_N4
+-- Location: LCCOMB_X32_Y28_N12
 \avs_address[4]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2803,8 +2787,8 @@ PORT MAP (
 	i => ww_avs_address(4),
 	o => \avs_address[4]~input0\);
 
--- Location: FF_X34_Y20_N13
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]\ : dffeas
+-- Location: FF_X32_Y30_N13
+\avs_to_blockram_converter_inst|EU|address_reg|dout[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2812,20 +2796,20 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~16_combout\,
+	d => \avs_to_blockram_converter_inst|EU|address_reg|dout[4]~16_combout\,
 	asdata => \avs_address[4]~input0\,
 	sload => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr9~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(4));
+	q => \avs_to_blockram_converter_inst|EU|address_reg|dout\(4));
 
--- Location: LCCOMB_X34_Y20_N14
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~18\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N14
+\avs_to_blockram_converter_inst|EU|address_reg|dout[5]~18\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~18_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(5) & (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~17\)) # 
--- (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(5) & ((\avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~17\) # (GND)))
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~19\ = CARRY((!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~17\) # (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(5)))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[5]~18_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|dout\(5) & (!\avs_to_blockram_converter_inst|EU|address_reg|dout[4]~17\)) # (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(5) & 
+-- ((\avs_to_blockram_converter_inst|EU|address_reg|dout[4]~17\) # (GND)))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[5]~19\ = CARRY((!\avs_to_blockram_converter_inst|EU|address_reg|dout[4]~17\) # (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(5)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2833,13 +2817,13 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(5),
+	datab => \avs_to_blockram_converter_inst|EU|address_reg|dout\(5),
 	datad => VCC,
-	cin => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[4]~17\,
-	combout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~18_combout\,
-	cout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~19\);
+	cin => \avs_to_blockram_converter_inst|EU|address_reg|dout[4]~17\,
+	combout => \avs_to_blockram_converter_inst|EU|address_reg|dout[5]~18_combout\,
+	cout => \avs_to_blockram_converter_inst|EU|address_reg|dout[5]~19\);
 
--- Location: LCCOMB_X34_Y19_N22
+-- Location: LCCOMB_X32_Y28_N22
 \avs_address[5]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2850,8 +2834,8 @@ PORT MAP (
 	i => ww_avs_address(5),
 	o => \avs_address[5]~input0\);
 
--- Location: FF_X34_Y20_N15
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]\ : dffeas
+-- Location: FF_X32_Y30_N15
+\avs_to_blockram_converter_inst|EU|address_reg|dout[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2859,20 +2843,20 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~18_combout\,
+	d => \avs_to_blockram_converter_inst|EU|address_reg|dout[5]~18_combout\,
 	asdata => \avs_address[5]~input0\,
 	sload => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr9~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(5));
+	q => \avs_to_blockram_converter_inst|EU|address_reg|dout\(5));
 
--- Location: LCCOMB_X34_Y20_N16
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~20\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N16
+\avs_to_blockram_converter_inst|EU|address_reg|dout[6]~20\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~20_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(6) & (\avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~19\ $ (GND))) # 
--- (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(6) & (!\avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~19\ & VCC))
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~21\ = CARRY((\avs_to_blockram_converter_inst|EU|address_reg|reg_out\(6) & !\avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~19\))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[6]~20_combout\ = (\avs_to_blockram_converter_inst|EU|address_reg|dout\(6) & (\avs_to_blockram_converter_inst|EU|address_reg|dout[5]~19\ $ (GND))) # 
+-- (!\avs_to_blockram_converter_inst|EU|address_reg|dout\(6) & (!\avs_to_blockram_converter_inst|EU|address_reg|dout[5]~19\ & VCC))
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[6]~21\ = CARRY((\avs_to_blockram_converter_inst|EU|address_reg|dout\(6) & !\avs_to_blockram_converter_inst|EU|address_reg|dout[5]~19\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2880,13 +2864,13 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(6),
+	datab => \avs_to_blockram_converter_inst|EU|address_reg|dout\(6),
 	datad => VCC,
-	cin => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[5]~19\,
-	combout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~20_combout\,
-	cout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~21\);
+	cin => \avs_to_blockram_converter_inst|EU|address_reg|dout[5]~19\,
+	combout => \avs_to_blockram_converter_inst|EU|address_reg|dout[6]~20_combout\,
+	cout => \avs_to_blockram_converter_inst|EU|address_reg|dout[6]~21\);
 
--- Location: LCCOMB_X34_Y19_N8
+-- Location: LCCOMB_X32_Y28_N24
 \avs_address[6]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2897,8 +2881,8 @@ PORT MAP (
 	i => ww_avs_address(6),
 	o => \avs_address[6]~input0\);
 
--- Location: FF_X34_Y20_N17
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]\ : dffeas
+-- Location: FF_X32_Y30_N17
+\avs_to_blockram_converter_inst|EU|address_reg|dout[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2906,18 +2890,18 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~20_combout\,
+	d => \avs_to_blockram_converter_inst|EU|address_reg|dout[6]~20_combout\,
 	asdata => \avs_address[6]~input0\,
 	sload => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr9~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(6));
+	q => \avs_to_blockram_converter_inst|EU|address_reg|dout\(6));
 
--- Location: LCCOMB_X34_Y20_N18
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[7]~22\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y30_N18
+\avs_to_blockram_converter_inst|EU|address_reg|dout[7]~22\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|address_reg|reg_out[7]~22_combout\ = \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(7) $ (\avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~21\)
+-- \avs_to_blockram_converter_inst|EU|address_reg|dout[7]~22_combout\ = \avs_to_blockram_converter_inst|EU|address_reg|dout\(7) $ (\avs_to_blockram_converter_inst|EU|address_reg|dout[6]~21\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2925,11 +2909,11 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(7),
-	cin => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[6]~21\,
-	combout => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[7]~22_combout\);
+	datab => \avs_to_blockram_converter_inst|EU|address_reg|dout\(7),
+	cin => \avs_to_blockram_converter_inst|EU|address_reg|dout[6]~21\,
+	combout => \avs_to_blockram_converter_inst|EU|address_reg|dout[7]~22_combout\);
 
--- Location: LCCOMB_X34_Y19_N10
+-- Location: LCCOMB_X32_Y28_N18
 \avs_address[7]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2940,8 +2924,8 @@ PORT MAP (
 	i => ww_avs_address(7),
 	o => \avs_address[7]~input0\);
 
--- Location: FF_X34_Y20_N19
-\avs_to_blockram_converter_inst|EU|address_reg|reg_out[7]\ : dffeas
+-- Location: FF_X32_Y30_N19
+\avs_to_blockram_converter_inst|EU|address_reg|dout[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2949,15 +2933,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|address_reg|reg_out[7]~22_combout\,
+	d => \avs_to_blockram_converter_inst|EU|address_reg|dout[7]~22_combout\,
 	asdata => \avs_address[7]~input0\,
 	sload => \avs_to_blockram_converter_inst|CU|WideOr7~0_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr9~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|address_reg|reg_out\(7));
+	q => \avs_to_blockram_converter_inst|EU|address_reg|dout\(7));
 
--- Location: LCCOMB_X36_Y18_N16
+-- Location: LCCOMB_X32_Y26_N2
 \avs_writedata[1]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -2968,10 +2952,10 @@ PORT MAP (
 	i => ww_avs_writedata(1),
 	o => \avs_writedata[1]~input0\);
 
--- Location: LCCOMB_X37_Y18_N8
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[1]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N2
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[1]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[1]~feeder_combout\ = \avs_writedata[1]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[1]~feeder_combout\ = \avs_writedata[1]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2980,10 +2964,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_writedata[1]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[1]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[1]~feeder_combout\);
 
--- Location: FF_X37_Y18_N9
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[1]\ : dffeas
+-- Location: FF_X32_Y25_N3
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2991,13 +2975,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[1]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[1]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(1));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(1));
 
--- Location: LCCOMB_X32_Y17_N14
+-- Location: LCCOMB_X35_Y25_N24
 \avs_writedata[2]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3008,10 +2992,10 @@ PORT MAP (
 	i => ww_avs_writedata(2),
 	o => \avs_writedata[2]~input0\);
 
--- Location: LCCOMB_X32_Y18_N26
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[2]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N12
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[2]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[2]~feeder_combout\ = \avs_writedata[2]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[2]~feeder_combout\ = \avs_writedata[2]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3020,10 +3004,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \avs_writedata[2]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[2]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[2]~feeder_combout\);
 
--- Location: FF_X32_Y18_N27
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[2]\ : dffeas
+-- Location: FF_X32_Y25_N13
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3031,13 +3015,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[2]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[2]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(2));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(2));
 
--- Location: LCCOMB_X32_Y17_N0
+-- Location: LCCOMB_X34_Y26_N0
 \avs_writedata[3]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3048,22 +3032,22 @@ PORT MAP (
 	i => ww_avs_writedata(3),
 	o => \avs_writedata[3]~input0\);
 
--- Location: LCCOMB_X32_Y18_N28
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[3]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N8
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[3]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[3]~feeder_combout\ = \avs_writedata[3]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[3]~feeder_combout\ = \avs_writedata[3]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011001100",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_writedata[3]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[3]~feeder_combout\);
+	dataa => \avs_writedata[3]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[3]~feeder_combout\);
 
--- Location: FF_X32_Y18_N29
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[3]\ : dffeas
+-- Location: FF_X34_Y27_N9
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3071,13 +3055,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[3]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[3]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(3));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(3));
 
--- Location: LCCOMB_X32_Y17_N26
+-- Location: LCCOMB_X34_Y25_N28
 \avs_writedata[4]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3088,22 +3072,22 @@ PORT MAP (
 	i => ww_avs_writedata(4),
 	o => \avs_writedata[4]~input0\);
 
--- Location: LCCOMB_X32_Y18_N6
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[4]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N18
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[4]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[4]~feeder_combout\ = \avs_writedata[4]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[4]~feeder_combout\ = \avs_writedata[4]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011001100",
+	lut_mask => "1111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_writedata[4]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[4]~feeder_combout\);
+	datac => \avs_writedata[4]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[4]~feeder_combout\);
 
--- Location: FF_X32_Y18_N7
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[4]\ : dffeas
+-- Location: FF_X34_Y27_N19
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3111,13 +3095,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[4]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[4]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(4));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(4));
 
--- Location: LCCOMB_X36_Y18_N10
+-- Location: LCCOMB_X34_Y26_N2
 \avs_writedata[5]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3128,22 +3112,22 @@ PORT MAP (
 	i => ww_avs_writedata(5),
 	o => \avs_writedata[5]~input0\);
 
--- Location: LCCOMB_X37_Y18_N10
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[5]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N12
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[5]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[5]~feeder_combout\ = \avs_writedata[5]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[5]~feeder_combout\ = \avs_writedata[5]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011001100",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_writedata[5]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[5]~feeder_combout\);
+	dataa => \avs_writedata[5]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[5]~feeder_combout\);
 
--- Location: FF_X37_Y18_N11
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[5]\ : dffeas
+-- Location: FF_X34_Y27_N13
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3151,13 +3135,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[5]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[5]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(5));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(5));
 
--- Location: LCCOMB_X37_Y17_N24
+-- Location: LCCOMB_X34_Y25_N30
 \avs_writedata[6]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3168,10 +3152,10 @@ PORT MAP (
 	i => ww_avs_writedata(6),
 	o => \avs_writedata[6]~input0\);
 
--- Location: LCCOMB_X37_Y18_N28
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[6]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N22
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[6]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[6]~feeder_combout\ = \avs_writedata[6]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[6]~feeder_combout\ = \avs_writedata[6]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3180,10 +3164,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \avs_writedata[6]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[6]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[6]~feeder_combout\);
 
--- Location: FF_X37_Y18_N29
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[6]\ : dffeas
+-- Location: FF_X32_Y25_N23
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3191,13 +3175,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[6]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[6]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(6));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(6));
 
--- Location: LCCOMB_X37_Y17_N10
+-- Location: LCCOMB_X34_Y26_N20
 \avs_writedata[7]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3208,22 +3192,22 @@ PORT MAP (
 	i => ww_avs_writedata(7),
 	o => \avs_writedata[7]~input0\);
 
--- Location: LCCOMB_X37_Y18_N14
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[7]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N22
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[7]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[7]~feeder_combout\ = \avs_writedata[7]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[7]~feeder_combout\ = \avs_writedata[7]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \avs_writedata[7]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[7]~feeder_combout\);
+	dataa => \avs_writedata[7]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[7]~feeder_combout\);
 
--- Location: FF_X37_Y18_N15
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[7]\ : dffeas
+-- Location: FF_X34_Y27_N23
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3231,13 +3215,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[7]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[7]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(7));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(7));
 
--- Location: LCCOMB_X32_Y17_N20
+-- Location: LCCOMB_X35_Y25_N26
 \avs_writedata[8]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3248,22 +3232,22 @@ PORT MAP (
 	i => ww_avs_writedata(8),
 	o => \avs_writedata[8]~input0\);
 
--- Location: LCCOMB_X32_Y18_N16
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[8]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N0
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[8]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[8]~feeder_combout\ = \avs_writedata[8]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[8]~feeder_combout\ = \avs_writedata[8]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011001100",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_writedata[8]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[8]~feeder_combout\);
+	dataa => \avs_writedata[8]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[8]~feeder_combout\);
 
--- Location: FF_X32_Y18_N17
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[8]\ : dffeas
+-- Location: FF_X32_Y25_N1
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3271,13 +3255,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[8]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[8]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(8));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(8));
 
--- Location: LCCOMB_X32_Y17_N22
+-- Location: LCCOMB_X34_Y26_N14
 \avs_writedata[9]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3288,22 +3272,22 @@ PORT MAP (
 	i => ww_avs_writedata(9),
 	o => \avs_writedata[9]~input0\);
 
--- Location: LCCOMB_X32_Y18_N18
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[9]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N24
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[9]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[9]~feeder_combout\ = \avs_writedata[9]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[9]~feeder_combout\ = \avs_writedata[9]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_writedata[9]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[9]~feeder_combout\);
+	datab => \avs_writedata[9]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[9]~feeder_combout\);
 
--- Location: FF_X32_Y18_N19
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[9]\ : dffeas
+-- Location: FF_X34_Y27_N25
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3311,13 +3295,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[9]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[9]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(9));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(9));
 
--- Location: LCCOMB_X37_Y17_N12
+-- Location: LCCOMB_X34_Y25_N16
 \avs_writedata[10]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3328,22 +3312,22 @@ PORT MAP (
 	i => ww_avs_writedata(10),
 	o => \avs_writedata[10]~input0\);
 
--- Location: LCCOMB_X37_Y18_N0
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[10]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N26
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[10]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[10]~feeder_combout\ = \avs_writedata[10]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[10]~feeder_combout\ = \avs_writedata[10]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \avs_writedata[10]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[10]~feeder_combout\);
+	dataa => \avs_writedata[10]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[10]~feeder_combout\);
 
--- Location: FF_X37_Y18_N1
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[10]\ : dffeas
+-- Location: FF_X32_Y25_N27
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3351,13 +3335,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[10]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[10]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(10));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(10));
 
--- Location: LCCOMB_X34_Y15_N8
+-- Location: LCCOMB_X35_Y25_N4
 \avs_writedata[11]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3368,22 +3352,22 @@ PORT MAP (
 	i => ww_avs_writedata(11),
 	o => \avs_writedata[11]~input0\);
 
--- Location: LCCOMB_X32_Y18_N20
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[11]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N20
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[11]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[11]~feeder_combout\ = \avs_writedata[11]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[11]~feeder_combout\ = \avs_writedata[11]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_writedata[11]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[11]~feeder_combout\);
+	datab => \avs_writedata[11]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[11]~feeder_combout\);
 
--- Location: FF_X32_Y18_N21
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[11]\ : dffeas
+-- Location: FF_X32_Y25_N21
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3391,13 +3375,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[11]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[11]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(11));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(11));
 
--- Location: LCCOMB_X32_Y17_N24
+-- Location: LCCOMB_X34_Y26_N24
 \avs_writedata[12]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3408,10 +3392,10 @@ PORT MAP (
 	i => ww_avs_writedata(12),
 	o => \avs_writedata[12]~input0\);
 
--- Location: LCCOMB_X32_Y18_N14
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[12]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N26
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[12]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[12]~feeder_combout\ = \avs_writedata[12]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[12]~feeder_combout\ = \avs_writedata[12]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3420,10 +3404,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \avs_writedata[12]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[12]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[12]~feeder_combout\);
 
--- Location: FF_X32_Y18_N15
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[12]\ : dffeas
+-- Location: FF_X34_Y27_N27
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3431,13 +3415,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[12]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[12]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(12));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(12));
 
--- Location: LCCOMB_X32_Y17_N2
+-- Location: LCCOMB_X35_Y25_N14
 \avs_writedata[13]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3448,22 +3432,22 @@ PORT MAP (
 	i => ww_avs_writedata(13),
 	o => \avs_writedata[13]~input0\);
 
--- Location: LCCOMB_X32_Y18_N8
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[13]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N30
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[13]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[13]~feeder_combout\ = \avs_writedata[13]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[13]~feeder_combout\ = \avs_writedata[13]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \avs_writedata[13]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[13]~feeder_combout\);
+	datab => \avs_writedata[13]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[13]~feeder_combout\);
 
--- Location: FF_X32_Y18_N9
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[13]\ : dffeas
+-- Location: FF_X32_Y25_N31
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3471,13 +3455,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[13]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[13]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(13));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(13));
 
--- Location: M9K_X33_Y18_N0
+-- Location: M9K_X33_Y27_N0
 \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0\ : cyclone10lp_ram_block
 -- pragma translate_off
 GENERIC MAP (
@@ -3511,7 +3495,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\);
 
--- Location: LCCOMB_X32_Y17_N12
+-- Location: LCCOMB_X34_Y25_N2
 \avs_writedata[14]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3522,22 +3506,22 @@ PORT MAP (
 	i => ww_avs_writedata(14),
 	o => \avs_writedata[14]~input0\);
 
--- Location: LCCOMB_X32_Y18_N2
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[14]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N4
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[14]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[14]~feeder_combout\ = \avs_writedata[14]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[14]~feeder_combout\ = \avs_writedata[14]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_writedata[14]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[14]~feeder_combout\);
+	datab => \avs_writedata[14]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[14]~feeder_combout\);
 
--- Location: FF_X32_Y18_N3
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[14]\ : dffeas
+-- Location: FF_X34_Y27_N5
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3545,13 +3529,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[14]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[14]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(14));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(14));
 
--- Location: LCCOMB_X32_Y15_N8
+-- Location: LCCOMB_X34_Y28_N26
 \avs_writedata[15]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3562,8 +3546,22 @@ PORT MAP (
 	i => ww_avs_writedata(15),
 	o => \avs_writedata[15]~input0\);
 
--- Location: FF_X32_Y18_N13
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[15]\ : dffeas
+-- Location: LCCOMB_X34_Y27_N6
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[15]~feeder\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[15]~feeder_combout\ = \avs_writedata[15]~input0\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_writedata[15]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[15]~feeder_combout\);
+
+-- Location: FF_X34_Y27_N7
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3571,14 +3569,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_writedata[15]~input0\,
-	sload => VCC,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[15]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(15));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(15));
 
--- Location: LCCOMB_X36_Y18_N4
+-- Location: LCCOMB_X34_Y25_N20
 \avs_writedata[16]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3589,10 +3586,10 @@ PORT MAP (
 	i => ww_avs_writedata(16),
 	o => \avs_writedata[16]~input0\);
 
--- Location: LCCOMB_X37_Y18_N18
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[16]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N24
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[16]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[16]~feeder_combout\ = \avs_writedata[16]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[16]~feeder_combout\ = \avs_writedata[16]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3601,10 +3598,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \avs_writedata[16]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[16]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[16]~feeder_combout\);
 
--- Location: FF_X37_Y18_N19
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[16]\ : dffeas
+-- Location: FF_X32_Y25_N25
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[16]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3612,13 +3609,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[16]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[16]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(16));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(16));
 
--- Location: LCCOMB_X36_Y18_N22
+-- Location: LCCOMB_X34_Y25_N6
 \avs_writedata[17]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3629,10 +3626,10 @@ PORT MAP (
 	i => ww_avs_writedata(17),
 	o => \avs_writedata[17]~input0\);
 
--- Location: LCCOMB_X37_Y18_N20
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[17]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N0
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[17]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[17]~feeder_combout\ = \avs_writedata[17]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[17]~feeder_combout\ = \avs_writedata[17]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3641,10 +3638,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_writedata[17]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[17]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[17]~feeder_combout\);
 
--- Location: FF_X37_Y18_N21
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[17]\ : dffeas
+-- Location: FF_X34_Y27_N1
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[17]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3652,13 +3649,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[17]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[17]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(17));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(17));
 
--- Location: LCCOMB_X36_Y18_N0
+-- Location: LCCOMB_X34_Y26_N26
 \avs_writedata[18]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3669,8 +3666,22 @@ PORT MAP (
 	i => ww_avs_writedata(18),
 	o => \avs_writedata[18]~input0\);
 
--- Location: FF_X37_Y18_N23
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[18]\ : dffeas
+-- Location: LCCOMB_X34_Y27_N10
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[18]~feeder\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[18]~feeder_combout\ = \avs_writedata[18]~input0\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \avs_writedata[18]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[18]~feeder_combout\);
+
+-- Location: FF_X34_Y27_N11
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[18]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3678,14 +3689,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	asdata => \avs_writedata[18]~input0\,
-	sload => VCC,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[18]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(18));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(18));
 
--- Location: LCCOMB_X36_Y18_N18
+-- Location: LCCOMB_X34_Y26_N28
 \avs_writedata[19]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3696,22 +3706,22 @@ PORT MAP (
 	i => ww_avs_writedata(19),
 	o => \avs_writedata[19]~input0\);
 
--- Location: LCCOMB_X37_Y18_N24
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[19]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N28
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[19]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[19]~feeder_combout\ = \avs_writedata[19]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[19]~feeder_combout\ = \avs_writedata[19]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \avs_writedata[19]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[19]~feeder_combout\);
+	datab => \avs_writedata[19]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[19]~feeder_combout\);
 
--- Location: FF_X37_Y18_N25
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[19]\ : dffeas
+-- Location: FF_X34_Y27_N29
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[19]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3719,13 +3729,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[19]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[19]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(19));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(19));
 
--- Location: LCCOMB_X36_Y18_N28
+-- Location: LCCOMB_X35_Y25_N8
 \avs_writedata[20]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3736,22 +3746,22 @@ PORT MAP (
 	i => ww_avs_writedata(20),
 	o => \avs_writedata[20]~input0\);
 
--- Location: LCCOMB_X37_Y18_N26
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[20]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N10
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[20]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[20]~feeder_combout\ = \avs_writedata[20]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[20]~feeder_combout\ = \avs_writedata[20]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100000000",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \avs_writedata[20]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[20]~feeder_combout\);
+	dataa => \avs_writedata[20]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[20]~feeder_combout\);
 
--- Location: FF_X37_Y18_N27
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[20]\ : dffeas
+-- Location: FF_X32_Y25_N11
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[20]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3759,13 +3769,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[20]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[20]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(20));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(20));
 
--- Location: LCCOMB_X35_Y18_N24
+-- Location: LCCOMB_X35_Y25_N10
 \avs_writedata[21]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3776,22 +3786,22 @@ PORT MAP (
 	i => ww_avs_writedata(21),
 	o => \avs_writedata[21]~input0\);
 
--- Location: LCCOMB_X32_Y18_N22
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[21]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N28
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[21]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[21]~feeder_combout\ = \avs_writedata[21]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[21]~feeder_combout\ = \avs_writedata[21]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_writedata[21]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[21]~feeder_combout\);
+	datad => \avs_writedata[21]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[21]~feeder_combout\);
 
--- Location: FF_X32_Y18_N23
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[21]\ : dffeas
+-- Location: FF_X32_Y25_N29
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[21]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3799,13 +3809,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[21]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[21]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(21));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(21));
 
--- Location: LCCOMB_X36_Y18_N30
+-- Location: LCCOMB_X35_Y25_N20
 \avs_writedata[22]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3816,22 +3826,22 @@ PORT MAP (
 	i => ww_avs_writedata(22),
 	o => \avs_writedata[22]~input0\);
 
--- Location: LCCOMB_X37_Y18_N4
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[22]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N14
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[22]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[22]~feeder_combout\ = \avs_writedata[22]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[22]~feeder_combout\ = \avs_writedata[22]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_writedata[22]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[22]~feeder_combout\);
+	datab => \avs_writedata[22]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[22]~feeder_combout\);
 
--- Location: FF_X37_Y18_N5
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[22]\ : dffeas
+-- Location: FF_X32_Y25_N15
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[22]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3839,13 +3849,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[22]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[22]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(22));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(22));
 
--- Location: LCCOMB_X35_Y18_N26
+-- Location: LCCOMB_X34_Y25_N24
 \avs_writedata[23]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3856,22 +3866,22 @@ PORT MAP (
 	i => ww_avs_writedata(23),
 	o => \avs_writedata[23]~input0\);
 
--- Location: LCCOMB_X32_Y18_N0
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[23]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N30
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[23]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[23]~feeder_combout\ = \avs_writedata[23]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[23]~feeder_combout\ = \avs_writedata[23]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011001100",
+	lut_mask => "1111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_writedata[23]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[23]~feeder_combout\);
+	datac => \avs_writedata[23]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[23]~feeder_combout\);
 
--- Location: FF_X32_Y18_N1
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[23]\ : dffeas
+-- Location: FF_X34_Y27_N31
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[23]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3879,13 +3889,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[23]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[23]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(23));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(23));
 
--- Location: LCCOMB_X35_Y18_N12
+-- Location: LCCOMB_X35_Y25_N30
 \avs_writedata[24]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3896,10 +3906,10 @@ PORT MAP (
 	i => ww_avs_writedata(24),
 	o => \avs_writedata[24]~input0\);
 
--- Location: LCCOMB_X32_Y18_N10
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[24]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N16
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[24]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[24]~feeder_combout\ = \avs_writedata[24]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[24]~feeder_combout\ = \avs_writedata[24]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3908,10 +3918,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \avs_writedata[24]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[24]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[24]~feeder_combout\);
 
--- Location: FF_X32_Y18_N11
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[24]\ : dffeas
+-- Location: FF_X32_Y25_N17
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[24]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3919,13 +3929,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[24]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[24]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(24));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(24));
 
--- Location: LCCOMB_X36_Y18_N24
+-- Location: LCCOMB_X34_Y26_N22
 \avs_writedata[25]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3936,10 +3946,10 @@ PORT MAP (
 	i => ww_avs_writedata(25),
 	o => \avs_writedata[25]~input0\);
 
--- Location: LCCOMB_X37_Y18_N6
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[25]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N16
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[25]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[25]~feeder_combout\ = \avs_writedata[25]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[25]~feeder_combout\ = \avs_writedata[25]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3948,10 +3958,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_writedata[25]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[25]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[25]~feeder_combout\);
 
--- Location: FF_X37_Y18_N7
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[25]\ : dffeas
+-- Location: FF_X34_Y27_N17
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[25]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3959,13 +3969,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[25]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[25]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(25));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(25));
 
--- Location: LCCOMB_X36_Y18_N26
+-- Location: LCCOMB_X34_Y25_N18
 \avs_writedata[26]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -3976,10 +3986,10 @@ PORT MAP (
 	i => ww_avs_writedata(26),
 	o => \avs_writedata[26]~input0\);
 
--- Location: LCCOMB_X37_Y18_N16
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[26]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N18
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[26]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[26]~feeder_combout\ = \avs_writedata[26]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[26]~feeder_combout\ = \avs_writedata[26]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3988,10 +3998,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \avs_writedata[26]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[26]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[26]~feeder_combout\);
 
--- Location: FF_X37_Y18_N17
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[26]\ : dffeas
+-- Location: FF_X32_Y25_N19
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[26]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3999,13 +4009,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[26]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[26]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(26));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(26));
 
--- Location: LCCOMB_X36_Y18_N12
+-- Location: LCCOMB_X34_Y26_N8
 \avs_writedata[27]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -4016,22 +4026,8 @@ PORT MAP (
 	i => ww_avs_writedata(27),
 	o => \avs_writedata[27]~input0\);
 
--- Location: LCCOMB_X37_Y18_N2
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[27]~feeder\ : cyclone10lp_lcell_comb
--- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[27]~feeder_combout\ = \avs_writedata[27]~input0\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \avs_writedata[27]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[27]~feeder_combout\);
-
--- Location: FF_X37_Y18_N3
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[27]\ : dffeas
+-- Location: FF_X34_Y27_N3
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[27]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4039,13 +4035,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[27]~feeder_combout\,
+	asdata => \avs_writedata[27]~input0\,
+	sload => VCC,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(27));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(27));
 
--- Location: LCCOMB_X35_Y18_N30
+-- Location: LCCOMB_X34_Y26_N10
 \avs_writedata[28]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -4056,22 +4053,22 @@ PORT MAP (
 	i => ww_avs_writedata(28),
 	o => \avs_writedata[28]~input0\);
 
--- Location: LCCOMB_X32_Y18_N4
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[28]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N20
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[28]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[28]~feeder_combout\ = \avs_writedata[28]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[28]~feeder_combout\ = \avs_writedata[28]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_writedata[28]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[28]~feeder_combout\);
+	datab => \avs_writedata[28]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[28]~feeder_combout\);
 
--- Location: FF_X32_Y18_N5
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[28]\ : dffeas
+-- Location: FF_X34_Y27_N21
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[28]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4079,13 +4076,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[28]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[28]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(28));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(28));
 
--- Location: LCCOMB_X36_Y18_N14
+-- Location: LCCOMB_X35_Y25_N16
 \avs_writedata[29]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -4096,10 +4093,10 @@ PORT MAP (
 	i => ww_avs_writedata(29),
 	o => \avs_writedata[29]~input0\);
 
--- Location: LCCOMB_X37_Y18_N12
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[29]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N4
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[29]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[29]~feeder_combout\ = \avs_writedata[29]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[29]~feeder_combout\ = \avs_writedata[29]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4108,10 +4105,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \avs_writedata[29]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[29]~feeder_combout\);
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[29]~feeder_combout\);
 
--- Location: FF_X37_Y18_N13
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[29]\ : dffeas
+-- Location: FF_X32_Y25_N5
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[29]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4119,13 +4116,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[29]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[29]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(29));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(29));
 
--- Location: LCCOMB_X35_Y18_N8
+-- Location: LCCOMB_X35_Y25_N18
 \avs_writedata[30]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -4136,22 +4133,22 @@ PORT MAP (
 	i => ww_avs_writedata(30),
 	o => \avs_writedata[30]~input0\);
 
--- Location: LCCOMB_X32_Y18_N30
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[30]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y25_N6
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[30]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[30]~feeder_combout\ = \avs_writedata[30]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[30]~feeder_combout\ = \avs_writedata[30]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \avs_writedata[30]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[30]~feeder_combout\);
+	datab => \avs_writedata[30]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[30]~feeder_combout\);
 
--- Location: FF_X32_Y18_N31
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[30]\ : dffeas
+-- Location: FF_X32_Y25_N7
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[30]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4159,13 +4156,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[30]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[30]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(30));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(30));
 
--- Location: LCCOMB_X36_Y18_N8
+-- Location: LCCOMB_X34_Y26_N12
 \avs_writedata[31]~input\ : cyclone10lp_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -4176,22 +4173,22 @@ PORT MAP (
 	i => ww_avs_writedata(31),
 	o => \avs_writedata[31]~input0\);
 
--- Location: LCCOMB_X37_Y18_N30
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[31]~feeder\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X34_Y27_N14
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[31]~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[31]~feeder_combout\ = \avs_writedata[31]~input0\
+-- \avs_to_blockram_converter_inst|EU|writedata_reg|dout[31]~feeder_combout\ = \avs_writedata[31]~input0\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011001100",
+	lut_mask => "1111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \avs_writedata[31]~input0\,
-	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[31]~feeder_combout\);
+	datac => \avs_writedata[31]~input0\,
+	combout => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[31]~feeder_combout\);
 
--- Location: FF_X37_Y18_N31
-\avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[31]\ : dffeas
+-- Location: FF_X34_Y27_N15
+\avs_to_blockram_converter_inst|EU|writedata_reg|dout[31]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4199,13 +4196,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out[31]~feeder_combout\,
+	d => \avs_to_blockram_converter_inst|EU|writedata_reg|dout[31]~feeder_combout\,
 	ena => \avs_to_blockram_converter_inst|CU|WideOr8~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|writedata_reg|reg_out\(31));
+	q => \avs_to_blockram_converter_inst|EU|writedata_reg|dout\(31));
 
--- Location: M9K_X33_Y18_N0
+-- Location: M9K_X33_Y27_N0
 \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a14\ : cyclone10lp_ram_block
 -- pragma translate_off
 GENERIC MAP (
@@ -4239,10 +4236,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \blockram_1port_inst|altsyncram_component|auto_generated|ram_block1a14_PORTADATAOUT_bus\);
 
--- Location: LCCOMB_X38_Y21_N4
+-- Location: LCCOMB_X35_Y26_N24
 \avs_to_blockram_converter_inst|CU|WideOr6\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|CU|WideOr6~combout\ = (\avs_to_blockram_converter_inst|CU|present_state.init1~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.init2~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\) # 
+-- \avs_to_blockram_converter_inst|CU|WideOr6~combout\ = (\avs_to_blockram_converter_inst|CU|present_state.init2~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.init1~q\) # ((\avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\) # 
 -- (!\avs_to_blockram_converter_inst|CU|WideOr5~0_combout\)))
 
 -- pragma translate_off
@@ -4251,43 +4248,28 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|CU|present_state.init1~q\,
-	datab => \avs_to_blockram_converter_inst|CU|present_state.init2~q\,
+	dataa => \avs_to_blockram_converter_inst|CU|present_state.init2~q\,
+	datab => \avs_to_blockram_converter_inst|CU|present_state.init1~q\,
 	datac => \avs_to_blockram_converter_inst|CU|present_state.wait_afterburst~q\,
 	datad => \avs_to_blockram_converter_inst|CU|WideOr5~0_combout\,
 	combout => \avs_to_blockram_converter_inst|CU|WideOr6~combout\);
 
--- Location: FF_X37_Y20_N13
-\avs_to_blockram_converter_inst|EU|pipe1|dff_out\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|CU|WideOr10~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|pipe1|dff_out~q\);
-
--- Location: LCCOMB_X37_Y20_N24
-\avs_to_blockram_converter_inst|EU|pipe2|dff_out~0\ : cyclone10lp_lcell_comb
+-- Location: LCCOMB_X32_Y29_N0
+\avs_to_blockram_converter_inst|EU|pipe1|dout~feeder\ : cyclone10lp_lcell_comb
 -- Equation(s):
--- \avs_to_blockram_converter_inst|EU|pipe2|dff_out~0_combout\ = (\avs_to_blockram_converter_inst|EU|pipe1|dff_out~q\ & \avs_to_blockram_converter_inst|CU|present_state.reset~q\)
+-- \avs_to_blockram_converter_inst|EU|pipe1|dout~feeder_combout\ = \avs_to_blockram_converter_inst|CU|WideOr10~0_combout\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100010001000",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \avs_to_blockram_converter_inst|EU|pipe1|dff_out~q\,
-	datab => \avs_to_blockram_converter_inst|CU|present_state.reset~q\,
-	combout => \avs_to_blockram_converter_inst|EU|pipe2|dff_out~0_combout\);
+	datad => \avs_to_blockram_converter_inst|CU|WideOr10~0_combout\,
+	combout => \avs_to_blockram_converter_inst|EU|pipe1|dout~feeder_combout\);
 
--- Location: FF_X37_Y20_N25
-\avs_to_blockram_converter_inst|EU|pipe2|dff_out\ : dffeas
+-- Location: FF_X32_Y29_N1
+\avs_to_blockram_converter_inst|EU|pipe1|dout\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4295,10 +4277,39 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
-	d => \avs_to_blockram_converter_inst|EU|pipe2|dff_out~0_combout\,
+	d => \avs_to_blockram_converter_inst|EU|pipe1|dout~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \avs_to_blockram_converter_inst|EU|pipe2|dff_out~q\);
+	q => \avs_to_blockram_converter_inst|EU|pipe1|dout~q\);
+
+-- Location: LCCOMB_X35_Y26_N6
+\avs_to_blockram_converter_inst|EU|pipe2|dout~0\ : cyclone10lp_lcell_comb
+-- Equation(s):
+-- \avs_to_blockram_converter_inst|EU|pipe2|dout~0_combout\ = (\avs_to_blockram_converter_inst|EU|pipe1|dout~q\ & \avs_to_blockram_converter_inst|CU|present_state.reset~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010000010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \avs_to_blockram_converter_inst|EU|pipe1|dout~q\,
+	datac => \avs_to_blockram_converter_inst|CU|present_state.reset~q\,
+	combout => \avs_to_blockram_converter_inst|EU|pipe2|dout~0_combout\);
+
+-- Location: FF_X35_Y26_N7
+\avs_to_blockram_converter_inst|EU|pipe2|dout\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \avs_to_blockram_converter_inst|EU|pipe2|dout~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \avs_to_blockram_converter_inst|EU|pipe2|dout~q\);
 
 ww_avs_readdata(0) <= \avs_readdata[0]~output_o\;
 
