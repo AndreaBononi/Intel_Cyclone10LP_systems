@@ -1,0 +1,265 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "synch_validout",
+					"strict" : false
+				},
+				{
+					"name" : "synch_busy",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_dout[15]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "counter_up_downN",
+					"strict" : false
+				},
+				{
+					"name" : "counter_clear_n",
+					"strict" : false
+				},
+				{
+					"name" : "counter_enable",
+					"strict" : false
+				},
+				{
+					"name" : "synch_clear_n",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "synch_enable",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[0]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_strobe",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[1]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[2]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[3]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[4]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[5]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[6]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[7]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[8]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[9]",
+					"strict" : false
+				},
+				{
+					"name" : "burstcount[10]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[0]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[1]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[2]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[3]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[4]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[5]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[6]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[7]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[8]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[9]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[10]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[11]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[12]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[13]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[14]",
+					"strict" : false
+				},
+				{
+					"name" : "synch_din[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
