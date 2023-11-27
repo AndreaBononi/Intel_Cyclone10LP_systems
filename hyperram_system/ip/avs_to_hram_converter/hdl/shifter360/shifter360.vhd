@@ -45,7 +45,7 @@ ENTITY shifter360 IS
 	(
 		areset		: IN STD_LOGIC  := '0';
 		inclk0		: IN STD_LOGIC  := '0';
-		c0		: OUT STD_LOGIC 
+		c0		    : OUT STD_LOGIC 
 	);
 END shifter360;
 

@@ -21,20 +21,20 @@ use 			ieee.numeric_std.all;
 entity synchronizer is
 port
 (
-	clk                       : in    std_logic;
-	rst_n											: in    std_logic;
-	synch_enable              : in		std_logic;
-  synch_clear_n             : in		std_logic;
-  synch_strobe              : in		std_logic;
-	synch_validout            : out		std_logic;
-  synch_busy                : out		std_logic;
-	synch_din                 : in		std_logic_vector(15 downto 0);
-  synch_dout                : out		std_logic_vector(15 downto 0);
-	burstcount                : in		std_logic_vector(10 downto 0);
-	counter_enable						: in    std_logic;
-	counter_clear_n						: in    std_logic;
-	counter_up_downN					: in    std_logic;
-	counter_out								: out		std_logic_vector(10 downto 0)
+	clk                 : in    std_logic;
+	rst_n							  : in    std_logic;
+	synch_enable        : in		std_logic;
+  synch_clear_n       : in		std_logic;
+  synch_strobe        : in		std_logic;
+	synch_validout      : out		std_logic;
+  synch_busy          : out		std_logic;
+	synch_din           : in		std_logic_vector(15 downto 0);
+  synch_dout          : out		std_logic_vector(15 downto 0);
+	burstcount          : in		std_logic_vector(10 downto 0);
+	counter_enable		  : in    std_logic;
+	counter_clear_n		  : in    std_logic;
+	counter_up_downN	  : in    std_logic;
+	counter_out				  : out		std_logic_vector(10 downto 0)
 );
 end synchronizer;
 

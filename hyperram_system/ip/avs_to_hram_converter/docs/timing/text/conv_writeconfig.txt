@@ -18,9 +18,9 @@
   {name: 'CK_gating_enable_n', wave: '0......1.......0...'},
   {name: 'CA_load', wave: '0....1.0...........'},
   {name: 'CA_sel', wave: 'x......=.=.=.x.....', data: ["00", "01", "10"]},
-  {name: 'address_space_sel', wave: '=............=.=...', data: ["00", "10", "00"]},
+  {name: 'address_space_sel', wave: 'x....=.x...........', data: ["01"]},
   {name: 'dq_OE', wave: '0......1.......0...'},
   {name: 'writedata_load', wave: '0......1.........0.'},
-  {name: 'dqout_sel', wave: '0......1.....0.....'},
+  {name: 'dq_sel', wave: 'x......=.....=.x...', data: ["11", "01"]},
  ]
 }
