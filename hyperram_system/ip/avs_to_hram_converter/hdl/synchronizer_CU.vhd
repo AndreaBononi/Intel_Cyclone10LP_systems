@@ -104,7 +104,7 @@ architecture fsm of synchronizer_CU is
 		end process next_state_evaluation; ---------------------------------------------------------------------
 
 		-- state transition ------------------------------------------------------------------------------------
-		state_transition: process (clk, rst_n)
+		state_transition: process (clk, rst_n, clear_n)
 		begin
 			if (rst_n = '0') then
 				present_state <= reset;
