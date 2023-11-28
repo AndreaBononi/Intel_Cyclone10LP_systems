@@ -7,16 +7,16 @@ library   ieee;
 use       ieee.std_logic_1164.all;
 use       ieee.numeric_std.all;
 
-entity gater is
+entity clk_gater is
 port
 (
-	clk           : in 	std_logic;   -- input clock
+	clkin         : in 	std_logic;   -- input clock
 	enable_n      : in 	std_logic;   -- gating enable, active low
 	gated_clock		: out std_logic    -- gated clock
 );
-end gater;
+end clk_gater;
 
-architecture rtl of gater is
+architecture rtl of clk_gater is
 
   -- COMPONENT: flip flop type d ----------------------------------------------------------------------
   component d_flipflop is
@@ -39,7 +39,7 @@ architecture rtl of gater is
 		antiglitch: d_flipflop 
     port map
     (
-      clk       => clk, 
+      clk       => clkin, 
       enable    => '1', 
       clear_n   => '1',
       reset_n   => '1',
@@ -47,6 +47,6 @@ architecture rtl of gater is
       dout      => filtered_enable_n
     ); ------------------------------------------------------------------------------------------------
     
-    gated_clock <= clk and filtered_enable_n;
+    gated_clock <= clkin and filtered_enable_n;
 
 end rtl;

@@ -258,10 +258,10 @@ architecture rtl of avs_to_hram_converter_EU is
   end component; ---------------------------------------------------------------------------------------------------- 
 
   -- COMPONENT: clock gater ----------------------------------------------------------------------------------------- 
-  component gater is
+  component clk_gater is
   port
   (
-    clk           : in 	std_logic;   -- input clock
+    clkin         : in 	std_logic;   -- input clock
     enable_n      : in 	std_logic;   -- gating enable, active low
     gated_clock		: out std_logic    -- gated clock
   );
@@ -340,7 +340,7 @@ architecture rtl of avs_to_hram_converter_EU is
   ------------------------------------------------------------------------------------------------------------------- 
 
   -- SIGNALS -------------------------------------------------------------------------------------------------------- 
-  signal gated_clock        : std_logic;
+  signal clk90              : std_logic;
   signal rwds90             : std_logic;
   signal rwds360            : std_logic;
   signal synch_cnt_up_downN : std_logic;
@@ -549,12 +549,12 @@ architecture rtl of avs_to_hram_converter_EU is
     ); --------------------------------------------------------------------------------------------------------------
 
     -- clock gater --------------------------------------------------------------------------------------------------
-    CK_gater : gater
+    CK_gater : clk_gater
     port map
     (
-      clk           => clk,
+      clkin         => clk90,
       enable_n      => CK_gating_enable_n,
-      gated_clock		=> gated_clock
+      gated_clock		=> hram_CK
     ); --------------------------------------------------------------------------------------------------------------
 
     -- clock shifter ------------------------------------------------------------------------------------------------
@@ -562,8 +562,8 @@ architecture rtl of avs_to_hram_converter_EU is
     port map
     (
       areset		=> reset_n,
-      inclk0		=> gated_clock,
-      c0				=> hram_CK
+      inclk0		=> clk,
+      c0				=> clk90
     ); --------------------------------------------------------------------------------------------------------------
 
     -- RWDS tristate buffer -----------------------------------------------------------------------------------------

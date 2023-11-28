@@ -55,6 +55,12 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE hdl/clk_gater.vhd
 set_global_assignment -name QIP_FILE hdl/shifter90/shifter90.qip
 set_global_assignment -name QIP_FILE hdl/shifter360/shifter360.qip
 set_global_assignment -name QIP_FILE hdl/counter_11bit_updown/counter_11bit_updown.qip
@@ -71,7 +77,6 @@ set_global_assignment -name VHDL_FILE hdl/reg_negedge.vhd
 set_global_assignment -name VHDL_FILE hdl/reg.vhd
 set_global_assignment -name VHDL_FILE hdl/mux_4to1.vhd
 set_global_assignment -name VHDL_FILE hdl/mux_2to1.vhd
-set_global_assignment -name VHDL_FILE hdl/gater.vhd
 set_global_assignment -name VHDL_FILE hdl/decoder_2bit.vhd
 set_global_assignment -name VHDL_FILE hdl/DDR_to_SDR_converter.vhd
 set_global_assignment -name VHDL_FILE hdl/d_flipflop.vhd
@@ -83,9 +88,31 @@ set_global_assignment -name VHDL_FILE hdl/CA_builder.vhd
 set_global_assignment -name VHDL_FILE hdl/avs_to_hram_converter_EU.vhd
 set_global_assignment -name VHDL_FILE hdl/avs_to_hram_converter_CU.vhd
 set_global_assignment -name VHDL_FILE hdl/avs_to_hram_converter.vhd
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_beginbursttransfer
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_read
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_readdatavalid
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_waitrequest
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_write
+set_instance_assignment -name VIRTUAL_PIN ON -to clk
+set_instance_assignment -name VIRTUAL_PIN ON -to hram_CK
+set_instance_assignment -name VIRTUAL_PIN ON -to hram_CS_n
+set_instance_assignment -name VIRTUAL_PIN ON -to hram_RESET_n
+set_instance_assignment -name VIRTUAL_PIN ON -to reset_n
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_address
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_burstcount
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_readdata
+set_instance_assignment -name VIRTUAL_PIN ON -to avs_writedata
+set_instance_assignment -name VIRTUAL_PIN ON -to hram_DQ
+set_instance_assignment -name VIRTUAL_PIN ON -to "avs_to_hram_converter_CU:CU"
+set_instance_assignment -name VIRTUAL_PIN ON -to "avs_to_hram_converter_EU:EU"
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

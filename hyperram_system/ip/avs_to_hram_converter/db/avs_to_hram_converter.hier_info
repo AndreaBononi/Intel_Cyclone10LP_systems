@@ -104,7 +104,7 @@ clk => reg:datain_reg.clk
 clk => reg:conf_reg.clk
 clk => CA_unpacker:CA_unpacked_inst.clk
 clk => SDR_to_DDR_converter:writedata_converter.clk
-clk => gater:CK_gater.clk
+clk => shifter90:CK_90.inclk0
 clk => d_flipflop:rwds_tracker.clk
 clk => synchronizer:synchronizer_inst.clk
 clk => reg:cntpipe1.clk
@@ -237,7 +237,7 @@ avs_burstcount[8] => reg:burstcnt_reg.din[8]
 avs_burstcount[9] => reg:burstcnt_reg.din[9]
 avs_burstcount[10] => reg:burstcnt_reg.din[10]
 hram_RESET_n <= hbus_RESET_n.DB_MAX_OUTPUT_PORT_TYPE
-hram_CK <= shifter90:CK_90.c0
+hram_CK <= clk_gater:CK_gater.gated_clock
 hram_DQ[0] <> hram_DQ[0]
 hram_DQ[1] <> hram_DQ[1]
 hram_DQ[2] <> hram_DQ[2]
@@ -283,7 +283,7 @@ init_clear_n => sr_flipflop:init_tracker.clear_n
 set_initialization_state => sr_flipflop:init_tracker.set
 check_latency => d_flipflop:rwds_tracker.enable
 force_RWDS_low => tristate_buffer:RWDS_buffer.enable
-CK_gating_enable_n => gater:CK_gater.enable_n
+CK_gating_enable_n => clk_gater:CK_gater.enable_n
 set_dpd_status => sr_flipflop:dpd_tracker.set
 clear_dpd_status_n => sr_flipflop:dpd_tracker.clear_n
 deadline_tim_enable => timer_14bit:deadline_timer.enable
@@ -1829,14 +1829,14 @@ dout[6] <= dout.DB_MAX_OUTPUT_PORT_TYPE
 dout[7] <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|gater:CK_gater
-clk => gated_clock.IN1
-clk => d_flipflop:antiglitch.clk
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|clk_gater:CK_gater
+clkin => gated_clock.IN1
+clkin => d_flipflop:antiglitch.clk
 enable_n => d_flipflop:antiglitch.din
 gated_clock <= gated_clock.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|gater:CK_gater|d_flipflop:antiglitch
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|clk_gater:CK_gater|d_flipflop:antiglitch
 clk => dout~reg0.CLK
 enable => dout.OUTPUTSELECT
 clear_n => dout.OUTPUTSELECT
