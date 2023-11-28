@@ -11,6 +11,7 @@ port
 	reset_n                       : in  std_logic;
   -- control signals
   waitrequest                   : out std_logic;
+  force_valid                   : out std_logic;
   cmd_load                      : out std_logic;
   dpd_req_clear_n               : out std_logic;
   synch_cnt_enable              : out std_logic;
@@ -18,14 +19,14 @@ port
   synch_cnt_clear_n             : out std_logic;
   datain_load                   : out std_logic;
   avs_out_sel                   : out std_logic;
-  reset_config_register         : out std_logic;
+  reset_config_register_n       : out std_logic;
   update_config_register        : out std_logic;
-  address_space_sel             : out std_logic;
+  address_space_sel             : out std_logic_vector(1 downto 0);
   config_access                 : out std_logic;
   read_writeN                   : out std_logic;
   CA_load                       : out std_logic;
   CA_sel                        : out std_logic_vector(1 downto 0);
-  dq_sel                        : out std_logic;
+  dq_sel                        : out std_logic_vector(1 downto 0);
   dq_OE                         : out std_logic;
   writedata_load                : out std_logic;
   addressgen_enable             : out std_logic;
@@ -41,12 +42,12 @@ port
   clear_dpd_status_n            : out std_logic;
   deadline_tim_enable           : out std_logic;
   deadline_tim_clear_n          : out std_logic;
-  h_RESET_n                     : out std_logic;
-  h_CS_n                        : out std_logic;	
+  hbus_RESET_n                  : out std_logic;
+  hbus_CS_n                     : out std_logic;	
   -- status signals
   write                         : in  std_logic;
   read                          : in  std_logic;
-  config_access                 : in  std_logic;
+  config                        : in  std_logic;
   dpd_req                       : in  std_logic;
   active_dpd_req                : in  std_logic;
   current_operation             : in  std_logic;
@@ -85,8 +86,8 @@ architecture fsm of avs_to_hram_converter_CU is
     writeconf_CA2, 
     writeconf0,
     writeconf1,
-    idle_init,
-    writeconf_end,
+    writeconf1_end,
+    writeconf0_end,
     wait_dpd_in,
     read_virtconf,
     readmem_prep,
@@ -125,7 +126,7 @@ architecture fsm of avs_to_hram_converter_CU is
       present_state,
       write,              
       read,               
-      config_access,      
+      config,      
       dpd_req,            
       active_dpd_req,     
       current_operation,  
@@ -166,7 +167,7 @@ architecture fsm of avs_to_hram_converter_CU is
         ----------------------------------------------
         when idle | read_virtconf =>
           if (read = '1') then
-            if (config_access = '1') then
+            if (config = '1') then
               next_state <= read_virtconf;
             else
               if (dpd_mode_on = '1') then
@@ -176,7 +177,7 @@ architecture fsm of avs_to_hram_converter_CU is
               end if;
             end if;
           elsif (write = '1') then
-            if (config_access = '1') then
+            if (config = '1') then
               if (dpd_mode_on = '1') then
                 if (dpd_req = '1') then
                   next_state <= idle;
@@ -234,15 +235,15 @@ architecture fsm of avs_to_hram_converter_CU is
           end if;
         ---------------------------------------------- 
         when writeconf0 =>
-          next_state <= writeconf_end;
+          next_state <= writeconf0_end;
         ----------------------------------------------
         when writeconf1 =>
-          next_state <= idle_init;
+          next_state <= writeconf1_end;
         ----------------------------------------------
-        when idle_init =>
+        when writeconf1_end =>
           next_state <= writeconf0_prep;
         ----------------------------------------------
-        when writeconf_end =>
+        when writeconf0_end =>
           if (active_dpd_req = '1') then
             next_state <= wait_dpd_in;
           else
@@ -355,9 +356,9 @@ architecture fsm of avs_to_hram_converter_CU is
 		end process next_state_evaluation; --------------------------------------------------------------------
 
 		-- state transition -----------------------------------------------------------------------------------
-		state_transition: process (clk, rst_n)
+		state_transition: process (clk, reset_n)
 		begin
-			if (rst_n = '0') then
+			if (reset_n = '0') then
 				present_state <= reset;
 			elsif (rising_edge(clk)) then
         present_state <= next_state;
@@ -368,93 +369,318 @@ architecture fsm of avs_to_hram_converter_CU is
 		control_signals_definition: process (present_state)
 		begin
 			-- default values ------------------------------
-      
+      waitrequest                 <= '0';
+      force_valid                 <= '0';
+      cmd_load                    <= '0';
+      dpd_req_clear_n             <= '1';
+      synch_cnt_enable            <= '0';
+      synch_cnt_down              <= '0';
+      synch_cnt_clear_n           <= '1';
+      datain_load                 <= '0';
+      avs_out_sel                 <= '0';
+      reset_config_register_n     <= '0';
+      update_config_register      <= '0';
+      address_space_sel           <= "00";
+      config_access               <= '0';
+      read_writeN                 <= '0';
+      CA_load                     <= '0';
+      CA_sel                      <= "00";
+      dq_sel                      <= "00";
+      dq_OE                       <= '0';
+      writedata_load              <= '0';
+      addressgen_enable           <= '0';
+      synch_enable                <= '0';
+      synch_clear_n               <= '1';
+      RWDS_sampling_enable        <= '0';  
+      init_clear_n                <= '1';
+      set_initialization_state    <= '0';
+      check_latency	              <= '0';
+      force_RWDS_low              <= '0';
+      CK_gating_enable_n          <= '1';
+      set_dpd_status              <= '0';
+      clear_dpd_status_n          <= '1';
+      deadline_tim_enable         <= '0';
+      deadline_tim_clear_n        <= '1';
+      hbus_RESET_n                <= '1';
+      hbus_CS_n                   <= '1';	
 			------------------------------------------------
 			case present_state is
 				----------------------------------------------
 				when reset =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
+          hbus_RESET_n                <= '0';
+          deadline_tim_clear_n        <= '0';
+          clear_dpd_status_n          <= '0';
+          synch_clear_n               <= '0';
+          writedata_load              <= '1';
+          dpd_req_clear_n             <= '0';
+          reset_config_register_n     <= '0';
         ----------------------------------------------
         when reset_wait =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
+          deadline_tim_enable         <= '1';
+          hbus_RESET_n                <= '0';
         ----------------------------------------------
         when reset_exit_begin =>
+          waitrequest                 <= '1';                      
+          CK_gating_enable_n          <= '0';
+          deadline_tim_clear_n        <= '0';
         ----------------------------------------------
         when reset_exit =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
+          deadline_tim_enable         <= '1';
         ----------------------------------------------
         when idle =>
+          CK_gating_enable_n          <= '0';
+          deadline_tim_clear_n        <= '0';
+          cmd_load                    <= '1';
+          datain_load                 <= '1';
         ----------------------------------------------
         when dummycmd =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          deadline_tim_enable         <= '1';
         ----------------------------------------------
         when dummycmd_end =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          CK_gating_enable_n          <= '0';
+          deadline_tim_clear_n        <= '0';
         ----------------------------------------------
         when wait_dpd_out =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
+          deadline_tim_enable         <= '1';
         ----------------------------------------------
         when write_virtconf =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
+          clear_dpd_status_n          <= '0';
+          update_config_register      <= '1';
         ----------------------------------------------
         when writeconf0_prep =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          CK_gating_enable_n          <= '0';
+          CA_load                     <= '1';
+          config_access               <= '1';
+          address_space_sel           <= "01";
         ----------------------------------------------
         when writeconf1_prep =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          CK_gating_enable_n          <= '0';
+          CA_load                     <= '1';
+          config_access               <= '1';
+          address_space_sel           <= "10";
+          set_initialization_state    <= '1';
         ----------------------------------------------
         when writeconf_CA0 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          dq_sel                      <= "11";
+          writedata_load              <= '1';
+          CA_sel                      <= "00";
         ----------------------------------------------
         when writeconf_CA1 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          dq_OE                       <= '1';
+          dq_sel                      <= "11";
+          writedata_load              <= '1';
+          CA_sel                      <= "01";
         ----------------------------------------------
         when writeconf_CA2 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          dq_OE                       <= '1';
+          dq_sel                      <= "11";
+          writedata_load              <= '1';
+          CA_sel                      <= "10";
         ---------------------------------------------- 
         when writeconf0 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          writedata_load              <= '1';
+          dq_OE                       <= '1';
+          dq_sel                      <= "01";
         ----------------------------------------------
         when writeconf1 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          writedata_load              <= '1';
+          dq_OE                       <= '1';
+          CK_gating_enable_n          <= '0';
+          dq_sel                      <= "10";
         ----------------------------------------------
-        when idle_init =>
+        when writeconf1_end =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
+          init_clear_n                <= '0';
+          dq_OE                       <= '1';
         ----------------------------------------------
-        when writeconf_end =>
+        when writeconf0_end =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          dq_OE                       <= '1';
+          CK_gating_enable_n          <= '0';
         ----------------------------------------------
         when wait_dpd_in =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
+          deadline_tim_enable         <= '1';
+          set_dpd_status              <= '1';
         ----------------------------------------------
         when read_virtconf =>
+          CK_gating_enable_n          <= '0';
+          avs_out_sel                 <= '1';
+          force_valid                 <= '1';
+          cmd_load                    <= '1';
+          datain_load                 <= '1';
         ----------------------------------------------
         when readmem_prep =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          CK_gating_enable_n          <= '0';
+          CA_load                     <= '1';
+          address_space_sel           <= "00";
+          read_writeN                 <= '1';
         ----------------------------------------------
         when writemem_prep =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          CK_gating_enable_n          <= '0';
+          CA_load                     <= '1';
+          address_space_sel           <= "00";
+          synch_cnt_enable            <= '1';
         ----------------------------------------------
         when CA_0 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          dq_sel                      <= "11";
+          writedata_load              <= '1';
+          CA_sel                      <= "00";
+          synch_cnt_enable            <= '1';
         ----------------------------------------------
         when CA_1 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          dq_OE                       <= '1';
+          dq_sel                      <= "11";
+          writedata_load              <= '1';
+          CA_sel                      <= "01";
         ----------------------------------------------
         when CA_2 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          dq_OE                       <= '1';
+          dq_sel                      <= "11";
+          writedata_load              <= '1';
+          CA_sel                      <= "10";
+          deadline_tim_enable         <= '1';
+          check_latency               <= '1';
         ----------------------------------------------
         when CA_end =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          dq_OE                       <= '1';
+          deadline_tim_enable         <= '1';
         ----------------------------------------------
         when read_wait_1 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          RWDS_sampling_enable        <= '1';
+          synch_enable                <= '1';
         ----------------------------------------------
         when read_wait_2 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          RWDS_sampling_enable        <= '1';
+          synch_enable                <= '1';
         ----------------------------------------------
         when read_end =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          CK_gating_enable_n          <= '0';
         ----------------------------------------------
         when synch_restoring_1 =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
+          synch_clear_n               <= '0';
         ----------------------------------------------
         when synch_restoring_2 =>
+          waitrequest                 <= '1';
+          CK_gating_enable_n          <= '0';
         ----------------------------------------------
         when writemem_wait =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          deadline_tim_enable         <= '1';
         ----------------------------------------------
         when writemem =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          writedata_load              <= '1';
+          dq_sel                      <= "00";
         ----------------------------------------------
         when write_end =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          CK_gating_enable_n          <= '0';
+          force_RWDS_low              <= '1';
+          synch_cnt_clear_n           <= '0';
+          deadline_tim_clear_n        <= '0';
+          dq_OE                       <= '1';
         ----------------------------------------------
         when writeburst_prep =>
+          hbus_CS_n                   <= '0';
+          writedata_load              <= '1';
+          dq_sel                      <= "00";
+          datain_load                 <= '1';
+          synch_cnt_enable            <= '1';
         ----------------------------------------------
         when writeburst =>
+          hbus_CS_n                   <= '0';
+          writedata_load              <= '1';
+          dq_sel                      <= "00";
+          dq_OE                       <= '1';
+          datain_load                 <= '1';
+          synch_cnt_enable            <= '1';
+          force_RWDS_low              <= '1';
         ----------------------------------------------
         when writeburst_last =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          writedata_load              <= '1';
+          dq_sel                      <= "00";
+          dq_OE                       <= '1';
+          force_RWDS_low              <= '1';
         ----------------------------------------------
         when stop_burst =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          writedata_load              <= '1';
+          CK_gating_enable_n          <= '0';
+          synch_cnt_enable            <= '1';
+          synch_cnt_down              <= '1';
+          addressgen_enable           <= '1';
+          force_RWDS_low              <= '1';
         ----------------------------------------------
         when idle_burst =>
+          CK_gating_enable_n          <= '0';
+          deadline_tim_clear_n        <= '0';
+          datain_load                 <= '1';
         ----------------------------------------------
         when restore_burst =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          CK_gating_enable_n          <= '0';
+          CA_load                     <= '1';
+          address_space_sel           <= "11";
         ----------------------------------------------
-				when others =>
-					next_state <= reset;
-				----------------------------------------------
 			end case;
 		end process control_signals_definition; ---------------------------------------------------------------
 

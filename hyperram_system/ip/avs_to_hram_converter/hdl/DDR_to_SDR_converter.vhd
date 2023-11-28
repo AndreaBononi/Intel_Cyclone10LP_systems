@@ -76,7 +76,7 @@ architecture rtl of DDR_to_SDR_converter is
     ); -----------------------------------------------------------------------------------------------------
 
     -- positive-edge triggered register containing the msb -------------------------------------------------
-    lsb: reg 
+    msb: reg 
     generic map
     (
       N => 8

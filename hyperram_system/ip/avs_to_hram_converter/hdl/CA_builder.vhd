@@ -28,6 +28,9 @@ architecture rtl of CA_builder is
 
 	begin
 
+    up_address <= address(21 downto 3);
+    low_address <= address(2 downto 0);
+
     CA0A(7)           <= read_writeN;
     CA0A(6)           <= config_access;
     CA0A(5 downto 0)  <= "000000";

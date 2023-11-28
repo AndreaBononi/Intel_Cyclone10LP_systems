@@ -86,7 +86,7 @@ architecture rtl of SDR_to_DDR_converter is
       din_0   => outmux_in0, 
       din_1   => outmux_in1, 
       sel     => clk, 
-      dout    => DDR_out_out
+      dout    => DDR_out
     ); --------------------------------------------------------------------------------------------------
 
 end rtl;

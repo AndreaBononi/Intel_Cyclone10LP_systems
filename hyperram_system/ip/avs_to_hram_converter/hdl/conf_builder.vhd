@@ -26,11 +26,11 @@ architecture rtl of conf_builder is
 	begin
 
   -- configuration register 0 -------------------------------------------------
-  conf0_real(15)						<= not(virtual_config_out(0));
+  conf0_real(15)						<= not(conf_virtual(0));
 	conf0_real(14 downto 12)	<= drive_strength;
 	conf0_real(11 downto 8)		<= "1111";
 	conf0_real(7 downto 4) 		<= initial_latency;
-	conf0_real(3)							<= not(virtual_config_out(1));
+	conf0_real(3)							<= not(conf_virtual(1));
 	conf0_real(2) 						<= hybrid_burst_enable;
 	conf0_real(1 downto 0) 		<= burst_lenght;
   -----------------------------------------------------------------------------

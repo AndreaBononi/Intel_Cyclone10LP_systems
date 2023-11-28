@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Nov 23 17:13:07 2023
+Analysis & Synthesis Status : Successful - Tue Nov 28 13:09:25 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : avs_to_hram_converter
-Top-level Entity Name : synchronizer
+Top-level Entity Name : avs_to_hram_converter
 Family : Cyclone 10 LP
-Total logic elements : 167
-    Total combinational functions : 90
-    Dedicated logic registers : 131
-Total registers : 131
-Total pins : 64
-Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge

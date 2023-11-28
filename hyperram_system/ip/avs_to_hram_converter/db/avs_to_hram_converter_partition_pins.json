@@ -4,119 +4,119 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "synch_validout",
+					"name" : "avs_readdata[0]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_busy",
+					"name" : "avs_readdata[1]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[0]",
+					"name" : "avs_readdata[2]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[1]",
+					"name" : "avs_readdata[3]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[2]",
+					"name" : "avs_readdata[4]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[3]",
+					"name" : "avs_readdata[5]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[4]",
+					"name" : "avs_readdata[6]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[5]",
+					"name" : "avs_readdata[7]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[6]",
+					"name" : "avs_readdata[8]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[7]",
+					"name" : "avs_readdata[9]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[8]",
+					"name" : "avs_readdata[10]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[9]",
+					"name" : "avs_readdata[11]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[10]",
+					"name" : "avs_readdata[12]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[11]",
+					"name" : "avs_readdata[13]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[12]",
+					"name" : "avs_readdata[14]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[13]",
+					"name" : "avs_readdata[15]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[14]",
+					"name" : "avs_waitrequest",
 					"strict" : false
 				},
 				{
-					"name" : "synch_dout[15]",
+					"name" : "avs_readdatavalid",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[0]",
+					"name" : "hram_RESET_n",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[1]",
+					"name" : "hram_CS_n",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[2]",
+					"name" : "hram_DQ[0]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[3]",
+					"name" : "hram_DQ[1]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[4]",
+					"name" : "hram_DQ[2]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[5]",
+					"name" : "hram_DQ[3]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[6]",
+					"name" : "hram_DQ[4]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[7]",
+					"name" : "hram_DQ[5]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[8]",
+					"name" : "hram_DQ[6]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[9]",
+					"name" : "hram_DQ[7]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_out[10]",
+					"name" : "hram_RWDS",
 					"strict" : false
 				},
 				{
@@ -124,139 +124,255 @@
 					"strict" : false
 				},
 				{
-					"name" : "counter_up_downN",
+					"name" : "avs_read",
 					"strict" : false
 				},
 				{
-					"name" : "counter_clear_n",
+					"name" : "avs_address[0]",
 					"strict" : false
 				},
 				{
-					"name" : "counter_enable",
+					"name" : "avs_address[1]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_clear_n",
+					"name" : "avs_address[2]",
 					"strict" : false
 				},
 				{
-					"name" : "rst_n",
+					"name" : "avs_address[3]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_enable",
+					"name" : "avs_address[4]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[0]",
+					"name" : "avs_address[5]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_strobe",
+					"name" : "avs_address[6]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[1]",
+					"name" : "avs_address[7]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[2]",
+					"name" : "avs_address[8]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[3]",
+					"name" : "avs_address[9]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[4]",
+					"name" : "avs_address[10]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[5]",
+					"name" : "avs_address[11]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[6]",
+					"name" : "avs_address[14]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[7]",
+					"name" : "avs_address[15]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[8]",
+					"name" : "avs_address[12]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[9]",
+					"name" : "avs_address[13]",
 					"strict" : false
 				},
 				{
-					"name" : "burstcount[10]",
+					"name" : "avs_address[16]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[0]",
+					"name" : "avs_address[17]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[1]",
+					"name" : "avs_address[18]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[2]",
+					"name" : "avs_address[19]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[3]",
+					"name" : "avs_address[22]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[4]",
+					"name" : "avs_address[20]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[5]",
+					"name" : "avs_address[21]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[6]",
+					"name" : "avs_address[23]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[7]",
+					"name" : "avs_address[24]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[8]",
+					"name" : "avs_address[25]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[9]",
+					"name" : "avs_address[26]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[10]",
+					"name" : "avs_address[27]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[11]",
+					"name" : "avs_address[28]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[12]",
+					"name" : "avs_address[29]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[13]",
+					"name" : "avs_address[30]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[14]",
+					"name" : "avs_address[31]",
 					"strict" : false
 				},
 				{
-					"name" : "synch_din[15]",
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "avs_write",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_beginbursttransfer",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[10]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[9]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[8]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[7]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[6]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[5]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[4]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[3]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[0]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[2]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[1]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_writedata[7]",
 					"strict" : false
 				}
 			]

@@ -26,7 +26,7 @@ port
 	avs_waitrequest               : out   std_logic;
 	avs_readdatavalid             : out   std_logic;
 	avs_beginbursttransfer        : in    std_logic;
-	avs_burstcount                : in    std_logic;
+	avs_burstcount                : in    std_logic_vector(10 downto 0);
 	-- hram signals 	
 	hram_RESET_n                  : out   std_logic;
 	hram_CK                       : out   std_logic;
@@ -35,6 +35,7 @@ port
 	hram_CS_n                     : out   std_logic;
   -- control signals
   waitrequest                   : in    std_logic;
+  force_valid                   : in    std_logic;
   cmd_load                      : in    std_logic;
   dpd_req_clear_n               : in    std_logic;
   synch_cnt_enable              : in    std_logic;
@@ -42,14 +43,14 @@ port
   synch_cnt_clear_n             : in    std_logic;
   datain_load                   : in    std_logic;
   avs_out_sel                   : in    std_logic;
-  reset_config_register         : in    std_logic;
+  reset_config_register_n       : in    std_logic;
   update_config_register        : in    std_logic;
-  address_space_sel             : in    std_logic;
+  address_space_sel             : in    std_logic_vector(1 downto 0);
   config_access                 : in    std_logic;
   read_writeN                   : in    std_logic;
   CA_load                       : in    std_logic;
   CA_sel                        : in    std_logic_vector(1 downto 0);
-  dq_sel                        : in    std_logic;
+  dq_sel                        : in    std_logic_vector(1 downto 0);
   dq_OE                         : in    std_logic;
   writedata_load                : in    std_logic;
   addressgen_enable             : in    std_logic;
@@ -65,12 +66,12 @@ port
   clear_dpd_status_n            : in    std_logic;
   deadline_tim_enable           : in    std_logic;
   deadline_tim_clear_n          : in    std_logic;
-  h_RESET_n                     : in    std_logic;
-  h_CS_n                        : in    std_logic;	
+  hbus_RESET_n                  : in    std_logic;
+  hbus_CS_n                     : in    std_logic;	
   -- status signals
   write                         : out   std_logic;
   read                          : out   std_logic;
-  config_access                 : out   std_logic;
+  config                        : out   std_logic;
   dpd_req                       : out   std_logic;
   active_dpd_req                : out   std_logic;
   current_operation             : out   std_logic;
@@ -345,6 +346,7 @@ architecture rtl of avs_to_hram_converter_EU is
   signal synch_cnt_up_downN : std_logic;
   signal fakeburst          : std_logic;
   signal burst_tracker_out  : std_logic;
+  signal synch_validout     : std_logic;
   signal conf_reg_out       : std_logic_vector(1 downto 0);
   signal burstcnt_reg_out   : std_logic_vector(10 downto 0);
   signal addr_reg_out       : std_logic_vector(31 downto 0);
@@ -353,37 +355,40 @@ architecture rtl of avs_to_hram_converter_EU is
   signal conf1_real         : std_logic_vector(15 downto 0);
   signal dq_mux_out         : std_logic_vector(15 downto 0);
   signal CA_unpacked        : std_logic_vector(15 downto 0);
-  signal addressgen_out     : std_logic_vector(31 downto 0);
+  signal addressgen_out     : std_logic_vector(21 downto 0);
+  signal generated_address  : std_logic_vector(31 downto 0);
   signal effective_address  : std_logic_vector(31 downto 0);
   signal CA                 : std_logic_vector(47 downto 0);
-  signal dq_buffer_out      : std_logic_vector(31 downto 0);
   signal readdata_SDR       : std_logic_vector(15 downto 0);
   signal synch_dout         : std_logic_vector(15 downto 0);
   signal synch_cnt_out      : std_logic_vector(10 downto 0);
-  signal readdata_mux_din0  : std_logic_vector(15 downto 0);
+  signal readdatamux_din0   : std_logic_vector(15 downto 0);
   signal cntpipe1_out       : std_logic_vector(10 downto 0);
   signal cntpipe2_out       : std_logic_vector(10 downto 0);
   signal cntpipe3_out       : std_logic_vector(10 downto 0);
+	signal dataa							: std_logic_vector(21 downto 0);
+	signal writedata_conv_out : std_logic_vector(7 downto 0);
+	signal RWDS_buffer_out		: std_logic_vector(0 downto 0);
   ------------------------------------------------------------------------------------------------------------------- 
 
 	begin
 
-    hram_CS_n <= h_CS_n;
-    hram_RESET_n <= h_RESET_n;
+    hram_CS_n <= hbus_CS_n;
+    hram_RESET_n <= hbus_RESET_n;
     avs_waitrequest <= waitrequest;
     read <= avs_read;
     write <= avs_write;
     dpd_req <= avs_writedata(0);
 
     -- virtual configuration register access -----------------------------------------------------------------------    
-    config_access <=  avs_address(31)       nor avs_address(30)         nor avs_address(29)   nor avs_address(28)
-                      nor avs_address(27)   nor avs_address(26)         nor avs_address(25)   nor avs_address(24)
-                      nor avs_address(23)   nor (not avs_address(22))   nor avs_address(21)   nor avs_address(20)
-                      nor avs_address(19)   nor avs_address(18)         nor avs_address(17)   nor avs_address(16)
-                      nor avs_address(15)   nor avs_address(14)         nor avs_address(13)   nor avs_address(12)
-                      nor avs_address(11)   nor avs_address(10)         nor avs_address(9)    nor avs_address(8)
-                      nor avs_address(7)    nor avs_address(6)          nor avs_address(5)    nor avs_address(4)
-                      nor avs_address(3)    nor avs_address(2)          nor avs_address(1)    nor avs_address(0);
+    config <=       (not avs_address(31))   and (not avs_address(30))   and (not avs_address(29))   and (not avs_address(28))
+                and (not avs_address(27))   and (not avs_address(26))   and (not avs_address(25))   and (not avs_address(24))
+                and (not avs_address(23))   and (    avs_address(22))   and (not avs_address(21))   and (not avs_address(20))
+                and (not avs_address(19))   and (not avs_address(18))   and (not avs_address(17))   and (not avs_address(16))
+                and (not avs_address(15))   and (not avs_address(14))   and (not avs_address(13))   and (not avs_address(12))
+                and (not avs_address(11))   and (not avs_address(10))   and (not avs_address(9 ))   and (not avs_address(8 ))
+                and (not avs_address(7 ))   and (not avs_address(6 ))   and (not avs_address(5 ))   and (not avs_address(4 ))
+                and (not avs_address(3 ))   and (not avs_address(2 ))   and (not avs_address(1 ))   and (not avs_address(0 ));
     ----------------------------------------------------------------------------------------------------------------
 
     -- address register --------------------------------------------------------------------------------------------
@@ -444,7 +449,7 @@ architecture rtl of avs_to_hram_converter_EU is
     (
       clk				=> clk, 
       enable		=> update_config_register, 
-      clear_n		=> reset_config_register, 
+      clear_n		=> reset_config_register_n, 
       reset_n		=> '1',	
       din				=> datain_reg_out(1 downto 0), 
       dout			=> conf_reg_out
@@ -472,7 +477,7 @@ architecture rtl of avs_to_hram_converter_EU is
     generic map
     (
       N => 16
-    );
+    )
     port map
     (
       din_00		=> datain_reg_out,
@@ -487,14 +492,14 @@ architecture rtl of avs_to_hram_converter_EU is
     address_mux : mux_4to1
     generic map
     (
-      N => 16
-    );
+      N => 32
+    )
     port map
     (
       din_00		=> addr_reg_out,
       din_01		=> config0_addr,
       din_10		=> config1_addr,
-      din_11		=> addressgen_out,
+      din_11		=> generated_address,
       sel				=> address_space_sel,
       dout			=> effective_address
     ); --------------------------------------------------------------------------------------------------------------
@@ -524,23 +529,23 @@ architecture rtl of avs_to_hram_converter_EU is
     dq_buffer : tristate_buffer
     generic map
     (
-      N => 16
-    );
+      N => 8
+    )
     port map
     (
       enable		=> dq_OE,
-      din   		=> dq_mux_out
-      dout  		=> dq_buffer_out
+      din   		=> writedata_conv_out,
+      dout  		=> hram_DQ
     ); --------------------------------------------------------------------------------------------------------------
 
     -- writedata converter (SDR to DDR) -----------------------------------------------------------------------------
-    qritedata_converter : SDR_to_DDR_converter
+    writedata_converter : SDR_to_DDR_converter
     port map
     (
       clk       => clk,
       load  		=> writedata_load,
-      SDR_in 		=> dq_buffer_out,
-      DDR_out	  => hram_DQ
+      SDR_in 		=> dq_mux_out,
+      DDR_out	  => writedata_conv_out
     ); --------------------------------------------------------------------------------------------------------------
 
     -- clock gater --------------------------------------------------------------------------------------------------
@@ -566,13 +571,15 @@ architecture rtl of avs_to_hram_converter_EU is
     generic map
     (
       N => 1
-    );
+    )
     port map
     (
       enable		=> force_RWDS_low,
-      din   		=> '0',
-      dout  		=> hram_RWDS
+      din   		=> (others => '0'),
+      dout  		=> RWDS_buffer_out
     ); --------------------------------------------------------------------------------------------------------------
+		
+		hram_RWDS <= RWDS_buffer_out(0);
 
     -- RWDS tracker -------------------------------------------------------------------------------------------------
     rwds_tracker : d_flipflop
@@ -608,7 +615,7 @@ architecture rtl of avs_to_hram_converter_EU is
     readdata_converter : DDR_to_SDR_converter
     port map
     (
-      clk       => clk,
+      clk       => rwds90,
       enable		=> RWDS_sampling_enable,
       DDR_in		=> hram_DQ,
       SDR_out		=> readdata_SDR
@@ -625,7 +632,7 @@ architecture rtl of avs_to_hram_converter_EU is
       synch_enable        => synch_enable,
       synch_clear_n       => synch_clear_n,
       synch_strobe        => rwds360,
-      synch_validout      => avs_readdatavalid
+      synch_validout      => synch_validout,
       synch_busy          => synch_busy,
       synch_din           => readdata_SDR,
       synch_dout          => synch_dout,
@@ -636,19 +643,21 @@ architecture rtl of avs_to_hram_converter_EU is
       counter_out			    => synch_cnt_out
     ); --------------------------------------------------------------------------------------------------------------
 
-    readdata_mux_din0(1 downto 0) <= conf_reg_out;
-    readdata_mux_din0(15 downto 2) <= (others => '0');
+    avs_readdatavalid <= synch_validout or force_valid;
+
+    readdatamux_din0(1 downto 0) <= conf_reg_out;
+    readdatamux_din0(15 downto 2) <= (others => '0');
 
     -- readdata selection -------------------------------------------------------------------------------------------
-    readdata_mux : mux_2to1
+    readdatamux : mux_2to1
     generic map
     (
       N => 16
-    );
+    )
     port map
     (
       din_0		=> synch_dout,
-      din_1		=> readdata_mux_din0,
+      din_1		=> readdatamux_din0,
       sel			=> avs_out_sel,
       dout		=> avs_readdata
     ); --------------------------------------------------------------------------------------------------------------
@@ -700,24 +709,30 @@ architecture rtl of avs_to_hram_converter_EU is
       din				=> cntpipe2_out, 
       dout			=> cntpipe3_out
     ); -------------------------------------------------------------------------------------------------------------
+		
+		dataa(10 downto 0) <= cntpipe3_out;
+		dataa(21 downto 11) <= (others => '0');
 
     -- address generator for burst recovery ------------------------------------------------------------------------
     addressgen : adder_22bit_1pipe
-    port
+    port map
     (
       clken		=> addressgen_enable,
       clock		=> clk,
-      dataa		=> cntpipe3_out,
+      dataa		=> dataa,
       datab		=> addr_reg_out(21 downto 0),
       result	=> addressgen_out
     ); -------------------------------------------------------------------------------------------------------------
+
+    generated_address(21 downto 0) <= addressgen_out;
+    generated_address(31 downto 22) <= (others => '0');
 
     -- burst lenght comparator -------------------------------------------------------------------------------------
     burst_cmp : comparator_Nbit
     generic map
     (
       N => 11
-    );
+    )
     port map
     (
       din_0		=> burstcnt_reg_out,
@@ -730,7 +745,7 @@ architecture rtl of avs_to_hram_converter_EU is
     generic map
     (
       N => 11
-    );
+    )
     port map
     (
       din_0		=> burstcnt_reg_out,
@@ -765,7 +780,7 @@ architecture rtl of avs_to_hram_converter_EU is
     ); --------------------------------------------------------------------------------------------------------------
 
     -- operation type tracker ---------------------------------------------------------------------------------------
-    burst_tracker : d_flipflop
+    op_tracker : d_flipflop
     port map
     (
       clk				=> clk,

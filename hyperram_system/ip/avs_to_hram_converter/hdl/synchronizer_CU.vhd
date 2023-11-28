@@ -121,50 +121,50 @@ architecture fsm of synchronizer_CU is
 		control_signals_definition: process (present_state)
 		begin
 			-- default values ----------------------------
-      system_clear_n <= '1';
-      system_enable <= '0';
-      burstlen_enable <= '0';
-      burstlen_counter_enable <= '0';
-      outreg_enable <= '0';
-      data_counter_enable <= '0';
-      busy <= '0';
-      validout <= '0';
-			outpipe_enable <= '0';
-			outpipe_clear_n <= '1';
+      system_clear_n            <= '1';
+      system_enable             <= '0';
+      burstlen_enable           <= '0';
+      burstlen_counter_enable   <= '0';
+      outreg_enable             <= '0';
+      data_counter_enable       <= '0';
+      busy                      <= '0';
+      validout                  <= '0';
+			outpipe_enable            <= '0';
+			outpipe_clear_n           <= '1';
 			----------------------------------------------
 			case present_state is
 				--------------------------------------------
         when reset =>
-          system_clear_n <= '0';
-					outpipe_clear_n <= '0';
+          system_clear_n    <= '0';
+					outpipe_clear_n   <= '0';
         --------------------------------------------
         when idle =>
-          system_enable <= '1';
-          burstlen_enable <= '1';
-          outpipe_enable <= '1';
+          system_enable     <= '1';
+          burstlen_enable   <= '1';
+          outpipe_enable    <= '1';
         --------------------------------------------
         when idle_disabled =>
         --------------------------------------------
         when reception_init =>
-          busy <= '1';
-          system_enable <= '1';
-					outpipe_enable <= '1';
-          outreg_enable <= '1';
-          data_counter_enable <= '1';
-          burstlen_counter_enable <= '1';
+          busy                      <= '1';
+          system_enable             <= '1';
+					outpipe_enable            <= '1';
+          outreg_enable             <= '1';
+          data_counter_enable       <= '1';
+          burstlen_counter_enable   <= '1';
         --------------------------------------------
         when reception =>
-          busy <= '1';
-          system_enable <= '1';
-					outpipe_enable <= '1';
-          outreg_enable <= '1';
-          data_counter_enable <= '1';
-          burstlen_counter_enable <= '1';
-          validout <= '1';
+          busy                      <= '1';
+          system_enable             <= '1';
+					outpipe_enable            <= '1';
+          outreg_enable             <= '1';
+          data_counter_enable       <= '1';
+          burstlen_counter_enable   <= '1';
+          validout                  <= '1';
         --------------------------------------------
         when idle_clear =>
-          system_clear_n <= '0';
-					outpipe_enable <= '1';
+          system_clear_n  <= '0';
+					outpipe_enable  <= '1';
         --------------------------------------------
 			end case;
 		end process control_signals_definition; ---------------------------------------------------------------
