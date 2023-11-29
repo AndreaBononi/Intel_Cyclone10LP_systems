@@ -102,7 +102,7 @@ clk => reg:addr_reg.clk
 clk => reg:burstcnt_reg.clk
 clk => reg:datain_reg.clk
 clk => reg:conf_reg.clk
-clk => CA_unpacker:CA_unpacked_inst.clk
+clk => CA_unpacker:CA_unpacker_inst.clk
 clk => SDR_to_DDR_converter:writedata_converter.clk
 clk => dll_90:clk_shifter.inclk0
 clk => d_flipflop:rwds_tracker.clk
@@ -235,7 +235,7 @@ avs_burstcount[8] => reg:burstcnt_reg.din[8]
 avs_burstcount[9] => reg:burstcnt_reg.din[9]
 avs_burstcount[10] => reg:burstcnt_reg.din[10]
 hram_RESET_n <= hbus_RESET_n.DB_MAX_OUTPUT_PORT_TYPE
-hram_CK <= clk_gater:clk_gater_inst.gated_clock
+hram_CK <= clk_gater:clk_gater_inst.outclk
 hram_DQ[0] <> hram_DQ[0]
 hram_DQ[1] <> hram_DQ[1]
 hram_DQ[2] <> hram_DQ[2]
@@ -265,9 +265,9 @@ address_space_sel[0] => mux_4to1:address_mux.sel[0]
 address_space_sel[1] => mux_4to1:address_mux.sel[1]
 config_access => CA_builder:CA_builder_inst.config_access
 read_writeN => CA_builder:CA_builder_inst.read_writeN
-CA_load => CA_unpacker:CA_unpacked_inst.load
-CA_sel[0] => CA_unpacker:CA_unpacked_inst.sel[0]
-CA_sel[1] => CA_unpacker:CA_unpacked_inst.sel[1]
+CA_load => CA_unpacker:CA_unpacker_inst.load
+CA_sel[0] => CA_unpacker:CA_unpacker_inst.sel[0]
+CA_sel[1] => CA_unpacker:CA_unpacker_inst.sel[1]
 dq_sel[0] => mux_4to1:dq_mux.sel[0]
 dq_sel[1] => mux_4to1:dq_mux.sel[1]
 dq_OE => tristate_buffer:dq_buffer.enable
@@ -281,7 +281,7 @@ init_clear_n => sr_flipflop:init_tracker.clear_n
 set_initialization_state => sr_flipflop:init_tracker.set
 check_latency => d_flipflop:rwds_tracker.enable
 force_RWDS_low => tristate_buffer:RWDS_buffer.enable
-CK_gating_enable_n => clk_gater:clk_gater_inst.enable_n
+CK_gating_enable_n => clk_gater:clk_gater_inst.ena
 set_dpd_status => sr_flipflop:dpd_tracker.set
 clear_dpd_status_n => sr_flipflop:dpd_tracker.clear_n
 deadline_tim_enable => timer_14bit:deadline_timer.enable
@@ -1149,7 +1149,7 @@ CA[46] <= config_access.DB_MAX_OUTPUT_PORT_TYPE
 CA[47] <= read_writeN.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacked_inst
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst
 clk => reg:CA0.clk
 clk => reg:CA1.clk
 clk => reg:CA2.clk
@@ -1224,7 +1224,7 @@ CA_unpacked[14] <= mux_4to1:CA_mux.dout[14]
 CA_unpacked[15] <= mux_4to1:CA_mux.dout[15]
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacked_inst|reg:CA0
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA0
 clk => dout[0]~reg0.CLK
 clk => dout[1]~reg0.CLK
 clk => dout[2]~reg0.CLK
@@ -1323,7 +1323,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacked_inst|reg:CA1
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA1
 clk => dout[0]~reg0.CLK
 clk => dout[1]~reg0.CLK
 clk => dout[2]~reg0.CLK
@@ -1422,7 +1422,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacked_inst|reg:CA2
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA2
 clk => dout[0]~reg0.CLK
 clk => dout[1]~reg0.CLK
 clk => dout[2]~reg0.CLK
@@ -1521,7 +1521,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacked_inst|mux_4to1:CA_mux
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|mux_4to1:CA_mux
 din_00[0] => Mux15.IN0
 din_00[1] => Mux14.IN0
 din_00[2] => Mux13.IN0
@@ -1827,22 +1827,6 @@ dout[6] <= dout.DB_MAX_OUTPUT_PORT_TYPE
 dout[7] <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|clk_gater:clk_gater_inst
-clkin => gated_clock.IN1
-clkin => d_flipflop:antiglitch.clk
-enable_n => d_flipflop:antiglitch.din
-gated_clock <= gated_clock.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|clk_gater:clk_gater_inst|d_flipflop:antiglitch
-clk => dout~reg0.CLK
-enable => dout.OUTPUTSELECT
-clear_n => dout.OUTPUTSELECT
-reset_n => dout~reg0.ACLR
-din => dout.DATAB
-dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |avs_to_hram_converter|avs_to_hram_converter_EU:EU|dll_90:clk_shifter
 areset => altpll:altpll_component.areset
 inclk0 => altpll:altpll_component.inclk[0]
@@ -1918,6 +1902,27 @@ clk[3] <= pll1.CLK3
 clk[4] <= pll1.CLK4
 inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
+
+
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|clk_gater:clk_gater_inst
+inclk => clk_gater_altclkctrl_0:altclkctrl_0.inclk
+ena => clk_gater_altclkctrl_0:altclkctrl_0.ena
+outclk <= clk_gater_altclkctrl_0:altclkctrl_0.outclk
+
+
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|clk_gater:clk_gater_inst|clk_gater_altclkctrl_0:altclkctrl_0
+ena => clk_gater_altclkctrl_0_sub:clk_gater_altclkctrl_0_sub_component.ena
+inclk => clk_gater_altclkctrl_0_sub:clk_gater_altclkctrl_0_sub_component.inclk[0]
+outclk <= clk_gater_altclkctrl_0_sub:clk_gater_altclkctrl_0_sub_component.outclk
+
+
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|clk_gater:clk_gater_inst|clk_gater_altclkctrl_0:altclkctrl_0|clk_gater_altclkctrl_0_sub:clk_gater_altclkctrl_0_sub_component
+ena => clkctrl1.ENA
+inclk[0] => clkctrl1.INCLK
+inclk[1] => clkctrl1.INCLK1
+inclk[2] => clkctrl1.INCLK2
+inclk[3] => clkctrl1.INCLK3
+outclk <= clkctrl1.CLK
 
 
 |avs_to_hram_converter|avs_to_hram_converter_EU:EU|tristate_buffer:RWDS_buffer
@@ -2169,76 +2174,76 @@ synch_clear_n => clear_n.DATAIN
 synch_strobe => counter_Nbit:code_counter.clk
 synch_strobe => sr_flipflop:synchronizer.clk
 synch_strobe => reg:din11.clk
-synch_strobe => reg:readdata10.clk
-synch_strobe => reg:readdata01.clk
-synch_strobe => reg:readdata00.clk
+synch_strobe => reg:din10.clk
+synch_strobe => reg:din01.clk
+synch_strobe => reg:din00.clk
 synch_strobe => reg:burstlen.clk
 synch_validout <= d_flipflop:valid_pipe.dout
 synch_busy <= d_flipflop:busy_pipe.dout
 synch_din[0] => reg:din11.din[0]
-synch_din[0] => reg:readdata10.din[0]
-synch_din[0] => reg:readdata01.din[0]
-synch_din[0] => reg:readdata00.din[0]
+synch_din[0] => reg:din10.din[0]
+synch_din[0] => reg:din01.din[0]
+synch_din[0] => reg:din00.din[0]
 synch_din[1] => reg:din11.din[1]
-synch_din[1] => reg:readdata10.din[1]
-synch_din[1] => reg:readdata01.din[1]
-synch_din[1] => reg:readdata00.din[1]
+synch_din[1] => reg:din10.din[1]
+synch_din[1] => reg:din01.din[1]
+synch_din[1] => reg:din00.din[1]
 synch_din[2] => reg:din11.din[2]
-synch_din[2] => reg:readdata10.din[2]
-synch_din[2] => reg:readdata01.din[2]
-synch_din[2] => reg:readdata00.din[2]
+synch_din[2] => reg:din10.din[2]
+synch_din[2] => reg:din01.din[2]
+synch_din[2] => reg:din00.din[2]
 synch_din[3] => reg:din11.din[3]
-synch_din[3] => reg:readdata10.din[3]
-synch_din[3] => reg:readdata01.din[3]
-synch_din[3] => reg:readdata00.din[3]
+synch_din[3] => reg:din10.din[3]
+synch_din[3] => reg:din01.din[3]
+synch_din[3] => reg:din00.din[3]
 synch_din[4] => reg:din11.din[4]
-synch_din[4] => reg:readdata10.din[4]
-synch_din[4] => reg:readdata01.din[4]
-synch_din[4] => reg:readdata00.din[4]
+synch_din[4] => reg:din10.din[4]
+synch_din[4] => reg:din01.din[4]
+synch_din[4] => reg:din00.din[4]
 synch_din[5] => reg:din11.din[5]
-synch_din[5] => reg:readdata10.din[5]
-synch_din[5] => reg:readdata01.din[5]
-synch_din[5] => reg:readdata00.din[5]
+synch_din[5] => reg:din10.din[5]
+synch_din[5] => reg:din01.din[5]
+synch_din[5] => reg:din00.din[5]
 synch_din[6] => reg:din11.din[6]
-synch_din[6] => reg:readdata10.din[6]
-synch_din[6] => reg:readdata01.din[6]
-synch_din[6] => reg:readdata00.din[6]
+synch_din[6] => reg:din10.din[6]
+synch_din[6] => reg:din01.din[6]
+synch_din[6] => reg:din00.din[6]
 synch_din[7] => reg:din11.din[7]
-synch_din[7] => reg:readdata10.din[7]
-synch_din[7] => reg:readdata01.din[7]
-synch_din[7] => reg:readdata00.din[7]
+synch_din[7] => reg:din10.din[7]
+synch_din[7] => reg:din01.din[7]
+synch_din[7] => reg:din00.din[7]
 synch_din[8] => reg:din11.din[8]
-synch_din[8] => reg:readdata10.din[8]
-synch_din[8] => reg:readdata01.din[8]
-synch_din[8] => reg:readdata00.din[8]
+synch_din[8] => reg:din10.din[8]
+synch_din[8] => reg:din01.din[8]
+synch_din[8] => reg:din00.din[8]
 synch_din[9] => reg:din11.din[9]
-synch_din[9] => reg:readdata10.din[9]
-synch_din[9] => reg:readdata01.din[9]
-synch_din[9] => reg:readdata00.din[9]
+synch_din[9] => reg:din10.din[9]
+synch_din[9] => reg:din01.din[9]
+synch_din[9] => reg:din00.din[9]
 synch_din[10] => reg:din11.din[10]
-synch_din[10] => reg:readdata10.din[10]
-synch_din[10] => reg:readdata01.din[10]
-synch_din[10] => reg:readdata00.din[10]
+synch_din[10] => reg:din10.din[10]
+synch_din[10] => reg:din01.din[10]
+synch_din[10] => reg:din00.din[10]
 synch_din[11] => reg:din11.din[11]
-synch_din[11] => reg:readdata10.din[11]
-synch_din[11] => reg:readdata01.din[11]
-synch_din[11] => reg:readdata00.din[11]
+synch_din[11] => reg:din10.din[11]
+synch_din[11] => reg:din01.din[11]
+synch_din[11] => reg:din00.din[11]
 synch_din[12] => reg:din11.din[12]
-synch_din[12] => reg:readdata10.din[12]
-synch_din[12] => reg:readdata01.din[12]
-synch_din[12] => reg:readdata00.din[12]
+synch_din[12] => reg:din10.din[12]
+synch_din[12] => reg:din01.din[12]
+synch_din[12] => reg:din00.din[12]
 synch_din[13] => reg:din11.din[13]
-synch_din[13] => reg:readdata10.din[13]
-synch_din[13] => reg:readdata01.din[13]
-synch_din[13] => reg:readdata00.din[13]
+synch_din[13] => reg:din10.din[13]
+synch_din[13] => reg:din01.din[13]
+synch_din[13] => reg:din00.din[13]
 synch_din[14] => reg:din11.din[14]
-synch_din[14] => reg:readdata10.din[14]
-synch_din[14] => reg:readdata01.din[14]
-synch_din[14] => reg:readdata00.din[14]
+synch_din[14] => reg:din10.din[14]
+synch_din[14] => reg:din01.din[14]
+synch_din[14] => reg:din00.din[14]
 synch_din[15] => reg:din11.din[15]
-synch_din[15] => reg:readdata10.din[15]
-synch_din[15] => reg:readdata01.din[15]
-synch_din[15] => reg:readdata00.din[15]
+synch_din[15] => reg:din10.din[15]
+synch_din[15] => reg:din01.din[15]
+synch_din[15] => reg:din00.din[15]
 synch_dout[0] <= reg:outpipe.dout[0]
 synch_dout[1] <= reg:outpipe.dout[1]
 synch_dout[2] <= reg:outpipe.dout[2]
@@ -2461,7 +2466,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:readdata10
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10
 clk => dout[0]~reg0.CLK
 clk => dout[1]~reg0.CLK
 clk => dout[2]~reg0.CLK
@@ -2560,7 +2565,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:readdata01
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01
 clk => dout[0]~reg0.CLK
 clk => dout[1]~reg0.CLK
 clk => dout[2]~reg0.CLK
@@ -2659,7 +2664,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:readdata00
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00
 clk => dout[0]~reg0.CLK
 clk => dout[1]~reg0.CLK
 clk => dout[2]~reg0.CLK

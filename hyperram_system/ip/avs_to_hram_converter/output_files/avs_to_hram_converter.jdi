@@ -1,8 +1,16 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="f22ae3561a18dca31592"/>
+    <hash md5_digest_80b="de08232960d43c5b6921"/>
   </project>
   <file_info>
     <file device="10CL025YE144C8G" path="avs_to_hram_converter.sof" usercode="0xFFFFFFFF"/>
   </file_info>
+  <sld_infos>
+    <sld_info hpath="avs_to_hram_converter_EU:EU|clk_gater:clk_gater_inst" name="clk_gater_inst">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME clk_gater HAS_SOPCINFO 1 GENERATION_ID 1701252913"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
 </sld_project_info>

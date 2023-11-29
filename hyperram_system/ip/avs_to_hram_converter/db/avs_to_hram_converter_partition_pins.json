@@ -80,10 +80,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "hram_CK",
-					"strict" : false
-				},
-				{
 					"name" : "hram_CS_n",
 					"strict" : false
 				},

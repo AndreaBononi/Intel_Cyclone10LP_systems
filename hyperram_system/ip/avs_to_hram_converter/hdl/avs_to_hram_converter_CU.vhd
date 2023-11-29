@@ -513,7 +513,6 @@ architecture fsm of avs_to_hram_converter_CU is
           hbus_CS_n                   <= '0';
           writedata_load              <= '1';
           dq_OE                       <= '1';
-          CK_gating_enable_n          <= '0';
           dq_sel                      <= "10";
         ----------------------------------------------
         when writeconf1_end =>
