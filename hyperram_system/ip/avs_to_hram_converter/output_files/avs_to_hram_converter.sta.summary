@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.946
+TNS   : -2.946
+
+Type  : Slow 1200mV 85C Model Setup 'hram_RWDS'
+Slack : -2.810
+TNS   : -192.181
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -1.690
+TNS   : -21.824
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.415
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hram_RWDS'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 10.789
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hram_RWDS'
+Slack : -3.444
+TNS   : -143.222
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 4.613
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.647
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'hram_RWDS'
+Slack : -2.514
+TNS   : -172.945
+
+Type  : Slow 1200mV 0C Model Setup 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.332
+TNS   : -2.332
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.521
+TNS   : -19.616
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.351
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hram_RWDS'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 10.394
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hram_RWDS'
+Slack : -3.444
+TNS   : -143.222
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 4.518
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.655
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'hram_RWDS'
+Slack : -0.681
+TNS   : -35.416
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.379
+TNS   : -0.661
+
+Type  : Fast 1200mV 0C Model Setup 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.078
+TNS   : -0.078
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.059
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hram_RWDS'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.003
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hram_RWDS'
+Slack : -3.000
+TNS   : -105.970
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 4.349
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.761
+TNS   : 0.000
+
+------------------------------------------------------------
