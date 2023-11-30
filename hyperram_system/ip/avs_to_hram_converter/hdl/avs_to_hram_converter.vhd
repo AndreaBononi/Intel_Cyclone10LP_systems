@@ -96,11 +96,12 @@ architecture rtl of avs_to_hram_converter is
     set_initialization_state      : in    std_logic;
     check_latency	                : in	  std_logic;
     force_RWDS_low                : in	  std_logic;
-    CK_gating_enable_n            : in    std_logic;
+    hCK_gating_enable_n           : in    std_logic;
     set_dpd_status                : in    std_logic;
     clear_dpd_status_n            : in    std_logic;
     deadline_tim_enable           : in    std_logic;
     deadline_tim_clear_n          : in    std_logic;
+    hCKen_pipe_clear_n            : in    std_logic;
     hbus_RESET_n                  : in    std_logic;
     hbus_CS_n                     : in    std_logic;	
     -- status signals
@@ -158,11 +159,12 @@ architecture rtl of avs_to_hram_converter is
     set_initialization_state      : out std_logic;
     check_latency	                : out std_logic;
     force_RWDS_low                : out std_logic;
-    CK_gating_enable_n            : out std_logic;
+    hCK_gating_enable_n           : out std_logic;
     set_dpd_status                : out std_logic;
     clear_dpd_status_n            : out std_logic;
     deadline_tim_enable           : out std_logic;
     deadline_tim_clear_n          : out std_logic;
+    hCKen_pipe_clear_n            : out std_logic;
     hbus_RESET_n                  : out std_logic;
     hbus_CS_n                     : out std_logic;	
     -- status signals
@@ -214,11 +216,12 @@ architecture rtl of avs_to_hram_converter is
   signal set_initialization_state      : std_logic;
   signal check_latency	               : std_logic;
   signal force_RWDS_low                : std_logic;
-  signal CK_gating_enable_n            : std_logic;
+  signal hCK_gating_enable_n           : std_logic;
   signal set_dpd_status                : std_logic;
   signal clear_dpd_status_n            : std_logic;
   signal deadline_tim_enable           : std_logic;
   signal deadline_tim_clear_n          : std_logic;
+  signal hCKen_pipe_clear_n            : std_logic;
   signal hbus_RESET_n                  : std_logic;
   signal hbus_CS_n                     : std_logic;	
   signal write                         : std_logic;
@@ -297,11 +300,12 @@ architecture rtl of avs_to_hram_converter is
       set_initialization_state      => set_initialization_state,
       check_latency	                => check_latency,
       force_RWDS_low                => force_RWDS_low,
-      CK_gating_enable_n            => CK_gating_enable_n,
+      hCK_gating_enable_n           => hCK_gating_enable_n,
       set_dpd_status                => set_dpd_status,
       clear_dpd_status_n            => clear_dpd_status_n,
       deadline_tim_enable           => deadline_tim_enable,
       deadline_tim_clear_n          => deadline_tim_clear_n,
+      hCKen_pipe_clear_n            => hCKen_pipe_clear_n,
       hbus_RESET_n                  => hbus_RESET_n,
       hbus_CS_n                     => hbus_CS_n,	
       write                         => write,
@@ -356,11 +360,12 @@ architecture rtl of avs_to_hram_converter is
       set_initialization_state      => set_initialization_state,
       check_latency	                => check_latency,
       force_RWDS_low                => force_RWDS_low,
-      CK_gating_enable_n            => CK_gating_enable_n,
+      hCK_gating_enable_n           => hCK_gating_enable_n,
       set_dpd_status                => set_dpd_status,
       clear_dpd_status_n            => clear_dpd_status_n,
       deadline_tim_enable           => deadline_tim_enable,
       deadline_tim_clear_n          => deadline_tim_clear_n,
+      hCKen_pipe_clear_n            => hCKen_pipe_clear_n,
       hbus_RESET_n                  => hbus_RESET_n,
       hbus_CS_n                     => hbus_CS_n,	
       write                         => write,

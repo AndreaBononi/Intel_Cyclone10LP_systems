@@ -12,7 +12,7 @@ port
 	clear_n		  : in 	std_logic;
 	tim_3			  : out std_logic;
 	tim_7			  : out std_logic;
-	tim_20		  : out std_logic;
+	tim_21		  : out std_logic;
   tim_1000    : out std_logic;
   tim_15000		: out std_logic
 );
@@ -70,7 +70,7 @@ architecture rtl of timer_14bit is
     --------------------------------------------------------------------------------------------------------
 
     -- alert on dout = 20 ----------------------------------------------------------------------------------
-    tim_20 		<= 	(not cnt_out(0))	and (not cnt_out(1)) 	and (cnt_out(2)) 			and (not cnt_out(3)) 	and
+    tim_21 		<= 	(cnt_out(0))	    and (not cnt_out(1)) 	and (cnt_out(2)) 			and (not cnt_out(3)) 	and
               		(cnt_out(4)) 			and (not cnt_out(5)) 	and (not cnt_out(6)) 	and (not cnt_out(7)) 	and
               		(not cnt_out(8)) 	and (not cnt_out(9)) 	and (not cnt_out(10)) and (not cnt_out(11)) and
               		(not cnt_out(12)) and (not cnt_out(13));

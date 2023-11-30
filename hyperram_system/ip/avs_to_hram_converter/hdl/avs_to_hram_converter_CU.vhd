@@ -37,11 +37,12 @@ port
   set_initialization_state      : out std_logic;
   check_latency	                : out std_logic;
   force_RWDS_low                : out std_logic;
-  CK_gating_enable_n            : out std_logic;
+  hCK_gating_enable_n           : out std_logic;
   set_dpd_status                : out std_logic;
   clear_dpd_status_n            : out std_logic;
   deadline_tim_enable           : out std_logic;
   deadline_tim_clear_n          : out std_logic;
+  hCKen_pipe_clear_n            : out std_logic;
   hbus_RESET_n                  : out std_logic;
   hbus_CS_n                     : out std_logic;	
   -- status signals
@@ -76,6 +77,7 @@ architecture fsm of avs_to_hram_converter_CU is
     reset_exit,
     idle,
     dummycmd,
+    dummycmd_last,
     dummycmd_end,
     wait_dpd_out,
     write_virtconf,
@@ -98,7 +100,8 @@ architecture fsm of avs_to_hram_converter_CU is
     CA_end,
     read_wait_1,
     read_wait_2,
-    read_end,
+    read_end_1,
+    read_end_2,
     synch_restoring_1,
     synch_restoring_2,
     writemem_wait,
@@ -107,7 +110,8 @@ architecture fsm of avs_to_hram_converter_CU is
     writeburst_prep,
     writeburst,
     writeburst_last,
-    stop_burst,
+    stop_burst_1,
+    stop_burst_2,
     idle_burst,
     restore_burst
 	); -------------------------------------------------------------------------------------------------------
@@ -200,10 +204,13 @@ architecture fsm of avs_to_hram_converter_CU is
         ----------------------------------------------
         when dummycmd =>
           if (t_dpdcsl = '1') then
-            next_state <= dummycmd_end;
+            next_state <= dummycmd_last;
           else
             next_state <= dummycmd;
           end if;
+        ----------------------------------------------
+        when dummycmd_last =>
+          next_state <= dummycmd_end;
         ----------------------------------------------
         when dummycmd_end =>
           next_state <= wait_dpd_out;
@@ -287,10 +294,13 @@ architecture fsm of avs_to_hram_converter_CU is
           if (synch_busy = '1') then
             next_state <= read_wait_2;
           else
-            next_state <= read_end;
+            next_state <= read_end_1;
           end if;
         ----------------------------------------------
-        when read_end =>
+        when read_end_1 =>
+          next_state <= read_end_2;
+        ----------------------------------------------
+        when read_end_2 =>
           next_state <= synch_restoring_1;
         ----------------------------------------------
         when synch_restoring_1 =>
@@ -336,11 +346,14 @@ architecture fsm of avs_to_hram_converter_CU is
               next_state <= writeburst;
             end if;
           else
-            next_state <= stop_burst;
+            next_state <= stop_burst_1;
           end if;
         ----------------------------------------------
-        when stop_burst =>
-          next_state <= idle_burst;
+        when stop_burst_1 =>
+          next_state <= stop_burst_2;
+        ----------------------------------------------
+        when stop_burst_2 =>
+          next_state <= idle_burst;  
         ----------------------------------------------
         when idle_burst =>
           if (write = '1') then
@@ -396,11 +409,12 @@ architecture fsm of avs_to_hram_converter_CU is
       set_initialization_state    <= '0';
       check_latency	              <= '0';
       force_RWDS_low              <= '0';
-      CK_gating_enable_n          <= '1';
+      hCK_gating_enable_n         <= '1';
       set_dpd_status              <= '0';
       clear_dpd_status_n          <= '1';
       deadline_tim_enable         <= '0';
       deadline_tim_clear_n        <= '1';
+      hCKen_pipe_clear_n          <= '1';
       hbus_RESET_n                <= '1';
       hbus_CS_n                   <= '1';	
 			------------------------------------------------
@@ -408,7 +422,7 @@ architecture fsm of avs_to_hram_converter_CU is
 				----------------------------------------------
 				when reset =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           hbus_RESET_n                <= '0';
           deadline_tim_clear_n        <= '0';
           clear_dpd_status_n          <= '0';
@@ -416,25 +430,26 @@ architecture fsm of avs_to_hram_converter_CU is
           writedata_load              <= '1';
           dpd_req_clear_n             <= '0';
           reset_config_register_n     <= '0';
+          hCKen_pipe_clear_n          <= '0';
         ----------------------------------------------
         when reset_wait =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           deadline_tim_enable         <= '1';
           hbus_RESET_n                <= '0';
         ----------------------------------------------
         when reset_exit_begin =>
           waitrequest                 <= '1';                      
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           deadline_tim_clear_n        <= '0';
         ----------------------------------------------
         when reset_exit =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           deadline_tim_enable         <= '1';
         ----------------------------------------------
         when idle =>
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           deadline_tim_clear_n        <= '0';
           cmd_load                    <= '1';
           datain_load                 <= '1';
@@ -444,27 +459,26 @@ architecture fsm of avs_to_hram_converter_CU is
           hbus_CS_n                   <= '0';
           deadline_tim_enable         <= '1';
         ----------------------------------------------
-        when dummycmd_end =>
+        when dummycmd_last | dummycmd_end =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           deadline_tim_clear_n        <= '0';
         ----------------------------------------------
         when wait_dpd_out =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           deadline_tim_enable         <= '1';
         ----------------------------------------------
         when write_virtconf =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           clear_dpd_status_n          <= '0';
           update_config_register      <= '1';
         ----------------------------------------------
         when writeconf0_prep =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          CK_gating_enable_n          <= '0';
           CA_load                     <= '1';
           config_access               <= '1';
           address_space_sel           <= "01";
@@ -472,7 +486,6 @@ architecture fsm of avs_to_hram_converter_CU is
         when writeconf1_prep =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          CK_gating_enable_n          <= '0';
           CA_load                     <= '1';
           config_access               <= '1';
           address_space_sel           <= "10";
@@ -503,6 +516,7 @@ architecture fsm of avs_to_hram_converter_CU is
         ---------------------------------------------- 
         when writeconf0 =>
           waitrequest                 <= '1';
+          hCK_gating_enable_n         <= '0';
           hbus_CS_n                   <= '0';
           writedata_load              <= '1';
           dq_OE                       <= '1';
@@ -510,6 +524,7 @@ architecture fsm of avs_to_hram_converter_CU is
         ----------------------------------------------
         when writeconf1 =>
           waitrequest                 <= '1';
+          hCK_gating_enable_n         <= '0';
           hbus_CS_n                   <= '0';
           writedata_load              <= '1';
           dq_OE                       <= '1';
@@ -517,7 +532,7 @@ architecture fsm of avs_to_hram_converter_CU is
         ----------------------------------------------
         when writeconf1_end =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           init_clear_n                <= '0';
           dq_OE                       <= '1';
         ----------------------------------------------
@@ -525,16 +540,16 @@ architecture fsm of avs_to_hram_converter_CU is
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
           dq_OE                       <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
         ----------------------------------------------
         when wait_dpd_in =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           deadline_tim_enable         <= '1';
           set_dpd_status              <= '1';
         ----------------------------------------------
         when read_virtconf =>
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           avs_out_sel                 <= '1';
           force_valid                 <= '1';
           cmd_load                    <= '1';
@@ -543,7 +558,6 @@ architecture fsm of avs_to_hram_converter_CU is
         when readmem_prep =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          CK_gating_enable_n          <= '0';
           CA_load                     <= '1';
           address_space_sel           <= "00";
           read_writeN                 <= '1';
@@ -551,7 +565,6 @@ architecture fsm of avs_to_hram_converter_CU is
         when writemem_prep =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          CK_gating_enable_n          <= '0';
           CA_load                     <= '1';
           address_space_sel           <= "00";
           synch_cnt_enable            <= '1';
@@ -588,31 +601,25 @@ architecture fsm of avs_to_hram_converter_CU is
           dq_OE                       <= '1';
           deadline_tim_enable         <= '1';
         ----------------------------------------------
-        when read_wait_1 =>
+        when read_wait_1 | read_wait_2 =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
           RWDS_sampling_enable        <= '1';
           synch_enable                <= '1';
         ----------------------------------------------
-        when read_wait_2 =>
+        when read_end_1 | read_end_2 =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          RWDS_sampling_enable        <= '1';
-          synch_enable                <= '1';
-        ----------------------------------------------
-        when read_end =>
-          waitrequest                 <= '1';
-          hbus_CS_n                   <= '0';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
         ----------------------------------------------
         when synch_restoring_1 =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           synch_clear_n               <= '0';
         ----------------------------------------------
         when synch_restoring_2 =>
           waitrequest                 <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
         ----------------------------------------------
         when writemem_wait =>
           waitrequest                 <= '1';
@@ -621,6 +628,7 @@ architecture fsm of avs_to_hram_converter_CU is
         ----------------------------------------------
         when writemem =>
           waitrequest                 <= '1';
+          hCK_gating_enable_n         <= '0';
           hbus_CS_n                   <= '0';
           writedata_load              <= '1';
           dq_sel                      <= "00";
@@ -628,7 +636,7 @@ architecture fsm of avs_to_hram_converter_CU is
         when write_end =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           force_RWDS_low              <= '1';
           synch_cnt_clear_n           <= '0';
           deadline_tim_clear_n        <= '0';
@@ -653,30 +661,34 @@ architecture fsm of avs_to_hram_converter_CU is
         when writeburst_last =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
+          hCK_gating_enable_n         <= '0';
           writedata_load              <= '1';
           dq_sel                      <= "00";
           dq_OE                       <= '1';
           force_RWDS_low              <= '1';
         ----------------------------------------------
-        when stop_burst =>
+        when stop_burst_1 =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          writedata_load              <= '1';
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           synch_cnt_enable            <= '1';
           synch_cnt_down              <= '1';
           addressgen_enable           <= '1';
           force_RWDS_low              <= '1';
         ----------------------------------------------
+         when stop_burst_2 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          hCK_gating_enable_n         <= '0';
+        ----------------------------------------------
         when idle_burst =>
-          CK_gating_enable_n          <= '0';
+          hCK_gating_enable_n         <= '0';
           deadline_tim_clear_n        <= '0';
           datain_load                 <= '1';
         ----------------------------------------------
         when restore_burst =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
-          CK_gating_enable_n          <= '0';
           CA_load                     <= '1';
           address_space_sel           <= "11";
         ----------------------------------------------

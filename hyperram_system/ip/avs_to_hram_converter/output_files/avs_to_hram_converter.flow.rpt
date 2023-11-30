@@ -1,5 +1,5 @@
 Flow report for avs_to_hram_converter
-Wed Nov 29 17:40:41 2023
+Thu Nov 30 15:30:26 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 29 17:40:41 2023          ;
+; Flow Status                        ; Successful - Thu Nov 30 15:30:26 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; avs_to_hram_converter                          ;
 ; Top-level Entity Name              ; avs_to_hram_converter                          ;
@@ -49,11 +49,11 @@ https://fpgasoftware.intel.com/eula.
 ; Device                             ; 10CL025YE144C8G                                ;
 ; Timing Models                      ; Final                                          ;
 ; Total logic elements               ; 462 / 24,624 ( 2 % )                           ;
-;     Total combinational functions  ; 338 / 24,624 ( 1 % )                           ;
-;     Dedicated logic registers      ; 322 / 24,624 ( 1 % )                           ;
-; Total registers                    ; 322                                            ;
-; Total pins                         ; 11 / 77 ( 14 % )                               ;
-; Total virtual pins                 ; 83                                             ;
+;     Total combinational functions  ; 336 / 24,624 ( 1 % )                           ;
+;     Dedicated logic registers      ; 326 / 24,624 ( 1 % )                           ;
+; Total registers                    ; 326                                            ;
+; Total pins                         ; 10 / 77 ( 13 % )                               ;
+; Total virtual pins                 ; 84                                             ;
 ; Total memory bits                  ; 33 / 608,256 ( < 1 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                 ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+-----------------------+
 ; Option            ; Setting               ;
 +-------------------+-----------------------+
-; Start date & time ; 11/29/2023 17:40:10   ;
+; Start date & time ; 11/30/2023 15:29:55   ;
 ; Main task         ; Compilation           ;
 ; Revision Name     ; avs_to_hram_converter ;
 +-------------------+-----------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 106024607881685.170127601058724                             ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 106024607881685.170135459508121                             ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -86,6 +86,8 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --          ; --                                ;
+; MISC_FILE                           ; hdl/clkctrl/clkctrl/synthesis/../clkctrl.cmp                ; --            ; --          ; --                                ;
+; MISC_FILE                           ; hdl/clkctrl/clkctrl/synthesis/../../clkctrl.qsys            ; --            ; --          ; --                                ;
 ; MISC_FILE                           ; hdl/clk_gater/clk_gater/synthesis/../clk_gater.cmp          ; --            ; --          ; --                                ;
 ; MISC_FILE                           ; hdl/clk_gater/clk_gater/synthesis/../../clk_gater.qsys      ; --            ; --          ; --                                ;
 ; MISC_FILE                           ; hdl/dll_90/dll_90.ppf                                       ; --            ; --          ; --                                ;
@@ -100,9 +102,13 @@ https://fpgasoftware.intel.com/eula.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                         ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --          ; --                                ;
+; SLD_FILE                            ; hdl/clkctrl/clkctrl/synthesis/clkctrl.debuginfo             ; --            ; --          ; --                                ;
 ; SLD_FILE                            ; hdl/clk_gater/clk_gater/synthesis/clk_gater.debuginfo       ; --            ; --          ; --                                ;
 ; SLD_INFO                            ; QSYS_NAME clk_gater HAS_SOPCINFO 1 GENERATION_ID 1701252913 ; --            ; clk_gater   ; --                                ;
+; SLD_INFO                            ; QSYS_NAME clkctrl HAS_SOPCINFO 1 GENERATION_ID 1701354364   ; --            ; clkctrl     ; --                                ;
+; SOPCINFO_FILE                       ; hdl/clkctrl/clkctrl/synthesis/../../clkctrl.sopcinfo        ; --            ; --          ; --                                ;
 ; SOPCINFO_FILE                       ; hdl/clk_gater/clk_gater/synthesis/../../clk_gater.sopcinfo  ; --            ; --          ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --          ; --                                ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --          ; --                                ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+-----------------------------------+
 
@@ -112,12 +118,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 447 MB              ; 00:00:29                           ;
-; Fitter               ; 00:00:09     ; 1.0                     ; 708 MB              ; 00:00:11                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 446 MB              ; 00:00:29                           ;
+; Fitter               ; 00:00:09     ; 1.1                     ; 707 MB              ; 00:00:11                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 366 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 449 MB              ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 453 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 610 MB              ; 00:00:00                           ;
-; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:43                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -87,7 +87,8 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_global_assignment -name QIP_FILE hdl/clk_gater/clk_gater/synthesis/clk_gater.qip
+set_global_assignment -name QIP_FILE hdl/clkctrl/clkctrl/synthesis/clkctrl.qip
+set_global_assignment -name VHDL_FILE hdl/d_flipflop_negedge.vhd
 set_global_assignment -name SDC_FILE sdc/avs_to_hram_converter.sdc
 set_global_assignment -name VHDL_FILE hdl/delayer_360.vhd
 set_global_assignment -name VHDL_FILE hdl/delayer_90.vhd

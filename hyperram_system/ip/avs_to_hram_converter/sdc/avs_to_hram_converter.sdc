@@ -71,6 +71,3 @@ set_min_delay 2 -from [get_ports {hram_RWDS}] -to [get_registers {avs_to_hram_co
 set_min_delay 2 -from [get_ports {hram_RWDS}] -to [get_registers {avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[*]}]
 set_max_delay 3 -from [get_ports {hram_RWDS}] -to [get_registers {avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[*]}]
 set_max_delay 3 -from [get_ports {hram_RWDS}] -to [get_registers {avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[*]}]
-
-# clock gating enable delay ----------------------------------------------------------------------
-set_min_delay 3 -from [get_registers {avs_to_hram_converter_CU:CU|present_state.*}] -to [get_pins {EU|clk_gater_inst|altclkctrl_0|clk_gater_altclkctrl_0_sub_component|clkctrl1|ena}]
