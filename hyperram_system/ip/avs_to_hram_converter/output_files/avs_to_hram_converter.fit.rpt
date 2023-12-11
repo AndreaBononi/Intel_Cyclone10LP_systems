@@ -1,5 +1,5 @@
 Fitter report for avs_to_hram_converter
-Thu Nov 30 15:30:18 2023
+Thu Nov 30 16:11:05 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -72,14 +72,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov 30 15:30:18 2023          ;
+; Fitter Status                      ; Successful - Thu Nov 30 16:11:05 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; avs_to_hram_converter                          ;
 ; Top-level Entity Name              ; avs_to_hram_converter                          ;
 ; Family                             ; Cyclone 10 LP                                  ;
 ; Device                             ; 10CL025YE144C8G                                ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 462 / 24,624 ( 2 % )                           ;
+; Total logic elements               ; 465 / 24,624 ( 2 % )                           ;
 ;     Total combinational functions  ; 336 / 24,624 ( 1 % )                           ;
 ;     Dedicated logic registers      ; 326 / 24,624 ( 1 % )                           ;
 ; Total registers                    ; 326                                            ;
@@ -159,12 +159,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.6%      ;
+;     Processor 2            ;   4.1%      ;
 +----------------------------+-------------+
 
 
@@ -224,16 +224,16 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 462 / 24,624 ( 2 % )    ;
-;     -- Combinational with no register       ; 136                     ;
-;     -- Register only                        ; 126                     ;
-;     -- Combinational with a register        ; 200                     ;
+; Total logic elements                        ; 465 / 24,624 ( 2 % )    ;
+;     -- Combinational with no register       ; 139                     ;
+;     -- Register only                        ; 129                     ;
+;     -- Combinational with a register        ; 197                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
 ;     -- 4 input functions                    ; 195                     ;
 ;     -- 3 input functions                    ; 57                      ;
 ;     -- <=2 input functions                  ; 84                      ;
-;     -- Register only                        ; 126                     ;
+;     -- Register only                        ; 129                     ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
 ;     -- normal mode                          ; 303                     ;
@@ -243,7 +243,7 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 ;     -- Dedicated logic registers            ; 326 / 24,624 ( 1 % )    ;
 ;     -- I/O registers                        ; 0 / 310 ( 0 % )         ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 62 / 1,539 ( 4 % )      ;
+; Total LABs:  partially or completely used   ; 49 / 1,539 ( 3 % )      ;
 ; Virtual pins                                ; 84                      ;
 ; I/O pins                                    ; 10 / 77 ( 13 % )        ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )          ;
@@ -261,12 +261,12 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.8% / 0.7% / 1.1%      ;
-; Peak interconnect usage (total/H/V)         ; 5.7% / 4.8% / 7.1%      ;
+; Average interconnect usage (total/H/V)      ; 0.9% / 0.7% / 1.1%      ;
+; Peak interconnect usage (total/H/V)         ; 6.6% / 5.0% / 8.9%      ;
 ; Maximum fan-out                             ; 229                     ;
 ; Highest non-global fan-out                  ; 53                      ;
-; Total fan-out                               ; 2280                    ;
-; Average fan-out                             ; 2.54                    ;
+; Total fan-out                               ; 2284                    ;
+; Average fan-out                             ; 2.53                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -279,16 +279,16 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 462 / 24624 ( 2 % ) ; 0 / 24624 ( 0 % )              ;
-;     -- Combinational with no register       ; 136                 ; 0                              ;
-;     -- Register only                        ; 126                 ; 0                              ;
-;     -- Combinational with a register        ; 200                 ; 0                              ;
+; Total logic elements                        ; 465 / 24624 ( 2 % ) ; 0 / 24624 ( 0 % )              ;
+;     -- Combinational with no register       ; 139                 ; 0                              ;
+;     -- Register only                        ; 129                 ; 0                              ;
+;     -- Combinational with a register        ; 197                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
 ;     -- 4 input functions                    ; 195                 ; 0                              ;
 ;     -- 3 input functions                    ; 57                  ; 0                              ;
 ;     -- <=2 input functions                  ; 84                  ; 0                              ;
-;     -- Register only                        ; 126                 ; 0                              ;
+;     -- Register only                        ; 129                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
 ;     -- normal mode                          ; 303                 ; 0                              ;
@@ -298,7 +298,7 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 ;     -- Dedicated logic registers            ; 326 / 24624 ( 1 % ) ; 0 / 24624 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 37 / 1539 ( 2 % )   ; 0 / 1539 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 36 / 1539 ( 2 % )   ; 0 / 1539 ( 0 % )               ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 84                  ; 0                              ;
 ; I/O pins                                    ; 10                  ; 0                              ;
@@ -316,7 +316,7 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 ;     -- Registered Output Connections        ; 1                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 2276                ; 8                              ;
+;     -- Total Connections                    ; 2280                ; 8                              ;
 ;     -- Registered Connections               ; 836                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
@@ -358,13 +358,13 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------------------------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination                ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group                               ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------------------------------------+
-; hram_DQ[0] ; 39    ; 3        ; 1            ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
-; hram_DQ[1] ; 31    ; 2        ; 0            ; 10           ; 21           ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
-; hram_DQ[2] ; 33    ; 2        ; 0            ; 6            ; 14           ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
-; hram_DQ[3] ; 42    ; 3        ; 3            ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
-; hram_DQ[4] ; 44    ; 3        ; 5            ; 0            ; 14           ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
-; hram_DQ[5] ; 32    ; 2        ; 0            ; 7            ; 7            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
-; hram_DQ[6] ; 43    ; 3        ; 5            ; 0            ; 21           ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
+; hram_DQ[0] ; 11    ; 1        ; 0            ; 23           ; 21           ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
+; hram_DQ[1] ; 143   ; 8        ; 1            ; 34           ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
+; hram_DQ[2] ; 144   ; 8        ; 1            ; 34           ; 7            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
+; hram_DQ[3] ; 142   ; 8        ; 3            ; 34           ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
+; hram_DQ[4] ; 7     ; 1        ; 0            ; 26           ; 14           ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
+; hram_DQ[5] ; 141   ; 8        ; 7            ; 34           ; 14           ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
+; hram_DQ[6] ; 32    ; 2        ; 0            ; 7            ; 7            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
 ; hram_DQ[7] ; 28    ; 2        ; 0            ; 14           ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr20~2 (inverted) ;
 ; hram_RWDS  ; 10    ; 1        ; 0            ; 23           ; 14           ; 95                    ; 0                  ; yes    ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; avs_to_hram_converter_CU:CU|WideOr22~0 (inverted) ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------------------------------------+
@@ -393,14 +393,14 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 +----------+-----------------+---------------+--------------+
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
-; 1        ; 4 / 9 ( 44 % )  ; 2.5V          ; --           ;
-; 2        ; 4 / 6 ( 67 % )  ; 2.5V          ; --           ;
-; 3        ; 4 / 10 ( 40 % ) ; 2.5V          ; --           ;
+; 1        ; 6 / 9 ( 67 % )  ; 2.5V          ; --           ;
+; 2        ; 2 / 6 ( 33 % )  ; 2.5V          ; --           ;
+; 3        ; 0 / 10 ( 0 % )  ; 2.5V          ; --           ;
 ; 4        ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ;
 ; 5        ; 0 / 9 ( 0 % )   ; 2.5V          ; --           ;
 ; 6        ; 0 / 9 ( 0 % )   ; 2.5V          ; --           ;
 ; 7        ; 0 / 11 ( 0 % )  ; 2.5V          ; --           ;
-; 8        ; 0 / 11 ( 0 % )  ; 2.5V          ; --           ;
+; 8        ; 4 / 11 ( 36 % ) ; 2.5V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
 
@@ -415,11 +415,11 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 ; 4        ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 5        ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 6        ; 7          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 7        ; 8          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 7        ; 8          ; 1        ; hram_DQ[4]                                       ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 8        ; 9          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 9        ; 11         ; 1        ; ^nSTATUS                                         ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 10       ; 15         ; 1        ; hram_RWDS                                        ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 11       ; 16         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 11       ; 16         ; 1        ; hram_DQ[0]                                       ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 12       ; 17         ; 1        ; ~ALTERA_DCLK~                                    ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; 13       ; 18         ; 1        ; ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; 14       ; 19         ; 1        ; ^nCONFIG                                         ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -439,20 +439,20 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 ; 28       ; 31         ; 2        ; hram_DQ[7]                                       ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 29       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 30       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 31       ; 40         ; 2        ; hram_DQ[1]                                       ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 32       ; 45         ; 2        ; hram_DQ[5]                                       ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 33       ; 46         ; 2        ; hram_DQ[2]                                       ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 31       ; 40         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 32       ; 45         ; 2        ; hram_DQ[6]                                       ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 33       ; 46         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 34       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 35       ;            ; --       ; VCCA1                                            ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 36       ;            ;          ; GNDA1                                            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 37       ;            ;          ; VCCD_PLL1                                        ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 38       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 39       ; 54         ; 3        ; hram_DQ[0]                                       ; bidir  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 39       ; 54         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; 40       ;            ; 3        ; VCCIO3                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 41       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 42       ; 59         ; 3        ; hram_DQ[3]                                       ; bidir  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 43       ; 60         ; 3        ; hram_DQ[6]                                       ; bidir  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 44       ; 61         ; 3        ; hram_DQ[4]                                       ; bidir  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 42       ; 59         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; 43       ; 60         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; 44       ; 61         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; 45       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 46       ; 67         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; 47       ;            ; 3        ; VCCIO3                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -550,10 +550,10 @@ The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyper
 ; 138      ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 139      ;            ; 8        ; VCCIO8                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 140      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 141      ; 239        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 142      ; 242        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 143      ; 245        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 144      ; 246        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; 141      ; 239        ; 8        ; hram_DQ[5]                                       ; bidir  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 142      ; 242        ; 8        ; hram_DQ[3]                                       ; bidir  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 143      ; 245        ; 8        ; hram_DQ[1]                                       ; bidir  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 144      ; 246        ; 8        ; hram_DQ[2]                                       ; bidir  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; EPAD     ;            ;          ; GND                                              ;        ;              ;         ; --         ;                 ; --       ; --           ;
 +----------+------------+----------+--------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -642,9 +642,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                                                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                                                  ; Entity Name              ; Library Name ;
 +---------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |avs_to_hram_converter                                                    ; 462 (1)     ; 326 (0)                   ; 0 (0)         ; 33          ; 1    ; 0            ; 0       ; 0         ; 10   ; 84           ; 136 (1)      ; 126 (0)           ; 200 (0)          ; |avs_to_hram_converter                                                                                                                                                                               ; avs_to_hram_converter    ; work         ;
-;    |avs_to_hram_converter_CU:CU|                                          ; 75 (75)     ; 43 (43)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 4 (4)             ; 42 (42)          ; |avs_to_hram_converter|avs_to_hram_converter_CU:CU                                                                                                                                                   ; avs_to_hram_converter_CU ; work         ;
-;    |avs_to_hram_converter_EU:EU|                                          ; 391 (11)    ; 283 (0)                   ; 0 (0)         ; 33          ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 106 (11)     ; 122 (0)           ; 163 (2)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU                                                                                                                                                   ; avs_to_hram_converter_EU ; work         ;
+; |avs_to_hram_converter                                                    ; 465 (1)     ; 326 (0)                   ; 0 (0)         ; 33          ; 1    ; 0            ; 0       ; 0         ; 10   ; 84           ; 139 (1)      ; 129 (0)           ; 197 (0)          ; |avs_to_hram_converter                                                                                                                                                                               ; avs_to_hram_converter    ; work         ;
+;    |avs_to_hram_converter_CU:CU|                                          ; 77 (77)     ; 43 (43)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (31)      ; 7 (7)             ; 39 (39)          ; |avs_to_hram_converter|avs_to_hram_converter_CU:CU                                                                                                                                                   ; avs_to_hram_converter_CU ; work         ;
+;    |avs_to_hram_converter_EU:EU|                                          ; 391 (11)    ; 283 (0)                   ; 0 (0)         ; 33          ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 107 (11)     ; 122 (0)           ; 162 (2)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU                                                                                                                                                   ; avs_to_hram_converter_EU ; work         ;
 ;       |CA_unpacker:CA_unpacker_inst|                                      ; 24 (0)      ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 24 (0)           ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst                                                                                                                      ; CA_unpacker              ; work         ;
 ;          |reg:CA0|                                                        ; 5 (5)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA0                                                                                                              ; reg                      ; work         ;
 ;          |reg:CA1|                                                        ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA1                                                                                                              ; reg                      ; work         ;
@@ -671,7 +671,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |dll_90:clk_shifter|                                                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|dll_90:clk_shifter                                                                                                                                ; dll_90                   ; work         ;
 ;          |altpll:altpll_component|                                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|dll_90:clk_shifter|altpll:altpll_component                                                                                                        ; altpll                   ; work         ;
 ;             |dll_90_altpll:auto_generated|                                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated                                                                           ; dll_90_altpll            ; work         ;
-;       |mux_2to1:readdatamux|                                              ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|mux_2to1:readdatamux                                                                                                                              ; mux_2to1                 ; work         ;
+;       |mux_2to1:readdatamux|                                              ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 1 (1)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|mux_2to1:readdatamux                                                                                                                              ; mux_2to1                 ; work         ;
 ;       |mux_4to1:address_mux|                                              ; 22 (22)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 22 (22)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|mux_4to1:address_mux                                                                                                                              ; mux_4to1                 ; work         ;
 ;       |mux_4to1:dq_mux|                                                   ; 37 (37)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 32 (32)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|mux_4to1:dq_mux                                                                                                                                   ; mux_4to1                 ; work         ;
 ;       |reg:addr_reg|                                                      ; 22 (22)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 22 (22)           ; 0 (0)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|reg:addr_reg                                                                                                                                      ; reg                      ; work         ;
@@ -684,9 +684,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |reg:datain_reg|                                                    ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 15 (15)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|reg:datain_reg                                                                                                                                    ; reg                      ; work         ;
 ;       |sr_flipflop:dpd_tracker|                                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|sr_flipflop:dpd_tracker                                                                                                                           ; sr_flipflop              ; work         ;
 ;       |sr_flipflop:init_tracker|                                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|sr_flipflop:init_tracker                                                                                                                          ; sr_flipflop              ; work         ;
-;       |synchronizer:synchronizer_inst|                                    ; 160 (0)     ; 131 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 71 (0)            ; 61 (0)           ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst                                                                                                                    ; synchronizer             ; work         ;
+;       |synchronizer:synchronizer_inst|                                    ; 161 (0)     ; 131 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 71 (0)            ; 60 (0)           ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst                                                                                                                    ; synchronizer             ; work         ;
 ;          |synchronizer_CU:CU|                                             ; 9 (9)       ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 6 (6)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU                                                                                                 ; synchronizer_CU          ; work         ;
-;          |synchronizer_EU:EU|                                             ; 152 (3)     ; 125 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (2)       ; 70 (0)            ; 56 (1)           ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU                                                                                                 ; synchronizer_EU          ; work         ;
+;          |synchronizer_EU:EU|                                             ; 153 (3)     ; 125 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (3)       ; 70 (0)            ; 55 (0)           ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU                                                                                                 ; synchronizer_EU          ; work         ;
 ;             |comparator_Nbit:burstlen_cmp|                                ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|comparator_Nbit:burstlen_cmp                                                                    ; comparator_Nbit          ; work         ;
 ;             |counter_11bit_updown:burstlen_counter|                       ; 13 (0)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 11 (0)           ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter                                                           ; counter_11bit_updown     ; work         ;
 ;                |lpm_counter:LPM_COUNTER_component|                        ; 13 (0)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 11 (0)           ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component                         ; lpm_counter              ; work         ;
@@ -706,7 +706,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;             |reg:din01|                                                   ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01                                                                                       ; reg                      ; work         ;
 ;             |reg:din10|                                                   ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10                                                                                       ; reg                      ; work         ;
 ;             |reg:din11|                                                   ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11                                                                                       ; reg                      ; work         ;
-;             |reg:outpipe|                                                 ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe                                                                                     ; reg                      ; work         ;
+;             |reg:outpipe|                                                 ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe                                                                                     ; reg                      ; work         ;
 ;             |reg:outreg|                                                  ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg                                                                                      ; reg                      ; work         ;
 ;             |sr_flipflop:synchronizer|                                    ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|sr_flipflop:synchronizer                                                                        ; sr_flipflop              ; work         ;
 ;       |timer_14bit:deadline_timer|                                        ; 35 (12)     ; 14 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (12)      ; 0 (0)             ; 14 (0)           ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer                                                                                                                        ; timer_14bit              ; work         ;
@@ -734,13 +734,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 ; Name       ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
-; hram_DQ[0] ; Bidir    ; --            ; (5) 1127 ps   ; --                    ; --  ; --   ;
-; hram_DQ[1] ; Bidir    ; (5) 1119 ps   ; --            ; --                    ; --  ; --   ;
-; hram_DQ[2] ; Bidir    ; (4) 938 ps    ; --            ; --                    ; --  ; --   ;
-; hram_DQ[3] ; Bidir    ; (5) 1127 ps   ; --            ; --                    ; --  ; --   ;
-; hram_DQ[4] ; Bidir    ; (4) 935 ps    ; --            ; --                    ; --  ; --   ;
-; hram_DQ[5] ; Bidir    ; (4) 938 ps    ; --            ; --                    ; --  ; --   ;
-; hram_DQ[6] ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; hram_DQ[0] ; Bidir    ; (4) 938 ps    ; --            ; --                    ; --  ; --   ;
+; hram_DQ[1] ; Bidir    ; (4) 935 ps    ; --            ; --                    ; --  ; --   ;
+; hram_DQ[2] ; Bidir    ; --            ; (4) 935 ps    ; --                    ; --  ; --   ;
+; hram_DQ[3] ; Bidir    ; (4) 935 ps    ; --            ; --                    ; --  ; --   ;
+; hram_DQ[4] ; Bidir    ; (4) 938 ps    ; --            ; --                    ; --  ; --   ;
+; hram_DQ[5] ; Bidir    ; --            ; (4) 935 ps    ; --                    ; --  ; --   ;
+; hram_DQ[6] ; Bidir    ; --            ; (4) 938 ps    ; --                    ; --  ; --   ;
 ; hram_DQ[7] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; hram_RWDS  ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; clk        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
@@ -753,62 +753,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                                                       ; Pad To Core Index ; Setting ;
 +-----------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; hram_DQ[0]                                                                                                ;                   ;         ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[0]~feeder ; 1                 ; 5       ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[0]~feeder         ; 1                 ; 5       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[0]~feeder ; 0                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[0]~feeder         ; 0                 ; 4       ;
 ; hram_DQ[1]                                                                                                ;                   ;         ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[1]~feeder ; 0                 ; 5       ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[1]~feeder         ; 0                 ; 5       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[1]~feeder ; 0                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[1]~feeder         ; 0                 ; 4       ;
 ; hram_DQ[2]                                                                                                ;                   ;         ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[2]~feeder ; 0                 ; 4       ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[2]~feeder         ; 0                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[2]~feeder ; 1                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[2]~feeder         ; 1                 ; 4       ;
 ; hram_DQ[3]                                                                                                ;                   ;         ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[3]~feeder ; 0                 ; 5       ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[3]~feeder         ; 0                 ; 5       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[3]~feeder ; 0                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[3]~feeder         ; 0                 ; 4       ;
 ; hram_DQ[4]                                                                                                ;                   ;         ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[4]~feeder         ; 0                 ; 4       ;
 ;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[4]~feeder ; 0                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[4]~feeder         ; 0                 ; 4       ;
 ; hram_DQ[5]                                                                                                ;                   ;         ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[5]~feeder ; 0                 ; 4       ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[5]~feeder         ; 0                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[5]~feeder ; 1                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[5]~feeder         ; 1                 ; 4       ;
 ; hram_DQ[6]                                                                                                ;                   ;         ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[6]~feeder ; 1                 ; 6       ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[6]~feeder         ; 1                 ; 6       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[6]~feeder ; 1                 ; 4       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[6]~feeder         ; 1                 ; 4       ;
 ; hram_DQ[7]                                                                                                ;                   ;         ;
-;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[7]~feeder         ; 0                 ; 6       ;
 ;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb|dout[7]~feeder ; 0                 ; 6       ;
+;      - avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[7]~feeder         ; 0                 ; 6       ;
 ; hram_RWDS                                                                                                 ;                   ;         ;
 ;      - avs_to_hram_converter_EU:EU|d_flipflop:rwds_tracker|dout~0                                         ; 0                 ; 6       ;
 ; clk                                                                                                       ;                   ;         ;
 +-----------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                                                                                                                              ; Location           ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; avs_to_hram_converter_CU:CU|WideOr11                                                                                                                                              ; LCCOMB_X9_Y15_N2   ; 17      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_CU:CU|WideOr12~0                                                                                                                                            ; LCCOMB_X12_Y15_N28 ; 18      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_CU:CU|WideOr12~3                                                                                                                                            ; LCCOMB_X14_Y16_N20 ; 24      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_CU:CU|WideOr14                                                                                                                                              ; LCCOMB_X10_Y15_N10 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_CU:CU|WideOr20~2                                                                                                                                            ; LCCOMB_X9_Y15_N28  ; 8       ; Output enable ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_CU:CU|cmd_load~0                                                                                                                                            ; LCCOMB_X11_Y14_N0  ; 40      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_CU:CU|present_state.stop_burst_1                                                                                                                            ; FF_X9_Y15_N31      ; 26      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|d_flipflop:hCKen_pipe|dout                                                                                                                            ; FF_X4_Y16_N1       ; 1       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|busy                                                                                                ; LCCOMB_X12_Y15_N6  ; 20      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle                                                                                  ; FF_X12_Y15_N27     ; 13      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                                                         ; FF_X12_Y15_N21     ; 24      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|_~1 ; LCCOMB_X16_Y17_N2  ; 11      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|decoder_2bit:dec|Mux2~0                                                                             ; LCCOMB_X9_Y14_N12  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|decoder_2bit:dec|Mux2~1                                                                             ; LCCOMB_X9_Y14_N24  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|decoder_2bit:dec|Mux2~2                                                                             ; LCCOMB_X9_Y14_N4   ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|din00_enable                                                                                        ; LCCOMB_X9_Y14_N30  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|effective_burstlen_cnt_clear~0                                                                      ; LCCOMB_X12_Y15_N22 ; 12      ; Sync. load    ; no     ; --                   ; --               ; --                        ;
-; clk                                                                                                                                                                               ; PIN_22             ; 14      ; Clock         ; no     ; --                   ; --               ; --                        ;
-; clk                                                                                                                                                                               ; PIN_22             ; 229     ; Clock         ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; hram_RWDS                                                                                                                                                                         ; PIN_10             ; 94      ; Clock         ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; reset_n                                                                                                                                                                           ; LCCOMB_X14_Y15_N2  ; 53      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                                                                                              ; Location          ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; avs_to_hram_converter_CU:CU|WideOr11                                                                                                                                              ; LCCOMB_X4_Y23_N2  ; 17      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_CU:CU|WideOr12~0                                                                                                                                            ; LCCOMB_X9_Y22_N30 ; 18      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_CU:CU|WideOr12~3                                                                                                                                            ; LCCOMB_X6_Y25_N2  ; 24      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_CU:CU|WideOr14                                                                                                                                              ; LCCOMB_X4_Y23_N26 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_CU:CU|WideOr20~2                                                                                                                                            ; LCCOMB_X4_Y23_N24 ; 8       ; Output enable ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_CU:CU|cmd_load~0                                                                                                                                            ; LCCOMB_X6_Y23_N4  ; 40      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_CU:CU|present_state.stop_burst_1                                                                                                                            ; FF_X4_Y23_N15     ; 26      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|d_flipflop:hCKen_pipe|dout                                                                                                                            ; FF_X1_Y16_N17     ; 1       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|busy                                                                                                ; LCCOMB_X9_Y22_N26 ; 20      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle                                                                                  ; FF_X9_Y22_N25     ; 13      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                                                         ; FF_X9_Y22_N5      ; 24      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|_~1 ; LCCOMB_X14_Y23_N4 ; 11      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|decoder_2bit:dec|Mux2~0                                                                             ; LCCOMB_X9_Y24_N24 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|decoder_2bit:dec|Mux2~1                                                                             ; LCCOMB_X9_Y24_N20 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|decoder_2bit:dec|Mux2~2                                                                             ; LCCOMB_X9_Y24_N16 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|din00_enable                                                                                        ; LCCOMB_X9_Y24_N22 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|effective_burstlen_cnt_clear~0                                                                      ; LCCOMB_X14_Y23_N2 ; 12      ; Sync. load    ; no     ; --                   ; --               ; --                        ;
+; clk                                                                                                                                                                               ; PIN_22            ; 14      ; Clock         ; no     ; --                   ; --               ; --                        ;
+; clk                                                                                                                                                                               ; PIN_22            ; 229     ; Clock         ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; hram_RWDS                                                                                                                                                                         ; PIN_10            ; 94      ; Clock         ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; reset_n                                                                                                                                                                           ; LCCOMB_X8_Y25_N26 ; 53      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -827,7 +827,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                                                                   ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF  ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 3            ; 11           ; 3            ; 11           ; yes                    ; no                      ; yes                    ; yes                     ; 33   ; 3                           ; 11                          ; 3                           ; 11                          ; 33                  ; 1    ; None ; M9K_X22_Y17_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 3            ; 11           ; 3            ; 11           ; yes                    ; no                      ; yes                    ; yes                     ; 33   ; 3                           ; 11                          ; 3                           ; 11                          ; 33                  ; 1    ; None ; M9K_X22_Y26_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +----------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -837,51 +837,50 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 636 / 71,559 ( < 1 % ) ;
-; C16 interconnects     ; 20 / 2,597 ( < 1 % )   ;
-; C4 interconnects      ; 447 / 46,848 ( < 1 % ) ;
-; Direct links          ; 151 / 71,559 ( < 1 % ) ;
+; Block interconnects   ; 633 / 71,559 ( < 1 % ) ;
+; C16 interconnects     ; 11 / 2,597 ( < 1 % )   ;
+; C4 interconnects      ; 508 / 46,848 ( 1 % )   ;
+; Direct links          ; 139 / 71,559 ( < 1 % ) ;
 ; Global clocks         ; 3 / 20 ( 15 % )        ;
-; Local interconnects   ; 202 / 24,624 ( < 1 % ) ;
-; R24 interconnects     ; 19 / 2,496 ( < 1 % )   ;
-; R4 interconnects      ; 386 / 62,424 ( < 1 % ) ;
+; Local interconnects   ; 206 / 24,624 ( < 1 % ) ;
+; R24 interconnects     ; 11 / 2,496 ( < 1 % )   ;
+; R4 interconnects      ; 443 / 62,424 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 8.81) ; Number of LABs  (Total = 62) ;
-+--------------------------------------------+------------------------------+
-; 1                                          ; 14                           ;
-; 2                                          ; 6                            ;
-; 3                                          ; 4                            ;
-; 4                                          ; 2                            ;
-; 5                                          ; 1                            ;
-; 6                                          ; 0                            ;
-; 7                                          ; 1                            ;
-; 8                                          ; 1                            ;
-; 9                                          ; 0                            ;
-; 10                                         ; 2                            ;
-; 11                                         ; 4                            ;
-; 12                                         ; 1                            ;
-; 13                                         ; 1                            ;
-; 14                                         ; 1                            ;
-; 15                                         ; 7                            ;
-; 16                                         ; 17                           ;
-+--------------------------------------------+------------------------------+
++----------------------------------------------------------------------------+
+; LAB Logic Elements                                                         ;
++---------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 11.20) ; Number of LABs  (Total = 49) ;
++---------------------------------------------+------------------------------+
+; 1                                           ; 6                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 4                            ;
+; 13                                          ; 2                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 20                           ;
++---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.18) ; Number of LABs  (Total = 62) ;
+; LAB-wide Signals  (Average = 1.39) ; Number of LABs  (Total = 49) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 9                            ;
-; 1 Clock                            ; 31                           ;
-; 1 Clock enable                     ; 11                           ;
-; 1 Sync. load                       ; 1                            ;
-; 2 Clock enables                    ; 15                           ;
+; 1 Clock                            ; 29                           ;
+; 1 Clock enable                     ; 8                            ;
+; 2 Clock enables                    ; 16                           ;
 ; 2 Clocks                           ; 6                            ;
 +------------------------------------+------------------------------+
 
@@ -889,39 +888,39 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 13.55) ; Number of LABs  (Total = 62) ;
+; Number of Signals Sourced  (Average = 17.22) ; Number of LABs  (Total = 49) ;
 +----------------------------------------------+------------------------------+
-; 0                                            ; 4                            ;
-; 1                                            ; 11                           ;
-; 2                                            ; 5                            ;
-; 3                                            ; 3                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
+; 0                                            ; 2                            ;
+; 1                                            ; 4                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 2                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 3                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 2                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 3                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 4                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 5                            ;
+; 24                                           ; 3                            ;
+; 25                                           ; 2                            ;
 ; 26                                           ; 3                            ;
 ; 27                                           ; 2                            ;
-; 28                                           ; 5                            ;
+; 28                                           ; 4                            ;
 ; 29                                           ; 0                            ;
-; 30                                           ; 2                            ;
+; 30                                           ; 3                            ;
 ; 31                                           ; 0                            ;
 ; 32                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
@@ -930,66 +929,67 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.08) ; Number of LABs  (Total = 62) ;
+; Number of Signals Sourced Out  (Average = 7.63) ; Number of LABs  (Total = 49) ;
 +-------------------------------------------------+------------------------------+
-; 0                                               ; 4                            ;
-; 1                                               ; 14                           ;
-; 2                                               ; 4                            ;
-; 3                                               ; 3                            ;
-; 4                                               ; 4                            ;
-; 5                                               ; 4                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 2                            ;
+; 0                                               ; 2                            ;
+; 1                                               ; 6                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 5                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 4                            ;
 ; 9                                               ; 3                            ;
 ; 10                                              ; 3                            ;
 ; 11                                              ; 6                            ;
-; 12                                              ; 2                            ;
+; 12                                              ; 5                            ;
 ; 13                                              ; 3                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 3                            ;
+; 14                                              ; 2                            ;
+; 15                                              ; 0                            ;
 ; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 9.24) ; Number of LABs  (Total = 62) ;
-+---------------------------------------------+------------------------------+
-; 0                                           ; 0                            ;
-; 1                                           ; 7                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 2                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 4                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 1                            ;
-; 17                                          ; 1                            ;
-; 18                                          ; 4                            ;
-; 19                                          ; 1                            ;
-; 20                                          ; 1                            ;
-; 21                                          ; 2                            ;
-; 22                                          ; 3                            ;
-; 23                                          ; 1                            ;
-; 24                                          ; 0                            ;
-; 25                                          ; 0                            ;
-; 26                                          ; 0                            ;
-; 27                                          ; 1                            ;
-; 28                                          ; 2                            ;
-; 29                                          ; 0                            ;
-; 30                                          ; 0                            ;
-; 31                                          ; 1                            ;
-+---------------------------------------------+------------------------------+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 11.45) ; Number of LABs  (Total = 49) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 2                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 3                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 2                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 3                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 1                            ;
+; 28                                           ; 1                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 1                            ;
++----------------------------------------------+------------------------------+
 
 
 +------------------------------------------+
@@ -1107,9 +1107,9 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; clk                  ; 129.9             ;
-; I/O             ; hram_RWDS            ; 14.8              ;
-; clk,I/O         ; clk                  ; 5.5               ;
+; I/O             ; clk                  ; 122.2             ;
+; I/O             ; hram_RWDS            ; 14.1              ;
+; clk,I/O         ; clk                  ; 5.1               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1120,106 +1120,106 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                                                                                                   ; Destination Register                                                                                                                                         ; Delay Added in ns ;
 +-----------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; avs_write                                                                                                                         ; avs_to_hram_converter_CU:CU|present_state.restore_burst                                                                                                      ; 2.404             ;
-; avs_address[4]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[4]                                                                                                             ; 2.331             ;
-; avs_address[6]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[6]                                                                                                             ; 2.331             ;
-; avs_address[1]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[1]                                                                                                             ; 2.331             ;
-; avs_address[2]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[2]                                                                                                             ; 2.289             ;
-; avs_address[17]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[17]                                                                                                            ; 2.285             ;
-; avs_address[19]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[19]                                                                                                            ; 2.285             ;
-; avs_address[21]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[21]                                                                                                            ; 2.285             ;
-; avs_address[5]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[5]                                                                                                             ; 2.281             ;
-; avs_address[7]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[7]                                                                                                             ; 2.281             ;
-; avs_address[0]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[0]                                                                                                             ; 2.281             ;
-; avs_address[3]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[3]                                                                                                             ; 2.281             ;
-; avs_address[16]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[16]                                                                                                            ; 2.278             ;
-; avs_address[18]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[18]                                                                                                            ; 2.278             ;
-; avs_address[20]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[20]                                                                                                            ; 2.278             ;
-; avs_address[8]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[8]                                                                                                             ; 2.271             ;
-; avs_burstcount[9]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[9]                                                                                                         ; 2.152             ;
-; avs_read                                                                                                                          ; avs_to_hram_converter_CU:CU|present_state.readmem_prep                                                                                                       ; 2.048             ;
-; hram_DQ[1]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[1]                                                                          ; 2.039             ;
-; avs_burstcount[8]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[8]                                                                                                         ; 2.037             ;
-; avs_burstcount[7]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[7]                                                                                                         ; 2.035             ;
-; avs_burstcount[5]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[5]                                                                                                         ; 2.035             ;
-; avs_writedata[0]                                                                                                                  ; avs_to_hram_converter_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                                                  ; 1.978             ;
-; avs_burstcount[4]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[4]                                                                                                         ; 1.922             ;
-; avs_burstcount[2]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[2]                                                                                                         ; 1.921             ;
-; avs_burstcount[6]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[6]                                                                                                         ; 1.921             ;
-; avs_burstcount[3]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[3]                                                                                                         ; 1.921             ;
-; avs_burstcount[10]                                                                                                                ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[10]                                                                                                        ; 1.907             ;
-; avs_address[11]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[11]                                                                                                            ; 1.902             ;
-; avs_address[15]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[15]                                                                                                            ; 1.902             ;
-; hram_DQ[2]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[2]                                                                          ; 1.895             ;
-; avs_address[10]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[10]                                                                                                            ; 1.895             ;
-; avs_address[14]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[14]                                                                                                            ; 1.895             ;
-; avs_address[13]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[13]                                                                                                            ; 1.895             ;
-; avs_address[9]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[9]                                                                                                             ; 1.890             ;
-; hram_DQ[6]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[6]                                                                          ; 1.888             ;
-; hram_DQ[4]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[4]                                                                          ; 1.888             ;
-; hram_DQ[5]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[5]                                                                          ; 1.882             ;
-; avs_address[12]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[12]                                                                                                            ; 1.876             ;
-; avs_writedata[15]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[15]                                                                                                          ; 1.849             ;
-; hram_DQ[7]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[7]                                                                          ; 1.843             ;
-; avs_writedata[2]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[2]                                                                                                           ; 1.826             ;
-; avs_writedata[1]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[1]                                                                                                           ; 1.826             ;
-; avs_writedata[8]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[8]                                                                                                           ; 1.826             ;
-; avs_beginbursttransfer                                                                                                            ; avs_to_hram_converter_EU:EU|d_flipflop:burst_tracker|dout                                                                                                    ; 1.789             ;
-; avs_writedata[4]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[4]                                                                                                           ; 1.728             ;
-; avs_writedata[9]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[9]                                                                                                           ; 1.728             ;
-; avs_writedata[13]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[13]                                                                                                          ; 1.718             ;
-; avs_writedata[14]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[14]                                                                                                          ; 1.704             ;
-; hram_DQ[3]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[3]                                                                          ; 1.684             ;
-; avs_writedata[10]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[10]                                                                                                          ; 1.668             ;
-; avs_writedata[11]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[11]                                                                                                          ; 1.659             ;
-; hram_DQ[0]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[0]                                                                          ; 1.646             ;
-; avs_writedata[7]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[7]                                                                                                           ; 1.630             ;
-; avs_writedata[6]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[6]                                                                                                           ; 1.626             ;
-; avs_writedata[5]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[5]                                                                                                           ; 1.626             ;
-; avs_writedata[12]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[12]                                                                                                          ; 1.611             ;
-; reset_n                                                                                                                           ; avs_to_hram_converter_CU:CU|present_state.reset                                                                                                              ; 1.483             ;
-; avs_to_hram_converter_CU:CU|present_state.read_virtconf                                                                           ; avs_to_hram_converter_CU:CU|present_state.writemem_prep                                                                                                      ; 1.331             ;
-; avs_to_hram_converter_CU:CU|present_state.idle                                                                                    ; avs_to_hram_converter_CU:CU|present_state.writemem_prep                                                                                                      ; 1.331             ;
-; avs_burstcount[1]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[1]                                                                                                         ; 1.304             ;
-; avs_burstcount[0]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[0]                                                                                                         ; 1.302             ;
-; avs_writedata[3]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[3]                                                                                                           ; 1.293             ;
-; avs_to_hram_converter_EU:EU|sr_flipflop:dpd_tracker|dout                                                                          ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.216             ;
-; avs_address[22]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[23]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[24]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[25]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[26]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[27]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[28]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[29]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[30]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_address[31]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.121             ;
-; avs_to_hram_converter_CU:CU|present_state.stop_burst_1                                                                            ; avs_to_hram_converter_CU:CU|present_state.stop_burst_2                                                                                                       ; 0.284             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception_init                        ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[15]                                                            ; 0.119             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception                             ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[15]                                                            ; 0.115             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[0]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[0]                                                            ; 0.086             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[15]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[15]                                                           ; 0.085             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[14]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[14]                                                           ; 0.085             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[13]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[13]                                                           ; 0.085             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[12]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[12]                                                           ; 0.085             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[11]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[11]                                                           ; 0.085             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[4]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[4]                                                            ; 0.085             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[3]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[3]                                                            ; 0.085             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[2]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[2]                                                            ; 0.085             ;
-; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[1]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[1]                                                            ; 0.085             ;
-; avs_to_hram_converter_CU:CU|present_state.writeburst_last                                                                         ; avs_to_hram_converter_CU:CU|present_state.write_end                                                                                                          ; 0.072             ;
-; avs_to_hram_converter_CU:CU|present_state.writeburst                                                                              ; avs_to_hram_converter_CU:CU|present_state.writeburst_last                                                                                                    ; 0.069             ;
-; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[1] ; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ram_block5a10~porta_address_reg0 ; 0.061             ;
-; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|dffe3a[0]                         ; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ram_block5a10~portb_address_reg0 ; 0.057             ;
-; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[0] ; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ram_block5a10~porta_address_reg0 ; 0.056             ;
-; avs_to_hram_converter_CU:CU|present_state.reset_wait                                                                              ; avs_to_hram_converter_CU:CU|present_state.reset_exit_begin                                                                                                   ; 0.022             ;
-; avs_to_hram_converter_CU:CU|present_state.reset_exit                                                                              ; avs_to_hram_converter_CU:CU|present_state.writeconf1_prep                                                                                                    ; 0.022             ;
-; avs_to_hram_converter_CU:CU|present_state.wait_dpd_out                                                                            ; avs_to_hram_converter_CU:CU|present_state.write_virtconf                                                                                                     ; 0.022             ;
-; avs_to_hram_converter_CU:CU|present_state.idle_burst                                                                              ; avs_to_hram_converter_CU:CU|present_state.restore_burst                                                                                                      ; 0.022             ;
-; avs_to_hram_converter_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                       ; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                                                        ; 0.022             ;
-; avs_to_hram_converter_CU:CU|present_state.dummycmd_end                                                                            ; avs_to_hram_converter_CU:CU|present_state.wait_dpd_out                                                                                                       ; 0.021             ;
-; avs_to_hram_converter_CU:CU|present_state.stop_burst_2                                                                            ; avs_to_hram_converter_CU:CU|present_state.idle_burst                                                                                                         ; 0.021             ;
-; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                             ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 0.021             ;
+; avs_address[9]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[9]                                                                                                             ; 2.343             ;
+; avs_address[8]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[8]                                                                                                             ; 2.293             ;
+; avs_address[18]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[18]                                                                                                            ; 2.293             ;
+; avs_address[4]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[4]                                                                                                             ; 2.282             ;
+; avs_address[5]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[5]                                                                                                             ; 2.282             ;
+; avs_address[6]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[6]                                                                                                             ; 2.282             ;
+; avs_address[7]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[7]                                                                                                             ; 2.282             ;
+; avs_address[0]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[0]                                                                                                             ; 2.282             ;
+; avs_address[1]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[1]                                                                                                             ; 2.282             ;
+; avs_address[2]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[2]                                                                                                             ; 2.282             ;
+; avs_address[3]                                                                                                                    ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[3]                                                                                                             ; 2.282             ;
+; avs_writedata[1]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[1]                                                                                                           ; 2.154             ;
+; avs_writedata[2]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[2]                                                                                                           ; 2.104             ;
+; avs_writedata[8]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[8]                                                                                                           ; 2.104             ;
+; hram_DQ[0]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[0]                                                                          ; 2.068             ;
+; hram_DQ[5]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[5]                                                                          ; 2.046             ;
+; avs_burstcount[2]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[2]                                                                                                         ; 2.012             ;
+; avs_burstcount[9]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[9]                                                                                                         ; 2.008             ;
+; avs_burstcount[10]                                                                                                                ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[10]                                                                                                        ; 2.005             ;
+; avs_read                                                                                                                          ; avs_to_hram_converter_CU:CU|present_state.readmem_prep                                                                                                       ; 1.994             ;
+; avs_burstcount[3]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[3]                                                                                                         ; 1.963             ;
+; avs_address[10]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[10]                                                                                                            ; 1.957             ;
+; avs_burstcount[6]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[6]                                                                                                         ; 1.949             ;
+; avs_address[11]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[11]                                                                                                            ; 1.942             ;
+; avs_address[16]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[16]                                                                                                            ; 1.939             ;
+; avs_address[17]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[17]                                                                                                            ; 1.939             ;
+; avs_address[20]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[20]                                                                                                            ; 1.939             ;
+; avs_address[21]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[21]                                                                                                            ; 1.939             ;
+; avs_writedata[0]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[0]                                                                                                           ; 1.930             ;
+; avs_writedata[15]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[15]                                                                                                          ; 1.917             ;
+; avs_address[12]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[12]                                                                                                            ; 1.902             ;
+; avs_address[19]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[19]                                                                                                            ; 1.900             ;
+; avs_address[14]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[14]                                                                                                            ; 1.888             ;
+; avs_address[15]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[15]                                                                                                            ; 1.888             ;
+; avs_address[13]                                                                                                                   ; avs_to_hram_converter_EU:EU|reg:addr_reg|dout[13]                                                                                                            ; 1.888             ;
+; hram_DQ[4]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[4]                                                                          ; 1.879             ;
+; avs_writedata[12]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[12]                                                                                                          ; 1.802             ;
+; avs_writedata[14]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[14]                                                                                                          ; 1.798             ;
+; avs_writedata[5]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[5]                                                                                                           ; 1.797             ;
+; avs_writedata[11]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[11]                                                                                                          ; 1.796             ;
+; hram_DQ[1]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[1]                                                                          ; 1.783             ;
+; avs_burstcount[8]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[8]                                                                                                         ; 1.748             ;
+; avs_burstcount[0]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[0]                                                                                                         ; 1.746             ;
+; avs_burstcount[7]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[7]                                                                                                         ; 1.744             ;
+; hram_DQ[2]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[2]                                                                          ; 1.733             ;
+; avs_burstcount[4]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[4]                                                                                                         ; 1.705             ;
+; avs_write                                                                                                                         ; avs_to_hram_converter_CU:CU|present_state.restore_burst                                                                                                      ; 1.690             ;
+; hram_DQ[3]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[3]                                                                          ; 1.653             ;
+; avs_beginbursttransfer                                                                                                            ; avs_to_hram_converter_EU:EU|d_flipflop:burst_tracker|dout                                                                                                    ; 1.641             ;
+; avs_writedata[13]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[13]                                                                                                          ; 1.625             ;
+; avs_writedata[7]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[7]                                                                                                           ; 1.581             ;
+; hram_DQ[6]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[6]                                                                          ; 1.563             ;
+; avs_writedata[6]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[6]                                                                                                           ; 1.561             ;
+; avs_burstcount[5]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[5]                                                                                                         ; 1.529             ;
+; avs_writedata[3]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[3]                                                                                                           ; 1.505             ;
+; avs_burstcount[1]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:burstcnt_reg|dout[1]                                                                                                         ; 1.472             ;
+; reset_n                                                                                                                           ; avs_to_hram_converter_CU:CU|present_state.writeconf_CA1                                                                                                      ; 1.380             ;
+; hram_DQ[7]                                                                                                                        ; avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb|dout[7]                                                                          ; 1.345             ;
+; avs_writedata[10]                                                                                                                 ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[10]                                                                                                          ; 1.283             ;
+; avs_to_hram_converter_CU:CU|present_state.read_virtconf                                                                           ; avs_to_hram_converter_CU:CU|present_state.writemem_prep                                                                                                      ; 1.278             ;
+; avs_to_hram_converter_CU:CU|present_state.idle                                                                                    ; avs_to_hram_converter_CU:CU|present_state.writemem_prep                                                                                                      ; 1.278             ;
+; avs_writedata[4]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[4]                                                                                                           ; 1.198             ;
+; avs_writedata[9]                                                                                                                  ; avs_to_hram_converter_EU:EU|reg:datain_reg|dout[9]                                                                                                           ; 1.198             ;
+; avs_to_hram_converter_EU:EU|sr_flipflop:dpd_tracker|dout                                                                          ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.132             ;
+; avs_address[22]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[23]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[24]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[25]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[26]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[27]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[28]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[29]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[30]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_address[31]                                                                                                                   ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 1.011             ;
+; avs_to_hram_converter_CU:CU|present_state.writeburst                                                                              ; avs_to_hram_converter_CU:CU|present_state.writeburst_last                                                                                                    ; 0.074             ;
+; avs_to_hram_converter_CU:CU|present_state.writeburst_last                                                                         ; avs_to_hram_converter_CU:CU|present_state.write_end                                                                                                          ; 0.074             ;
+; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[0] ; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ram_block5a10~porta_address_reg0 ; 0.053             ;
+; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[1] ; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ram_block5a10~porta_address_reg0 ; 0.053             ;
+; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|dffe3a[0]                         ; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ram_block5a10~portb_address_reg0 ; 0.051             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[15]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[15]                                                           ; 0.014             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[14]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[14]                                                           ; 0.014             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[13]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[13]                                                           ; 0.014             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[12]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[12]                                                           ; 0.014             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[11]                                 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[11]                                                           ; 0.014             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[4]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[4]                                                            ; 0.014             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[3]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[3]                                                            ; 0.014             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[1]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[1]                                                            ; 0.014             ;
+; avs_to_hram_converter_CU:CU|present_state.read_wait_1                                                                             ; avs_to_hram_converter_CU:CU|present_state.read_wait_2                                                                                                        ; 0.014             ;
+; avs_to_hram_converter_CU:CU|present_state.writeconf0_end                                                                          ; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                                                        ; 0.014             ;
+; avs_to_hram_converter_CU:CU|present_state.dummycmd                                                                                ; avs_to_hram_converter_CU:CU|present_state.dummycmd_last                                                                                                      ; 0.014             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[0]                                  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe|dout[0]                                                            ; 0.013             ;
+; avs_to_hram_converter_CU:CU|present_state.reset_wait                                                                              ; avs_to_hram_converter_CU:CU|present_state.reset_exit_begin                                                                                                   ; 0.013             ;
+; avs_to_hram_converter_CU:CU|present_state.reset_exit                                                                              ; avs_to_hram_converter_CU:CU|present_state.writeconf1_prep                                                                                                    ; 0.013             ;
+; avs_to_hram_converter_CU:CU|present_state.wait_dpd_out                                                                            ; avs_to_hram_converter_CU:CU|present_state.write_virtconf                                                                                                     ; 0.013             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception_init                        ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception                                                        ; 0.013             ;
+; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|d_flipflop:busy_pipe|dout                           ; avs_to_hram_converter_CU:CU|present_state.read_wait_2                                                                                                        ; 0.013             ;
+; avs_to_hram_converter_CU:CU|present_state.idle_burst                                                                              ; avs_to_hram_converter_CU:CU|present_state.restore_burst                                                                                                      ; 0.013             ;
+; avs_to_hram_converter_CU:CU|present_state.writeconf_CA2                                                                           ; avs_to_hram_converter_CU:CU|present_state.writeconf1                                                                                                         ; 0.013             ;
+; avs_to_hram_converter_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                       ; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                                                        ; 0.013             ;
+; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                             ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                               ; 0.013             ;
 +-----------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
@@ -1303,21 +1303,22 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X10_Y11 to location X20_Y22
+    Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X0_Y23 to location X9_Y34
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
+    Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.34 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/output_files/avs_to_hram_converter.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 707 megabytes
-    Info: Processing ended: Thu Nov 30 15:30:18 2023
+    Info: Peak virtual memory: 677 megabytes
+    Info: Processing ended: Thu Nov 30 16:11:05 2023
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:11
 

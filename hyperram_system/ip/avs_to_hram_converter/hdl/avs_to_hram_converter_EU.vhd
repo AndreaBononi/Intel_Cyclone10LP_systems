@@ -30,6 +30,7 @@ port
 	-- hram signals 	
 	hram_RESET_n                  : out   std_logic;
 	hram_CK                       : out   std_logic;
+  hram_CK_n                     : out   std_logic;
 	hram_DQ                       : inout std_logic_vector(7 downto 0);
 	hram_RWDS                     : inout std_logic;
 	hram_CS_n                     : out   std_logic;
@@ -350,8 +351,7 @@ architecture rtl of avs_to_hram_converter_EU is
 
   -- SIGNALS -------------------------------------------------------------------------------------------------------- 
   signal clk90              : std_logic;
-  signal rwds90             : std_logic;
-  signal rwds360            : std_logic;
+  signal clk_gater_outclk   : std_logic;
 	signal hCK_enable					: std_logic;
   signal synch_cnt_up_downN : std_logic;
   signal fakeburst          : std_logic;
@@ -586,8 +586,11 @@ architecture rtl of avs_to_hram_converter_EU is
       inclk   => clk90,
       -- ena     => hCK_enable,
       ena     => hCK_enable,
-      outclk  => hram_CK
+      outclk  => clk_gater_outclk
     ); --------------------------------------------------------------------------------------------------------------
+
+    hram_CK <= clk_gater_outclk;
+    hram_CK_n <= not clk_gater_outclk;
 
     -- RWDS tristate buffer -----------------------------------------------------------------------------------------
     RWDS_buffer : tristate_buffer

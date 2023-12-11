@@ -24,7 +24,8 @@ MOST IMPORTANT FILES:
 -- OCRAM initialization IP file ---------------- ./SBT_workspace/basic_system/mem_init/meminit.qip
 -- OCRAM initialization file ------------------- ./SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex
 -- testbench file of the whole system ---------- ./testbench/basic_system_testbench.vhd
--- simulation file of the whole system --------- ./simulation/basic_system.do
+-- simulation file (rtl) of the whole system --- ./simulation_rtl/basic_system.do
+-- simulation file (gate) of the whole system -- ./simulation_gate/basic_system.do
 
 
 	

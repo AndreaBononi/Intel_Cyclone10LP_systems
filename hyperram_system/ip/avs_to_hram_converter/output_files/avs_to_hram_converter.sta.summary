@@ -3,59 +3,59 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk90'
-Slack : -0.015
-TNS   : -0.015
+Slack : 1.572
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'hram_RWDS'
-Slack : 1.526
+Slack : 1.697
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : 2.720
+Slack : 2.595
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.448
+Slack : 0.446
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'hram_RWDS'
-Slack : 0.455
+Slack : 0.454
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk90'
-Slack : 3.907
+Slack : 7.530
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'clk'
-Slack : 6.678
+Slack : 7.279
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'clk'
-Slack : 0.827
+Slack : 0.679
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
-Slack : 4.633
+Slack : 4.595
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hram_RWDS'
-Slack : 4.707
+Slack : 4.711
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk90'
 Slack : 4.822
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'clk90'
-Slack : 0.488
+Type  : Slow 1200mV 0C Model Setup 'hram_RWDS'
+Slack : 1.893
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'hram_RWDS'
-Slack : 1.731
+Type  : Slow 1200mV 0C Model Setup 'clk90'
+Slack : 2.222
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : 3.153
+Slack : 2.973
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
@@ -67,43 +67,43 @@ Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk90'
-Slack : 3.454
+Slack : 6.945
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'clk'
-Slack : 6.626
+Slack : 7.239
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'clk'
-Slack : 0.775
+Slack : 0.641
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : 4.588
+Slack : 4.541
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hram_RWDS'
-Slack : 4.713
+Slack : 4.710
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk90'
 Slack : 4.839
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'clk90'
-Slack : 2.027
+Type  : Fast 1200mV 0C Model Setup 'hram_RWDS'
+Slack : 3.309
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'hram_RWDS'
-Slack : 3.243
+Type  : Fast 1200mV 0C Model Setup 'clk90'
+Slack : 4.692
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : 6.199
+Slack : 6.134
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.159
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'hram_RWDS'
@@ -111,15 +111,15 @@ Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk90'
-Slack : 1.871
+Slack : 4.893
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'clk'
-Slack : 7.368
+Slack : 7.678
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'clk'
-Slack : 0.853
+Slack : 0.799
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -127,7 +127,7 @@ Slack : 4.350
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hram_RWDS'
-Slack : 4.364
+Slack : 4.365
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk90'

@@ -1,7 +1,8 @@
 -- BRIEF DESCRIPTION: driver for sycnhronizer testbench
 -- COMMENTS:
--- it provides the synch_strobe signal to the DUT with a configurable shift (strobe_shift) with respect to the clock
--- it provides the input data to the DUT (synch_din) center-aligned with synch_strobe (only after an initial reset)
+-- it provides the strobe (synch_strobe) to the DUT with a configurable shift (strobe_shift) with respect to the clock
+-- it provides the DUT input (synch_din) center-aligned with the rising edge of synch_strobe (with the exception of the first edge)
+-- the input is provided to the DUT only after an initial reset
 -- it generates the start_sim signal ('0' at the beginning, '1' after the initial reset)
 -- it generates the stop_sim signal ('0' until the end of the input file, '1' after)
 -- the sequence of 16-bit input data (one per row) is stored in the "synchronizer_in.txt" file
@@ -67,18 +68,11 @@ architecture tb of synchronizer_driver is
 						end loop;
 						valid_line := '0';
 						read(inputline, input_data);
-						strobe_on <= '1' after (strobe_shift + clock_period/2);
+            strobe_on <= '1';
 						synch_din <= input_data after (strobe_shift + clock_period/2);
 					end if;
 				else
 					if (rising_edge(clk)) then
-						--strobe_off <= '1' after (strobe_shift + clock_period/2);
-						--delay_ending := delay_ending + 1;
-						--if (delay_ending = 10) then
-							--if (synch_busy = '0') then
-								--stop_sim <= '1';
-							--end if;
-						--end if;
             if (synch_busy = '0') then
 							delay_ending := delay_ending + 1;
               if (delay_ending = 2) then
@@ -93,7 +87,7 @@ architecture tb of synchronizer_driver is
 			end if;
 		end process input_driving;
 		
-		strobe <= transport clk after (strobe_shift + clock_period);
+    strobe <= transport clk after strobe_shift;
 		synch_strobe <= strobe and strobe_on and (not strobe_off);
 
 end tb;

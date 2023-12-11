@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition"
 
--- DATE "11/14/2023 12:02:38"
+-- DATE "12/07/2023 11:39:42"
 
 -- 
 -- Device: Altera 10CL025YE144C8G Package TQFP144

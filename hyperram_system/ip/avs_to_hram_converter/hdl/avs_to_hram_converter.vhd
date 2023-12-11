@@ -30,6 +30,7 @@ port
 	-- hram signals 	
 	hram_RESET_n           : out   std_logic;
 	hram_CK                : out   std_logic;
+  hram_CK_n              : out   std_logic;
 	hram_DQ                : inout std_logic_vector(7 downto 0);
 	hram_RWDS              : inout std_logic;
 	hram_CS_n              : out   std_logic 
@@ -65,6 +66,7 @@ architecture rtl of avs_to_hram_converter is
     -- hram signals 	
     hram_RESET_n                  : out   std_logic;
     hram_CK                       : out   std_logic;
+    hram_CK_n                     : out   std_logic;
     hram_DQ                       : inout std_logic_vector(7 downto 0);
     hram_RWDS                     : inout std_logic;
     hram_CS_n                     : out   std_logic;
@@ -270,6 +272,7 @@ architecture rtl of avs_to_hram_converter is
       avs_burstcount                => avs_burstcount,
       hram_RESET_n                  => hram_RESET_n,
       hram_CK                       => hram_CK,
+      hram_CK_n                     => hram_CK_n,
       hram_DQ                       => hram_DQ,
       hram_RWDS                     => hram_RWDS,
       hram_CS_n                     => hram_CS_n,

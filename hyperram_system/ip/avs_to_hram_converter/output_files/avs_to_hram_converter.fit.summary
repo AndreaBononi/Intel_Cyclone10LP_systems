@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Nov 30 15:30:18 2023
+Fitter Status : Successful - Thu Nov 30 16:11:05 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : avs_to_hram_converter
 Top-level Entity Name : avs_to_hram_converter
 Family : Cyclone 10 LP
 Device : 10CL025YE144C8G
 Timing Models : Final
-Total logic elements : 462 / 24,624 ( 2 % )
+Total logic elements : 465 / 24,624 ( 2 % )
     Total combinational functions : 336 / 24,624 ( 1 % )
     Dedicated logic registers : 326 / 24,624 ( 1 % )
 Total registers : 326
