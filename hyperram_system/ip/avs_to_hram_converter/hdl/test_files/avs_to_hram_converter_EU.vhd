@@ -30,8 +30,11 @@ port
 	-- hram signals 	
 	hram_RESET_n                  : out   std_logic;
 	hram_CK                       : out   std_logic;
+  hram_CK_n                     : out   std_logic;
 	hram_DQ                       : inout std_logic_vector(7 downto 0);
-	hram_RWDS                     : inout std_logic;
+	hram_RWDS_out                 : out   std_logic;
+  hram_RWDS_in                  : in    std_logic;
+  hram_RWDS_in_90shift          : in    std_logic;
 	hram_CS_n                     : out   std_logic;
   -- control signals
   waitrequest                   : in    std_logic;
@@ -61,11 +64,12 @@ port
   set_initialization_state      : in    std_logic;
   check_latency	                : in	  std_logic;
   force_RWDS_low                : in	  std_logic;
-  CK_gating_enable_n            : in    std_logic;
+  hCK_gating_enable_n           : in    std_logic;
   set_dpd_status                : in    std_logic;
   clear_dpd_status_n            : in    std_logic;
   deadline_tim_enable           : in    std_logic;
   deadline_tim_clear_n          : in    std_logic;
+  hCKen_pipe_clear_n            : in    std_logic;
   hbus_RESET_n                  : in    std_logic;
   hbus_CS_n                     : in    std_logic;	
   -- status signals
@@ -188,7 +192,7 @@ architecture rtl of avs_to_hram_converter_EU is
     clear_n		  : in 	std_logic;
     tim_3			  : out std_logic;
     tim_7			  : out std_logic;
-    tim_20		  : out std_logic;
+    tim_21		  : out std_logic;
     tim_1000    : out std_logic;
     tim_15000		: out std_logic
   );
@@ -258,11 +262,11 @@ architecture rtl of avs_to_hram_converter_EU is
   end component; ---------------------------------------------------------------------------------------------------- 
 
   -- COMPONENT: clock gater ----------------------------------------------------------------------------------------- 
-  component clk_gater is
+  component clkctrl is
 	port 
   (
 		inclk   : in  std_logic := '0';
-		ena     : in  std_logic := '0';
+		ena     : in  std_logic := '0';   -- synchronous with the FALLING EDGE of inclk
 		outclk  : out std_logic
 	);
   end component; ---------------------------------------------------------------------------------------------------- 
@@ -341,7 +345,7 @@ architecture rtl of avs_to_hram_converter_EU is
 		result	: out std_logic_vector (21 downto 0)
 	);
   end component; ----------------------------------------------------------------------------------------------------
-	
+
   -- CONSTANTS ------------------------------------------------------------------------------------------------------ 
   constant config0_addr: std_logic_vector(31 downto 0) := "00000000000000000000100000000000";
 	constant config1_addr: std_logic_vector(31 downto 0) := "00000000000000000000100000000001";
@@ -349,9 +353,8 @@ architecture rtl of avs_to_hram_converter_EU is
 
   -- SIGNALS -------------------------------------------------------------------------------------------------------- 
   signal clk90              : std_logic;
-  signal CK_enable_90       : std_logic;
-  signal rwds90             : std_logic;
-  signal rwds360            : std_logic;
+  signal clk_gater_outclk   : std_logic;
+	signal hCK_enable					: std_logic;
   signal synch_cnt_up_downN : std_logic;
   signal fakeburst          : std_logic;
   signal burst_tracker_out  : std_logic;
@@ -524,7 +527,7 @@ architecture rtl of avs_to_hram_converter_EU is
     ); --------------------------------------------------------------------------------------------------------------
 
     -- CA unpacker --------------------------------------------------------------------------------------------------
-    CA_unpacked_inst : CA_unpacker
+    CA_unpacker_inst : CA_unpacker
     port map
     (
       clk           => clk,
@@ -566,22 +569,30 @@ architecture rtl of avs_to_hram_converter_EU is
       c0				=> clk90
     ); --------------------------------------------------------------------------------------------------------------
 
-    -- gating delayer (90°) -----------------------------------------------------------------------------------------
-    clkena_90: delayer_90
+    -- gating enable pipeline register ------------------------------------------------------------------------------
+    hCKen_pipe : d_flipflop 
     port map
     (
-      din		  => CK_gating_enable_n,
-      dout  	=> clkena_90
-    ); --------------------------------------------------------------------------------------------------------------
+      clk				=> clk, 
+      enable		=> '1', 
+      clear_n		=> hCKen_pipe_clear_n, 
+      reset_n		=> '1',	
+      din				=> hCK_gating_enable_n, 
+      dout			=> hCK_enable
+    ); -------------------------------------------------------------------------------------------------------------
 
     -- clock gater --------------------------------------------------------------------------------------------------
-    clk_gater_inst : clk_gater
+    clk_gater_inst : clkctrl
     port map
     (
       inclk   => clk90,
-      ena     => clkena_90,
-      outclk  => hram_CK
+      -- ena     => hCK_enable,
+      ena     => hCK_enable,
+      outclk  => clk_gater_outclk
     ); --------------------------------------------------------------------------------------------------------------
+
+    hram_CK <= clk_gater_outclk;
+    hram_CK_n <= not clk_gater_outclk;
 
     -- RWDS tristate buffer -----------------------------------------------------------------------------------------
     RWDS_buffer : tristate_buffer
@@ -593,11 +604,9 @@ architecture rtl of avs_to_hram_converter_EU is
     (
       enable		=> force_RWDS_low,
       din   		=> (others => '0'),
-      dout  		=> RWDS_buffer_out
+      dout  		=> hram_RWDS_out
     ); --------------------------------------------------------------------------------------------------------------
 		
-		hram_RWDS <= RWDS_buffer_out(0);
-
     -- RWDS tracker -------------------------------------------------------------------------------------------------
     rwds_tracker : d_flipflop
     port map
@@ -606,31 +615,15 @@ architecture rtl of avs_to_hram_converter_EU is
       enable		=> check_latency,
       clear_n		=> '1',
       reset_n		=> '1',
-      din				=> hram_RWDS,
+      din				=> hram_RWDS_in,
       dout			=> doubled_latency
-    ); --------------------------------------------------------------------------------------------------------------
-
-    -- RWDS delayer (90°) -------------------------------------------------------------------------------------------
-    RWDS_90: delayer_90
-    port map
-    (
-      din		  => hram_RWDS,
-      dout  	=> rwds90
-    ); --------------------------------------------------------------------------------------------------------------
-
-    -- RWDS delayer (360°) ------------------------------------------------------------------------------------------
-    RWDS_360: delayer_360
-    port map
-    (
-      din 		=> hram_RWDS,
-      dout		=> rwds360
     ); --------------------------------------------------------------------------------------------------------------
 
     -- readdata converter (DDR to SDR) ------------------------------------------------------------------------------
     readdata_converter : DDR_to_SDR_converter
     port map
     (
-      clk       => rwds90,
+      clk       => hram_RWDS_in_90shift,
       enable		=> RWDS_sampling_enable,
       DDR_in		=> hram_DQ,
       SDR_out		=> readdata_SDR
@@ -646,7 +639,7 @@ architecture rtl of avs_to_hram_converter_EU is
       rst_n							  => reset_n,
       synch_enable        => synch_enable,
       synch_clear_n       => synch_clear_n,
-      synch_strobe        => rwds360,
+      synch_strobe        => hram_RWDS_in,
       synch_validout      => synch_validout,
       synch_busy          => synch_busy,
       synch_din           => readdata_SDR,
@@ -837,7 +830,7 @@ architecture rtl of avs_to_hram_converter_EU is
       clear_n		  => deadline_tim_clear_n,
       tim_3			  => t_acc1,
       tim_7			  => t_acc2,
-      tim_20		  => t_dpdcsl,
+      tim_21		  => t_dpdcsl,
       tim_1000    => t_dpdin,
       tim_15000	  => t_dpdout
     ); --------------------------------------------------------------------------------------------------------------

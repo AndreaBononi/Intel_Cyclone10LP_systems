@@ -1,6 +1,6 @@
 -- BRIEF DESCRITPION: monitor (output storage) for synchronizer testbench
 -- COMMENTS:
--- the sycnhronized values at the output of the synchronizer are stored in the output file ("synchronizer_out.txt")
+-- the synchronized values at the output of the synchronizer are stored in the output file ("synchronizer_out.txt")
 -- it is necessary to set the reset signal at least once in order to start storing data
 -- start_sim must be equal to '0' before starting the simulation, then it must remains equal to '1'
 -- stop_sim must remain equal to '0' up to the moment in which the simulation ends, when it becomes equal to '1'
@@ -10,7 +10,6 @@ use 			ieee.std_logic_1164.all;
 use 			ieee.numeric_std.all;
 use 			ieee.std_logic_unsigned.all;
 use 			ieee.std_logic_textio.all;
-
 library 	std;
 use 			std.textio.all;
 
@@ -35,13 +34,13 @@ architecture tb of synchronizer_monitor is
 		variable outputline					: line;
 		variable output_file_stat		: file_open_status;
 		begin
-			file_open(output_file_stat, output_file, "./synchronizer_out.txt", write_mode);
+			file_open( output_file_stat, output_file, "./synchronizer_out.txt", write_mode );
 			if (stop_sim = '0') then
 				if (start_sim = '1') then
 					if (rising_edge(clk)) then
 						if (synch_validout = '1') then
-							write(outputline, synch_dout);
-							writeline(output_file, outputline);
+							write( outputline, synch_dout );
+							writeline( output_file, outputline );
 						end if;
 					end if;
 				end if;
