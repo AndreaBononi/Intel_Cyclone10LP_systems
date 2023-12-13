@@ -1,0 +1,331 @@
+Reading pref.tcl
+
+# 2020.1
+
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/d_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity d_flipflop
+# -- Compiling architecture behavior of d_flipflop
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/t_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity t_flipflop
+# -- Compiling architecture behavior of t_flipflop
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/sr_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sr_flipflop
+# -- Compiling architecture behavior of sr_flipflop
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg
+# -- Compiling architecture behavior of reg
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/reg_negedge.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg_negedge
+# -- Compiling architecture behavior of reg_negedge
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux_2to1
+# -- Compiling architecture behavior of mux_2to1
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/mux_4to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux_4to1
+# -- Compiling architecture behavior of mux_4to1
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/decoder_2bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder_2bit
+# -- Compiling architecture behavior of decoder_2bit
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/comparator_Nbit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity comparator_Nbit
+# -- Compiling architecture behavior of comparator_Nbit
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/counter_Nbit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_Nbit
+# -- Compiling architecture rtl of counter_Nbit
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/counter_11bit_updown/counter_11bit_updown.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_11bit_updown
+# -- Compiling architecture SYN of counter_11bit_updown
+# End time: 17:32:28 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:28 on Dec 13,2023
+# vcom ../hdl/synchronizer_EU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer_EU
+# -- Compiling architecture rtl of synchronizer_EU
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/synchronizer_CU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer_CU
+# -- Compiling architecture fsm of synchronizer_CU
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer
+# -- Compiling architecture rtl of synchronizer
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/CA_builder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CA_builder
+# -- Compiling architecture rtl of CA_builder
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/CA_unpacker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CA_unpacker
+# -- Compiling architecture rtl of CA_unpacker
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/conf_builder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity conf_builder
+# -- Compiling architecture rtl of conf_builder
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/DDR_to_SDR_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DDR_to_SDR_converter
+# -- Compiling architecture rtl of DDR_to_SDR_converter
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/SDR_to_DDR_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDR_to_DDR_converter
+# -- Compiling architecture rtl of SDR_to_DDR_converter
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/timer_14bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer_14bit
+# -- Compiling architecture rtl of timer_14bit
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/tristate_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tristate_buffer
+# -- Compiling architecture behavior of tristate_buffer
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/avs_to_hram_converter_CU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity avs_to_hram_converter_CU
+# -- Compiling architecture fsm of avs_to_hram_converter_CU
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/test_files/avs_to_hram_converter_EU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity avs_to_hram_converter_EU
+# -- Compiling architecture rtl of avs_to_hram_converter_EU
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ../hdl/test_files/avs_to_hram_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity avs_to_hram_converter
+# -- Compiling architecture rtl of avs_to_hram_converter
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ./tb/clk_rst_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_rst_generator
+# -- Compiling architecture behavior of clk_rst_generator
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ./tb/driver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity driver
+# -- Compiling architecture tb of driver
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vcom ./tb/monitor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity monitor
+# -- Compiling architecture tb of monitor
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vlog ./tb/s27kl0641.v 
+# -- Compiling module s27kl0641
+# -- Compiling module BUFFERs27kl0641
+# 
+# Top level modules:
+# 	s27kl0641
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:32:29 on Dec 13,2023
+# vlog ./tb/testbench.v 
+# -- Compiling module testbench
+# ** Error: (vlog-13069) ./tb/testbench.v(110): near ")": syntax error, unexpected ')', expecting .* or '.'.
+# End time: 17:32:29 on Dec 13,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/andrea/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./sim.do line 34
+# /home/andrea/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog ./tb/testbench.v"
+ModelSim> # error reading "stdin": I/O error

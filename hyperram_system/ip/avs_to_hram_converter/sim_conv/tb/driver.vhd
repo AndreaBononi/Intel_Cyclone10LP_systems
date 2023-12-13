@@ -82,7 +82,7 @@ architecture tb of driver is
     variable ongoing_writeburst   : std_logic := '0';
     variable writeburst_step			: integer := 0;
 		begin
-			file_open( file_stat, input_file, "../sim/stimuli.txt", read_mode );
+			file_open( file_stat, input_file, "../sim_conv/stimuli.txt", read_mode );
 			if( rst_n = '0' ) then
 				avs_read	<= '0';
 				avs_write <= '0';
@@ -197,7 +197,7 @@ architecture tb of driver is
 						end if;
           elsif( avs_waitrequest = '0' and driver_enable = '1' and ongoing_writeburst = '1' ) then
             -- write burst operation continuation ------------------------------------------------------
-            if( burst_step = to_integer( unsigned( burstlen ) ) ) then
+            if( writeburst_step = to_integer( unsigned( burstlen ) ) ) then
               -- the whole burst has been transmitted
               ongoing_writeburst := '0';
             else

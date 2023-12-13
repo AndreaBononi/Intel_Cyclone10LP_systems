@@ -27,7 +27,7 @@ module testbench ();
 	wire [15:0] avs_writedata;          
 	wire        avs_waitrequest;       
 	wire        avs_readdatavalid;     
-	wire [11:0] avs_burstcount;         
+	wire [10:0] avs_burstcount;         
 
   // simulation signals ---------------------------------------------------------------------
   wire        start_sim;
@@ -53,7 +53,7 @@ module testbench ();
     .avs_write              ( avs_write             ),
     .avs_writedata          ( avs_writedata         ),
     .avs_waitrequest        ( avs_waitrequest       ),
-    .avs_readdatavalid      ( avs_readdata          ),
+    .avs_readdatavalid      ( avs_readdatavalid     ),
     .avs_burstcount         ( avs_burstcount        ),
     .hram_RESET_n           ( hram_RESET_n          ),
     .hram_CK                ( hram_CK               ),
@@ -106,7 +106,7 @@ module testbench ();
     .avs_writedata  		( avs_writedata     ),
     .avs_readdata	      ( avs_readdata      ),		      
     .avs_readdatavalid  ( avs_readdatavalid ),	      
-    .avs_burstcount     ( avs_burstcount    ),
+    .avs_burstcount     ( avs_burstcount    )
   );
 
   // monitor -------------------------------------------------------------------------------

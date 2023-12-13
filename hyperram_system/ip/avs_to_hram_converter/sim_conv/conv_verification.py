@@ -3,17 +3,18 @@
 # public modules -----------------------------------------------------------------------------------------------------------------------
 import random
 import subprocess
+import os
 
 # private modules ----------------------------------------------------------------------------------------------------------------------
 import memory
 
 # files and directories ----------------------------------------------------------------------------------------------------------------
-sim_project       = "avs to hram converter"
+sim_project       = "Avalon-MM slave to hyperbus converter"
 log_file          = "log.txt"
 vsim_log_file     = "vsim_log.txt"
 input_file        = "stimuli.txt"
 output_file       = "readvalues.txt"
-expected_file     = "expectedvalues.txt"
+expected_file     = "expected_values.txt"
 simulation_file   = "sim.do"
 vsim_path         = '~/intelFPGA/20.1/modelsim_ase/bin/vsim'
 
@@ -55,7 +56,7 @@ print( "INFO" )
 print( "VSIM path:", vsim_path )
 print( "Project:",  sim_project )
 print( "Clock period:", clock_period )
-print( "Burst lenght:", burstcount )
+print( "Burst lenght:", burstlen_dec )
 print( "-------------------------------------------------------" )
 
 # information writing (log file) -------------------------------------------------------------------------------------------------------
@@ -73,7 +74,7 @@ log.write( "Clock period: " )
 log.write( clock_period )
 log.write( "\n" )
 log.write( "Burst lenght: " )
-log.write( str( burstcount ) )
+log.write( str( burstlen_dec ) )
 log.write( "\n" )
 log.write( "---------------------------------------------------" )
 log.write( "\n" )

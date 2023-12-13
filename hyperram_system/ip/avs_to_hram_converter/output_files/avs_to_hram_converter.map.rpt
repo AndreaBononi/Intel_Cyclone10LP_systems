@@ -1,5 +1,5 @@
 Analysis & Synthesis report for avs_to_hram_converter
-Wed Dec 13 17:21:11 2023
+Wed Dec 13 17:30:40 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -121,6 +121,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 113. Post-Synthesis Netlist Statistics for Top Partition
 114. Elapsed Time Per Partition
 115. Analysis & Synthesis Messages
+116. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -147,7 +148,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 13 17:21:11 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 13 17:30:40 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; avs_to_hram_converter                          ;
 ; Top-level Entity Name              ; avs_to_hram_converter                          ;
@@ -272,6 +273,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                                ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                       ; Library ;
 +-----------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; sim_conv/tb/s27kl0641.v                                         ; yes             ; User Verilog HDL File        ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/s27kl0641.v                                         ;         ;
 ; hdl/test_files/avs_to_hram_converter_EU.vhd                     ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd                     ;         ;
 ; hdl/test_files/avs_to_hram_converter.vhd                        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd                        ;         ;
 ; hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd                       ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd                       ; clkctrl ;
@@ -2025,10 +2027,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Dec 13 17:20:58 2023
+    Info: Processing started: Wed Dec 13 17:30:26 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off avs_to_hram_converter -c avs_to_hram_converter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning (10275): Verilog HDL Module Instantiation warning at testbench.v(110): ignored dangling comma in List of Port Connections File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/testbench.v Line: 110
+Info (12021): Found 1 design units, including 1 entities, in source file sim_conv/tb/testbench.v
+    Info (12023): Found entity 1: testbench File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/testbench.v Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file sim_conv/tb/strobe_handler.vhd
+    Info (12022): Found design unit 1: strobe_handler-behavior File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/strobe_handler.vhd Line: 21
+    Info (12023): Found entity 1: strobe_handler File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/strobe_handler.vhd Line: 7
+Info (12021): Found 2 design units, including 2 entities, in source file sim_conv/tb/s27kl0641.v
+    Info (12023): Found entity 1: s27kl0641 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/s27kl0641.v Line: 42
+    Info (12023): Found entity 2: BUFFERs27kl0641 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/s27kl0641.v Line: 1265
+Info (12021): Found 2 design units, including 1 entities, in source file sim_conv/tb/monitor.vhd
+    Info (12022): Found design unit 1: monitor-tb File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/monitor.vhd Line: 26
+    Info (12023): Found entity 1: monitor File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/monitor.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file sim_conv/tb/driver.vhd
+    Info (12022): Found design unit 1: driver-tb File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/driver.vhd Line: 67
+    Info (12023): Found entity 1: driver File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/driver.vhd Line: 46
+Info (12021): Found 2 design units, including 1 entities, in source file sim_conv/tb/clk_rst_generator.vhd
+    Info (12022): Found design unit 1: clk_rst_generator-behavior File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/clk_rst_generator.vhd Line: 25
+    Info (12023): Found entity 1: clk_rst_generator File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/clk_rst_generator.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/test_files/avs_to_hram_converter_EU.vhd
     Info (12022): Found design unit 1: avs_to_hram_converter_EU-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 95
     Info (12023): Found entity 1: avs_to_hram_converter_EU File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 7
@@ -2113,6 +2133,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/CA_
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/avs_to_hram_converter_CU.vhd
     Info (12022): Found design unit 1: avs_to_hram_converter_CU-fsm File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_CU.vhd Line: 69
     Info (12023): Found entity 1: avs_to_hram_converter_CU File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_CU.vhd Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at testbench.v(99): created implicit net for "driver_enable" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/testbench.v Line: 99
 Info (12127): Elaborating entity "avs_to_hram_converter" for the top level hierarchy
 Info (12128): Elaborating entity "avs_to_hram_converter_EU" for hierarchy "avs_to_hram_converter_EU:EU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 253
 Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:addr_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 405
@@ -2253,6 +2274,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_hgc.tdf
     Info (12023): Found entity 1: cmpr_hgc File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/db/cmpr_hgc.tdf Line: 23
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/output_files/avs_to_hram_converter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 2 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Info (15717): Design contains 83 virtual pins; timing numbers associated with paths containing virtual pins are estimates
@@ -2356,10 +2378,16 @@ Info (21057): Implemented 582 device resources after synthesis - the final resou
     Info (21061): Implemented 556 logic cells
     Info (21064): Implemented 11 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 447 megabytes
-    Info: Processing ended: Wed Dec 13 17:21:11 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:29
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 454 megabytes
+    Info: Processing ended: Wed Dec 13 17:30:40 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/output_files/avs_to_hram_converter.map.smsg.
 
 
