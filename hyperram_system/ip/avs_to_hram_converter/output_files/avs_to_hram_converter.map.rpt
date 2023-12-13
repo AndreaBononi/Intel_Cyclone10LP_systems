@@ -1,5 +1,5 @@
 Analysis & Synthesis report for avs_to_hram_converter
-Thu Nov 30 16:10:55 2023
+Wed Dec 13 17:21:11 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -60,7 +60,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  52. Parameter Settings for User Entity Instance: avs_to_hram_converter_EU:EU|reg:cntpipe3
  53. Parameter Settings for User Entity Instance: avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component
  54. Parameter Settings for User Entity Instance: avs_to_hram_converter_EU:EU|comparator_Nbit:burst_cmp
- 55. Parameter Settings for User Entity Instance: avs_to_hram_converter_EU:EU|comparator_Nbit:fakeburst_cmp
+ 55. Parameter Settings for User Entity Instance: avs_to_hram_converter_EU:EU|comparator_Nbit:burst_detector
  56. Parameter Settings for User Entity Instance: avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt
  57. Parameter Settings for Inferred Entity Instance: avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0
  58. altpll Parameter Settings by Entity Instance
@@ -84,44 +84,43 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  76. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|sr_flipflop:init_tracker"
  77. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|d_flipflop:op_tracker"
  78. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|d_flipflop:dpd_req_tracker"
- 79. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|d_flipflop:burst_tracker"
- 80. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|comparator_Nbit:fakeburst_cmp"
- 81. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen"
- 82. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:cntpipe3"
- 83. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:cntpipe2"
- 84. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:cntpipe1"
- 85. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|mux_2to1:readdatamux"
- 86. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe"
- 87. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|d_flipflop:busy_pipe"
- 88. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|d_flipflop:valid_pipe"
- 89. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter"
- 90. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:burstlen"
- 91. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg"
- 92. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00"
- 93. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01"
- 94. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10"
- 95. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11"
- 96. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff"
- 97. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff"
- 98. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb"
- 99. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb"
-100. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|d_flipflop:rwds_tracker"
-101. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|tristate_buffer:RWDS_buffer"
-102. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst|clkctrl_altclkctrl_0:altclkctrl_0|clkctrl_altclkctrl_0_sub:clkctrl_altclkctrl_0_sub_component"
-103. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|d_flipflop:hCKen_pipe"
-104. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter|reg:input_reg"
-105. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|mux_4to1:CA_mux"
-106. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA2"
-107. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA1"
-108. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA0"
-109. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|mux_4to1:address_mux"
-110. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:conf_reg"
-111. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:datain_reg"
-112. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:burstcnt_reg"
-113. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:addr_reg"
-114. Post-Synthesis Netlist Statistics for Top Partition
-115. Elapsed Time Per Partition
-116. Analysis & Synthesis Messages
+ 79. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|comparator_Nbit:burst_detector"
+ 80. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen"
+ 81. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:cntpipe3"
+ 82. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:cntpipe2"
+ 83. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:cntpipe1"
+ 84. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|mux_2to1:readdatamux"
+ 85. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe"
+ 86. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|d_flipflop:busy_pipe"
+ 87. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|d_flipflop:valid_pipe"
+ 88. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter"
+ 89. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:burstlen"
+ 90. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg"
+ 91. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00"
+ 92. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01"
+ 93. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10"
+ 94. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11"
+ 95. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff"
+ 96. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff"
+ 97. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb"
+ 98. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb"
+ 99. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|d_flipflop:rwds_tracker"
+100. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|tristate_buffer:RWDS_buffer"
+101. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst|clkctrl_altclkctrl_0:altclkctrl_0|clkctrl_altclkctrl_0_sub:clkctrl_altclkctrl_0_sub_component"
+102. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|d_flipflop:hCKen_pipe"
+103. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter|reg:input_reg"
+104. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|mux_4to1:CA_mux"
+105. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA2"
+106. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA1"
+107. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA0"
+108. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|mux_4to1:address_mux"
+109. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:conf_reg"
+110. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:datain_reg"
+111. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:burstcnt_reg"
+112. Port Connectivity Checks: "avs_to_hram_converter_EU:EU|reg:addr_reg"
+113. Post-Synthesis Netlist Statistics for Top Partition
+114. Elapsed Time Per Partition
+115. Analysis & Synthesis Messages
 
 
 
@@ -148,17 +147,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 30 16:10:55 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 13 17:21:11 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; avs_to_hram_converter                          ;
 ; Top-level Entity Name              ; avs_to_hram_converter                          ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 493                                            ;
-;     Total combinational functions  ; 335                                            ;
+; Total logic elements               ; 494                                            ;
+;     Total combinational functions  ; 337                                            ;
 ;     Dedicated logic registers      ; 326                                            ;
 ; Total registers                    ; 326                                            ;
-; Total pins                         ; 10                                             ;
-; Total virtual pins                 ; 84                                             ;
+; Total pins                         ; 13                                             ;
+; Total virtual pins                 ; 83                                             ;
 ; Total memory bits                  ; 33                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
 ; Total PLLs                         ; 1                                              ;
@@ -273,6 +272,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                                ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                       ; Library ;
 +-----------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; hdl/test_files/avs_to_hram_converter_EU.vhd                     ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd                     ;         ;
+; hdl/test_files/avs_to_hram_converter.vhd                        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd                        ;         ;
 ; hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd                       ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd                       ; clkctrl ;
 ; hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v ; yes             ; User Verilog HDL File        ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v ; clkctrl ;
 ; hdl/dll_90/dll_90.vhd                                           ; yes             ; User Wizard-Generated File   ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd                                           ;         ;
@@ -298,9 +299,7 @@ https://fpgasoftware.intel.com/eula.
 ; hdl/comparator_Nbit.vhd                                         ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/comparator_Nbit.vhd                                         ;         ;
 ; hdl/CA_unpacker.vhd                                             ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/CA_unpacker.vhd                                             ;         ;
 ; hdl/CA_builder.vhd                                              ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/CA_builder.vhd                                              ;         ;
-; hdl/avs_to_hram_converter_EU.vhd                                ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd                                ;         ;
 ; hdl/avs_to_hram_converter_CU.vhd                                ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_CU.vhd                                ;         ;
-; hdl/avs_to_hram_converter.vhd                                   ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd                                   ;         ;
 ; altpll.tdf                                                      ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altpll.tdf                                                                     ;         ;
 ; aglobal221.inc                                                  ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                 ;         ;
 ; stratix_pll.inc                                                 ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/stratix_pll.inc                                                                ;         ;
@@ -339,24 +338,24 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 493       ;
+; Estimated Total logic elements              ; 494       ;
 ;                                             ;           ;
-; Total combinational functions               ; 335       ;
+; Total combinational functions               ; 337       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 195       ;
-;     -- 3 input functions                    ; 57        ;
-;     -- <=2 input functions                  ; 83        ;
+;     -- 4 input functions                    ; 194       ;
+;     -- 3 input functions                    ; 58        ;
+;     -- <=2 input functions                  ; 85        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 302       ;
+;     -- normal mode                          ; 304       ;
 ;     -- arithmetic mode                      ; 33        ;
 ;                                             ;           ;
 ; Total registers                             ; 326       ;
 ;     -- Dedicated logic registers            ; 326       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; Virtual pins                                ; 84        ;
-; I/O pins                                    ; 10        ;
+; Virtual pins                                ; 83        ;
+; I/O pins                                    ; 13        ;
 ; Total memory bits                           ; 33        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
@@ -366,8 +365,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 252       ;
-; Total fan-out                               ; 2210      ;
-; Average fan-out                             ; 2.81      ;
+; Total fan-out                               ; 2216      ;
+; Average fan-out                             ; 2.79      ;
 +---------------------------------------------+-----------+
 
 
@@ -376,9 +375,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                                                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                  ; Entity Name              ; Library Name ;
 +---------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |avs_to_hram_converter                                                    ; 335 (1)             ; 326 (0)                   ; 33          ; 0            ; 0       ; 0         ; 10   ; 84           ; |avs_to_hram_converter                                                                                                                                                                               ; avs_to_hram_converter    ; work         ;
-;    |avs_to_hram_converter_CU:CU|                                          ; 68 (68)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_CU:CU                                                                                                                                                   ; avs_to_hram_converter_CU ; work         ;
-;    |avs_to_hram_converter_EU:EU|                                          ; 266 (13)            ; 283 (0)                   ; 33          ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU                                                                                                                                                   ; avs_to_hram_converter_EU ; work         ;
+; |avs_to_hram_converter                                                    ; 337 (1)             ; 326 (0)                   ; 33          ; 0            ; 0       ; 0         ; 13   ; 83           ; |avs_to_hram_converter                                                                                                                                                                               ; avs_to_hram_converter    ; work         ;
+;    |avs_to_hram_converter_CU:CU|                                          ; 69 (69)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_CU:CU                                                                                                                                                   ; avs_to_hram_converter_CU ; work         ;
+;    |avs_to_hram_converter_EU:EU|                                          ; 267 (12)            ; 283 (0)                   ; 33          ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU                                                                                                                                                   ; avs_to_hram_converter_EU ; work         ;
 ;       |CA_unpacker:CA_unpacker_inst|                                      ; 1 (0)               ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst                                                                                                                      ; CA_unpacker              ; work         ;
 ;          |reg:CA0|                                                        ; 1 (1)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA0                                                                                                              ; reg                      ; work         ;
 ;          |reg:CA1|                                                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA1                                                                                                              ; reg                      ; work         ;
@@ -396,8 +395,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |clkctrl_altclkctrl_0:altclkctrl_0|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst|clkctrl_altclkctrl_0:altclkctrl_0                                                                                          ; clkctrl_altclkctrl_0     ; clkctrl      ;
 ;             |clkctrl_altclkctrl_0_sub:clkctrl_altclkctrl_0_sub_component| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst|clkctrl_altclkctrl_0:altclkctrl_0|clkctrl_altclkctrl_0_sub:clkctrl_altclkctrl_0_sub_component                              ; clkctrl_altclkctrl_0_sub ; clkctrl      ;
 ;       |comparator_Nbit:burst_cmp|                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|comparator_Nbit:burst_cmp                                                                                                                         ; comparator_Nbit          ; work         ;
-;       |comparator_Nbit:fakeburst_cmp|                                     ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|comparator_Nbit:fakeburst_cmp                                                                                                                     ; comparator_Nbit          ; work         ;
-;       |d_flipflop:burst_tracker|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|d_flipflop:burst_tracker                                                                                                                          ; d_flipflop               ; work         ;
+;       |comparator_Nbit:burst_detector|                                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|comparator_Nbit:burst_detector                                                                                                                    ; comparator_Nbit          ; work         ;
 ;       |d_flipflop:dpd_req_tracker|                                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|d_flipflop:dpd_req_tracker                                                                                                                        ; d_flipflop               ; work         ;
 ;       |d_flipflop:hCKen_pipe|                                             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|d_flipflop:hCKen_pipe                                                                                                                             ; d_flipflop               ; work         ;
 ;       |d_flipflop:op_tracker|                                             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|d_flipflop:op_tracker                                                                                                                             ; d_flipflop               ; work         ;
@@ -418,8 +416,8 @@ https://fpgasoftware.intel.com/eula.
 ;       |reg:datain_reg|                                                    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|reg:datain_reg                                                                                                                                    ; reg                      ; work         ;
 ;       |sr_flipflop:dpd_tracker|                                           ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|sr_flipflop:dpd_tracker                                                                                                                           ; sr_flipflop              ; work         ;
 ;       |sr_flipflop:init_tracker|                                          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|sr_flipflop:init_tracker                                                                                                                          ; sr_flipflop              ; work         ;
-;       |synchronizer:synchronizer_inst|                                    ; 87 (0)              ; 131 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst                                                                                                                    ; synchronizer             ; work         ;
-;          |synchronizer_CU:CU|                                             ; 7 (7)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU                                                                                                 ; synchronizer_CU          ; work         ;
+;       |synchronizer:synchronizer_inst|                                    ; 89 (0)              ; 132 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst                                                                                                                    ; synchronizer             ; work         ;
+;          |synchronizer_CU:CU|                                             ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU                                                                                                 ; synchronizer_CU          ; work         ;
 ;          |synchronizer_EU:EU|                                             ; 80 (3)              ; 125 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU                                                                                                 ; synchronizer_EU          ; work         ;
 ;             |comparator_Nbit:burstlen_cmp|                                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|comparator_Nbit:burstlen_cmp                                                                    ; comparator_Nbit          ; work         ;
 ;             |counter_11bit_updown:burstlen_counter|                       ; 13 (0)              ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter                                                           ; counter_11bit_updown     ; work         ;
@@ -443,8 +441,8 @@ https://fpgasoftware.intel.com/eula.
 ;             |reg:outpipe|                                                 ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outpipe                                                                                     ; reg                      ; work         ;
 ;             |reg:outreg|                                                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg                                                                                      ; reg                      ; work         ;
 ;             |sr_flipflop:synchronizer|                                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|sr_flipflop:synchronizer                                                                        ; sr_flipflop              ; work         ;
-;       |timer_14bit:deadline_timer|                                        ; 35 (12)             ; 14 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer                                                                                                                        ; timer_14bit              ; work         ;
-;          |counter_Nbit:cnt|                                               ; 23 (7)              ; 14 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt                                                                                                       ; counter_Nbit             ; work         ;
+;       |timer_14bit:deadline_timer|                                        ; 34 (12)             ; 14 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer                                                                                                                        ; timer_14bit              ; work         ;
+;          |counter_Nbit:cnt|                                               ; 22 (6)              ; 14 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt                                                                                                       ; counter_Nbit             ; work         ;
 ;             |t_flipflop:\g1:10:chain_tff|                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:10:chain_tff                                                                           ; t_flipflop               ; work         ;
 ;             |t_flipflop:\g1:11:chain_tff|                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff                                                                           ; t_flipflop               ; work         ;
 ;             |t_flipflop:\g1:12:chain_tff|                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:12:chain_tff                                                                           ; t_flipflop               ; work         ;
@@ -537,18 +535,19 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state                                                        ;
-+------------------------------+--------------------------+-------------------------+------------------------------+-----------------------------+--------------------+---------------------+
-; Name                         ; present_state.idle_clear ; present_state.reception ; present_state.reception_init ; present_state.idle_disabled ; present_state.idle ; present_state.reset ;
-+------------------------------+--------------------------+-------------------------+------------------------------+-----------------------------+--------------------+---------------------+
-; present_state.reset          ; 0                        ; 0                       ; 0                            ; 0                           ; 0                  ; 0                   ;
-; present_state.idle           ; 0                        ; 0                       ; 0                            ; 0                           ; 1                  ; 1                   ;
-; present_state.idle_disabled  ; 0                        ; 0                       ; 0                            ; 1                           ; 0                  ; 1                   ;
-; present_state.reception_init ; 0                        ; 0                       ; 1                            ; 0                           ; 0                  ; 1                   ;
-; present_state.reception      ; 0                        ; 1                       ; 0                            ; 0                           ; 0                  ; 1                   ;
-; present_state.idle_clear     ; 1                        ; 0                       ; 0                            ; 0                           ; 0                  ; 1                   ;
-+------------------------------+--------------------------+-------------------------+------------------------------+-----------------------------+--------------------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state                                                                                          ;
++-------------------------------+--------------------------+-------------------------+-------------------------------+-------------------------------+-----------------------------+--------------------+---------------------+
+; Name                          ; present_state.idle_clear ; present_state.reception ; present_state.reception_init2 ; present_state.reception_init1 ; present_state.idle_disabled ; present_state.idle ; present_state.reset ;
++-------------------------------+--------------------------+-------------------------+-------------------------------+-------------------------------+-----------------------------+--------------------+---------------------+
+; present_state.reset           ; 0                        ; 0                       ; 0                             ; 0                             ; 0                           ; 0                  ; 0                   ;
+; present_state.idle            ; 0                        ; 0                       ; 0                             ; 0                             ; 0                           ; 1                  ; 1                   ;
+; present_state.idle_disabled   ; 0                        ; 0                       ; 0                             ; 0                             ; 1                           ; 0                  ; 1                   ;
+; present_state.reception_init1 ; 0                        ; 0                       ; 0                             ; 1                             ; 0                           ; 0                  ; 1                   ;
+; present_state.reception_init2 ; 0                        ; 0                       ; 1                             ; 0                             ; 0                           ; 0                  ; 1                   ;
+; present_state.reception       ; 0                        ; 1                       ; 0                             ; 0                             ; 0                           ; 0                  ; 1                   ;
+; present_state.idle_clear      ; 1                        ; 0                       ; 0                             ; 0                             ; 0                           ; 0                  ; 1                   ;
++-------------------------------+--------------------------+-------------------------+-------------------------------+-------------------------------+-----------------------------+--------------------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -571,9 +570,9 @@ Encoding Type:  One-Hot
 ; Total registers                              ; 326   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 11    ;
-; Number of registers using Asynchronous Clear ; 52    ;
+; Number of registers using Asynchronous Clear ; 53    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 248   ;
+; Number of registers using Clock Enable       ; 247   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -595,11 +594,11 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------+
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:outreg|dout[11]       ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA1|dout[15]                               ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA1|dout[2]                                ;
 ; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|d_flipflop:busy_pipe|dout ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter|reg:input_reg|dout[3]              ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter|reg:input_reg|dout[8]              ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter|reg:input_reg|dout[14]             ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter|reg:input_reg|dout[2]              ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |avs_to_hram_converter|avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter|reg:input_reg|dout[0]              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |avs_to_hram_converter|avs_to_hram_converter_CU:CU|next_state.writeburst_last                                                  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |avs_to_hram_converter|avs_to_hram_converter_CU:CU|next_state.readmem_prep                                                     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |avs_to_hram_converter|avs_to_hram_converter_CU:CU|next_state.writeburst_prep                                                  ;
@@ -1406,13 +1405,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: avs_to_hram_converter_EU:EU|comparator_Nbit:fakeburst_cmp ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                          ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; n              ; 11    ; Signed Integer                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: avs_to_hram_converter_EU:EU|comparator_Nbit:burst_detector ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; n              ; 11    ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1643,24 +1642,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+-------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "avs_to_hram_converter_EU:EU|d_flipflop:burst_tracker" ;
-+---------+-------+----------+-----------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                             ;
-+---------+-------+----------+-----------------------------------------------------+
-; clear_n ; Input ; Info     ; Stuck at VCC                                        ;
-; reset_n ; Input ; Info     ; Stuck at VCC                                        ;
-+---------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "avs_to_hram_converter_EU:EU|comparator_Nbit:fakeburst_cmp" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; din_1[10..1] ; Input ; Info     ; Stuck at GND                                        ;
-; din_1[0]     ; Input ; Info     ; Stuck at VCC                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "avs_to_hram_converter_EU:EU|comparator_Nbit:burst_detector" ;
++--------------+-------+----------+------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                              ;
++--------------+-------+----------+------------------------------------------------------+
+; din_1[10..1] ; Input ; Info     ; Stuck at GND                                         ;
+; din_1[0]     ; Input ; Info     ; Stuck at VCC                                         ;
++--------------+-------+----------+------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -1995,29 +1984,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 94                          ;
+; boundary_port         ; 96                          ;
 ; cycloneiii_clkctrl    ; 1                           ;
 ; cycloneiii_ff         ; 326                         ;
-;     CLR               ; 52                          ;
-;     ENA               ; 237                         ;
+;     CLR               ; 53                          ;
+;     ENA               ; 236                         ;
 ;     ENA SLD           ; 11                          ;
 ;     plain             ; 26                          ;
 ; cycloneiii_io_obuf    ; 9                           ;
-; cycloneiii_lcell_comb ; 337                         ;
+; cycloneiii_lcell_comb ; 340                         ;
 ;     arith             ; 33                          ;
 ;         2 data inputs ; 12                          ;
 ;         3 data inputs ; 21                          ;
-;     normal            ; 304                         ;
+;     normal            ; 307                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 65                          ;
-;         3 data inputs ; 36                          ;
-;         4 data inputs ; 195                         ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 67                          ;
+;         3 data inputs ; 37                          ;
+;         4 data inputs ; 194                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 11                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 2.41                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 2.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2036,23 +2025,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Thu Nov 30 16:10:40 2023
+    Info: Processing started: Wed Dec 13 17:20:58 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off avs_to_hram_converter -c avs_to_hram_converter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/test_files/avs_to_hram_converter_EU.vhd
+    Info (12022): Found design unit 1: avs_to_hram_converter_EU-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 95
+    Info (12023): Found entity 1: avs_to_hram_converter_EU File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/test_files/avs_to_hram_converter.vhd
+    Info (12022): Found design unit 1: avs_to_hram_converter-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 41
+    Info (12023): Found entity 1: avs_to_hram_converter File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd
     Info (12022): Found design unit 1: clkctrl-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd Line: 17
     Info (12023): Found entity 1: clkctrl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd Line: 9
 Info (12021): Found 2 design units, including 2 entities, in source file hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v
     Info (12023): Found entity 1: clkctrl_altclkctrl_0_sub File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v Line: 29
     Info (12023): Found entity 2: clkctrl_altclkctrl_0 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v Line: 90
-Warning (12019): Can't analyze file -- file hdl/d_flipflop_negedge.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/delayer_360.vhd
-    Info (12022): Found design unit 1: delayer_360-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/delayer_360.vhd Line: 15
-    Info (12023): Found entity 1: delayer_360 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/delayer_360.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/delayer_90.vhd
-    Info (12022): Found design unit 1: delayer_90-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/delayer_90.vhd Line: 15
-    Info (12023): Found entity 1: delayer_90 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/delayer_90.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/dll_90/dll_90.vhd
     Info (12022): Found design unit 1: dll_90-SYN File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd Line: 53
     Info (12023): Found entity 1: dll_90 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd Line: 43
@@ -2122,30 +2110,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/CA_
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/CA_builder.vhd
     Info (12022): Found design unit 1: CA_builder-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/CA_builder.vhd Line: 17
     Info (12023): Found entity 1: CA_builder File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/CA_builder.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/avs_to_hram_converter_EU.vhd
-    Info (12022): Found design unit 1: avs_to_hram_converter_EU-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 93
-    Info (12023): Found entity 1: avs_to_hram_converter_EU File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/avs_to_hram_converter_CU.vhd
     Info (12022): Found design unit 1: avs_to_hram_converter_CU-fsm File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_CU.vhd Line: 69
     Info (12023): Found entity 1: avs_to_hram_converter_CU File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_CU.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/avs_to_hram_converter.vhd
-    Info (12022): Found design unit 1: avs_to_hram_converter-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 39
-    Info (12023): Found entity 1: avs_to_hram_converter File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 7
 Info (12127): Elaborating entity "avs_to_hram_converter" for the top level hierarchy
-Info (12128): Elaborating entity "avs_to_hram_converter_EU" for hierarchy "avs_to_hram_converter_EU:EU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 249
-Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:addr_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 405
-Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:burstcnt_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 421
-Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:datain_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 437
-Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:conf_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 453
-Info (12128): Elaborating entity "conf_builder" for hierarchy "avs_to_hram_converter_EU:EU|conf_builder:conf_builder_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 469
-Info (12128): Elaborating entity "mux_4to1" for hierarchy "avs_to_hram_converter_EU:EU|mux_4to1:dq_mux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 486
-Info (12128): Elaborating entity "mux_4to1" for hierarchy "avs_to_hram_converter_EU:EU|mux_4to1:address_mux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 502
-Info (12128): Elaborating entity "CA_builder" for hierarchy "avs_to_hram_converter_EU:EU|CA_builder:CA_builder_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 518
-Info (12128): Elaborating entity "CA_unpacker" for hierarchy "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 528
-Info (12128): Elaborating entity "tristate_buffer" for hierarchy "avs_to_hram_converter_EU:EU|tristate_buffer:dq_buffer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 539
-Info (12128): Elaborating entity "SDR_to_DDR_converter" for hierarchy "avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 552
+Info (12128): Elaborating entity "avs_to_hram_converter_EU" for hierarchy "avs_to_hram_converter_EU:EU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 253
+Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:addr_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 405
+Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:burstcnt_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 421
+Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:datain_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 437
+Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|reg:conf_reg" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 453
+Info (12128): Elaborating entity "conf_builder" for hierarchy "avs_to_hram_converter_EU:EU|conf_builder:conf_builder_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 469
+Info (12128): Elaborating entity "mux_4to1" for hierarchy "avs_to_hram_converter_EU:EU|mux_4to1:dq_mux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 486
+Info (12128): Elaborating entity "mux_4to1" for hierarchy "avs_to_hram_converter_EU:EU|mux_4to1:address_mux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 502
+Info (12128): Elaborating entity "CA_builder" for hierarchy "avs_to_hram_converter_EU:EU|CA_builder:CA_builder_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 518
+Info (12128): Elaborating entity "CA_unpacker" for hierarchy "avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 528
+Info (12128): Elaborating entity "tristate_buffer" for hierarchy "avs_to_hram_converter_EU:EU|tristate_buffer:dq_buffer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 539
+Info (12128): Elaborating entity "SDR_to_DDR_converter" for hierarchy "avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 552
 Info (12128): Elaborating entity "mux_2to1" for hierarchy "avs_to_hram_converter_EU:EU|SDR_to_DDR_converter:writedata_converter|mux_2to1:outmux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/SDR_to_DDR_converter.vhd Line: 79
-Info (12128): Elaborating entity "dll_90" for hierarchy "avs_to_hram_converter_EU:EU|dll_90:clk_shifter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 562
+Info (12128): Elaborating entity "dll_90" for hierarchy "avs_to_hram_converter_EU:EU|dll_90:clk_shifter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 562
 Info (12128): Elaborating entity "altpll" for hierarchy "avs_to_hram_converter_EU:EU|dll_90:clk_shifter|altpll:altpll_component" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd Line: 136
 Info (12130): Elaborated megafunction instantiation "avs_to_hram_converter_EU:EU|dll_90:clk_shifter|altpll:altpll_component" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd Line: 136
 Info (12133): Instantiated megafunction "avs_to_hram_converter_EU:EU|dll_90:clk_shifter|altpll:altpll_component" with the following parameter: File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd Line: 136
@@ -2206,15 +2188,15 @@ Info (12133): Instantiated megafunction "avs_to_hram_converter_EU:EU|dll_90:clk_
 Info (12021): Found 1 design units, including 1 entities, in source file db/dll_90_altpll.v
     Info (12023): Found entity 1: dll_90_altpll File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/db/dll_90_altpll.v Line: 30
 Info (12128): Elaborating entity "dll_90_altpll" for hierarchy "avs_to_hram_converter_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "d_flipflop" for hierarchy "avs_to_hram_converter_EU:EU|d_flipflop:hCKen_pipe" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 571
-Info (12128): Elaborating entity "clkctrl" for hierarchy "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 583
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "avs_to_hram_converter_EU:EU|d_flipflop:hCKen_pipe" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 571
+Info (12128): Elaborating entity "clkctrl" for hierarchy "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 583
 Info (12128): Elaborating entity "clkctrl_altclkctrl_0" for hierarchy "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst|clkctrl_altclkctrl_0:altclkctrl_0" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd Line: 28
 Info (12128): Elaborating entity "clkctrl_altclkctrl_0_sub" for hierarchy "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst|clkctrl_altclkctrl_0:altclkctrl_0|clkctrl_altclkctrl_0_sub:clkctrl_altclkctrl_0_sub_component" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v Line: 120
-Info (12128): Elaborating entity "tristate_buffer" for hierarchy "avs_to_hram_converter_EU:EU|tristate_buffer:RWDS_buffer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 593
-Info (12128): Elaborating entity "DDR_to_SDR_converter" for hierarchy "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 620
+Info (12128): Elaborating entity "tristate_buffer" for hierarchy "avs_to_hram_converter_EU:EU|tristate_buffer:RWDS_buffer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 596
+Info (12128): Elaborating entity "DDR_to_SDR_converter" for hierarchy "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 623
 Info (12128): Elaborating entity "reg_negedge" for hierarchy "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/DDR_to_SDR_converter.vhd Line: 63
 Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/DDR_to_SDR_converter.vhd Line: 79
-Info (12128): Elaborating entity "synchronizer" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 632
+Info (12128): Elaborating entity "synchronizer" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 635
 Info (12128): Elaborating entity "synchronizer_EU" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/synchronizer.vhd Line: 128
 Info (12128): Elaborating entity "counter_Nbit" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/synchronizer_EU.vhd Line: 195
 Info (12128): Elaborating entity "t_flipflop" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/counter_Nbit.vhd Line: 49
@@ -2233,8 +2215,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12128): Elaborating entity "cntr_7lh" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "comparator_Nbit" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|comparator_Nbit:burstlen_cmp" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/synchronizer_EU.vhd Line: 355
 Info (12128): Elaborating entity "synchronizer_CU" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/synchronizer.vhd Line: 162
-Info (12128): Elaborating entity "mux_2to1" for hierarchy "avs_to_hram_converter_EU:EU|mux_2to1:readdatamux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 657
-Info (12128): Elaborating entity "adder_22bit_1pipe" for hierarchy "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 722
+Info (12128): Elaborating entity "mux_2to1" for hierarchy "avs_to_hram_converter_EU:EU|mux_2to1:readdatamux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 660
+Info (12128): Elaborating entity "adder_22bit_1pipe" for hierarchy "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 725
 Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd Line: 82
 Info (12130): Elaborated megafunction instantiation "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd Line: 82
 Info (12133): Instantiated megafunction "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd Line: 82
@@ -2247,9 +2229,9 @@ Info (12133): Instantiated megafunction "avs_to_hram_converter_EU:EU|adder_22bit
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_89k.tdf
     Info (12023): Found entity 1: add_sub_89k File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/db/add_sub_89k.tdf Line: 23
 Info (12128): Elaborating entity "add_sub_89k" for hierarchy "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component|add_sub_89k:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
-Info (12128): Elaborating entity "timer_14bit" for hierarchy "avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter_EU.vhd Line: 822
+Info (12128): Elaborating entity "timer_14bit" for hierarchy "avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 813
 Info (12128): Elaborating entity "counter_Nbit" for hierarchy "avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/timer_14bit.vhd Line: 44
-Info (12128): Elaborating entity "avs_to_hram_converter_CU" for hierarchy "avs_to_hram_converter_CU:CU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 331
+Info (12128): Elaborating entity "avs_to_hram_converter_CU" for hierarchy "avs_to_hram_converter_CU:CU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 337
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "avs_to_hram_converter_EU:EU|reg:cntpipe1|dout_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
@@ -2273,92 +2255,91 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 2 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (15717): Design contains 84 virtual pins; timing numbers associated with paths containing virtual pins are estimates
-    Info (15719): Pin "avs_readdata[0]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[1]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[2]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[3]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[4]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[5]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[6]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[7]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[8]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[9]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[10]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[11]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[12]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[13]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[14]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_readdata[15]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 23
-    Info (15719): Pin "avs_waitrequest" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 26
-    Info (15719): Pin "avs_readdatavalid" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 27
-    Info (15719): Pin "hram_RESET_n" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 31
-    Info (15719): Pin "hram_CK" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 32
-    Info (15719): Pin "hram_CS_n" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 35
-    Info (15718): Pin "avs_read" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 22
-    Info (15718): Pin "avs_address[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[8]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[9]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[10]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[11]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[14]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[15]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[12]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[13]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[16]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[17]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[18]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[19]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[22]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[20]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[21]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[23]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[24]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[25]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[26]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[27]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[28]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[29]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[30]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "avs_address[31]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 21
-    Info (15718): Pin "reset_n" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 19
-    Info (15718): Pin "avs_write" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 24
-    Info (15718): Pin "avs_writedata[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_beginbursttransfer" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 28
-    Info (15718): Pin "avs_burstcount[10]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[9]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[8]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_burstcount[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 29
-    Info (15718): Pin "avs_writedata[8]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[9]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[10]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[11]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[12]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[13]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[14]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[15]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-    Info (15718): Pin "avs_writedata[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/avs_to_hram_converter.vhd Line: 25
-Warning (15752): Ignored 11 Virtual Pin logic option assignments
+Info (15717): Design contains 83 virtual pins; timing numbers associated with paths containing virtual pins are estimates
+    Info (15719): Pin "avs_readdata[0]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[1]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[2]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[3]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[4]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[5]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[6]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[7]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[8]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[9]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[10]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[11]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[12]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[13]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[14]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_readdata[15]" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 23
+    Info (15719): Pin "avs_waitrequest" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 26
+    Info (15719): Pin "avs_readdatavalid" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 27
+    Info (15719): Pin "hram_RESET_n" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 30
+    Info (15719): Pin "hram_CK" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 31
+    Info (15719): Pin "hram_CS_n" is virtual output pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 37
+    Info (15718): Pin "avs_read" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 22
+    Info (15718): Pin "avs_address[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[8]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[9]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[10]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[11]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[14]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[15]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[12]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[13]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[16]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[17]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[18]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[19]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[22]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[20]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[21]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[23]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[24]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[25]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[26]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[27]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[28]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[29]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[30]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "avs_address[31]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 21
+    Info (15718): Pin "reset_n" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 19
+    Info (15718): Pin "avs_write" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 24
+    Info (15718): Pin "avs_writedata[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_burstcount[10]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[9]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[8]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_burstcount[0]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 28
+    Info (15718): Pin "avs_writedata[8]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[9]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[1]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[10]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[2]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[11]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[3]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[12]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[4]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[13]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[5]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[14]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[6]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[15]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+    Info (15718): Pin "avs_writedata[7]" is virtual input pin File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 25
+Warning (15752): Ignored 9 Virtual Pin logic option assignments
     Warning (15721): Ignored Virtual Pin assignment made to bidirectional pin "hram_DQ[0]"
     Warning (15721): Ignored Virtual Pin assignment made to bidirectional pin "hram_DQ[1]"
     Warning (15721): Ignored Virtual Pin assignment made to bidirectional pin "hram_DQ[2]"
@@ -2368,19 +2349,17 @@ Warning (15752): Ignored 11 Virtual Pin logic option assignments
     Warning (15721): Ignored Virtual Pin assignment made to bidirectional pin "hram_DQ[6]"
     Warning (15721): Ignored Virtual Pin assignment made to bidirectional pin "hram_DQ[7]"
     Warning (15741): Ignoring Virtual Pin assignment on "Cyclone 10 LP" PLL pin "clk"
-    Warning (15751): Ignored Virtual Pin assignment to "avs_to_hram_converter_EU:EU".
-    Warning (15751): Ignored Virtual Pin assignment to "avs_to_hram_converter_CU:CU".
-Info (21057): Implemented 577 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
-    Info (21060): Implemented 9 bidirectional pins
-    Info (21061): Implemented 554 logic cells
+Info (21057): Implemented 582 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 556 logic cells
     Info (21064): Implemented 11 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 447 megabytes
-    Info: Processing ended: Thu Nov 30 16:10:55 2023
-    Info: Elapsed time: 00:00:15
+    Info: Processing ended: Wed Dec 13 17:21:11 2023
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:29
 
 

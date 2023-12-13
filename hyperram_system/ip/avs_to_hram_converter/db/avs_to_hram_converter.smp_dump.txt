@@ -46,10 +46,11 @@ present_state.idle_burst 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 present_state.restore_burst 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |avs_to_hram_converter|avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state
-Name present_state.idle_clear present_state.reception present_state.reception_init present_state.idle_disabled present_state.idle present_state.reset 
-present_state.reset 0 0 0 0 0 0 
-present_state.idle 0 0 0 0 1 1 
-present_state.idle_disabled 0 0 0 1 0 1 
-present_state.reception_init 0 0 1 0 0 1 
-present_state.reception 0 1 0 0 0 1 
-present_state.idle_clear 1 0 0 0 0 1 
+Name present_state.idle_clear present_state.reception present_state.reception_init2 present_state.reception_init1 present_state.idle_disabled present_state.idle present_state.reset 
+present_state.reset 0 0 0 0 0 0 0 
+present_state.idle 0 0 0 0 0 1 1 
+present_state.idle_disabled 0 0 0 0 1 0 1 
+present_state.reception_init1 0 0 0 1 0 0 1 
+present_state.reception_init2 0 0 1 0 0 0 1 
+present_state.reception 0 1 0 0 0 0 1 
+present_state.idle_clear 1 0 0 0 0 0 1 

@@ -80,6 +80,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "hram_RWDS_out",
+					"strict" : false
+				},
+				{
 					"name" : "hram_CS_n",
 					"strict" : false
 				},
@@ -113,10 +117,6 @@
 				},
 				{
 					"name" : "hram_DQ[7]",
-					"strict" : false
-				},
-				{
-					"name" : "hram_RWDS",
 					"strict" : false
 				},
 				{
@@ -268,7 +268,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "avs_beginbursttransfer",
+					"name" : "hram_RWDS_in",
 					"strict" : false
 				},
 				{
@@ -304,15 +304,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "avs_burstcount[0]",
-					"strict" : false
-				},
-				{
 					"name" : "avs_burstcount[2]",
 					"strict" : false
 				},
 				{
 					"name" : "avs_burstcount[1]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_burstcount[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hram_RWDS_in_90shift",
 					"strict" : false
 				},
 				{

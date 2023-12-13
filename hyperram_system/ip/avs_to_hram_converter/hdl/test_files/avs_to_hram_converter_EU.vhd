@@ -602,9 +602,11 @@ architecture rtl of avs_to_hram_converter_EU is
     (
       enable		=> force_RWDS_low,
       din   		=> (others => '0'),
-      dout  		=> hram_RWDS_out
+      dout  		=> RWDS_buffer_out
     ); --------------------------------------------------------------------------------------------------------------
-		
+
+    hram_RWDS_out <= RWDS_buffer_out(0);
+
     -- RWDS tracker -------------------------------------------------------------------------------------------------
     rwds_tracker : d_flipflop
     port map

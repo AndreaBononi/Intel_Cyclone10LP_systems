@@ -71,7 +71,6 @@ avs_writedata[14] => avs_to_hram_converter_EU:EU.avs_writedata[14]
 avs_writedata[15] => avs_to_hram_converter_EU:EU.avs_writedata[15]
 avs_waitrequest << avs_to_hram_converter_EU:EU.avs_waitrequest
 avs_readdatavalid << avs_to_hram_converter_EU:EU.avs_readdatavalid
-avs_beginbursttransfer => avs_to_hram_converter_EU:EU.avs_beginbursttransfer
 avs_burstcount[0] => avs_to_hram_converter_EU:EU.avs_burstcount[0]
 avs_burstcount[1] => avs_to_hram_converter_EU:EU.avs_burstcount[1]
 avs_burstcount[2] => avs_to_hram_converter_EU:EU.avs_burstcount[2]
@@ -85,6 +84,7 @@ avs_burstcount[9] => avs_to_hram_converter_EU:EU.avs_burstcount[9]
 avs_burstcount[10] => avs_to_hram_converter_EU:EU.avs_burstcount[10]
 hram_RESET_n << avs_to_hram_converter_EU:EU.hram_RESET_n
 hram_CK << avs_to_hram_converter_EU:EU.hram_CK
+hram_CK_n << avs_to_hram_converter_EU:EU.hram_CK_n
 hram_DQ[0] <> avs_to_hram_converter_EU:EU.hram_DQ[0]
 hram_DQ[1] <> avs_to_hram_converter_EU:EU.hram_DQ[1]
 hram_DQ[2] <> avs_to_hram_converter_EU:EU.hram_DQ[2]
@@ -93,7 +93,9 @@ hram_DQ[4] <> avs_to_hram_converter_EU:EU.hram_DQ[4]
 hram_DQ[5] <> avs_to_hram_converter_EU:EU.hram_DQ[5]
 hram_DQ[6] <> avs_to_hram_converter_EU:EU.hram_DQ[6]
 hram_DQ[7] <> avs_to_hram_converter_EU:EU.hram_DQ[7]
-hram_RWDS <> avs_to_hram_converter_EU:EU.hram_RWDS
+hram_RWDS_out << avs_to_hram_converter_EU:EU.hram_RWDS_out
+hram_RWDS_in => avs_to_hram_converter_EU:EU.hram_RWDS_in
+hram_RWDS_in_90shift => avs_to_hram_converter_EU:EU.hram_RWDS_in_90shift
 hram_CS_n << avs_to_hram_converter_EU:EU.hram_CS_n
 
 
@@ -112,7 +114,6 @@ clk => reg:cntpipe1.clk
 clk => reg:cntpipe2.clk
 clk => reg:cntpipe3.clk
 clk => adder_22bit_1pipe:addressgen.clock
-clk => d_flipflop:burst_tracker.clk
 clk => d_flipflop:dpd_req_tracker.clk
 clk => d_flipflop:op_tracker.clk
 clk => sr_flipflop:init_tracker.clk
@@ -223,7 +224,6 @@ avs_writedata[14] => reg:datain_reg.din[14]
 avs_writedata[15] => reg:datain_reg.din[15]
 avs_waitrequest <= waitrequest.DB_MAX_OUTPUT_PORT_TYPE
 avs_readdatavalid <= avs_readdatavalid.DB_MAX_OUTPUT_PORT_TYPE
-avs_beginbursttransfer => d_flipflop:burst_tracker.din
 avs_burstcount[0] => reg:burstcnt_reg.din[0]
 avs_burstcount[1] => reg:burstcnt_reg.din[1]
 avs_burstcount[2] => reg:burstcnt_reg.din[2]
@@ -237,6 +237,7 @@ avs_burstcount[9] => reg:burstcnt_reg.din[9]
 avs_burstcount[10] => reg:burstcnt_reg.din[10]
 hram_RESET_n <= hbus_RESET_n.DB_MAX_OUTPUT_PORT_TYPE
 hram_CK <= clkctrl:clk_gater_inst.outclk
+hram_CK_n <= clkctrl:clk_gater_inst.outclk
 hram_DQ[0] <> hram_DQ[0]
 hram_DQ[1] <> hram_DQ[1]
 hram_DQ[2] <> hram_DQ[2]
@@ -245,13 +246,15 @@ hram_DQ[4] <> hram_DQ[4]
 hram_DQ[5] <> hram_DQ[5]
 hram_DQ[6] <> hram_DQ[6]
 hram_DQ[7] <> hram_DQ[7]
-hram_RWDS <> hram_RWDS
+hram_RWDS_out <= tristate_buffer:RWDS_buffer.dout[0]
+hram_RWDS_in => d_flipflop:rwds_tracker.din
+hram_RWDS_in => synchronizer:synchronizer_inst.synch_strobe
+hram_RWDS_in_90shift => DDR_to_SDR_converter:readdata_converter.clk
 hram_CS_n <= hbus_CS_n.DB_MAX_OUTPUT_PORT_TYPE
 waitrequest => avs_waitrequest.DATAIN
 force_valid => avs_readdatavalid.IN1
 cmd_load => reg:addr_reg.enable
 cmd_load => reg:burstcnt_reg.enable
-cmd_load => d_flipflop:burst_tracker.enable
 cmd_load => d_flipflop:dpd_req_tracker.enable
 cmd_load => d_flipflop:op_tracker.enable
 dpd_req_clear_n => d_flipflop:dpd_req_tracker.clear_n
@@ -296,7 +299,7 @@ config <= config.DB_MAX_OUTPUT_PORT_TYPE
 dpd_req <= avs_writedata[0].DB_MAX_OUTPUT_PORT_TYPE
 active_dpd_req <= d_flipflop:dpd_req_tracker.dout
 current_operation <= d_flipflop:op_tracker.dout
-bursttransfer <= bursttransfer.DB_MAX_OUTPUT_PORT_TYPE
+bursttransfer <= comparator_Nbit:burst_detector.equal
 burst_end <= comparator_Nbit:burst_cmp.equal
 synch_busy <= synchronizer:synchronizer_inst.synch_busy
 init <= sr_flipflop:init_tracker.dout
@@ -3341,10 +3344,11 @@ clk => present_state~1.DATAIN
 rst_n => present_state~3.DATAIN
 burst_end => Selector3.IN3
 burst_end => Selector2.IN2
-start_sampling => next_state.reception_init.DATAB
+start_sampling => next_state.reception_init1.DATAB
 start_sampling => Selector0.IN1
 enable => Selector0.IN4
 enable => Selector1.IN1
+clear_n => present_state.OUTPUTSELECT
 clear_n => present_state.OUTPUTSELECT
 clear_n => present_state.OUTPUTSELECT
 clear_n => present_state.OUTPUTSELECT
@@ -3356,8 +3360,8 @@ system_enable <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
 burstlen_enable <= burstlen_enable.DB_MAX_OUTPUT_PORT_TYPE
 burstlen_counter_enable <= burstlen_counter_enable.DB_MAX_OUTPUT_PORT_TYPE
 outreg_enable <= outreg_enable.DB_MAX_OUTPUT_PORT_TYPE
-data_counter_enable <= data_counter_enable.DB_MAX_OUTPUT_PORT_TYPE
-busy <= busy.DB_MAX_OUTPUT_PORT_TYPE
+data_counter_enable <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+busy <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 validout <= validout.DB_MAX_OUTPUT_PORT_TYPE
 outpipe_enable <= outpipe_enable.DB_MAX_OUTPUT_PORT_TYPE
 outpipe_clear_n <= outpipe_clear_n.DB_MAX_OUTPUT_PORT_TYPE
@@ -3923,7 +3927,7 @@ din_1[10] => bitwise_xnor[10].IN1
 equal <= intra_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|comparator_Nbit:fakeburst_cmp
+|avs_to_hram_converter|avs_to_hram_converter_EU:EU|comparator_Nbit:burst_detector
 din_0[0] => intra_and[0].IN0
 din_0[1] => bitwise_xnor[1].IN0
 din_0[2] => bitwise_xnor[2].IN0
@@ -3947,15 +3951,6 @@ din_1[8] => bitwise_xnor[8].IN1
 din_1[9] => bitwise_xnor[9].IN1
 din_1[10] => bitwise_xnor[10].IN1
 equal <= intra_and.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|avs_to_hram_converter|avs_to_hram_converter_EU:EU|d_flipflop:burst_tracker
-clk => dout~reg0.CLK
-enable => dout.OUTPUTSELECT
-clear_n => dout.OUTPUTSELECT
-reset_n => dout~reg0.ACLR
-din => dout.DATAB
-dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |avs_to_hram_converter|avs_to_hram_converter_EU:EU|d_flipflop:dpd_req_tracker
