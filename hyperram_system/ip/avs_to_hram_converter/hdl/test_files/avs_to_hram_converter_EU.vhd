@@ -25,7 +25,6 @@ port
 	avs_writedata                 : in    std_logic_vector(15 downto 0);
 	avs_waitrequest               : out   std_logic;
 	avs_readdatavalid             : out   std_logic;
-	avs_beginbursttransfer        : in    std_logic;
 	avs_burstcount                : in    std_logic_vector(10 downto 0);
 	-- hram signals 	
 	hram_RESET_n                  : out   std_logic;
@@ -356,8 +355,7 @@ architecture rtl of avs_to_hram_converter_EU is
   signal clk_gater_outclk   : std_logic;
 	signal hCK_enable					: std_logic;
   signal synch_cnt_up_downN : std_logic;
-  signal fakeburst          : std_logic;
-  signal burst_tracker_out  : std_logic;
+  signal burst_detector_out : std_logic;
   signal synch_validout     : std_logic;
   signal conf_reg_out       : std_logic_vector(1 downto 0);
   signal burstcnt_reg_out   : std_logic_vector(10 downto 0);
@@ -748,8 +746,8 @@ architecture rtl of avs_to_hram_converter_EU is
       equal 	=> burst_end
     ); -------------------------------------------------------------------------------------------------------------
 
-    -- fakeburst comparator ----------------------------------------------------------------------------------------
-    fakeburst_cmp : comparator_Nbit
+    -- burst detector ----------------------------------------------------------------------------------------------
+    burst_detector : comparator_Nbit
     generic map
     (
       N => 11
@@ -758,22 +756,10 @@ architecture rtl of avs_to_hram_converter_EU is
     (
       din_0		=> burstcnt_reg_out,
       din_1		=> "00000000001",
-      equal 	=> fakeburst
+      equal 	=> burst_detector_out
     ); -------------------------------------------------------------------------------------------------------------
 
-    -- burst operation tracker -------------------------------------------------------------------------------------
-    burst_tracker : d_flipflop
-    port map
-    (
-      clk				=> clk,
-      enable		=> cmd_load,
-      clear_n		=> '1',
-      reset_n		=> '1',
-      din				=> avs_beginbursttransfer,
-      dout			=> burst_tracker_out
-    ); --------------------------------------------------------------------------------------------------------------
-
-    bursttransfer <= burst_tracker_out and (not fakeburst);
+    bursttransfer <= not burst_detector_out;
 
     -- DPD request tracker ------------------------------------------------------------------------------------------
     dpd_req_tracker : d_flipflop

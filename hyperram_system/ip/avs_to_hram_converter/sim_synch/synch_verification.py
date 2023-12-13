@@ -7,17 +7,17 @@ import os
 
 # files and directories ----------------------------------------------------------------------------------------------------------------
 sim_project     = "synchronizer"
-log_file        = "synchronizer_log.txt"
-vsim_log_file   = "synchronizer_vsim_log.txt"
-input_file      = "synchronizer_in.txt"
-output_file     = "synchronizer_out.txt"
-sim_file        = "synchronizer_simulation.do"
+log_file        = "synch_log.txt"
+vsim_log_file   = "synch_vsim_log.txt"
+input_file      = "synch_in.txt"
+output_file     = "synch_out.txt"
+sim_file        = "sim.do"
 vsim_path       = '~/intelFPGA/20.1/modelsim_ase/bin/vsim'
 
 # constants ----------------------------------------------------------------------------------------------------------------------------
-burstcount = 8
-data_size = 16
-clock = "10 ns"
+burstcount      = 8
+data_size       = 16
+clock_period    = "10 ns"
 
 # environment preparation --------------------------------------------------------------------------------------------------------------
 if ( os.path.exists( log_file ) ):
@@ -38,8 +38,8 @@ except OSError:
 print( "-------------------------------------------------------" )
 print( "INFO" )
 print( "VSIM path:", vsim_path )
-print( "Project:",  sim_project)
-print( "Clock period:", clock )
+print( "Project:",  sim_project )
+print( "Clock period:", clock_period )
 print( "Burst lenght:", burstcount )
 print( "-------------------------------------------------------" )
 
@@ -51,13 +51,13 @@ log.write( "\n" )
 log.write( "VSIM path: " )
 log.write( vsim_path )
 log.write( "\n" )
-log.write( "Project: ")
+log.write( "Project: " )
 log.write( sim_project )
 log.write( "\n" )
-log.write( "Clock period: ")
-log.write( clock )
+log.write( "Clock period: " )
+log.write( clock_period )
 log.write( "\n" )
-log.write( "Burst lenght: ")
+log.write( "Burst lenght: " )
 log.write( str( burstcount ) )
 log.write( "\n" )
 log.write( "---------------------------------------------------" )
@@ -80,12 +80,11 @@ else:
     stimuli.close()
 
 # simulation -------------------------------------------------------------------------------------------------------------------------
-subprocess.run( "cp ./" + input_file + " ./tb/", shell=True )          # the testbench files look for the input file in their own folder
+subprocess.run( "cp ./" + input_file + " ./tb/", shell=True )   # the testbench files look for the input file in their own folder
 print( "Start simulation..." )
 log.write( "Start simulation... \n" )
-cmd = vsim_path + " -c -do " + sim_file + " > " + vsim_log_file
-subprocess.run( cmd, shell=True )
-print ("Simulation completed")
+subprocess.run( vsim_path + " -c -do " + sim_file + " > " + vsim_log_file, shell=True )
+print( "Simulation completed" )
 log.write( "Simulation completed \n" )
 subprocess.run( "rm ./tb/" + input_file, shell=True )
 

@@ -25,7 +25,6 @@ port
 	avs_writedata          : in    std_logic_vector(15 downto 0);
 	avs_waitrequest        : out   std_logic;
 	avs_readdatavalid      : out   std_logic;
-	avs_beginbursttransfer : in    std_logic;
 	avs_burstcount         : in    std_logic_vector(10 downto 0);
 	-- hram signals 	
 	hram_RESET_n           : out   std_logic;
@@ -61,7 +60,6 @@ architecture rtl of avs_to_hram_converter is
     avs_writedata                 : in    std_logic_vector(15 downto 0);
     avs_waitrequest               : out   std_logic;
     avs_readdatavalid             : out   std_logic;
-    avs_beginbursttransfer        : in    std_logic;
     avs_burstcount                : in    std_logic_vector(10 downto 0);
     -- hram signals 	
     hram_RESET_n                  : out   std_logic;
@@ -268,7 +266,6 @@ architecture rtl of avs_to_hram_converter is
       avs_writedata                 => avs_writedata,
       avs_waitrequest               => avs_waitrequest,
       avs_readdatavalid             => avs_readdatavalid,
-      avs_beginbursttransfer        => avs_beginbursttransfer,
       avs_burstcount                => avs_burstcount,
       hram_RESET_n                  => hram_RESET_n,
       hram_CK                       => hram_CK,
