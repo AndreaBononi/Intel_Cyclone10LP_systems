@@ -967,16 +967,6 @@
 														<placeholder-map>
 															<version>0</version>
 															<format>dock.PlaceholderList</format>
-															<entry>
-																<key shared="false">
-																	<placeholder>dock.single.Details</placeholder>
-																</key>
-															</entry>
-															<entry>
-																<key shared="false">
-																	<placeholder>dock.single.Block\ Symbol</placeholder>
-																</key>
-															</entry>
 														</placeholder-map>
 													</leaf>
 													<leaf id="1" nodeId="1372710005743">
@@ -1032,14 +1022,63 @@
 									<children ignore="false"/>
 								</child>
 								<child>
-									<layout factory="predefined" placeholder="dock.single.Details">
-										<replacement id="dockablesingle Details"/>
-										<delegate id="delegate_ccontrol backup factory id">
-											<id>Details</id>
-											<area/>
-										</delegate>
+									<layout factory="delegate_StackDockStationFactory">
+										<selected>0</selected>
+										<placeholders>
+											<version>0</version>
+											<format>dock.PlaceholderList</format>
+											<entry>
+												<key shared="false">
+													<placeholder>dock.single.Details</placeholder>
+												</key>
+												<item key="convert" type="b">true</item>
+												<item key="convert-keys" type="a">
+													<item type="s">index</item>
+													<item type="s">id</item>
+													<item type="s">placeholder</item>
+												</item>
+												<item key="dock.index" type="i">0</item>
+												<item key="dock.id" type="i">0</item>
+												<item key="dock.placeholder" type="s">dock.single.Details</item>
+											</entry>
+											<entry>
+												<key shared="false">
+													<placeholder>dock.single.Block\ Symbol</placeholder>
+												</key>
+												<item key="convert" type="b">true</item>
+												<item key="convert-keys" type="a">
+													<item type="s">index</item>
+													<item type="s">id</item>
+													<item type="s">placeholder</item>
+												</item>
+												<item key="dock.index" type="i">1</item>
+												<item key="dock.id" type="i">1</item>
+												<item key="dock.placeholder" type="s">dock.single.Block\ Symbol</item>
+											</entry>
+										</placeholders>
 									</layout>
-									<children ignore="false"/>
+									<children ignore="false">
+										<child>
+											<layout factory="predefined" placeholder="dock.single.Details">
+												<replacement id="dockablesingle Details"/>
+												<delegate id="delegate_ccontrol backup factory id">
+													<id>Details</id>
+													<area/>
+												</delegate>
+											</layout>
+											<children ignore="false"/>
+										</child>
+										<child>
+											<layout factory="predefined" placeholder="dock.single.Block\ Symbol">
+												<replacement id="dockablesingle Block Symbol"/>
+												<delegate id="delegate_ccontrol backup factory id">
+													<id>Block Symbol</id>
+													<area/>
+												</delegate>
+											</layout>
+											<children ignore="false"/>
+										</child>
+									</children>
 								</child>
 								<child>
 									<layout factory="predefined" placeholder="dock.single.Parameters">
@@ -1220,6 +1259,10 @@
 										<leaf id="1411773916305"/>
 									</backup-path>
 								</property>
+								<property factory="StackDockPropertyFactory">
+									<index>1</index>
+									<placeholder>dock.single.Clock\ Domains\ \-\ Beta</placeholder>
+								</property>
 							</location>
 							<layout>
 								<layout factory="predefined" placeholder="dock.single.Clock\ Domains\ \-\ Beta">
@@ -1296,11 +1339,12 @@
 										<node location="LEFT" size="0.6950092421441774" id="1375899667063"/>
 										<node location="TOP" size="0.75" id="1386283918535"/>
 										<node location="RIGHT" size="0.6429495472186288" id="1411773916307"/>
+										<node location="BOTTOM" size="0.25" id="1411774829723"/>
 										<leaf id="1375899667061"/>
 									</backup-path>
 								</property>
 								<property factory="StackDockPropertyFactory">
-									<index>1</index>
+									<index>8</index>
 									<placeholder>dock.single.System\ Contents</placeholder>
 								</property>
 							</location>
@@ -1443,33 +1487,6 @@
 									<replacement id="dockablesingle Hierarchy"/>
 									<delegate id="delegate_ccontrol backup factory id">
 										<id>Hierarchy</id>
-										<area/>
-									</delegate>
-								</layout>
-								<children ignore="false"/>
-							</layout>
-						</child>
-						<child key="single Block Symbol" root="ccontrol center" location="true">
-							<location>
-								<property factory="SplitDockPlaceholderProperty">
-									<placeholder>dock.single.Block\ Symbol</placeholder>
-									<backup-path>
-										<node location="RIGHT" size="0.25" id="1372710005727"/>
-										<node location="RIGHT" size="0.30499075785582264" id="1375899667063"/>
-										<node location="TOP" size="0.49909584086799275" id="1375899673461"/>
-										<leaf id="1372710005741"/>
-									</backup-path>
-								</property>
-								<property factory="StackDockPropertyFactory">
-									<index>1</index>
-									<placeholder>dock.single.Block\ Symbol</placeholder>
-								</property>
-							</location>
-							<layout>
-								<layout factory="predefined" placeholder="dock.single.Block\ Symbol">
-									<replacement id="dockablesingle Block Symbol"/>
-									<delegate id="delegate_ccontrol backup factory id">
-										<id>Block Symbol</id>
 										<area/>
 									</delegate>
 								</layout>
@@ -2055,7 +2072,7 @@
 								</property>
 							</properties>
 						</entry>
-						<entry id="single Block Symbol">
+						<entry id="single Block Symbol" current="dock.mode.normal">
 							<history>
 								<mode>dock.mode.normal</mode>
 							</history>

@@ -95,7 +95,7 @@ module s27kl0641
                    DQ3_ipd,
                    DQ2_ipd,
                    DQ1_ipd,
-                   DQ0_ipd};
+                   DQ0_ipd };
 
     wire [7:0] Dout;
     assign Dout = { DQ7,

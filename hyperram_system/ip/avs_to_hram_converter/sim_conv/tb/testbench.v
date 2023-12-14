@@ -96,7 +96,7 @@ module testbench ();
   (
     .clk							  ( clk               ), 
     .rst_n  						( rst_n             ),    
-    .driver_enable      ( driver_enable     ),      
+    .driver_enable      ( rst_n             ),      
     .start_sim					( start_sim         ),      
     .stop_sim					  ( stop_sim          ),  
     .avs_waitrequest    ( avs_waitrequest   ),     

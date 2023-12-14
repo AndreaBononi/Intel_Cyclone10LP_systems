@@ -7,7 +7,11 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
+ <library expandedCategories="Project,Library" />
  <window width="1848" height="1053" x="72" y="27" />
- <generation synthesis="VHDL" />
+ <generation
+   synthesis="VHDL"
+   block_symbol_file="0"
+   testbench_simulation="VHDL"
+   testbench_system="SIMPLE" />
 </preferences>

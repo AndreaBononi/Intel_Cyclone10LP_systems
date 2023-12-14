@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T10:06:05.110Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="LmOUrwsOZg5t1Li-PQ9g" version="22.1.7" type="device" pages="9">
+<mxfile host="app.diagrams.net" modified="2023-12-14T10:19:06.827Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="buyqAqwfbU5ddErcm0AB" version="22.1.8" type="device" pages="9">
   <diagram id="fC97jBpM_xTiCUfCGoVt" name="OUTLINE">
-    <mxGraphModel dx="929" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1362" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2505,7 +2505,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="FSM" id="6YIJCC-jqp5_hAqDVfZK">
-    <mxGraphModel dx="3543" dy="1513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2452" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="mxckVwsSwttrZL7ex4vW-0" />
         <mxCell id="mxckVwsSwttrZL7ex4vW-1" parent="mxckVwsSwttrZL7ex4vW-0" />
@@ -3644,11 +3644,11 @@
         <mxCell id="qnjXmiJQUVDLE7THAdAg-3" value="init" style="rhombus;whiteSpace=wrap;html=1;fontSize=20;" parent="mxckVwsSwttrZL7ex4vW-1" vertex="1">
           <mxGeometry x="1359.99" y="1990" width="80" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="qnjXmiJQUVDLE7THAdAg-10" value="&lt;div style=&quot;font-size: 20px;&quot;&gt;waitrequest&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;hCK_gating_enable_n&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;init_clear_n&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;dq_OE&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="mxckVwsSwttrZL7ex4vW-1" vertex="1">
-          <mxGeometry x="789.85" y="1930" width="220" height="120" as="geometry" />
+        <mxCell id="qnjXmiJQUVDLE7THAdAg-10" value="&lt;div style=&quot;font-size: 20px;&quot;&gt;waitrequest&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;hbus_CS_n&lt;/font&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;hCK_gating_enable_n&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;init_clear_n&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;dq_OE&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="mxckVwsSwttrZL7ex4vW-1" vertex="1">
+          <mxGeometry x="789.85" y="1920" width="220" height="160" as="geometry" />
         </mxCell>
         <mxCell id="qnjXmiJQUVDLE7THAdAg-11" value="WRITECONF1_END" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="mxckVwsSwttrZL7ex4vW-1" vertex="1">
-          <mxGeometry x="789.85" y="1890" width="220" height="40" as="geometry" />
+          <mxGeometry x="789.85" y="1880" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6b9regxPSS5mecDayzFb-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="mxckVwsSwttrZL7ex4vW-1" edge="1">
           <mxGeometry relative="1" as="geometry">

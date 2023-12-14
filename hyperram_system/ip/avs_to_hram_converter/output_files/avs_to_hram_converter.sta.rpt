@@ -1,5 +1,5 @@
 Timing Analyzer report for avs_to_hram_converter
-Wed Dec 13 17:30:55 2023
+Thu Dec 14 10:13:35 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -120,12 +120,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.4%      ;
+;     Processor 2            ;   5.7%      ;
 +----------------------------+-------------+
 
 
@@ -134,7 +134,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+--------+--------------------------+
 ; SDC File Path                 ; Status ; Read at                  ;
 +-------------------------------+--------+--------------------------+
-; sdc/avs_to_hram_converter.sdc ; OK     ; Wed Dec 13 17:30:54 2023 ;
+; sdc/avs_to_hram_converter.sdc ; OK     ; Thu Dec 14 10:13:34 2023 ;
 +-------------------------------+--------+--------------------------+
 
 
@@ -1092,10 +1092,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.402 ; avs_to_hram_converter_CU:CU|present_state.reset_wait                                                                                         ; avs_to_hram_converter_CU:CU|present_state.reset_wait                                                                                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_to_hram_converter_CU:CU|present_state.reset_exit                                                                                         ; avs_to_hram_converter_CU:CU|present_state.reset_exit                                                                                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                                        ; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:3:chain_tff|dummy_out                                 ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:3:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_to_hram_converter_EU:EU|sr_flipflop:dpd_tracker|dout                                                                                     ; avs_to_hram_converter_EU:EU|sr_flipflop:dpd_tracker|dout                                                                                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_to_hram_converter_EU:EU|d_flipflop:rwds_tracker|dout                                                                                     ; avs_to_hram_converter_EU:EU|d_flipflop:rwds_tracker|dout                                                                                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_to_hram_converter_EU:EU|sr_flipflop:dpd_tracker|dout                                                                                     ; avs_to_hram_converter_EU:EU|sr_flipflop:dpd_tracker|dout                                                                                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:entry_tff|dummy_out       ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:entry_tff|dummy_out                      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:\g1:1:chain_tff|dummy_out                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA0|dout[15]                                                                    ; avs_to_hram_converter_EU:EU|CA_unpacker:CA_unpacker_inst|reg:CA0|dout[15]                                                                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
@@ -1738,8 +1738,8 @@ No synchronizer chains to report.
 ; 0.186 ; avs_to_hram_converter_CU:CU|present_state.writemem_wait                                                                                                                                           ; avs_to_hram_converter_CU:CU|present_state.writemem_wait                                                                                                                                           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[0]                                                                 ; avs_to_hram_converter_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[0]                                                                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                                                                      ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                                                                      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
-; 0.186 ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                                                                            ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                                                                            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:1:chain_tff|dummy_out                                                                                      ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:1:chain_tff|dummy_out                                                                                      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                                                                            ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                                                                            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; avs_to_hram_converter_EU:EU|sr_flipflop:init_tracker|dout                                                                                                                                         ; avs_to_hram_converter_EU:EU|sr_flipflop:init_tracker|dout                                                                                                                                         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:4:chain_tff|dummy_out                                                                                      ; avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:4:chain_tff|dummy_out                                                                                      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
 ; 0.186 ; avs_to_hram_converter_CU:CU|present_state.writeburst                                                                                                                                              ; avs_to_hram_converter_CU:CU|present_state.writeburst                                                                                                                                              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
@@ -1792,8 +1792,8 @@ No synchronizer chains to report.
 ; 0.305 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[5]  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[5]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
 ; 0.306 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[2]  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[2]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
 ; 0.306 ; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                                                                                             ; avs_to_hram_converter_CU:CU|present_state.idle                                                                                                                                                    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
-; 0.306 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[6]  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[6]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
 ; 0.306 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[7]  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[7]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[6]  ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[6]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
 ; 0.307 ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[10] ; avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated|counter_reg_bit[10] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.428      ;
 ; 0.309 ; avs_to_hram_converter_CU:CU|present_state.read_wait_1                                                                                                                                             ; avs_to_hram_converter_CU:CU|present_state.read_wait_2                                                                                                                                             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.430      ;
 ; 0.311 ; avs_to_hram_converter_CU:CU|present_state.writeconf0_end                                                                                                                                          ; avs_to_hram_converter_CU:CU|present_state.wait_dpd_in                                                                                                                                             ; clk          ; clk         ; 0.000        ; 0.037      ; 0.432      ;
@@ -2302,7 +2302,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Dec 13 17:30:53 2023
+    Info: Processing started: Thu Dec 14 10:13:33 2023
 Info: Command: quartus_sta avs_to_hram_converter -c avs_to_hram_converter
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -2404,8 +2404,8 @@ Info (332146): Worst-case minimum pulse width slack is 4.348
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 457 megabytes
-    Info: Processing ended: Wed Dec 13 17:30:55 2023
+    Info: Peak virtual memory: 450 megabytes
+    Info: Processing ended: Thu Dec 14 10:13:35 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

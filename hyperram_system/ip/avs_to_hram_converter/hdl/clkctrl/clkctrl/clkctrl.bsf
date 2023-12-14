@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 		(text "ena" (rect 101 83 220 176)(font "Arial" (color 0 0 0)))
 		(text "altclkctrl_output" (rect 161 43 424 99)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "outclk" (rect 132 67 300 144)(font "Arial" (color 0 0 0)))
-		(text " clkctrl " (rect 243 104 540 218)(font "Arial" ))
+		(text " system " (rect 237 104 522 218)(font "Arial" ))
 		(line (pt 96 32)(pt 160 32)(line_width 1))
 		(line (pt 160 32)(pt 160 104)(line_width 1))
 		(line (pt 96 104)(pt 160 104)(line_width 1))

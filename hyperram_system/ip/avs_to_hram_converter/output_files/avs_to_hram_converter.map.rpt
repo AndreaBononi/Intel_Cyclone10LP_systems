@@ -1,5 +1,5 @@
 Analysis & Synthesis report for avs_to_hram_converter
-Wed Dec 13 17:30:40 2023
+Thu Dec 14 10:13:20 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -148,7 +148,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 13 17:30:40 2023          ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 14 10:13:20 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; avs_to_hram_converter                          ;
 ; Top-level Entity Name              ; avs_to_hram_converter                          ;
@@ -273,11 +273,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                                ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                       ; Library ;
 +-----------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; sim_conv/tb/s27kl0641.v                                         ; yes             ; User Verilog HDL File        ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/s27kl0641.v                                         ;         ;
-; hdl/test_files/avs_to_hram_converter_EU.vhd                     ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd                     ;         ;
-; hdl/test_files/avs_to_hram_converter.vhd                        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd                        ;         ;
 ; hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd                       ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd                       ; clkctrl ;
 ; hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v ; yes             ; User Verilog HDL File        ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v ; clkctrl ;
+; hdl/test_files/avs_to_hram_converter_EU.vhd                     ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd                     ;         ;
+; hdl/test_files/avs_to_hram_converter.vhd                        ; yes             ; User VHDL File               ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd                        ;         ;
 ; hdl/dll_90/dll_90.vhd                                           ; yes             ; User Wizard-Generated File   ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd                                           ;         ;
 ; hdl/counter_11bit_updown/counter_11bit_updown.vhd               ; yes             ; User Wizard-Generated File   ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/counter_11bit_updown/counter_11bit_updown.vhd               ;         ;
 ; hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd                     ; yes             ; User Wizard-Generated File   ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd                     ;         ;
@@ -2027,11 +2026,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Dec 13 17:30:26 2023
+    Info: Processing started: Thu Dec 14 10:13:06 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off avs_to_hram_converter -c avs_to_hram_converter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Warning (10275): Verilog HDL Module Instantiation warning at testbench.v(110): ignored dangling comma in List of Port Connections File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/testbench.v Line: 110
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd
+    Info (12022): Found design unit 1: clkctrl-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd Line: 17
+    Info (12023): Found entity 1: clkctrl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd Line: 9
+Info (12021): Found 2 design units, including 2 entities, in source file hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v
+    Info (12023): Found entity 1: clkctrl_altclkctrl_0_sub File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v Line: 29
+    Info (12023): Found entity 2: clkctrl_altclkctrl_0 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v Line: 90
 Info (12021): Found 1 design units, including 1 entities, in source file sim_conv/tb/testbench.v
     Info (12023): Found entity 1: testbench File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/testbench.v Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file sim_conv/tb/strobe_handler.vhd
@@ -2055,12 +2059,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/tes
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/test_files/avs_to_hram_converter.vhd
     Info (12022): Found design unit 1: avs_to_hram_converter-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 41
     Info (12023): Found entity 1: avs_to_hram_converter File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd
-    Info (12022): Found design unit 1: clkctrl-rtl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd Line: 17
-    Info (12023): Found entity 1: clkctrl File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd Line: 9
-Info (12021): Found 2 design units, including 2 entities, in source file hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v
-    Info (12023): Found entity 1: clkctrl_altclkctrl_0_sub File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v Line: 29
-    Info (12023): Found entity 2: clkctrl_altclkctrl_0 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v Line: 90
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/dll_90/dll_90.vhd
     Info (12022): Found design unit 1: dll_90-SYN File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd Line: 53
     Info (12023): Found entity 1: dll_90 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/dll_90/dll_90.vhd Line: 43
@@ -2213,11 +2211,11 @@ Info (12128): Elaborating entity "d_flipflop" for hierarchy "avs_to_hram_convert
 Info (12128): Elaborating entity "clkctrl" for hierarchy "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 583
 Info (12128): Elaborating entity "clkctrl_altclkctrl_0" for hierarchy "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst|clkctrl_altclkctrl_0:altclkctrl_0" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/clkctrl.vhd Line: 28
 Info (12128): Elaborating entity "clkctrl_altclkctrl_0_sub" for hierarchy "avs_to_hram_converter_EU:EU|clkctrl:clk_gater_inst|clkctrl_altclkctrl_0:altclkctrl_0|clkctrl_altclkctrl_0_sub:clkctrl_altclkctrl_0_sub_component" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/synthesis/submodules/clkctrl_altclkctrl_0.v Line: 120
-Info (12128): Elaborating entity "tristate_buffer" for hierarchy "avs_to_hram_converter_EU:EU|tristate_buffer:RWDS_buffer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 596
-Info (12128): Elaborating entity "DDR_to_SDR_converter" for hierarchy "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 623
+Info (12128): Elaborating entity "tristate_buffer" for hierarchy "avs_to_hram_converter_EU:EU|tristate_buffer:RWDS_buffer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 595
+Info (12128): Elaborating entity "DDR_to_SDR_converter" for hierarchy "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 622
 Info (12128): Elaborating entity "reg_negedge" for hierarchy "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg_negedge:lsb" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/DDR_to_SDR_converter.vhd Line: 63
 Info (12128): Elaborating entity "reg" for hierarchy "avs_to_hram_converter_EU:EU|DDR_to_SDR_converter:readdata_converter|reg:msb" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/DDR_to_SDR_converter.vhd Line: 79
-Info (12128): Elaborating entity "synchronizer" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 635
+Info (12128): Elaborating entity "synchronizer" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 634
 Info (12128): Elaborating entity "synchronizer_EU" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/synchronizer.vhd Line: 128
 Info (12128): Elaborating entity "counter_Nbit" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/synchronizer_EU.vhd Line: 195
 Info (12128): Elaborating entity "t_flipflop" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/counter_Nbit.vhd Line: 49
@@ -2236,8 +2234,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12128): Elaborating entity "cntr_7lh" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "comparator_Nbit" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|comparator_Nbit:burstlen_cmp" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/synchronizer_EU.vhd Line: 355
 Info (12128): Elaborating entity "synchronizer_CU" for hierarchy "avs_to_hram_converter_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/synchronizer.vhd Line: 162
-Info (12128): Elaborating entity "mux_2to1" for hierarchy "avs_to_hram_converter_EU:EU|mux_2to1:readdatamux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 660
-Info (12128): Elaborating entity "adder_22bit_1pipe" for hierarchy "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 725
+Info (12128): Elaborating entity "mux_2to1" for hierarchy "avs_to_hram_converter_EU:EU|mux_2to1:readdatamux" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 659
+Info (12128): Elaborating entity "adder_22bit_1pipe" for hierarchy "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 724
 Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd Line: 82
 Info (12130): Elaborated megafunction instantiation "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd Line: 82
 Info (12133): Instantiated megafunction "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd Line: 82
@@ -2250,7 +2248,7 @@ Info (12133): Instantiated megafunction "avs_to_hram_converter_EU:EU|adder_22bit
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_89k.tdf
     Info (12023): Found entity 1: add_sub_89k File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/db/add_sub_89k.tdf Line: 23
 Info (12128): Elaborating entity "add_sub_89k" for hierarchy "avs_to_hram_converter_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component|add_sub_89k:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
-Info (12128): Elaborating entity "timer_14bit" for hierarchy "avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 813
+Info (12128): Elaborating entity "timer_14bit" for hierarchy "avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter_EU.vhd Line: 812
 Info (12128): Elaborating entity "counter_Nbit" for hierarchy "avs_to_hram_converter_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/timer_14bit.vhd Line: 44
 Info (12128): Elaborating entity "avs_to_hram_converter_CU" for hierarchy "avs_to_hram_converter_CU:CU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/test_files/avs_to_hram_converter.vhd Line: 337
 Info (19000): Inferred 1 megafunctions from design logic
@@ -2378,11 +2376,11 @@ Info (21057): Implemented 582 device resources after synthesis - the final resou
     Info (21061): Implemented 556 logic cells
     Info (21064): Implemented 11 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 454 megabytes
-    Info: Processing ended: Wed Dec 13 17:30:40 2023
+    Info: Processing ended: Thu Dec 14 10:13:20 2023
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+

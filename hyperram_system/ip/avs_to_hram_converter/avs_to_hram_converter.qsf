@@ -84,6 +84,7 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name QIP_FILE hdl/clkctrl/clkctrl/synthesis/clkctrl.qip
 set_global_assignment -name VERILOG_FILE sim_conv/tb/testbench.v
 set_global_assignment -name VHDL_FILE sim_conv/tb/strobe_handler.vhd
 set_global_assignment -name VERILOG_FILE sim_conv/tb/s27kl0641.v
@@ -92,7 +93,6 @@ set_global_assignment -name VHDL_FILE sim_conv/tb/driver.vhd
 set_global_assignment -name VHDL_FILE sim_conv/tb/clk_rst_generator.vhd
 set_global_assignment -name VHDL_FILE hdl/test_files/avs_to_hram_converter_EU.vhd
 set_global_assignment -name VHDL_FILE hdl/test_files/avs_to_hram_converter.vhd
-set_global_assignment -name QIP_FILE hdl/clkctrl/clkctrl/synthesis/clkctrl.qip
 set_global_assignment -name SDC_FILE sdc/avs_to_hram_converter.sdc
 set_global_assignment -name QIP_FILE hdl/dll_90/dll_90.qip
 set_global_assignment -name QIP_FILE hdl/counter_11bit_updown/counter_11bit_updown.qip

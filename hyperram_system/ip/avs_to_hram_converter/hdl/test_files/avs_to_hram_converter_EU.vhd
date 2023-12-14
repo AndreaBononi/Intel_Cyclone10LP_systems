@@ -351,6 +351,7 @@ architecture rtl of avs_to_hram_converter_EU is
   ------------------------------------------------------------------------------------------------------------------- 
 
   -- SIGNALS -------------------------------------------------------------------------------------------------------- 
+  signal dll_reset          : std_logic;
   signal clk90              : std_logic;
   signal clk_gater_outclk   : std_logic;
 	signal hCK_enable					: std_logic;
@@ -558,11 +559,13 @@ architecture rtl of avs_to_hram_converter_EU is
       DDR_out	  => writedata_conv_out
     ); --------------------------------------------------------------------------------------------------------------
 
+    dll_reset <= not reset_n;
+
     -- clock shifter ------------------------------------------------------------------------------------------------
     clk_shifter: dll_90
     port map
     (
-      areset		=> reset_n,
+      areset		=> dll_reset,
       inclk0		=> clk,
       c0				=> clk90
     ); --------------------------------------------------------------------------------------------------------------
@@ -584,7 +587,6 @@ architecture rtl of avs_to_hram_converter_EU is
     port map
     (
       inclk   => clk90,
-      -- ena     => hCK_enable,
       ena     => hCK_enable,
       outclk  => clk_gater_outclk
     ); --------------------------------------------------------------------------------------------------------------
