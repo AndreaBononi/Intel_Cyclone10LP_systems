@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------------------------------------------------------------------------
+PLATFORM DESIGNER: COMPONENTS VS SUBSYSTEMS
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Naming convention:
+
+	PDS:	Platform Designer System
+	IP: 	Intellectual Property
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+A PDS is created connecting together different components from the IP catalog and it is identified by a <systemName>.qsys file.
+It is possible to define custom IP components, which are described by means of a <componentName>_hw.tcl file.
+However, a PDS can always be used as a sub-system in a higher-level PDS. In that sense, a PDS works exactly like a custom IP component.
+That being said, a custom component can be identified either by a <componentName>_hw.tcl file or by a <subsystemName>.qsys file.
+
+A custom component identified by a <componentName>_hw.tcl file cannot contain other IP componts inside it.
+Indentify a custom component by menas of a <subsystemName>.qsys file is the only way to use other IP components inside it.
+
+---------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,3 +1,7 @@
+-------------------------------------------------------------------------------------------------------------------------------------- 
+QUARTUS PIN ASSIGNMENT- VIRTUAL PINS
+--------------------------------------------------------------------------------------------------------------------------------------
+
 During the fitting, each DUT pin is assigned to a real IO pin of the FPGA.
 In some cases it may be useful to perfor a timing analysis on a subsystem.
 In this case, even if the pin assignment is not defined, Quartus automatically make the assignment.
@@ -10,3 +14,5 @@ In this case, it is necessary to mark the pins as "virtual pins":
 	-- Save and run the compliation.
 
 Note: DO NOT VIRTUALIZE THE CLOCK PINS
+
+--------------------------------------------------------------------------------------------------------------------------------------

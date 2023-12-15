@@ -58,4 +58,4 @@ sim:/SSRAM_to_hRAM_testbench/hbus_RWDS
 
 
 run 500us
-quit -f
+# quit -f
