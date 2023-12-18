@@ -7,11 +7,7 @@ use       ieee.numeric_std.all;
 entity avs_to_hram_converter_EU is
 generic
 (
-  hybrid_burst_enable						: std_logic := '1';
-  burst_lenght									: std_logic_vector(1 downto 0) := "11";
-  initial_latency								: std_logic_vector(3 downto 0) := "0001";
-  drive_strength								: std_logic_vector(2 downto 0) := "000";
-  distributed_refresh_interval	: std_logic_vector(1 downto 0) := "10"
+  drive_strength : std_logic_vector(2 downto 0) := "000"
 );
 port
 (
@@ -57,8 +53,6 @@ port
   synch_enable                  : in    std_logic;
   synch_clear_n                 : in    std_logic;
   RWDS_sampling_enable          : in    std_logic;  
-  init_clear_n                  : in    std_logic;
-  set_initialization_state      : in    std_logic;
   check_latency	                : in	  std_logic;
   force_RWDS_low                : in	  std_logic;
   hCK_gating_enable_n           : in    std_logic;
@@ -79,7 +73,6 @@ port
   bursttransfer                 : out   std_logic;
   burst_end                     : out   std_logic;
   synch_busy                    : out   std_logic;
-  init                          : out   std_logic;
   doubled_latency					      : out		std_logic;
   dpd_mode_on                   : out   std_logic;
 	t_acc1	                      : out   std_logic;
@@ -91,6 +84,13 @@ port
 end avs_to_hram_converter_EU;
 
 architecture rtl of avs_to_hram_converter_EU is
+
+  -- CONSTANTS ------------------------------------------------------------------------------------------------------
+  constant hybrid_burst_enable					  : std_logic := '1';
+  constant burst_lenght									  : std_logic_vector(1 downto 0) := "11";
+  constant initial_latency							  : std_logic_vector(3 downto 0) := "1111";
+  constant distributed_refresh_interval	  : std_logic_vector(1 downto 0) := "10";
+  -------------------------------------------------------------------------------------------------------------------
 
   -- COMPONENT: flipflop set-reset ---------------------------------------------------------------------------------- 
   component sr_flipflop is
@@ -786,17 +786,6 @@ architecture rtl of avs_to_hram_converter_EU is
       reset_n		=> '1',
       din				=> avs_write,
       dout			=> current_operation
-    ); --------------------------------------------------------------------------------------------------------------
-
-    -- initialization routine tracker -------------------------------------------------------------------------------
-    init_tracker : sr_flipflop
-    port map
-    (
-      clk				=> clk,
-      set				=> set_initialization_state,
-      clear_n		=> init_clear_n,
-      rst_n			=> '1',
-      dout			=> init
     ); --------------------------------------------------------------------------------------------------------------
 
     -- DPD mode tracker ---------------------------------------------------------------------------------------------

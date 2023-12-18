@@ -7,11 +7,7 @@ use 			IEEE.numeric_std.all;
 entity avs_to_hram_converter is
 generic
 (
-  hybrid_burst_enable						: std_logic := '1';
-  burst_lenght									: std_logic_vector(1 downto 0) := "11";
-  initial_latency								: std_logic_vector(3 downto 0) := "0001";
-  drive_strength								: std_logic_vector(2 downto 0) := "000";
-  distributed_refresh_interval	: std_logic_vector(1 downto 0) := "10"
+  drive_strength : std_logic_vector(2 downto 0) := "000"
 );
 port 
 (
@@ -44,11 +40,7 @@ architecture rtl of avs_to_hram_converter is
   component avs_to_hram_converter_EU is
   generic
   (
-    hybrid_burst_enable						: std_logic := '1';
-    burst_lenght									: std_logic_vector(1 downto 0) := "11";
-    initial_latency								: std_logic_vector(3 downto 0) := "0001";
-    drive_strength								: std_logic_vector(2 downto 0) := "000";
-    distributed_refresh_interval	: std_logic_vector(1 downto 0) := "10"
+    drive_strength : std_logic_vector(2 downto 0) := "000"
   );
   port
   (
@@ -96,8 +88,6 @@ architecture rtl of avs_to_hram_converter is
     synch_enable                  : in    std_logic;
     synch_clear_n                 : in    std_logic;
     RWDS_sampling_enable          : in    std_logic;  
-    init_clear_n                  : in    std_logic;
-    set_initialization_state      : in    std_logic;
     check_latency	                : in	  std_logic;
     force_RWDS_low                : in	  std_logic;
     hCK_gating_enable_n           : in    std_logic;
@@ -118,7 +108,6 @@ architecture rtl of avs_to_hram_converter is
     bursttransfer                 : out   std_logic;
     burst_end                     : out   std_logic;
     synch_busy                    : out   std_logic;
-    init                          : out   std_logic;
     doubled_latency					      : out		std_logic;
     dpd_mode_on                   : out   std_logic;
     t_acc1	                      : out   std_logic;
@@ -159,8 +148,6 @@ architecture rtl of avs_to_hram_converter is
     synch_enable                  : out std_logic;
     synch_clear_n                 : out std_logic;
     RWDS_sampling_enable          : out std_logic;  
-    init_clear_n                  : out std_logic;
-    set_initialization_state      : out std_logic;
     check_latency	                : out std_logic;
     force_RWDS_low                : out std_logic;
     hCK_gating_enable_n           : out std_logic;
@@ -181,7 +168,6 @@ architecture rtl of avs_to_hram_converter is
     bursttransfer                 : in  std_logic;
     burst_end                     : in  std_logic;
     synch_busy                    : in  std_logic;
-    init                          : in  std_logic;
     doubled_latency					      : in  std_logic;
     dpd_mode_on                   : in  std_logic;
     t_acc1	                      : in  std_logic;
@@ -216,8 +202,6 @@ architecture rtl of avs_to_hram_converter is
   signal synch_enable                  : std_logic;
   signal synch_clear_n                 : std_logic;
   signal RWDS_sampling_enable          : std_logic;  
-  signal init_clear_n                  : std_logic;
-  signal set_initialization_state      : std_logic;
   signal check_latency	               : std_logic;
   signal force_RWDS_low                : std_logic;
   signal hCK_gating_enable_n           : std_logic;
@@ -237,7 +221,6 @@ architecture rtl of avs_to_hram_converter is
   signal bursttransfer                 : std_logic;
   signal burst_end                     : std_logic;
   signal synch_busy                    : std_logic;
-  signal init                          : std_logic;
   signal doubled_latency					     : std_logic;
   signal dpd_mode_on                   : std_logic;
   signal t_acc1	                       : std_logic;
@@ -253,11 +236,7 @@ architecture rtl of avs_to_hram_converter is
     EU : avs_to_hram_converter_EU
     generic map
     (
-      hybrid_burst_enable						=> hybrid_burst_enable,
-      burst_lenght									=> burst_lenght,
-      initial_latency								=> initial_latency,
-      drive_strength								=> drive_strength,
-      distributed_refresh_interval	=> distributed_refresh_interval
+      drive_strength => drive_strength
     )
     port map
     (
@@ -302,8 +281,6 @@ architecture rtl of avs_to_hram_converter is
       synch_enable                  => synch_enable,
       synch_clear_n                 => synch_clear_n,
       RWDS_sampling_enable          => RWDS_sampling_enable,  
-      init_clear_n                  => init_clear_n,
-      set_initialization_state      => set_initialization_state,
       check_latency	                => check_latency,
       force_RWDS_low                => force_RWDS_low,
       hCK_gating_enable_n           => hCK_gating_enable_n,
@@ -323,7 +300,6 @@ architecture rtl of avs_to_hram_converter is
       bursttransfer                 => bursttransfer,
       burst_end                     => burst_end,
       synch_busy                    => synch_busy,
-      init                          => init,
       doubled_latency					      => doubled_latency,
       dpd_mode_on                   => dpd_mode_on,
       t_acc1	                      => t_acc1,
@@ -362,8 +338,6 @@ architecture rtl of avs_to_hram_converter is
       synch_enable                  => synch_enable,
       synch_clear_n                 => synch_clear_n,
       RWDS_sampling_enable          => RWDS_sampling_enable,  
-      init_clear_n                  => init_clear_n,
-      set_initialization_state      => set_initialization_state,
       check_latency	                => check_latency,
       force_RWDS_low                => force_RWDS_low,
       hCK_gating_enable_n           => hCK_gating_enable_n,
@@ -383,7 +357,6 @@ architecture rtl of avs_to_hram_converter is
       bursttransfer                 => bursttransfer,
       burst_end                     => burst_end,
       synch_busy                    => synch_busy,
-      init                          => init,
       doubled_latency					      => doubled_latency,
       dpd_mode_on                   => dpd_mode_on,
       t_acc1	                      => t_acc1,

@@ -68,6 +68,9 @@ sim:/testbench/avs_waitrequest \
 sim:/testbench/hram_CS_n \
 sim:/testbench/hram_CK \
 sim:/testbench/hram_DQ \
+sim:/testbench/DUT/hram_RWDS_out \
+sim:/testbench/DUT/hram_RWDS_in \
+sim:/testbench/DUT/hram_RWDS_in_90shift \
 sim:/testbench/DUT/EU/update_config_register \
 sim:/testbench/DUT/EU/conf_reg_out \
 sim:/testbench/DUT/EU/conf0_real \
@@ -81,7 +84,14 @@ sim:/testbench/DUT/EU/CA_sel \
 sim:/testbench/DUT/EU/address_space_sel \
 sim:/testbench/DUT/EU/dq_OE \
 sim:/testbench/DUT/EU/writedata_load \
-sim:/testbench/DUT/EU/dq_sel
+sim:/testbench/DUT/EU/dq_sel \
+sim:/testbench/DUT/hram_RWDS_out \
+sim:/testbench/DUT/hram_RWDS_in \
+sim:/testbench/DUT/hram_RWDS_in_90shift \
+sim:/testbench/hRAM/REFCOLL \
+sim:/testbench/hRAM/REFCOLL_ACTIV \
+sim:/testbench/hRAM/RefreshDelay \
+sim:/testbench/hRAM/current_state
 
 # run the simulation
 run 200us

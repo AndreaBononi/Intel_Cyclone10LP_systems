@@ -33,14 +33,12 @@ port
   synch_enable                  : out std_logic;
   synch_clear_n                 : out std_logic;
   RWDS_sampling_enable          : out std_logic;  
-  init_clear_n                  : out std_logic;
-  set_initialization_state      : out std_logic;
   check_latency	                : out std_logic;
   force_RWDS_low                : out std_logic;
   hCK_gating_enable_n           : out std_logic;
   set_dpd_status                : out std_logic;
   clear_dpd_status_n            : out std_logic;
-  deadline_tim_enable           : out std_logic;
+  deadline_tim_enable           : out std_logic; 
   deadline_tim_clear_n          : out std_logic;
   hCKen_pipe_clear_n            : out std_logic;
   hbus_RESET_n                  : out std_logic;
@@ -55,7 +53,6 @@ port
   bursttransfer                 : in  std_logic;
   burst_end                     : in  std_logic;
   synch_busy                    : in  std_logic;
-  init                          : in  std_logic;
   doubled_latency					      : in  std_logic;
   dpd_mode_on                   : in  std_logic;
 	t_acc1	                      : in  std_logic;
@@ -82,13 +79,10 @@ architecture fsm of avs_to_hram_converter_CU is
     wait_dpd_out,
     write_virtconf,
     writeconf0_prep,
-    writeconf1_prep,
     writeconf_CA0,
     writeconf_CA1,
     writeconf_CA2, 
     writeconf0,
-    writeconf1,
-    writeconf1_end,
     writeconf0_end,
     wait_dpd_in,
     read_virtconf,
@@ -137,7 +131,6 @@ architecture fsm of avs_to_hram_converter_CU is
       bursttransfer,      
       burst_end,          
       synch_busy,         
-      init,               
       doubled_latency,
       dpd_mode_on,        
       t_acc1,	           
@@ -164,7 +157,7 @@ architecture fsm of avs_to_hram_converter_CU is
         ----------------------------------------------
         when reset_exit =>
           if (t_dpdout = '1') then
-            next_state <= writeconf1_prep;
+            next_state <= writeconf0_prep;
           else
             next_state <= reset_exit;
           end if;
@@ -225,7 +218,7 @@ architecture fsm of avs_to_hram_converter_CU is
         when write_virtconf =>
           next_state <= writeconf0_prep;
         ----------------------------------------------
-        when writeconf0_prep | writeconf1_prep =>
+        when writeconf0_prep =>
           next_state <= writeconf_CA0;
         ----------------------------------------------
         when writeconf_CA0 =>
@@ -235,20 +228,10 @@ architecture fsm of avs_to_hram_converter_CU is
           next_state <= writeconf_CA2;
         ----------------------------------------------
         when writeconf_CA2 =>
-          if (init = '1') then
-            next_state <= writeconf1;
-          else
-            next_state <= writeconf0;
-          end if;
+          next_state <= writeconf0;
         ---------------------------------------------- 
         when writeconf0 =>
           next_state <= writeconf0_end;
-        ----------------------------------------------
-        when writeconf1 =>
-          next_state <= writeconf1_end;
-        ----------------------------------------------
-        when writeconf1_end =>
-          next_state <= writeconf0_prep;
         ----------------------------------------------
         when writeconf0_end =>
           if (active_dpd_req = '1') then
@@ -405,8 +388,6 @@ architecture fsm of avs_to_hram_converter_CU is
       synch_enable                <= '0';
       synch_clear_n               <= '1';
       RWDS_sampling_enable        <= '0';  
-      init_clear_n                <= '1';
-      set_initialization_state    <= '0';
       check_latency	              <= '0';
       force_RWDS_low              <= '0';
       hCK_gating_enable_n         <= '1';
@@ -483,14 +464,6 @@ architecture fsm of avs_to_hram_converter_CU is
           config_access               <= '1';
           address_space_sel           <= "01";
         ----------------------------------------------
-        when writeconf1_prep =>
-          waitrequest                 <= '1';
-          hbus_CS_n                   <= '0';
-          CA_load                     <= '1';
-          config_access               <= '1';
-          address_space_sel           <= "10";
-          set_initialization_state    <= '1';
-        ----------------------------------------------
         when writeconf_CA0 =>
           waitrequest                 <= '1';
           hbus_CS_n                   <= '0';
@@ -521,21 +494,6 @@ architecture fsm of avs_to_hram_converter_CU is
           writedata_load              <= '1';
           dq_OE                       <= '1';
           dq_sel                      <= "01";
-        ----------------------------------------------
-        when writeconf1 =>
-          waitrequest                 <= '1';
-          hCK_gating_enable_n         <= '0';
-          hbus_CS_n                   <= '0';
-          writedata_load              <= '1';
-          dq_OE                       <= '1';
-          dq_sel                      <= "10";
-        ----------------------------------------------
-        when writeconf1_end =>
-          waitrequest                 <= '1';
-          hbus_CS_n                   <= '0';
-          hCK_gating_enable_n         <= '0';
-          init_clear_n                <= '0';
-          dq_OE                       <= '1';
         ----------------------------------------------
         when writeconf0_end =>
           waitrequest                 <= '1';
