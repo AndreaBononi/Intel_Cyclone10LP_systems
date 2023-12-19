@@ -146,7 +146,7 @@ architecture tb of driver is
 								end if;
 							end loop;
 							valid_line := '0';
-              read( inputline, address );
+              read( inputline, burstlen );
               while( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
@@ -154,7 +154,7 @@ architecture tb of driver is
 								end if;
 							end loop;
 							valid_line := '0';
-              read( inputline, burstlen );
+              read( inputline, address );
               avs_address <= address;
 							avs_write <= '1';
 							avs_read <= '0';
@@ -168,15 +168,13 @@ architecture tb of driver is
 								end if;
 							end loop;
 							valid_line := '0';
-              read( inputline, address );
+              read( inputline, burstlen );
               while( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
 								end if;
 							end loop;
-							valid_line := '0';
-              read( inputline, burstlen );
               valid_line := '0';
               read( inputline, address );
               while( valid_line = '0' ) loop

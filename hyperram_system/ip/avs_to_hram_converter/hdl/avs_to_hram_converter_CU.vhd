@@ -92,6 +92,7 @@ architecture fsm of avs_to_hram_converter_CU is
     CA_1,
     CA_2,
     CA_end,
+    read_wait_0,
     read_wait_1,
     read_wait_2,
     read_end_1,
@@ -263,8 +264,11 @@ architecture fsm of avs_to_hram_converter_CU is
           if (current_operation = '1') then
             next_state <= writemem_wait;
           else
-            next_state <= read_wait_1;
+            next_state <= read_wait_0;
           end if;
+        ----------------------------------------------
+        when read_wait_0 =>
+          next_state <= read_wait_1;
         ----------------------------------------------
         when read_wait_1 =>
           if (synch_busy = '1') then
@@ -559,6 +563,13 @@ architecture fsm of avs_to_hram_converter_CU is
           hbus_CS_n                   <= '0';
           dq_OE                       <= '1';
           deadline_tim_enable         <= '1';
+        ----------------------------------------------
+        when read_wait_0 =>
+          waitrequest                 <= '1';
+          hbus_CS_n                   <= '0';
+          RWDS_sampling_enable        <= '1';
+          synch_enable                <= '1';
+          synch_cnt_clear_n           <= '0';
         ----------------------------------------------
         when read_wait_1 | read_wait_2 =>
           waitrequest                 <= '1';

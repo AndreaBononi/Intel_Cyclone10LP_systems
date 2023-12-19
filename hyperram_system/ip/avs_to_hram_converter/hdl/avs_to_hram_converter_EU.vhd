@@ -647,7 +647,7 @@ architecture rtl of avs_to_hram_converter_EU is
       synch_dout          => synch_dout,
       burstcount          => burstcnt_reg_out,
       counter_enable		  => synch_cnt_enable,
-      counter_clear_n		  => synch_clear_n,
+      counter_clear_n		  => synch_cnt_clear_n,
       counter_up_downN	  => synch_cnt_up_downN,
       counter_out			    => synch_cnt_out
     ); --------------------------------------------------------------------------------------------------------------
