@@ -62,24 +62,22 @@ sim:/testbench/DUT/CU/present_state \
 sim:/testbench/rst_n \
 sim:/testbench/clk \
 sim:/testbench/avs_waitrequest \
-sim:/testbench/DUT/avs_read \
+sim:/testbench/avs_read \
 sim:/testbench/avs_write \
 sim:/testbench/avs_address \
-sim:/testbench/DUT/avs_burstcount \
+sim:/testbench/avs_burstcount \
 sim:/testbench/avs_writedata \
-sim:/testbench/DUT/avs_readdata \
-sim:/testbench/DUT/avs_readdatavalid \
+sim:/testbench/avs_readdata \
+sim:/testbench/avs_readdatavalid \
 sim:/testbench/hram_CS_n \
 sim:/testbench/hram_CK \
 sim:/testbench/hram_DQ \
-sim:/testbench/DUT/hram_RWDS_out \
-sim:/testbench/DUT/hram_RWDS_in \
-sim:/testbench/DUT/hram_RWDS_in_90shift \
-sim:/testbench/DUT/synch_busy 
-
+sim:/testbench/hram_RWDS_out \
+sim:/testbench/hram_RWDS_in \
+sim:/testbench/hram_RWDS_in_90shift
 
 # run the simulation
-run 200us
+run 350us
 
 # exit simulator and report success to the shell
-# exit -code 0
+exit -code 0

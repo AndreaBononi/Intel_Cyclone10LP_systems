@@ -70,7 +70,7 @@ architecture tb of driver is
 
 	begin
 
-		input_driving                 : process( clk, rst_n, driver_enable, avs_waitrequest, avs_readdatavalid )
+		input_driving                 : process ( clk, rst_n, driver_enable, avs_waitrequest, avs_readdatavalid )
 		variable inputline			      : line;
 		variable file_stat            : file_open_status;
 		variable opcode					      : std_logic;
@@ -81,17 +81,18 @@ architecture tb of driver is
 		variable valid_line			      :	std_logic := '0';
     variable ongoing_writeburst   : std_logic := '0';
     variable writeburst_step			: integer := 0;
+    variable last_op              : std_logic := '0';
 		begin
 			file_open( file_stat, input_file, "../sim_conv/stimuli.txt", read_mode );
-			if( rst_n = '0' ) then
+			if ( rst_n = '0' ) then
 				avs_read	<= '0';
 				avs_write <= '0';
 				start_sim <= '1';
-			elsif( not endfile( input_file ) ) then
-				if( rising_edge( clk ) ) then
-					if( avs_waitrequest = '0' and driver_enable = '1' and ongoing_writeburst = '0' ) then
+			elsif ( not endfile( input_file ) ) then
+				if ( rising_edge( clk ) ) then
+					if ( avs_waitrequest = '0' and driver_enable = '1' and ongoing_writeburst = '0' ) then
             -- a new opertion can be commanded to the DUT ----------------------------------------------
-						while( valid_line = '0' ) loop
+						while ( valid_line = '0' ) loop
 							readline( input_file, inputline );
 							if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 								valid_line := '1';
@@ -100,9 +101,9 @@ architecture tb of driver is
 						valid_line := '0';
 						read( inputline, opcode );
             read( inputline, optype );
-						if( opcode = '0' and optype = '0' ) then
+						if ( opcode = '0' and optype = '0' ) then
 							-- single read operation -----------------------------------------------------------------
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -114,9 +115,9 @@ architecture tb of driver is
 							avs_write <= '0';
 							avs_read <= '1';
               avs_burstcount <= "00000000001";
-						elsif( opcode = '1' and optype = '0' ) then
+						elsif ( opcode = '1' and optype = '0' ) then
 							-- single write operation ----------------------------------------------------------------
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -124,7 +125,7 @@ architecture tb of driver is
 							end loop;
 							valid_line := '0';
               read( inputline, address );
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -137,9 +138,9 @@ architecture tb of driver is
 							avs_write <= '1';
 							avs_read <= '0';
               avs_burstcount <= "00000000001";
-            elsif( opcode = '0' and optype = '1' ) then
+            elsif ( opcode = '0' and optype = '1' ) then
 							-- read burst operation ------------------------------------------------------------------
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -147,7 +148,7 @@ architecture tb of driver is
 							end loop;
 							valid_line := '0';
               read( inputline, burstlen );
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -156,12 +157,12 @@ architecture tb of driver is
 							valid_line := '0';
               read( inputline, address );
               avs_address <= address;
-							avs_write <= '1';
-							avs_read <= '0';
+							avs_write <= '0';
+							avs_read <= '1';
               avs_burstcount <= burstlen;
-            elsif( opcode = '1' and optype = '1' ) then
+            elsif ( opcode = '1' and optype = '1' ) then
 							-- write burst operation -----------------------------------------------------------------
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -169,7 +170,7 @@ architecture tb of driver is
 							end loop;
 							valid_line := '0';
               read( inputline, burstlen );
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -177,7 +178,7 @@ architecture tb of driver is
 							end loop;
               valid_line := '0';
               read( inputline, address );
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -193,14 +194,15 @@ architecture tb of driver is
               ongoing_writeburst := '1';
               writeburst_step := writeburst_step + 1;
 						end if;
-          elsif( avs_waitrequest = '0' and driver_enable = '1' and ongoing_writeburst = '1' ) then
+          elsif ( avs_waitrequest = '0' and driver_enable = '1' and ongoing_writeburst = '1' ) then
             -- write burst operation continuation ------------------------------------------------------
-            if( writeburst_step = to_integer( unsigned( burstlen ) ) ) then
+            if ( writeburst_step = to_integer( unsigned( burstlen ) ) ) then
               -- the whole burst has been transmitted
               ongoing_writeburst := '0';
+              avs_write <= '0';
             else
               -- the burst has not been entirely transmitted yet
-              while( valid_line = '0' ) loop
+              while ( valid_line = '0' ) loop
 								readline( input_file, inputline );
 								if not ( inputline.all'length = 0 or inputline.all(1) = '#' ) then
 									valid_line := '1';
@@ -218,9 +220,13 @@ architecture tb of driver is
         end if;
 			else
 				-- all the operation has been transmitted to the DUT ------------------------------------------
-        if( rising_edge( clk ) ) then
-          if( avs_waitrequest = '0' ) then
-            stop_sim <= '1';
+        if ( rising_edge( clk ) ) then
+          if ( avs_waitrequest = '0' ) then
+            if ( last_op = '0' ) then
+              last_op := '1';
+            else
+              stop_sim <= '1';
+            end if;
           end if;
         end if;
 			end if;
