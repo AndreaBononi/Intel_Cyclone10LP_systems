@@ -1,0 +1,20 @@
+# system info clkctrl_tb on 2023.12.14.10:18:49
+system_info:
+name,value
+DEVICE,10CL025YE144C8G
+DEVICE_FAMILY,Cyclone 10 LP
+GENERATION_ID,1702545528
+#
+#
+# Files generated for clkctrl_tb on 2023.12.14.10:18:49
+files:
+filepath,kind,attributes,module,is_top
+clkctrl/testbench/clkctrl_tb/simulation/clkctrl_tb.vhd,VHDL,,clkctrl_tb,true
+clkctrl/testbench/clkctrl_tb/simulation/submodules/clkctrl.vhd,VHDL,,clkctrl,false
+clkctrl/testbench/clkctrl_tb/simulation/submodules/clkctrl_altclkctrl_0.vhd,VHDL,,clkctrl_altclkctrl_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+clkctrl_tb.clkctrl_inst,clkctrl
+clkctrl_tb.clkctrl_inst.altclkctrl_0,clkctrl_altclkctrl_0

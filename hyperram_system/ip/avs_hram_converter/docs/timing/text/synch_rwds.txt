@@ -1,0 +1,10 @@
+{
+ signal: 
+ [
+  {name: 'CLK', wave: '010101010101010101010101010', phase:0.15},
+  {name: 'hbus_RWDS', wave: '0....101010101010.........', phase:0.4},
+  {name: 'hbus_DQ', wave: 'z....============z........', data: ["d0A", "d0B", "d1A", "d1B", "d2A", "d2B", "d3A", "d3B", "d4A", "d4B", "d5A", "d5B"], phase:0.4},
+  {name: 'RWDS_90', wave: '0.....101010101010.........', phase:0.9},
+  {name: 'synch_din', wave: 'z.....x=x=x=x=x=x=z........', data: ["d0", "d1", "d2", "d3", "d4", "d5"], phase:0.9},
+ ]
+}
