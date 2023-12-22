@@ -1,0 +1,121 @@
+Info: Starting: Create testbench Platform Designer system
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/clkctrl.ipx
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl.qsys --testbench=SIMPLE --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Progress: Loading clkctrl/clkctrl.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 22.1]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: clkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: clkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
+Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/clkctrl.ipx
+Progress: Loading clkctrl/clkctrl.qsys
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/* matched 4 files in 0.02 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/ip/**/* matched 0 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/*/* matched 15 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/clkctrl.ipx described 0 plugins, 3 paths, in 0.02 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/* matched 4 files in 0.02 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/*/* matched 0 files in 0.00 seconds
+Info: Reading index /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/**/* matched 1958 files in 0.07 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/storage/**/* matched 26 files in 0.00 seconds
+Info: /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx described 0 plugins, 2 paths, in 0.07 seconds
+Info: /home/andrea/.altera.quartus/ip/22.1/**/* matched 2 files in 0.07 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index /home/andrea/intelFPGA_lite/22.1std/ip/altera/altera_components.ipx
+Info: /home/andrea/intelFPGA_lite/22.1std/ip/altera/altera_components.ipx described 1968 plugins, 0 paths, in 0.20 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/ip/**/* matched 108 files in 0.20 seconds
+Info: /home/andrea/intelFPGA_lite/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/builtin.ipx
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/**/* matched 9 files in 0.01 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/common/librarian/factories/**/* matched 0 files in 0.00 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.31 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.31 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: clkctrl
+Info: TB_Gen: System design is: clkctrl
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property altclkctrl_input EXPORT_OF
+Info: get_instance_property altclkctrl_0 CLASS_NAME
+Info: get_instance_assignment altclkctrl_0 testbench.partner.map.altclkctrl_input
+Info: get_interface_property altclkctrl_output EXPORT_OF
+Info: get_instance_property altclkctrl_0 CLASS_NAME
+Info: get_instance_assignment altclkctrl_0 testbench.partner.map.altclkctrl_output
+Info: send_message Info TB_Gen: Creating testbench system : clkctrl_tb with clock and reset BFMs
+Info: TB_Gen: Creating testbench system : clkctrl_tb with clock and reset BFMs
+Info: create_system clkctrl_tb
+Info: add_instance clkctrl_inst clkctrl 
+Info: set_use_testbench_naming_pattern true clkctrl
+Info: get_instance_interfaces clkctrl_inst
+Info: get_instance_interface_property clkctrl_inst altclkctrl_input CLASS_NAME
+Info: get_instance_interface_property clkctrl_inst altclkctrl_output CLASS_NAME
+Info: send_message Info TB_Gen: Saving testbench system: clkctrl_tb.qsys
+Info: TB_Gen: Saving testbench system: clkctrl_tb.qsys
+Info: save_system clkctrl_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/clkctrl_tb.qsys
+Info: Done
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl.qsys --simulation=VHDL --allow-mixed-language-simulation --testbench=SIMPLE --testbench-simulation=VHDL --allow-mixed-language-testbench-simulation --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/clkctrl_tb/simulation --family="Cyclone 10 LP" --part=10CL025YE144C8G
+Progress: Loading testbench/clkctrl_tb.qsys
+Progress: Reading input file
+Progress: Adding clkctrl_inst [clkctrl 1.0]
+Progress: Parameterizing module clkctrl_inst
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: clkctrl_tb.clkctrl_inst.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: clkctrl_tb.clkctrl_inst.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Warning: clkctrl_tb.clkctrl_inst: clkctrl_inst.altclkctrl_input must be exported, or connected to a matching conduit.
+Warning: clkctrl_tb.clkctrl_inst: clkctrl_inst.altclkctrl_output must be exported, or connected to a matching conduit.
+Info: clkctrl_tb: Generating clkctrl_tb "clkctrl_tb" for SIM_VHDL
+Info: clkctrl_inst: "clkctrl_tb" instantiated clkctrl "clkctrl_inst"
+Info: altclkctrl_0: Generating top-level entity clkctrl_altclkctrl_0.
+Info: altclkctrl_0: "clkctrl_inst" instantiated altclkctrl "altclkctrl_0"
+Info: clkctrl_tb: Done "clkctrl_tb" with 3 modules, 3 files
+Info: qsys-generate succeeded.
+Info: sim-script-gen --spd=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl_tb.spd --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl_tb.spd --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/ --use-relative-paths=true
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for MODELSIM simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for XCELIUM simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/ directory:
+Info: 	xcelium/cds.lib
+Info: 	xcelium/hdl.var
+Info: 	xcelium/xcelium_setup.sh
+Info: 	2 .cds.lib files in xcelium/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Generating the following file(s) for VCSMX simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/hdl/clkctrl/clkctrl/testbench/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create testbench Platform Designer system

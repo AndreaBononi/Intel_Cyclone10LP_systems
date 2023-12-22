@@ -221,4 +221,4 @@ else:
   log.write( "Verification result: FAILED \n" )
 
 log.close()
-subprocess.run( "rm -r transcript libraries/ __pycache__/ vsim.wlf modelsim.ini", shell=True )
+subprocess.run( "rm -r transcript libraries/ __pycache__/ vsim.wlf", shell=True )
