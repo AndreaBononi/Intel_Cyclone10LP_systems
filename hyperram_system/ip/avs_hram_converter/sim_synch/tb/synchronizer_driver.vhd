@@ -1,7 +1,6 @@
 -- BRIEF DESCRIPTION: driver for sycnhronizer testbench
 -- COMMENTS:
--- it provides the strobe (synch_strobe) to the DUT with a configurable shift (strobe_shift) with respect to the clock
--- it provides the DUT input (synch_din) center-aligned with the rising edge of synch_strobe (with the exception of the first edge)
+-- it provides the DUT input (synch_din) and the shifted strobe (synch_strobe) necessary to sample it
 -- the input is provided to the DUT only after an initial reset
 -- it generates the start_sim signal ('0' at the beginning, '1' after the initial reset)
 -- it generates the stop_sim signal ('0' until the end of the input file, '1' after)
@@ -18,8 +17,8 @@ use 			std.textio.all;
 entity synchronizer_driver is
 generic
 (
-	strobe_shift : time := 0 ns;
-	clock_period : time := 10 ns
+	dq_shift      : time := 0 ns;
+	clock_period  : time := 10 ns
 );
 port
 (
@@ -50,7 +49,7 @@ architecture tb of synchronizer_driver is
 		variable delay_ending				: integer := 0;
 		variable valid_line					: std_logic := '0';
 		begin
-			file_open(input_file_stat, input_file, "./synchronizer_in.txt", read_mode);
+			file_open(input_file_stat, input_file, "./synch_in.txt", read_mode);
 			if (rst_n = '0') then
 				start_sim <= '1';
 			else
@@ -67,15 +66,15 @@ architecture tb of synchronizer_driver is
 						end loop;
 						valid_line := '0';
 						read(inputline, input_data);
-            strobe_on <= '1';
-						synch_din <= input_data after (strobe_shift + clock_period/2);
+            strobe_on <= '1' after (dq_shift + clock_period/2);
+						synch_din <= input_data after (dq_shift + clock_period/2);
 					end if;
 				else
 					if (rising_edge(clk)) then
             if (synch_busy = '0') then
 							delay_ending := delay_ending + 1;
               if (delay_ending = 2) then
-                strobe_off <= '1' after (strobe_shift + clock_period/2);
+                strobe_off <= '1' after (dq_shift + clock_period/2 + 2.5 ns);
               end if;
               if (delay_ending = 10) then
                 stop_sim <= '1';
@@ -86,7 +85,7 @@ architecture tb of synchronizer_driver is
 			end if;
 		end process input_driving;
 		
-    strobe <= transport clk after strobe_shift;
+    strobe <= transport clk after (dq_shift + clock_period/2 + 2.5 ns);
 		synch_strobe <= strobe and strobe_on and (not strobe_off);
 
 end tb;

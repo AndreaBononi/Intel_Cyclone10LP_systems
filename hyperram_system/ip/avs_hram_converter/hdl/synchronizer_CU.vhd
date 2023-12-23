@@ -39,8 +39,7 @@ architecture fsm of synchronizer_CU is
 		reset,
     idle,
     idle_disabled,
-    reception_init1,
-    reception_init2,
+    reception_init,
     reception,
     idle_clear
 	); -------------------------------------------------------------------------------------------------------
@@ -73,7 +72,7 @@ architecture fsm of synchronizer_CU is
 				----------------------------------------------
 				when idle =>
           if (start_sampling = '1') then
-            next_state <= reception_init1;
+            next_state <= reception_init;
           else
             next_state <= idle;
           end if;
@@ -85,10 +84,7 @@ architecture fsm of synchronizer_CU is
             next_state <= idle_disabled;
           end if;
         ----------------------------------------------
-				when reception_init1 =>
-          next_state <= reception_init2;
-        ----------------------------------------------
-				when reception_init2 =>
+				when reception_init =>
           next_state <= reception;
         ----------------------------------------------
 				when reception =>
@@ -149,13 +145,7 @@ architecture fsm of synchronizer_CU is
         --------------------------------------------
         when idle_disabled =>
         --------------------------------------------
-        when reception_init1 =>
-          busy                      <= '1';
-          system_enable             <= '1';
-					outpipe_enable            <= '1';
-          data_counter_enable       <= '1';
-        --------------------------------------------
-        when reception_init2 =>
+        when reception_init =>
           busy                      <= '1';
           system_enable             <= '1';
 					outpipe_enable            <= '1';

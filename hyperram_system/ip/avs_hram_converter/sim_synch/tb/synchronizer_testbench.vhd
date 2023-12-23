@@ -22,7 +22,7 @@ architecture tb of synchronizer_testbench is
 	constant burstcount 					: std_logic_vector(10 downto 0) := "00000001000";
 	constant clock_period					: time	:= 10 ns;
 	constant reset_interval				: time	:= 15 ns;
-	constant strobe_shift					: time	:= 3 ns;
+	constant dq_shift					    : time	:= 3 ns;
 	-------------------------------------------------------------------------------------------------------------------
 
 	-- SIGNALS --------------------------------------------------------------------------------------------------------
@@ -96,8 +96,8 @@ architecture tb of synchronizer_testbench is
 	component synchronizer_driver is
 	generic
 	(
-		strobe_shift : time := 0 ns;
-		clock_period : time := 10 ns
+		dq_shift      : time := 0 ns;
+		clock_period  : time := 10 ns
 	);
 	port
 	(
@@ -165,8 +165,8 @@ architecture tb of synchronizer_testbench is
 		driver: synchronizer_driver
 		generic map
 		(
-			strobe_shift => strobe_shift,
-			clock_period => clock_period
+			dq_shift      => dq_shift,
+			clock_period  => clock_period
 		)
 		port map
 		(
