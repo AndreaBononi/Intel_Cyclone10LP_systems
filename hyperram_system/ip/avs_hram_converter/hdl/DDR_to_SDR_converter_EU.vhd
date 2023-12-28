@@ -4,7 +4,7 @@
 -- the converter works with a 400 MHz clock
 -- rwds_in and DDR_in are sampled on both positive and negative edges of the 400 MHz clock
 -- 8 samples per clock level are collected with respect to the 50 MHz clock (5 of them are always correct)
--- the detection of a variation of rwds_in is based on a majority voting
+-- the detection of a variation of rwds_in is based on a majority voting (5 or more samples must differ from the previous rwds value)
 -- the converter detects the variation of rwds_in and provides at its output an SDR version of the input data
 -- the converter provides also a version of rwds shifted of 2.5 ns with respect to the SDR data
 -- deactivate the enable signal causes the loss of all the previously acquired samples
@@ -34,8 +34,6 @@ port
   transition        : out std_logic
 );
 end DDR_to_SDR_converter;
-
-------------------------------------------------------------------------------------------------------------
 
 architecture rtl of DDR_to_SDR_converter is
 
@@ -95,21 +93,19 @@ architecture rtl of DDR_to_SDR_converter is
 	);
   end component; -------------------------------------------------------------------------------------------
 
-  -- ADDER ??? ---------------------------------------------------------------------------------------------
-  
-  end component; -------------------------------------------------------------------------------------------
-
-  -- comparator --------------------------------------------------------------------------------------------
-  component comparator_Nbit is
-  generic
+  -- voter -------------------------------------------------------------------------------------------------
+  component voter is
+  port	
   (
-    N : integer := 1
-  );
-  port
-  (
-    din_0		: in		std_logic_vector((N-1) downto 0);
-    din_1		: in		std_logic_vector((N-1) downto 0);
-    equal 	: out 	std_logic
+    d1      : in  std_logic;
+    d2      : in  std_logic;
+    d3      : in  std_logic;
+    d4      : in  std_logic;
+    d5      : in  std_logic;
+    d6      : in  std_logic;
+    d7      : in  std_logic;
+    d8      : in  std_logic;
+    result  : out std_logic
   );
   end component; -------------------------------------------------------------------------------------------
 
@@ -125,11 +121,18 @@ architecture rtl of DDR_to_SDR_converter is
   signal regp1_out    : std_logic;
   signal regp2_out    : std_logic;
   signal pipereg_out  : std_logic;
-  signal adder_out    : std_logic;
+  signal tracker_out  : std_logic;
+  signal voter_d1     : std_logic;
+  signal voter_d2     : std_logic;
+  signal voter_d3     : std_logic;
+  signal voter_d4     : std_logic;
+  signal voter_d5     : std_logic;
+  signal voter_d6     : std_logic;
+  signal voter_d7     : std_logic;
+  signal voter_d8     : std_logic;
+  signal voter_res    : std_logic;
   signal msb_out      : std_logic;
   signal lsb_out      : std_logic;
-  signal cmp_gt       : std_logic;
-  signal rwds_prev    : std_logic;
   ----------------------------------------------------------------------------------------------------------
 
   begin
