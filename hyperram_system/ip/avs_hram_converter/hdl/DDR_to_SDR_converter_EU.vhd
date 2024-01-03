@@ -13,12 +13,14 @@ library   ieee;
 use       ieee.std_logic_1164.all;
 use       ieee.numeric_std.all;
 
-entity DDR_to_SDR_converter is
+entity DDR_to_SDR_converter_EU is
 port
 (
-  -- IO signals
+  -- clock and reset
 	clk_x8            : in 	std_logic;
-	enable		        : in 	std_logic;
+	rst_n 		        : in 	std_logic;
+  -- IO signals
+  enable		        : in 	std_logic;
   rwds_in           : in  std_logic;
   rwds_out          : out std_logic;
 	DDR_in		        : in 	std_logic_vector(7 downto 0);
@@ -33,9 +35,9 @@ port
   ena               : out std_logic;
   transition        : out std_logic
 );
-end DDR_to_SDR_converter;
+end DDR_to_SDR_converter_EU;
 
-architecture rtl of DDR_to_SDR_converter is
+architecture rtl of DDR_to_SDR_converter_EU is
 
   -- positive-edge triggered type-D flip flop --------------------------------------------------------------
   component d_flipflop is
@@ -118,9 +120,9 @@ architecture rtl of DDR_to_SDR_converter is
   signal ndff2_out    : std_logic;
   signal ndff3_out    : std_logic;
   signal ndff4_out    : std_logic;
-  signal regp1_out    : std_logic;
-  signal regp2_out    : std_logic;
-  signal pipereg_out  : std_logic;
+  signal regp1_out    : std_logic_vector(7 downto 0);
+  signal regp2_out    : std_logic_vector(7 downto 0);
+  signal pipereg_out  : std_logic_vector(7 downto 0);
   signal tracker_out  : std_logic;
   signal voter_d1     : std_logic;
   signal voter_d2     : std_logic;
@@ -131,8 +133,10 @@ architecture rtl of DDR_to_SDR_converter is
   signal voter_d7     : std_logic;
   signal voter_d8     : std_logic;
   signal voter_res    : std_logic;
-  signal msb_out      : std_logic;
-  signal lsb_out      : std_logic;
+  signal msb_out      : std_logic_vector(7 downto 0);
+  signal lsb_out      : std_logic_vector(7 downto 0);
+  signal rwdsgen_out  : std_logic;
+  signal delayer_out  : std_logic;
   ----------------------------------------------------------------------------------------------------------
 
   begin
@@ -233,5 +237,151 @@ architecture rtl of DDR_to_SDR_converter is
       dout			=> ndff1_out
     ); -----------------------------------------------------------------------------------------------------
     
+    voter_d1 <= ndff4_out xor tracker_out;
+    voter_d2 <= pdff4_out xor tracker_out;
+    voter_d3 <= ndff3_out xor tracker_out;
+    voter_d4 <= pdff3_out xor tracker_out;
+    voter_d5 <= ndff2_out xor tracker_out;
+    voter_d6 <= pdff2_out xor tracker_out;
+    voter_d7 <= ndff1_out xor tracker_out;
+    voter_d8 <= pdff1_out xor tracker_out;
+
+    -- voter -----------------------------------------------------------------------------------------------
+    voter_inst: voter
+    port map
+    (
+      d1      => voter_d1,
+      d2      => voter_d2,
+      d3      => voter_d3,
+      d4      => voter_d4,
+      d5      => voter_d5,
+      d6      => voter_d6,
+      d7      => voter_d7,
+      d8      => voter_d8,
+      result  => voter_res
+    ); -----------------------------------------------------------------------------------------------------
+
+    -- voter result tracker --------------------------------------------------------------------------------
+    tracker: d_flipflop
+    port map
+    (
+      clk				=> clk_x8,
+      enable		=> system_enable,
+      clear_n		=> system_clear_n,
+      reset_n	  => '1',	
+      din				=> voter_res,
+      dout		  => tracker_out
+    ); -----------------------------------------------------------------------------------------------------
+
+    -- data register chain - register 1 --------------------------------------------------------------------
+    regp1: reg
+    generic map
+    (
+      N => 8
+    )
+    port map
+    (
+      clk				=> clk_x8,
+      enable		=> system_enable,
+      clear_n		=> system_clear_n,
+      reset_n	  => '1',
+      din				=> DDR_in,
+      dout			=> regp1_out
+    ); -----------------------------------------------------------------------------------------------------
+
+    -- data register chain - register 2 --------------------------------------------------------------------
+    regp2: reg
+    generic map
+    (
+      N => 8
+    )
+    port map
+    (
+      clk				=> clk_x8,
+      enable		=> system_enable,
+      clear_n		=> system_clear_n,
+      reset_n	  => '1',
+      din				=> regp1_out,
+      dout			=> regp2_out
+    ); -----------------------------------------------------------------------------------------------------
+
+    -- data register chain - register 3 --------------------------------------------------------------------
+    pipereg: reg
+    generic map
+    (
+      N => 8
+    )
+    port map
+    (
+      clk				=> clk_x8,
+      enable		=> system_enable,
+      clear_n		=> system_clear_n,
+      reset_n	  => '1',
+      din				=> regp2_out,
+      dout			=> pipereg_out
+    ); -----------------------------------------------------------------------------------------------------
+
+    -- msb register ----------------------------------------------------------------------------------------
+    msb: reg
+    generic map
+    (
+      N => 8
+    )
+    port map
+    (
+      clk				=> clk_x8,
+      enable		=> msb_enable,
+      clear_n		=> system_clear_n,
+      reset_n	  => '1',
+      din				=> pipereg_out,
+      dout			=> msb_out
+    ); -----------------------------------------------------------------------------------------------------
+
+    -- lsb register ----------------------------------------------------------------------------------------
+    lsb: reg
+    generic map
+    (
+      N => 8
+    )
+    port map
+    (
+      clk				=> clk_x8,
+      enable		=> lsb_enable,
+      clear_n		=> system_clear_n,
+      reset_n	  => '1',
+      din				=> pipereg_out,
+      dout			=> lsb_out
+    ); -----------------------------------------------------------------------------------------------------
+
+    SDR_out(15 downto 8) <= msb_out;
+    SDR_out(7 downto 0) <= lsb_out;
+    transition <= voter_res;
+    ena <= enable;
+
+    -- shifted-rwds generator ------------------------------------------------------------------------------
+    rwdsgen: t_flipflop
+    port map
+    (
+      clk				=> clk_x8,
+      enable		=> system_enable,
+      clear_n		=> system_clear_n,
+      reset_n		=> '1',
+      din				=> rwdsgen_toggle,
+      dout			=> rwdsgen_out
+    ); -----------------------------------------------------------------------------------------------------
+
+    -- rwds delayer ----------------------------------------------------------------------------------------
+    delayer: d_flipflop
+    port map
+    (
+      clk				=> clk_x8,
+      enable		=> system_enable,
+      clear_n		=> system_clear_n,
+      reset_n	  => '1',	
+      din				=> rwdsgen_out,
+      dout		  => delayer_out
+    ); -----------------------------------------------------------------------------------------------------
+    
+    rwds_out <= not delayer_out;
 
 end rtl;

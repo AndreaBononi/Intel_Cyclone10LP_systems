@@ -1,6 +1,6 @@
--- BRIEF DESCRITPION: monitor (output storage) for synchronizer testbench
+-- BRIEF DESCRITPION: monitor (output storage) for sampler testbench
 -- COMMENTS:
--- the synchronized values at the output of the synchronizer are stored in the output file ("synch_out.txt")
+-- the values at the output of the sampler are stored in the output file ("sampler_out.txt")
 -- it is necessary to set the reset signal at least once in order to start storing data
 -- start_sim must be equal to '0' before starting the simulation, then it must remains equal to '1'
 -- stop_sim must remain equal to '0' up to the moment in which the simulation ends, when it becomes equal to '1'
@@ -13,35 +13,32 @@ use 			ieee.std_logic_textio.all;
 library 	std;
 use 			std.textio.all;
 
-entity synchronizer_monitor is
+entity sampler_monitor is
 port
 (
-	clk								: in		std_logic;
-	synch_dout				: in		std_logic_vector(15 downto 0);
-	synch_validout		: in		std_logic;
+	sampler_sdr_out		: in		std_logic_vector(15 downto 0);
+	sampler_rwds_out	: in		std_logic;
 	start_sim					: in		std_logic;
 	stop_sim					: in		std_logic
 );
-end synchronizer_monitor;
+end sampler_monitor;
 
-architecture tb of synchronizer_monitor is
+architecture tb of sampler_monitor is
 
 	file output_file: text;
 
 	begin
 
-		output_file_generation			: process (clk, synch_validout, start_sim, stop_sim)
+		output_file_generation			: process (clk, sampler_rwds_out, start_sim, stop_sim)
 		variable outputline					: line;
 		variable output_file_stat		: file_open_status;
 		begin
-			file_open( output_file_stat, output_file, "./synch_out.txt", write_mode );
+			file_open( output_file_stat, output_file, "./sampler_out.txt", write_mode );
 			if (stop_sim = '0') then
 				if (start_sim = '1') then
-					if (rising_edge(clk)) then
-						if (synch_validout = '1') then
-							write( outputline, synch_dout );
-							writeline( output_file, outputline );
-						end if;
+					if (rising_edge(sampler_rwds_out)) then
+						write( outputline, sampler_sdr_out );
+						writeline( output_file, outputline );
 					end if;
 				end if;
 			end if;

@@ -199,8 +199,11 @@ architecture rtl of avs_hram_mainconv_EU is
   component DDR_to_SDR_converter is
   port
   (
-    clk       : in 	std_logic;
+    clk_x8    : in 	std_logic;
+    rst_n 		: in 	std_logic;
     enable		: in 	std_logic;
+    rwds_in   : in  std_logic;
+    rwds_out  : out std_logic;
     DDR_in		: in 	std_logic_vector(7 downto 0);
     SDR_out		: out std_logic_vector(15 downto 0)
   );
@@ -303,21 +306,13 @@ architecture rtl of avs_hram_mainconv_EU is
 	);
   end component; ----------------------------------------------------------------------------------------------------
 
-  -- COMPONENT: 90° delayer -----------------------------------------------------------------------------------------
-  component delayer_90 is
+  -- COMPONENT: PLL from 50 MHz to 400 MHz --------------------------------------------------------------------------
+  component pll_x8 is
 	port
 	(
-		din		: in  std_logic;
-		dout	: out std_logic 
-	);
-  end component; ----------------------------------------------------------------------------------------------------
-
-  -- COMPONENT: 360° delayer ----------------------------------------------------------------------------------------
-  component delayer_360 is
-	port
-	(
-		din		: in  std_logic;
-		dout	: out std_logic 
+		areset	: in  std_logic  := '0';
+		inclk0	: in  std_logic  := '0';
+		c0		  : out std_logic 
 	);
   end component; ----------------------------------------------------------------------------------------------------
 
@@ -365,6 +360,8 @@ architecture rtl of avs_hram_mainconv_EU is
 	signal dataa							: std_logic_vector(21 downto 0);
 	signal writedata_conv_out : std_logic_vector(7 downto 0);
 	signal RWDS_buffer_out		: std_logic_vector(0 downto 0);
+  signal shifted_RWDS       : std_logic;
+  signal clk_x8             : std_logic;
   ------------------------------------------------------------------------------------------------------------------- 
 
 	begin
@@ -594,14 +591,26 @@ architecture rtl of avs_hram_mainconv_EU is
       dout			=> doubled_latency
     ); --------------------------------------------------------------------------------------------------------------
 
+    -- pll from 50 MHz to 400 MHz -----------------------------------------------------------------------------------
+    pll_x8_inst: pll_x8
+    port map
+    (
+      areset	=> reset_n,
+      inclk0	=> clk,
+      c0		  => clk_x8
+    ); --------------------------------------------------------------------------------------------------------------
+
     -- readdata converter (DDR to SDR) ------------------------------------------------------------------------------
     readdata_converter : DDR_to_SDR_converter
     port map
     (
-      clk       => hram_RWDS,
-      enable		=> RWDS_sampling_enable,
-      DDR_in		=> hram_DQ,
-      SDR_out		=> readdata_SDR
+      clk_x8    => clk_x8,
+      rst_n     => reset_n,
+	    enable		=> RWDS_sampling_enable,
+      rwds_in   => hram_RWDS,
+      rwds_out  => shifted_RWDS,
+	    DDR_in		=> hram_DQ,
+      SDR_out		=> readdata_SDR 
     ); --------------------------------------------------------------------------------------------------------------
 
     synch_cnt_up_downN <= not synch_cnt_down;
@@ -614,7 +623,7 @@ architecture rtl of avs_hram_mainconv_EU is
       rst_n							  => reset_n,
       synch_enable        => synch_enable,
       synch_clear_n       => synch_clear_n,
-      synch_strobe        => hram_RWDS,
+      synch_strobe        => shifted_RWDS,
       synch_validout      => synch_validout,
       synch_busy          => synch_busy,
       synch_din           => readdata_SDR,
