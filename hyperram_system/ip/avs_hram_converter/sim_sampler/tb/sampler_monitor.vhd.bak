@@ -29,7 +29,7 @@ architecture tb of sampler_monitor is
 
 	begin
 
-		output_file_generation			: process (sampler_rwds_out, start_sim, stop_sim)
+		output_file_generation			: process (clk, sampler_rwds_out, start_sim, stop_sim)
 		variable outputline					: line;
 		variable output_file_stat		: file_open_status;
 		begin

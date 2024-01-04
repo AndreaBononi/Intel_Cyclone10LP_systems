@@ -46,7 +46,7 @@ architecture behavior of clk_rst_generator is
 			wait for clock_period/16;
 		end process clock_x8_gen; -----------------------------------------------------------------------------
 
-    clock_x8 <= dummy_clk and clock_enable;
+    clock_x8 <= dummy_clk_x8 and clock_enable;
 		
 		-- reset generation process ---------------------------------------------------------------------------
 		reset_gen: process

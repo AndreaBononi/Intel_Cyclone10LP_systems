@@ -1,9 +1,9 @@
--- BRIEF DESCRIPTION: testbench file for the synchronizer
+-- BRIEF DESCRIPTION: testbench file for the sampler (DDR_to_SDR_converter)
 -- COMMENTS:
 -- driver (input driving) and monitor (output storage) are created locally
 -- sequencer (input generation) and scoreboard (output verification) are created externally (using a Python script)
--- the driver is able to send the input data (read from a file) to the DUT together with their strobe (center-aligned)
--- the strobe is sent to the DUT with a configurable shift with respect to the rising edge of the clock
+-- the driver is able to send the input DDR data (read from a file) to the DUT together with its strobe (edge-aligned)
+-- strobe and DDR data are sent to the DUT with a configurable shift with respect to the rising edge of the clock
 
 library 	ieee;
 use 			ieee.std_logic_1164.all;
@@ -13,55 +13,46 @@ use 			ieee.std_logic_textio.all;
 library 	std;
 use 			std.textio.all;
 
-entity synchronizer_testbench is
-end synchronizer_testbench;
+entity sampler_testbench is
+end sampler_testbench;
 
-architecture tb of synchronizer_testbench is
+architecture tb of sampler_testbench is
 
 	-- constants ------------------------------------------------------------------------------------------------------
-	constant burstcount 					: std_logic_vector(10 downto 0) := "00000001000";
-	constant clock_period					: time	:= 10 ns;
-	constant reset_interval				: time	:= 15 ns;
-	constant dq_shift					    : time	:= 3 ns;
+	constant clock_period		: time	:= 20 ns;
+	constant clock_shift    : time	:= 3 ns;
+  constant reset_interval : time  := 40 ns;
 	-------------------------------------------------------------------------------------------------------------------
 
 	-- SIGNALS --------------------------------------------------------------------------------------------------------
 	-- clock and reset signals
-	signal clk		          			: std_logic;
-	signal rst_n			        		: std_logic;
-	-- DUT signals 
-	signal synch_enable           :	std_logic;
-	signal synch_clear_n          :	std_logic;
-	signal synch_strobe           :	std_logic;
-	signal synch_din              :	std_logic_vector(15 downto 0);
-	signal synch_dout             :	std_logic_vector(15 downto 0);
-	signal synch_validout         :	std_logic;
-	signal synch_busy             :	std_logic;
-	signal counter_out						: std_logic_vector(10 downto 0);
+	signal clk		          : std_logic;
+  signal clk_x8	          : std_logic;
+	signal rst_n			      : std_logic;	
 	-- simulation signals 
-	signal start_sim							: std_logic;
-	signal stop_sim								: std_logic;
-	signal clk_enable							: std_logic;
+	signal start_sim        : std_logic;
+	signal stop_sim			    : std_logic;
+	signal clk_enable		    : std_logic;
+  -- DUT signals
+  signal sampler_rwds_in  : std_logic; 
+  signal sampler_rwds_out : std_logic;
+  signal sampler_ddr_in	  : std_logic_vector(7 downto 0);
+  signal sampler_sdr_out  : std_logic_vector(15 downto 0);
 	-------------------------------------------------------------------------------------------------------------------
 
-	-- COMPONENT: synchronizer (DUT) ----------------------------------------------------------------------------------
-	component synchronizer is
+	-- COMPONENT: sampler (DUT) ---------------------------------------------------------------------------------------
+	component DDR_to_SDR_converter is
 	port
 	(
-		clk                       : in    std_logic;
-		rst_n											: in    std_logic;
-		synch_enable              : in		std_logic;
-		synch_clear_n             : in		std_logic;
-		synch_strobe              : in		std_logic;
-		synch_validout            : out		std_logic;
-		synch_busy                : out		std_logic;
-		synch_din                 : in		std_logic_vector(15 downto 0);
-		synch_dout                : out		std_logic_vector(15 downto 0);
-		burstcount                : in		std_logic_vector(10 downto 0);
-		counter_enable						: in    std_logic;
-		counter_clear_n						: in    std_logic;
-		counter_up_downN					: in    std_logic;
-		counter_out								: out		std_logic_vector(10 downto 0)
+		-- clock and reset
+    clk_x8            : in 	std_logic;
+    rst_n 		        : in 	std_logic;
+    -- IO signals
+    enable		        : in 	std_logic;
+    rwds_in           : in  std_logic;
+    rwds_out          : out std_logic;
+    DDR_in		        : in 	std_logic_vector(7 downto 0);
+    SDR_out		        : out std_logic_vector(15 downto 0)
 	);
 	end component; ----------------------------------------------------------------------------------------------------
 
@@ -75,40 +66,38 @@ architecture tb of synchronizer_testbench is
 	port 	
 	(
 		reset_n	 			: out std_logic;
-		clock 				: out std_logic;
-		clock_enable	: in	std_logic
+    clock 				: out std_logic;
+    clock_x8      : out std_logic;
+    clock_enable	: in	std_logic
 	);
 	end component; ---------------------------------------------------------------------------------------------------
 
 	-- COMPONENT: monitor --------------------------------------------------------------------------------------------
-	component synchronizer_monitor is
+	component sampler_monitor is
 	port
 	(
-		clk								: in		std_logic;
-		synch_dout				: in		std_logic_vector(15 downto 0);
-		synch_validout		: in		std_logic;
-		start_sim					: in		std_logic;
-		stop_sim					: in		std_logic
+		sampler_sdr_out		: in		std_logic_vector(15 downto 0);
+    sampler_rwds_out	: in		std_logic;
+    start_sim					: in		std_logic;
+    stop_sim					: in		std_logic
 	);
 	end component; ---------------------------------------------------------------------------------------------------
 
 	-- COMPONENT: driver ---------------------------------------------------------------------------------------------
-	component synchronizer_driver is
+	component sampler_driver is
 	generic
 	(
-		dq_shift      : time := 0 ns;
-		clock_period  : time := 10 ns
+		clock_shift   : time := 0 ns;
+	  clock_period  : time := 10 ns
 	);
 	port
 	(
-		clk							: in		std_logic;
-		rst_n						: in  	std_logic;
-		synch_enable    : out		std_logic := '1';
-		synch_strobe    : out		std_logic := '0';
-		synch_din       : out		std_logic_vector(15 downto 0);
-		synch_busy      : in		std_logic;
-		start_sim				:	out		std_logic := '0';
-		stop_sim				: out		std_logic := '0'
+		clk							  : in	std_logic;
+    rst_n						  : in  std_logic;
+    start_sim				  :	out	std_logic := '0';
+    stop_sim				  : out	std_logic := '0';
+    sampler_ddr_in    : out std_logic_vector(7 downto 0);
+    sampler_rwds_in   : out std_logic := '0'
 	);
 	end component; ---------------------------------------------------------------------------------------------------
 
@@ -127,57 +116,48 @@ architecture tb of synchronizer_testbench is
 		(
 			reset_n 			=> rst_n,
 			clock 				=> clk,
+      clock_x8      => clk_x8,
 			clock_enable 	=> clk_enable
 		); -------------------------------------------------------------------------------------------------------------
 
 		-- DUT instance ------------------------------------------------------------------------------------------------
-		DUT: synchronizer
+		DUT: DDR_to_SDR_converter
 		port map
 		(
-			clk                 => clk,
-			rst_n								=> rst_n,
-			synch_enable        => synch_enable,
-			synch_clear_n       => synch_clear_n,
-			synch_strobe        => synch_strobe,
-			synch_validout      => synch_validout,
-			synch_busy          => synch_busy,
-			synch_din           => synch_din,
-			synch_dout          => synch_dout,
-			burstcount          => burstcount,
-			counter_enable			=> '0',
-			counter_clear_n			=> '1',
-			counter_up_downN		=> '1',
-			counter_out					=> counter_out
+      clk_x8    => clk_x8,
+      rst_n 	  => rst_n,
+      enable	  => '1',
+      rwds_in   => sampler_rwds_in,
+      rwds_out  => sampler_rwds_out,
+      DDR_in	  => sampler_ddr_in,
+      SDR_out	  => sampler_sdr_out
 		); -------------------------------------------------------------------------------------------------------------
 
 		-- monitor instance --------------------------------------------------------------------------------------------
-		monitor: synchronizer_monitor
+		monitor: sampler_monitor
 		port map
 		(
-			clk 						=> clk,
-			synch_dout			=> synch_dout,
-			synch_validout 	=> synch_validout,
-			start_sim 			=> start_sim,
-			stop_sim 				=> stop_sim
+			sampler_sdr_out		=> sampler_sdr_out,
+      sampler_rwds_out	=> sampler_rwds_out,
+      start_sim					=> start_sim,
+      stop_sim					=> stop_sim
 		); -------------------------------------------------------------------------------------------------------------
 
 		-- driver instance ---------------------------------------------------------------------------------------------
-		driver: synchronizer_driver
+		driver: sampler_driver
 		generic map
 		(
-			dq_shift      => dq_shift,
-			clock_period  => clock_period
+			clock_shift   => clock_shift,
+	    clock_period  => clock_period
 		)
 		port map
 		(
-			clk 					=> clk,
-			rst_n 				=> rst_n,
-			synch_enable 	=> synch_enable,
-			synch_strobe 	=> synch_strobe,
-			synch_din 		=> synch_din,
-			synch_busy 		=> synch_busy,
-			start_sim 		=> start_sim,
-			stop_sim 			=> stop_sim
+			clk							  => clk,
+      rst_n						  => rst_n,
+      start_sim				  => start_sim,
+      stop_sim				  => stop_sim,
+      sampler_ddr_in    => sampler_ddr_in,
+      sampler_rwds_in   => sampler_rwds_in
 		); -------------------------------------------------------------------------------------------------------------
 
 end tb;

@@ -39,7 +39,7 @@ end DDR_to_SDR_converter_EU;
 
 architecture rtl of DDR_to_SDR_converter_EU is
 
-  -- positive-edge triggered type-D flip flop --------------------------------------------------------------
+  -- COMPONENT: positive-edge triggered type-D flip flop ---------------------------------------------------
   component d_flipflop is
   port
   (
@@ -52,7 +52,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
   );
   end component; -------------------------------------------------------------------------------------------
 
-  -- negative-edge triggered type-D flip flop --------------------------------------------------------------
+  -- COMPONENT: negative-edge triggered type-D flip flop ---------------------------------------------------
   component dff_negedge is
   port
   (
@@ -65,7 +65,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
   );
   end component; -------------------------------------------------------------------------------------------
 
-  -- positive-edge triggered register ----------------------------------------------------------------------
+  -- COMPONENT: positive-edge triggered register -----------------------------------------------------------
   component reg is
   generic
   (
@@ -82,7 +82,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
   );
   end component; -------------------------------------------------------------------------------------------
 
-  -- flipflop type-T (toggle) ------------------------------------------------------------------------------
+  -- COMPONENT: flipflop type-T (toggle) -------------------------------------------------------------------
   component t_flipflop is
 	port
 	(
@@ -95,19 +95,23 @@ architecture rtl of DDR_to_SDR_converter_EU is
 	);
   end component; -------------------------------------------------------------------------------------------
 
-  -- voter -------------------------------------------------------------------------------------------------
+  -- COMPONENT: voter --------------------------------------------------------------------------------------
   component voter is
   port	
   (
-    d1      : in  std_logic;
-    d2      : in  std_logic;
-    d3      : in  std_logic;
-    d4      : in  std_logic;
-    d5      : in  std_logic;
-    d6      : in  std_logic;
-    d7      : in  std_logic;
-    d8      : in  std_logic;
-    result  : out std_logic
+    clk       : in  std_logic;
+    clear_n   : in  std_logic;
+    enable    : in  std_logic;
+    d1        : in  std_logic;
+    d2        : in  std_logic;
+    d3        : in  std_logic;
+    d4        : in  std_logic;
+    d5        : in  std_logic;
+    d6        : in  std_logic;
+    d7        : in  std_logic;
+    d8        : in  std_logic;
+    gt4       : out std_logic;
+    eq4       : out std_logic
   );
   end component; -------------------------------------------------------------------------------------------
 
@@ -123,16 +127,10 @@ architecture rtl of DDR_to_SDR_converter_EU is
   signal regp1_out    : std_logic_vector(7 downto 0);
   signal regp2_out    : std_logic_vector(7 downto 0);
   signal pipereg_out  : std_logic_vector(7 downto 0);
+  signal tracker_tgl  : std_logic;
   signal tracker_out  : std_logic;
-  signal voter_d1     : std_logic;
-  signal voter_d2     : std_logic;
-  signal voter_d3     : std_logic;
-  signal voter_d4     : std_logic;
-  signal voter_d5     : std_logic;
-  signal voter_d6     : std_logic;
-  signal voter_d7     : std_logic;
-  signal voter_d8     : std_logic;
-  signal voter_res    : std_logic;
+  signal gt4          : std_logic;
+  signal eq4          : std_logic;
   signal msb_out      : std_logic_vector(7 downto 0);
   signal lsb_out      : std_logic_vector(7 downto 0);
   signal rwdsgen_out  : std_logic;
@@ -190,7 +188,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
     ); -----------------------------------------------------------------------------------------------------
 
     -- negedge dff chain, 4th position ---------------------------------------------------------------------
-    ndff4 : d_flipflop
+    ndff4 : dff_negedge
     port map
     (
       clk				=> clk_x8, 
@@ -202,7 +200,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
     ); -----------------------------------------------------------------------------------------------------
 
     -- negedge dff chain, 3th position ---------------------------------------------------------------------
-    ndff3 : d_flipflop
+    ndff3 : dff_negedge
     port map
     (
       clk				=> clk_x8, 
@@ -214,7 +212,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
     ); -----------------------------------------------------------------------------------------------------
 
     -- negedge dff chain, 2th position ---------------------------------------------------------------------
-    ndff2 : d_flipflop
+    ndff2 : dff_negedge
     port map
     (
       clk				=> clk_x8, 
@@ -226,7 +224,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
     ); -----------------------------------------------------------------------------------------------------
 
     -- negedge dff chain, 1th position ---------------------------------------------------------------------
-    ndff1 : d_flipflop
+    ndff1 : dff_negedge
     port map
     (
       clk				=> clk_x8, 
@@ -236,40 +234,37 @@ architecture rtl of DDR_to_SDR_converter_EU is
       din				=> ndff2_out, 
       dout			=> ndff1_out
     ); -----------------------------------------------------------------------------------------------------
-    
-    voter_d1 <= ndff4_out xor tracker_out;
-    voter_d2 <= pdff4_out xor tracker_out;
-    voter_d3 <= ndff3_out xor tracker_out;
-    voter_d4 <= pdff3_out xor tracker_out;
-    voter_d5 <= ndff2_out xor tracker_out;
-    voter_d6 <= pdff2_out xor tracker_out;
-    voter_d7 <= ndff1_out xor tracker_out;
-    voter_d8 <= pdff1_out xor tracker_out;
 
     -- voter -----------------------------------------------------------------------------------------------
     voter_inst: voter
     port map
     (
-      d1      => voter_d1,
-      d2      => voter_d2,
-      d3      => voter_d3,
-      d4      => voter_d4,
-      d5      => voter_d5,
-      d6      => voter_d6,
-      d7      => voter_d7,
-      d8      => voter_d8,
-      result  => voter_res
+      clk       => clk_x8,
+      clear_n   => system_clear_n,
+      enable    => system_enable,
+      d1        => ndff4_out,
+      d2        => pdff4_out,
+      d3        => ndff3_out,
+      d4        => pdff3_out,
+      d5        => ndff2_out,
+      d6        => pdff2_out,
+      d7        => ndff1_out,
+      d8        => pdff1_out,
+      gt4       => gt4,
+      eq4       => eq4
     ); -----------------------------------------------------------------------------------------------------
 
-    -- voter result tracker --------------------------------------------------------------------------------
-    tracker: d_flipflop
+    tracker_tgl <= (gt4 xor tracker_out) and (not eq4);
+
+    -- result tracker --------------------------------------------------------------------------------------
+    tracker: t_flipflop
     port map
     (
       clk				=> clk_x8,
       enable		=> system_enable,
       clear_n		=> system_clear_n,
       reset_n	  => '1',	
-      din				=> voter_res,
+      din				=> tracker_tgl,
       dout		  => tracker_out
     ); -----------------------------------------------------------------------------------------------------
 
@@ -355,7 +350,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
 
     SDR_out(15 downto 8) <= msb_out;
     SDR_out(7 downto 0) <= lsb_out;
-    transition <= voter_res;
+    transition <= tracker_tgl;
     ena <= enable;
 
     -- shifted-rwds generator ------------------------------------------------------------------------------

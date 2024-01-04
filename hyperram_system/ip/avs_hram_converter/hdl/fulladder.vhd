@@ -17,7 +17,7 @@ end fulladder;
 
 architecture behavior of fulladder is
 
-  -- half adder -------------------------------------------------------------
+  -- COMPONENT: half adder --------------------------------------------------
   component halfadder is
   port	
   (

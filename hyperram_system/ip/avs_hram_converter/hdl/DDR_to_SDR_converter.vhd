@@ -30,7 +30,7 @@ end DDR_to_SDR_converter;
 
 architecture rtl of DDR_to_SDR_converter is
 
-  -- execution unit ----------------------------------------------------------------------------------------
+  -- COMPONENT: execution unit ------------------------------------------------------------------------------
   component DDR_to_SDR_converter_EU is
 	port
 	(
@@ -55,7 +55,7 @@ architecture rtl of DDR_to_SDR_converter is
 	);
   end component; -------------------------------------------------------------------------------------------
 
-  -- control unit ------------------------------------------------------------------------------------------
+  -- COMPONENT: control unit -------------------------------------------------------------------------------
   component DDR_to_SDR_converter_CU is
 	port
 	(

@@ -31,6 +31,7 @@ architecture fsm of DDR_to_SDR_converter_CU is
 	(
 		reset,
     idle,
+    idle_intra,
     msb_tx,
     lsb_tx
 	); -------------------------------------------------------------------------------------------------------
@@ -65,10 +66,13 @@ architecture fsm of DDR_to_SDR_converter_CU is
           end if;
         ----------------------------------------------
 				when msb_tx =>
+          next_state <= idle_intra;
+        ----------------------------------------------
+				when idle_intra =>
           if (transition = '1') then
             next_state <= lsb_tx;
           else
-            next_state <= msb_tx;
+            next_state <= idle_intra;
           end if;
         ----------------------------------------------
 				when others =>
@@ -102,7 +106,7 @@ architecture fsm of DDR_to_SDR_converter_CU is
         when reset =>
           system_clear_n  <= '0';
         --------------------------------------------
-        when idle =>
+        when idle | idle_intra =>
           system_enable   <= '1';
         --------------------------------------------
         when msb_tx =>

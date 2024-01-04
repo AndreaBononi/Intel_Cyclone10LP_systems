@@ -6,18 +6,18 @@ import subprocess
 import os
 
 # files and directories ----------------------------------------------------------------------------------------------------------------
-sim_project     = "synchronizer"
-log_file        = "synch_log.txt"
-vsim_log_file   = "synch_vsim_log.txt"
-input_file      = "synch_in.txt"
-output_file     = "synch_out.txt"
+sim_project     = "sampler"
+log_file        = "sampler_log.txt"
+vsim_log_file   = "sampler_vsim_log.txt"
+input_file      = "sampler_in.txt"
+output_file     = "sampler_out.txt"
 sim_file        = "sim.do"
 vsim_path       = '~/intelFPGA/20.1/modelsim_ase/bin/vsim'
 
 # constants ----------------------------------------------------------------------------------------------------------------------------
-burstcount      = 8
-data_size       = 16
-clock_period    = "10 ns"
+ddr_data_size   = 8
+sdr_data_num    = 10
+clock_period    = "20 ns"
 
 # environment preparation --------------------------------------------------------------------------------------------------------------
 if ( os.path.exists( log_file ) ):
@@ -40,38 +40,23 @@ print( "INFO" )
 print( "VSIM path:", vsim_path )
 print( "Project:",  sim_project )
 print( "Clock period:", clock_period )
-print( "Burst lenght:", burstcount )
 print( "-------------------------------------------------------" )
 
 # information writing (log file) -------------------------------------------------------------------------------------------------------
-log.write( "---------------------------------------------------" )
-log.write( "\n" )
-log.write( "INFO" )
-log.write( "\n" )
-log.write( "VSIM path: " )
-log.write( vsim_path )
-log.write( "\n" )
-log.write( "Project: " )
-log.write( sim_project )
-log.write( "\n" )
-log.write( "Clock period: " )
-log.write( clock_period )
-log.write( "\n" )
-log.write( "Burst lenght: " )
-log.write( str( burstcount ) )
-log.write( "\n" )
-log.write( "---------------------------------------------------" )
-log.write( "\n" )
+log.write( "--------------------------------------------------- \n" )
+log.write( "INFO \n" )
+log.write( "VSIM path: " + vsim_path + "\n" )
+log.write( "Project: " + sim_project + "\n" )
+log.write( "Clock period: " + clock_period + "\n" )
+log.write( "--------------------------------------------------- \n" )
 
 # stimuli generation ------------------------------------------------------------------------------------------------------------------
-# at first, all memory locations are written with a random writedata
-# later, the value of each memory location is read
 try:
     stimuli = open( input_file, "w" )
-    for burst_idx in range( 0, burstcount ):
-        data = format( random.randint( 0,  2 ** data_size ), str( data_size ) + 'b' ).replace(" ", "0")
-        stimuli.write( data )
-        stimuli.write( "\n" )
+    for idx in range( 0, sdr_data_num ):
+        data_H = format( random.randint( 0,  2 ** ddr_data_size ), str( ddr_data_size ) + 'b' ).replace(" ", "0")
+        data_L = format( random.randint( 0,  2 ** ddr_data_size ), str( ddr_data_size ) + 'b' ).replace(" ", "0")
+        stimuli.write( data_H + "\n" + data_L + "\n" )
 except OSError:
     print( "Error: files creation failed" )
     log.write( "Error: files creation failed" )
@@ -89,6 +74,9 @@ log.write( "Simulation completed \n" )
 subprocess.run( "rm ./tb/" + input_file, shell=True )
 
 # verification -----------------------------------------------------------------------------------------------------------------------
+
+# TODO: ELABORARE FILE DI USCITA SIMULAZIONE
+
 cmd = "diff " + input_file + " " + output_file + " -y --suppress-common-lines -N | wc -l"
 verification_process = subprocess.run( cmd, shell = True, capture_output = True )
 diff = verification_process.stdout.decode( "utf-8" ).replace("\n", "")

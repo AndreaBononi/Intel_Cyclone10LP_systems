@@ -44,24 +44,13 @@ print( "Burst lenght:", burstcount )
 print( "-------------------------------------------------------" )
 
 # information writing (log file) -------------------------------------------------------------------------------------------------------
-log.write( "---------------------------------------------------" )
-log.write( "\n" )
-log.write( "INFO" )
-log.write( "\n" )
-log.write( "VSIM path: " )
-log.write( vsim_path )
-log.write( "\n" )
-log.write( "Project: " )
-log.write( sim_project )
-log.write( "\n" )
-log.write( "Clock period: " )
-log.write( clock_period )
-log.write( "\n" )
-log.write( "Burst lenght: " )
-log.write( str( burstcount ) )
-log.write( "\n" )
-log.write( "---------------------------------------------------" )
-log.write( "\n" )
+log.write( "--------------------------------------------------- \n" )
+log.write( "INFO \n" )
+log.write( "VSIM path: " + vsim_path + "\n" )
+log.write( "Project: " + sim_project + "\n" )
+log.write( "Clock period: " + clock_period + "\n" )
+log.write( "Burst lenght: " + str( burstcount ) + "\n" )
+log.write( "--------------------------------------------------- \n" )
 
 # stimuli generation ------------------------------------------------------------------------------------------------------------------
 # at first, all memory locations are written with a random writedata
@@ -70,8 +59,7 @@ try:
     stimuli = open( input_file, "w" )
     for burst_idx in range( 0, burstcount ):
         data = format( random.randint( 0,  2 ** data_size ), str( data_size ) + 'b' ).replace(" ", "0")
-        stimuli.write( data )
-        stimuli.write( "\n" )
+        stimuli.write( data + "\n" )
 except OSError:
     print( "Error: files creation failed" )
     log.write( "Error: files creation failed" )

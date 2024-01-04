@@ -19,9 +19,19 @@ vcom ./tb/sampler_driver.vhd
 vcom ./tb/sampler_testbench.vhd
 
 # simulation options
-vsim -c -t 1ns work.sampler_testbench -voptargs=+acc
+vsim -c -t 10ps work.sampler_testbench -voptargs=+acc
 
 # waveforms
+add wave -position insertpoint  \
+sim:/sampler_testbench/DUT/CU/present_state \
+sim:/sampler_testbench/clk \
+sim:/sampler_testbench/clk_x8 \
+sim:/sampler_testbench/rst_n \
+sim:/sampler_testbench/clk_enable \
+sim:/sampler_testbench/sampler_rwds_in \
+sim:/sampler_testbench/sampler_ddr_in \
+sim:/sampler_testbench/sampler_rwds_out \
+sim:/sampler_testbench/sampler_sdr_out
 
-run 250ns
+run 1us
 quit -f
