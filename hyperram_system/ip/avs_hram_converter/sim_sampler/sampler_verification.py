@@ -11,6 +11,7 @@ log_file        = "sampler_log.txt"
 vsim_log_file   = "sampler_vsim_log.txt"
 input_file      = "sampler_in.txt"
 output_file     = "sampler_out.txt"
+expected_file   = "expected_result.txt"
 sim_file        = "sim.do"
 vsim_path       = '~/intelFPGA/20.1/modelsim_ase/bin/vsim'
 
@@ -26,6 +27,8 @@ if ( os.path.exists( output_file ) ):
   subprocess.run( "rm " + output_file, shell=True )
 if ( os.path.exists( input_file ) ):
   subprocess.run( "rm " + input_file, shell=True )
+if ( os.path.exists( expected_file ) ):
+  subprocess.run( "rm " + expected_file, shell=True )
 
 # log file opening ---------------------------------------------------------------------------------------------------------------------
 try:
@@ -53,16 +56,19 @@ log.write( "--------------------------------------------------- \n" )
 # stimuli generation ------------------------------------------------------------------------------------------------------------------
 try:
     stimuli = open( input_file, "w" )
+    expected = open( expected_file, "w" )
     for idx in range( 0, sdr_data_num ):
         data_H = format( random.randint( 0,  2 ** ddr_data_size ), str( ddr_data_size ) + 'b' ).replace(" ", "0")
         data_L = format( random.randint( 0,  2 ** ddr_data_size ), str( ddr_data_size ) + 'b' ).replace(" ", "0")
         stimuli.write( data_H + "\n" + data_L + "\n" )
+        expected.write( data_H + data_L + "\n" )
 except OSError:
     print( "Error: files creation failed" )
     log.write( "Error: files creation failed" )
     raise
 else:
     stimuli.close()
+    expected.close()
 
 # simulation -------------------------------------------------------------------------------------------------------------------------
 subprocess.run( "cp ./" + input_file + " ./tb/", shell=True )   # the testbench files look for the input file in their own folder
@@ -74,10 +80,7 @@ log.write( "Simulation completed \n" )
 subprocess.run( "rm ./tb/" + input_file, shell=True )
 
 # verification -----------------------------------------------------------------------------------------------------------------------
-
-# TODO: ELABORARE FILE DI USCITA SIMULAZIONE
-
-cmd = "diff " + input_file + " " + output_file + " -y --suppress-common-lines -N | wc -l"
+cmd = "diff " + expected_file + " " + output_file + " -y --suppress-common-lines -N | wc -l"
 verification_process = subprocess.run( cmd, shell = True, capture_output = True )
 diff = verification_process.stdout.decode( "utf-8" ).replace("\n", "")
 if ( diff == '0' ):

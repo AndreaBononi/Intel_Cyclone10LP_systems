@@ -6,6 +6,5 @@ Clock period: 20 ns
 --------------------------------------------------- 
 Start simulation... 
 Simulation completed 
-DUT is not working as expected 
-20 errors detected 
-Verification result: FAILED 
+DUT is working correctly 
+Verification result: PASSED 
