@@ -1,0 +1,207 @@
+-- BRIEF DESCRIPTION: DDR_to_SDR_converter control unit
+-- COMMENTS:
+-- use it together with DDR_to_SDR_converter_EU.vhd to create DDR_to_SDR_converter.vhd
+-- the output (control signals) generation is registered to improve the performace
+
+library 	ieee;
+use 			ieee.std_logic_1164.all;
+use 			ieee.numeric_std.all;
+
+entity DDR_to_SDR_converter_CU is
+port
+(
+  -- clock and reset
+  clk_x8            : in  std_logic;
+  rst_n							: in  std_logic;
+  -- status signals
+  ena               : in  std_logic;
+  transition        : in  std_logic;
+	-- control signals
+  dffchain_clear_n  : out std_logic;
+  datachain_clear_n : out std_logic;
+  voter_clear_n     : out std_logic;
+  msb_clear_n       : out std_logic;
+  lsb_clear_n       : out std_logic;
+  generic_clear_n   : out std_logic;
+  system_enable     : out std_logic;
+  rwdsgen_toggle    : out std_logic;
+  msb_enable        : out std_logic;
+  lsb_enable        : out std_logic
+);
+end entity DDR_to_SDR_converter_CU;
+
+architecture fsm of DDR_to_SDR_converter_CU is
+
+	-- states definition -------------------------------------------------------------------------------------
+	type state is
+	(
+		reset_1,
+    reset_2,
+    reset_3,
+    idle,
+    idle_intra,
+    msb_tx,
+    lsb_tx
+	); -------------------------------------------------------------------------------------------------------
+
+	-- states declaration ------------------------------------------------------------------------------------
+	signal present_state  : state;
+	signal next_state			: state;
+  ----------------------------------------------------------------------------------------------------------
+
+  -- unregistered control signals --------------------------------------------------------------------------
+  signal int_dffchain_clear_n    : std_logic;
+  signal int_datachain_clear_n   : std_logic;
+  signal int_voter_clear_n       : std_logic;
+  signal int_msb_clear_n         : std_logic;
+  signal int_lsb_clear_n         : std_logic;
+  signal int_generic_clear_n     : std_logic;
+  signal int_system_enable       : std_logic;
+  signal int_rwdsgen_toggle      : std_logic;
+  signal int_msb_enable          : std_logic;
+  signal int_lsb_enable          : std_logic;
+  ----------------------------------------------------------------------------------------------------------
+
+	begin
+
+		-- evaluation of the next state ------------------------------------------------------------------------
+		next_state_evaluation: process
+		(
+			-- sensitivity list
+      present_state,
+      ena,
+      transition
+		)
+		begin
+			case present_state is
+        ----------------------------------------------
+        when reset_1 =>
+          next_state <= reset_2;
+        ----------------------------------------------
+        when reset_2 =>
+          next_state <= reset_3;
+				----------------------------------------------
+				when reset3 | idle | lsb_tx =>
+          if (ena = '0') then
+            next_state <= reset;
+          else
+            if (transition = '1') then
+              next_state <= msb_tx;
+            else
+              next_state <= idle;
+            end if;
+          end if;
+        ----------------------------------------------
+				when msb_tx =>
+          next_state <= idle_intra;
+        ----------------------------------------------
+				when idle_intra =>
+          if (transition = '1') then
+            next_state <= lsb_tx;
+          else
+            next_state <= idle_intra;
+          end if;
+        ----------------------------------------------
+				when others =>
+					next_state <= reset_1;
+				---------------------------------------------
+			end case;
+		end process next_state_evaluation; ---------------------------------------------------------------------
+
+		-- state transition ------------------------------------------------------------------------------------
+		state_transition: process (clk_x8, rst_n)
+		begin
+			if (rst_n = '0') then
+				present_state <= reset_1;
+			elsif (rising_edge(clk_x8)) then
+				present_state <= next_state;
+			end if;
+		end process state_transition; -------------------------------------------------------------------------
+
+		-- control signals definition -------------------------------------------------------------------------
+		control_signals_definition: process (present_state)
+		begin
+			-- default values ----------------------------
+      int_dffchain_clear_n     <= '1';
+      int_datachain_clear_n    <= '1';
+      int_voter_clear_n        <= '1';
+      int_msb_clear_n          <= '1';
+      int_lsb_clear_n          <= '1';
+      int_generic_clear_n      <= '1';
+      int_system_enable        <= '0';
+      int_rwdsgen_toggle       <= '0';
+      int_msb_enable           <= '0';
+      int_lsb_enable           <= '0';
+      -- dffchain_clear_n    <= '1';
+      -- datachain_clear_n   <= '1';
+      -- voter_clear_n       <= '1';
+      -- msb_clear_n         <= '1';
+      -- lsb_clear_n         <= '1';
+      -- generic_clear_n      <= '1';
+      -- system_enable       <= '0';
+      -- rwdsgen_toggle      <= '0';
+      -- msb_enable          <= '0';
+      -- lsb_enable          <= '0';
+      -- TODO: DELAY THE SIGNALS !!!
+			----------------------------------------------
+			case present_state is
+				--------------------------------------------
+        when reset_1 =>
+          int_dffchain_clear_n     <= '0';
+          -- dffchain_clear_n    <= '0';
+        --------------------------------------------
+        when reset_2 =>
+          int_datachain_clear_n    <= '0';
+          -- datachain_clear_n   <= '0';
+        --------------------------------------------
+        when reset_3 =>
+          int_voter_clear_n        <= '0';
+          int_msb_clear_n          <= '0';
+          int_lsb_clear_n          <= '0';
+          int_generic_clear_n      <= '0';
+          -- voter_clear_n       <= '0';
+          -- msb_clear_n         <= '0';
+          -- lsb_clear_n         <= '0';
+          -- generic_clear_n     <= '0';
+        --------------------------------------------
+        when idle | idle_intra =>
+          int_system_enable   <= '1';
+          -- system_enable   <= '1';
+        --------------------------------------------
+        when msb_tx =>
+          int_system_enable   <= '1';
+          int_msb_enable      <= '1';
+          int_rwdsgen_toggle  <= '1';
+          -- system_enable   <= '1';
+          -- msb_enable      <= '1';
+          -- rwdsgen_toggle  <= '1';
+        --------------------------------------------
+        when lsb_tx =>
+          int_system_enable   <= '1';
+          int_lsb_enable      <= '1';
+          int_rwdsgen_toggle  <= '1';
+          -- system_enable   <= '1';
+          -- lsb_enable      <= '1';
+          -- rwdsgen_toggle  <= '1';
+        --------------------------------------------
+			end case;
+		end process control_signals_definition; ---------------------------------------------------------------
+
+    -- control signals pipelining -------------------------------------------------------------------------
+    control_signals_pipelining: process (clk_x8)
+    begin
+      if (rising_edge(clk_x8)) then
+        dffchain_clear_n    <= int_dffchain_clear_n;
+        datachain_clear_n   <= int_datachain_clear_n;
+        voter_clear_n       <= int_voter_clear_n;
+        msb_clear_n         <= int_msb_clear_n;
+        lsb_clear_n         <= int_lsb_clear_n;
+        generic_clear_n     <= int_generic_clear_n;
+        system_enable       <= int_system_enable;
+        rwdsgen_toggle      <= int_rwdsgen_toggle;
+        msb_enable          <= int_msb_enable;
+        lsb_enable          <= int_lsb_enable;
+      end if;
+    end process control_signals_pipelining; ---------------------------------------------------------------
+
+end architecture fsm;

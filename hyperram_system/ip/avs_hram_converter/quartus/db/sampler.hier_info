@@ -1,0 +1,1197 @@
+|DDR_to_SDR_converter
+clk_x8 => DDR_to_SDR_converter_EU:EU.clk_x8
+clk_x8 => DDR_to_SDR_converter_CU:CU.clk_x8
+rst_n => DDR_to_SDR_converter_EU:EU.rst_n
+rst_n => DDR_to_SDR_converter_CU:CU.rst_n
+clear_n => DDR_to_SDR_converter_EU:EU.clear_n
+rwds_in => DDR_to_SDR_converter_EU:EU.rwds_in
+rwds_out << DDR_to_SDR_converter_EU:EU.rwds_out
+DDR_in[0] => DDR_to_SDR_converter_EU:EU.DDR_in[0]
+DDR_in[1] => DDR_to_SDR_converter_EU:EU.DDR_in[1]
+DDR_in[2] => DDR_to_SDR_converter_EU:EU.DDR_in[2]
+DDR_in[3] => DDR_to_SDR_converter_EU:EU.DDR_in[3]
+DDR_in[4] => DDR_to_SDR_converter_EU:EU.DDR_in[4]
+DDR_in[5] => DDR_to_SDR_converter_EU:EU.DDR_in[5]
+DDR_in[6] => DDR_to_SDR_converter_EU:EU.DDR_in[6]
+DDR_in[7] => DDR_to_SDR_converter_EU:EU.DDR_in[7]
+SDR_out[0] << DDR_to_SDR_converter_EU:EU.SDR_out[0]
+SDR_out[1] << DDR_to_SDR_converter_EU:EU.SDR_out[1]
+SDR_out[2] << DDR_to_SDR_converter_EU:EU.SDR_out[2]
+SDR_out[3] << DDR_to_SDR_converter_EU:EU.SDR_out[3]
+SDR_out[4] << DDR_to_SDR_converter_EU:EU.SDR_out[4]
+SDR_out[5] << DDR_to_SDR_converter_EU:EU.SDR_out[5]
+SDR_out[6] << DDR_to_SDR_converter_EU:EU.SDR_out[6]
+SDR_out[7] << DDR_to_SDR_converter_EU:EU.SDR_out[7]
+SDR_out[8] << DDR_to_SDR_converter_EU:EU.SDR_out[8]
+SDR_out[9] << DDR_to_SDR_converter_EU:EU.SDR_out[9]
+SDR_out[10] << DDR_to_SDR_converter_EU:EU.SDR_out[10]
+SDR_out[11] << DDR_to_SDR_converter_EU:EU.SDR_out[11]
+SDR_out[12] << DDR_to_SDR_converter_EU:EU.SDR_out[12]
+SDR_out[13] << DDR_to_SDR_converter_EU:EU.SDR_out[13]
+SDR_out[14] << DDR_to_SDR_converter_EU:EU.SDR_out[14]
+SDR_out[15] << DDR_to_SDR_converter_EU:EU.SDR_out[15]
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU
+clk_x8 => d_flipflop:pdff4.clk
+clk_x8 => d_flipflop:pdff4_pipeline.clk
+clk_x8 => d_flipflop:pdff3.clk
+clk_x8 => d_flipflop:pdff3_pipeline.clk
+clk_x8 => d_flipflop:pdff2.clk
+clk_x8 => d_flipflop:pdff2_pipeline.clk
+clk_x8 => d_flipflop:pdff1.clk
+clk_x8 => d_flipflop:pdff1_pipeline.clk
+clk_x8 => dff_negedge:ndff4.clk
+clk_x8 => dff_negedge:ndff4_pipeline.clk
+clk_x8 => dff_negedge:ndff3.clk
+clk_x8 => dff_negedge:ndff3_pipeline.clk
+clk_x8 => dff_negedge:ndff2.clk
+clk_x8 => dff_negedge:ndff2_pipeline.clk
+clk_x8 => dff_negedge:ndff1.clk
+clk_x8 => dff_negedge:ndff1_pipeline.clk
+clk_x8 => voter:voter_inst.clk
+clk_x8 => t_flipflop:tracker.clk
+clk_x8 => reg:regp1.clk
+clk_x8 => reg:regp2.clk
+clk_x8 => reg:pipereg1.clk
+clk_x8 => reg:pipereg2.clk
+clk_x8 => reg:pipereg3.clk
+clk_x8 => reg:pipereg4.clk
+clk_x8 => reg:pipereg5.clk
+clk_x8 => reg:pipereg6.clk
+clk_x8 => reg:pipereg7.clk
+clk_x8 => reg:msb.clk
+clk_x8 => reg:lsb.clk
+clk_x8 => t_flipflop:rwdsgen.clk
+rst_n => ~NO_FANOUT~
+clear_n => clr_n.DATAIN
+rwds_in => d_flipflop:pdff4.din
+rwds_in => dff_negedge:ndff4.din
+rwds_out <= t_flipflop:rwdsgen.dout
+DDR_in[0] => reg:regp1.din[0]
+DDR_in[1] => reg:regp1.din[1]
+DDR_in[2] => reg:regp1.din[2]
+DDR_in[3] => reg:regp1.din[3]
+DDR_in[4] => reg:regp1.din[4]
+DDR_in[5] => reg:regp1.din[5]
+DDR_in[6] => reg:regp1.din[6]
+DDR_in[7] => reg:regp1.din[7]
+SDR_out[0] <= reg:lsb.dout[0]
+SDR_out[1] <= reg:lsb.dout[1]
+SDR_out[2] <= reg:lsb.dout[2]
+SDR_out[3] <= reg:lsb.dout[3]
+SDR_out[4] <= reg:lsb.dout[4]
+SDR_out[5] <= reg:lsb.dout[5]
+SDR_out[6] <= reg:lsb.dout[6]
+SDR_out[7] <= reg:lsb.dout[7]
+SDR_out[8] <= reg:msb.dout[0]
+SDR_out[9] <= reg:msb.dout[1]
+SDR_out[10] <= reg:msb.dout[2]
+SDR_out[11] <= reg:msb.dout[3]
+SDR_out[12] <= reg:msb.dout[4]
+SDR_out[13] <= reg:msb.dout[5]
+SDR_out[14] <= reg:msb.dout[6]
+SDR_out[15] <= reg:msb.dout[7]
+system_clear_n => d_flipflop:pdff4.clear_n
+system_clear_n => d_flipflop:pdff4_pipeline.clear_n
+system_clear_n => d_flipflop:pdff3.clear_n
+system_clear_n => d_flipflop:pdff3_pipeline.clear_n
+system_clear_n => d_flipflop:pdff2.clear_n
+system_clear_n => d_flipflop:pdff2_pipeline.clear_n
+system_clear_n => d_flipflop:pdff1.clear_n
+system_clear_n => d_flipflop:pdff1_pipeline.clear_n
+system_clear_n => dff_negedge:ndff4.clear_n
+system_clear_n => dff_negedge:ndff4_pipeline.clear_n
+system_clear_n => dff_negedge:ndff3.clear_n
+system_clear_n => dff_negedge:ndff3_pipeline.clear_n
+system_clear_n => dff_negedge:ndff2.clear_n
+system_clear_n => dff_negedge:ndff2_pipeline.clear_n
+system_clear_n => dff_negedge:ndff1.clear_n
+system_clear_n => dff_negedge:ndff1_pipeline.clear_n
+system_clear_n => voter:voter_inst.clear_n
+system_clear_n => t_flipflop:tracker.clear_n
+system_clear_n => reg:regp1.clear_n
+system_clear_n => reg:regp2.clear_n
+system_clear_n => reg:pipereg1.clear_n
+system_clear_n => reg:pipereg2.clear_n
+system_clear_n => reg:pipereg3.clear_n
+system_clear_n => reg:pipereg4.clear_n
+system_clear_n => reg:pipereg5.clear_n
+system_clear_n => reg:pipereg6.clear_n
+system_clear_n => reg:pipereg7.clear_n
+system_clear_n => reg:msb.clear_n
+system_clear_n => reg:lsb.clear_n
+system_clear_n => t_flipflop:rwdsgen.clear_n
+rwdsgen_toggle => t_flipflop:rwdsgen.din
+msb_enable => reg:msb.enable
+lsb_enable => reg:lsb.enable
+clr_n <= clear_n.DB_MAX_OUTPUT_PORT_TYPE
+transition <= tracker_tgl.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|d_flipflop:pdff4
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|d_flipflop:pdff4_pipeline
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|d_flipflop:pdff3
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|d_flipflop:pdff3_pipeline
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|d_flipflop:pdff2
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|d_flipflop:pdff2_pipeline
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|d_flipflop:pdff1
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|d_flipflop:pdff1_pipeline
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|dff_negedge:ndff4
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|dff_negedge:ndff4_pipeline
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|dff_negedge:ndff3
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|dff_negedge:ndff3_pipeline
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|dff_negedge:ndff2
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|dff_negedge:ndff2_pipeline
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|dff_negedge:ndff1
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|dff_negedge:ndff1_pipeline
+clk => dout~reg0.CLK
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout~reg0.ACLR
+din => dout.DATAB
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst
+clk => reg:pipereg1.clk
+clk => reg:pipereg2.clk
+clk => reg:pipereg3.clk
+clk => reg:pipereg4.clk
+clk => reg:pipereg5.clk
+clear_n => reg:pipereg1.clear_n
+clear_n => reg:pipereg2.clear_n
+clear_n => reg:pipereg3.clear_n
+clear_n => reg:pipereg4.clear_n
+clear_n => reg:pipereg5.clear_n
+enable => reg:pipereg1.enable
+enable => reg:pipereg2.enable
+enable => reg:pipereg3.enable
+enable => reg:pipereg4.enable
+enable => reg:pipereg5.enable
+d1 => reg:pipereg1.din[0]
+d2 => reg:pipereg1.din[1]
+d3 => reg:pipereg1.din[2]
+d4 => reg:pipereg1.din[3]
+d5 => reg:pipereg1.din[4]
+d6 => reg:pipereg1.din[5]
+d7 => reg:pipereg1.din[6]
+d8 => reg:pipereg1.din[7]
+gt4 <= reg:pipereg5.dout[1]
+eq4 <= reg:pipereg5.dout[0]
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|reg:pipereg1
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:fa00
+a => halfadder:ha1_inst.a
+b => halfadder:ha1_inst.b
+cin => halfadder:ha2_inst.b
+sum <= halfadder:ha2_inst.s
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:fa00|halfadder:ha1_inst
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:fa00|halfadder:ha2_inst
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:fa01
+a => halfadder:ha1_inst.a
+b => halfadder:ha1_inst.b
+cin => halfadder:ha2_inst.b
+sum <= halfadder:ha2_inst.s
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:fa01|halfadder:ha1_inst
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:fa01|halfadder:ha2_inst
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|halfadder:ha02
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|reg:pipereg2
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:faw0
+a => halfadder:ha1_inst.a
+b => halfadder:ha1_inst.b
+cin => halfadder:ha2_inst.b
+sum <= halfadder:ha2_inst.s
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:faw0|halfadder:ha1_inst
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:faw0|halfadder:ha2_inst
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:faw1
+a => halfadder:ha1_inst.a
+b => halfadder:ha1_inst.b
+cin => halfadder:ha2_inst.b
+sum <= halfadder:ha2_inst.s
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:faw1|halfadder:ha1_inst
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|fulladder:faw1|halfadder:ha2_inst
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|reg:pipereg3
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|halfadder:haw1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|halfadder:haw2
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|reg:pipereg4
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|voter:voter_inst|reg:pipereg5
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|t_flipflop:tracker
+clk => dummy_out.CLK
+enable => dummy_out.OUTPUTSELECT
+clear_n => dummy_out.OUTPUTSELECT
+reset_n => dummy_out.ACLR
+din => dummy_out.OUTPUTSELECT
+din => dummy_out.OUTPUTSELECT
+dout <= dummy_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:regp1
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:regp2
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:pipereg1
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:pipereg2
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:pipereg3
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:pipereg4
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:pipereg5
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:pipereg6
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:pipereg7
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:msb
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|reg:lsb
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+enable => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+clear_n => dout.OUTPUTSELECT
+reset_n => dout[0]~reg0.ACLR
+reset_n => dout[1]~reg0.ACLR
+reset_n => dout[2]~reg0.ACLR
+reset_n => dout[3]~reg0.ACLR
+reset_n => dout[4]~reg0.ACLR
+reset_n => dout[5]~reg0.ACLR
+reset_n => dout[6]~reg0.ACLR
+reset_n => dout[7]~reg0.ACLR
+din[0] => dout.DATAB
+din[1] => dout.DATAB
+din[2] => dout.DATAB
+din[3] => dout.DATAB
+din[4] => dout.DATAB
+din[5] => dout.DATAB
+din[6] => dout.DATAB
+din[7] => dout.DATAB
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_EU:EU|t_flipflop:rwdsgen
+clk => dummy_out.CLK
+enable => dummy_out.OUTPUTSELECT
+clear_n => dummy_out.OUTPUTSELECT
+reset_n => dummy_out.ACLR
+din => dummy_out.OUTPUTSELECT
+din => dummy_out.OUTPUTSELECT
+dout <= dummy_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DDR_to_SDR_converter|DDR_to_SDR_converter_CU:CU
+clk_x8 => lsb_enable~reg0.CLK
+clk_x8 => msb_enable~reg0.CLK
+clk_x8 => rwdsgen_toggle~reg0.CLK
+clk_x8 => system_clear_n~reg0.CLK
+clk_x8 => present_state~1.DATAIN
+rst_n => present_state~3.DATAIN
+clr_n => present_state.OUTPUTSELECT
+clr_n => present_state.OUTPUTSELECT
+clr_n => present_state.OUTPUTSELECT
+clr_n => present_state.OUTPUTSELECT
+clr_n => present_state.OUTPUTSELECT
+clr_n => present_state.OUTPUTSELECT
+transition => next_state.msb_tx.DATAA
+transition => next_state.lsb_tx.DATAB
+transition => next_state.idle.DATAA
+transition => Selector0.IN2
+system_clear_n <= system_clear_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rwdsgen_toggle <= rwdsgen_toggle~reg0.DB_MAX_OUTPUT_PORT_TYPE
+msb_enable <= msb_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lsb_enable <= lsb_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

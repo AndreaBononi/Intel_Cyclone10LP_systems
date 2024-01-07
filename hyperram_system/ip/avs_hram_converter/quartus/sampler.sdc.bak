@@ -1,0 +1,11 @@
+# time information -------------------------------------------------------------------------------------------------------------------------------
+set_time_format -unit ns -decimal_places 3
+
+# main clock -------------------------------------------------------------------------------------------------------------------------------------
+create_clock -name {clk} -period 2.500 -waveform { 0.000 1.250 } [get_ports {clk_x8}]
+
+# clock uncertainty ------------------------------------------------------------------------------------------------------------------------------
+derive_clock_uncertainty
+
+set_input_delay -add_delay -clock [get_clocks {clk}] 0.500 [all_inputs]
+set_output_delay -add_delay -clock [get_clocks {clk}] 0.500 [all_outputs]

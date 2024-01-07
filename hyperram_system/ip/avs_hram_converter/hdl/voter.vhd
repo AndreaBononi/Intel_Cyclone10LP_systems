@@ -2,6 +2,7 @@
 -- COMMENTS:
 -- it implements a majority decision among 8 different 1-bit inputs
 -- it evaluates the sum of all the input bits and verifies if it is greater than 4
+-- several pipeline layers are employed in order to make it possible to work with a 400 MHz clock
 
 library   ieee;
 use       ieee.std_logic_1164.all;
@@ -83,18 +84,52 @@ architecture behavior of voter is
   signal haw1_s       : std_logic;
   signal haw2_c       : std_logic;
   signal haw2_s       : std_logic;
-  signal pipereg_in   : std_logic_vector(3 downto 0);
-  signal pipereg_out  : std_logic_vector(3 downto 0);
+  signal pipereg1_in  : std_logic_vector(7 downto 0);
+  signal pipereg1_out : std_logic_vector(7 downto 0);
+  signal pipereg2_in  : std_logic_vector(5 downto 0);
+  signal pipereg2_out : std_logic_vector(5 downto 0);
+  signal pipereg3_in  : std_logic_vector(3 downto 0);
+  signal pipereg3_out : std_logic_vector(3 downto 0);
+  signal pipereg4_in  : std_logic_vector(3 downto 0);
+  signal pipereg4_out : std_logic_vector(3 downto 0);
+  signal pipereg5_in  : std_logic_vector(1 downto 0);
+  signal pipereg5_out : std_logic_vector(1 downto 0);
+  signal gt4_prepipe  : std_logic;
+  signal eq4_prepipe  : std_logic;
   ---------------------------------------------------------------------------------------
 
 	begin
 
+    -- first pipeline layer -------------------------------------------------------------
+    pipereg1_in(7) <= d8;
+    pipereg1_in(6) <= d7;
+    pipereg1_in(5) <= d6;
+    pipereg1_in(4) <= d5;
+    pipereg1_in(3) <= d4;
+    pipereg1_in(2) <= d3;
+    pipereg1_in(1) <= d2;
+    pipereg1_in(0) <= d1;
+    pipereg1: reg
+    generic map
+    (
+      N => 8
+    )
+    port map
+    (
+      clk				=> clk,
+      enable		=> enable,
+      clear_n		=> clear_n,
+      reset_n	  => '1',
+      din				=> pipereg1_in,
+      dout			=> pipereg1_out
+    ); ---------------------------------------------------------------------------------
+
     fa00: fulladder
     port map
     (
-      a     => d1,
-      b     => d2,
-      cin   => d3,
+      a     => pipereg1_out(0),
+      b     => pipereg1_out(1),
+      cin   => pipereg1_out(2),
       sum   => fa00_s,
       cout  => fa00_c
     );
@@ -102,9 +137,9 @@ architecture behavior of voter is
     fa01: fulladder
     port map
     (
-      a     => d4,
-      b     => d5,
-      cin   => d6,
+      a     => pipereg1_out(3),
+      b     => pipereg1_out(4),
+      cin   => pipereg1_out(5),
       sum   => fa01_s,
       cout  => fa01_c
     );
@@ -112,18 +147,40 @@ architecture behavior of voter is
     ha02: halfadder
     port map
     (
-      a => d7,
-      b => d8,
+      a => pipereg1_out(6),
+      b => pipereg1_out(7),
       s => ha02_s,
       c => ha02_c
     );
 
+    -- second pipeline layer ----------------------------------------------------------
+    pipereg2_in(5) <= ha02_s;
+    pipereg2_in(4) <= ha02_c;
+    pipereg2_in(3) <= fa01_s;
+    pipereg2_in(2) <= fa01_c;
+    pipereg2_in(1) <= fa00_s;
+    pipereg2_in(0) <= fa00_c;
+    pipereg2: reg
+    generic map
+    (
+      N => 6
+    )
+    port map
+    (
+      clk				=> clk,
+      enable		=> enable,
+      clear_n		=> clear_n,
+      reset_n	  => '1',
+      din				=> pipereg2_in,
+      dout			=> pipereg2_out
+    ); ---------------------------------------------------------------------------------
+
     faw0: fulladder
     port map
     (
-      a     => fa00_s,
-      b     => fa01_s,
-      cin   => ha02_s,
+      a     => pipereg2_out(1),
+      b     => pipereg2_out(3),
+      cin   => pipereg2_out(5),
       sum   => faw0_s,
       cout  => faw0_c
     );
@@ -131,19 +188,19 @@ architecture behavior of voter is
     faw1: fulladder
     port map
     (
-      a     => fa00_c,
-      b     => fa01_c,
-      cin   => ha02_c,
+      a     => pipereg2_out(0),
+      b     => pipereg2_out(2),
+      cin   => pipereg2_out(4),
       sum   => faw1_s,
       cout  => faw1_c
     );
 
-    pipereg_in(3) <= faw1_c;
-    pipereg_in(2) <= faw1_s;
-    pipereg_in(1) <= faw0_c;
-    pipereg_in(0) <= faw0_s;
-
-    pipereg: reg
+    -- third pipeline layer ------------------------------------------------------------
+    pipereg3_in(3) <= faw1_c;
+    pipereg3_in(2) <= faw1_s;
+    pipereg3_in(1) <= faw0_c;
+    pipereg3_in(0) <= faw0_s;
+    pipereg3: reg
     generic map
     (
       N => 4
@@ -154,15 +211,15 @@ architecture behavior of voter is
       enable		=> enable,
       clear_n		=> clear_n,
       reset_n	  => '1',
-      din				=> pipereg_in,
-      dout			=> pipereg_out
-    );
+      din				=> pipereg3_in,
+      dout			=> pipereg3_out
+    ); --------------------------------------------------------------------------------
 
     haw1: halfadder
     port map
     (
-      a => pipereg_out(1),
-      b => pipereg_out(2),
+      a => pipereg3_out(1),
+      b => pipereg3_out(2),
       s => haw1_s,
       c => haw1_c
     );
@@ -171,12 +228,53 @@ architecture behavior of voter is
     port map
     (
       a => haw1_c,
-      b => pipereg_out(3),
+      b => pipereg3_out(3),
       s => haw2_s,
       c => haw2_c
     );
 
-    gt4 <= ((pipereg_out(0) or haw1_s) and haw2_s) or haw2_c;
-    eq4 <= (not pipereg_out(0)) and (not haw1_s) and haw2_s and (not haw2_c);
+    -- fourth pipeline layer ----------------------------------------------------------
+    pipereg4_in(3) <= haw2_c;
+    pipereg4_in(2) <= haw2_s;
+    pipereg4_in(1) <= haw1_s;
+    pipereg4_in(0) <= pipereg3_in(0);
+    pipereg4: reg
+    generic map
+    (
+      N => 4
+    )
+    port map
+    (
+      clk				=> clk,
+      enable		=> enable,
+      clear_n		=> clear_n,
+      reset_n	  => '1',
+      din				=> pipereg4_in,
+      dout			=> pipereg4_out
+    ); --------------------------------------------------------------------------------
+
+    gt4_prepipe <= ((pipereg4_out(0) or pipereg4_in(1)) and pipereg4_in(2)) or pipereg4_in(3);
+    eq4_prepipe <= (not pipereg4_out(0)) and (not pipereg4_in(1)) and pipereg4_in(2) and (not pipereg4_in(3));
+
+    -- fifth pipeline layer -----------------------------------------------------------
+    pipereg5_in(1) <= gt4_prepipe;
+    pipereg5_in(0) <= eq4_prepipe;
+    pipereg5: reg
+    generic map
+    (
+      N => 2
+    )
+    port map
+    (
+      clk				=> clk,
+      enable		=> enable,
+      clear_n		=> clear_n,
+      reset_n	  => '1',
+      din				=> pipereg5_in,
+      dout			=> pipereg5_out
+    ); --------------------------------------------------------------------------------
+
+    gt4 <= pipereg5_out(1);
+    eq4 <= pipereg5_out(0);
 
 end behavior;

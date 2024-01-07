@@ -1,0 +1,125 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rwds_out",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SDR_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_x8",
+					"strict" : false
+				},
+				{
+					"name" : "clear_n",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "rwds_in",
+					"strict" : false
+				},
+				{
+					"name" : "DDR_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DDR_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DDR_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DDR_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DDR_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DDR_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DDR_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DDR_in[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

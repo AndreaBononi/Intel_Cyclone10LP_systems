@@ -48,7 +48,7 @@ architecture tb of sampler_testbench is
     clk_x8            : in 	std_logic;
     rst_n 		        : in 	std_logic;
     -- IO signals
-    enable		        : in 	std_logic;
+    clear_n		        : in 	std_logic;
     rwds_in           : in  std_logic;
     rwds_out          : out std_logic;
     DDR_in		        : in 	std_logic_vector(7 downto 0);
@@ -126,7 +126,7 @@ architecture tb of sampler_testbench is
 		(
       clk_x8    => clk_x8,
       rst_n 	  => rst_n,
-      enable	  => '1',
+      clear_n	  => '1',
       rwds_in   => sampler_rwds_in,
       rwds_out  => sampler_rwds_out,
       DDR_in	  => sampler_ddr_in,

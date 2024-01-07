@@ -1,6 +1,7 @@
 -- BRIEF DESCRIPTION: DDR_to_SDR_converter control unit
 -- COMMENTS:
 -- use it together with DDR_to_SDR_converter_EU.vhd to create DDR_to_SDR_converter.vhd
+-- the output (control signals) generation is registered to improve the performace
 
 library 	ieee;
 use 			ieee.std_logic_1164.all;
@@ -13,11 +14,10 @@ port
   clk_x8            : in  std_logic;
   rst_n							: in  std_logic;
   -- status signals
-  ena               : in  std_logic;
+  clr_n             : in  std_logic;
   transition        : in  std_logic;
 	-- control signals
   system_clear_n    : out std_logic;
-  system_enable     : out std_logic;
   rwdsgen_toggle    : out std_logic;
   msb_enable        : out std_logic;
   lsb_enable        : out std_logic
@@ -30,6 +30,7 @@ architecture fsm of DDR_to_SDR_converter_CU is
 	type state is
 	(
 		reset,
+    reset_wait,
     idle,
     idle_intra,
     msb_tx,
@@ -41,6 +42,13 @@ architecture fsm of DDR_to_SDR_converter_CU is
 	signal next_state			: state;
   ----------------------------------------------------------------------------------------------------------
 
+  -- unregistered control signals --------------------------------------------------------------------------
+  signal int_system_clear_n   : std_logic;
+  signal int_rwdsgen_toggle   : std_logic;
+  signal int_msb_enable       : std_logic;
+  signal int_lsb_enable       : std_logic;
+  ----------------------------------------------------------------------------------------------------------
+
 	begin
 
 		-- evaluation of the next state ------------------------------------------------------------------------
@@ -48,21 +56,19 @@ architecture fsm of DDR_to_SDR_converter_CU is
 		(
 			-- sensitivity list
       present_state,
-      ena,
       transition
 		)
 		begin
 			case present_state is
-				----------------------------------------------
-				when reset | idle | lsb_tx =>
-          if (ena = '0') then
-            next_state <= reset;
+        ----------------------------------------------
+				when reset =>
+          next_state <= reset_wait;
+        ----------------------------------------------
+				when reset_wait | idle | lsb_tx =>
+          if (transition = '1') then
+            next_state <= msb_tx;
           else
-            if (transition = '1') then
-              next_state <= msb_tx;
-            else
-              next_state <= idle;
-            end if;
+            next_state <= idle;
           end if;
         ----------------------------------------------
 				when msb_tx =>
@@ -82,12 +88,16 @@ architecture fsm of DDR_to_SDR_converter_CU is
 		end process next_state_evaluation; ---------------------------------------------------------------------
 
 		-- state transition ------------------------------------------------------------------------------------
-		state_transition: process (clk_x8, rst_n)
+		state_transition: process (clk_x8, rst_n, clr_n)
 		begin
 			if (rst_n = '0') then
 				present_state <= reset;
 			elsif (rising_edge(clk_x8)) then
-				present_state <= next_state;
+        if (clr_n = '0') then
+          present_state <= reset;
+        else
+				  present_state <= next_state;
+        end if;
 			end if;
 		end process state_transition; -------------------------------------------------------------------------
 
@@ -95,31 +105,40 @@ architecture fsm of DDR_to_SDR_converter_CU is
 		control_signals_definition: process (present_state)
 		begin
 			-- default values ----------------------------
-      system_clear_n  <= '1';
-      system_enable   <= '0';
-      rwdsgen_toggle  <= '0';
-      msb_enable      <= '0';
-      lsb_enable      <= '0';
+      int_system_clear_n    <= '1';
+      int_rwdsgen_toggle    <= '0';
+      int_msb_enable        <= '0';
+      int_lsb_enable        <= '0';
 			----------------------------------------------
 			case present_state is
-				--------------------------------------------
+        --------------------------------------------
         when reset =>
-          system_clear_n  <= '0';
+          int_system_clear_n  <= '0';
+        --------------------------------------------
+        when reset_wait =>
         --------------------------------------------
         when idle | idle_intra =>
-          system_enable   <= '1';
         --------------------------------------------
         when msb_tx =>
-          system_enable   <= '1';
-          msb_enable      <= '1';
-          rwdsgen_toggle  <= '1';
+          int_msb_enable      <= '1';
+          int_rwdsgen_toggle  <= '1';
         --------------------------------------------
         when lsb_tx =>
-          system_enable   <= '1';
-          lsb_enable      <= '1';
-          rwdsgen_toggle  <= '1';
+          int_lsb_enable      <= '1';
+          int_rwdsgen_toggle  <= '1';
         --------------------------------------------
 			end case;
 		end process control_signals_definition; ---------------------------------------------------------------
+
+    -- control signals pipelining -------------------------------------------------------------------------
+    control_pipe: process (clk_x8)
+    begin
+      if (rising_edge(clk_x8)) then
+        system_clear_n    <= int_system_clear_n;
+        rwdsgen_toggle    <= int_rwdsgen_toggle;
+        msb_enable        <= int_msb_enable;
+        lsb_enable        <= int_lsb_enable;
+      end if;
+    end process control_pipe; -----------------------------------------------------------------------------
 
 end architecture fsm;

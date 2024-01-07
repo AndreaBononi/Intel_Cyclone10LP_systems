@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Jan  7 16:49:55 2024
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : sampler
+Top-level Entity Name : DDR_to_SDR_converter
+Family : Cyclone 10 LP
+Device : 10CL025YE144C8G
+Timing Models : Final
+Total logic elements : 140 / 24,624 ( < 1 % )
+    Total combinational functions : 120 / 24,624 ( < 1 % )
+    Dedicated logic registers : 134 / 24,624 ( < 1 % )
+Total registers : 134
+Total pins : 29 / 77 ( 38 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
