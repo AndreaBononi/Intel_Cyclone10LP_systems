@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="clkctrl/testbench/clkctrl_tb/simulation/submodules/clkctrl_altclkctrl_0.vhd"
+   type="VHDL"
+   library="altclkctrl_0" />
+ <file
+   path="clkctrl/testbench/clkctrl_tb/simulation/submodules/clkctrl.vhd"
+   type="VHDL"
+   library="clkctrl_inst" />
+ <file
+   path="clkctrl/testbench/clkctrl_tb/simulation/clkctrl_tb.vhd"
+   type="VHDL" />
+ <topLevel name="clkctrl_tb" />
+ <deviceFamily name="cyclone10lp" />
+</simPackage>

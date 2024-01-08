@@ -1,0 +1,1262 @@
+Reading pref.tcl
+
+# 2020.1
+
+# do sim.do
+# ../hdl/clkctrl/clkctrl/testbench
+# [exec] file_copy
+# List Of Command Line Aliases
+# 
+# file_copy                                         -- Copy ROM/RAM files to simulation directory
+# 
+# dev_com                                           -- Compile device library files
+# 
+# com                                               -- Compile the design files in correct order
+# 
+# elab                                              -- Elaborate top level design
+# 
+# elab_debug                                        -- Elaborate the top level design with -voptargs=+acc option
+# 
+# ld                                                -- Compile all the design files and elaborate the top level design
+# 
+# ld_debug                                          -- Compile all the design files and elaborate the top level design with -voptargs=+acc
+# 
+# 
+# 
+# List Of Variables
+# 
+# TOP_LEVEL_NAME                                    -- Top level module name.
+#                                                      For most designs, this should be overridden
+#                                                      to enable the elab/elab_debug aliases.
+# 
+# SYSTEM_INSTANCE_NAME                              -- Instantiated system module name inside top level module.
+# 
+# QSYS_SIMDIR                                       -- Platform Designer base simulation directory.
+# 
+# QUARTUS_INSTALL_DIR                               -- Quartus installation directory.
+# 
+# USER_DEFINED_COMPILE_OPTIONS                      -- User-defined compile options, added to com/dev_com aliases.
+# 
+# USER_DEFINED_ELAB_OPTIONS                         -- User-defined elaboration options, added to elab/elab_debug aliases.
+# 
+# USER_DEFINED_VHDL_COMPILE_OPTIONS                 -- User-defined vhdl compile options, added to com/dev_com aliases.
+# 
+# USER_DEFINED_VERILOG_COMPILE_OPTIONS              -- User-defined verilog compile options, added to com/dev_com aliases.
+# [exec] dev_com
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:56 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_syn_attributes.vhd -work altera 
+# -- Loading package STANDARD
+# -- Compiling package altera_syn_attributes
+# End time: 13:09:56 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:56 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_standard_functions.vhd -work altera 
+# -- Loading package STANDARD
+# -- Compiling package altera_standard_functions
+# -- Compiling package body altera_standard_functions
+# -- Loading package altera_standard_functions
+# End time: 13:09:56 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:56 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/alt_dspbuilder_package.vhd -work altera 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package alt_dspbuilder_package
+# -- Compiling package body alt_dspbuilder_package
+# -- Loading package alt_dspbuilder_package
+# End time: 13:09:56 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:56 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_europa_support_lib.vhd -work altera 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package altera_europa_support_lib
+# -- Compiling package body altera_europa_support_lib
+# -- Loading package altera_europa_support_lib
+# End time: 13:09:56 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:56 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd -work altera 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package dffeas_pack
+# -- Loading package dffeas_pack
+# -- Compiling package altera_primitives_components
+# End time: 13:09:56 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:56 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd -work altera 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GLOBAL
+# -- Compiling architecture BEHAVIOR of GLOBAL
+# -- Compiling entity CARRY
+# -- Compiling architecture BEHAVIOR of CARRY
+# -- Compiling entity CASCADE
+# -- Compiling architecture BEHAVIOR of CASCADE
+# -- Compiling entity CARRY_SUM
+# -- Compiling architecture BEHAVIOR of CARRY_SUM
+# -- Compiling entity EXP
+# -- Compiling architecture BEHAVIOR of EXP
+# -- Compiling entity SOFT
+# -- Compiling architecture BEHAVIOR of SOFT
+# -- Compiling entity OPNDRN
+# -- Compiling architecture BEHAVIOR of OPNDRN
+# -- Compiling entity ROW_GLOBAL
+# -- Compiling architecture BEHAVIOR of ROW_GLOBAL
+# -- Compiling entity TRI
+# -- Compiling architecture BEHAVIOR of TRI
+# -- Compiling entity LUT_INPUT
+# -- Compiling architecture BEHAVIOR of LUT_INPUT
+# -- Compiling entity LUT_OUTPUT
+# -- Compiling architecture BEHAVIOR of LUT_OUTPUT
+# -- Compiling entity latch
+# -- Compiling architecture BEHAVIOR of latch
+# -- Compiling entity dlatch
+# -- Compiling architecture BEHAVIOR of dlatch
+# -- Compiling entity PRIM_GDFF
+# -- Compiling architecture BEHAVIOR of PRIM_GDFF
+# -- Loading entity PRIM_GDFF
+# -- Compiling entity DFF
+# -- Compiling architecture BEHAVIOR of DFF
+# -- Compiling entity DFFE
+# -- Compiling architecture BEHAVIOR of DFFE
+# -- Compiling entity DFFEA
+# -- Compiling architecture BEHAVIOR of DFFEA
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Compiling entity DFFEAS
+# -- Compiling architecture vital_dffeas of dffeas
+# -- Compiling entity PRIM_GTFF
+# -- Compiling architecture BEHAVIOR of PRIM_GTFF
+# -- Loading entity PRIM_GTFF
+# -- Compiling entity TFF
+# -- Compiling architecture BEHAVIOR of TFF
+# -- Compiling entity TFFE
+# -- Compiling architecture BEHAVIOR of TFFE
+# -- Compiling entity PRIM_GJKFF
+# -- Compiling architecture BEHAVIOR of PRIM_GJKFF
+# -- Loading entity PRIM_GJKFF
+# -- Compiling entity JKFF
+# -- Compiling architecture BEHAVIOR of JKFF
+# -- Compiling entity JKFFE
+# -- Compiling architecture BEHAVIOR of JKFFE
+# -- Compiling entity PRIM_GSRFF
+# -- Compiling architecture BEHAVIOR of PRIM_GSRFF
+# -- Loading entity PRIM_GSRFF
+# -- Compiling entity SRFF
+# -- Compiling architecture BEHAVIOR of SRFF
+# -- Compiling entity SRFFE
+# -- Compiling architecture BEHAVIOR of SRFFE
+# -- Compiling entity clklock
+# -- Compiling architecture behavior of clklock
+# -- Compiling entity alt_inbuf
+# -- Compiling architecture BEHAVIOR of alt_inbuf
+# -- Compiling entity alt_outbuf
+# -- Compiling architecture BEHAVIOR of alt_outbuf
+# -- Compiling entity alt_outbuf_tri
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri
+# -- Compiling entity alt_iobuf
+# -- Compiling architecture BEHAVIOR of alt_iobuf
+# -- Compiling entity alt_inbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_inbuf_diff
+# -- Compiling entity alt_outbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_diff
+# -- Compiling entity alt_outbuf_tri_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri_diff
+# -- Compiling entity alt_iobuf_diff
+# -- Compiling architecture BEHAVIOR of alt_iobuf_diff
+# -- Compiling entity alt_bidir_diff
+# -- Compiling architecture BEHAVIOR of alt_bidir_diff
+# -- Compiling entity alt_bidir_buf
+# -- Compiling architecture BEHAVIOR of alt_bidir_buf
+# End time: 13:09:57 on Dec 20,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:57 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/220pack.vhd -work lpm 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package LPM_COMPONENTS
+# End time: 13:09:57 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:57 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/220model.vhd -work lpm 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package LPM_COMMON_CONVERSION
+# -- Compiling package body LPM_COMMON_CONVERSION
+# -- Loading package LPM_COMMON_CONVERSION
+# -- Compiling package LPM_HINT_EVALUATION
+# -- Compiling package body LPM_HINT_EVALUATION
+# -- Loading package LPM_HINT_EVALUATION
+# -- Compiling package LPM_DEVICE_FAMILIES
+# -- Compiling package body LPM_DEVICE_FAMILIES
+# -- Loading package LPM_DEVICE_FAMILIES
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity LPM_CONSTANT
+# -- Compiling architecture LPM_SYN of LPM_CONSTANT
+# -- Compiling entity LPM_INV
+# -- Compiling architecture LPM_SYN of LPM_INV
+# -- Compiling entity lpm_and
+# -- Compiling architecture LPM_SYN of lpm_and
+# -- Compiling entity LPM_OR
+# -- Compiling architecture LPM_SYN of LPM_OR
+# -- Compiling entity LPM_XOR
+# -- Compiling architecture LPM_SYN of LPM_XOR
+# -- Compiling entity LPM_BUSTRI
+# -- Compiling architecture LPM_SYN of LPM_BUSTRI
+# -- Compiling entity LPM_MUX
+# -- Compiling architecture LPM_SYN of LPM_MUX
+# -- Compiling entity LPM_DECODE
+# -- Compiling architecture LPM_SYN of LPM_DECODE
+# -- Compiling entity LPM_CLSHIFT
+# -- Compiling architecture LPM_SYN of LPM_CLSHIFT
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity LPM_ADD_SUB_SIGNED
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB_SIGNED
+# -- Compiling entity LPM_ADD_SUB_UNSIGNED
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB_UNSIGNED
+# -- Loading entity LPM_ADD_SUB_SIGNED
+# -- Loading entity LPM_ADD_SUB_UNSIGNED
+# -- Compiling entity LPM_ADD_SUB
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB
+# -- Compiling entity LPM_COMPARE_SIGNED
+# -- Compiling architecture LPM_SYN of LPM_COMPARE_SIGNED
+# -- Compiling entity LPM_COMPARE_UNSIGNED
+# -- Compiling architecture LPM_SYN of LPM_COMPARE_UNSIGNED
+# -- Loading entity LPM_COMPARE_SIGNED
+# -- Loading entity LPM_COMPARE_UNSIGNED
+# -- Compiling entity LPM_COMPARE
+# -- Compiling architecture LPM_SYN of LPM_COMPARE
+# -- Loading package LPM_HINT_EVALUATION
+# -- Compiling entity LPM_MULT
+# -- Compiling architecture LPM_SYN of LPM_MULT
+# -- Compiling entity LPM_DIVIDE
+# -- Compiling architecture behave of lpm_divide
+# -- Compiling entity lpm_abs
+# -- Compiling architecture LPM_SYN of LPM_ABS
+# -- Loading package LPM_COMMON_CONVERSION
+# -- Compiling entity LPM_COUNTER
+# -- Compiling architecture LPM_SYN of LPM_COUNTER
+# -- Compiling entity LPM_LATCH
+# -- Compiling architecture LPM_SYN of LPM_LATCH
+# -- Compiling entity LPM_FF
+# -- Compiling architecture LPM_SYN of LPM_FF
+# -- Compiling entity LPM_SHIFTREG
+# -- Compiling architecture LPM_SYN of LPM_SHIFTREG
+# -- Loading package LPM_DEVICE_FAMILIES
+# -- Compiling entity LPM_RAM_DQ
+# -- Compiling architecture LPM_SYN of lpm_ram_dq
+# -- Compiling entity LPM_RAM_DP
+# -- Compiling architecture LPM_SYN of LPM_RAM_DP
+# -- Compiling entity LPM_RAM_IO
+# -- Compiling architecture LPM_SYN of lpm_ram_io
+# -- Compiling entity LPM_ROM
+# -- Compiling architecture LPM_SYN of lpm_rom
+# -- Compiling entity LPM_FIFO
+# -- Compiling architecture behavior of LPM_FIFO
+# -- Compiling entity LPM_FIFO_DC_DFFPIPE
+# -- Compiling architecture behavior of LPM_FIFO_DC_DFFPIPE
+# -- Compiling entity LPM_FIFO_DC_FEFIFO
+# -- Compiling architecture behavior of LPM_FIFO_DC_FEFIFO
+# -- Loading entity LPM_FIFO_DC_FEFIFO
+# -- Loading entity LPM_FIFO_DC_DFFPIPE
+# -- Compiling entity LPM_FIFO_DC_ASYNC
+# -- Compiling architecture behavior of LPM_FIFO_DC_ASYNC
+# -- Loading entity LPM_FIFO_DC_ASYNC
+# -- Compiling entity LPM_FIFO_DC
+# -- Compiling architecture behavior of LPM_FIFO_DC
+# -- Compiling entity LPM_INpad
+# -- Compiling architecture LPM_SYN of LPM_INpad
+# -- Compiling entity LPM_OUTpad
+# -- Compiling architecture LPM_SYN of LPM_OUTpad
+# -- Compiling entity LPM_BIpad
+# -- Compiling architecture LPM_SYN of LPM_BIpad
+# End time: 13:09:57 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:57 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/sgate_pack.vhd -work sgate 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package sgate_pack
+# -- Compiling package body sgate_pack
+# -- Loading package sgate_pack
+# End time: 13:09:57 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:57 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/sgate.vhd -work sgate 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity oper_add
+# -- Compiling architecture sim_arch of oper_add
+# -- Compiling entity oper_addsub
+# -- Compiling architecture sim_arch of oper_addsub
+# -- Compiling entity mux21
+# -- Compiling architecture sim_arch of mux21
+# -- Compiling entity io_buf_tri
+# -- Compiling architecture sim_arch of io_buf_tri
+# -- Compiling entity io_buf_opdrn
+# -- Compiling architecture sim_arch of io_buf_opdrn
+# -- Compiling entity tri_bus
+# -- Compiling architecture sim_arch of tri_bus
+# -- Compiling entity oper_mult
+# -- Compiling architecture sim_arch of oper_mult
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity oper_div
+# -- Compiling architecture sim_arch of oper_div
+# -- Compiling entity oper_mod
+# -- Compiling architecture sim_arch of oper_mod
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity oper_left_shift
+# -- Compiling architecture sim_arch of oper_left_shift
+# -- Compiling entity oper_right_shift
+# -- Compiling architecture sim_arch of oper_right_shift
+# -- Compiling entity oper_rotate_left
+# -- Compiling architecture sim_arch of oper_rotate_left
+# -- Compiling entity oper_rotate_right
+# -- Compiling architecture sim_arch of oper_rotate_right
+# -- Compiling entity oper_less_than
+# -- Compiling architecture sim_arch of oper_less_than
+# -- Loading package sgate_pack
+# -- Compiling entity oper_mux
+# -- Compiling architecture sim_arch of oper_mux
+# -- Compiling entity oper_selector
+# -- Compiling architecture sim_arch of oper_selector
+# -- Compiling entity oper_prio_selector
+# -- Compiling architecture sim_arch of oper_prio_selector
+# -- Compiling entity oper_decoder
+# -- Compiling architecture sim_arch of oper_decoder
+# -- Compiling entity oper_bus_mux
+# -- Compiling architecture sim_arch of oper_bus_mux
+# -- Compiling entity oper_latch
+# -- Compiling architecture sim_arch of oper_latch
+# End time: 13:09:57 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:57 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_mf_components.vhd -work altera_mf 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package altera_mf_components
+# End time: 13:09:57 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:57 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_mf.vhd -work altera_mf 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LCELL
+# -- Compiling architecture BEHAVIOR of LCELL
+# -- Compiling package ALTERA_COMMON_CONVERSION
+# -- Compiling package body ALTERA_COMMON_CONVERSION
+# -- Loading package ALTERA_COMMON_CONVERSION
+# -- Compiling package ALTERA_MF_HINT_EVALUATION
+# -- Compiling package body ALTERA_MF_HINT_EVALUATION
+# -- Loading package ALTERA_MF_HINT_EVALUATION
+# -- Compiling package ALTERA_DEVICE_FAMILIES
+# -- Compiling package body ALTERA_DEVICE_FAMILIES
+# -- Loading package ALTERA_DEVICE_FAMILIES
+# -- Compiling package MF_pllpack
+# -- Compiling package body MF_pllpack
+# -- Loading package MF_pllpack
+# -- Compiling entity DFFP
+# -- Compiling architecture behave of DFFP
+# -- Compiling entity pll_iobuf
+# -- Compiling architecture BEHAVIOR of pll_iobuf
+# -- Compiling entity MF_m_cntr
+# -- Compiling architecture behave of MF_m_cntr
+# -- Compiling entity MF_n_cntr
+# -- Compiling architecture behave of MF_n_cntr
+# -- Compiling entity stx_scale_cntr
+# -- Compiling architecture behave of stx_scale_cntr
+# -- Compiling entity MF_pll_reg
+# -- Compiling architecture behave of MF_pll_reg
+# -- Loading package MF_pllpack
+# -- Loading entity MF_m_cntr
+# -- Loading entity MF_n_cntr
+# -- Loading entity stx_scale_cntr
+# -- Loading entity DFFP
+# -- Loading entity MF_pll_reg
+# -- Compiling entity MF_stratix_pll
+# -- Compiling architecture vital_pll of MF_stratix_pll
+# -- Compiling entity arm_m_cntr
+# -- Compiling architecture behave of arm_m_cntr
+# -- Compiling entity arm_n_cntr
+# -- Compiling architecture behave of arm_n_cntr
+# -- Compiling entity arm_scale_cntr
+# -- Compiling architecture behave of arm_scale_cntr
+# -- Loading entity arm_m_cntr
+# -- Loading entity arm_n_cntr
+# -- Loading entity arm_scale_cntr
+# -- Compiling entity MF_stratixii_pll
+# -- Compiling architecture vital_pll of MF_stratixii_pll
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity MF_ttn_mn_cntr
+# -- Compiling architecture behave of MF_ttn_mn_cntr
+# -- Compiling entity MF_ttn_scale_cntr
+# -- Compiling architecture behave of MF_ttn_scale_cntr
+# -- Loading entity MF_ttn_mn_cntr
+# -- Loading entity MF_ttn_scale_cntr
+# -- Compiling entity MF_stratixiii_pll
+# -- Compiling architecture vital_pll of MF_stratixiii_pll
+# -- Compiling entity MF_cda_mn_cntr
+# -- Compiling architecture behave of MF_cda_mn_cntr
+# -- Compiling entity MF_cda_scale_cntr
+# -- Compiling architecture behave of MF_cda_scale_cntr
+# -- Loading entity MF_cda_mn_cntr
+# -- Loading entity MF_cda_scale_cntr
+# -- Compiling entity MF_cycloneiii_pll
+# -- Compiling architecture vital_pll of MF_cycloneiii_pll
+# -- Compiling entity MF_stingray_mn_cntr
+# -- Compiling architecture behave of MF_stingray_mn_cntr
+# -- Compiling entity MF_stingray_post_divider
+# -- Compiling architecture behave of MF_stingray_post_divider
+# -- Compiling entity MF_stingray_scale_cntr
+# -- Compiling architecture behave of MF_stingray_scale_cntr
+# -- Loading entity MF_stingray_mn_cntr
+# -- Loading entity MF_stingray_scale_cntr
+# -- Compiling entity MF_cycloneiiigl_pll
+# -- Compiling architecture vital_pll of MF_cycloneiiigl_pll
+# -- Loading package ALTERA_DEVICE_FAMILIES
+# -- Loading entity MF_stratix_pll
+# -- Loading entity MF_stratixii_pll
+# -- Loading entity MF_stratixiii_pll
+# -- Loading entity MF_cycloneiii_pll
+# -- Loading entity MF_cycloneiiigl_pll
+# -- Loading entity pll_iobuf
+# -- Compiling entity altpll
+# -- Compiling architecture behavior of altpll
+# -- Compiling entity altaccumulate
+# -- Compiling architecture behaviour of altaccumulate
+# -- Compiling entity altmult_accum
+# -- Compiling architecture behaviour of altmult_accum
+# -- Compiling entity altmult_add
+# -- Compiling architecture behaviour of altmult_add
+# -- Loading package ALTERA_COMMON_CONVERSION
+# -- Compiling entity altfp_mult
+# -- Compiling architecture behavior of altfp_mult
+# -- Compiling entity altsqrt
+# -- Compiling architecture behavior of altsqrt
+# -- Compiling entity altclklock
+# -- Compiling architecture behavior of altclklock
+# -- Compiling entity altddio_in
+# -- Compiling architecture behave of altddio_in
+# -- Compiling entity altddio_out
+# -- Compiling architecture behave of altddio_out
+# -- Loading entity altddio_in
+# -- Loading entity altddio_out
+# -- Compiling entity altddio_bidir
+# -- Compiling architecture struct of altddio_bidir
+# -- Compiling entity stratixii_lvds_rx
+# -- Compiling architecture behavior of stratixii_lvds_rx
+# -- Compiling entity flexible_lvds_rx
+# -- Compiling architecture behavior of flexible_lvds_rx
+# -- Compiling entity stratixiii_lvds_rx_dpa
+# -- Compiling architecture behavior of stratixiii_lvds_rx_dpa
+# -- Compiling entity stratixv_local_clk_divider
+# -- Compiling architecture behavior of stratixv_local_clk_divider
+# -- Loading entity stratixiii_lvds_rx_dpa
+# -- Loading entity stratixv_local_clk_divider
+# -- Compiling entity stratixiii_lvds_rx_channel
+# -- Compiling architecture behavior of stratixiii_lvds_rx_channel
+# -- Loading entity stratixiii_lvds_rx_channel
+# -- Compiling entity stratixiii_lvds_rx
+# -- Compiling architecture behavior of stratixiii_lvds_rx
+# -- Loading entity stratixii_lvds_rx
+# -- Loading entity flexible_lvds_rx
+# -- Loading entity stratixiii_lvds_rx
+# -- Compiling entity altlvds_rx
+# -- Compiling architecture behavior of altlvds_rx
+# -- Compiling entity stratix_tx_outclk
+# -- Compiling architecture behavior of stratix_tx_outclk
+# -- Compiling entity stratixii_tx_outclk
+# -- Compiling architecture behavior of stratixii_tx_outclk
+# -- Compiling entity flexible_lvds_tx
+# -- Compiling architecture behavior of flexible_lvds_tx
+# -- Loading entity stratix_tx_outclk
+# -- Loading entity stratixii_tx_outclk
+# -- Loading entity flexible_lvds_tx
+# -- Compiling entity altlvds_tx
+# -- Compiling architecture behavior of altlvds_tx
+# -- Compiling entity altdpram
+# -- Compiling architecture behavior of altdpram
+# -- Compiling entity altsyncram
+# -- Compiling architecture translated of altsyncram
+# -- Loading entity altsyncram
+# -- Loading package ALTERA_MF_HINT_EVALUATION
+# -- Compiling entity alt3pram
+# -- Compiling architecture behavior of alt3pram
+# -- Loading package altera_mf_components
+# -- Compiling entity parallel_add
+# -- Compiling architecture behaviour of parallel_add
+# -- Compiling entity SCFIFO
+# -- Compiling architecture behavior of SCFIFO
+# -- Compiling entity DCFIFO_DFFPIPE
+# -- Compiling architecture behavior of DCFIFO_DFFPIPE
+# -- Compiling entity DCFIFO_FEFIFO
+# -- Compiling architecture behavior of DCFIFO_FEFIFO
+# -- Loading entity DCFIFO_FEFIFO
+# -- Loading entity DCFIFO_DFFPIPE
+# -- Compiling entity DCFIFO_ASYNC
+# -- Compiling architecture behavior of DCFIFO_ASYNC
+# -- Compiling entity DCFIFO_SYNC
+# -- Compiling architecture behavior of DCFIFO_SYNC
+# -- Compiling entity DCFIFO_LOW_LATENCY
+# -- Compiling architecture behavior of DCFIFO_LOW_LATENCY
+# -- Loading entity DCFIFO_ASYNC
+# -- Loading entity DCFIFO_SYNC
+# -- Loading entity DCFIFO_LOW_LATENCY
+# -- Compiling entity DCFIFO_MIXED_WIDTHS
+# -- Compiling architecture behavior of DCFIFO_MIXED_WIDTHS
+# -- Loading entity DCFIFO_MIXED_WIDTHS
+# -- Compiling entity DCFIFO
+# -- Compiling architecture behavior of DCFIFO
+# -- Compiling entity altshift_taps
+# -- Compiling architecture behavioural of altshift_taps
+# -- Compiling entity A_GRAYCOUNTER
+# -- Compiling architecture behavior of A_GRAYCOUNTER
+# -- Compiling entity altsquare
+# -- Compiling architecture altsquare_syn of altsquare
+# -- Compiling entity altera_std_synchronizer
+# -- Compiling architecture behavioral of altera_std_synchronizer
+# -- Compiling entity altera_std_synchronizer_bundle
+# -- Compiling architecture behavioral of altera_std_synchronizer_bundle
+# -- Compiling entity alt_cal
+# -- Compiling architecture RTL of alt_cal
+# -- Compiling entity alt_cal_mm
+# -- Compiling architecture RTL of alt_cal_mm
+# -- Compiling entity alt_cal_c3gxb
+# -- Compiling architecture RTL of alt_cal_c3gxb
+# -- Compiling entity alt_cal_sv
+# -- Compiling architecture RTL of alt_cal_sv
+# -- Compiling entity alt_cal_av
+# -- Compiling architecture RTL of alt_cal_av
+# -- Compiling package alt_aeq_s4_func
+# -- Compiling package body alt_aeq_s4_func
+# -- Loading package alt_aeq_s4_func
+# -- Loading package alt_aeq_s4_func
+# -- Compiling entity alt_aeq_s4
+# -- Compiling architecture trans of alt_aeq_s4
+# -- Compiling package alt_eyemon_func
+# -- Compiling package body alt_eyemon_func
+# -- Loading package alt_eyemon_func
+# -- Loading package alt_eyemon_func
+# -- Compiling entity alt_eyemon
+# -- Compiling architecture trans of alt_eyemon
+# -- Compiling package alt_dfe_func
+# -- Compiling package body alt_dfe_func
+# -- Loading package alt_dfe_func
+# -- Loading package alt_dfe_func
+# -- Compiling entity alt_dfe
+# -- Compiling architecture trans of alt_dfe
+# -- Compiling package SLD_NODE
+# -- Compiling package body SLD_NODE
+# -- Loading package SLD_NODE
+# -- Loading package SLD_NODE
+# -- Compiling entity signal_gen
+# -- Compiling architecture simModel of signal_gen
+# -- Compiling entity jtag_tap_controller
+# -- Compiling architecture FSM of jtag_tap_controller
+# -- Compiling entity dummy_hub
+# -- Compiling architecture behavior of dummy_hub
+# -- Loading entity signal_gen
+# -- Loading entity jtag_tap_controller
+# -- Loading entity dummy_hub
+# -- Compiling entity sld_virtual_jtag
+# -- Compiling architecture structural of sld_virtual_jtag
+# -- Compiling entity sld_signaltap
+# -- Compiling architecture sim_sld_signaltap of sld_signaltap
+# -- Compiling entity altstratixii_oct
+# -- Compiling architecture sim_altstratixii_oct of altstratixii_oct
+# -- Compiling entity altparallel_flash_loader
+# -- Compiling architecture sim_altparallel_flash_loader of altparallel_flash_loader
+# -- Compiling entity altserial_flash_loader
+# -- Compiling architecture sim_altserial_flash_loader of altserial_flash_loader
+# -- Compiling entity alt_fault_injection
+# -- Compiling architecture sim_alt_fault_injection of alt_fault_injection
+# -- Compiling entity sld_virtual_jtag_basic
+# -- Compiling architecture sim_sld_virtual_jtag_basic of sld_virtual_jtag_basic
+# -- Compiling entity altsource_probe
+# -- Compiling architecture sim_altsource_probe of altsource_probe
+# End time: 13:09:58 on Dec 20,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:09:59 on Dec 20,2023
+# vlog -sv /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv -work altera_lnsim 
+# 
+# Top level modules:
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_lnsim_components.vhd -work altera_lnsim 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package altera_lnsim_components
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.vhd -work cyclone10lp 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package cyclone10lp_atom_pack
+# -- Compiling package body cyclone10lp_atom_pack
+# -- Loading package cyclone10lp_atom_pack
+# -- Compiling package cyclone10lp_pllpack
+# -- Compiling package body cyclone10lp_pllpack
+# -- Loading package cyclone10lp_pllpack
+# -- Loading package cyclone10lp_atom_pack
+# -- Compiling entity cyclone10lp_dffe
+# -- Compiling architecture behave of cyclone10lp_dffe
+# -- Compiling entity cyclone10lp_mux21
+# -- Compiling architecture AltVITAL of cyclone10lp_mux21
+# -- Compiling entity cyclone10lp_mux41
+# -- Compiling architecture AltVITAL of cyclone10lp_mux41
+# -- Compiling entity cyclone10lp_and1
+# -- Compiling architecture AltVITAL of cyclone10lp_and1
+# -- Compiling entity cyclone10lp_lcell_comb
+# -- Compiling architecture vital_lcell_comb of cyclone10lp_lcell_comb
+# -- Compiling entity cyclone10lp_routing_wire
+# ** Warning: /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.vhd(1667): (vcom-1288) VITAL timing generic "tpd_datainglitch_dataout" port specification "datainglitch" does not denote a port.
+# (1076.4 section 4.3.2.1.3)
+# -- Compiling architecture behave of cyclone10lp_routing_wire
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity cyclone10lp_mn_cntr
+# -- Compiling architecture behave of cyclone10lp_mn_cntr
+# -- Compiling entity cyclone10lp_scale_cntr
+# -- Compiling architecture behave of cyclone10lp_scale_cntr
+# -- Compiling entity cyclone10lp_pll_reg
+# -- Compiling architecture behave of cyclone10lp_pll_reg
+# -- Loading package cyclone10lp_pllpack
+# -- Loading entity cyclone10lp_mn_cntr
+# -- Loading entity cyclone10lp_scale_cntr
+# -- Loading entity cyclone10lp_dffe
+# -- Loading entity cyclone10lp_pll_reg
+# -- Compiling entity cyclone10lp_pll
+# -- Compiling architecture vital_pll of cyclone10lp_pll
+# -- Loading entity cyclone10lp_and1
+# -- Compiling entity cyclone10lp_ff
+# -- Compiling architecture vital_lcell_ff of cyclone10lp_ff
+# -- Compiling entity cyclone10lp_ram_register
+# -- Compiling architecture reg_arch of cyclone10lp_ram_register
+# -- Compiling entity cyclone10lp_ram_pulse_generator
+# -- Compiling architecture pgen_arch of cyclone10lp_ram_pulse_generator
+# -- Loading entity cyclone10lp_ram_register
+# -- Loading entity cyclone10lp_ram_pulse_generator
+# -- Compiling entity cyclone10lp_ram_block
+# -- Compiling architecture block_arch of cyclone10lp_ram_block
+# -- Compiling entity cyclone10lp_mac_data_reg
+# -- Compiling architecture vital_cyclone10lp_mac_data_reg of cyclone10lp_mac_data_reg
+# -- Compiling entity cyclone10lp_mac_sign_reg
+# -- Compiling architecture cyclone10lp_mac_sign_reg of cyclone10lp_mac_sign_reg
+# -- Compiling entity cyclone10lp_mac_mult_internal
+# -- Compiling architecture vital_cyclone10lp_mac_mult_internal of cyclone10lp_mac_mult_internal
+# -- Loading entity cyclone10lp_mac_data_reg
+# -- Loading entity cyclone10lp_mac_sign_reg
+# -- Loading entity cyclone10lp_mac_mult_internal
+# -- Compiling entity cyclone10lp_mac_mult
+# -- Compiling architecture vital_cyclone10lp_mac_mult of cyclone10lp_mac_mult
+# -- Compiling entity cyclone10lp_mac_out
+# -- Compiling architecture vital_cyclone10lp_mac_out of cyclone10lp_mac_out
+# -- Compiling entity cyclone10lp_io_ibuf
+# -- Compiling architecture arch of cyclone10lp_io_ibuf
+# -- Compiling entity cyclone10lp_io_obuf
+# -- Compiling architecture arch of cyclone10lp_io_obuf
+# -- Compiling entity cyclone10lp_ddio_oe
+# -- Compiling architecture arch of cyclone10lp_ddio_oe
+# -- Compiling entity cyclone10lp_latch
+# -- Compiling architecture vital_latch of cyclone10lp_latch
+# -- Compiling entity cyclone10lp_ddio_out
+# -- Compiling architecture arch of cyclone10lp_ddio_out
+# -- Compiling entity cyclone10lp_pseudo_diff_out
+# -- Compiling architecture arch of cyclone10lp_pseudo_diff_out
+# -- Compiling entity cyclone10lp_io_pad
+# -- Compiling architecture arch of cyclone10lp_io_pad
+# -- Compiling entity cyclone10lp_asmiblock
+# -- Compiling architecture behavior of cyclone10lp_asmiblock
+# -- Compiling entity cyclone10lp_ena_reg
+# -- Compiling architecture behave of cyclone10lp_ena_reg
+# -- Loading entity cyclone10lp_ena_reg
+# -- Compiling entity cyclone10lp_clkctrl
+# -- Compiling architecture vital_clkctrl of cyclone10lp_clkctrl
+# -- Compiling entity cyclone10lp_rublock
+# -- Compiling architecture architecture_rublock of cyclone10lp_rublock
+# -- Compiling entity cyclone10lp_apfcontroller
+# -- Compiling architecture architecture_apfcontroller of cyclone10lp_apfcontroller
+# -- Compiling entity cyclone10lp_termination
+# -- Compiling architecture cyclone10lp_termination_arch of cyclone10lp_termination
+# -- Compiling entity cyclone10lp_jtag
+# -- Compiling architecture architecture_jtag of cyclone10lp_jtag
+# -- Compiling entity cyclone10lp_crcblock
+# -- Compiling architecture architecture_crcblock of cyclone10lp_crcblock
+# -- Compiling entity cyclone10lp_oscillator
+# -- Compiling architecture architecture_oscillator of cyclone10lp_oscillator
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_components.vhd -work cyclone10lp 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclone10lp_atom_pack
+# -- Compiling package cyclone10lp_components
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# [exec] com
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom ../hdl/clkctrl/clkctrl/testbench/clkctrl_tb/simulation/submodules/clkctrl_altclkctrl_0.vhd -work altclkctrl_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clkctrl_altclkctrl_0_sub
+# -- Compiling architecture RTL of clkctrl_altclkctrl_0_sub
+# -- Compiling entity clkctrl_altclkctrl_0
+# -- Compiling architecture RTL of clkctrl_altclkctrl_0
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom ../hdl/clkctrl/clkctrl/testbench/clkctrl_tb/simulation/submodules/clkctrl.vhd -work clkctrl_inst 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clkctrl
+# -- Compiling architecture rtl of clkctrl
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom ../hdl/clkctrl/clkctrl/testbench/clkctrl_tb/simulation/clkctrl_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clkctrl_tb
+# -- Compiling architecture rtl of clkctrl_tb
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom ../hdl/d_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity d_flipflop
+# -- Compiling architecture behavior of d_flipflop
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom ../hdl/t_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity t_flipflop
+# -- Compiling architecture behavior of t_flipflop
+# End time: 13:10:00 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:00 on Dec 20,2023
+# vcom ../hdl/sr_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sr_flipflop
+# -- Compiling architecture behavior of sr_flipflop
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg
+# -- Compiling architecture behavior of reg
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/reg_negedge.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg_negedge
+# -- Compiling architecture behavior of reg_negedge
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux_2to1
+# -- Compiling architecture behavior of mux_2to1
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/mux_4to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux_4to1
+# -- Compiling architecture behavior of mux_4to1
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/decoder_2bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder_2bit
+# -- Compiling architecture behavior of decoder_2bit
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/comparator_Nbit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity comparator_Nbit
+# -- Compiling architecture behavior of comparator_Nbit
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/counter_Nbit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_Nbit
+# -- Compiling architecture rtl of counter_Nbit
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/counter_11bit_updown/counter_11bit_updown.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_11bit_updown
+# -- Compiling architecture SYN of counter_11bit_updown
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/synchronizer_EU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer_EU
+# -- Compiling architecture rtl of synchronizer_EU
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/synchronizer_CU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer_CU
+# -- Compiling architecture fsm of synchronizer_CU
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer
+# -- Compiling architecture rtl of synchronizer
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/CA_builder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CA_builder
+# -- Compiling architecture rtl of CA_builder
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/CA_unpacker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CA_unpacker
+# -- Compiling architecture rtl of CA_unpacker
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/conf_builder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity conf_builder
+# -- Compiling architecture rtl of conf_builder
+# End time: 13:10:01 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:01 on Dec 20,2023
+# vcom ../hdl/DDR_to_SDR_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DDR_to_SDR_converter
+# -- Compiling architecture rtl of DDR_to_SDR_converter
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ../hdl/SDR_to_DDR_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDR_to_DDR_converter
+# -- Compiling architecture rtl of SDR_to_DDR_converter
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ../hdl/timer_14bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer_14bit
+# -- Compiling architecture rtl of timer_14bit
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ../hdl/tristate_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tristate_buffer
+# -- Compiling architecture behavior of tristate_buffer
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ../hdl/adder_22bit_1pipe/adder_22bit_1pipe.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder_22bit_1pipe
+# -- Compiling architecture SYN of adder_22bit_1pipe
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ../hdl/dll_90/dll_90.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dll_90
+# -- Compiling architecture SYN of dll_90
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ../hdl/avs_to_hram_converter_CU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity avs_to_hram_converter_CU
+# -- Compiling architecture fsm of avs_to_hram_converter_CU
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ../hdl/test_files/avs_to_hram_converter_EU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity avs_to_hram_converter_EU
+# -- Compiling architecture rtl of avs_to_hram_converter_EU
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ../hdl/test_files/avs_to_hram_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity avs_to_hram_converter
+# -- Compiling architecture rtl of avs_to_hram_converter
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ./tb/clk_rst_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_rst_generator
+# -- Compiling architecture behavior of clk_rst_generator
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ./tb/driver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity driver
+# -- Compiling architecture tb of driver
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ./tb/monitor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity monitor
+# -- Compiling architecture tb of monitor
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vcom ./tb/strobe_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity strobe_handler
+# -- Compiling architecture behavior of strobe_handler
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vlog ./tb/s27kl0641.v 
+# -- Compiling module s27kl0641
+# -- Compiling module BUFFERs27kl0641
+# 
+# Top level modules:
+# 	s27kl0641
+# End time: 13:10:02 on Dec 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:10:02 on Dec 20,2023
+# vlog ./tb/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:10:03 on Dec 20,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# testbench
+# [exec] elab
+# vsim -t ps -L work -L work_lib -L altclkctrl_0 -L clkctrl_inst -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp testbench -voptargs="+acc" 
+# Start time: 13:10:03 on Dec 20,2023
+# Loading work.testbench
+# Loading work.s27kl0641
+# Loading work.BUFFERs27kl0641
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_rst_generator(behavior)
+# Loading work.avs_to_hram_converter(rtl)
+# Loading work.avs_to_hram_converter_eu(rtl)
+# Loading work.reg(behavior)
+# Loading work.conf_builder(rtl)
+# Loading work.mux_4to1(behavior)
+# Loading work.ca_builder(rtl)
+# Loading work.ca_unpacker(rtl)
+# Loading work.tristate_buffer(behavior)
+# Loading work.sdr_to_ddr_converter(rtl)
+# Loading work.mux_2to1(behavior)
+# Loading work.dll_90(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# Loading work.d_flipflop(behavior)
+# Loading clkctrl_inst.clkctrl(rtl)
+# Loading altclkctrl_0.clkctrl_altclkctrl_0(rtl)
+# Loading altclkctrl_0.clkctrl_altclkctrl_0_sub(rtl)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclone10lp.cyclone10lp_atom_pack(body)
+# Loading cyclone10lp.cyclone10lp_clkctrl(vital_clkctrl)
+# Loading cyclone10lp.cyclone10lp_ena_reg(behave)
+# Loading work.ddr_to_sdr_converter(rtl)
+# Loading work.reg_negedge(behavior)
+# Loading work.synchronizer(rtl)
+# Loading work.synchronizer_eu(rtl)
+# Loading work.counter_nbit(rtl)
+# Loading work.t_flipflop(behavior)
+# Loading work.sr_flipflop(behavior)
+# Loading work.decoder_2bit(behavior)
+# Loading work.counter_11bit_updown(syn)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_counter(lpm_syn)
+# Loading work.comparator_nbit(behavior)
+# Loading work.synchronizer_cu(fsm)
+# Loading work.adder_22bit_1pipe(syn)
+# Loading ieee.std_logic_signed(body)
+# Loading lpm.lpm_add_sub(lpm_syn)
+# Loading lpm.lpm_add_sub_unsigned(lpm_syn)
+# Loading work.timer_14bit(rtl)
+# Loading work.avs_to_hram_converter_cu(fsm)
+# Loading work.strobe_handler(behavior)
+# Loading ieee.std_logic_textio(body)
+# Loading work.driver(tb)
+# Loading work.monitor(tb)
+# ** Warning: Design size of 19604 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Note: Cyclone 10 LP PLL was reset
+#    Time: 0 ps  Iteration: 4  Instance: /testbench/DUT/EU/clk_shifter/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 5  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 5  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 30 ns  Iteration: 2  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 30 ns  Iteration: 2  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Note: Cyclone 10 LP PLL locked to incoming clock
+#    Time: 60 ns  Iteration: 3  Instance: /testbench/DUT/EU/clk_shifter/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Error: $skew( negedge CSNeg:150260 ns, posedge CSNeg:150320 ns, 1 ps );
+#    Time: 150320 ns  Iteration: 7  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150330 ns  Iteration: 4  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150330 ns  Iteration: 4  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150335 ns  Iteration: 2  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150335 ns  Iteration: 2  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150340 ns  Iteration: 2  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150340 ns  Iteration: 2  Instance: /testbench/DUT/EU/addressgen/LPM_ADD_SUB_component/L1/U
+# ** Error: $skew( negedge CSNeg:150350 ns, posedge CSNeg:150480 ns, 1 ps );
+#    Time: 150480 ns  Iteration: 17  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Error: $skew( negedge CSNeg:150490 ns, posedge CSNeg:150690 ns, 1 ps );
+#    Time: 150690 ns  Iteration: 7  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Error: $skew( negedge CSNeg:150720 ns, posedge CSNeg:150940 ns, 1 ps );
+#    Time: 150940 ns  Iteration: 18  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Error: $skew( negedge CSNeg:150960 ns, posedge CSNeg:151250 ns, 1 ps );
+#    Time: 151250 ns  Iteration: 7  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Error: $skew( negedge CSNeg:151290 ns, posedge CSNeg:151350 ns, 1 ps );
+#    Time: 151350 ns  Iteration: 7  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Error: $skew( negedge CSNeg:161380 ns, posedge CSNeg:161620 ns, 1 ps );
+#    Time: 161620 ns  Iteration: 7  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Error: $skew( negedge CSNeg:311640 ns, posedge CSNeg:311700 ns, 1 ps );
+#    Time: 311700 ns  Iteration: 7  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Error: $skew( negedge CSNeg:311710 ns, posedge CSNeg:311840 ns, 1 ps );
+#    Time: 311840 ns  Iteration: 8  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Error: $skew( negedge CSNeg:311850 ns, posedge CSNeg:312050 ns, 1 ps );
+#    Time: 312050 ns  Iteration: 7  Process: /testbench/hRAM/#Skew# File: ./tb/s27kl0641.v Line: 354
+# ** Note: Cyclone 10 LP PLL lost lock due to loss of input clock or the input clock is not detected within the allowed time frame.
+#    Time: 312100 ns  Iteration: 3  Instance: /testbench/DUT/EU/clk_shifter/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Note: Please run timing simulation to check whether the input clock is operating within the supported VCO range or not.
+#    Time: 312100 ns  Iteration: 3  Instance: /testbench/DUT/EU/clk_shifter/altpll_component/CYCLONEIII_ALTPLL/M5
+# End time: 13:11:11 on Dec 20,2023, Elapsed time: 0:01:08
+# Errors: 10, Warnings: 18

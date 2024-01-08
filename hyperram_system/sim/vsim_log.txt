@@ -1,0 +1,12 @@
+Reading pref.tcl
+
+# 2020.1
+
+# do sim.do
+# ../hdl/clkctrl/clkctrl/testbench
+# ** Error: couldn't read file "../hdl/clkctrl/clkctrl/testbench/mentor/msim_setup.tcl": no such file or directory
+# Error in macro ./sim.do line 9
+# couldn't read file "../hdl/clkctrl/clkctrl/testbench/mentor/msim_setup.tcl": no such file or directory
+#     while executing
+# "source $QSYS_SIMDIR/mentor/msim_setup.tcl"
+ModelSim> # 

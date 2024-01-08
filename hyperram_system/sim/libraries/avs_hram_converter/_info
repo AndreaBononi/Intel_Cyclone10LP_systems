@@ -1,0 +1,54 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/andrea/Documents/Tesi_287628/287628/hyperram_system/sim
+Eavs_hram_converter_test_basic_avs_hram_converter
+Z1 w1704730685
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 5
+R0
+Z5 8../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter.vhd
+Z6 F../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter.vhd
+l0
+L12 1
+VRFLWIZ0UDPNGAQgGU9H2[1
+!s100 iOaDh@L1N0eBG54KTMXnU3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1704731402
+!i10b 1
+Z9 !s108 1704731402.000000
+Z10 !s90 -reportprogress|300|../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter.vhd|-work|avs_hram_converter|
+Z11 !s107 ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter.vhd|
+!i113 1
+Z12 o-work avs_hram_converter
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 48 avs_hram_converter_test_basic_avs_hram_converter 0 22 RFLWIZ0UDPNGAQgGU9H2[1
+!i122 5
+l137
+Z15 L32 207
+Z16 VR4_J>[Q3^8QL5Sa4M:kMK2
+Z17 !s100 6c9cPO^lX?C@8?VSgZTje2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13

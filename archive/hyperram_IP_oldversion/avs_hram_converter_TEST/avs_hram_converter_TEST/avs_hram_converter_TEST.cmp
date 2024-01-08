@@ -1,0 +1,22 @@
+	component avs_hram_converter_TEST is
+		port (
+			avalon_slave_address             : in    std_logic_vector(31 downto 0) := (others => 'X'); -- address
+			avalon_slave_read                : in    std_logic                     := 'X';             -- read
+			avalon_slave_readdata            : out   std_logic_vector(15 downto 0);                    -- readdata
+			avalon_slave_write               : in    std_logic                     := 'X';             -- write
+			avalon_slave_writedata           : in    std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
+			avalon_slave_waitrequest         : out   std_logic;                                        -- waitrequest
+			avalon_slave_readdatavalid       : out   std_logic;                                        -- readdatavalid
+			avalon_slave_burstcount          : in    std_logic_vector(10 downto 0) := (others => 'X'); -- burstcount
+			clk_clk                          : in    std_logic                     := 'X';             -- clk
+			hbus_clock_outclk                : out   std_logic;                                        -- outclk
+			hyperbus_data                    : inout std_logic_vector(7 downto 0)  := (others => 'X'); -- data
+			hyperbus_chipselect_n            : out   std_logic;                                        -- chipselect_n
+			hyperbus_localreset_n            : out   std_logic;                                        -- localreset_n
+			hyperbus_strobe_to_memory        : in    std_logic                     := 'X';             -- strobe_to_memory
+			hyperbus_shiftedstrobe_to_memory : in    std_logic                     := 'X';             -- shiftedstrobe_to_memory
+			hyperbus_strobe_from_memory      : out   std_logic;                                        -- strobe_from_memory
+			reset_n_reset_n                  : in    std_logic                     := 'X'              -- reset_n
+		);
+	end component avs_hram_converter_TEST;
+

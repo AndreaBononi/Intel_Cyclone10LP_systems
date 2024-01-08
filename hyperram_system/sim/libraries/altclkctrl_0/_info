@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/andrea/Documents/Tesi_287628/287628/hyperram_system/sim
+Eavs_hram_converter_test_basic_avs_hram_converter_clkctrl_altclkctrl_0
+Z1 w1704729605
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 5
+R0
+Z4 8../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0.vhd
+Z5 F../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0.vhd
+l0
+L98 1
+VkKW:d`njaK=:NU5O0Wl1N3
+!s100 Z>C]L@dE[W@gVW3b^9O600
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1704731400
+!i10b 1
+Z8 !s108 1704731400.000000
+Z9 !s90 -reportprogress|300|../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0.vhd|-work|altclkctrl_0|
+Z10 !s107 ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0.vhd|
+!i113 1
+Z11 o-work altclkctrl_0
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+Z13 DEx4 work 69 avs_hram_converter_test_basic_avs_hram_converter_clkctrl_altclkctrl_0 0 22 kKW:d`njaK=:NU5O0Wl1N3
+!i122 5
+l126
+Z14 L108 35
+Z15 V5kb<`U2G4M:W@E7Hz]>EO0
+Z16 !s100 CW2^Z=R]:24ejlfnT6fK31
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eavs_hram_converter_test_basic_avs_hram_converter_clkctrl_altclkctrl_0_sub
+R1
+R2
+R3
+!i122 5
+R0
+R4
+R5
+l0
+L29 1
+VD=W]J:T`?oI``Wi>>gGX=1
+!s100 ^FO3dlj?IM;TfR>`EkPda3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Artl
+R2
+R3
+Z17 DEx4 work 73 avs_hram_converter_test_basic_avs_hram_converter_clkctrl_altclkctrl_0_sub 0 22 D=W]J:T`?oI``Wi>>gGX=1
+!i122 5
+l61
+Z18 L38 42
+Z19 Vicfc<b]P6UOd[<^QfU^6n0
+Z20 !s100 IegVAhCM`Cj8G2@RPYREk2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

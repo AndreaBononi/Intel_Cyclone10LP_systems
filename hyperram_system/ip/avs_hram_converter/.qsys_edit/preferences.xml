@@ -5,9 +5,10 @@
   <columns>
    <connections preferredWidth="47" />
    <irq preferredWidth="34" />
+   <name preferredWidth="199" />
+   <export preferredWidth="174" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Qsys Interconnect/Interrupt,Library/Basic Functions/Bridges and Adaptors,Library/University Program/Clock,Library/University Program/Audio &amp; Video,Library/Basic Functions/Bridges and Adaptors/Clock,Library/Basic Functions/Clocks; PLLs and Resets,Library/DSP/Video and Image Processing,Library/Basic Functions,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Interface Protocols/Audio &amp; Video,Library/Interface Protocols/Ethernet/Reference Design Components,Library/University Program,Library/Qsys Interconnect,Library,Library/Qsys Interconnect/Memory-Mapped Alpha,Library/DSP,Library/Basic Functions/On Chip Memory,Library/University Program/Audio &amp; Video/Video,Library/Interface Protocols,Library/Basic Functions/Simulation; Debug and Verification,Library/Interface Protocols/Ethernet,Project" />
+ <library expandedCategories="Library,Project,Project/System" />
  <window width="1848" height="1053" x="72" y="27" />
 </preferences>
