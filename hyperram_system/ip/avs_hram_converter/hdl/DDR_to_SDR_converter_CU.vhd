@@ -10,11 +10,10 @@ use 			ieee.numeric_std.all;
 entity DDR_to_SDR_converter_CU is
 port
 (
-  -- clock and reset
+  -- clock, reset and clear
   clk_x8            : in  std_logic;
-  rst_n							: in  std_logic;
+	clr_n             : in  std_logic;
   -- status signals
-  clr_n             : in  std_logic;
   transition        : in  std_logic;
 	-- control signals
   system_clear_n    : out std_logic;
@@ -88,11 +87,9 @@ architecture fsm of DDR_to_SDR_converter_CU is
 		end process next_state_evaluation; ---------------------------------------------------------------------
 
 		-- state transition ------------------------------------------------------------------------------------
-		state_transition: process (clk_x8, rst_n, clr_n)
+		state_transition: process (clk_x8, clr_n)
 		begin
-			if (rst_n = '0') then
-				present_state <= reset;
-			elsif (rising_edge(clk_x8)) then
+			if (rising_edge(clk_x8)) then
         if (clr_n = '0') then
           present_state <= reset;
         else

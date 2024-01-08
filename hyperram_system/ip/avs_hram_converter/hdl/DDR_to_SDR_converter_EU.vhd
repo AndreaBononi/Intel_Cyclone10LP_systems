@@ -16,11 +16,10 @@ use       ieee.numeric_std.all;
 entity DDR_to_SDR_converter_EU is
 port
 (
-  -- clock and reset
+  -- clock and clear
 	clk_x8            : in 	std_logic;
-	rst_n 		        : in 	std_logic;
+	clear_n		        : in 	std_logic;
   -- IO signals
-  clear_n		        : in 	std_logic;
   rwds_in           : in  std_logic;
   rwds_out          : out std_logic;
 	DDR_in		        : in 	std_logic_vector(7 downto 0);
@@ -115,38 +114,39 @@ architecture rtl of DDR_to_SDR_converter_EU is
   end component; -------------------------------------------------------------------------------------------
 
   -- SIGNALS -----------------------------------------------------------------------------------------------
-  signal pdff1_out        : std_logic;
-  signal pdff2_out        : std_logic;
-  signal pdff3_out        : std_logic;
-  signal pdff4_out        : std_logic;
-  signal ndff1_out        : std_logic;
-  signal ndff2_out        : std_logic;
-  signal ndff3_out        : std_logic;
-  signal ndff4_out        : std_logic;
-  signal pdff1_out_pipe   : std_logic;
-  signal pdff2_out_pipe   : std_logic;
-  signal pdff3_out_pipe   : std_logic;
-  signal pdff4_out_pipe   : std_logic;
-  signal ndff1_out_pipe   : std_logic;
-  signal ndff2_out_pipe   : std_logic;
-  signal ndff3_out_pipe   : std_logic;
-  signal ndff4_out_pipe   : std_logic;
-  signal regp1_out        : std_logic_vector(7 downto 0);
-  signal regp2_out        : std_logic_vector(7 downto 0);
-  signal tracker_tgl      : std_logic;
-  signal tracker_out      : std_logic;
-  signal gt4              : std_logic;
-  signal eq4              : std_logic;
-  signal msb_out          : std_logic_vector(7 downto 0);
-  signal lsb_out          : std_logic_vector(7 downto 0);
-  signal rwdsgen_out      : std_logic;
-  signal pipereg1_out     : std_logic_vector(7 downto 0);
-  signal pipereg2_out     : std_logic_vector(7 downto 0);
-  signal pipereg3_out     : std_logic_vector(7 downto 0);
-  signal pipereg4_out     : std_logic_vector(7 downto 0);
-  signal pipereg5_out     : std_logic_vector(7 downto 0);
-	signal pipereg6_out     : std_logic_vector(7 downto 0);
-  signal pipereg7_out     : std_logic_vector(7 downto 0);
+  signal pdff1_out            : std_logic;
+  signal pdff2_out            : std_logic;
+  signal pdff3_out            : std_logic;
+  signal pdff4_out            : std_logic;
+  signal ndff1_out            : std_logic;
+  signal ndff2_out            : std_logic;
+  signal ndff3_out            : std_logic;
+  signal ndff4_out            : std_logic;
+  signal pdff1_out_pipe       : std_logic;
+  signal pdff2_out_pipe       : std_logic;
+  signal pdff3_out_pipe       : std_logic;
+  signal pdff4_out_pipe       : std_logic;
+  signal ndff1_out_pipe       : std_logic;
+  signal ndff2_out_pipe       : std_logic;
+  signal ndff3_out_pipe       : std_logic;
+  signal ndff4_out_pipe       : std_logic;
+  signal regp1_out            : std_logic_vector(7 downto 0);
+  signal regp2_out            : std_logic_vector(7 downto 0);
+  signal tracker_tgl          : std_logic;
+  signal tracker_out          : std_logic;
+  signal gt4                  : std_logic;
+  signal eq4                  : std_logic;
+  signal msb_out              : std_logic_vector(7 downto 0);
+  signal lsb_out              : std_logic_vector(7 downto 0);
+  signal rwdsgen_out          : std_logic;
+  signal pipereg1_out         : std_logic_vector(7 downto 0);
+  signal pipereg2_out         : std_logic_vector(7 downto 0);
+  signal pipereg3_out         : std_logic_vector(7 downto 0);
+  signal pipereg4_out         : std_logic_vector(7 downto 0);
+  signal pipereg5_out         : std_logic_vector(7 downto 0);
+	signal pipereg6_out         : std_logic_vector(7 downto 0);
+  signal pipereg7_out         : std_logic_vector(7 downto 0);
+  signal rwdsgen_toggle_pipe  : std_logic;
   ----------------------------------------------------------------------------------------------------------
 
   begin
@@ -542,6 +542,18 @@ architecture rtl of DDR_to_SDR_converter_EU is
     SDR_out(7 downto 0) <= lsb_out;
     transition <= tracker_tgl;
 
+    -- rwds generation pipelining --------------------------------------------------------------------------
+    rwdsgen_pipe: d_flipflop
+    port map
+    (
+      clk				=> clk_x8, 
+      enable		=> '1', 
+      clear_n		=> system_clear_n, 
+      reset_n		=> '1',
+      din				=> rwdsgen_toggle, 
+      dout			=> rwdsgen_toggle_pipe
+    ); -----------------------------------------------------------------------------------------------------
+
     -- shifted-rwds generator ------------------------------------------------------------------------------
     rwdsgen: t_flipflop
     port map
@@ -550,7 +562,7 @@ architecture rtl of DDR_to_SDR_converter_EU is
       enable		=> '1',
       clear_n		=> system_clear_n,
       reset_n		=> '1',
-      din				=> rwdsgen_toggle,
+      din				=> rwdsgen_toggle_pipe,
       dout			=> rwdsgen_out
     ); -----------------------------------------------------------------------------------------------------
     

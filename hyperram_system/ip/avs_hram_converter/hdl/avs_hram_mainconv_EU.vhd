@@ -199,13 +199,14 @@ architecture rtl of avs_hram_mainconv_EU is
   component DDR_to_SDR_converter is
   port
   (
-    clk_x8    : in 	std_logic;
-    rst_n 		: in 	std_logic;
-    enable		: in 	std_logic;
-    rwds_in   : in  std_logic;
-    rwds_out  : out std_logic;
-    DDR_in		: in 	std_logic_vector(7 downto 0);
-    SDR_out		: out std_logic_vector(15 downto 0)
+    -- clock, reset and clear
+		clk_x8            : in 	std_logic;
+		clear_n		        : in 	std_logic;
+		-- IO signals
+		rwds_in           : in  std_logic;
+		rwds_out          : out std_logic;
+		DDR_in		        : in 	std_logic_vector(7 downto 0);
+		SDR_out		        : out std_logic_vector(15 downto 0)
   );
   end component; ---------------------------------------------------------------------------------------------------- 
 
@@ -605,8 +606,7 @@ architecture rtl of avs_hram_mainconv_EU is
     port map
     (
       clk_x8    => clk_x8,
-      rst_n     => reset_n,
-	    enable		=> RWDS_sampling_enable,
+	    clear_n		=> RWDS_sampling_enable,
       rwds_in   => hram_RWDS,
       rwds_out  => shifted_RWDS,
 	    DDR_in		=> hram_DQ,

@@ -16,11 +16,10 @@ use       ieee.numeric_std.all;
 entity DDR_to_SDR_converter is
 port
 (
-  -- clock and reset
+  -- clock, reset and clear
 	clk_x8            : in 	std_logic;
-	rst_n 		        : in 	std_logic;
+	clear_n		        : in 	std_logic;
   -- IO signals
-  clear_n		        : in 	std_logic;
   rwds_in           : in  std_logic;
   rwds_out          : out std_logic;
 	DDR_in		        : in 	std_logic_vector(7 downto 0);
@@ -34,11 +33,10 @@ architecture rtl of DDR_to_SDR_converter is
   component DDR_to_SDR_converter_EU is
 	port
 	(
-		-- clock and reset
+		-- clock, reset and clear
     clk_x8            : in 	std_logic;
-    rst_n 		        : in 	std_logic;
+		clear_n		        : in 	std_logic;
     -- IO signals
-    clear_n		        : in 	std_logic;
     rwds_in           : in  std_logic;
     rwds_out          : out std_logic;
     DDR_in		        : in 	std_logic_vector(7 downto 0);
@@ -58,11 +56,10 @@ architecture rtl of DDR_to_SDR_converter is
   component DDR_to_SDR_converter_CU is
 	port
 	(
-		  -- clock and reset
+		  -- clock, reset and clear
     clk_x8            : in  std_logic;
-    rst_n							: in  std_logic;
+		clr_n             : in  std_logic;
     -- status signals
-    clr_n             : in  std_logic;
     transition        : in  std_logic;
     -- control signals
     system_clear_n    : out std_logic;
@@ -88,7 +85,6 @@ architecture rtl of DDR_to_SDR_converter is
     port map
     (
       clk_x8              => clk_x8,
-      rst_n 		          => rst_n,
       clear_n		          => clear_n,
       rwds_in             => rwds_in,
       rwds_out            => rwds_out,
@@ -107,7 +103,6 @@ architecture rtl of DDR_to_SDR_converter is
     port map
     (
       clk_x8              => clk_x8,
-      rst_n 		          => rst_n,
       clr_n               => clr_n,
       transition          => transition,
       system_clear_n      => system_clear_n,

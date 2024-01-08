@@ -1,9 +1,0 @@
-
-State Machine - |DDR_to_SDR_converter|DDR_to_SDR_converter_CU:CU|present_state
-Name present_state.lsb_tx present_state.msb_tx present_state.idle_intra present_state.idle present_state.reset_wait present_state.reset 
-present_state.reset 0 0 0 0 0 0 
-present_state.reset_wait 0 0 0 0 1 1 
-present_state.idle 0 0 0 1 0 1 
-present_state.idle_intra 0 0 1 0 0 1 
-present_state.msb_tx 0 1 0 0 0 1 
-present_state.lsb_tx 1 0 0 0 0 1 
