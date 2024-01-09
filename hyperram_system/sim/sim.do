@@ -44,8 +44,9 @@ sim:/testbench/hram_CK \
 sim:/testbench/hram_DQ \
 sim:/testbench/hram_RWDS
 
+
 # run the simulation
 run 350us
 
 # exit simulator and report success to the shell
-# exit -code 0
+exit -code 0

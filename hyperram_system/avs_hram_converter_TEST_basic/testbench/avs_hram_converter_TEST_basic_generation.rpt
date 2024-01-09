@@ -25,38 +25,39 @@ Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
 Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ip/**/* matched 0 files in 0.00 seconds
+Progress: Loading testbench/avs_hram_converter_TEST_basic_tb.qsys
 Info: Reading index /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic.ipx
 Progress: Loading hyperram_system/avs_hram_converter_TEST_basic.qsys
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/* matched 7 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/* matched 8 files in 0.00 seconds
 Progress: Loading avs_hram_converter/clkctrl.qsys
 Progress: Loading avs_hram_converter/avs_hram_mainconv_hw.tcl
 Progress: Loading avs_hram_converter/clkctrl_hw.tcl
 Progress: Loading avs_hram_converter/avs_hram_converter_hw.tcl
 Progress: Loading avs_hram_converter/avs_hram_converter.qsys
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/**/* matched 19 files in 0.06 seconds
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/*/* matched 23 files in 0.00 seconds
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic.ipx described 0 plugins, 3 paths, in 0.06 seconds
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/* matched 4 files in 0.06 seconds
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/*/* matched 0 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/**/* matched 20 files in 0.07 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/*/* matched 29 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic.ipx described 0 plugins, 3 paths, in 0.08 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/* matched 12 files in 0.08 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/*/* matched 8 files in 0.00 seconds
 Info: Reading index /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/**/* matched 1958 files in 0.07 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/**/* matched 1958 files in 0.05 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/storage/**/* matched 26 files in 0.00 seconds
-Info: /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx described 0 plugins, 2 paths, in 0.07 seconds
-Info: /home/andrea/.altera.quartus/ip/22.1/**/* matched 2 files in 0.07 seconds
+Info: /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx described 0 plugins, 2 paths, in 0.05 seconds
+Info: /home/andrea/.altera.quartus/ip/22.1/**/* matched 2 files in 0.05 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
 Info: Reading index /home/andrea/intelFPGA_lite/22.1std/ip/altera/altera_components.ipx
-Info: /home/andrea/intelFPGA_lite/22.1std/ip/altera/altera_components.ipx described 1968 plugins, 0 paths, in 0.27 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/ip/**/* matched 108 files in 0.28 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/ip/altera/altera_components.ipx described 1968 plugins, 0 paths, in 0.20 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/ip/**/* matched 108 files in 0.21 seconds
 Info: /home/andrea/intelFPGA_lite/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/builtin.ipx
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/**/* matched 9 files in 0.01 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/common/librarian/factories/**/* matched 0 files in 0.00 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.42 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.42 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.36 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.36 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -181,17 +182,17 @@ Info: avs_hram_converter_TEST_basic_tb: Done "avs_hram_converter_TEST_basic_tb" 
 Info: qsys-generate succeeded.
 Info: sim-script-gen --spd=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic_tb.spd --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ --use-relative-paths=true
 Info: Doing: ip-make-simscript --spd=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic_tb.spd --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for RIVIERA simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Generating the following file(s) for VCSMX simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
 Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
 Info: Generating the following file(s) for XCELIUM simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
 Info: 	xcelium/cds.lib
 Info: 	xcelium/hdl.var
 Info: 	xcelium/xcelium_setup.sh
 Info: 	8 .cds.lib files in xcelium/cds_libs/ directory
-Info: Generating the following file(s) for VCSMX simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
-Info: 	synopsys/vcsmx/synopsys_sim.setup
-Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for RIVIERA simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
-Info: 	aldec/rivierapro_setup.tcl
 Info: Generating the following file(s) for MODELSIM simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
 Info: 	mentor/msim_setup.tcl
 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/.

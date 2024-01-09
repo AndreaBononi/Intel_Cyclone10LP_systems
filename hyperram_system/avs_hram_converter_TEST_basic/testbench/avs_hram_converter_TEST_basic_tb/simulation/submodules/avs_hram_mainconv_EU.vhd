@@ -335,7 +335,7 @@ architecture rtl of avs_hram_mainconv_EU is
   ------------------------------------------------------------------------------------------------------------------- 
 
   -- SIGNALS --------------------------------------------------------------------------------------------------------
-  signal dll_reset          : std_logic;
+  signal pll_reset          : std_logic;
   signal synch_cnt_up_downN : std_logic;
   signal burst_detector_out : std_logic;
   signal synch_validout     : std_logic;
@@ -542,13 +542,13 @@ architecture rtl of avs_hram_mainconv_EU is
       DDR_out	  => writedata_conv_out
     ); --------------------------------------------------------------------------------------------------------------
 
-    dll_reset <= not reset_n;
+    pll_reset <= not reset_n;
 
     -- clock shifter ------------------------------------------------------------------------------------------------
     clk_shifter: dll_90
     port map
     (
-      areset		=> dll_reset,
+      areset		=> pll_reset,
       inclk0		=> clk,
       c0				=> clk90
     ); --------------------------------------------------------------------------------------------------------------
@@ -596,7 +596,7 @@ architecture rtl of avs_hram_mainconv_EU is
     pll_x8_inst: pll_x8
     port map
     (
-      areset	=> reset_n,
+      areset	=> pll_reset,
       inclk0	=> clk,
       c0		  => clk_x8
     ); --------------------------------------------------------------------------------------------------------------

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 22.1 917 linux 2024.01.08.17:00:06
+# ACDS 22.1 917 linux 2024.01.09.16:08:45
 
 # ----------------------------------------
 # xcelium - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 22.1 917 linux 2024.01.08.17:00:06
+# ACDS 22.1 917 linux 2024.01.09.16:08:45
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="avs_hram_converter_TEST_basic_tb"
