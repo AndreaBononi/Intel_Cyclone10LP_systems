@@ -36,9 +36,6 @@ DIRECTORIES DESCRIPTION:
 # ./datasheets/
 	-- it contains useful datasheets
 #
-# ./archive/
-	-- it contains old files that may still be useful
-#
 --------------------------------------------------------------------------------------------------------------
 NOTE: Platform Designer refers to the memory initialization files using absolut pathnames.
 Make sure to match the following pathnames or re-assign the memory initialization file in Platform Designer.

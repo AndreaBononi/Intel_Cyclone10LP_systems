@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at s27kl0641.v(579): always construct contains both blocking and non-blocking assignments File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_to_hram_converter/sim_conv/tb/s27kl0641.v Line: 579
