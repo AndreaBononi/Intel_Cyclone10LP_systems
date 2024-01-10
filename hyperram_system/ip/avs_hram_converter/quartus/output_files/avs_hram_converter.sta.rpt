@@ -1,5 +1,5 @@
 Timing Analyzer report for avs_hram_converter
-Mon Jan  8 12:48:59 2024
+Wed Jan 10 11:03:18 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -20,67 +20,71 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  12. Slow 1200mV 85C Model Minimum Pulse Width Summary
  13. Slow 1200mV 85C Model Setup: 'clk_x8'
  14. Slow 1200mV 85C Model Setup: 'clk'
- 15. Slow 1200mV 85C Model Setup: 'rwdsgen'
- 16. Slow 1200mV 85C Model Hold: 'clk'
- 17. Slow 1200mV 85C Model Hold: 'clk_x8'
- 18. Slow 1200mV 85C Model Hold: 'rwdsgen'
- 19. Slow 1200mV 85C Model Recovery: 'rwdsgen'
- 20. Slow 1200mV 85C Model Recovery: 'clk'
- 21. Slow 1200mV 85C Model Removal: 'clk'
- 22. Slow 1200mV 85C Model Removal: 'rwdsgen'
- 23. Slow 1200mV 85C Model Metastability Summary
- 24. Slow 1200mV 0C Model Fmax Summary
- 25. Slow 1200mV 0C Model Setup Summary
- 26. Slow 1200mV 0C Model Hold Summary
- 27. Slow 1200mV 0C Model Recovery Summary
- 28. Slow 1200mV 0C Model Removal Summary
- 29. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 30. Slow 1200mV 0C Model Setup: 'clk_x8'
- 31. Slow 1200mV 0C Model Setup: 'clk'
- 32. Slow 1200mV 0C Model Setup: 'rwdsgen'
- 33. Slow 1200mV 0C Model Hold: 'clk'
- 34. Slow 1200mV 0C Model Hold: 'clk_x8'
- 35. Slow 1200mV 0C Model Hold: 'rwdsgen'
- 36. Slow 1200mV 0C Model Recovery: 'rwdsgen'
- 37. Slow 1200mV 0C Model Recovery: 'clk'
- 38. Slow 1200mV 0C Model Removal: 'clk'
- 39. Slow 1200mV 0C Model Removal: 'rwdsgen'
- 40. Slow 1200mV 0C Model Metastability Summary
- 41. Fast 1200mV 0C Model Setup Summary
- 42. Fast 1200mV 0C Model Hold Summary
- 43. Fast 1200mV 0C Model Recovery Summary
- 44. Fast 1200mV 0C Model Removal Summary
- 45. Fast 1200mV 0C Model Minimum Pulse Width Summary
- 46. Fast 1200mV 0C Model Setup: 'clk_x8'
- 47. Fast 1200mV 0C Model Setup: 'clk'
- 48. Fast 1200mV 0C Model Setup: 'rwdsgen'
- 49. Fast 1200mV 0C Model Hold: 'clk'
- 50. Fast 1200mV 0C Model Hold: 'rwdsgen'
- 51. Fast 1200mV 0C Model Hold: 'clk_x8'
- 52. Fast 1200mV 0C Model Recovery: 'rwdsgen'
- 53. Fast 1200mV 0C Model Recovery: 'clk'
- 54. Fast 1200mV 0C Model Removal: 'clk'
- 55. Fast 1200mV 0C Model Removal: 'rwdsgen'
- 56. Fast 1200mV 0C Model Metastability Summary
- 57. Multicorner Timing Analysis Summary
- 58. Board Trace Model Assignments
- 59. Input Transition Times
- 60. Signal Integrity Metrics (Slow 1200mv 0c Model)
- 61. Signal Integrity Metrics (Slow 1200mv 85c Model)
- 62. Signal Integrity Metrics (Fast 1200mv 0c Model)
- 63. Setup Transfers
- 64. Hold Transfers
- 65. Recovery Transfers
- 66. Removal Transfers
- 67. Report TCCS
- 68. Report RSKM
- 69. Unconstrained Paths Summary
- 70. Clock Status Summary
- 71. Unconstrained Input Ports
- 72. Unconstrained Output Ports
- 73. Unconstrained Input Ports
- 74. Unconstrained Output Ports
- 75. Timing Analyzer Messages
+ 15. Slow 1200mV 85C Model Setup: 'shifted_clock'
+ 16. Slow 1200mV 85C Model Setup: 'rwdsgen'
+ 17. Slow 1200mV 85C Model Hold: 'clk'
+ 18. Slow 1200mV 85C Model Hold: 'clk_x8'
+ 19. Slow 1200mV 85C Model Hold: 'rwdsgen'
+ 20. Slow 1200mV 85C Model Hold: 'shifted_clock'
+ 21. Slow 1200mV 85C Model Recovery: 'rwdsgen'
+ 22. Slow 1200mV 85C Model Recovery: 'clk'
+ 23. Slow 1200mV 85C Model Removal: 'clk'
+ 24. Slow 1200mV 85C Model Removal: 'rwdsgen'
+ 25. Slow 1200mV 85C Model Metastability Summary
+ 26. Slow 1200mV 0C Model Fmax Summary
+ 27. Slow 1200mV 0C Model Setup Summary
+ 28. Slow 1200mV 0C Model Hold Summary
+ 29. Slow 1200mV 0C Model Recovery Summary
+ 30. Slow 1200mV 0C Model Removal Summary
+ 31. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 32. Slow 1200mV 0C Model Setup: 'clk_x8'
+ 33. Slow 1200mV 0C Model Setup: 'clk'
+ 34. Slow 1200mV 0C Model Setup: 'shifted_clock'
+ 35. Slow 1200mV 0C Model Setup: 'rwdsgen'
+ 36. Slow 1200mV 0C Model Hold: 'clk'
+ 37. Slow 1200mV 0C Model Hold: 'clk_x8'
+ 38. Slow 1200mV 0C Model Hold: 'rwdsgen'
+ 39. Slow 1200mV 0C Model Hold: 'shifted_clock'
+ 40. Slow 1200mV 0C Model Recovery: 'rwdsgen'
+ 41. Slow 1200mV 0C Model Recovery: 'clk'
+ 42. Slow 1200mV 0C Model Removal: 'clk'
+ 43. Slow 1200mV 0C Model Removal: 'rwdsgen'
+ 44. Slow 1200mV 0C Model Metastability Summary
+ 45. Fast 1200mV 0C Model Setup Summary
+ 46. Fast 1200mV 0C Model Hold Summary
+ 47. Fast 1200mV 0C Model Recovery Summary
+ 48. Fast 1200mV 0C Model Removal Summary
+ 49. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 50. Fast 1200mV 0C Model Setup: 'clk_x8'
+ 51. Fast 1200mV 0C Model Setup: 'clk'
+ 52. Fast 1200mV 0C Model Setup: 'shifted_clock'
+ 53. Fast 1200mV 0C Model Setup: 'rwdsgen'
+ 54. Fast 1200mV 0C Model Hold: 'clk'
+ 55. Fast 1200mV 0C Model Hold: 'rwdsgen'
+ 56. Fast 1200mV 0C Model Hold: 'clk_x8'
+ 57. Fast 1200mV 0C Model Hold: 'shifted_clock'
+ 58. Fast 1200mV 0C Model Recovery: 'rwdsgen'
+ 59. Fast 1200mV 0C Model Recovery: 'clk'
+ 60. Fast 1200mV 0C Model Removal: 'clk'
+ 61. Fast 1200mV 0C Model Removal: 'rwdsgen'
+ 62. Fast 1200mV 0C Model Metastability Summary
+ 63. Multicorner Timing Analysis Summary
+ 64. Board Trace Model Assignments
+ 65. Input Transition Times
+ 66. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 67. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 68. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 69. Setup Transfers
+ 70. Hold Transfers
+ 71. Recovery Transfers
+ 72. Removal Transfers
+ 73. Report TCCS
+ 74. Report RSKM
+ 75. Unconstrained Paths Summary
+ 76. Clock Status Summary
+ 77. Unconstrained Input Ports
+ 78. Unconstrained Input Ports
+ 79. Timing Analyzer Messages
 
 
 
@@ -131,7 +135,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.6%      ;
+;     Processor 2            ;   6.7%      ;
 +----------------------------+-------------+
 
 
@@ -140,31 +144,32 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+--------+--------------------------+
 ; SDC File Path                 ; Status ; Read at                  ;
 +-------------------------------+--------+--------------------------+
-; ../sdc/avs_hram_converter.sdc ; OK     ; Mon Jan  8 12:48:57 2024 ;
+; ../sdc/avs_hram_converter.sdc ; OK     ; Wed Jan 10 11:03:17 2024 ;
 +-------------------------------+--------+--------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                                                                                                                         ;
-+------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Clock Name ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                                       ; Targets                                                                                                                     ;
-+------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; clk        ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                              ; { clk }                                                                                                                     ;
-; clk90      ; Generated ; 20.000 ; 50.0 MHz  ; 5.000 ; 15.000 ; 50.00      ; 1         ; 1           ; 90.0  ;        ;           ;            ; false    ; clk    ; EU|clk_shifter|altpll_component|auto_generated|pll1|inclk[0] ; { EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] }                                                              ;
-; clk_x8     ; Generated ; 2.500  ; 400.0 MHz ; 0.000 ; 1.250  ; 50.00      ; 1         ; 8           ;       ;        ;           ;            ; false    ; clk    ; EU|pll_x8_inst|altpll_component|auto_generated|pll1|inclk[0] ; { EU|pll_x8_inst|altpll_component|auto_generated|pll1|clk[0] }                                                              ;
-; rwdsgen    ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                              ; { avs_hram_mainconv_EU:EU|DDR_to_SDR_converter:readdata_converter|DDR_to_SDR_converter_EU:EU|t_flipflop:rwdsgen|dummy_out } ;
-+------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+; Clock Name    ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                                       ; Targets                                                                                                                     ;
++---------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+; clk           ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                              ; { clk }                                                                                                                     ;
+; clk_x8        ; Generated ; 2.500  ; 400.0 MHz ; 0.000 ; 1.250  ; 50.00      ; 1         ; 8           ;       ;        ;           ;            ; false    ; clk    ; EU|pll_x8_inst|altpll_component|auto_generated|pll1|inclk[0] ; { EU|pll_x8_inst|altpll_component|auto_generated|pll1|clk[0] }                                                              ;
+; rwdsgen       ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                              ; { avs_hram_mainconv_EU:EU|DDR_to_SDR_converter:readdata_converter|DDR_to_SDR_converter_EU:EU|t_flipflop:rwdsgen|dummy_out } ;
+; shifted_clock ; Generated ; 20.000 ; 50.0 MHz  ; 5.000 ; 15.000 ; 50.00      ; 1         ; 1           ; 90.0  ;        ;           ;            ; false    ; clk    ; EU|clk_shifter|altpll_component|auto_generated|pll1|inclk[0] ; { EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] }                                                              ;
++---------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                         ;
-+------------+-----------------+------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                           ;
-+------------+-----------------+------------+------------------------------------------------+
-; 60.07 MHz  ; 60.07 MHz       ; clk        ;                                                ;
-; 249.94 MHz ; 249.94 MHz      ; rwdsgen    ;                                                ;
-; 472.37 MHz ; 402.09 MHz      ; clk_x8     ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+------------+------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                            ;
++------------+-----------------+---------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name    ; Note                                           ;
++------------+-----------------+---------------+------------------------------------------------+
+; 60.07 MHz  ; 60.07 MHz       ; clk           ;                                                ;
+; 78.83 MHz  ; 78.83 MHz       ; shifted_clock ;                                                ;
+; 249.94 MHz ; 249.94 MHz      ; rwdsgen       ;                                                ;
+; 472.37 MHz ; 402.09 MHz      ; clk_x8        ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+---------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -174,26 +179,28 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+-------------------------------------+
-; Slow 1200mV 85C Model Setup Summary ;
-+---------+-------+-------------------+
-; Clock   ; Slack ; End Point TNS     ;
-+---------+-------+-------------------+
-; clk_x8  ; 0.335 ; 0.000             ;
-; clk     ; 1.676 ; 0.000             ;
-; rwdsgen ; 7.632 ; 0.000             ;
-+---------+-------+-------------------+
++---------------------------------------+
+; Slow 1200mV 85C Model Setup Summary   ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; clk_x8        ; 0.335 ; 0.000         ;
+; clk           ; 1.676 ; 0.000         ;
+; shifted_clock ; 3.657 ; 0.000         ;
+; rwdsgen       ; 7.632 ; 0.000         ;
++---------------+-------+---------------+
 
 
-+------------------------------------+
-; Slow 1200mV 85C Model Hold Summary ;
-+---------+-------+------------------+
-; Clock   ; Slack ; End Point TNS    ;
-+---------+-------+------------------+
-; clk     ; 0.389 ; 0.000            ;
-; clk_x8  ; 0.454 ; 0.000            ;
-; rwdsgen ; 0.456 ; 0.000            ;
-+---------+-------+------------------+
++---------------------------------------+
+; Slow 1200mV 85C Model Hold Summary    ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; clk           ; 0.389 ; 0.000         ;
+; clk_x8        ; 0.454 ; 0.000         ;
+; rwdsgen       ; 0.456 ; 0.000         ;
+; shifted_clock ; 6.170 ; 0.000         ;
++---------------+-------+---------------+
 
 
 +----------------------------------------+
@@ -218,14 +225,14 @@ HTML report is unavailable in plain text report export.
 
 +---------------------------------------------------+
 ; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
-+---------+-------+---------------------------------+
-; Clock   ; Slack ; End Point TNS                   ;
-+---------+-------+---------------------------------+
-; clk_x8  ; 0.013 ; 0.000                           ;
-; clk     ; 9.633 ; 0.000                           ;
-; rwdsgen ; 9.694 ; 0.000                           ;
-; clk90   ; 9.979 ; 0.000                           ;
-+---------+-------+---------------------------------+
++---------------+-------+---------------------------+
+; Clock         ; Slack ; End Point TNS             ;
++---------------+-------+---------------------------+
+; clk_x8        ; 0.013 ; 0.000                     ;
+; clk           ; 9.633 ; 0.000                     ;
+; rwdsgen       ; 9.694 ; 0.000                     ;
+; shifted_clock ; 9.979 ; 0.000                     ;
++---------------+-------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -444,6 +451,16 @@ HTML report is unavailable in plain text report export.
 +-------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'shifted_clock'                                                                                                           ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; 3.657  ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 10.000       ; 0.000      ; 5.343      ;
+; 13.638 ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 20.000       ; 0.000      ; 5.362      ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Slow 1200mV 85C Model Setup: 'rwdsgen'                                                                                                                                                                                                                                                                                                                             ;
 +--------+------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -560,27 +577,27 @@ HTML report is unavailable in plain text report export.
 ; 0.389 ; avs_address[7]                                                                                                                           ; avs_hram_mainconv_EU:EU|reg:addr_reg|dout[7]                                                                                                            ; clk          ; clk         ; 0.000        ; 2.905      ; 2.506      ;
 ; 0.440 ; avs_hram_mainconv_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[0]            ; avs_hram_mainconv_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|altsyncram_ik31:altsyncram4|ram_block5a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.475      ; 1.169      ;
 ; 0.454 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:\g1:1:chain_tff|dummy_out                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:1:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:1:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff|dummy_out                                ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff|dummy_out                                               ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_CU:CU|present_state.reset_wait                                                                                         ; avs_hram_mainconv_CU:CU|present_state.reset_wait                                                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; avs_hram_mainconv_CU:CU|present_state.read_virtconf                                                                                      ; avs_hram_mainconv_CU:CU|present_state.read_virtconf                                                                                                     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception                                        ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception                                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|d_flipflop:rwds_tracker|dout                                                                                     ; avs_hram_mainconv_EU:EU|d_flipflop:rwds_tracker|dout                                                                                                    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:entry_tff|dummy_out                      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:7:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:7:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_CU:CU|present_state.reset_exit                                                                                         ; avs_hram_mainconv_CU:CU|present_state.reset_exit                                                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_CU:CU|present_state.read_wait_1                                                                                        ; avs_hram_mainconv_CU:CU|present_state.read_wait_1                                                                                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                                  ; avs_hram_mainconv_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                       ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                                      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_CU:CU|present_state.wait_dpd_out                                                                                       ; avs_hram_mainconv_CU:CU|present_state.wait_dpd_out                                                                                                      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:10:chain_tff|dummy_out                                ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:10:chain_tff|dummy_out                                               ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_CU:CU|present_state.reset_wait                                                                                         ; avs_hram_mainconv_CU:CU|present_state.reset_wait                                                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|d_flipflop:rwds_tracker|dout                                                                                     ; avs_hram_mainconv_EU:EU|d_flipflop:rwds_tracker|dout                                                                                                    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_CU:CU|present_state.reset_exit                                                                                         ; avs_hram_mainconv_CU:CU|present_state.reset_exit                                                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:entry_tff|dummy_out                      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; avs_hram_mainconv_CU:CU|present_state.writemem_wait                                                                                      ; avs_hram_mainconv_CU:CU|present_state.writemem_wait                                                                                                     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                                   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                                  ; avs_hram_mainconv_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:4:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:4:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                                      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.454 ; avs_hram_mainconv_CU:CU|present_state.dummycmd                                                                                           ; avs_hram_mainconv_CU:CU|present_state.dummycmd                                                                                                          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff|dummy_out                                ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff|dummy_out                                               ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_CU:CU|present_state.read_wait_1                                                                                        ; avs_hram_mainconv_CU:CU|present_state.read_wait_1                                                                                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; avs_hram_mainconv_CU:CU|present_state.read_wait_2                                                                                        ; avs_hram_mainconv_CU:CU|present_state.read_wait_2                                                                                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_CU:CU|present_state.wait_dpd_out                                                                                       ; avs_hram_mainconv_CU:CU|present_state.wait_dpd_out                                                                                                      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                                      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:1:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:1:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception                                        ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception                                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:10:chain_tff|dummy_out                                ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:10:chain_tff|dummy_out                                               ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:7:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:7:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:4:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:4:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; avs_hram_mainconv_CU:CU|present_state.dummycmd                                                                                           ; avs_hram_mainconv_CU:CU|present_state.dummycmd                                                                                                          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:5:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:5:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; avs_hram_mainconv_CU:CU|present_state.writeburst                                                                                         ; avs_hram_mainconv_CU:CU|present_state.writeburst                                                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
 ; 0.454 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:8:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:8:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
@@ -833,47 +850,57 @@ HTML report is unavailable in plain text report export.
 ; 2.777 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[10]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.070      ;
 ; 2.777 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[9]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.070      ;
 ; 2.777 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[8]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.070      ;
-; 2.795 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[0]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.089      ;
-; 2.795 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[11]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.089      ;
 ; 2.795 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[2]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.089      ;
+; 2.795 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[11]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.089      ;
+; 2.795 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[0]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.089      ;
 ; 2.795 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[1]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.089      ;
 ; 2.795 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[3]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.089      ;
-; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[12]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
+; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[8]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
 ; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[0]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
+; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[7]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
+; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[12]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
 ; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[14]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
 ; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[9]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
 ; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[3]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
-; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[8]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
 ; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[1]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
-; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[7]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
 ; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[2]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
 ; 2.825 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[10]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.118      ;
 ; 2.840 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.133      ;
-; 2.851 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[1]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.144      ;
 ; 2.851 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[2]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.144      ;
+; 2.851 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[1]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.144      ;
 ; 2.851 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[0]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.144      ;
 ; 2.851 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.144      ;
-; 2.851 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.144      ;
 ; 2.851 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[3]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.144      ;
+; 2.851 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.144      ;
 ; 2.866 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[10]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.080      ; 3.158      ;
-; 2.866 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[5]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.080      ; 3.158      ;
 ; 2.866 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[4]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.080      ; 3.158      ;
+; 2.866 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[5]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.080      ; 3.158      ;
 ; 2.866 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[13]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.080      ; 3.158      ;
-; 2.866 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[7]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.080      ; 3.158      ;
 ; 2.866 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[11]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.080      ; 3.158      ;
-; 2.879 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[12]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.172      ;
+; 2.866 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[7]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.080      ; 3.158      ;
 ; 2.879 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[9]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.172      ;
 ; 2.879 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[8]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.172      ;
+; 2.879 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[12]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.172      ;
 ; 2.879 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[14]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.081      ; 3.172      ;
-; 2.891 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[11]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.079      ; 3.182      ;
 ; 2.891 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[5]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.079      ; 3.182      ;
 ; 2.891 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.079      ; 3.182      ;
-; 2.891 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[4]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.079      ; 3.182      ;
 ; 2.891 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[13]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.079      ; 3.182      ;
 ; 2.891 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.079      ; 3.182      ;
+; 2.891 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[4]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.079      ; 3.182      ;
+; 2.891 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[11]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.079      ; 3.182      ;
+; 2.940 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.234      ;
 ; 2.940 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.234      ;
-; 2.940 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[7]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.082      ; 3.234      ;
 +-------+------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'shifted_clock'                                                                                                            ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; 6.170  ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 0.000        ; 0.000      ; 5.170      ;
+; 16.149 ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; -10.000      ; 0.000      ; 5.149      ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1014,38 +1041,41 @@ HTML report is unavailable in plain text report export.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                          ;
-+------------+-----------------+------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                           ;
-+------------+-----------------+------------+------------------------------------------------+
-; 65.08 MHz  ; 65.08 MHz       ; clk        ;                                                ;
-; 266.6 MHz  ; 266.6 MHz       ; rwdsgen    ;                                                ;
-; 498.75 MHz ; 402.09 MHz      ; clk_x8     ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+------------+------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                             ;
++------------+-----------------+---------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name    ; Note                                           ;
++------------+-----------------+---------------+------------------------------------------------+
+; 65.08 MHz  ; 65.08 MHz       ; clk           ;                                                ;
+; 87.41 MHz  ; 87.41 MHz       ; shifted_clock ;                                                ;
+; 266.6 MHz  ; 266.6 MHz       ; rwdsgen       ;                                                ;
+; 498.75 MHz ; 402.09 MHz      ; clk_x8        ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+---------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+------------------------------------+
-; Slow 1200mV 0C Model Setup Summary ;
-+---------+-------+------------------+
-; Clock   ; Slack ; End Point TNS    ;
-+---------+-------+------------------+
-; clk_x8  ; 0.440 ; 0.000            ;
-; clk     ; 2.317 ; 0.000            ;
-; rwdsgen ; 7.630 ; 0.000            ;
-+---------+-------+------------------+
++---------------------------------------+
+; Slow 1200mV 0C Model Setup Summary    ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; clk_x8        ; 0.440 ; 0.000         ;
+; clk           ; 2.317 ; 0.000         ;
+; shifted_clock ; 4.280 ; 0.000         ;
+; rwdsgen       ; 7.630 ; 0.000         ;
++---------------+-------+---------------+
 
 
-+-----------------------------------+
-; Slow 1200mV 0C Model Hold Summary ;
-+---------+-------+-----------------+
-; Clock   ; Slack ; End Point TNS   ;
-+---------+-------+-----------------+
-; clk     ; 0.384 ; 0.000           ;
-; clk_x8  ; 0.401 ; 0.000           ;
-; rwdsgen ; 0.405 ; 0.000           ;
-+---------+-------+-----------------+
++---------------------------------------+
+; Slow 1200mV 0C Model Hold Summary     ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; clk           ; 0.384 ; 0.000         ;
+; clk_x8        ; 0.401 ; 0.000         ;
+; rwdsgen       ; 0.405 ; 0.000         ;
+; shifted_clock ; 5.539 ; 0.000         ;
++---------------+-------+---------------+
 
 
 +---------------------------------------+
@@ -1070,14 +1100,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 
 +--------------------------------------------------+
 ; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
-+---------+-------+--------------------------------+
-; Clock   ; Slack ; End Point TNS                  ;
-+---------+-------+--------------------------------+
-; clk_x8  ; 0.013 ; 0.000                          ;
-; rwdsgen ; 9.575 ; 0.000                          ;
-; clk     ; 9.645 ; 0.000                          ;
-; clk90   ; 9.989 ; 0.000                          ;
-+---------+-------+--------------------------------+
++---------------+-------+--------------------------+
+; Clock         ; Slack ; End Point TNS            ;
++---------------+-------+--------------------------+
+; clk_x8        ; 0.013 ; 0.000                    ;
+; rwdsgen       ; 9.575 ; 0.000                    ;
+; clk           ; 9.645 ; 0.000                    ;
+; shifted_clock ; 9.989 ; 0.000                    ;
++---------------+-------+--------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1296,6 +1326,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'shifted_clock'                                                                                                            ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; 4.280  ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 10.000       ; 0.000      ; 4.720      ;
+; 14.270 ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 20.000       ; 0.000      ; 4.730      ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Slow 1200mV 0C Model Setup: 'rwdsgen'                                                                                                                                                                                                                                                                                                                              ;
 +--------+------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -1306,19 +1346,19 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[15]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
 ; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[14]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
 ; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[3]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
-; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[2]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
 ; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[11]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
+; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[2]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
 ; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[1]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
 ; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[7]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
 ; 7.630  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[0]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 3.128      ;
 ; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[15]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
 ; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[14]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
-; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[11]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
+; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[2]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
 ; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[7]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
 ; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[1]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
 ; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[0]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
 ; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[3]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
-; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[2]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
+; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[11]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
 ; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[6]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
 ; 7.797  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[5]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.961      ;
 ; 7.919  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reset                                            ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[4]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.765      ; 2.838      ;
@@ -1333,16 +1373,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 8.086  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[8]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.765      ; 2.671      ;
 ; 8.086  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[4]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.765      ; 2.671      ;
 ; 8.086  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[13]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.765      ; 2.671      ;
-; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[0]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
-; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[14]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
+; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[5]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
 ; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[2]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
+; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[14]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
+; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[0]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
 ; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[7]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
 ; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[11]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
-; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[1]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
 ; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[15]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
-; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[5]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
-; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[3]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
 ; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[6]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
+; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[3]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
+; 8.136  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[1]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.766      ; 2.622      ;
 ; 8.425  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[8]                                              ; clk          ; rwdsgen     ; 10.000       ; 0.765      ; 2.332      ;
 ; 8.425  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[12]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.765      ; 2.332      ;
 ; 8.425  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[13]                                             ; clk          ; rwdsgen     ; 10.000       ; 0.765      ; 2.332      ;
@@ -1375,8 +1415,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 9.726  ; avs_hram_mainconv_EU:EU|reg:burstcnt_reg|dout[9]                                                                                         ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:burstlen|dout[9]                                           ; clk          ; rwdsgen     ; 10.000       ; 0.764      ; 1.030      ;
 ; 9.728  ; avs_hram_mainconv_EU:EU|reg:burstcnt_reg|dout[1]                                                                                         ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:burstlen|dout[1]                                           ; clk          ; rwdsgen     ; 10.000       ; 0.764      ; 1.028      ;
 ; 9.730  ; avs_hram_mainconv_EU:EU|reg:burstcnt_reg|dout[6]                                                                                         ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:burstlen|dout[6]                                           ; clk          ; rwdsgen     ; 10.000       ; 0.761      ; 1.023      ;
-; 9.733  ; avs_hram_mainconv_EU:EU|reg:burstcnt_reg|dout[8]                                                                                         ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:burstlen|dout[8]                                           ; clk          ; rwdsgen     ; 10.000       ; 0.764      ; 1.023      ;
 ; 9.733  ; avs_hram_mainconv_EU:EU|reg:burstcnt_reg|dout[0]                                                                                         ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:burstlen|dout[0]                                           ; clk          ; rwdsgen     ; 10.000       ; 0.764      ; 1.023      ;
+; 9.733  ; avs_hram_mainconv_EU:EU|reg:burstcnt_reg|dout[8]                                                                                         ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:burstlen|dout[8]                                           ; clk          ; rwdsgen     ; 10.000       ; 0.764      ; 1.023      ;
 ; 9.874  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; clk          ; rwdsgen     ; 10.000       ; 0.763      ; 0.881      ;
 ; 9.876  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; clk          ; rwdsgen     ; 10.000       ; 0.763      ; 0.879      ;
 ; 9.878  ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|sr_flipflop:synchronizer|dout                                  ; clk          ; rwdsgen     ; 10.000       ; 0.763      ; 0.877      ;
@@ -1392,15 +1432,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 16.509 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[9]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.067     ; 3.426      ;
 ; 16.509 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[8]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.067     ; 3.426      ;
 ; 16.509 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[7]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.067     ; 3.426      ;
-; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
 ; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[3]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
-; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
+; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
+; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[0]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
 ; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[14]                                             ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
 ; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[5]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
+; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
+; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[7]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
 ; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[11]                                             ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
 ; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[2]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
-; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[1]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
-; 16.525 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[7]                                              ; rwdsgen      ; rwdsgen     ; 20.000       ; -0.066     ; 3.411      ;
 +--------+------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -1415,20 +1455,20 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.402 ; avs_hram_mainconv_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[0]            ; avs_hram_mainconv_EU:EU|reg:cntpipe1|altshift_taps:dout_rtl_0|shift_taps_06m:auto_generated|cntr_vof:cntr1|counter_reg_bit[0]                           ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:data_counter|t_flipflop:\g1:1:chain_tff|dummy_out                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:4:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:4:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_hram_mainconv_EU:EU|d_flipflop:rwds_tracker|dout                                                                                     ; avs_hram_mainconv_EU:EU|d_flipflop:rwds_tracker|dout                                                                                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                       ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                                      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_hram_mainconv_CU:CU|present_state.read_wait_2                                                                                        ; avs_hram_mainconv_CU:CU|present_state.read_wait_2                                                                                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_hram_mainconv_CU:CU|present_state.read_wait_1                                                                                        ; avs_hram_mainconv_CU:CU|present_state.read_wait_1                                                                                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                                  ; avs_hram_mainconv_EU:EU|d_flipflop:dpd_req_tracker|dout                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:10:chain_tff|dummy_out                                ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:10:chain_tff|dummy_out                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_CU:CU|present_state.reset_exit                                                                                         ; avs_hram_mainconv_CU:CU|present_state.reset_exit                                                                                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_hram_mainconv_EU:EU|d_flipflop:rwds_tracker|dout                                                                                     ; avs_hram_mainconv_EU:EU|d_flipflop:rwds_tracker|dout                                                                                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                    ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_disabled                                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_hram_mainconv_CU:CU|present_state.read_wait_2                                                                                        ; avs_hram_mainconv_CU:CU|present_state.read_wait_2                                                                                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_hram_mainconv_CU:CU|present_state.read_wait_1                                                                                        ; avs_hram_mainconv_CU:CU|present_state.read_wait_1                                                                                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:5:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:5:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_hram_mainconv_CU:CU|present_state.dummycmd                                                                                           ; avs_hram_mainconv_CU:CU|present_state.dummycmd                                                                                                          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_CU:CU|present_state.wait_dpd_out                                                                                       ; avs_hram_mainconv_CU:CU|present_state.wait_dpd_out                                                                                                      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff|dummy_out                                ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff|dummy_out                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:7:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:7:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                       ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:entry_tff|dummy_out                                                      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff|dummy_out                                ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:11:chain_tff|dummy_out                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:5:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:5:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:2:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; avs_hram_mainconv_CU:CU|present_state.dummycmd                                                                                           ; avs_hram_mainconv_CU:CU|present_state.dummycmd                                                                                                          ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception                                        ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.reception                                                       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU|present_state.idle_clear                                                      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
 ; 0.402 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:1:chain_tff|dummy_out                                 ; avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt|t_flipflop:\g1:1:chain_tff|dummy_out                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
@@ -1712,20 +1752,30 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 2.588 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[2]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.855      ;
 ; 2.588 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[0]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.855      ;
 ; 2.588 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[3]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.855      ;
-; 2.592 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[8]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.859      ;
+; 2.592 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[9]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.859      ;
 ; 2.592 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[14]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.859      ;
 ; 2.592 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[12]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.859      ;
-; 2.592 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[9]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.859      ;
-; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
+; 2.592 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din11|dout[8]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.859      ;
+; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
+; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[5]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
 ; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[13]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
 ; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[4]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
-; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[5]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
 ; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[11]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
-; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
+; 2.604 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din10|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.069      ; 2.868      ;
 ; 2.625 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:\g1:1:chain_tff|dummy_out ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din01|dout[15]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.071      ; 2.891      ;
 ; 2.700 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[6]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.967      ;
-; 2.700 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[11]                                             ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.967      ;
+; 2.700 ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_Nbit:code_counter|t_flipflop:entry_tff|dummy_out       ; avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|reg:din00|dout[2]                                              ; rwdsgen      ; rwdsgen     ; 0.000        ; 0.072      ; 2.967      ;
 +-------+------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'shifted_clock'                                                                                                             ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; 5.539  ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 0.000        ; 0.000      ; 4.539      ;
+; 15.528 ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; -10.000      ; 0.000      ; 4.528      ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1866,26 +1916,28 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+------------------------------------+
-; Fast 1200mV 0C Model Setup Summary ;
-+---------+-------+------------------+
-; Clock   ; Slack ; End Point TNS    ;
-+---------+-------+------------------+
-; clk_x8  ; 0.805 ; 0.000            ;
-; clk     ; 4.916 ; 0.000            ;
-; rwdsgen ; 9.040 ; 0.000            ;
-+---------+-------+------------------+
++---------------------------------------+
+; Fast 1200mV 0C Model Setup Summary    ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; clk_x8        ; 0.805 ; 0.000         ;
+; clk           ; 4.916 ; 0.000         ;
+; shifted_clock ; 6.321 ; 0.000         ;
+; rwdsgen       ; 9.040 ; 0.000         ;
++---------------+-------+---------------+
 
 
-+-----------------------------------+
-; Fast 1200mV 0C Model Hold Summary ;
-+---------+-------+-----------------+
-; Clock   ; Slack ; End Point TNS   ;
-+---------+-------+-----------------+
-; clk     ; 0.154 ; 0.000           ;
-; rwdsgen ; 0.185 ; 0.000           ;
-; clk_x8  ; 0.187 ; 0.000           ;
-+---------+-------+-----------------+
++---------------------------------------+
+; Fast 1200mV 0C Model Hold Summary     ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; clk           ; 0.154 ; 0.000         ;
+; rwdsgen       ; 0.185 ; 0.000         ;
+; clk_x8        ; 0.187 ; 0.000         ;
+; shifted_clock ; 3.587 ; 0.000         ;
++---------------+-------+---------------+
 
 
 +---------------------------------------+
@@ -1910,14 +1962,14 @@ No synchronizer chains to report.
 
 +--------------------------------------------------+
 ; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
-+---------+-------+--------------------------------+
-; Clock   ; Slack ; End Point TNS                  ;
-+---------+-------+--------------------------------+
-; clk_x8  ; 0.500 ; 0.000                          ;
-; clk     ; 9.349 ; 0.000                          ;
-; rwdsgen ; 9.648 ; 0.000                          ;
-; clk90   ; 9.995 ; 0.000                          ;
-+---------+-------+--------------------------------+
++---------------+-------+--------------------------+
+; Clock         ; Slack ; End Point TNS            ;
++---------------+-------+--------------------------+
+; clk_x8        ; 0.500 ; 0.000                    ;
+; clk           ; 9.349 ; 0.000                    ;
+; rwdsgen       ; 9.648 ; 0.000                    ;
+; shifted_clock ; 9.995 ; 0.000                    ;
++---------------+-------+--------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2134,6 +2186,16 @@ No synchronizer chains to report.
 ; 13.671 ; avs_hram_mainconv_CU:CU|present_state.CA_2                                                              ; hram_DQ[3]                                                                                             ; clk          ; clk         ; 20.000       ; -1.341     ; 3.968      ;
 ; 13.681 ; avs_hram_mainconv_CU:CU|present_state.writeburst                                                        ; hram_DQ[3]                                                                                             ; clk          ; clk         ; 20.000       ; -1.341     ; 3.958      ;
 +--------+---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'shifted_clock'                                                                                                            ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; 6.321  ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 10.000       ; 0.000      ; 2.679      ;
+; 16.326 ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 20.000       ; 0.000      ; 2.674      ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2568,6 +2630,16 @@ No synchronizer chains to report.
 +-------+----------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'shifted_clock'                                                                                                             ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+; 3.587  ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; 0.000        ; 0.000      ; 2.587      ;
+; 13.591 ; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0] ; clk90   ; shifted_clock ; shifted_clock ; -10.000      ; 0.000      ; 2.591      ;
++--------+------------------------------------------------------------+---------+---------------+---------------+--------------+------------+------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Fast 1200mV 0C Model Recovery: 'rwdsgen'                                                                                                                                                                                           ;
 +-------+-----------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -2713,14 +2785,14 @@ No synchronizer chains to report.
 +------------------+-------+-------+----------+---------+---------------------+
 ; Worst-case Slack ; 0.335 ; 0.154 ; 8.108    ; 0.940   ; 0.013               ;
 ;  clk             ; 1.676 ; 0.154 ; 16.372   ; 0.940   ; 9.349               ;
-;  clk90           ; N/A   ; N/A   ; N/A      ; N/A     ; 9.979               ;
 ;  clk_x8          ; 0.335 ; 0.187 ; N/A      ; N/A     ; 0.013               ;
 ;  rwdsgen         ; 7.630 ; 0.185 ; 8.108    ; 9.887   ; 9.575               ;
+;  shifted_clock   ; 3.657 ; 3.587 ; N/A      ; N/A     ; 9.979               ;
 ; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  clk             ; 0.000 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-;  clk90           ; N/A   ; N/A   ; N/A      ; N/A     ; 0.000               ;
 ;  clk_x8          ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 ;  rwdsgen         ; 0.000 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  shifted_clock   ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 +------------------+-------+-------+----------+---------+---------------------+
 
 
@@ -2829,37 +2901,39 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Setup Transfers                                                         ;
-+------------+----------+------------+------------+------------+----------+
-; From Clock ; To Clock ; RR Paths   ; FR Paths   ; RF Paths   ; FF Paths ;
-+------------+----------+------------+------------+------------+----------+
-; clk        ; clk      ; 3209       ; 8          ; 0          ; 0        ;
-; rwdsgen    ; clk      ; 0          ; 88         ; 0          ; 0        ;
-; clk        ; clk_x8   ; 12         ; 0          ; 0          ; 0        ;
-; clk_x8     ; clk_x8   ; 303        ; 4          ; 8          ; 7        ;
-; rwdsgen    ; clk_x8   ; false path ; false path ; 0          ; 0        ;
-; clk        ; rwdsgen  ; 0          ; 0          ; 79         ; 0        ;
-; clk_x8     ; rwdsgen  ; false path ; 0          ; false path ; 0        ;
-; rwdsgen    ; rwdsgen  ; 0          ; 0          ; 0          ; 132      ;
-+------------+----------+------------+------------+------------+----------+
++---------------------------------------------------------------------------------+
+; Setup Transfers                                                                 ;
++---------------+---------------+------------+------------+------------+----------+
+; From Clock    ; To Clock      ; RR Paths   ; FR Paths   ; RF Paths   ; FF Paths ;
++---------------+---------------+------------+------------+------------+----------+
+; clk           ; clk           ; 3209       ; 8          ; 0          ; 0        ;
+; rwdsgen       ; clk           ; 0          ; 88         ; 0          ; 0        ;
+; clk           ; clk_x8        ; 12         ; 0          ; 0          ; 0        ;
+; clk_x8        ; clk_x8        ; 303        ; 4          ; 8          ; 7        ;
+; rwdsgen       ; clk_x8        ; false path ; false path ; 0          ; 0        ;
+; clk           ; rwdsgen       ; 0          ; 0          ; 79         ; 0        ;
+; clk_x8        ; rwdsgen       ; false path ; 0          ; false path ; 0        ;
+; rwdsgen       ; rwdsgen       ; 0          ; 0          ; 0          ; 132      ;
+; shifted_clock ; shifted_clock ; 1          ; 1          ; 0          ; 0        ;
++---------------+---------------+------------+------------+------------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------+
-; Hold Transfers                                                          ;
-+------------+----------+------------+------------+------------+----------+
-; From Clock ; To Clock ; RR Paths   ; FR Paths   ; RF Paths   ; FF Paths ;
-+------------+----------+------------+------------+------------+----------+
-; clk        ; clk      ; 3209       ; 8          ; 0          ; 0        ;
-; rwdsgen    ; clk      ; 0          ; 88         ; 0          ; 0        ;
-; clk        ; clk_x8   ; 12         ; 0          ; 0          ; 0        ;
-; clk_x8     ; clk_x8   ; 303        ; 4          ; 8          ; 7        ;
-; rwdsgen    ; clk_x8   ; false path ; false path ; 0          ; 0        ;
-; clk        ; rwdsgen  ; 0          ; 0          ; 79         ; 0        ;
-; clk_x8     ; rwdsgen  ; false path ; 0          ; false path ; 0        ;
-; rwdsgen    ; rwdsgen  ; 0          ; 0          ; 0          ; 132      ;
-+------------+----------+------------+------------+------------+----------+
++---------------------------------------------------------------------------------+
+; Hold Transfers                                                                  ;
++---------------+---------------+------------+------------+------------+----------+
+; From Clock    ; To Clock      ; RR Paths   ; FR Paths   ; RF Paths   ; FF Paths ;
++---------------+---------------+------------+------------+------------+----------+
+; clk           ; clk           ; 3209       ; 8          ; 0          ; 0        ;
+; rwdsgen       ; clk           ; 0          ; 88         ; 0          ; 0        ;
+; clk           ; clk_x8        ; 12         ; 0          ; 0          ; 0        ;
+; clk_x8        ; clk_x8        ; 303        ; 4          ; 8          ; 7        ;
+; rwdsgen       ; clk_x8        ; false path ; false path ; 0          ; 0        ;
+; clk           ; rwdsgen       ; 0          ; 0          ; 79         ; 0        ;
+; clk_x8        ; rwdsgen       ; false path ; 0          ; false path ; 0        ;
+; rwdsgen       ; rwdsgen       ; 0          ; 0          ; 0          ; 132      ;
+; shifted_clock ; shifted_clock ; 1          ; 1          ; 0          ; 0        ;
++---------------+---------------+------------+------------+------------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -2906,21 +2980,21 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 9     ; 9    ;
 ; Unconstrained Input Port Paths  ; 11    ; 11   ;
-; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
 +---------------------------------+-------+------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                                                                        ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+-----------+-------------+
-; Target                                                                                                                  ; Clock   ; Type      ; Status      ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+-----------+-------------+
-; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]                                                              ; clk90   ; Generated ; Constrained ;
-; EU|pll_x8_inst|altpll_component|auto_generated|pll1|clk[0]                                                              ; clk_x8  ; Generated ; Constrained ;
-; avs_hram_mainconv_EU:EU|DDR_to_SDR_converter:readdata_converter|DDR_to_SDR_converter_EU:EU|t_flipflop:rwdsgen|dummy_out ; rwdsgen ; Base      ; Constrained ;
-; clk                                                                                                                     ; clk     ; Base      ; Constrained ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+-----------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                                              ;
++-------------------------------------------------------------------------------------------------------------------------+---------------+-----------+-------------+
+; Target                                                                                                                  ; Clock         ; Type      ; Status      ;
++-------------------------------------------------------------------------------------------------------------------------+---------------+-----------+-------------+
+; EU|clk_shifter|altpll_component|auto_generated|pll1|clk[0]                                                              ; shifted_clock ; Generated ; Constrained ;
+; EU|pll_x8_inst|altpll_component|auto_generated|pll1|clk[0]                                                              ; clk_x8        ; Generated ; Constrained ;
+; avs_hram_mainconv_EU:EU|DDR_to_SDR_converter:readdata_converter|DDR_to_SDR_converter_EU:EU|t_flipflop:rwdsgen|dummy_out ; rwdsgen       ; Base      ; Constrained ;
+; clk                                                                                                                     ; clk           ; Base      ; Constrained ;
++-------------------------------------------------------------------------------------------------------------------------+---------------+-----------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -2940,15 +3014,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; clk90       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------+
 ; Unconstrained Input Ports                                                                         ;
 +------------+--------------------------------------------------------------------------------------+
@@ -2964,15 +3029,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; hram_DQ[7] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hram_RWDS  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; clk90       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -2981,7 +3037,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Jan  8 12:48:57 2024
+    Info: Processing started: Wed Jan 10 11:03:16 2024
 Info: Command: quartus_sta avs_hram_converter -c avs_hram_converter
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -2991,6 +3047,8 @@ Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: '../sdc/avs_hram_converter.sdc'
 Warning (332174): Ignored filter at avs_hram_converter.sdc(30): clk, could not be matched with a clock File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/sdc/avs_hram_converter.sdc Line: 30
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332070): Port "clk90" relative to the rising edge of clock "shifted_clock" does not specify a min-fall output delay
+Warning (332070): Port "clk90" relative to the rising edge of clock "shifted_clock" does not specify a min-rise output delay
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
@@ -2999,6 +3057,7 @@ Info (332146): Worst-case setup slack is 0.335
     Info (332119): ========= =================== =====================
     Info (332119):     0.335               0.000 clk_x8 
     Info (332119):     1.676               0.000 clk 
+    Info (332119):     3.657               0.000 shifted_clock 
     Info (332119):     7.632               0.000 rwdsgen 
 Info (332146): Worst-case hold slack is 0.389
     Info (332119):     Slack       End Point TNS Clock 
@@ -3006,6 +3065,7 @@ Info (332146): Worst-case hold slack is 0.389
     Info (332119):     0.389               0.000 clk 
     Info (332119):     0.454               0.000 clk_x8 
     Info (332119):     0.456               0.000 rwdsgen 
+    Info (332119):     6.170               0.000 shifted_clock 
 Info (332146): Worst-case recovery slack is 8.317
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -3022,7 +3082,7 @@ Info (332146): Worst-case minimum pulse width slack is 0.013
     Info (332119):     0.013               0.000 clk_x8 
     Info (332119):     9.633               0.000 clk 
     Info (332119):     9.694               0.000 rwdsgen 
-    Info (332119):     9.979               0.000 clk90 
+    Info (332119):     9.979               0.000 shifted_clock 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -3032,6 +3092,7 @@ Info (332146): Worst-case setup slack is 0.440
     Info (332119): ========= =================== =====================
     Info (332119):     0.440               0.000 clk_x8 
     Info (332119):     2.317               0.000 clk 
+    Info (332119):     4.280               0.000 shifted_clock 
     Info (332119):     7.630               0.000 rwdsgen 
 Info (332146): Worst-case hold slack is 0.384
     Info (332119):     Slack       End Point TNS Clock 
@@ -3039,6 +3100,7 @@ Info (332146): Worst-case hold slack is 0.384
     Info (332119):     0.384               0.000 clk 
     Info (332119):     0.401               0.000 clk_x8 
     Info (332119):     0.405               0.000 rwdsgen 
+    Info (332119):     5.539               0.000 shifted_clock 
 Info (332146): Worst-case recovery slack is 8.108
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -3055,7 +3117,7 @@ Info (332146): Worst-case minimum pulse width slack is 0.013
     Info (332119):     0.013               0.000 clk_x8 
     Info (332119):     9.575               0.000 rwdsgen 
     Info (332119):     9.645               0.000 clk 
-    Info (332119):     9.989               0.000 clk90 
+    Info (332119):     9.989               0.000 shifted_clock 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332146): Worst-case setup slack is 0.805
@@ -3063,6 +3125,7 @@ Info (332146): Worst-case setup slack is 0.805
     Info (332119): ========= =================== =====================
     Info (332119):     0.805               0.000 clk_x8 
     Info (332119):     4.916               0.000 clk 
+    Info (332119):     6.321               0.000 shifted_clock 
     Info (332119):     9.040               0.000 rwdsgen 
 Info (332146): Worst-case hold slack is 0.154
     Info (332119):     Slack       End Point TNS Clock 
@@ -3070,6 +3133,7 @@ Info (332146): Worst-case hold slack is 0.154
     Info (332119):     0.154               0.000 clk 
     Info (332119):     0.185               0.000 rwdsgen 
     Info (332119):     0.187               0.000 clk_x8 
+    Info (332119):     3.587               0.000 shifted_clock 
 Info (332146): Worst-case recovery slack is 8.163
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -3086,12 +3150,12 @@ Info (332146): Worst-case minimum pulse width slack is 0.500
     Info (332119):     0.500               0.000 clk_x8 
     Info (332119):     9.349               0.000 clk 
     Info (332119):     9.648               0.000 rwdsgen 
-    Info (332119):     9.995               0.000 clk90 
+    Info (332119):     9.995               0.000 shifted_clock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 458 megabytes
-    Info: Processing ended: Mon Jan  8 12:48:59 2024
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 446 megabytes
+    Info: Processing ended: Wed Jan 10 11:03:18 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

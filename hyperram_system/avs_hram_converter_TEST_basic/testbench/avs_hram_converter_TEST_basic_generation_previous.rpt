@@ -3,16 +3,16 @@ Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_convert
 Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic.qsys --testbench=SIMPLE --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system --family="Cyclone 10 LP" --part=10CL006YE144A7G
 Progress: Loading hyperram_system/avs_hram_converter_TEST_basic.qsys
 Progress: Reading input file
-Progress: Adding avs_hram_converter [avs_hram_converter 1.0]
-Progress: Parameterizing module avs_hram_converter
+Progress: Adding avs_hram_converter_inst [avs_hram_converter 1.0]
+Progress: Parameterizing module avs_hram_converter_inst
 Progress: Adding clk_50MHz [clock_source 22.1]
 Progress: Parameterizing module clk_50MHz
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-: avs_hram_converter_TEST_basic.avs_hram_converter.clkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
-: avs_hram_converter_TEST_basic.avs_hram_converter.clkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+: avs_hram_converter_TEST_basic.avs_hram_converter_inst.clkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: avs_hram_converter_TEST_basic.avs_hram_converter_inst.clkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
 Info: qsys-generate succeeded.
 Info: Loading IP catalog for testbench.
 Progress: 
@@ -25,19 +25,20 @@ Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
 Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ip/**/* matched 0 files in 0.00 seconds
+Progress: Loading testbench/avs_hram_converter_TEST_basic_tb.qsys
 Info: Reading index /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic.ipx
 Progress: Loading hyperram_system/avs_hram_converter_TEST_basic.qsys
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/* matched 7 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/* matched 8 files in 0.00 seconds
 Progress: Loading avs_hram_converter/clkctrl.qsys
 Progress: Loading avs_hram_converter/avs_hram_mainconv_hw.tcl
 Progress: Loading avs_hram_converter/clkctrl_hw.tcl
 Progress: Loading avs_hram_converter/avs_hram_converter_hw.tcl
 Progress: Loading avs_hram_converter/avs_hram_converter.qsys
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/**/* matched 19 files in 0.06 seconds
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/*/* matched 23 files in 0.00 seconds
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic.ipx described 0 plugins, 3 paths, in 0.06 seconds
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/* matched 4 files in 0.06 seconds
-Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/*/* matched 0 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/**/* matched 21 files in 0.08 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/*/* matched 25 files in 0.00 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic.ipx described 0 plugins, 3 paths, in 0.08 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/* matched 12 files in 0.09 seconds
+Info: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/*/* matched 8 files in 0.00 seconds
 Info: Reading index /home/andrea/.altera.quartus/ip/22.1/ip_search_path/user_components.ipx
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/**/* matched 1958 files in 0.07 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/storage/**/* matched 26 files in 0.00 seconds
@@ -47,16 +48,16 @@ Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
 Info: Reading index /home/andrea/intelFPGA_lite/22.1std/ip/altera/altera_components.ipx
-Info: /home/andrea/intelFPGA_lite/22.1std/ip/altera/altera_components.ipx described 1968 plugins, 0 paths, in 0.27 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/ip/**/* matched 108 files in 0.28 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/ip/altera/altera_components.ipx described 1968 plugins, 0 paths, in 0.23 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/ip/**/* matched 108 files in 0.23 seconds
 Info: /home/andrea/intelFPGA_lite/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/builtin.ipx
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/**/* matched 9 files in 0.01 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/common/librarian/factories/**/* matched 0 files in 0.00 seconds
 Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.42 seconds
-Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.42 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.41 seconds
+Info: /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.41 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -69,17 +70,17 @@ Info: TB_Gen: System design is: avs_hram_converter_TEST_basic
 Info: get_interfaces 
 Info: get_connections 
 Info: get_interface_property avalon_slave EXPORT_OF
-Info: get_instance_property avs_hram_converter CLASS_NAME
-Info: get_instance_assignment avs_hram_converter testbench.partner.map.avalon_slave
+Info: get_instance_property avs_hram_converter_inst CLASS_NAME
+Info: get_instance_assignment avs_hram_converter_inst testbench.partner.map.avalon_slave
 Info: get_interface_property clk EXPORT_OF
 Info: get_instance_property clk_50MHz CLASS_NAME
 Info: get_instance_assignment clk_50MHz testbench.partner.map.clk_in
 Info: get_interface_property hyperbus_clock EXPORT_OF
-Info: get_instance_property avs_hram_converter CLASS_NAME
-Info: get_instance_assignment avs_hram_converter testbench.partner.map.hyperbus_clock
+Info: get_instance_property avs_hram_converter_inst CLASS_NAME
+Info: get_instance_assignment avs_hram_converter_inst testbench.partner.map.hyperbus_clock
 Info: get_interface_property hyperbus_master EXPORT_OF
-Info: get_instance_property avs_hram_converter CLASS_NAME
-Info: get_instance_assignment avs_hram_converter testbench.partner.map.hyperbus_master
+Info: get_instance_property avs_hram_converter_inst CLASS_NAME
+Info: get_instance_assignment avs_hram_converter_inst testbench.partner.map.hyperbus_master
 Info: get_interface_property reset EXPORT_OF
 Info: get_instance_property clk_50MHz CLASS_NAME
 Info: get_instance_assignment clk_50MHz testbench.partner.map.clk_in_reset
@@ -155,8 +156,8 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-: avs_hram_converter_TEST_basic_tb.avs_hram_converter_TEST_basic_inst.avs_hram_converter.clkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
-: avs_hram_converter_TEST_basic_tb.avs_hram_converter_TEST_basic_inst.avs_hram_converter.clkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+: avs_hram_converter_TEST_basic_tb.avs_hram_converter_TEST_basic_inst.avs_hram_converter_inst.clkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: avs_hram_converter_TEST_basic_tb.avs_hram_converter_TEST_basic_inst.avs_hram_converter_inst.clkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
 Info: avs_hram_converter_TEST_basic_tb.avs_hram_converter_TEST_basic_inst_clk_bfm: Elaborate: altera_clock_source
 Info: avs_hram_converter_TEST_basic_tb.avs_hram_converter_TEST_basic_inst_clk_bfm:            $Revision: #1 $
 Info: avs_hram_converter_TEST_basic_tb.avs_hram_converter_TEST_basic_inst_clk_bfm:            $Date: 2021/10/27 $
@@ -171,29 +172,29 @@ Info: avs_hram_converter_TEST_basic_tb: Generating avs_hram_converter_TEST_basic
 Info: avs_hram_converter_TEST_basic_inst: "avs_hram_converter_TEST_basic_tb" instantiated avs_hram_converter_TEST_basic "avs_hram_converter_TEST_basic_inst"
 Info: avs_hram_converter_TEST_basic_inst_clk_bfm: "avs_hram_converter_TEST_basic_tb" instantiated altera_avalon_clock_source "avs_hram_converter_TEST_basic_inst_clk_bfm"
 Info: avs_hram_converter_TEST_basic_inst_reset_bfm: "avs_hram_converter_TEST_basic_tb" instantiated altera_avalon_reset_source "avs_hram_converter_TEST_basic_inst_reset_bfm"
-Info: avs_hram_converter: "avs_hram_converter_TEST_basic_inst" instantiated avs_hram_converter "avs_hram_converter"
-Info: avs_hram_mainconv: "avs_hram_converter" instantiated avs_hram_mainconv "avs_hram_mainconv"
-Info: clkctrl: "avs_hram_converter" instantiated clkctrl "clkctrl"
-Info: rst_controller: "avs_hram_converter" instantiated altera_reset_controller "rst_controller"
-Info: altclkctrl_0: Generating top-level entity avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0.
+Info: avs_hram_converter_inst: "avs_hram_converter_TEST_basic_inst" instantiated avs_hram_converter "avs_hram_converter_inst"
+Info: avs_hram_mainconv: "avs_hram_converter_inst" instantiated avs_hram_mainconv "avs_hram_mainconv"
+Info: clkctrl: "avs_hram_converter_inst" instantiated clkctrl "clkctrl"
+Info: rst_controller: "avs_hram_converter_inst" instantiated altera_reset_controller "rst_controller"
+Info: altclkctrl_0: Generating top-level entity avs_hram_converter_TEST_basic_avs_hram_converter_inst_clkctrl_altclkctrl_0.
 Info: altclkctrl_0: "clkctrl" instantiated altclkctrl "altclkctrl_0"
 Info: avs_hram_converter_TEST_basic_tb: Done "avs_hram_converter_TEST_basic_tb" with 9 modules, 44 files
 Info: qsys-generate succeeded.
 Info: sim-script-gen --spd=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic_tb.spd --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ --use-relative-paths=true
 Info: Doing: ip-make-simscript --spd=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic_tb.spd --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ --use-relative-paths=true
-Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for MODELSIM simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCSMX simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
 Info: Generating the following file(s) for XCELIUM simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
 Info: 	xcelium/cds.lib
 Info: 	xcelium/hdl.var
 Info: 	xcelium/xcelium_setup.sh
 Info: 	8 .cds.lib files in xcelium/cds_libs/ directory
-Info: Generating the following file(s) for VCSMX simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
-Info: 	synopsys/vcsmx/synopsys_sim.setup
-Info: 	synopsys/vcsmx/vcsmx_setup.sh
 Info: Generating the following file(s) for RIVIERA simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: Generating the following file(s) for MODELSIM simulator in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/ directory:
-Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/testbench/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create testbench Platform Designer system

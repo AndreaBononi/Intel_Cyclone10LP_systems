@@ -1,0 +1,27 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst avs_hram_converter_TEST_advanced.clk_50MHz -pg 1 -lvl 1 -y 250
+preplace inst avs_hram_converter_TEST_advanced.avs_hram_converter -pg 1 -lvl 3 -y 380
+preplace inst avs_hram_converter_TEST_advanced.nios2 -pg 1 -lvl 2 -y 150
+preplace inst avs_hram_converter_TEST_advanced.switches -pg 1 -lvl 3 -y 250
+preplace inst avs_hram_converter_TEST_advanced.nios2.cpu -pg 1
+preplace inst avs_hram_converter_TEST_advanced.instruction_OCROM -pg 1 -lvl 3 -y 170
+preplace inst avs_hram_converter_TEST_advanced -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst avs_hram_converter_TEST_advanced.avs_hram_converter.avs_hram_mainconv -pg 1
+preplace inst avs_hram_converter_TEST_advanced.nios2.clock_bridge -pg 1
+preplace inst avs_hram_converter_TEST_advanced.nios2.reset_bridge -pg 1
+preplace inst avs_hram_converter_TEST_advanced.avs_hram_converter.clk_0 -pg 1
+preplace inst avs_hram_converter_TEST_advanced.avs_hram_converter.clkctrl.altclkctrl_0 -pg 1
+preplace inst avs_hram_converter_TEST_advanced.leds -pg 1 -lvl 3 -y 60
+preplace inst avs_hram_converter_TEST_advanced.avs_hram_converter.clkctrl -pg 1
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_advanced</net_container>(SLAVE)avs_hram_converter_TEST_advanced.leds,(SLAVE)leds.external_connection) 1 0 3 NJ 40 NJ 40 NJ
+preplace netloc FAN_OUT<net_container>avs_hram_converter_TEST_advanced</net_container>(SLAVE)avs_hram_converter.reset,(SLAVE)switches.reset,(SLAVE)leds.reset,(MASTER)clk_50MHz.clk_reset,(SLAVE)nios2.reset,(SLAVE)instruction_OCROM.reset1) 1 1 2 340 110 760
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_advanced</net_container>(SLAVE)clk_50MHz.clk_in,(SLAVE)avs_hram_converter_TEST_advanced.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_advanced</net_container>(SLAVE)avs_hram_converter.hyperbus_master,(SLAVE)avs_hram_converter_TEST_advanced.hyperbus_master) 1 0 3 NJ 450 NJ 450 NJ
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_advanced</net_container>(SLAVE)avs_hram_converter_TEST_advanced.switches,(SLAVE)switches.external_connection) 1 0 3 NJ 320 NJ 320 NJ
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_advanced</net_container>(SLAVE)avs_hram_converter_TEST_advanced.hyperbus_clock,(SLAVE)avs_hram_converter.hyperbus_clock) 1 0 3 NJ 430 NJ 430 NJ
+preplace netloc FAN_OUT<net_container>avs_hram_converter_TEST_advanced</net_container>(SLAVE)avs_hram_converter.clk,(SLAVE)instruction_OCROM.clk1,(MASTER)clk_50MHz.clk,(SLAVE)leds.clk,(SLAVE)switches.clk,(SLAVE)nios2.clk) 1 1 2 320 70 780
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_advanced</net_container>(SLAVE)clk_50MHz.clk_in_reset,(SLAVE)avs_hram_converter_TEST_advanced.reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>avs_hram_converter_TEST_advanced</net_container>(MASTER)nios2.instruction_master,(SLAVE)nios2.debug_mem_slave,(MASTER)nios2.data_master,(SLAVE)avs_hram_converter.avalon_slave,(SLAVE)leds.s1,(SLAVE)instruction_OCROM.s1,(SLAVE)switches.s1) 1 1 2 360 90 740
+levelinfo -pg 1 0 110 1060
+levelinfo -hier avs_hram_converter_TEST_advanced 120 150 480 900 1050

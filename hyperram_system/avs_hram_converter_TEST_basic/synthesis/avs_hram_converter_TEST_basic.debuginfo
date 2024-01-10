@@ -5,7 +5,7 @@
  version="22.1"
  fabric="QSYS">
  <!-- Format version 22.1 917 (Future versions may contain additional information.) -->
- <!-- 2024.01.09.16:08:33 -->
+ <!-- 2024.01.10.12:32:11 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -57,7 +57,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1704812912</value>
+  <value>1704886330</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -212,7 +212,7 @@ parameters are a RESULT of the module parameters. -->
    </assignment>
    <assignment>
     <name>embeddedsw.configuration.isMemoryDevice</name>
-    <value>0</value>
+    <value>1</value>
    </assignment>
    <assignment>
     <name>embeddedsw.configuration.isNonVolatileStorage</name>
@@ -368,7 +368,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="isMemoryDevice">
     <type>boolean</type>
-    <value>false</value>
+    <value>true</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -943,7 +943,7 @@ parameters are a RESULT of the module parameters. -->
    </assignment>
    <assignment>
     <name>embeddedsw.configuration.isMemoryDevice</name>
-    <value>0</value>
+    <value>1</value>
    </assignment>
    <assignment>
     <name>embeddedsw.configuration.isNonVolatileStorage</name>
@@ -1099,7 +1099,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="isMemoryDevice">
     <type>boolean</type>
-    <value>false</value>
+    <value>true</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -2704,5 +2704,5 @@ parameters are a RESULT of the module parameters. -->
   <version>22.1</version>
  </plugin>
  <reportVersion>22.1 917</reportVersion>
- <uniqueIdentifier>606DC71719D50000018CEEC4A167</uniqueIdentifier>
+ <uniqueIdentifier>606DC71719D50000018CF324E4DC</uniqueIdentifier>
 </EnsembleReport>

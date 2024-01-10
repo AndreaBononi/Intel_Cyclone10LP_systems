@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition"
 
--- DATE "01/08/2024 12:49:00"
+-- DATE "01/10/2024 11:03:20"
 
 -- 
 -- Device: Altera 10CL025YE144C8G Package TQFP144
@@ -3324,7 +3324,7 @@ GENERIC MAP (
 	vco_post_scale => 2)
 -- pragma translate_on
 PORT MAP (
-	areset => \reset_n~input0\,
+	areset => \ALT_INV_reset_n~input0\,
 	fbin => \EU|pll_x8_inst|altpll_component|auto_generated|wire_pll1_fbout\,
 	inclk => \EU|pll_x8_inst|altpll_component|auto_generated|pll1_INCLK_bus\,
 	fbout => \EU|pll_x8_inst|altpll_component|auto_generated|wire_pll1_fbout\,

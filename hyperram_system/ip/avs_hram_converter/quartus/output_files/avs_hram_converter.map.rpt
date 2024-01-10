@@ -1,5 +1,5 @@
 Analysis & Synthesis report for avs_hram_converter
-Mon Jan  8 12:48:43 2024
+Wed Jan 10 11:03:02 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -195,7 +195,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan  8 12:48:43 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 10 11:03:02 2024          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; avs_hram_converter                             ;
 ; Top-level Entity Name              ; avs_hram_mainconv                              ;
@@ -357,8 +357,8 @@ https://fpgasoftware.intel.com/eula.
 ; stratix_pll.inc                                      ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/stratix_pll.inc                                               ;         ;
 ; stratixii_pll.inc                                    ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/stratixii_pll.inc                                             ;         ;
 ; cycloneii_pll.inc                                    ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/cycloneii_pll.inc                                             ;         ;
-; db/dll_90_altpll.v                                   ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/dll_90_altpll.v                       ;         ;
-; db/pll_x8_altpll.v                                   ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/pll_x8_altpll.v                       ;         ;
+; db/dll_90_altpll.v                                   ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/dll_90_altpll.v                        ;         ;
+; db/pll_x8_altpll.v                                   ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/pll_x8_altpll.v                        ;         ;
 ; lpm_counter.tdf                                      ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.tdf                                               ;         ;
 ; lpm_constant.inc                                     ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_constant.inc                                              ;         ;
 ; lpm_decode.inc                                       ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                ;         ;
@@ -368,21 +368,21 @@ https://fpgasoftware.intel.com/eula.
 ; lpm_counter.inc                                      ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.inc                                               ;         ;
 ; dffeea.inc                                           ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/dffeea.inc                                                    ;         ;
 ; alt_counter_stratix.inc                              ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                                       ;         ;
-; db/cntr_7lh.tdf                                      ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/cntr_7lh.tdf                          ;         ;
+; db/cntr_7lh.tdf                                      ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/cntr_7lh.tdf                           ;         ;
 ; lpm_add_sub.tdf                                      ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf                                               ;         ;
 ; addcore.inc                                          ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/addcore.inc                                                   ;         ;
 ; look_add.inc                                         ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/look_add.inc                                                  ;         ;
 ; bypassff.inc                                         ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/bypassff.inc                                                  ;         ;
 ; altshift.inc                                         ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altshift.inc                                                  ;         ;
 ; alt_stratix_add_sub.inc                              ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                       ;         ;
-; db/add_sub_89k.tdf                                   ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/add_sub_89k.tdf                       ;         ;
+; db/add_sub_89k.tdf                                   ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/add_sub_89k.tdf                        ;         ;
 ; altshift_taps.tdf                                    ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altshift_taps.tdf                                             ;         ;
 ; altdpram.inc                                         ; yes             ; Megafunction                 ; /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                                  ;         ;
-; db/shift_taps_06m.tdf                                ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/shift_taps_06m.tdf                    ;         ;
-; db/altsyncram_ik31.tdf                               ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/altsyncram_ik31.tdf                   ;         ;
-; db/add_sub_r3e.tdf                                   ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/add_sub_r3e.tdf                       ;         ;
-; db/cntr_vof.tdf                                      ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/cntr_vof.tdf                          ;         ;
-; db/cmpr_hgc.tdf                                      ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/cmpr_hgc.tdf                          ;         ;
+; db/shift_taps_06m.tdf                                ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/shift_taps_06m.tdf                     ;         ;
+; db/altsyncram_ik31.tdf                               ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/altsyncram_ik31.tdf                    ;         ;
+; db/add_sub_r3e.tdf                                   ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/add_sub_r3e.tdf                        ;         ;
+; db/cntr_vof.tdf                                      ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/cntr_vof.tdf                           ;         ;
+; db/cmpr_hgc.tdf                                      ; yes             ; Auto-Generated Megafunction  ; /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/cmpr_hgc.tdf                           ;         ;
 +------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -2959,7 +2959,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -2969,7 +2969,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Jan  8 12:48:29 2024
+    Info: Processing started: Wed Jan 10 11:02:48 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off avs_hram_converter -c avs_hram_converter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -3145,7 +3145,7 @@ Info (12133): Instantiated megafunction "avs_hram_mainconv_EU:EU|dll_90:clk_shif
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/dll_90_altpll.v
-    Info (12023): Found entity 1: dll_90_altpll File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/dll_90_altpll.v Line: 30
+    Info (12023): Found entity 1: dll_90_altpll File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/dll_90_altpll.v Line: 30
 Info (12128): Elaborating entity "dll_90_altpll" for hierarchy "avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "d_flipflop" for hierarchy "avs_hram_mainconv_EU:EU|d_flipflop:hCKen_pipe" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv_EU.vhd Line: 557
 Info (12128): Elaborating entity "tristate_buffer" for hierarchy "avs_hram_mainconv_EU:EU|tristate_buffer:RWDS_buffer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv_EU.vhd Line: 569
@@ -3208,7 +3208,7 @@ Info (12133): Instantiated megafunction "avs_hram_mainconv_EU:EU|pll_x8:pll_x8_i
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_x8_altpll.v
-    Info (12023): Found entity 1: pll_x8_altpll File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/pll_x8_altpll.v Line: 30
+    Info (12023): Found entity 1: pll_x8_altpll File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/pll_x8_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_x8_altpll" for hierarchy "avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "DDR_to_SDR_converter" for hierarchy "avs_hram_mainconv_EU:EU|DDR_to_SDR_converter:readdata_converter" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv_EU.vhd Line: 605
 Info (12128): Elaborating entity "DDR_to_SDR_converter_EU" for hierarchy "avs_hram_mainconv_EU:EU|DDR_to_SDR_converter:readdata_converter|DDR_to_SDR_converter_EU:EU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/DDR_to_SDR_converter.vhd Line: 84
@@ -3235,7 +3235,7 @@ Info (12133): Instantiated megafunction "avs_hram_mainconv_EU:EU|synchronizer:sy
     Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
     Info (12134): Parameter "lpm_width" = "11"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_7lh.tdf
-    Info (12023): Found entity 1: cntr_7lh File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/cntr_7lh.tdf Line: 26
+    Info (12023): Found entity 1: cntr_7lh File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/cntr_7lh.tdf Line: 26
 Info (12128): Elaborating entity "cntr_7lh" for hierarchy "avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|counter_11bit_updown:burstlen_counter|lpm_counter:LPM_COUNTER_component|cntr_7lh:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "comparator_Nbit" for hierarchy "avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_EU:EU|comparator_Nbit:burstlen_cmp" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/synchronizer_EU.vhd Line: 355
 Info (12128): Elaborating entity "synchronizer_CU" for hierarchy "avs_hram_mainconv_EU:EU|synchronizer:synchronizer_inst|synchronizer_CU:CU" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/synchronizer.vhd Line: 162
@@ -3251,7 +3251,7 @@ Info (12133): Instantiated megafunction "avs_hram_mainconv_EU:EU|adder_22bit_1pi
     Info (12134): Parameter "lpm_type" = "LPM_ADD_SUB"
     Info (12134): Parameter "lpm_width" = "22"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_89k.tdf
-    Info (12023): Found entity 1: add_sub_89k File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/add_sub_89k.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_89k File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/add_sub_89k.tdf Line: 23
 Info (12128): Elaborating entity "add_sub_89k" for hierarchy "avs_hram_mainconv_EU:EU|adder_22bit_1pipe:addressgen|lpm_add_sub:LPM_ADD_SUB_component|add_sub_89k:auto_generated" File: /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
 Info (12128): Elaborating entity "timer_14bit" for hierarchy "avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv_EU.vhd Line: 786
 Info (12128): Elaborating entity "counter_Nbit" for hierarchy "avs_hram_mainconv_EU:EU|timer_14bit:deadline_timer|counter_Nbit:cnt" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/timer_14bit.vhd Line: 44
@@ -3267,15 +3267,15 @@ Info (12133): Instantiated megafunction "avs_hram_mainconv_EU:EU|reg:cntpipe1|al
     Info (12134): Parameter "TAP_DISTANCE" = "3"
     Info (12134): Parameter "WIDTH" = "11"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_06m.tdf
-    Info (12023): Found entity 1: shift_taps_06m File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/shift_taps_06m.tdf Line: 29
+    Info (12023): Found entity 1: shift_taps_06m File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/shift_taps_06m.tdf Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ik31.tdf
-    Info (12023): Found entity 1: altsyncram_ik31 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/altsyncram_ik31.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_ik31 File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/altsyncram_ik31.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_r3e.tdf
-    Info (12023): Found entity 1: add_sub_r3e File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/add_sub_r3e.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_r3e File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/add_sub_r3e.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_vof.tdf
-    Info (12023): Found entity 1: cntr_vof File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/cntr_vof.tdf Line: 25
+    Info (12023): Found entity 1: cntr_vof File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/cntr_vof.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_hgc.tdf
-    Info (12023): Found entity 1: cmpr_hgc File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/cmpr_hgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_hgc File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/cmpr_hgc.tdf Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -3380,8 +3380,8 @@ Info (21057): Implemented 703 device resources after synthesis - the final resou
     Info (21064): Implemented 11 RAM segments
     Info (21065): Implemented 2 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 462 megabytes
-    Info: Processing ended: Mon Jan  8 12:48:43 2024
+    Info: Peak virtual memory: 457 megabytes
+    Info: Processing ended: Wed Jan 10 11:03:02 2024
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:29
 

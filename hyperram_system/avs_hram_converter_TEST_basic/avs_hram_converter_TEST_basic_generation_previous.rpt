@@ -2,22 +2,22 @@ Info: Starting: Create HDL design files for synthesis
 Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic.qsys --synthesis=VHDL --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/synthesis --family="Cyclone 10 LP" --part=10CL006YE144A7G
 Progress: Loading hyperram_system/avs_hram_converter_TEST_basic.qsys
 Progress: Reading input file
-Progress: Adding avs_hram_converter [avs_hram_converter 1.0]
-Progress: Parameterizing module avs_hram_converter
+Progress: Adding avs_hram_converter_inst [avs_hram_converter 1.0]
+Progress: Parameterizing module avs_hram_converter_inst
 Progress: Adding clk_50MHz [clock_source 22.1]
 Progress: Parameterizing module clk_50MHz
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-: avs_hram_converter_TEST_basic.avs_hram_converter.clkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
-: avs_hram_converter_TEST_basic.avs_hram_converter.clkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+: avs_hram_converter_TEST_basic.avs_hram_converter_inst.clkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: avs_hram_converter_TEST_basic.avs_hram_converter_inst.clkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
 Info: avs_hram_converter_TEST_basic: Generating avs_hram_converter_TEST_basic "avs_hram_converter_TEST_basic" for QUARTUS_SYNTH
-Info: avs_hram_converter: "avs_hram_converter_TEST_basic" instantiated avs_hram_converter "avs_hram_converter"
-Info: avs_hram_mainconv: "avs_hram_converter" instantiated avs_hram_mainconv "avs_hram_mainconv"
-Info: clkctrl: "avs_hram_converter" instantiated clkctrl "clkctrl"
-Info: rst_controller: "avs_hram_converter" instantiated altera_reset_controller "rst_controller"
-Info: altclkctrl_0: Generating top-level entity avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0.
+Info: avs_hram_converter_inst: "avs_hram_converter_TEST_basic" instantiated avs_hram_converter "avs_hram_converter_inst"
+Info: avs_hram_mainconv: "avs_hram_converter_inst" instantiated avs_hram_mainconv "avs_hram_mainconv"
+Info: clkctrl: "avs_hram_converter_inst" instantiated clkctrl "clkctrl"
+Info: rst_controller: "avs_hram_converter_inst" instantiated altera_reset_controller "rst_controller"
+Info: altclkctrl_0: Generating top-level entity avs_hram_converter_TEST_basic_avs_hram_converter_inst_clkctrl_altclkctrl_0.
 Info: altclkctrl_0: "clkctrl" instantiated altclkctrl "altclkctrl_0"
 Info: avs_hram_converter_TEST_basic: Done "avs_hram_converter_TEST_basic" with 6 modules, 41 files
 Info: qsys-generate succeeded.

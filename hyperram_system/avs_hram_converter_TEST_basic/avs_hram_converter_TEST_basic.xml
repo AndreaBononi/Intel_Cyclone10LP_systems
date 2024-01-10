@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2024.01.09.16:08:33"
+ date="2024.01.10.12:32:10"
  outputDirectory="/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_basic/">
  <perimeter>
   <parameter
@@ -70,7 +70,7 @@
    <property name="interleaveBursts" value="false" />
    <property name="isBigEndian" value="false" />
    <property name="isFlash" value="false" />
-   <property name="isMemoryDevice" value="false" />
+   <property name="isMemoryDevice" value="true" />
    <property name="isNonVolatileStorage" value="false" />
    <property name="linewrapBursts" value="false" />
    <property name="maximumPendingReadTransactions" value="1" />
@@ -165,13 +165,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="avs_hram_converter_TEST_basic:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL006YE144A7G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1704812912,AUTO_UNIQUE_ID=(avs_hram_converter:1.0:AUTO_DEVICE=10CL006YE144A7G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=7(avs_hram_mainconv:1.0:drive_strength=0)(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(clkctrl:1.0:AUTO_DEVICE=10CL006YE144A7G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=0,AUTO_UNIQUE_ID=avs_hram_converter_clkctrl(altclkctrl:22.1:CLOCK_TYPE=1,DEVICE_FAMILY=Cyclone 10 LP,ENA_REGISTER_MODE=1,GUI_USE_ENA=true,NUMBER_OF_CLOCKS=1,USE_GLITCH_FREE_SWITCH_OVER_IMPLEMENTATION=false))(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(clock:22.1:)(reset:22.1:))(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(clock:22.1:)(reset:22.1:)"
+   parameterizationKey="avs_hram_converter_TEST_basic:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL006YE144A7G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1704886330,AUTO_UNIQUE_ID=(avs_hram_converter:1.0:AUTO_DEVICE=10CL006YE144A7G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=7(avs_hram_mainconv:1.0:drive_strength=0)(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(clkctrl:1.0:AUTO_DEVICE=10CL006YE144A7G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=0,AUTO_UNIQUE_ID=avs_hram_converter_clkctrl(altclkctrl:22.1:CLOCK_TYPE=1,DEVICE_FAMILY=Cyclone 10 LP,ENA_REGISTER_MODE=1,GUI_USE_ENA=true,NUMBER_OF_CLOCKS=1,USE_GLITCH_FREE_SWITCH_OVER_IMPLEMENTATION=false))(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(clock:22.1:)(reset:22.1:))(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(clock:22.1:)(reset:22.1:)"
    instancePathKey="avs_hram_converter_TEST_basic"
    kind="avs_hram_converter_TEST_basic"
    version="1.0"
    name="avs_hram_converter_TEST_basic">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1704812912" />
+  <parameter name="AUTO_GENERATION_ID" value="1704886330" />
   <parameter name="AUTO_DEVICE" value="10CL006YE144A7G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 LP" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />

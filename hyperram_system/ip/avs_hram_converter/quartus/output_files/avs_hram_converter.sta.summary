@@ -10,6 +10,10 @@ Type  : Slow 1200mV 85C Model Setup 'clk'
 Slack : 1.676
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Setup 'shifted_clock'
+Slack : 3.657
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Setup 'rwdsgen'
 Slack : 7.632
 TNS   : 0.000
@@ -24,6 +28,10 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'rwdsgen'
 Slack : 0.456
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'shifted_clock'
+Slack : 6.170
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'rwdsgen'
@@ -54,7 +62,7 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rwdsgen'
 Slack : 9.694
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk90'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'shifted_clock'
 Slack : 9.979
 TNS   : 0.000
 
@@ -64,6 +72,10 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
 Slack : 2.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'shifted_clock'
+Slack : 4.280
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'rwdsgen'
@@ -80,6 +92,10 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'rwdsgen'
 Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'shifted_clock'
+Slack : 5.539
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'rwdsgen'
@@ -110,7 +126,7 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : 9.645
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk90'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'shifted_clock'
 Slack : 9.989
 TNS   : 0.000
 
@@ -120,6 +136,10 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
 Slack : 4.916
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'shifted_clock'
+Slack : 6.321
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'rwdsgen'
@@ -136,6 +156,10 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk_x8'
 Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'shifted_clock'
+Slack : 3.587
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'rwdsgen'
@@ -166,7 +190,7 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rwdsgen'
 Slack : 9.648
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk90'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'shifted_clock'
 Slack : 9.995
 TNS   : 0.000
 

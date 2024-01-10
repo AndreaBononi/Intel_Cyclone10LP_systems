@@ -12,7 +12,7 @@ create_clock \
 
 # shifted clock ----------------------------------------------------------------------------------------------------------------------------------
 create_generated_clock \
-	-name {clk90} \
+	-name {shifted_clock} \
 	-source [get_pins {EU|clk_shifter|altpll_component|auto_generated|pll1|inclk[0]}] \
 	-phase 90 \
 	-duty_cycle 50 \
@@ -145,3 +145,6 @@ set_output_delay -add_delay -clock [get_clocks {clk}] -max 1.000 [get_ports {hra
 set_output_delay -add_delay -clock [get_clocks {clk}] -min 0.000 [get_ports {hram_DQ[*]}]
 set_output_delay -add_delay -clock [get_clocks {clk}] -max 1.000 [get_ports {hCK_enable}]
 set_output_delay -add_delay -clock [get_clocks {clk}] -min 0.000 [get_ports {hCK_enable}]
+
+# T_is and T_ih ----------------------------------------------------------------------------------------------------------------------------------
+set_output_delay -add_delay -clock [get_clocks {shifted_clock}] -max 1.000 [get_ports {clk90}]

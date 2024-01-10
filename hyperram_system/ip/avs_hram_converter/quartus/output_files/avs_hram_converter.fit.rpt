@@ -1,5 +1,5 @@
 Fitter report for avs_hram_converter
-Mon Jan  8 12:48:53 2024
+Wed Jan 10 11:03:12 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jan  8 12:48:53 2024          ;
+; Fitter Status                      ; Successful - Wed Jan 10 11:03:12 2024          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; avs_hram_converter                             ;
 ; Top-level Entity Name              ; avs_hram_mainconv                              ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.0%      ;
+;     Processor 2            ;   5.8%      ;
 +----------------------------+-------------+
 
 
@@ -206,7 +206,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/output_files/avs_hram_converter.pin.
+The pin-out file can be found in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/output_files/avs_hram_converter.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -1255,10 +1255,10 @@ Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors
 Info (119006): Selected device 10CL025YE144C8G for design "avs_hram_converter"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (15535): Implemented PLL "avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1" as Cyclone 10 LP PLL type File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/dll_90_altpll.v Line: 47
-    Info (15099): Implementing clock multiplication of 1, clock division of 1, and phase shift of 90 degrees (5000 ps) for avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|wire_pll1_clk[0] port File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/dll_90_altpll.v Line: 47
-Info (15535): Implemented PLL "avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1" as Cyclone 10 LP PLL type File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/pll_x8_altpll.v Line: 47
-    Info (15099): Implementing clock multiplication of 8, clock division of 1, and phase shift of 0 degrees (0 ps) for avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|wire_pll1_clk[0] port File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/pll_x8_altpll.v Line: 47
+Info (15535): Implemented PLL "avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1" as Cyclone 10 LP PLL type File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/dll_90_altpll.v Line: 47
+    Info (15099): Implementing clock multiplication of 1, clock division of 1, and phase shift of 90 degrees (5000 ps) for avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|wire_pll1_clk[0] port File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/dll_90_altpll.v Line: 47
+Info (15535): Implemented PLL "avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1" as Cyclone 10 LP PLL type File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/pll_x8_altpll.v Line: 47
+    Info (15099): Implementing clock multiplication of 8, clock division of 1, and phase shift of 0 degrees (0 ps) for avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|wire_pll1_clk[0] port File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/pll_x8_altpll.v Line: 47
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -1274,24 +1274,34 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Critical Warning (169085): No exact pin location assignment(s) for 12 pins of 12 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
-Warning (176125): The input ports of the PLL avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1 and the PLL avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 are mismatched, preventing the PLLs to be merged File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/pll_x8_altpll.v Line: 81
-    Warning (176124): PLL avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1 and PLL avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 have different input signals for input port ARESET File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/pll_x8_altpll.v Line: 81
+Warning (176127): The parameters of the PLL avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1 and the PLL avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 do not have the same values - hence these PLLs cannot be merged File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/pll_x8_altpll.v Line: 81
+    Info (176120): The values of the parameter "M" do not match for the PLL atoms avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 and PLL avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1
+        Info (176121): The value of the parameter "M" for the PLL atom avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 is 12
+        Info (176121): The value of the parameter "M" for the PLL atom avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1 is 8
+    Info (176120): The values of the parameter "Min Lock Period" do not match for the PLL atoms avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 and PLL avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1
+        Info (176121): The value of the parameter "Min Lock Period" for the PLL atom avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 is 18456
+        Info (176121): The value of the parameter "Min Lock Period" for the PLL atom avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1 is 12304
+    Info (176120): The values of the parameter "Max Lock Period" do not match for the PLL atoms avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 and PLL avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1
+        Info (176121): The value of the parameter "Max Lock Period" for the PLL atom avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1 is 39996
+        Info (176121): The value of the parameter "Max Lock Period" for the PLL atom avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1 is 26664
 Critical Warning (176598): PLL "avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1" input clock inclk[0] is not fully compensated because it is fed by a remote clock pin "Pin_22" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv.vhd Line: 232
 Info (332104): Reading SDC File: '../sdc/avs_hram_converter.sdc'
 Warning (332174): Ignored filter at avs_hram_converter.sdc(30): clk, could not be matched with a clock File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/sdc/avs_hram_converter.sdc Line: 30
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332070): Port "clk90" relative to the rising edge of clock "shifted_clock" does not specify a min-fall output delay
+Warning (332070): Port "clk90" relative to the rising edge of clock "shifted_clock" does not specify a min-rise output delay
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
 Info (332111): Found 4 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):   20.000          clk
-    Info (332111):   20.000        clk90
     Info (332111):    2.500       clk_x8
     Info (332111):   20.000      rwdsgen
-Info (176353): Automatically promoted node avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/dll_90_altpll.v Line: 81
+    Info (332111):   20.000 shifted_clock
+Info (176353): Automatically promoted node avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/dll_90_altpll.v Line: 81
     Info (176355): Automatically promoted destinations to use location or clock signal External Clock Output CLKCTRL_PLL1E0
-Info (176353): Automatically promoted node avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_3) File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/pll_x8_altpll.v Line: 81
+Info (176353): Automatically promoted node avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_3) File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/pll_x8_altpll.v Line: 81
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G13
 Info (176353): Automatically promoted node clk~input (placed in PIN 22 (CLK0, DIFFCLK_0p)) File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv.vhd Line: 14
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
@@ -1324,7 +1334,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  8 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  11 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  11 pins available
-Warning (15058): PLL "avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1" is in normal or source synchronous mode with output clock "compensate_clock" set to clk[0] that is not fully compensated because it feeds an output pin -- only PLLs in zero delay buffer mode can fully compensate output pins File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/db/dll_90_altpll.v Line: 47
+Warning (15058): PLL "avs_hram_mainconv_EU:EU|dll_90:clk_shifter|altpll:altpll_component|dll_90_altpll:auto_generated|pll1" is in normal or source synchronous mode with output clock "compensate_clock" set to clk[0] that is not fully compensated because it feeds an output pin -- only PLLs in zero delay buffer mode can fully compensate output pins File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/db/dll_90_altpll.v Line: 47
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
@@ -1339,16 +1349,16 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.59 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.55 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/output_files/avs_hram_converter.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
+Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/output_files/avs_hram_converter.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 710 megabytes
-    Info: Processing ended: Mon Jan  8 12:48:53 2024
+    Info: Processing ended: Wed Jan 10 11:03:12 2024
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:11
 
@@ -1356,6 +1366,6 @@ Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus2/output_files/avs_hram_converter.fit.smsg.
+The suppressed messages can be found in /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/output_files/avs_hram_converter.fit.smsg.
 
 
