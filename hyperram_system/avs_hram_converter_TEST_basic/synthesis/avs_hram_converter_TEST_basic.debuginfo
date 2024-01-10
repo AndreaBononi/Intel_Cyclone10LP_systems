@@ -5,7 +5,7 @@
  version="22.1"
  fabric="QSYS">
  <!-- Format version 22.1 917 (Future versions may contain additional information.) -->
- <!-- 2024.01.10.12:32:11 -->
+ <!-- 2024.01.10.17:41:44 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -57,7 +57,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1704886330</value>
+  <value>1704904903</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -240,7 +240,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>8589934592</value>
+    <value>16777216</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -539,7 +539,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>avalon_slave_address</name>
     <direction>Input</direction>
-    <width>32</width>
+    <width>23</width>
     <role>address</role>
    </port>
    <port>
@@ -971,7 +971,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>8589934592</value>
+    <value>16777216</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -1270,7 +1270,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>avs_address</name>
     <direction>Input</direction>
-    <width>32</width>
+    <width>23</width>
     <role>address</role>
    </port>
    <port>
@@ -2704,5 +2704,5 @@ parameters are a RESULT of the module parameters. -->
   <version>22.1</version>
  </plugin>
  <reportVersion>22.1 917</reportVersion>
- <uniqueIdentifier>606DC71719D50000018CF324E4DC</uniqueIdentifier>
+ <uniqueIdentifier>606DC71719D50000018CF4404C28</uniqueIdentifier>
 </EnsembleReport>

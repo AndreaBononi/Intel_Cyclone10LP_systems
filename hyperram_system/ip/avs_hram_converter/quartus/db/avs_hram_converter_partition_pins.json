@@ -180,19 +180,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "avs_address[14]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[15]",
-					"strict" : false
-				},
-				{
 					"name" : "avs_address[12]",
 					"strict" : false
 				},
 				{
 					"name" : "avs_address[13]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_address[14]",
+					"strict" : false
+				},
+				{
+					"name" : "avs_address[15]",
 					"strict" : false
 				},
 				{
@@ -221,42 +221,6 @@
 				},
 				{
 					"name" : "avs_address[21]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[23]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[24]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[25]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[26]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[27]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[28]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[29]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[30]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[31]",
 					"strict" : false
 				},
 				{

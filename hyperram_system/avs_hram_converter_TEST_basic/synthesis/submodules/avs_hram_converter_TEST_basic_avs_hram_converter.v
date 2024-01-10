@@ -7,7 +7,7 @@
 
 `timescale 1 ps / 1 ps
 module avs_hram_converter_TEST_basic_avs_hram_converter (
-		input  wire [31:0] avalon_slave_address,         //    avalon_slave.address
+		input  wire [22:0] avalon_slave_address,         //    avalon_slave.address
 		input  wire        avalon_slave_read,            //                .read
 		output wire [15:0] avalon_slave_readdata,        //                .readdata
 		input  wire        avalon_slave_write,           //                .write

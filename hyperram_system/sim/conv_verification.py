@@ -21,7 +21,7 @@ vsim_path         = '~/intelFPGA/20.1/modelsim_ase/bin/vsim'
 # constants ----------------------------------------------------------------------------------------------------------------------------
 clock_period      = "10 ns"
 data_size         = 16
-address_size      = 32
+address_size      = 22
 burst_size        = 11
 burstlen_dec      = 10
 burstlen          = format( burstlen_dec, str( burst_size ) + 'b' ).replace( " ", "0" )
@@ -29,7 +29,7 @@ opcode_read       = '0'
 opcode_write      = '1'
 optype_single     = '0'
 optype_burst      = '1'
-virtconfreg_addr  = "00000000010000000000000000000000"
+virtconfreg_addr  = "10000000000000000000000"
 virtconfreg_def   = "0000000000000000"
 virtconfreg_dpd   = "0000000000000001"
 
@@ -69,7 +69,7 @@ log.write( "Burst lenght: " + str( burstlen_dec ) + "\n" )
 log.write( "--------------------------------------------------- \n" )
 
 # memory model ------------------------------------------------------------------------------------------------------------------------
-mem = memory.memory( address_size = address_size, word_size = data_size )
+mem = memory.memory( address_size = address_size + 1, word_size = data_size )
 mem.reset()
 mem.add_register( address = virtconfreg_addr, value = virtconfreg_def )
 
@@ -128,7 +128,7 @@ try:
     expected.write( mem.read_register( virtconfreg_addr ) + '\n' )
     # 1. single write, memory space ---------------------------------------------------------------------------------------------------
     data = format( random.randint( 0,  2 ** data_size ), str( data_size ) + 'b' ).replace( " ", "0" )
-    addr = format( random.randint( 0,  2 ** address_size ), str( address_size ) + 'b' ).replace( " ", "0" )
+    addr = '0' + format( random.randint( 0,  2 ** address_size ), str( address_size ) + 'b' ).replace( " ", "0" )
     stimuli.write( '# single write, memory space -------------------------------------- \n' )
     stimuli.write( opcode_write + optype_single + '\n' + addr + '\n' + data + '\n' )
     mem.write( address =  addr, writedata = data )
@@ -138,11 +138,11 @@ try:
     expected.write( mem.read( address = addr ) + "\n" )
     # 3. write burst in memory space --------------------------------------------------------------------------------------------------
     start_addr_dec = random.randint( 0,  2 ** address_size )
-    start_addr = format( start_addr_dec, str( address_size ) + 'b' ).replace( " ", "0" )
+    start_addr = '0' + format( start_addr_dec, str( address_size ) + 'b' ).replace( " ", "0" )
     stimuli.write( '# write burst, memory space --------------------------------------- \n' )
     stimuli.write( opcode_write + optype_burst + '\n' + burstlen + '\n' + start_addr + '\n' )
     for addr_dec in range( start_addr_dec, start_addr_dec + burstlen_dec ):
-        addr = format( addr_dec, str( address_size ) + 'b' ).replace( " ", "0" )
+        addr = '0' + format( addr_dec, str( address_size ) + 'b' ).replace( " ", "0" )
         data = format( random.randint( 0,  2 ** data_size ), str( data_size ) + 'b' ).replace( " ", "0" )
         stimuli.write( data + '\n' )
         mem.write( address =  addr, writedata = data )
@@ -150,14 +150,14 @@ try:
     stimuli.write( '# read burst, memory space ---------------------------------------- \n' )
     stimuli.write( opcode_read + optype_burst + '\n' + burstlen + '\n' + start_addr + '\n' )
     for addr_dec in range( start_addr_dec, start_addr_dec + burstlen_dec ):
-        addr = format( addr_dec, str( address_size ) + 'b' ).replace( " ", "0" )
+        addr = '0' + format( addr_dec, str( address_size ) + 'b' ).replace( " ", "0" )
         expected.write( mem.read( address =  addr ) + "\n" )
     # 5. write configuration register to enter the DPD mode --------------------------------------------------------------------------
     stimuli.write( '# write configuration register to enter the DPD mode -------------- \n' )
     stimuli.write( opcode_write + optype_single + '\n' + virtconfreg_addr + '\n' + virtconfreg_dpd + '\n' )
     mem.write_register( address = virtconfreg_addr, value = virtconfreg_dpd )
     # 6. single read in memory space (it should be ignored, the expected file must not be updated) -----------------------------------
-    addr = format( random.randint( 0,  2 ** address_size ), str( address_size ) + 'b' ).replace( " ", "0" )
+    addr = '0' + format( random.randint( 0,  2 ** address_size ), str( address_size ) + 'b' ).replace( " ", "0" )
     stimuli.write( '# single read, memory space --------------------------------------- \n' )
     stimuli.write( opcode_read + optype_single + '\n' + addr + '\n' )
     # 7. write configuration register to exit the DPD mode ---------------------------------------------------------------------------
@@ -166,7 +166,7 @@ try:
     mem.write_register( address = virtconfreg_addr, value = virtconfreg_def )
     # 8. single write, memory space ---------------------------------------------------------------------------------------------------
     data = format( random.randint( 0,  2 ** data_size ), str( data_size ) + 'b' ).replace( " ", "0" )
-    addr = format( random.randint( 0,  2 ** address_size ), str( address_size ) + 'b' ).replace( " ", "0" )
+    addr = '0' + format( random.randint( 0,  2 ** address_size ), str( address_size ) + 'b' ).replace( " ", "0" )
     stimuli.write( '# single write, memory space -------------------------------------- \n' )
     stimuli.write( opcode_write + optype_single + '\n' + addr + '\n' + data + '\n' )
     mem.write( address =  addr, writedata = data )

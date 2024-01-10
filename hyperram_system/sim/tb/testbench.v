@@ -15,7 +15,7 @@ module testbench ();
   // wire        hram_CK_n;
 
   // avs - DUT signals --------------------------------------------------------------------
-  wire [31:0] avs_address;       
+  wire [22:0] avs_address;       
 	wire        avs_read;              
 	wire [15:0] avs_readdata;           
 	wire        avs_write;             

@@ -54,7 +54,7 @@ port
 	stop_sim					      : out	std_logic := '0';
   -- avs signals
 	avs_waitrequest 		    : in	std_logic;
-	avs_address				      : out	std_logic_vector(31 downto 0);
+	avs_address				      : out	std_logic_vector(22 downto 0);
 	avs_read       		      : out std_logic;
 	avs_write      		      : out std_logic;
 	avs_writedata  		      : out std_logic_vector(15 downto 0);
@@ -76,7 +76,7 @@ architecture tb of driver is
 		variable opcode					      : std_logic;
     variable optype					      : std_logic;
     variable burstlen				      : std_logic_vector(10 downto 0);
-		variable address			        : std_logic_vector(31 downto 0);
+		variable address			        : std_logic_vector(22 downto 0);
 		variable writedata		        : std_logic_vector(15 downto 0);
 		variable valid_line			      :	std_logic := '0';
     variable ongoing_writeburst   : std_logic := '0';

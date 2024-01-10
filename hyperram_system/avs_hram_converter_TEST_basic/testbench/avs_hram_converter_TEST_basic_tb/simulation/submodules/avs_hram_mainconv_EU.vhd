@@ -14,7 +14,7 @@ port
   clk                           : in    std_logic;
 	reset_n                       : in    std_logic;
 	-- avs signals
-	avs_address                   : in    std_logic_vector(31 downto 0);
+	avs_address                   : in    std_logic_vector(22 downto 0);
 	avs_read                      : in    std_logic;
 	avs_readdata                  : out   std_logic_vector(15 downto 0);
 	avs_write                     : in    std_logic;
@@ -341,7 +341,8 @@ architecture rtl of avs_hram_mainconv_EU is
   signal synch_validout     : std_logic;
   signal conf_reg_out       : std_logic_vector(1 downto 0);
   signal burstcnt_reg_out   : std_logic_vector(10 downto 0);
-  signal addr_reg_out       : std_logic_vector(31 downto 0);
+  signal addr_reg_out       : std_logic_vector(22 downto 0);
+  signal extended_address   : std_logic_vector(31 downto 0);
   signal datain_reg_out     : std_logic_vector(15 downto 0);
   signal conf0_real         : std_logic_vector(15 downto 0);
   signal conf1_real         : std_logic_vector(15 downto 0);
@@ -375,21 +376,20 @@ architecture rtl of avs_hram_mainconv_EU is
     dpd_req <= avs_writedata(0);
 
     -- virtual configuration register access -----------------------------------------------------------------------    
-    config <=       (not avs_address(31))   and (not avs_address(30))   and (not avs_address(29))   and (not avs_address(28))
-                and (not avs_address(27))   and (not avs_address(26))   and (not avs_address(25))   and (not avs_address(24))
-                and (not avs_address(23))   and (    avs_address(22))   and (not avs_address(21))   and (not avs_address(20))
-                and (not avs_address(19))   and (not avs_address(18))   and (not avs_address(17))   and (not avs_address(16))
-                and (not avs_address(15))   and (not avs_address(14))   and (not avs_address(13))   and (not avs_address(12))
-                and (not avs_address(11))   and (not avs_address(10))   and (not avs_address(9 ))   and (not avs_address(8 ))
-                and (not avs_address(7 ))   and (not avs_address(6 ))   and (not avs_address(5 ))   and (not avs_address(4 ))
-                and (not avs_address(3 ))   and (not avs_address(2 ))   and (not avs_address(1 ))   and (not avs_address(0 ));
+    config <=                                   
+      (    avs_address(22))   and (not avs_address(21))   and (not avs_address(20))   and (not avs_address(19))   and 
+      (not avs_address(18))   and (not avs_address(17))   and (not avs_address(16))   and (not avs_address(15))   and 
+      (not avs_address(14))   and (not avs_address(13))   and (not avs_address(12))   and (not avs_address(11))   and 
+      (not avs_address(10))   and (not avs_address(9 ))   and (not avs_address(8 ))   and (not avs_address(7 ))   and 
+      (not avs_address(6 ))   and (not avs_address(5 ))   and (not avs_address(4 ))   and (not avs_address(3 ))   and 
+      (not avs_address(2 ))   and (not avs_address(1 ))   and (not avs_address(0 ))   ;
     ----------------------------------------------------------------------------------------------------------------
 
     -- address register --------------------------------------------------------------------------------------------
     addr_reg : reg 
     generic map
     (
-      N => 32
+      N => 23
     )
     port map
     (
@@ -482,6 +482,9 @@ architecture rtl of avs_hram_mainconv_EU is
       dout			=> dq_mux_out
     ); --------------------------------------------------------------------------------------------------------------
 
+    extended_address(22 downto 0) <= addr_reg_out;
+    extended_address(31 downto 23) <= (others => '0');
+
     -- address space selection --------------------------------------------------------------------------------------
     address_mux : mux_4to1
     generic map
@@ -490,7 +493,7 @@ architecture rtl of avs_hram_mainconv_EU is
     )
     port map
     (
-      din_00		=> addr_reg_out,
+      din_00		=> extended_address,
       din_01		=> config0_addr,
       din_10		=> config1_addr,
       din_11		=> generated_address,

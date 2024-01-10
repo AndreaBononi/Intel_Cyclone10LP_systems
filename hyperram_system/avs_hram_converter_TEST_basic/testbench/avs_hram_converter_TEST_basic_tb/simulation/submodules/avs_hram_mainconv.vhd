@@ -14,7 +14,7 @@ port
 	clk                    : in    std_logic;
 	reset_n                : in    std_logic;
 	-- avs signals
-	avs_address            : in    std_logic_vector(31 downto 0);
+	avs_address            : in    std_logic_vector(22 downto 0);
 	avs_read               : in    std_logic;
 	avs_readdata           : out   std_logic_vector(15 downto 0);
 	avs_write              : in    std_logic;
@@ -45,7 +45,7 @@ architecture rtl of avs_hram_mainconv is
     clk                           : in    std_logic;
     reset_n                       : in    std_logic;
     -- avs signals
-    avs_address                   : in    std_logic_vector(31 downto 0);
+    avs_address                   : in    std_logic_vector(22 downto 0);
     avs_read                      : in    std_logic;
     avs_readdata                  : out   std_logic_vector(15 downto 0);
     avs_write                     : in    std_logic;

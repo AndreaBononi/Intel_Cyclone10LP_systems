@@ -3,11 +3,11 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk_x8'
-Slack : 0.335
+Slack : 0.339
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : 1.676
+Slack : 1.654
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'shifted_clock'
@@ -15,11 +15,11 @@ Slack : 3.657
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'rwdsgen'
-Slack : 7.632
+Slack : 7.913
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.389
+Slack : 0.454
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk_x8'
@@ -27,7 +27,7 @@ Slack : 0.454
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'rwdsgen'
-Slack : 0.456
+Slack : 0.455
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'shifted_clock'
@@ -35,19 +35,19 @@ Slack : 6.170
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'rwdsgen'
-Slack : 8.317
+Slack : 8.299
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'clk'
-Slack : 16.405
+Slack : 16.490
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'clk'
-Slack : 0.994
+Slack : 1.096
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'rwdsgen'
-Slack : 9.887
+Slack : 9.865
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_x8'
@@ -59,7 +59,7 @@ Slack : 9.633
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rwdsgen'
-Slack : 9.694
+Slack : 9.735
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'shifted_clock'
@@ -67,11 +67,11 @@ Slack : 9.979
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk_x8'
-Slack : 0.440
+Slack : 0.444
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : 2.317
+Slack : 2.299
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'shifted_clock'
@@ -79,19 +79,19 @@ Slack : 4.280
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'rwdsgen'
-Slack : 7.630
+Slack : 7.948
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.384
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk_x8'
-Slack : 0.401
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'rwdsgen'
-Slack : 0.405
+Slack : 0.406
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'shifted_clock'
@@ -99,19 +99,19 @@ Slack : 5.539
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'rwdsgen'
-Slack : 8.108
+Slack : 8.068
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'clk'
-Slack : 16.372
+Slack : 16.439
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'clk'
-Slack : 0.940
+Slack : 1.029
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'rwdsgen'
-Slack : 9.996
+Slack : 9.973
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_x8'
@@ -119,11 +119,11 @@ Slack : 0.013
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rwdsgen'
-Slack : 9.575
+Slack : 9.630
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : 9.645
+Slack : 9.646
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'shifted_clock'
@@ -131,11 +131,11 @@ Slack : 9.989
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk_x8'
-Slack : 0.805
+Slack : 0.809
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : 4.916
+Slack : 4.866
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'shifted_clock'
@@ -143,19 +143,19 @@ Slack : 6.321
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'rwdsgen'
-Slack : 9.040
+Slack : 9.249
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.154
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'rwdsgen'
-Slack : 0.185
+Slack : 0.160
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk_x8'
-Slack : 0.187
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rwdsgen'
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'shifted_clock'
@@ -163,19 +163,19 @@ Slack : 3.587
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'rwdsgen'
-Slack : 8.163
+Slack : 8.181
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'clk'
-Slack : 17.245
+Slack : 17.292
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'clk'
-Slack : 0.963
+Slack : 1.011
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'rwdsgen'
-Slack : 10.371
+Slack : 10.351
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_x8'
@@ -187,7 +187,7 @@ Slack : 9.349
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rwdsgen'
-Slack : 9.648
+Slack : 9.633
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'shifted_clock'

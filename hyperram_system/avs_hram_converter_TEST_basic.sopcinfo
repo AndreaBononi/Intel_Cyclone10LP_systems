@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 22.1 917 (Future versions may contain additional information.) -->
- <!-- 2024.01.10.12:32:19 -->
+ <!-- 2024.01.10.17:41:43 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1704886339</value>
+  <value>1704904903</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -188,7 +188,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>8589934592</value>
+    <value>16777216</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -487,7 +487,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>avalon_slave_address</name>
     <direction>Input</direction>
-    <width>32</width>
+    <width>23</width>
     <role>address</role>
    </port>
    <port>
@@ -919,7 +919,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>8589934592</value>
+    <value>16777216</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -1218,7 +1218,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>avs_address</name>
     <direction>Input</direction>
-    <width>32</width>
+    <width>23</width>
     <role>address</role>
    </port>
    <port>

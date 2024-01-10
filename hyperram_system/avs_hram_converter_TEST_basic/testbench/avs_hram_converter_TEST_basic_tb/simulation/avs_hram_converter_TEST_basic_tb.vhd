@@ -12,7 +12,7 @@ end entity avs_hram_converter_TEST_basic_tb;
 architecture rtl of avs_hram_converter_TEST_basic_tb is
 	component avs_hram_converter_TEST_basic is
 		port (
-			avalon_slave_address         : in    std_logic_vector(31 downto 0) := (others => 'X'); -- address
+			avalon_slave_address         : in    std_logic_vector(22 downto 0) := (others => 'X'); -- address
 			avalon_slave_read            : in    std_logic                     := 'X';             -- read
 			avalon_slave_readdata        : out   std_logic_vector(15 downto 0);                    -- readdata
 			avalon_slave_write           : in    std_logic                     := 'X';             -- write

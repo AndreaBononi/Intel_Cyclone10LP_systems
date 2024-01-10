@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Jan 10 11:03:02 2024
+Analysis & Synthesis Status : Successful - Wed Jan 10 16:14:35 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : avs_hram_converter
 Top-level Entity Name : avs_hram_mainconv
 Family : Cyclone 10 LP
-Total logic elements : 603
-    Total combinational functions : 442
+Total logic elements : 601
+    Total combinational functions : 440
     Dedicated logic registers : 441
 Total registers : 441
 Total pins : 12
-Total virtual pins : 82
+Total virtual pins : 73
 Total memory bits : 33
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 2

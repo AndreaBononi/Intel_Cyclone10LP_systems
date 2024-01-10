@@ -75,11 +75,11 @@ VCCA3                        : 3         : power  :                   : 2.5V    
 GND                          : 4         : gnd    :                   :         :           :                
 VCCINT                       : 5         : power  :                   : 1.2V    :           :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 6         : input  : 2.5 V             :         : 1         : N              
-hram_DQ[3]                   : 7         : bidir  : 2.5 V             :         : 1         : N              
+hram_DQ[1]                   : 7         : bidir  : 2.5 V             :         : 1         : N              
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 8         : input  : 2.5 V             :         : 1         : N              
 nSTATUS                      : 9         :        :                   :         : 1         :                
-hram_DQ[6]                   : 10        : bidir  : 2.5 V             :         : 1         : N              
-hram_DQ[2]                   : 11        : bidir  : 2.5 V             :         : 1         : N              
+hram_DQ[4]                   : 10        : bidir  : 2.5 V             :         : 1         : N              
+hram_DQ[5]                   : 11        : bidir  : 2.5 V             :         : 1         : N              
 ~ALTERA_DCLK~                : 12        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 13        : input  : 2.5 V             :         : 1         : N              
 nCONFIG                      : 14        :        :                   :         : 1         :                
@@ -96,10 +96,10 @@ GND+                         : 24        :        :                   :         
 GND+                         : 25        :        :                   :         : 2         :                
 VCCIO2                       : 26        : power  :                   : 2.5V    : 2         :                
 GND                          : 27        : gnd    :                   :         :           :                
-hram_DQ[5]                   : 28        : bidir  : 2.5 V             :         : 2         : N              
+hram_DQ[6]                   : 28        : bidir  : 2.5 V             :         : 2         : N              
 VCCINT                       : 29        : power  :                   : 1.2V    :           :                
 GND                          : 30        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 31        :        :                   :         : 2         :                
+hram_DQ[0]                   : 31        : bidir  : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 2         :                
 VCCINT                       : 34        : power  :                   : 1.2V    :           :                
@@ -204,13 +204,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 132       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 133       :        :                   :         : 8         :                
 VCCINT                       : 134       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 135       :        :                   :         : 8         :                
-hCK_enable                   : 136       : output : 2.5 V             :         : 8         : N              
-hram_RWDS                    : 137       : bidir  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 136       :        :                   :         : 8         :                
+hCK_enable                   : 137       : output : 2.5 V             :         : 8         : N              
 VCCINT                       : 138       : power  :                   : 1.2V    :           :                
 VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
 GND                          : 140       : gnd    :                   :         :           :                
-hram_DQ[1]                   : 141       : bidir  : 2.5 V             :         : 8         : N              
-hram_DQ[0]                   : 142       : bidir  : 2.5 V             :         : 8         : N              
-hram_DQ[4]                   : 143       : bidir  : 2.5 V             :         : 8         : N              
-hram_DQ[7]                   : 144       : bidir  : 2.5 V             :         : 8         : N              
+hram_RWDS                    : 141       : bidir  : 2.5 V             :         : 8         : N              
+hram_DQ[2]                   : 142       : bidir  : 2.5 V             :         : 8         : N              
+hram_DQ[7]                   : 143       : bidir  : 2.5 V             :         : 8         : N              
+hram_DQ[3]                   : 144       : bidir  : 2.5 V             :         : 8         : N              
 GND                          : EPAD      :        :                   :         :           :                

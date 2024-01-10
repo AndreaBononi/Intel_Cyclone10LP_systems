@@ -44,7 +44,7 @@ Reading pref.tcl
 # USER_DEFINED_VERILOG_COMPILE_OPTIONS              -- User-defined verilog compile options, added to com/dev_com aliases.
 # [exec] dev_com
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:10 on Jan 10,2024
+# Start time: 17:43:38 on Jan 10,2024
 # vlog /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v -work altera_ver 
 # -- Compiling module global
 # -- Compiling module carry
@@ -126,10 +126,10 @@ Reading pref.tcl
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 12:35:12 on Jan 10,2024, Elapsed time: 0:00:02
+# End time: 17:43:39 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:12 on Jan 10,2024
+# Start time: 17:43:39 on Jan 10,2024
 # vlog /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/220model.v -work lpm_ver 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -193,10 +193,10 @@ Reading pref.tcl
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 12:35:12 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:40 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:12 on Jan 10,2024
+# Start time: 17:43:40 on Jan 10,2024
 # vlog /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/sgate.v -work sgate_ver 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -238,10 +238,10 @@ Reading pref.tcl
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 12:35:12 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:40 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:12 on Jan 10,2024
+# Start time: 17:43:40 on Jan 10,2024
 # vlog /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_mf.v -work altera_mf_ver 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -371,10 +371,10 @@ Reading pref.tcl
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 12:35:13 on Jan 10,2024, Elapsed time: 0:00:01
+# End time: 17:43:41 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:13 on Jan 10,2024
+# Start time: 17:43:41 on Jan 10,2024
 # vlog -sv /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv -work altera_lnsim_ver 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -457,10 +457,10 @@ Reading pref.tcl
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 12:35:13 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:41 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:13 on Jan 10,2024
+# Start time: 17:43:41 on Jan 10,2024
 # vlog /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v -work cyclone10lp_ver 
 # -- Compiling UDP CYCLONE10LP_PRIM_DFFE
 # -- Compiling UDP CYCLONE10LP_PRIM_DFFEAS
@@ -538,26 +538,26 @@ Reading pref.tcl
 # 	cyclone10lp_jtag
 # 	cyclone10lp_crcblock
 # 	cyclone10lp_oscillator
-# End time: 12:35:14 on Jan 10,2024, Elapsed time: 0:00:01
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:14 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_syn_attributes.vhd -work altera 
 # -- Loading package STANDARD
 # -- Compiling package altera_syn_attributes
-# End time: 12:35:14 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:14 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_standard_functions.vhd -work altera 
 # -- Loading package STANDARD
 # -- Compiling package altera_standard_functions
 # -- Compiling package body altera_standard_functions
 # -- Loading package altera_standard_functions
-# End time: 12:35:14 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:14 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/alt_dspbuilder_package.vhd -work altera 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -566,10 +566,10 @@ Reading pref.tcl
 # -- Compiling package alt_dspbuilder_package
 # -- Compiling package body alt_dspbuilder_package
 # -- Loading package alt_dspbuilder_package
-# End time: 12:35:14 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:14 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_europa_support_lib.vhd -work altera 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -580,10 +580,10 @@ Reading pref.tcl
 # -- Compiling package altera_europa_support_lib
 # -- Compiling package body altera_europa_support_lib
 # -- Loading package altera_europa_support_lib
-# End time: 12:35:14 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:14 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd -work altera 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -593,10 +593,10 @@ Reading pref.tcl
 # -- Compiling package dffeas_pack
 # -- Loading package dffeas_pack
 # -- Compiling package altera_primitives_components
-# End time: 12:35:14 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:14 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd -work altera 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -684,19 +684,19 @@ Reading pref.tcl
 # -- Compiling architecture BEHAVIOR of alt_bidir_diff
 # -- Compiling entity alt_bidir_buf
 # -- Compiling architecture BEHAVIOR of alt_bidir_buf
-# End time: 12:35:14 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:14 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/220pack.vhd -work lpm 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package LPM_COMPONENTS
-# End time: 12:35:14 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:14 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/220model.vhd -work lpm 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -792,10 +792,10 @@ Reading pref.tcl
 # -- Compiling architecture LPM_SYN of LPM_OUTpad
 # -- Compiling entity LPM_BIpad
 # -- Compiling architecture LPM_SYN of LPM_BIpad
-# End time: 12:35:15 on Jan 10,2024, Elapsed time: 0:00:01
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:15 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/sgate_pack.vhd -work sgate 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -803,10 +803,10 @@ Reading pref.tcl
 # -- Compiling package sgate_pack
 # -- Compiling package body sgate_pack
 # -- Loading package sgate_pack
-# End time: 12:35:15 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:42 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:15 on Jan 10,2024
+# Start time: 17:43:42 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/sgate.vhd -work sgate 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -856,19 +856,19 @@ Reading pref.tcl
 # -- Compiling architecture sim_arch of oper_bus_mux
 # -- Compiling entity oper_latch
 # -- Compiling architecture sim_arch of oper_latch
-# End time: 12:35:15 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:43 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:15 on Jan 10,2024
+# Start time: 17:43:43 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_mf_components.vhd -work altera_mf 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package altera_mf_components
-# End time: 12:35:15 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:43 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:15 on Jan 10,2024
+# Start time: 17:43:43 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_mf.vhd -work altera_mf 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1107,26 +1107,26 @@ Reading pref.tcl
 # -- Compiling architecture sim_sld_virtual_jtag_basic of sld_virtual_jtag_basic
 # -- Compiling entity altsource_probe
 # -- Compiling architecture sim_altsource_probe of altsource_probe
-# End time: 12:35:16 on Jan 10,2024, Elapsed time: 0:00:01
+# End time: 17:43:43 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:16 on Jan 10,2024
+# Start time: 17:43:43 on Jan 10,2024
 # vlog -sv /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv -work altera_lnsim 
 # 
 # Top level modules:
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:01
+# End time: 17:43:44 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:44 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_lnsim_components.vhd -work altera_lnsim 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package altera_lnsim_components
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:44 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:44 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.vhd -work cyclone10lp 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1226,10 +1226,10 @@ Reading pref.tcl
 # -- Compiling architecture architecture_crcblock of cyclone10lp_crcblock
 # -- Compiling entity cyclone10lp_oscillator
 # -- Compiling architecture architecture_oscillator of cyclone10lp_oscillator
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom /home/andrea/intelFPGA_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_components.vhd -work cyclone10lp 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1238,11 +1238,11 @@ Reading pref.tcl
 # -- Loading package VITAL_Primitives
 # -- Loading package cyclone10lp_atom_pack
 # -- Compiling package cyclone10lp_components
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # [exec] com
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0.vhd -work altclkctrl_0 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1251,28 +1251,28 @@ Reading pref.tcl
 # -- Compiling architecture RTL of avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0_sub
 # -- Compiling entity avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0
 # -- Compiling architecture RTL of avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl_altclkctrl_0
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vlog ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/altera_reset_controller.v -work rst_controller 
 # -- Compiling module altera_reset_controller
 # 
 # Top level modules:
 # 	altera_reset_controller
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vlog ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/altera_reset_synchronizer.v -work rst_controller 
 # -- Compiling module altera_reset_synchronizer
 # 
 # Top level modules:
 # 	altera_reset_synchronizer
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl.vhd -work clkctrl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1280,10 +1280,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl
 # -- Compiling architecture rtl of avs_hram_converter_TEST_basic_avs_hram_converter_clkctrl
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/d_flipflop.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1291,10 +1291,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity d_flipflop
 # -- Compiling architecture behavior of d_flipflop
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/dff_negedge.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1302,10 +1302,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity dff_negedge
 # -- Compiling architecture behavior of dff_negedge
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/sr_flipflop.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1313,10 +1313,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity sr_flipflop
 # -- Compiling architecture behavior of sr_flipflop
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/t_flipflop.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1324,10 +1324,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity t_flipflop
 # -- Compiling architecture behavior of t_flipflop
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/reg.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1335,10 +1335,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity reg
 # -- Compiling architecture behavior of reg
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/reg_negedge.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1346,10 +1346,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity reg_negedge
 # -- Compiling architecture behavior of reg_negedge
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/mux_2to1.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1357,10 +1357,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux_2to1
 # -- Compiling architecture behavior of mux_2to1
-# End time: 12:35:17 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:17 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/mux_4to1.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1368,10 +1368,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux_4to1
 # -- Compiling architecture behavior of mux_4to1
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:01
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/CA_builder.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1379,10 +1379,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity CA_builder
 # -- Compiling architecture rtl of CA_builder
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/CA_unpacker.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1390,10 +1390,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity CA_unpacker
 # -- Compiling architecture rtl of CA_unpacker
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/comparator_Nbit.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1401,10 +1401,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity comparator_Nbit
 # -- Compiling architecture behavior of comparator_Nbit
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/counter_Nbit.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1412,10 +1412,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity counter_Nbit
 # -- Compiling architecture rtl of counter_Nbit
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/conf_builder.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1423,10 +1423,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity conf_builder
 # -- Compiling architecture rtl of conf_builder
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:45 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:45 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/decoder_2bit.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1434,10 +1434,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity decoder_2bit
 # -- Compiling architecture behavior of decoder_2bit
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/fulladder.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1445,10 +1445,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity fulladder
 # -- Compiling architecture behavior of fulladder
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/halfadder.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1456,10 +1456,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity halfadder
 # -- Compiling architecture behavior of halfadder
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/SDR_to_DDR_converter.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1467,10 +1467,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SDR_to_DDR_converter
 # -- Compiling architecture rtl of SDR_to_DDR_converter
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/timer_14bit.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1478,10 +1478,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity timer_14bit
 # -- Compiling architecture rtl of timer_14bit
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/tristate_buffer.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1489,10 +1489,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity tristate_buffer
 # -- Compiling architecture behavior of tristate_buffer
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/voter.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1500,50 +1500,50 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity voter
 # -- Compiling architecture behavior of voter
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/adder_22bit_1pipe.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity adder_22bit_1pipe
 # -- Compiling architecture SYN of adder_22bit_1pipe
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/counter_11bit_updown.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity counter_11bit_updown
 # -- Compiling architecture SYN of counter_11bit_updown
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/dll_90.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity dll_90
 # -- Compiling architecture SYN of dll_90
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/pll_x8.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity pll_x8
 # -- Compiling architecture SYN of pll_x8
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/DDR_to_SDR_converter_EU.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1551,10 +1551,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity DDR_to_SDR_converter_EU
 # -- Compiling architecture rtl of DDR_to_SDR_converter_EU
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/DDR_to_SDR_converter_CU.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1562,10 +1562,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity DDR_to_SDR_converter_CU
 # -- Compiling architecture fsm of DDR_to_SDR_converter_CU
-# End time: 12:35:18 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:18 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/DDR_to_SDR_converter.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1573,10 +1573,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity DDR_to_SDR_converter
 # -- Compiling architecture rtl of DDR_to_SDR_converter
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:01
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/synchronizer_CU.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1584,10 +1584,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity synchronizer_CU
 # -- Compiling architecture fsm of synchronizer_CU
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/synchronizer_EU.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1595,10 +1595,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity synchronizer_EU
 # -- Compiling architecture rtl of synchronizer_EU
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/synchronizer.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1606,10 +1606,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity synchronizer
 # -- Compiling architecture rtl of synchronizer
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_mainconv_CU.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1617,10 +1617,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity avs_hram_mainconv_CU
 # -- Compiling architecture fsm of avs_hram_mainconv_CU
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_mainconv_EU.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1628,10 +1628,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity avs_hram_mainconv_EU
 # -- Compiling architecture rtl of avs_hram_mainconv_EU
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_mainconv.vhd -work avs_hram_mainconv 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1639,10 +1639,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity avs_hram_mainconv
 # -- Compiling architecture rtl of avs_hram_mainconv
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:46 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:46 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic_avs_hram_converter.vhd -work avs_hram_converter 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1650,30 +1650,30 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity avs_hram_converter_TEST_basic_avs_hram_converter
 # -- Compiling architecture rtl of avs_hram_converter_TEST_basic_avs_hram_converter
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/altera_avalon_reset_source.vhd -work avs_hram_converter_TEST_basic_inst_reset_bfm 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity altera_avalon_reset_source
 # -- Compiling architecture behavioral of altera_avalon_reset_source
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/altera_avalon_clock_source.vhd -work avs_hram_converter_TEST_basic_inst_clk_bfm 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity altera_avalon_clock_source
 # -- Compiling architecture behavioral of altera_avalon_clock_source
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/submodules/avs_hram_converter_TEST_basic.vhd -work avs_hram_converter_TEST_basic_inst 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1681,10 +1681,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity avs_hram_converter_TEST_basic
 # -- Compiling architecture rtl of avs_hram_converter_TEST_basic
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vcom ../avs_hram_converter_TEST_basic/testbench/avs_hram_converter_TEST_basic_tb/simulation/avs_hram_converter_TEST_basic_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1692,10 +1692,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity avs_hram_converter_TEST_basic_tb
 # -- Compiling architecture rtl of avs_hram_converter_TEST_basic_tb
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vcom ./tb/clk_rst_generator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1703,10 +1703,10 @@ Reading pref.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity clk_rst_generator
 # -- Compiling architecture behavior of clk_rst_generator
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vcom ./tb/driver.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1717,10 +1717,10 @@ Reading pref.tcl
 # -- Loading package std_logic_textio
 # -- Compiling entity driver
 # -- Compiling architecture tb of driver
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vcom ./tb/monitor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1731,31 +1731,31 @@ Reading pref.tcl
 # -- Loading package std_logic_textio
 # -- Compiling entity monitor
 # -- Compiling architecture tb of monitor
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vlog ./tb/s27kl0641.v 
 # -- Compiling module s27kl0641
 # -- Compiling module BUFFERs27kl0641
 # 
 # Top level modules:
 # 	s27kl0641
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # vlog ./tb/testbench.v 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 12:35:19 on Jan 10,2024, Elapsed time: 0:00:00
+# End time: 17:43:47 on Jan 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # testbench
 # [exec] elab
 # vsim -t ps -L work -L work_lib -L altclkctrl_0 -L rst_controller -L clkctrl -L avs_hram_mainconv -L avs_hram_converter -L avs_hram_converter_TEST_basic_inst_reset_bfm -L avs_hram_converter_TEST_basic_inst_clk_bfm -L avs_hram_converter_TEST_basic_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp testbench -voptargs="+acc" 
-# Start time: 12:35:19 on Jan 10,2024
+# Start time: 17:43:47 on Jan 10,2024
 # Loading work.testbench
 # Loading work.s27kl0641
 # Loading work.BUFFERs27kl0641
@@ -1825,7 +1825,7 @@ Reading pref.tcl
 # Loading ieee.std_logic_textio(body)
 # Loading work.driver(tb)
 # Loading work.monitor(tb)
-# ** Warning: Design size of 26968 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 26977 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/avs_hram_converter/avs_hram_mainconv_inst/EU/addressgen/LPM_ADD_SUB_component/L1/U
@@ -1897,5 +1897,5 @@ Reading pref.tcl
 #    Time: 312160 ns  Iteration: 3  Instance: /testbench/DUT/avs_hram_converter/avs_hram_mainconv_inst/EU/clk_shifter/altpll_component/CYCLONEIII_ALTPLL/M5
 # ** Note: Please run timing simulation to check whether the input clock is operating within the supported VCO range or not.
 #    Time: 312160 ns  Iteration: 3  Instance: /testbench/DUT/avs_hram_converter/avs_hram_mainconv_inst/EU/clk_shifter/altpll_component/CYCLONEIII_ALTPLL/M5
-# End time: 12:39:56 on Jan 10,2024, Elapsed time: 0:04:37
+# End time: 17:47:58 on Jan 10,2024, Elapsed time: 0:04:11
 # Errors: 10, Warnings: 18

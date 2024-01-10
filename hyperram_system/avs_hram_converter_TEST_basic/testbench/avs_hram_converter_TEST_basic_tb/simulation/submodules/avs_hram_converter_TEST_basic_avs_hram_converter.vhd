@@ -11,7 +11,7 @@ use IEEE.numeric_std.all;
 
 entity avs_hram_converter_TEST_basic_avs_hram_converter is
 	port (
-		avalon_slave_address         : in    std_logic_vector(31 downto 0) := (others => '0'); --    avalon_slave.address
+		avalon_slave_address         : in    std_logic_vector(22 downto 0) := (others => '0'); --    avalon_slave.address
 		avalon_slave_read            : in    std_logic                     := '0';             --                .read
 		avalon_slave_readdata        : out   std_logic_vector(15 downto 0);                    --                .readdata
 		avalon_slave_write           : in    std_logic                     := '0';             --                .write
@@ -37,7 +37,7 @@ architecture rtl of avs_hram_converter_TEST_basic_avs_hram_converter is
 		port (
 			clk               : in    std_logic                     := 'X';             -- clk
 			reset_n           : in    std_logic                     := 'X';             -- reset_n
-			avs_address       : in    std_logic_vector(31 downto 0) := (others => 'X'); -- address
+			avs_address       : in    std_logic_vector(22 downto 0) := (others => 'X'); -- address
 			avs_read          : in    std_logic                     := 'X';             -- read
 			avs_readdata      : out   std_logic_vector(15 downto 0);                    -- readdata
 			avs_write         : in    std_logic                     := 'X';             -- write
