@@ -4,7 +4,7 @@
 -- this file instantiates a NiosII-based Platform Designer System (PDS)
 -- the PDS reads the status of the switches 7, 6, 5 and 4 and drives the LEDs consequently
 -- a PLL is intantiated to provide the clock to the PDS
--- switches 0 is employed to reset the nios processor and the pll
+-- switches 0 is employed to reset the nios processor and the PLL
 
 library 	ieee;
 use 			ieee.std_logic_1164.all;
