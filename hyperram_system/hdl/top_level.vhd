@@ -43,11 +43,13 @@ end top_level;
 architecture behavior of top_level is
 
   -- SIGNALS ----------------------------------------------------------------------------------------
-	signal hCK          : std_logic;
-  signal clk_50MHz    : std_logic;
-  signal pds_reset    : std_logic;
-  signal pll_reset    : std_logic;
-  signal switches     : std_logic_vector(3 downto 0);
+	signal hCK                      : std_logic;
+  signal clk_50MHz                : std_logic;
+  signal pds_reset                : std_logic;
+  signal pll_reset                : std_logic;
+  signal switches                 : std_logic_vector(3 downto 0) := "0000";
+  signal pllreset_generator_out   : std_logic;
+  signal switch0_generator_in     : std_logic;
   ---------------------------------------------------------------------------------------------------
 
   -- COMPONENT: PLL (from 10 MHz to 50 MHz) ---------------------------------------------------------
@@ -106,7 +108,7 @@ architecture behavior of top_level is
     pll_inst: pll 
     port map 
     (
-      areset	  => reset,
+      areset	  => pll_reset,
       inclk0    => mainClk,
       c0	      => clk_50MHz
     ); ----------------------------------------------------------------------------------------------
@@ -124,8 +126,10 @@ architecture behavior of top_level is
       clear_n		=> '1',
       reset_n		=> '1',
       din       => '1',
-      dout			=> pll_reset
+      dout			=> pllreset_generator_out
     ); ----------------------------------------------------------------------------------------------
+
+    pll_reset <= not pllreset_generator_out;
 
     -- PDS reset generator --------------------------------------------------------------------------
     pdsreset_generator: delayer
@@ -143,6 +147,8 @@ architecture behavior of top_level is
       dout			=> pds_reset
     ); ----------------------------------------------------------------------------------------------
 
+    switch0_generator_in <= '1' xor switches(0);
+
     -- switch 0 generator ---------------------------------------------------------------------------
     switch0_generator: delayer
     generic map
@@ -155,7 +161,7 @@ architecture behavior of top_level is
       enable		=> '1',
       clear_n		=> '1',
       reset_n		=> '1',
-      din       => '1',
+      din       => switch0_generator_in,
       dout			=> switches(0)
     ); ----------------------------------------------------------------------------------------------
 
