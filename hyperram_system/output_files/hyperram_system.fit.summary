@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Jan 11 12:16:52 2024
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : hyperram_system
+Top-level Entity Name : top_level
+Family : Cyclone 10 LP
+Device : 10CL025YE144C8G
+Timing Models : Final
+Total logic elements : 3,738 / 24,624 ( 15 % )
+    Total combinational functions : 3,235 / 24,624 ( 13 % )
+    Dedicated logic registers : 2,341 / 24,624 ( 10 % )
+Total registers : 2341
+Total pins : 62 / 77 ( 81 % )
+Total virtual pins : 0
+Total memory bits : 95,226 / 608,256 ( 16 % )
+Embedded Multiplier 9-bit elements : 6 / 132 ( 5 % )
+Total PLLs : 3 / 4 ( 75 % )

@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hBusCs",
+					"strict" : false
+				},
+				{
+					"name" : "hBusRst",
+					"strict" : false
+				},
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "hBusRwds",
+					"strict" : false
+				},
+				{
+					"name" : "mainClk",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
