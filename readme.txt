@@ -42,4 +42,5 @@ Make sure to match the following pathnames or re-assign the memory initializatio
 # /home/andrea/Documents/Tesi_287628/287628/basic_system/SBT_workspace/basic_system/mem_init/basic_system_OCRAM.hex
 # /home/andrea/Documents/Tesi_287628/287628/blockram_system_v1/SBT_workspace/blockram_system_v1/mem_init/blockram_system_v1_instruction_OCRAM.hex
 # /home/andrea/Documents/Tesi_287628/287628/blockram_system_v2/SBT_workspace/blockram_system_v2/mem_init/blockram_system_v2_instruction_OCROM.hex
+# /home/andrea/Documents/Tesi_287628/287628/hyperram_system/SBT_workspace/avs_hram_converter_TEST_advanced/mem_init/avs_hram_converter_TEST_advanced_instruction_OCROM.hex
 --------------------------------------------------------------------------------------------------------------

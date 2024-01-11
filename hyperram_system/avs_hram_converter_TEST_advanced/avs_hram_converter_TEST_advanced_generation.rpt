@@ -1,0 +1,104 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced.qsys --synthesis=VHDL --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis --family="Cyclone 10 LP" --part=10CL006YE144A7G
+Progress: Loading hyperram_system/avs_hram_converter_TEST_advanced.qsys
+Progress: Reading input file
+Progress: Adding avs_hram_converter [avs_hram_converter 1.0]
+Progress: Parameterizing module avs_hram_converter
+Progress: Adding clk_50MHz [clock_source 22.1]
+Progress: Parameterizing module clk_50MHz
+Progress: Adding instruction_OCROM [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module instruction_OCROM
+Progress: Adding leds [altera_avalon_pio 22.1]
+Progress: Parameterizing module leds
+Progress: Adding nios2 [altera_nios2_gen2 22.1]
+Progress: Parameterizing module nios2
+Progress: Adding switches [altera_avalon_pio 22.1]
+Progress: Parameterizing module switches
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: avs_hram_converter_TEST_advanced.avs_hram_converter.clkctrl.altclkctrl_0: Targeting device family: Cyclone 10 LP.
+: avs_hram_converter_TEST_advanced.avs_hram_converter.clkctrl.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: avs_hram_converter_TEST_advanced.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: avs_hram_converter_TEST_advanced: Generating avs_hram_converter_TEST_advanced "avs_hram_converter_TEST_advanced" for QUARTUS_SYNTH
+Info: avs_hram_converter: "avs_hram_converter_TEST_advanced" instantiated avs_hram_converter "avs_hram_converter"
+Info: instruction_OCROM: Starting RTL generation for module 'avs_hram_converter_TEST_advanced_instruction_OCROM'
+Info: instruction_OCROM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_instruction_OCROM --dir=/tmp/alt9733_2490838223476017628.dir/0002_instruction_OCROM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9733_2490838223476017628.dir/0002_instruction_OCROM_gen//avs_hram_converter_TEST_advanced_instruction_OCROM_component_configuration.pl  --do_build_sim=0  ]
+Info: instruction_OCROM: Done RTL generation for module 'avs_hram_converter_TEST_advanced_instruction_OCROM'
+Info: instruction_OCROM: "avs_hram_converter_TEST_advanced" instantiated altera_avalon_onchip_memory2 "instruction_OCROM"
+Info: leds: Starting RTL generation for module 'avs_hram_converter_TEST_advanced_leds'
+Info: leds:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_leds --dir=/tmp/alt9733_2490838223476017628.dir/0003_leds_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9733_2490838223476017628.dir/0003_leds_gen//avs_hram_converter_TEST_advanced_leds_component_configuration.pl  --do_build_sim=0  ]
+Info: leds: Done RTL generation for module 'avs_hram_converter_TEST_advanced_leds'
+Info: leds: "avs_hram_converter_TEST_advanced" instantiated altera_avalon_pio "leds"
+Info: nios2: "avs_hram_converter_TEST_advanced" instantiated altera_nios2_gen2 "nios2"
+Info: switches: Starting RTL generation for module 'avs_hram_converter_TEST_advanced_switches'
+Info: switches:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_switches --dir=/tmp/alt9733_2490838223476017628.dir/0004_switches_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9733_2490838223476017628.dir/0004_switches_gen//avs_hram_converter_TEST_advanced_switches_component_configuration.pl  --do_build_sim=0  ]
+Info: switches: Done RTL generation for module 'avs_hram_converter_TEST_advanced_switches'
+Info: switches: "avs_hram_converter_TEST_advanced" instantiated altera_avalon_pio "switches"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "avs_hram_converter_TEST_advanced" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "avs_hram_converter_TEST_advanced" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "avs_hram_converter_TEST_advanced" instantiated altera_reset_controller "rst_controller"
+Info: avs_hram_mainconv: "avs_hram_converter" instantiated avs_hram_mainconv "avs_hram_mainconv"
+Info: clkctrl: "avs_hram_converter" instantiated clkctrl "clkctrl"
+Info: cpu: Starting RTL generation for module 'avs_hram_converter_TEST_advanced_nios2_cpu'
+Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_nios2_cpu --dir=/tmp/alt9733_2490838223476017628.dir/0008_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9733_2490838223476017628.dir/0008_cpu_gen//avs_hram_converter_TEST_advanced_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.01.11 10:04:44 (*) Starting Nios II generation
+Info: cpu: # 2024.01.11 10:04:44 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.01.11 10:04:44 (*)   Creating all objects for CPU
+Info: cpu: # 2024.01.11 10:04:44 (*)     Testbench
+Info: cpu: # 2024.01.11 10:04:45 (*)     Instruction decoding
+Info: cpu: # 2024.01.11 10:04:45 (*)       Instruction fields
+Info: cpu: # 2024.01.11 10:04:45 (*)       Instruction decodes
+Info: cpu: # 2024.01.11 10:04:45 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2024.01.11 10:04:45 (*)       Instruction controls
+Info: cpu: # 2024.01.11 10:04:45 (*)     Pipeline frontend
+Info: cpu: # 2024.01.11 10:04:45 (*)     Pipeline backend
+Info: cpu: # 2024.01.11 10:04:47 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.01.11 10:04:47 (*)   Creating plain-text RTL
+Info: cpu: # 2024.01.11 10:04:48 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'avs_hram_converter_TEST_advanced_nios2_cpu'
+Info: cpu: "nios2" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_data_master_translator"
+Info: avs_hram_converter_avalon_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "avs_hram_converter_avalon_slave_translator"
+Info: nios2_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_data_master_agent"
+Info: avs_hram_converter_avalon_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "avs_hram_converter_avalon_slave_agent"
+Info: avs_hram_converter_avalon_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "avs_hram_converter_avalon_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: nios2_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_data_master_limiter"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: instruction_OCROM_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "instruction_OCROM_s1_burst_adapter"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avs_hram_converter_avalon_slave_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "avs_hram_converter_avalon_slave_cmd_width_adapter"
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: altclkctrl_0: Generating top-level entity avs_hram_converter_TEST_advanced_avs_hram_converter_clkctrl_altclkctrl_0.
+Info: altclkctrl_0: "clkctrl" instantiated altclkctrl "altclkctrl_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: avs_hram_converter_TEST_advanced: Done "avs_hram_converter_TEST_advanced" with 39 modules, 102 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
