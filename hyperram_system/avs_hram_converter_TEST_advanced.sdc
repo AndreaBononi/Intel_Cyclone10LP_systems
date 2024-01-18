@@ -7,6 +7,9 @@ create_clock -name {mainClk} -period 100.000 -waveform { 0.000 50.000 } [get_por
 # create generated clock ------------------------------------------------------------------------
 create_generated_clock -name clk_50MHz -source [get_pins {pll_inst|altpll_component|auto_generated|pll1|inclk[0]}] -multiply_by 5 -duty_cycle 50 [get_pins {pll_inst|altpll_component|auto_generated|pll1|clk[0]}]
 
+# create generated clock ------------------------------------------------------------------------
+create_generated_clock -name clk_10kHz -source [get_pins {clkdiv_inst|altpll_component|auto_generated|pll1|inclk[0]}] -divide_by 1000 -duty_cycle 50 [get_pins {clkdiv_inst|altpll_component|auto_generated|pll1|clk[0]}]
+
 # clock uncertainty -----------------------------------------------------------------------------
 derive_clock_uncertainty
 

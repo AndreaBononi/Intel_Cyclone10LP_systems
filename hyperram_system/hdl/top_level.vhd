@@ -45,6 +45,7 @@ architecture behavior of top_level is
   -- SIGNALS ----------------------------------------------------------------------------------------
 	signal hCK                      : std_logic;
   signal clk_50MHz                : std_logic;
+  signal clk_10kHz                : std_logic;
   signal pds_reset                : std_logic;
   signal pll_reset                : std_logic;
   signal switches                 : std_logic_vector(3 downto 0) := "0000";
@@ -54,6 +55,16 @@ architecture behavior of top_level is
 
   -- COMPONENT: PLL (from 10 MHz to 50 MHz) ---------------------------------------------------------
 	component pll
+	port
+	(
+		areset		: in  std_logic  := '0';
+		inclk0		: in  std_logic  := '0';
+		c0		    : out std_logic 
+	);
+	end component; ------------------------------------------------------------------------------------
+
+  -- COMPONENT: clock divider (from 10 MHz to 10 kHz) -----------------------------------------------
+	component clkdiv
 	port
 	(
 		areset		: in  std_logic  := '0';
@@ -113,6 +124,15 @@ architecture behavior of top_level is
       c0	      => clk_50MHz
     ); ----------------------------------------------------------------------------------------------
 
+    -- clock divider --------------------------------------------------------------------------------
+    clkdiv_inst: clkdiv 
+    port map 
+    (
+      areset	  => pll_reset,
+      inclk0    => mainClk,
+      c0	      => clk_10kHz
+    ); ----------------------------------------------------------------------------------------------
+
     -- PLL reset generator --------------------------------------------------------------------------
     pllreset_generator: delayer
     generic map
@@ -157,7 +177,7 @@ architecture behavior of top_level is
     )
     port map
     (
-      clk				=> mainClk,
+      clk				=> clk_10kHz,
       enable		=> '1',
       clear_n		=> '1',
       reset_n		=> '1',

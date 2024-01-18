@@ -17,6 +17,7 @@ com
 vcom ../hdl/d_flipflop.vhd
 vcom ../hdl/delayer.vhd
 vcom ../pll/pll.vhd
+vcom ../clkdiv/clkdiv.vhd
 vcom ../hdl/top_level.vhd
 
 # testbench files
@@ -34,6 +35,7 @@ elab -voptargs=+acc
 add wave -position insertpoint  \
 sim:/testbench/top_level_inst/clk_50MHz \
 sim:/testbench/clk_10MHz \
+sim:/testbench/top_level_inst/clk_10kHz \
 sim:/testbench/top_level_inst/switches(3) \
 sim:/testbench/top_level_inst/switches(2) \
 sim:/testbench/top_level_inst/switches(1) \

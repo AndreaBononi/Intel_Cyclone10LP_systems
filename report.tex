@@ -1,0 +1,446 @@
+% Definizione del tipo di documento:
+\documentclass[10pt, english, a4paper, titlepage, oneside]{book}
+
+% Elenco package:
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, left=1.5cm, bottom=2cm, right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{graphicx,caption}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{gensymb}
+\usepackage{eurosym}
+\usepackage{array}
+\usepackage[acronym,nopostdot]{glossaries}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+% Formato intestazione capitoli:
+\titleformat{\chapter}
+{\normalfont\Huge\filcenter\bf}
+{}
+{1pc}
+{\MakeUppercase}
+[\titlerule]
+\fancypagestyle{plain}
+{
+  \fancyhf{}
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Posizione intestazione capitoli:
+\titlespacing{\chapter}{0cm}{-1cm}{1.5cm}
+
+% Formato intestazione pagina:
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[R]{\textbf{\MakeUppercase{\leftmark}}}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+
+% Lista acronimi
+\makeglossaries
+% use them with \acrshort{acronym_name} and \acrlong{acronym_name}
+\newacronym{FPGA}{FPGA}{Field Programmable Gate Array}
+\newacronym{MCU}{MCU}{MicroController Unit}
+\newacronym{IP}{IP}{Intellectual Property}
+\newacronym{RAM}{RAM}{Random Access Memory}
+\newacronym{OCRAM}{OCRAM}{On-Chip Random Access Memory}
+\newacronym{ROM}{ROM}{Read-Only Memory}
+\newacronym{OCROM}{OCROM}{On-Chip Read-Only Memory}
+\newacronym{SDR}{SDR}{Single Data Rate}
+\newacronym{DDR}{DDR}{Double Data Rate}
+
+% CREAZIONE DOCUMENTO:
+\begin{document} 
+
+% Creazione titolo:
+\begin{titlepage}
+    \centerline{ \Huge\bf POLITECNICO DI TORINO }
+    \vspace{2cm}
+    \centerline{ \large Dipartimento di Elettronica e Telecomunicazioni } 
+    \vspace{5mm}
+    \centerline{ \large Corso di Laurea in Ingegneria Elettronica }
+    \vspace{5mm}
+    \centerline{ \large Tesi di Laurea Magistrale }
+    \vspace{3cm}
+    \centerline{ \includegraphics[width=4cm]{logopoli} }
+    \vspace{3cm}
+    \centerline{ \Huge\bf Design of FPGA IP for modular }
+    \vspace{5mm}
+    \centerline{ \Huge\bf architectures on VirtLAB board }
+    \vspace{4cm}
+    \centerline{ \large \textbf{Relatore}: prof. Massimo Ruo Roch }
+    \vspace{5mm}
+    \centerline{ \large \textbf{Laureando}: Andrea Bononi }
+\end{titlepage}
+
+% Creazione indice:
+\tableofcontents
+
+% Creazione glossario:
+\printglossary[type=\acronymtype, nonumberlist]
+
+% -------------------------------------------------------------------------------------------------
+\chapter{INTRODUCTION}
+\noindent The recent SARS-CoV2 pandemic put a great strain on university courses. Despite the access to physical infrastructures was prohibited, videoconferencing and recorded videos allowed to proceed with the lectures without too many troubles. However, engineering teaching should also involve real laboratory experiences to provide students fundamental skills. When it comes to electronic lessons, it was usually not possible to provide the students the majority of the required instruments (such as digital oscilloscopes, signal generators and spectrum analyzers) given their high cost.  \\ \\ 
+In this scenario, a low-cost experimental printed circuit board, namely the VirtLAB board, was developed at Politecnico di Torino to provide electronic students access to physical devices. Its architecture can be divided in two main sections \cite{virtlab}:
+\vspace{2mm}
+\begin{itemize}
+    \item \textbf{User section}: it contains an \acrshort{MCU} (STM32L496) and an \acrshort{FPGA} (Intel Cyclone 10 LP), which can be easily programmed by the students for educational purposes, together with some LEDs and some switches.
+    \vspace{1mm}
+    \item \textbf{Master section}: it contains an MCU (STM32L496), an FPGA (Intel Cyclone 10 LP) and two external memories (a Hyper\acrshort{RAM} and a QSPI flash) to be used as generic data storage. From the point of view of a student, this side is already programmed in order to provide a virtual replacement of the bench equipment.
+\end{itemize} 
+\vspace{3mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{virtlab_block_diagram.png}
+    \vspace{5mm}
+    \caption{VirtLAB board block diagram}
+    \label{virtlab_block_diagram}
+\end{figure}
+\vspace{5mm}
+Currently, it is still not possible to exploit the master section to its full potential. In particular, the FPGA can still not be properly used to implement many of the useful applications it may realize. In this regard, the best approach would be to create modular architectures using generic \acrshort{IP} cores that share a common communication protocol, namely the Intel Avalon interface. In this way, we can make full use of the features provided by the Intel CAD software:
+\vspace{2mm}
+\begin{itemize}
+    \item Several general-purpose IP cores with an Intel Avalon interface are already provided by Intel, such as on-chip memories, processors and so on.
+    \vspace{1mm}
+    \item The Intel CAD software is able to automatically create the interconnection logic among \acrshort{IP} cores that use an Intel Avalon interface.
+\end{itemize}
+\vspace{4mm}
+At the moment, it is not possible to create an Avalon-based modular architecture able to communicate with any of the external memory storage devices. Indeed, both the HyperRAM interface and the QSPI interface are quite different from the Intel Avalon interface. This paper deals with the design, developement and testing of a custom IP core able to convert the HyperRAM interface into an Intel Avalon interface, so that it can be easily managed by any modular architecture. The whole document refers to a HyperRAM model S27KL0641DA, i.e. the exact model employed in the VirtLAB board.
+% -------------------------------------------------------------------------------------------------
+
+% -------------------------------------------------------------------------------------------------
+\chapter{SPECIFICATIONS} \label{specifications}
+\section{Avalon Memory Mapped Interface}
+\vspace{2mm}
+The Avalon interface family defines different interfaces for different applications. However, what really matters for our purposes is the Avalon Memory Mapped interface, an address-based read/write interface typical of Host-Agent connections.
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=12cm}
+    \includegraphics[width=13cm]{avalonMM_block_diagram.png}
+    \vspace{5mm}
+    \caption{\centering Typical Host-Agent system using components with an Avalon Memory Mapped interface (highlighted in light blue). The HyperRAM can be connected to the system only by using a suitable interface converter.}
+    \label{avalonMM_block_diagram}
+\end{figure}
+\vspace{4mm}
+\noindent The Avalon Memory Mapped interface includes some always-required signals and several optional signals that might be useful depending on the peripheral. In our case, we have to make the following considerations:
+\vspace{2mm}
+\begin{itemize}
+    \item In general, the number of clock cycles required to read/write the HyperRAM is variable.
+    \vspace{1mm}
+    \item The system must support burst operations.
+\end{itemize} 
+\vspace{4mm}
+Consequently, the Avalon Memory Mapped interface must include the following signals:
+\vspace{2mm}
+\begin{itemize}
+    \item \textit{address}: the address to work with.
+    \vspace{1mm}
+    \item \textit{read}: it is asserted to indicate a read transfer.
+    \vspace{1mm}
+    \item \textit{write}: it is asserted to indicate a write transfer.
+    \vspace{1mm}
+    \item \textit{readdata}: the data read from the agent as a result of a a read transfer.
+    \vspace{1mm}
+    \item \textit{writedata}: the data to be written during a write transfer.
+    \vspace{1mm}
+    \item \textit{readdatavalid}: when asserted, it indicates that the readdata signal contains a valid data.
+    \vspace{1mm}
+    \item \textit{burstcount}: it indicates the number of transfers of a burst operation.
+    \vspace{1mm}
+    \item \textit{waitrequest}: it is asserted by the agent when it is unable to respond to a read/write request.
+\end{itemize} 
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=17cm]{avalonMM_write_op.png}
+    \vspace{5mm}
+    \caption{Avalon Memory Mapped interface - write operation timing diagram}
+    \label{avalonMM_write_op}
+\end{figure}
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=17cm]{avalonMM_read_op.png}
+    \vspace{5mm}
+    \caption{Avalon Memory Mapped interface, read operation timing diagram}
+    \label{avalonMM_read_op}
+\end{figure}
+\vspace{6mm}
+\section{HyperRAM Interface} \label{HyperRAM Interface}
+\vspace{2mm}
+The HyperRAM interface is based on an 8-bit \acrshort{DDR} data bus used to transfer data, addresses and commands. It contains a couple of configuration registers that can be written in the same way as the memory locations, but using dedicated addresses. The interface includes the following signals:
+\vspace{2mm}
+\begin{itemize}
+    \item \textit{CK}, \textit{CK}\# : differential clock.
+    \vspace{1mm}
+    \item \textit{RESET}\# : active-low hardware reset.
+    \vspace{1mm}
+    \item \textit{CS}\# : active-low chip select.
+    \vspace{1mm}
+    \item \textit{DQ}: 8-bit IO bus for data, addresses and commands.
+    \vspace{1mm}
+    \item \textit{RWDS}: read/write data strobe with the following functionality:
+    \begin{itemize}
+        \item During a read data transfer it is edge-aligned with DQ and it can be used to sample it.
+        \item During a write data transfer it works as data masking signal.
+        \item During a command transfer it indicates if additional latency is required.
+    \end{itemize}
+\end{itemize}
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=16.5cm}
+    \includegraphics[width=17cm]{hram_read.png}
+    \vspace{5mm}
+    \caption{HyperRAM interface, read operation timing diagram. During the command transfer, the host drives DQ and the memory drives RWDS. During the data transfer, the memory drives both DQ and RWDS.}
+    \label{hram_read}
+\end{figure}
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=16.5cm}
+    \includegraphics[width=17cm]{hram_write.png}
+    \vspace{5mm}
+    \caption{\centering HyperRAM interface, write operation timing diagram. During the command transfer, the host drives DQ and the memory drives RWDS. During the data transfer, the host drives both DQ and RWDS.}
+    \label{hram_write}
+\end{figure}
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=16.5cm}
+    \includegraphics[width=17cm]{hram_write_reg.png}
+    \vspace{5mm}
+    \caption{\centering HyperRAM interface, register write operation timing diagram. DQ is always driven by the host.}
+    \label{hram_write_reg}
+\end{figure}
+\vspace{6mm}
+\section{HyperRAM Specifications}
+\vspace{4mm}
+\subsection{Command-Address }
+As we saw in section \ref{HyperRAM Interface}, the operation command and the addres are grouped in a 48-bit block, which is sent to the memory by the host one byte for clock level. Every bit of this block has its own meaning:
+\vspace{4mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=17cm]{CA.png}
+    \vspace{3mm}
+    \caption{Command-Address (CA) bit assignment}
+    \label{CA}
+\end{figure}
+\vspace{1mm}
+\subsection{Configuration Registers}
+The S27KL0641DA HyperRAM contains two configuration registers that allow the user to set up different parameters.
+\vspace{2mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=17cm]{config_CA.png}
+    \vspace{3mm}
+    \caption{Command-Address configuration to access the configuration registers}
+    \label{config_CA}
+\end{figure}
+\vspace{1mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=17cm]{CR1.png}
+    \vspace{3mm}
+    \caption{Configuration Register 1 bit assignment}
+    \label{config_CA}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=17cm]{CR0.png}
+    \vspace{3mm}
+    \caption{Configuration Register 0 bit assignment}
+    \label{config_CA}
+\end{figure}
+\vspace{1mm}
+\subsection{Deep Power Down Mode}
+The HyperRAM can enter a special mode, called Deep Power Down (DPD) mode, in which the current consumption is driven to the lowest possible level. This mode is entered setting the \textit{Deep Power Down Enable} bit in CR0. The next access to the device, driving \textit{CS}\# low then high (dummy transaction), will cause the device to exit the DPD mode, as well as a hardware reset. A certain time is required to enter or exit the DPD mode.
+\vspace{4mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm]{DPD_timing.png}
+    \vspace{3mm}
+    \caption{DPD timing diagram}
+    \label{DPD_timing}
+\end{figure}
+\vspace{1mm}
+\subsection{Power-Up}
+The device must not be selected during the power-up, \textit{CS}\# must remain high for a certain time. If \textit{RESET}\# is low during the power-up, the time counting does not starts until \textit{RESET}\# goes high.
+\vspace{4mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{powerup1.png}
+    \vspace{3mm}
+    \caption{Power-up with \textit{RESET}\# high}
+    \label{powerup1}
+\end{figure}
+\vspace{2mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{powerup2.png}
+    \vspace{3mm}
+    \caption{Power-up with \textit{RESET}\# low}
+    \label{powerup2}
+\end{figure}
+\vspace{1mm}
+\subsection{Timing Specifications}
+During a read/write operation, several timing parameters shall be respected:
+\vspace{4mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=18cm]{hram_timing_read.png}
+    \vspace{1mm}
+    \caption{Read timing parameters}
+    \label{hram_timing_read}
+\end{figure}
+\vspace{1mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=18cm]{hram_timing_write.png}
+    \vspace{1mm}
+    \caption{Write timing parameters}
+    \label{hram_timing_write}
+\end{figure}
+\vspace{2mm}
+\section{Converter Design Specifications} \label{Converter Design Specifications}
+\vspace{2mm}
+Every HyperRAM interface uses a 32-bit addressing. However, the S27KL0641DA device is a 64 Mb memory partitioned in 16-bit words, therefore its addressing takes only 22 bits. On the other hand, register space access requires dedicated addresses that are not in conflict with the ones related to the memory location. \\ \\
+In this design, it was decided to virtualize the memory access. To be more precise, the Avalon Memory Mapped interface refers to a 23-bit virtual address, that is translated by the interface converter in the corresponding physical address of the HyperRAM using the following approach:
+\vspace{2mm}
+\begin{itemize}
+    \item The virtual addresses from \textcolor{RoyalBlue}{0} to \textcolor{RoyalBlue}{$2^{22}-1$} correspond to the physical memory location addresses from \textcolor{RoyalBlue}{0} to \textcolor{RoyalBlue}{$2^{22}-1$}.
+    \vspace{1mm}
+    \item The virtual address \textcolor{RoyalBlue}{$2^{22}$} refers to a virtual configuration register that allows the user to set up different parameters. From the point of view of the Avalon interface, the host can only access the virtual configuration register, whereas the physical configuration registers of the HyperRAM cannot be accessed. In this way, it is possible to decide which parameters can be dynamically configured and which cannot.
+    \vspace{1mm}
+    \item The virtual addresses from \textcolor{RoyalBlue}{$2^{22} + 1$} to \textcolor{RoyalBlue}{$2^{23} - 1$} are reserved for future expansions.
+\end{itemize}
+\vspace{4mm}
+The 16-bit virtual configuration register (VCR) is organized in the following way:
+\vspace{4mm}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|M{2cm}|M{5cm}|p{8cm}|}
+            \hline
+            \rowcolor{lightgray} VCR BIT & FUNCTION & \multicolumn{1}{|c|}{SETTINGS} \\
+            \hline
+            \multirow{2}{*}{0} & \multirow{2}{*}{Deep Power Down Enable} & 0: normal operation (default) \\
+            & & 1: enter DPD mode \\
+            \hline
+            \multirow{2}{*}{1} & \multirow{2}{*}{Fixed Latency Enable} & 0: variable latency (default) \\
+            & & 1: fixed latency \\
+            \hline 
+            2-15 & Reserved & Reserved for future expansions. \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+\renewcommand{\arraystretch}{1}
+\vspace{1mm}
+\noindent As far as the frequency is concerned, the S27KL0641DA can work up to 100 MHz. However, the interface converter is designed to work at 50 MHz, sending to the memory a clock at that same frequency (chapter ?? section ??).
+% -------------------------------------------------------------------------------------------------
+
+% -------------------------------------------------------------------------------------------------
+\chapter{TEST ENVIRONMENT}
+\noindent Before starting the interface converter design, it is necessary to define a test environment for it. We can exploit some of the IP cores provided by the CAD software (which are of course well-functioning) and the HDL model of the HyperRAM provided by the manufacturer to create an Avalon Memory Mapped system suitable for the test. Overall, the test environment is an processor-based system that read some inputs and change the status of some LEDs according to it. The HyperRAM is employed as data memory for the processor.
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{test_environment.png}
+    \vspace{3mm}
+    \caption{Test environment for the interface converter}
+    \label{test_environment}
+\end{figure}
+\vspace{6mm}
+\noindent To ensure that the test environment is well-functioning, the easiest way is to replace the DUT and the HyperRAM with an on-chip RAM, that can be obtained simply by using an IP core provided by the CAD software.
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{test_environment_test.png}
+    \vspace{3mm}
+    \caption{Test environment verification}
+    \label{test_environment_test}
+\end{figure}
+% -------------------------------------------------------------------------------------------------
+
+% -------------------------------------------------------------------------------------------------
+\chapter{DESIGN PARTITIONING}
+% -------------------------------------------------------------------------------------------------
+\noindent Apart from clock and reset, the interface converter deals just with the Avalon signals and the HyperRAM signals. On the Avalon side, the address line is on 23 bits and the data line is on 16 bits, as described in chapter \ref{specifications}, section \ref{Converter Design Specifications}. The burstcount signal is on 11 bits, i.e the maximum possible parallelism, corresponding to a theoretical maximum burst lenght equal to $2^{10}$ as stated in the Avalon documentation. 
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm]{toplevel.png}
+    \vspace{3mm}
+    \caption{Blackbox of the interface converter}
+    \label{toplevel}
+\end{figure}
+\vspace{4mm}
+\noindent Unfortunately, it is usually not possible to push the burst lenght up to the theoretical maximum, since the duration of any memory operation is upper bounded. Considering that the latency of the converter depends on its implementation and that the memory access time can vary, it is not possible to estimate the actual upper bound of the burst lenght in advance. For this reason, the maximum parallelism is employed and the actual maximum lenght will be estimated in different conditions by means of simulations (chapter \ref{test result}).
+\\ \\
+\noindent The design follows a top-down approach. At first, it is important to point out the main features to be implemented:
+\vspace{2mm}
+\begin{itemize}
+    \setlength\itemsep{2mm}
+    \item \textbf{Command-Address building}: the Avalon input signals must be re-organized arranging the CA.
+    \item \textbf{Configuration registers building}: every time the virtual configuration register is written, it is necessary to convert its content so that the physical configuration registers of the memory can be properly updated.
+    \item \textbf{\acrshort{SDR} to \acrshort{DDR} conversion}: the 16-bit SDR data provided at the Avalon interface must be converted in an 8-bit DDR data in order to put it on the memory data bus.
+    \item \textbf{DDR to SDR conversion and synchronization}: the 8-bit DDR data provided by the memory (which is synchronous with RWDS and not with the internal clock) must be converted in a 16-bit SDR data and synchronized with the internal clock.
+    \item \textbf{Clock shifting and clock gating}: the internal clock must by shifted by 90 degrees and properly gated before being sent to the memory.
+    \item \textbf{Timer}: the system must be aware the passage of time to satisfy all the timing requirements.
+    \item \textbf{Address reconstruction}. As we can see in figure \ref{avalonMM_write_op}, the host can interrupt a write operation at any time. However, the HyperRAM does not support this feature. For this reason, the interface converter must end the operation and start a new one when the burst is resumed. The new operation shall begin at the right address, i.e. the one immediately after the last written location. 
+\end{itemize}
+\vspace{4mm}
+The CAD software already provides an IP implementing a clock controller. Indeed, we just have to create a custom IP (\textit{avs\_hram\_mainconv} in figure \ref{clkctrl}) implementing all the features but the clock gating and combine it with the clock controller IP (\textit{clkctrl} in figure \ref{clkctrl}) to create the interface controller (\textit{avs\_hram\_converter} in figure \ref{toplevel}). The architecture of the \textit{avs\_hram\_converter} IP is represented in figure \ref{mainconv}:
+\vspace{6mm}
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=15.5cm}
+    \includegraphics[width=14.5cm]{clkctrl.png}
+    \vspace{4mm}
+    \caption{\centering Combination of the clock controller IP implementing the clock gating (already provided by the CAD software) and the custom IP implementing all the other required functionalities.}
+    \label{clkctrl}
+\end{figure}
+\vspace{4mm}
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=18cm}
+    \includegraphics[width=18cm]{mainconv.png}
+    \caption{\centering Architecture of the \textit{avs\_hram\_mainconv} custom IP}
+    \label{mainconv}
+\end{figure}
+\vspace{6mm}
+The goal of each block represented in figure \ref{mainconv} is summarized in table \ref{}:
+
+
+
+
+
+
+% -------------------------------------------------------------------------------------------------
+\chapter{TEST RESULTS} \label{test result}
+% -------------------------------------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------------------------------------
+\chapter{FUTURE EXTENSIONS}
+% -------------------------------------------------------------------------------------------------
+
+% \cite{cit_tag}
+\begin{thebibliography}{1}
+    \bibitem{virtlab} Massimo Ruo Roch, Maurizio Martina, \emph{VirtLAB: a Low-Cost Platform for Electronic Lab experiments}, Sensors
+\end{thebibliography}
+
+\end{document}
