@@ -46,7 +46,7 @@ sim:/testbench/leds(1) \
 sim:/testbench/leds(0)
 
 # run the simulation
-run 1000us
+run 700us
 
 # exit simulator and report success to the shell
 # exit -code 0

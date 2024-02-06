@@ -51,6 +51,11 @@ architecture behavior of top_level is
   signal switches                 : std_logic_vector(3 downto 0) := "0000";
   signal pllreset_generator_out   : std_logic;
   signal switch0_generator_in     : std_logic;
+	signal switch1_generator_in     : std_logic;
+	signal switch2_generator_in     : std_logic;
+	signal switch3_generator_in     : std_logic;
+	signal switchgen_reset					: std_logic;
+	signal switchgen_reset_out			: std_logic := '0';
   ---------------------------------------------------------------------------------------------------
 
   -- COMPONENT: PLL (from 10 MHz to 50 MHz) ---------------------------------------------------------
@@ -167,25 +172,31 @@ architecture behavior of top_level is
       dout			=> pds_reset
     ); ----------------------------------------------------------------------------------------------
 
-    switch0_generator_in <= '1' xor switches(0);
+    
+    -- USE THIS SECTION ONLY FOR SYNTHESIS ----------------------------------------------------------
+		-- three leds are constantly switched off
+		-- one led is toggled with a frequency low enough to bee perceived with the human eye
+    -- switch0_generator: delayer
+    -- generic map
+    -- (
+      -- N	=> 100
+    -- )
+    -- port map
+    -- (
+      -- clk				=> clk_10kHz,
+      -- enable		=> '1',
+      -- clear_n		=> '1',
+      -- reset_n		=> '1',
+      -- din       => switch0_generator_in,
+      -- dout			=> switches(0)
+    -- );
+		-- switch0_generator_in <= '1' xor switches(0);
+		-------------------------------------------------------------------------------------------------
 
-    -- switch 0 generator ---------------------------------------------------------------------------
-    switch0_generator: delayer
-    generic map
-    (
-      N	=> 100
-    )
-    port map
-    (
-      clk				=> clk_10kHz,
-      enable		=> '1',
-      clear_n		=> '1',
-      reset_n		=> '1',
-      din       => switch0_generator_in,
-      dout			=> switches(0)
-    ); ----------------------------------------------------------------------------------------------
-
-    -- switch 1 generator ---------------------------------------------------------------------------
+    -- USE THIS SECTION ONLY FOR SIMULATION ---------------------------------------------------------
+		-- led(0) is permanently switched off
+		-- the other leds are toggled a certain number of times, then they are permanently switched off
+		switch1_generator_in <= '1' xor switches(1);
     switch1_generator: delayer
     generic map
     (
@@ -196,12 +207,11 @@ architecture behavior of top_level is
       clk				=> mainClk,
       enable		=> '1',
       clear_n		=> '1',
-      reset_n		=> '1',
-      din       => '1',
+      reset_n		=> switchgen_reset,
+      din       => switch1_generator_in,
       dout			=> switches(1)
-    ); ----------------------------------------------------------------------------------------------
-
-    -- switch 2 generator ---------------------------------------------------------------------------
+    );
+		switch2_generator_in <= '1' xor switches(2);
     switch2_generator: delayer
     generic map
     (
@@ -212,12 +222,11 @@ architecture behavior of top_level is
       clk				=> mainClk,
       enable		=> '1',
       clear_n		=> '1',
-      reset_n		=> '1',
-      din       => '1',
+      reset_n		=> switchgen_reset,
+      din       => switch2_generator_in,
       dout			=> switches(2)
-    ); ----------------------------------------------------------------------------------------------
-
-    -- switch 3 generator ---------------------------------------------------------------------------
+    ); 
+		switch3_generator_in <= '1' xor switches(3);
     switch3_generator: delayer
     generic map
     (
@@ -228,10 +237,26 @@ architecture behavior of top_level is
       clk				=> mainClk,
       enable		=> '1',
       clear_n		=> '1',
+      reset_n		=> switchgen_reset,
+      din       => switch3_generator_in,
+      dout			=> switches(3)
+    ); 
+    switch_reset_generator: delayer
+    generic map
+    (
+      N	=> 5000
+    )
+    port map
+    (
+      clk				=> mainClk,
+      enable		=> '1',
+      clear_n		=> '1',
       reset_n		=> '1',
       din       => '1',
-      dout			=> switches(3)
-    ); ----------------------------------------------------------------------------------------------
+      dout			=> switchgen_reset_out
+    );
+		switchgen_reset <= not switchgen_reset_out;
+		-------------------------------------------------------------------------------------------------
 
     -- Platform Designer System instance ------------------------------------------------------------
     PDS: avs_hram_converter_TEST_advanced
