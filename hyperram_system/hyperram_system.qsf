@@ -201,10 +201,10 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR netlist -section_id eda_simulation
+set_global_assignment -name QIP_FILE pll/pll.qip
 set_global_assignment -name SDC_FILE avs_hram_converter_TEST_advanced.sdc
 set_global_assignment -name QIP_FILE SBT_workspace/avs_hram_converter_TEST_advanced/mem_init/meminit.qip
 set_global_assignment -name QIP_FILE avs_hram_converter_TEST_advanced/synthesis/avs_hram_converter_TEST_advanced.qip
-set_global_assignment -name QIP_FILE pll/pll.qip
 set_global_assignment -name VHDL_FILE hdl/d_flipflop.vhd
 set_global_assignment -name VHDL_FILE hdl/delayer.vhd
 set_global_assignment -name VHDL_FILE hdl/top_level.vhd

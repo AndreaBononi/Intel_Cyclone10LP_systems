@@ -1,12 +1,12 @@
-# system info avs_hram_converter_TEST_advanced_tb on 2024.01.11.10:05:09
+# system info avs_hram_converter_TEST_advanced_tb on 2024.02.07.12:44:26
 system_info:
 name,value
-DEVICE,10CL006YE144A7G
+DEVICE,10CL025YE144C8G
 DEVICE_FAMILY,Cyclone 10 LP
-GENERATION_ID,1704963899
+GENERATION_ID,1707306256
 #
 #
-# Files generated for avs_hram_converter_TEST_advanced_tb on 2024.01.11.10:05:09
+# Files generated for avs_hram_converter_TEST_advanced_tb on 2024.02.07.12:44:26
 files:
 filepath,kind,attributes,module,is_top
 avs_hram_converter_TEST_advanced/testbench/avs_hram_converter_TEST_advanced_tb/simulation/avs_hram_converter_TEST_advanced_tb.vhd,VHDL,,avs_hram_converter_TEST_advanced_tb,true

@@ -136,7 +136,7 @@ architecture rtl of avs_hram_converter_TEST_advanced_avs_hram_converter is
 
 begin
 
-	avs_hram_mainconv_inst : component avs_hram_mainconv
+	avs_hram_mainconv : component avs_hram_mainconv
 		generic map (
 			drive_strength => "000"
 		)

@@ -5,7 +5,7 @@
  version="22.1"
  fabric="QSYS">
  <!-- Format version 22.1 917 (Future versions may contain additional information.) -->
- <!-- 2024.01.11.10:04:49 -->
+ <!-- 2024.02.07.12:44:05 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -17,7 +17,7 @@
  </parameter>
  <parameter name="device">
   <type>java.lang.String</type>
-  <value>10CL006YE144A7G</value>
+  <value>10CL025YE144C8G</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -33,7 +33,7 @@
  </parameter>
  <parameter name="deviceSpeedGrade">
   <type>java.lang.String</type>
-  <value>7</value>
+  <value>8</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -57,7 +57,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1704963878</value>
+  <value>1707306234</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -169,7 +169,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>10CL006YE144A7G</value>
+   <value>10CL025YE144C8G</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -178,7 +178,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE_SPEEDGRADE">
    <type>java.lang.String</type>
-   <value>7</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -1775,7 +1775,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>10CL006YE144A7G</value>
+   <value>10CL025YE144C8G</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -1784,7 +1784,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE_SPEEDGRADE">
    <type>java.lang.String</type>
-   <value>7</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -5919,7 +5919,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>10CL006YE144A7G</value>
+   <value>10CL025YE144C8G</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -5928,7 +5928,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE_SPEEDGRADE">
    <type>java.lang.String</type>
-   <value>7</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8176,7 +8176,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>10CL006YE144A7G</value>
+   <value>10CL025YE144C8G</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -13405,5 +13405,5 @@ parameters are a RESULT of the module parameters. -->
   <version>22.1</version>
  </plugin>
  <reportVersion>22.1 917</reportVersion>
- <uniqueIdentifier>606DC71719D50000018CF7C43847</uniqueIdentifier>
+ <uniqueIdentifier>606DC71719D50000018D8361BF04</uniqueIdentifier>
 </EnsembleReport>

@@ -1,5 +1,5 @@
 Flow report for hyperram_system
-Thu Jan 11 12:17:09 2024
+Wed Feb  7 18:01:11 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                              ;
 +------------------------------------+------------------------------------------------------+
-; Flow Status                        ; EDA Netlist Writer Failed - Thu Jan 11 12:17:09 2024 ;
+; Flow Status                        ; EDA Netlist Writer Failed - Wed Feb  7 18:01:11 2024 ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition       ;
 ; Revision Name                      ; hyperram_system                                      ;
 ; Top-level Entity Name              ; top_level                                            ;
 ; Family                             ; Cyclone 10 LP                                        ;
 ; Device                             ; 10CL025YE144C8G                                      ;
 ; Timing Models                      ; Final                                                ;
-; Total logic elements               ; 3,738 / 24,624 ( 15 % )                              ;
-;     Total combinational functions  ; 3,235 / 24,624 ( 13 % )                              ;
-;     Dedicated logic registers      ; 2,341 / 24,624 ( 10 % )                              ;
-; Total registers                    ; 2341                                                 ;
+; Total logic elements               ; 3,748 / 24,624 ( 15 % )                              ;
+;     Total combinational functions  ; 3,243 / 24,624 ( 13 % )                              ;
+;     Dedicated logic registers      ; 2,351 / 24,624 ( 10 % )                              ;
+; Total registers                    ; 2351                                                 ;
 ; Total pins                         ; 62 / 77 ( 81 % )                                     ;
 ; Total virtual pins                 ; 0                                                    ;
-; Total memory bits                  ; 95,226 / 608,256 ( 16 % )                            ;
+; Total memory bits                  ; 95,235 / 608,256 ( 16 % )                            ;
 ; Embedded Multiplier 9-bit elements ; 6 / 132 ( 5 % )                                      ;
 ; Total PLLs                         ; 3 / 4 ( 75 % )                                       ;
 +------------------------------------+------------------------------------------------------+
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/11/2024 12:15:33 ;
+; Start date & time ; 02/07/2024 17:59:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hyperram_system     ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+--------------------------------------------------------------------------------------------+-----------------+----------------------------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                                                      ; Default Value   ; Entity Name                      ; Section Id                        ;
 +-------------------------------------+--------------------------------------------------------------------------------------------+-----------------+----------------------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 106024607881685.170497173341138                                                            ; --              ; --                               ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 106024607881685.170732516453784                                                            ; --              ; --                               ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                        ; --              ; --                               ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                        ; --              ; --                               ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                        ; --              ; --                               ; eda_board_design_signal_integrity ;
@@ -87,9 +87,9 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                      ; 1 ps                                                                                       ; --              ; --                               ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                         ; --              ; --                               ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                          ; --              ; --                               ; --                                ;
+; MISC_FILE                           ; pll/pll.ppf                                                                                ; --              ; --                               ; --                                ;
 ; MISC_FILE                           ; avs_hram_converter_TEST_advanced/synthesis/../avs_hram_converter_TEST_advanced.cmp         ; --              ; --                               ; --                                ;
 ; MISC_FILE                           ; avs_hram_converter_TEST_advanced/synthesis/../../avs_hram_converter_TEST_advanced.qsys     ; --              ; --                               ; --                                ;
-; MISC_FILE                           ; pll/pll.ppf                                                                                ; --              ; --                               ; --                                ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                                       ; --              ; --                               ; --                                ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                                          ; --              ; --                               ; --                                ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                                          ; --              ; --                               ; --                                ;
@@ -104,7 +104,7 @@ https://fpgasoftware.intel.com/eula.
 ; SEARCH_PATH                         ; SBT_workspace/avs_hram_converter_TEST_advanced/mem_init/                                   ; --              ; --                               ; --                                ;
 ; SLD_FILE                            ; avs_hram_converter_TEST_advanced/synthesis/avs_hram_converter_TEST_advanced.regmap         ; --              ; --                               ; --                                ;
 ; SLD_FILE                            ; avs_hram_converter_TEST_advanced/synthesis/avs_hram_converter_TEST_advanced.debuginfo      ; --              ; --                               ; --                                ;
-; SLD_INFO                            ; QSYS_NAME avs_hram_converter_TEST_advanced HAS_SOPCINFO 1 GENERATION_ID 1704963878         ; --              ; avs_hram_converter_TEST_advanced ; --                                ;
+; SLD_INFO                            ; QSYS_NAME avs_hram_converter_TEST_advanced HAS_SOPCINFO 1 GENERATION_ID 1707306234         ; --              ; avs_hram_converter_TEST_advanced ; --                                ;
 ; SOPCINFO_FILE                       ; avs_hram_converter_TEST_advanced/synthesis/../../avs_hram_converter_TEST_advanced.sopcinfo ; --              ; --                               ; --                                ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                                         ; --              ; --                               ; --                                ;
 ; TOP_LEVEL_ENTITY                    ; top_level                                                                                  ; hyperram_system ; --                               ; --                                ;
@@ -116,12 +116,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:45     ; 1.0                     ; 592 MB              ; 00:01:14                           ;
-; Fitter               ; 00:00:27     ; 1.2                     ; 740 MB              ; 00:00:38                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 390 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 501 MB              ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 617 MB              ; 00:00:03                           ;
-; Total                ; 00:01:22     ; --                      ; --                  ; 00:02:03                           ;
+; Analysis & Synthesis ; 00:00:52     ; 1.0                     ; 602 MB              ; 00:01:23                           ;
+; Fitter               ; 00:00:31     ; 1.2                     ; 774 MB              ; 00:00:44                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 391 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.2                     ; 509 MB              ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 626 MB              ; 00:00:03                           ;
+; Total                ; 00:01:34     ; --                      ; --                  ; 00:02:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -27,22 +27,22 @@ avs_address[20] => avs_hram_mainconv_EU:EU.avs_address[20]
 avs_address[21] => avs_hram_mainconv_EU:EU.avs_address[21]
 avs_address[22] => avs_hram_mainconv_EU:EU.avs_address[22]
 avs_read => avs_hram_mainconv_EU:EU.avs_read
-avs_readdata[0] <= avs_hram_mainconv_EU:EU.avs_readdata[0]
-avs_readdata[1] <= avs_hram_mainconv_EU:EU.avs_readdata[1]
-avs_readdata[2] <= avs_hram_mainconv_EU:EU.avs_readdata[2]
-avs_readdata[3] <= avs_hram_mainconv_EU:EU.avs_readdata[3]
-avs_readdata[4] <= avs_hram_mainconv_EU:EU.avs_readdata[4]
-avs_readdata[5] <= avs_hram_mainconv_EU:EU.avs_readdata[5]
-avs_readdata[6] <= avs_hram_mainconv_EU:EU.avs_readdata[6]
-avs_readdata[7] <= avs_hram_mainconv_EU:EU.avs_readdata[7]
-avs_readdata[8] <= avs_hram_mainconv_EU:EU.avs_readdata[8]
-avs_readdata[9] <= avs_hram_mainconv_EU:EU.avs_readdata[9]
-avs_readdata[10] <= avs_hram_mainconv_EU:EU.avs_readdata[10]
-avs_readdata[11] <= avs_hram_mainconv_EU:EU.avs_readdata[11]
-avs_readdata[12] <= avs_hram_mainconv_EU:EU.avs_readdata[12]
-avs_readdata[13] <= avs_hram_mainconv_EU:EU.avs_readdata[13]
-avs_readdata[14] <= avs_hram_mainconv_EU:EU.avs_readdata[14]
-avs_readdata[15] <= avs_hram_mainconv_EU:EU.avs_readdata[15]
+avs_readdata[0] << avs_hram_mainconv_EU:EU.avs_readdata[0]
+avs_readdata[1] << avs_hram_mainconv_EU:EU.avs_readdata[1]
+avs_readdata[2] << avs_hram_mainconv_EU:EU.avs_readdata[2]
+avs_readdata[3] << avs_hram_mainconv_EU:EU.avs_readdata[3]
+avs_readdata[4] << avs_hram_mainconv_EU:EU.avs_readdata[4]
+avs_readdata[5] << avs_hram_mainconv_EU:EU.avs_readdata[5]
+avs_readdata[6] << avs_hram_mainconv_EU:EU.avs_readdata[6]
+avs_readdata[7] << avs_hram_mainconv_EU:EU.avs_readdata[7]
+avs_readdata[8] << avs_hram_mainconv_EU:EU.avs_readdata[8]
+avs_readdata[9] << avs_hram_mainconv_EU:EU.avs_readdata[9]
+avs_readdata[10] << avs_hram_mainconv_EU:EU.avs_readdata[10]
+avs_readdata[11] << avs_hram_mainconv_EU:EU.avs_readdata[11]
+avs_readdata[12] << avs_hram_mainconv_EU:EU.avs_readdata[12]
+avs_readdata[13] << avs_hram_mainconv_EU:EU.avs_readdata[13]
+avs_readdata[14] << avs_hram_mainconv_EU:EU.avs_readdata[14]
+avs_readdata[15] << avs_hram_mainconv_EU:EU.avs_readdata[15]
 avs_write => avs_hram_mainconv_EU:EU.avs_write
 avs_writedata[0] => avs_hram_mainconv_EU:EU.avs_writedata[0]
 avs_writedata[1] => avs_hram_mainconv_EU:EU.avs_writedata[1]
@@ -60,8 +60,8 @@ avs_writedata[12] => avs_hram_mainconv_EU:EU.avs_writedata[12]
 avs_writedata[13] => avs_hram_mainconv_EU:EU.avs_writedata[13]
 avs_writedata[14] => avs_hram_mainconv_EU:EU.avs_writedata[14]
 avs_writedata[15] => avs_hram_mainconv_EU:EU.avs_writedata[15]
-avs_waitrequest <= avs_hram_mainconv_EU:EU.avs_waitrequest
-avs_readdatavalid <= avs_hram_mainconv_EU:EU.avs_readdatavalid
+avs_waitrequest << avs_hram_mainconv_EU:EU.avs_waitrequest
+avs_readdatavalid << avs_hram_mainconv_EU:EU.avs_readdatavalid
 avs_burstcount[0] => avs_hram_mainconv_EU:EU.avs_burstcount[0]
 avs_burstcount[1] => avs_hram_mainconv_EU:EU.avs_burstcount[1]
 avs_burstcount[2] => avs_hram_mainconv_EU:EU.avs_burstcount[2]
@@ -73,7 +73,7 @@ avs_burstcount[7] => avs_hram_mainconv_EU:EU.avs_burstcount[7]
 avs_burstcount[8] => avs_hram_mainconv_EU:EU.avs_burstcount[8]
 avs_burstcount[9] => avs_hram_mainconv_EU:EU.avs_burstcount[9]
 avs_burstcount[10] => avs_hram_mainconv_EU:EU.avs_burstcount[10]
-hram_RESET_n <= avs_hram_mainconv_EU:EU.hram_RESET_n
+hram_RESET_n << avs_hram_mainconv_EU:EU.hram_RESET_n
 hram_DQ[0] <> avs_hram_mainconv_EU:EU.hram_DQ[0]
 hram_DQ[1] <> avs_hram_mainconv_EU:EU.hram_DQ[1]
 hram_DQ[2] <> avs_hram_mainconv_EU:EU.hram_DQ[2]
@@ -83,9 +83,9 @@ hram_DQ[5] <> avs_hram_mainconv_EU:EU.hram_DQ[5]
 hram_DQ[6] <> avs_hram_mainconv_EU:EU.hram_DQ[6]
 hram_DQ[7] <> avs_hram_mainconv_EU:EU.hram_DQ[7]
 hram_RWDS <> avs_hram_mainconv_EU:EU.hram_RWDS
-hram_CS_n <= avs_hram_mainconv_EU:EU.hram_CS_n
-clk90 <= avs_hram_mainconv_EU:EU.clk90
-hCK_enable <= avs_hram_mainconv_EU:EU.hCK_enable
+hram_CS_n << avs_hram_mainconv_EU:EU.hram_CS_n
+clk90 << avs_hram_mainconv_EU:EU.clk90
+hCK_enable << avs_hram_mainconv_EU:EU.hCK_enable
 
 
 |avs_hram_mainconv|avs_hram_mainconv_EU:EU

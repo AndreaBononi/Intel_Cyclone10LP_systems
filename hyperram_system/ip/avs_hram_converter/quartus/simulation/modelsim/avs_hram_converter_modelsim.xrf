@@ -37,6 +37,7 @@ source_file = 1, /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/av
 source_file = 1, /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv_EU.vhd
 source_file = 1, /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv_CU.vhd
 source_file = 1, /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv.vhd
+source_file = 1, /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/sdc/avs_hram_converter_IO.sdc
 source_file = 1, /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, /home/andrea/intelFPGA_lite/22.1std/quartus/libraries/vhdl/ieee/timing_b.vhd

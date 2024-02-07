@@ -36,9 +36,9 @@
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
- <parameter name="device" value="10CL006YE144A7G" />
+ <parameter name="device" value="10CL025YE144C8G" />
  <parameter name="deviceFamily" value="Cyclone 10 LP" />
- <parameter name="deviceSpeedGrade" value="7" />
+ <parameter name="deviceSpeedGrade" value="8" />
  <parameter name="fabricMode" value="QSYS" />
  <parameter name="generateLegacySim" value="false" />
  <parameter name="generationId" value="0" />
@@ -47,7 +47,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="hyperram_system.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName">avs_hram_converter_TEST_advanced</parameter>
@@ -62,9 +62,9 @@
   <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
   <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
-  <parameter name="AUTO_DEVICE" value="10CL006YE144A7G" />
+  <parameter name="AUTO_DEVICE" value="10CL025YE144C8G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 LP" />
-  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
   <parameter name="AUTO_GENERATION_ID" value="0" />
   <parameter name="AUTO_UNIQUE_ID">avs_hram_converter_TEST_advanced</parameter>
  </module>

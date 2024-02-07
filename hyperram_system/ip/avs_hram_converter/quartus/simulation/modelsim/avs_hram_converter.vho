@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition"
 
--- DATE "01/10/2024 16:14:53"
+-- DATE "02/07/2024 12:42:03"
 
 -- 
 -- Device: Altera 10CL025YE144C8G Package TQFP144
@@ -40,18 +40,18 @@ ENTITY 	avs_hram_mainconv IS
 	reset_n : IN std_logic := '0';
 	avs_address : IN std_logic_vector(22 DOWNTO 0);
 	avs_read : IN std_logic := '0';
-	avs_readdata : OUT std_logic_vector(15 DOWNTO 0);
+	avs_readdata : BUFFER std_logic_vector(15 DOWNTO 0);
 	avs_write : IN std_logic := '0';
 	avs_writedata : IN std_logic_vector(15 DOWNTO 0);
-	avs_waitrequest : OUT std_logic;
-	avs_readdatavalid : OUT std_logic;
+	avs_waitrequest : BUFFER std_logic;
+	avs_readdatavalid : BUFFER std_logic;
 	avs_burstcount : IN std_logic_vector(10 DOWNTO 0);
-	hram_RESET_n : OUT std_logic;
-	hram_DQ : INOUT std_logic_vector(7 DOWNTO 0);
-	hram_RWDS : INOUT std_logic;
-	hram_CS_n : OUT std_logic;
-	clk90 : OUT std_logic;
-	hCK_enable : OUT std_logic
+	hram_RESET_n : BUFFER std_logic;
+	hram_DQ : BUFFER std_logic_vector(7 DOWNTO 0);
+	hram_RWDS : BUFFER std_logic;
+	hram_CS_n : BUFFER std_logic;
+	clk90 : BUFFER std_logic;
+	hCK_enable : BUFFER std_logic
 	);
 END avs_hram_mainconv;
 
@@ -164,6 +164,8 @@ SIGNAL ww_avs_waitrequest : std_logic;
 SIGNAL ww_avs_readdatavalid : std_logic;
 SIGNAL ww_avs_burstcount : std_logic_vector(10 DOWNTO 0);
 SIGNAL ww_hram_RESET_n : std_logic;
+SIGNAL ww_hram_DQ : std_logic_vector(7 DOWNTO 0);
+SIGNAL ww_hram_RWDS : std_logic;
 SIGNAL ww_hram_CS_n : std_logic;
 SIGNAL ww_clk90 : std_logic;
 SIGNAL ww_hCK_enable : std_logic;
@@ -995,6 +997,8 @@ avs_waitrequest <= ww_avs_waitrequest;
 avs_readdatavalid <= ww_avs_readdatavalid;
 ww_avs_burstcount <= avs_burstcount;
 hram_RESET_n <= ww_hram_RESET_n;
+hram_DQ <= ww_hram_DQ;
+hram_RWDS <= ww_hram_RWDS;
 hram_CS_n <= ww_hram_CS_n;
 clk90 <= ww_clk90;
 hCK_enable <= ww_hCK_enable;
@@ -1092,7 +1096,7 @@ PORT MAP (
 	i => \EU|writedata_converter|outmux|dout[0]~0_combout\,
 	oe => \CU|WideOr21~1_combout\,
 	devoe => ww_devoe,
-	o => hram_DQ(0));
+	o => ww_hram_DQ(0));
 
 -- Location: IOOBUF_X0_Y26_N16
 \hram_DQ[1]~output\ : cyclone10lp_io_obuf
@@ -1105,7 +1109,7 @@ PORT MAP (
 	i => \EU|writedata_converter|outmux|dout[1]~1_combout\,
 	oe => \CU|WideOr21~1_combout\,
 	devoe => ww_devoe,
-	o => hram_DQ(1));
+	o => ww_hram_DQ(1));
 
 -- Location: IOOBUF_X3_Y34_N2
 \hram_DQ[2]~output\ : cyclone10lp_io_obuf
@@ -1118,7 +1122,7 @@ PORT MAP (
 	i => \EU|writedata_converter|outmux|dout[2]~2_combout\,
 	oe => \CU|WideOr21~1_combout\,
 	devoe => ww_devoe,
-	o => hram_DQ(2));
+	o => ww_hram_DQ(2));
 
 -- Location: IOOBUF_X1_Y34_N9
 \hram_DQ[3]~output\ : cyclone10lp_io_obuf
@@ -1131,7 +1135,7 @@ PORT MAP (
 	i => \EU|writedata_converter|outmux|dout[3]~3_combout\,
 	oe => \CU|WideOr21~1_combout\,
 	devoe => ww_devoe,
-	o => hram_DQ(3));
+	o => ww_hram_DQ(3));
 
 -- Location: IOOBUF_X0_Y23_N16
 \hram_DQ[4]~output\ : cyclone10lp_io_obuf
@@ -1144,7 +1148,7 @@ PORT MAP (
 	i => \EU|writedata_converter|outmux|dout[4]~4_combout\,
 	oe => \CU|WideOr21~1_combout\,
 	devoe => ww_devoe,
-	o => hram_DQ(4));
+	o => ww_hram_DQ(4));
 
 -- Location: IOOBUF_X0_Y23_N23
 \hram_DQ[5]~output\ : cyclone10lp_io_obuf
@@ -1157,7 +1161,7 @@ PORT MAP (
 	i => \EU|writedata_converter|outmux|dout[5]~5_combout\,
 	oe => \CU|WideOr21~1_combout\,
 	devoe => ww_devoe,
-	o => hram_DQ(5));
+	o => ww_hram_DQ(5));
 
 -- Location: IOOBUF_X0_Y14_N2
 \hram_DQ[6]~output\ : cyclone10lp_io_obuf
@@ -1170,7 +1174,7 @@ PORT MAP (
 	i => \EU|writedata_converter|outmux|dout[6]~6_combout\,
 	oe => \CU|WideOr21~1_combout\,
 	devoe => ww_devoe,
-	o => hram_DQ(6));
+	o => ww_hram_DQ(6));
 
 -- Location: IOOBUF_X1_Y34_N2
 \hram_DQ[7]~output\ : cyclone10lp_io_obuf
@@ -1183,7 +1187,7 @@ PORT MAP (
 	i => \EU|writedata_converter|outmux|dout[7]~7_combout\,
 	oe => \CU|WideOr21~1_combout\,
 	devoe => ww_devoe,
-	o => hram_DQ(7));
+	o => ww_hram_DQ(7));
 
 -- Location: IOOBUF_X7_Y34_N16
 \hram_RWDS~output\ : cyclone10lp_io_obuf
@@ -1196,7 +1200,7 @@ PORT MAP (
 	i => \CU|WideOr25~combout\,
 	oe => VCC,
 	devoe => ww_devoe,
-	o => hram_RWDS);
+	o => ww_hram_RWDS);
 
 -- Location: LCCOMB_X5_Y28_N0
 \avs_readdata[0]~output\ : cyclone10lp_io_obuf
@@ -2292,7 +2296,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_RWDS,
+	i => ww_hram_RWDS,
 	o => \hram_RWDS~input_o\);
 
 -- Location: LCCOMB_X7_Y26_N12
@@ -11644,7 +11648,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_DQ(0),
+	i => ww_hram_DQ(0),
 	o => \hram_DQ[0]~input_o\);
 
 -- Location: LCCOMB_X8_Y30_N22
@@ -12341,7 +12345,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_DQ(1),
+	i => ww_hram_DQ(1),
 	o => \hram_DQ[1]~input_o\);
 
 -- Location: LCCOMB_X3_Y30_N12
@@ -12856,7 +12860,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_DQ(2),
+	i => ww_hram_DQ(2),
 	o => \hram_DQ[2]~input_o\);
 
 -- Location: LCCOMB_X3_Y30_N22
@@ -13370,7 +13374,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_DQ(3),
+	i => ww_hram_DQ(3),
 	o => \hram_DQ[3]~input_o\);
 
 -- Location: LCCOMB_X4_Y30_N28
@@ -13886,7 +13890,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_DQ(4),
+	i => ww_hram_DQ(4),
 	o => \hram_DQ[4]~input_o\);
 
 -- Location: LCCOMB_X4_Y30_N6
@@ -14388,7 +14392,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_DQ(5),
+	i => ww_hram_DQ(5),
 	o => \hram_DQ[5]~input_o\);
 
 -- Location: LCCOMB_X4_Y30_N12
@@ -14890,7 +14894,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_DQ(6),
+	i => ww_hram_DQ(6),
 	o => \hram_DQ[6]~input_o\);
 
 -- Location: LCCOMB_X5_Y30_N12
@@ -15367,7 +15371,7 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => hram_DQ(7),
+	i => ww_hram_DQ(7),
 	o => \hram_DQ[7]~input_o\);
 
 -- Location: LCCOMB_X4_Y30_N14

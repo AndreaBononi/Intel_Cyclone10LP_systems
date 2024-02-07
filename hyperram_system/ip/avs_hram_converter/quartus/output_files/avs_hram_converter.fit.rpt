@@ -1,5 +1,5 @@
 Fitter report for avs_hram_converter
-Wed Jan 10 16:14:45 2024
+Wed Feb  7 12:41:55 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 10 16:14:45 2024          ;
+; Fitter Status                      ; Successful - Wed Feb  7 12:41:55 2024          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; avs_hram_converter                             ;
 ; Top-level Entity Name              ; avs_hram_mainconv                              ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.2%      ;
+;     Processor 2            ;   5.6%      ;
 +----------------------------+-------------+
 
 
@@ -1276,8 +1276,8 @@ Warning (176127): The parameters of the PLL avs_hram_mainconv_EU:EU|pll_x8:pll_x
         Info (176121): The value of the parameter "Max Lock Period" for the PLL atom avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1 is 26664
 Critical Warning (176598): PLL "avs_hram_mainconv_EU:EU|pll_x8:pll_x8_inst|altpll:altpll_component|pll_x8_altpll:auto_generated|pll1" input clock inclk[0] is not fully compensated because it is fed by a remote clock pin "Pin_22" File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/hdl/avs_hram_mainconv.vhd Line: 232
 Info (332104): Reading SDC File: '../sdc/avs_hram_converter.sdc'
-Warning (332174): Ignored filter at avs_hram_converter.sdc(30): clk, could not be matched with a clock File: /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/sdc/avs_hram_converter.sdc Line: 30
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332104): Reading SDC File: '../sdc/avs_hram_converter_IO.sdc'
 Warning (332070): Port "clk90" relative to the rising edge of clock "shifted_clock" does not specify a min-fall output delay
 Warning (332070): Port "clk90" relative to the rising edge of clock "shifted_clock" does not specify a min-rise output delay
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -1339,16 +1339,16 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.58 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.54 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/andrea/Documents/Tesi_287628/287628/hyperram_system/ip/avs_hram_converter/quartus/output_files/avs_hram_converter.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
+Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 712 megabytes
-    Info: Processing ended: Wed Jan 10 16:14:45 2024
+    Info: Processing ended: Wed Feb  7 12:41:56 2024
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:11
 

@@ -106,4 +106,5 @@ set_global_assignment -name VHDL_FILE ../hdl/CA_builder.vhd
 set_global_assignment -name VHDL_FILE ../hdl/avs_hram_mainconv_EU.vhd
 set_global_assignment -name VHDL_FILE ../hdl/avs_hram_mainconv_CU.vhd
 set_global_assignment -name VHDL_FILE ../hdl/avs_hram_mainconv.vhd
+set_global_assignment -name SDC_FILE ../sdc/avs_hram_converter_IO.sdc
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

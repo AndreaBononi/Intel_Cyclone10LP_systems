@@ -1,5 +1,5 @@
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced.qsys --synthesis=VHDL --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis --family="Cyclone 10 LP" --part=10CL006YE144A7G
+Info: qsys-generate /home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced.qsys --synthesis=VHDL --output-directory=/home/andrea/Documents/Tesi_287628/287628/hyperram_system/avs_hram_converter_TEST_advanced/synthesis --family="Cyclone 10 LP" --part=10CL025YE144C8G
 Progress: Loading hyperram_system/avs_hram_converter_TEST_advanced.qsys
 Progress: Reading input file
 Progress: Adding avs_hram_converter [avs_hram_converter 1.0]
@@ -24,16 +24,16 @@ Info: avs_hram_converter_TEST_advanced.switches: PIO inputs are not hardwired in
 Info: avs_hram_converter_TEST_advanced: Generating avs_hram_converter_TEST_advanced "avs_hram_converter_TEST_advanced" for QUARTUS_SYNTH
 Info: avs_hram_converter: "avs_hram_converter_TEST_advanced" instantiated avs_hram_converter "avs_hram_converter"
 Info: instruction_OCROM: Starting RTL generation for module 'avs_hram_converter_TEST_advanced_instruction_OCROM'
-Info: instruction_OCROM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_instruction_OCROM --dir=/tmp/alt9733_2490838223476017628.dir/0002_instruction_OCROM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9733_2490838223476017628.dir/0002_instruction_OCROM_gen//avs_hram_converter_TEST_advanced_instruction_OCROM_component_configuration.pl  --do_build_sim=0  ]
+Info: instruction_OCROM:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_instruction_OCROM --dir=/tmp/alt9760_8403468071750231192.dir/0002_instruction_OCROM_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9760_8403468071750231192.dir/0002_instruction_OCROM_gen//avs_hram_converter_TEST_advanced_instruction_OCROM_component_configuration.pl  --do_build_sim=0  ]
 Info: instruction_OCROM: Done RTL generation for module 'avs_hram_converter_TEST_advanced_instruction_OCROM'
 Info: instruction_OCROM: "avs_hram_converter_TEST_advanced" instantiated altera_avalon_onchip_memory2 "instruction_OCROM"
 Info: leds: Starting RTL generation for module 'avs_hram_converter_TEST_advanced_leds'
-Info: leds:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_leds --dir=/tmp/alt9733_2490838223476017628.dir/0003_leds_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9733_2490838223476017628.dir/0003_leds_gen//avs_hram_converter_TEST_advanced_leds_component_configuration.pl  --do_build_sim=0  ]
+Info: leds:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_leds --dir=/tmp/alt9760_8403468071750231192.dir/0003_leds_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9760_8403468071750231192.dir/0003_leds_gen//avs_hram_converter_TEST_advanced_leds_component_configuration.pl  --do_build_sim=0  ]
 Info: leds: Done RTL generation for module 'avs_hram_converter_TEST_advanced_leds'
 Info: leds: "avs_hram_converter_TEST_advanced" instantiated altera_avalon_pio "leds"
 Info: nios2: "avs_hram_converter_TEST_advanced" instantiated altera_nios2_gen2 "nios2"
 Info: switches: Starting RTL generation for module 'avs_hram_converter_TEST_advanced_switches'
-Info: switches:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_switches --dir=/tmp/alt9733_2490838223476017628.dir/0004_switches_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9733_2490838223476017628.dir/0004_switches_gen//avs_hram_converter_TEST_advanced_switches_component_configuration.pl  --do_build_sim=0  ]
+Info: switches:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_switches --dir=/tmp/alt9760_8403468071750231192.dir/0004_switches_gen/ --quartus_dir=/home/andrea/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9760_8403468071750231192.dir/0004_switches_gen//avs_hram_converter_TEST_advanced_switches_component_configuration.pl  --do_build_sim=0  ]
 Info: switches: Done RTL generation for module 'avs_hram_converter_TEST_advanced_switches'
 Info: switches: "avs_hram_converter_TEST_advanced" instantiated altera_avalon_pio "switches"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -47,21 +47,21 @@ Info: rst_controller: "avs_hram_converter_TEST_advanced" instantiated altera_res
 Info: avs_hram_mainconv: "avs_hram_converter" instantiated avs_hram_mainconv "avs_hram_mainconv"
 Info: clkctrl: "avs_hram_converter" instantiated clkctrl "clkctrl"
 Info: cpu: Starting RTL generation for module 'avs_hram_converter_TEST_advanced_nios2_cpu'
-Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_nios2_cpu --dir=/tmp/alt9733_2490838223476017628.dir/0008_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9733_2490838223476017628.dir/0008_cpu_gen//avs_hram_converter_TEST_advanced_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2024.01.11 10:04:44 (*) Starting Nios II generation
-Info: cpu: # 2024.01.11 10:04:44 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2024.01.11 10:04:44 (*)   Creating all objects for CPU
-Info: cpu: # 2024.01.11 10:04:44 (*)     Testbench
-Info: cpu: # 2024.01.11 10:04:45 (*)     Instruction decoding
-Info: cpu: # 2024.01.11 10:04:45 (*)       Instruction fields
-Info: cpu: # 2024.01.11 10:04:45 (*)       Instruction decodes
-Info: cpu: # 2024.01.11 10:04:45 (*)       Signals for RTL simulation waveforms
-Info: cpu: # 2024.01.11 10:04:45 (*)       Instruction controls
-Info: cpu: # 2024.01.11 10:04:45 (*)     Pipeline frontend
-Info: cpu: # 2024.01.11 10:04:45 (*)     Pipeline backend
-Info: cpu: # 2024.01.11 10:04:47 (*)   Generating RTL from CPU objects
-Info: cpu: # 2024.01.11 10:04:47 (*)   Creating plain-text RTL
-Info: cpu: # 2024.01.11 10:04:48 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /home/andrea/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /home/andrea/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/andrea/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=avs_hram_converter_TEST_advanced_nios2_cpu --dir=/tmp/alt9760_8403468071750231192.dir/0008_cpu_gen/ --quartus_bindir=/home/andrea/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9760_8403468071750231192.dir/0008_cpu_gen//avs_hram_converter_TEST_advanced_nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.02.07 12:44:01 (*) Starting Nios II generation
+Info: cpu: # 2024.02.07 12:44:01 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.02.07 12:44:01 (*)   Creating all objects for CPU
+Info: cpu: # 2024.02.07 12:44:01 (*)     Testbench
+Info: cpu: # 2024.02.07 12:44:02 (*)     Instruction decoding
+Info: cpu: # 2024.02.07 12:44:02 (*)       Instruction fields
+Info: cpu: # 2024.02.07 12:44:02 (*)       Instruction decodes
+Info: cpu: # 2024.02.07 12:44:02 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2024.02.07 12:44:02 (*)       Instruction controls
+Info: cpu: # 2024.02.07 12:44:02 (*)     Pipeline frontend
+Info: cpu: # 2024.02.07 12:44:02 (*)     Pipeline backend
+Info: cpu: # 2024.02.07 12:44:04 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.02.07 12:44:04 (*)   Creating plain-text RTL
+Info: cpu: # 2024.02.07 12:44:05 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'avs_hram_converter_TEST_advanced_nios2_cpu'
 Info: cpu: "nios2" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_data_master_translator"

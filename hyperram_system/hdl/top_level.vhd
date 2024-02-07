@@ -58,23 +58,14 @@ architecture behavior of top_level is
 	signal switchgen_reset_out			: std_logic := '0';
   ---------------------------------------------------------------------------------------------------
 
-  -- COMPONENT: PLL (from 10 MHz to 50 MHz) ---------------------------------------------------------
+  -- COMPONENT: PLL ---------------------------------------------------------------------------------
 	component pll
 	port
 	(
-		areset		: in  std_logic  := '0';
-		inclk0		: in  std_logic  := '0';
-		c0		    : out std_logic 
-	);
-	end component; ------------------------------------------------------------------------------------
-
-  -- COMPONENT: clock divider (from 10 MHz to 10 kHz) -----------------------------------------------
-	component clkdiv
-	port
-	(
-		areset		: in  std_logic  := '0';
-		inclk0		: in  std_logic  := '0';
-		c0		    : out std_logic 
+		areset		: in  std_logic := '0';
+		inclk0		: in  std_logic := '0';		-- 10 MHz
+		c0		    : out std_logic ;					-- 50 MHz
+		c1				: out std_logic						-- 10 kHz
 	);
 	end component; ------------------------------------------------------------------------------------
 
@@ -126,16 +117,8 @@ architecture behavior of top_level is
     (
       areset	  => pll_reset,
       inclk0    => mainClk,
-      c0	      => clk_50MHz
-    ); ----------------------------------------------------------------------------------------------
-
-    -- clock divider --------------------------------------------------------------------------------
-    clkdiv_inst: clkdiv 
-    port map 
-    (
-      areset	  => pll_reset,
-      inclk0    => mainClk,
-      c0	      => clk_10kHz
+      c0	      => clk_50MHz,
+			c1				=> clk_10kHz
     ); ----------------------------------------------------------------------------------------------
 
     -- PLL reset generator --------------------------------------------------------------------------
@@ -176,86 +159,86 @@ architecture behavior of top_level is
     -- USE THIS SECTION ONLY FOR SYNTHESIS ----------------------------------------------------------
 		-- three leds are constantly switched off
 		-- one led is toggled with a frequency low enough to bee perceived with the human eye
-    -- switch0_generator: delayer
+    switch0_generator: delayer
+    generic map
+    (
+			N	=> 100
+    )
+    port map
+    (
+			clk				=> clk_10kHz,
+      enable		=> '1',
+      clear_n		=> '1',
+      reset_n		=> '1',
+      din       => switch0_generator_in,
+      dout			=> switches(0)
+    );
+		switch0_generator_in <= '1' xor switches(0);
+		-------------------------------------------------------------------------------------------------
+
+    -- USE THIS SECTION ONLY FOR SIMULATION ---------------------------------------------------------
+		-- led(0) is permanently switched off
+		-- the other leds are toggled a certain number of times, then they are permanently switched off
+		-- switch1_generator_in <= '1' xor switches(1);
+    -- switch1_generator: delayer
     -- generic map
     -- (
       -- N	=> 100
     -- )
     -- port map
     -- (
-      -- clk				=> clk_10kHz,
+      -- clk				=> mainClk,
+      -- enable		=> '1',
+      -- clear_n		=> '1',
+      -- reset_n		=> switchgen_reset,
+      -- din       => switch1_generator_in,
+      -- dout			=> switches(1)
+    -- );
+		-- switch2_generator_in <= '1' xor switches(2);
+    -- switch2_generator: delayer
+    -- generic map
+    -- (
+      -- N	=> 100
+    -- )
+    -- port map
+    -- (
+      -- clk				=> mainClk,
+      -- enable		=> '1',
+      -- clear_n		=> '1',
+      -- reset_n		=> switchgen_reset,
+      -- din       => switch2_generator_in,
+      -- dout			=> switches(2)
+    -- ); 
+		-- switch3_generator_in <= '1' xor switches(3);
+    -- switch3_generator: delayer
+    -- generic map
+    -- (
+      -- N	=> 100
+    -- )
+    -- port map
+    -- (
+      -- clk				=> mainClk,
+      -- enable		=> '1',
+      -- clear_n		=> '1',
+      -- reset_n		=> switchgen_reset,
+      -- din       => switch3_generator_in,
+      -- dout			=> switches(3)
+    -- ); 
+    -- switch_reset_generator: delayer
+    -- generic map
+    -- (
+      -- N	=> 5000
+    -- )
+    -- port map
+    -- (
+      -- clk				=> mainClk,
       -- enable		=> '1',
       -- clear_n		=> '1',
       -- reset_n		=> '1',
-      -- din       => switch0_generator_in,
-      -- dout			=> switches(0)
+      -- din       => '1',
+      -- dout			=> switchgen_reset_out
     -- );
-		-- switch0_generator_in <= '1' xor switches(0);
-		-------------------------------------------------------------------------------------------------
-
-    -- USE THIS SECTION ONLY FOR SIMULATION ---------------------------------------------------------
-		-- led(0) is permanently switched off
-		-- the other leds are toggled a certain number of times, then they are permanently switched off
-		switch1_generator_in <= '1' xor switches(1);
-    switch1_generator: delayer
-    generic map
-    (
-      N	=> 100
-    )
-    port map
-    (
-      clk				=> mainClk,
-      enable		=> '1',
-      clear_n		=> '1',
-      reset_n		=> switchgen_reset,
-      din       => switch1_generator_in,
-      dout			=> switches(1)
-    );
-		switch2_generator_in <= '1' xor switches(2);
-    switch2_generator: delayer
-    generic map
-    (
-      N	=> 100
-    )
-    port map
-    (
-      clk				=> mainClk,
-      enable		=> '1',
-      clear_n		=> '1',
-      reset_n		=> switchgen_reset,
-      din       => switch2_generator_in,
-      dout			=> switches(2)
-    ); 
-		switch3_generator_in <= '1' xor switches(3);
-    switch3_generator: delayer
-    generic map
-    (
-      N	=> 100
-    )
-    port map
-    (
-      clk				=> mainClk,
-      enable		=> '1',
-      clear_n		=> '1',
-      reset_n		=> switchgen_reset,
-      din       => switch3_generator_in,
-      dout			=> switches(3)
-    ); 
-    switch_reset_generator: delayer
-    generic map
-    (
-      N	=> 5000
-    )
-    port map
-    (
-      clk				=> mainClk,
-      enable		=> '1',
-      clear_n		=> '1',
-      reset_n		=> '1',
-      din       => '1',
-      dout			=> switchgen_reset_out
-    );
-		switchgen_reset <= not switchgen_reset_out;
+		-- switchgen_reset <= not switchgen_reset_out;
 		-------------------------------------------------------------------------------------------------
 
     -- Platform Designer System instance ------------------------------------------------------------
