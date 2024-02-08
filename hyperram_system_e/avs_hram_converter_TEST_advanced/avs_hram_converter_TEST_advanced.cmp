@@ -1,0 +1,14 @@
+	component avs_hram_converter_TEST_advanced is
+		port (
+			clk_clk            : in    std_logic                    := 'X';             -- clk
+			hyperbus_cs_n      : out   std_logic;                                       -- cs_n
+			hyperbus_dq        : inout std_logic_vector(7 downto 0) := (others => 'X'); -- dq
+			hyperbus_reset_n   : out   std_logic;                                       -- reset_n
+			hyperbus_rwds      : inout std_logic                    := 'X';             -- rwds
+			hyperbus_ck_outclk : out   std_logic;                                       -- outclk
+			leds_export        : out   std_logic_vector(3 downto 0);                    -- export
+			reset_reset_n      : in    std_logic                    := 'X';             -- reset_n
+			switches_export    : in    std_logic_vector(3 downto 0) := (others => 'X')  -- export
+		);
+	end component avs_hram_converter_TEST_advanced;
+

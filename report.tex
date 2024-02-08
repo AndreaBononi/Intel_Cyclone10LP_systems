@@ -90,6 +90,7 @@
 \end{titlepage}
 
 \chapter*{ACKNOWLEDGEMENTS}
+\noindent First and foremost, I would like to thank my parents and my entire family for their unwavering support along the way. I am extremely grateful to my academic advisor and to all the professors that have been part of my academic journey. A special thanks goes also to my girlfriend ad to all my friends, who have always believed in me.
 
 % Creazione indice:
 \tableofcontents
@@ -789,24 +790,8 @@ As we can see in figures \ref{hram_read} and \ref{hram_write}, several timing co
     \item \textbf{T\textsubscript{IS}}, \textbf{T\textsubscript{IH}} : forced during synthesis
 \end{itemize}
 \vspace{4mm}
-Ideally, the \textit{clock shifter} introduces a delay (T\textsubscript{CKSH}) between the internal clock and the HyperRAM clock equal to 90° (5 ns). However, in the real case this delay is characterized by an uncertainty of $\pm$50 ps. Moreover, the \textit{clock controller} introduces an additional delay term (T\textsubscript{CLKCTRL}). Similarly, a certain combinational delay (T\textsubscript{CLKDQ}) is present between the main clock and DQ. All this considered, the actual delay between DQ and the HyperRAM clock (T\textsubscript{IS}) is definitely different from 90°. To ensure the constraint on the minimum value of T\textsubscript{IS} it is necessary to consider the worst case on T\textsubscript{CKSH} and to force a constraint on T\textsubscript{CLKDQ} during the synthesis:
-\vspace{4mm}
-\begin{center}
-    T\textsubscript{IS} = T\textsubscript{CKSH} + T\textsubscript{CLKCTRL} - T\textsubscript{CLKDQ} $\hspace{5mm}$ min\{T\textsubscript{CKSH}\} = 4.95 ns $\hspace{5mm}$ min\{T\textsubscript{CLKCTRL}\} = 0 ns \\
-    \vspace{4mm}
-    T\textsubscript{IS} $>$ 1 ns $\hspace{5mm} \Rightarrow \hspace{5mm}$  T\textsubscript{CLKDQ} $<$ 3.95 ns
-    \vspace{4mm}
-\end{center}
-The condition T\textsubscript{CLKDQ} $<$ 3.95 ns can be easily satisfied during the synthesis. Actually, this condition has been extended to T\textsubscript{CLKDQ} $<$ 1 ns to have some margin, since the synthesizer does not have any issue to satisfy it. \\ \\
-When it comes to the constraint on T\textsubscript{IH}:
-\vspace{4mm}
-\begin{center}
-    10 ns - T\textsubscript{IH} = T\textsubscript{CKSH} + T\textsubscript{CLKCTRL} - T\textsubscript{CLKDQ} $\hspace{5mm}$ max\{T\textsubscript{CKSH}\} = 5.05 ns $\hspace{5mm}$ min\{T\textsubscript{CLKDQ}\} = 0 ns \\
-    \vspace{4mm}
-    T\textsubscript{IH} $>$ 1 ns $\hspace{5mm} \Rightarrow \hspace{5mm}$  T\textsubscript{CLKCTRL} $<$ 3.95 ns
-    \vspace{4mm}
-\end{center}
-The \textit{clock controller} is a particular IP already available in the Intel catalog. Unfortunately, its documentation does not specify its delay. However, the condition T\textsubscript{CLKCTRL} $<$ 3.95 ns is not that strict, therefore we can assume that it is always satisfied. \\ \\
+The constraints on T\textsubscript{IS} and T\textsubscript{IH} must be inserted in the SDC file related to the top level, i.e. the file in which the modular system containing the interface converter is instantiated. 
+\\ \\
 T\textsubscript{CSM} limits the maximum burst lenght. In the worst case (doubled access time, read operation), a latency of 12 clock periods must be considered between the assertion of \textit{hram\_CS\_n} and the beginning of the burst transfer (as we can see in figure \ref{read_prelimsim_pt1}). Moreover, at the end of the burst trasfer 7 additional clock cycles are required before de-asserting \textit{hram\_CS\_n} (as shown in figure \ref{read_prelimsim_pt2}). As a result:
 \vspace{4mm}
 \begin{center}
@@ -933,6 +918,7 @@ The interface converter is inserted in a processor-based system to simulate it a
 \noindent At first, the processor-based system must wait for the memory to power-up, therefore it cannot process the input values, as we can see in figure \ref{timing_finalsim}. Indeed, during this initial time interval the LEDs are constantly turned off regardless of the value of the inputs. When the memory is powered-up, the processor drives the LEDs according to the input values as expected.
 \vspace{6mm}
 \section{Test on VirtLAB}
+The processor-based system has been synthesized in the Cyclone 10 LP FPGA, verifying the correctness of its behavior. The \textit{Nios II} processor has been programmed to read four different input signals and to drive for different LEDs according to their value. In particular, the input signals oscillates with a sufficiently low frequency, so that the consequent blinking of the LEDs is visible to the human eye.
 % -------------------------------------------------------------------------------------------------
 \chapter{FUTURE EXTENSIONS}
 \noindent The designed system is capable of correctly interface the HyperRAM with the Intel Avalon bus. However, it is still possible to work on some details to improve its performance. In particular:

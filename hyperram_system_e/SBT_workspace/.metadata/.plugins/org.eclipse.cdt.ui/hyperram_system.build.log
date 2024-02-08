@@ -1,0 +1,18 @@
+10:15:03 **** Build of configuration Nios II for project hyperram_system ****
+make mem_init_generate 
+Info: Building ../hyperram_system_bsp/
+make --no-print-directory -C ../hyperram_system_bsp/
+[BSP build complete]
+Post-processing to create mem_init/avs_hram_converter_TEST_advanced_instruction_OCROM.hex...
+elf2hex --record=2 hyperram_system.elf 0x00000000 0x00000fff --width=16 --little-endian-mem --create-lanes=0 mem_init/avs_hram_converter_TEST_advanced_instruction_OCROM.hex
+Post-processing to create mem_init/hdl_sim/avs_hram_converter_TEST_advanced_instruction_OCROM.dat...
+elf2dat --infile=hyperram_system.elf --outfile=mem_init/hdl_sim/avs_hram_converter_TEST_advanced_instruction_OCROM.dat \
+	--base=0x00000000 --end=0x00000fff --width=16 \
+	--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/avs_hram_converter_TEST_advanced_instruction_OCROM.sym...
+nios2-elf-nm -n hyperram_system.elf > mem_init/hdl_sim/avs_hram_converter_TEST_advanced_instruction_OCROM.sym
+Post-processing to create mem_init/meminit.spd...
+Post-processing to create mem_init/meminit.qip...
+
+10:15:04 Build Finished (took 920ms)
+

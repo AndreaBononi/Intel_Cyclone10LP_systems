@@ -1,0 +1,220 @@
+Reading pref.tcl
+
+# 2020.1
+
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/d_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity d_flipflop
+# -- Compiling architecture behavior of d_flipflop
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/t_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity t_flipflop
+# -- Compiling architecture behavior of t_flipflop
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/sr_flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sr_flipflop
+# -- Compiling architecture behavior of sr_flipflop
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg
+# -- Compiling architecture behavior of reg
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/mux_4to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux_4to1
+# -- Compiling architecture behavior of mux_4to1
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/decoder_2bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder_2bit
+# -- Compiling architecture behavior of decoder_2bit
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/comparator_Nbit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity comparator_Nbit
+# -- Compiling architecture behavior of comparator_Nbit
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/counter_Nbit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_Nbit
+# -- Compiling architecture rtl of counter_Nbit
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/counter_11bit_updown/counter_11bit_updown.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_11bit_updown
+# -- Compiling architecture SYN of counter_11bit_updown
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/synchronizer_EU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer_EU
+# -- Compiling architecture rtl of synchronizer_EU
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/synchronizer_CU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer_CU
+# -- Compiling architecture fsm of synchronizer_CU
+# End time: 19:42:00 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:00 on Dec 23,2023
+# vcom ../hdl/synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity synchronizer
+# -- Compiling architecture rtl of synchronizer
+# End time: 19:42:01 on Dec 23,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:01 on Dec 23,2023
+# vcom ./tb/clk_rst_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_rst_generator
+# -- Compiling architecture behavior of clk_rst_generator
+# End time: 19:42:01 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:01 on Dec 23,2023
+# vcom ./tb/synchronizer_monitor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity synchronizer_monitor
+# -- Compiling architecture tb of synchronizer_monitor
+# End time: 19:42:01 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:01 on Dec 23,2023
+# vcom ./tb/synchronizer_driver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity synchronizer_driver
+# -- Compiling architecture tb of synchronizer_driver
+# End time: 19:42:01 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:42:01 on Dec 23,2023
+# vcom ./tb/synchronizer_testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity synchronizer_testbench
+# -- Compiling architecture tb of synchronizer_testbench
+# End time: 19:42:01 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -t 1ns work.synchronizer_testbench -voptargs="+acc" 
+# Start time: 19:42:01 on Dec 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.synchronizer_testbench(tb)
+# Loading work.clk_rst_generator(behavior)
+# Loading work.synchronizer(rtl)
+# Loading work.synchronizer_eu(rtl)
+# Loading work.counter_nbit(rtl)
+# Loading work.t_flipflop(behavior)
+# Loading work.sr_flipflop(behavior)
+# Loading work.decoder_2bit(behavior)
+# Loading work.reg(behavior)
+# Loading work.mux_4to1(behavior)
+# Loading work.counter_11bit_updown(syn)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_counter(lpm_syn)
+# Loading work.comparator_nbit(behavior)
+# Loading work.d_flipflop(behavior)
+# Loading work.synchronizer_cu(fsm)
+# Loading work.synchronizer_monitor(tb)
+# Loading work.synchronizer_driver(tb)
+# End time: 19:42:01 on Dec 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

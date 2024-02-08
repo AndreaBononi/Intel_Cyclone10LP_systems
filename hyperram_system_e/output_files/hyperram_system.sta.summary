@@ -1,0 +1,341 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_x8'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'mainClk'
+Slack : 0.987
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk_50MHz'
+Slack : 3.586
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'rwdsgen'
+Slack : 8.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'shifted_clock'
+Slack : 8.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
+Slack : 45.964
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk_10kHz'
+Slack : 99996.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_50MHz'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_x8'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rwdsgen'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_10kHz'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mainClk'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'shifted_clock'
+Slack : 10.595
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'rwdsgen'
+Slack : 7.091
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_50MHz'
+Slack : 14.906
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 97.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.610
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk_50MHz'
+Slack : 3.604
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'rwdsgen'
+Slack : 11.628
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_x8'
+Slack : 0.013
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50MHz'
+Slack : 9.349
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rwdsgen'
+Slack : 9.729
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'shifted_clock'
+Slack : 9.789
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hBusCk'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.441
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mainClk'
+Slack : 49.716
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_10kHz'
+Slack : 49999.645
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_x8'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'mainClk'
+Slack : 1.230
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_50MHz'
+Slack : 4.117
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'rwdsgen'
+Slack : 8.227
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'shifted_clock'
+Slack : 8.946
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 46.414
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_10kHz'
+Slack : 99996.662
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_50MHz'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_x8'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'rwdsgen'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_10kHz'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mainClk'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'shifted_clock'
+Slack : 10.001
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'rwdsgen'
+Slack : 7.122
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_50MHz'
+Slack : 15.175
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 97.541
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 1.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk_50MHz'
+Slack : 3.249
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'rwdsgen'
+Slack : 11.538
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_x8'
+Slack : 0.013
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50MHz'
+Slack : 9.243
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rwdsgen'
+Slack : 9.689
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'shifted_clock'
+Slack : 9.768
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hBusCk'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.314
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mainClk'
+Slack : 49.730
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_10kHz'
+Slack : 49999.655
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_x8'
+Slack : 0.809
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'mainClk'
+Slack : 2.337
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_50MHz'
+Slack : 6.999
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'rwdsgen'
+Slack : 9.322
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'shifted_clock'
+Slack : 11.949
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 48.526
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_10kHz'
+Slack : 99998.571
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_50MHz'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_10kHz'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rwdsgen'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_x8'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mainClk'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'shifted_clock'
+Slack : 7.522
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'rwdsgen'
+Slack : 8.610
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_50MHz'
+Slack : 17.557
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 98.808
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.671
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk_50MHz'
+Slack : 1.605
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'rwdsgen'
+Slack : 10.535
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_x8'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rwdsgen'
+Slack : 9.702
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50MHz'
+Slack : 9.720
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'shifted_clock'
+Slack : 9.926
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hBusCk'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mainClk'
+Slack : 49.247
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.287
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_10kHz'
+Slack : 49999.724
+TNS   : 0.000
+
+------------------------------------------------------------

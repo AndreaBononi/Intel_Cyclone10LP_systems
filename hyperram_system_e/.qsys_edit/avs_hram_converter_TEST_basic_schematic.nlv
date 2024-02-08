@@ -1,0 +1,18 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst avs_hram_converter_TEST_basic.avs_hram_converter_inst.clkctrl.altclkctrl_0 -pg 1
+preplace inst avs_hram_converter_TEST_basic.avs_hram_converter_inst.clkctrl -pg 1
+preplace inst avs_hram_converter_TEST_basic.avs_hram_converter_inst.clk_0 -pg 1
+preplace inst avs_hram_converter_TEST_basic.clk_50MHz -pg 1 -lvl 1 -y 50
+preplace inst avs_hram_converter_TEST_basic.avs_hram_converter_inst.avs_hram_mainconv -pg 1
+preplace inst avs_hram_converter_TEST_basic.avs_hram_converter_inst -pg 1 -lvl 2 -y 70
+preplace inst avs_hram_converter_TEST_basic -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc POINT_TO_POINT<net_container>avs_hram_converter_TEST_basic</net_container>(SLAVE)avs_hram_converter_inst.clk,(MASTER)clk_50MHz.clk) 1 1 1 340
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_basic</net_container>(SLAVE)avs_hram_converter_inst.hyperbus_master,(SLAVE)avs_hram_converter_TEST_basic.hyperbus_master) 1 0 2 NJ 140 NJ
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_basic</net_container>(SLAVE)avs_hram_converter_TEST_basic.hyperbus_clock,(SLAVE)avs_hram_converter_inst.hyperbus_clock) 1 0 2 NJ 120 NJ
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_basic</net_container>(SLAVE)avs_hram_converter_inst.avalon_slave,(SLAVE)avs_hram_converter_TEST_basic.avalon_slave) 1 0 2 NJ 40 NJ
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_basic</net_container>(SLAVE)clk_50MHz.clk_in_reset,(SLAVE)avs_hram_converter_TEST_basic.reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>avs_hram_converter_TEST_basic</net_container>(MASTER)clk_50MHz.clk_reset,(SLAVE)avs_hram_converter_inst.reset) 1 1 1 320
+preplace netloc EXPORT<net_container>avs_hram_converter_TEST_basic</net_container>(SLAVE)clk_50MHz.clk_in,(SLAVE)avs_hram_converter_TEST_basic.clk) 1 0 1 NJ
+levelinfo -pg 1 0 110 620
+levelinfo -hier avs_hram_converter_TEST_basic 120 150 480 610
