@@ -1,4 +1,4 @@
--- BRIEF DESCRIPTION: execution unit of the AvalonMM - hyperram converter
+-- BRIEF DESCRIPTION: control unit of the AvalonMM - hyperram converter
 
 library 	ieee;
 use 			ieee.std_logic_1164.all;
